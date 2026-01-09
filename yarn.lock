@@ -5577,7 +5577,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"electron@npm:^38.7.2":
+"electron@npm:38.7.2":
   version: 38.7.2
   resolution: "electron@npm:38.7.2"
   dependencies:
@@ -8419,7 +8419,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lossless-cut-backend@workspace:*, lossless-cut-backend@workspace:backend":
+"lossless-cut-backend@workspace:backend":
   version: 0.0.0-use.local
   resolution: "lossless-cut-backend@workspace:backend"
   dependencies:
@@ -8498,7 +8498,7 @@ __metadata:
     csv-stringify: "npm:^6.6.0"
     cue-parser: "npm:^0.3.0"
     data-uri-to-buffer: "npm:^6.0.2"
-    electron: "npm:^38.7.2"
+    electron: "npm:38.7.2"
     electron-builder: "npm:26.4.0"
     electron-devtools-installer: "npm:^4.0.0"
     electron-store: "npm:5.1.1"
@@ -8526,8 +8526,6 @@ __metadata:
     leaflet: "npm:^1.9.4"
     lodash: "npm:^4.17.21"
     lodash.debounce: "npm:^4.0.8"
-    lossless-cut-backend: "workspace:*"
-    lossless-cut-shared: "workspace:*"
     luxon: "npm:^3.7.2"
     mime-types: "npm:^3.0.2"
     mitt: "npm:^3.0.1"

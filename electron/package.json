@@ -22,8 +22,6 @@
     "pack-mac": "yarn build && electron-builder --mac dmg",
     "pack-mas-dev": "yarn build && electron-builder --mac mas-dev -c.mas.provisioningProfile=LosslessCut_Dev.provisionprofile -c.mas.identity='Mikael Finstad (JH4PH8B3C8)'",
     "pack-win": "yarn build && electron-builder --win zip --x64",
-    "postinstall": "node -e \"console.log('Skipping electron-builder install-app-deps during workspace install; run \\\"yarn workspace lossless-cut install-app-deps\\\" if needed.')\"",
-    "install-app-deps": "electron-builder install-app-deps",
     "version": "node script/postversion.ts && git add no.mifi.losslesscut.appdata.xml",
     "pack-linux": "yarn build && electron-builder --linux",
     "scan-i18n": "i18next-cli -c i18next.config.scan.ts extract",
@@ -85,7 +83,7 @@
     "csv-parse": "^6.1.0",
     "csv-stringify": "^6.6.0",
     "data-uri-to-buffer": "^6.0.2",
-    "electron": "^38.7.2",
+    "electron": "38.7.2",
     "electron-builder": "26.4.0",
     "electron-vite": "^5.0.0",
     "eslint": "^8.57.1",
@@ -149,8 +147,6 @@
     "i18next-fs-backend": "^2.6.1",
     "json5": "^2.2.3",
     "lodash.debounce": "^4.0.8",
-    "lossless-cut-backend": "workspace:*",
-    "lossless-cut-shared": "workspace:*",
     "mime-types": "^3.0.2",
     "morgan": "^1.10.1",
     "semver": "^7.7.3",
@@ -160,7 +156,6 @@
     "zod": "^4.3.5"
   },
   "build": {
-    "electronVersion": "38.7.2",
     "directories": {
       "buildResources": "build-resources"
     },
