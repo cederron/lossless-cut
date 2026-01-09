@@ -1,9 +1,8 @@
 {
-  "references": [
-    { "path": "./tsconfig.web.json" },
-    { "path": "./tsconfig.main.json" },
-    { "path": "./tsconfig.node.json" },
-    { "path": "./tsconfig.common.json" },
-  ],
   "files": [],
+  "references": [
+    { "path": "shared" },
+    { "path": "backend" },
+    { "path": "electron/tsconfig.json" }
+  ]
 }

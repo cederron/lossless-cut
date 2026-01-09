@@ -10,14 +10,14 @@ node_modules
 !.yarn/sdks
 !.yarn/versions
 
-/dist
-/out
-/icon-build
-/build-resources
-/notes
-/ffmpeg
-/app*.log
-/main-ts-dist
-/common-ts-dist
+/electron/dist
+/electron/out
+/electron/icon-build
+/electron/build-resources
+/electron/notes
+/electron/ffmpeg
+/electron/app*.log
+/electron/main-ts-dist
+/electron/common-ts-dist
 
 tsconfig.*.tsbuildinfo

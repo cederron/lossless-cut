@@ -1,0 +1,34 @@
+{
+  "name": "lossless-cut-backend",
+  "private": true,
+  "version": "0.0.0",
+  "description": "Backend services for LosslessCut; depends on shared types and utilities.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -b",
+    "clean": "rimraf dist tsconfig.tsbuildinfo"
+  },
+  "dependencies": {
+    "lossless-cut-shared": "workspace:*"
+  },
+  "devDependencies": {
+    "@tsconfig/node22": "^22.0.5",
+    "@tsconfig/strictest": "^2.0.8",
+    "@types/node": "22.19.3",
+    "rimraf": "^5.0.10",
+    "typescript": "~5.9.3"
+  },
+  "license": "GPL-2.0-only"
+}
