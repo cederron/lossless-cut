@@ -1,0 +1,31 @@
+{
+  "name": "lossless-cut-application",
+  "private": true,
+  "version": "0.0.0",
+  "description": "Application for LosslessCut packages.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsc -b",
+    "clean": "rimraf dist tsconfig.tsbuildinfo"
+  },
+  "devDependencies": {
+    "@tsconfig/node22": "^22.0.5",
+    "@tsconfig/strictest": "^2.0.8",
+    "rimraf": "^5.0.10",
+    "typescript": "~5.9.3"
+  },
+  "license": "GPL-2.0-only"
+}
