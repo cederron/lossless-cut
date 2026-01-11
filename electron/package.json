@@ -147,14 +147,14 @@
     "i18next-fs-backend": "^2.6.1",
     "json5": "^2.2.3",
     "lodash.debounce": "^4.0.8",
+    "lossless-cut-application-electron": "workspace:*",
     "mime-types": "^3.0.2",
     "morgan": "^1.10.1",
     "semver": "^7.7.3",
     "string-to-stream": "^3.0.1",
     "winston": "^3.19.0",
     "yargs-parser": "^22.0.0",
-    "zod": "^4.3.5",
-    "lossless-cut-application-electron": "workspace:*"
+    "zod": "^4.3.5"
   },
   "build": {
     "directories": {

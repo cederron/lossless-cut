@@ -1,4 +1,5 @@
 export type IMediaSourceInitParams = {
+    path: string;
     videoStreamIndex?: number | undefined;
     audioStreamIndexes: number[];
     seekTo: number;

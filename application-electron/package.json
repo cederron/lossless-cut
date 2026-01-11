@@ -23,6 +23,10 @@
   "peerDependencies": {
     "electron": "*"
   },
+  "dependencies": {
+    "execa": "^9.6.1",
+    "lossless-cut-application": "workspace:*"
+  },
   "devDependencies": {
     "@tsconfig/node22": "^22.0.5",
     "@tsconfig/strictest": "^2.0.8",

@@ -22,7 +22,6 @@
     "clean": "rimraf dist tsconfig.tsbuildinfo"
   },
   "devDependencies": {
-    "@tsconfig/node22": "^22.0.5",
     "@tsconfig/strictest": "^2.0.8",
     "rimraf": "^5.0.10",
     "typescript": "~5.9.3"

@@ -3505,6 +3505,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/node@npm:^22.19.3":
+  version: 22.19.5
+  resolution: "@types/node@npm:22.19.5"
+  dependencies:
+    undici-types: "npm:~6.21.0"
+  checksum: 10c0/753c86850d2e3d9a7ccaa2569d565ab20d9a69389871e45283f71035c62fed649511aee7e05da8209b41e15438085c43b533d01e9ed3bb2e9dbd570aef732354
+  languageName: node
+  linkType: hard
+
 "@types/normalize-package-data@npm:^2.4.0":
   version: 2.4.4
   resolution: "@types/normalize-package-data@npm:2.4.4"
@@ -8419,6 +8428,33 @@ __metadata:
   languageName: node
   linkType: hard
 
+"lossless-cut-application-electron@workspace:*, lossless-cut-application-electron@workspace:application-electron":
+  version: 0.0.0-use.local
+  resolution: "lossless-cut-application-electron@workspace:application-electron"
+  dependencies:
+    "@tsconfig/node22": "npm:^22.0.5"
+    "@tsconfig/strictest": "npm:^2.0.8"
+    "@types/node": "npm:^22.19.3"
+    electron: "npm:38.7.2"
+    execa: "npm:^9.6.1"
+    lossless-cut-application: "workspace:*"
+    rimraf: "npm:^5.0.10"
+    typescript: "npm:~5.9.3"
+  peerDependencies:
+    electron: "*"
+  languageName: unknown
+  linkType: soft
+
+"lossless-cut-application@workspace:*, lossless-cut-application@workspace:application":
+  version: 0.0.0-use.local
+  resolution: "lossless-cut-application@workspace:application"
+  dependencies:
+    "@tsconfig/strictest": "npm:^2.0.8"
+    rimraf: "npm:^5.0.10"
+    typescript: "npm:~5.9.3"
+  languageName: unknown
+  linkType: soft
+
 "lossless-cut-backend@workspace:backend":
   version: 0.0.0-use.local
   resolution: "lossless-cut-backend@workspace:backend"
@@ -8526,6 +8562,7 @@ __metadata:
     leaflet: "npm:^1.9.4"
     lodash: "npm:^4.17.21"
     lodash.debounce: "npm:^4.0.8"
+    lossless-cut-application-electron: "workspace:*"
     luxon: "npm:^3.7.2"
     mime-types: "npm:^3.0.2"
     mitt: "npm:^3.0.1"
