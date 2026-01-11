@@ -5,7 +5,9 @@
   "workspaces": [
     "electron",
     "backend",
-    "shared"
+    "shared",
+    "application",
+    "application-electron"
   ],
   "scripts": {
     "dev": "yarn workspace lossless-cut dev",

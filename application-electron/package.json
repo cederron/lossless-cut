@@ -1,0 +1,35 @@
+{
+  "name": "lossless-cut-application-electron",
+  "private": true,
+  "version": "0.0.0",
+  "description": "Electron support package for LesslessCut",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -b",
+    "clean": "rimraf dist tsconfig.tsbuildinfo"
+  },
+  "peerDependencies": {
+    "electron": "*"
+  },
+  "devDependencies": {
+    "@tsconfig/node22": "^22.0.5",
+    "@tsconfig/strictest": "^2.0.8",
+    "@types/node": "^22.19.3",
+    "electron": "38.7.2",
+    "rimraf": "^5.0.10",
+    "typescript": "~5.9.3"
+  },
+  "license": "GPL-2.0-only"
+}
