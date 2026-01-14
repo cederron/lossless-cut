@@ -1,5 +1,6 @@
 import { execa } from 'execa';
 import type { ILogger, IMediaSource, IMediaSourceInitParams } from 'lossless-cut-application';
+import { IMediaStream } from 'lossless-cut-application/IMediaStream.ts';
 
 
 export class MediaSourceExeca implements IMediaSource {
@@ -13,6 +14,9 @@ export class MediaSourceExeca implements IMediaSource {
         this.abortController = new AbortController();
         this.logger = logger;
     }
+    createMediaSourceStream(params: IMediaSourceInitParams): IMediaStream {
+
+    };
 
     async init(params: IMediaSourceInitParams): Promise<void> {
         this.abortController && this.abortController.abort();

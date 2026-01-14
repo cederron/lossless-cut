@@ -1,3 +1,5 @@
+import type { IMediaStream } from "./IMediaStream.ts";
+
 export type IMediaSourceInitParams = {
     path: string;
     videoStreamIndex?: number | undefined;
@@ -9,7 +11,8 @@ export type IMediaSourceInitParams = {
 };
 
 export interface IMediaSource {
-    init: (params: IMediaSourceInitParams) => Promise<void>;
-    readChunk: () => Promise<Buffer | null>;
-    abort: () => void;
+    // init: (params: IMediaSourceInitParams) => Promise<void>;
+    // readChunk: () => Promise<Buffer | null>;
+    // abort: () => void;
+    createMediaSourceStream: (params: IMediaSourceInitParams) => IMediaStream;
 }
