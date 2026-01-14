@@ -1,3 +1,7 @@
 export * from './IMediaSource.js';
 export * from './ILogger.ts';
 export * from './IFfmpeg.js';
+export * from './IMediaStreamSource.ts'
+export * from './IMediaStream.ts';
+export * from './IMediaSourceStreamFactory.ts';
+export * from './IRunningProcess.ts';

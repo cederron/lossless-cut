@@ -8,9 +8,11 @@ import isDev from './isDev';
 import type { ChromiumHTMLVideoElement } from './types';
 import type { FFprobeStream } from '../../common/ffprobe';
 import { getFrameDuration } from './util';
+import { container } from 'tsyringe';
+import type { IMediaSourceStreamFactory } from "lossless-cut-application";
 
-const { compatPlayer: { createMediaSourceStream } } = window.require('@electron/remote').require('./index.js');
-
+// const { compatPlayer: { createMediaSourceStream } } = window.require('@electron/remote').require('./index.js');
+const mediaSourceStreamFactory = container.resolve<IMediaSourceStreamFactory>("TOKENS.MEDIA_SOURCE_STREAM_FACTORY"); // {} as any;
 
 async function startPlayback({ path, slaveVideo, masterVideo, videoStreamIndex, audioStreamIndexes, seekTo, signal, size, fps, rotate, onCanPlay, onResetNeeded, onWaiting }: {
   path: string,
@@ -30,7 +32,7 @@ async function startPlayback({ path, slaveVideo, masterVideo, videoStreamIndex, 
   let canPlay = false;
   let bufferEndTime: number | undefined;
   let bufferStartTime = seekTo;
-  let stream: ReturnType<typeof createMediaSourceStream> | undefined;
+  let stream: ReturnType<typeof mediaSourceStreamFactory.createMediaSourceStream> | undefined;
   let interval: NodeJS.Timeout | undefined;
   let interval2: NodeJS.Timeout | undefined;
   let objectUrl: string | undefined;
@@ -220,7 +222,8 @@ async function startPlayback({ path, slaveVideo, masterVideo, videoStreamIndex, 
     processChunk();
   });
 
-  stream = createMediaSourceStream({ path, videoStreamIndex, audioStreamIndexes, seekTo, size, fps, rotate });
+  // stream = createMediaSourceStream({ path, videoStreamIndex, audioStreamIndexes, seekTo, size, fps, rotate });
+  stream = mediaSourceStreamFactory.createMediaSourceStream({ path, videoStreamIndex, audioStreamIndexes, seekTo, size, fps, rotate });
 
   interval = setInterval(() => {
     if (!canPlay) return;

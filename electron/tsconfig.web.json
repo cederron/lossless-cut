@@ -6,10 +6,15 @@
     "noEmit": true,
 
     "types": ["vite/client"],
+    "paths": {
+      "lossless-cut-application": ["../application/src/index.ts"],
+      "lossless-cut-application/*": ["../application/src/*"]
+    },
   },
   "references": [
     { "path": "./tsconfig.main.json" },
     { "path": "./tsconfig.common.json" },
+    { "path": "../application" },
   ],
   "include": [
     "src/renderer/**/*",

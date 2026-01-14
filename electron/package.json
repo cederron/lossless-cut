@@ -150,8 +150,10 @@
     "lossless-cut-application-electron": "workspace:*",
     "mime-types": "^3.0.2",
     "morgan": "^1.10.1",
+    "reflect-metadata": "^0.2.2",
     "semver": "^7.7.3",
     "string-to-stream": "^3.0.1",
+    "tsyringe": "^4.10.0",
     "winston": "^3.19.0",
     "yargs-parser": "^22.0.0",
     "zod": "^4.3.5"
