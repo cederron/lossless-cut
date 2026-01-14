@@ -25,7 +25,9 @@
   },
   "dependencies": {
     "execa": "^9.6.1",
-    "lossless-cut-application": "workspace:*"
+    "lossless-cut-application": "workspace:*",
+    "reflect-metadata": "^0.2.2",
+    "tsyringe": "^4.10.0"
   },
   "devDependencies": {
     "@tsconfig/node22": "^22.0.5",

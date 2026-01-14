@@ -10,6 +10,7 @@ export class MediaSourceExeca implements IMediaSource {
     encode = true;
 
     constructor(logger: ILogger) {
+        this.abortController = new AbortController();
         this.logger = logger;
     }
 
