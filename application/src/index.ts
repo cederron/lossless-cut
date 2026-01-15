@@ -5,3 +5,4 @@ export * from './IMediaStreamSource.ts'
 export * from './IMediaStream.ts';
 export * from './IMediaSourceStreamFactory.ts';
 export * from './IRunningProcess.ts';
+export * from './IPlatform.ts';

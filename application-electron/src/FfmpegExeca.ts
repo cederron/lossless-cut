@@ -1,5 +1,5 @@
 import { execa } from 'execa';
-import { IFfmpeg, ILogger, IMediaSourceInitParams, IRunningProcess } from 'lossless-cut-application';
+import { IFfmpeg, ILogger, IMediaSourceInitParams, IPlatform, IRunningProcess } from 'lossless-cut-application';
 import type { Options as ExecaOptions, ResultPromise } from 'execa';
 
 export class FfmpegExeca implements IFfmpeg {
@@ -7,9 +7,12 @@ export class FfmpegExeca implements IFfmpeg {
     logger: ILogger;
     enableLog = false;
     encode = true;
+    platform: IPlatform;
+    customFfPath: string | undefined;
 
-    constructor(logger: ILogger) {
+    constructor(logger: ILogger, platform: IPlatform) {
         this.logger = logger;
+        this.platform = platform;
     }
 
     getStreamProcess(params: IMediaSourceInitParams): IRunningProcess {
@@ -125,7 +128,8 @@ export class FfmpegExeca implements IFfmpeg {
         ];
 
         this.logger.info(this.getFfCommandLine('ffmpeg', args));
-        return execa(this.getFfmpegPath(), args, this.getExecaOptions({ buffer: false, stderr: this.enableLog ? 'inherit' : 'pipe' }));
+        // Cast to unknown then IRunningProcess to bypass strict signal type check (string vs Signals)
+        return execa(this.getFfmpegPath(), args, this.getExecaOptions({ buffer: false, stderr: this.enableLog ? 'inherit' : 'pipe' })) as unknown as IRunningProcess;
     }
 
     getFfmpegPath(): string {
@@ -149,7 +153,7 @@ export class FfmpegExeca implements IFfmpeg {
             env: {
                 ...env,
                 // https://github.com/mifi/lossless-cut/issues/1143#issuecomment-1500883489
-                ...(isLinux && !isDev && !customFfPath && { LD_LIBRARY_PATH: process.resourcesPath }),
+                ...(this.platform.isLinux() && !this.platform.isDev() && !this.customFfPath && { LD_LIBRARY_PATH: this.platform.getResourcesPath() }),
             },
         };
         return execaOptions;
