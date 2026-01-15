@@ -5,7 +5,7 @@ import { injectable } from "tsyringe";
 export class Platform implements IPlatform {
     getResourcesPath = () => '';
     isLinux = () => process.platform === 'linux';
-    arch = () => process.arch;
+    arch = (): string => process.arch;
     isWindows = () => process.platform === 'win32';
     isMac = () => process.platform === 'darwin'
     isDev = () => {

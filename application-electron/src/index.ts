@@ -1,2 +1,2 @@
 // Export modules here
-export {};
+export * from './Platform.js';
