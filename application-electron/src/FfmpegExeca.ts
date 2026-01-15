@@ -1,7 +1,8 @@
 import { execa } from 'execa';
-import type { IFfmpeg, ILogger, IMediaSourceInitParams, IPlatform, IRunningProcess } from 'lossless-cut-application';
+import { TOKENS, type IFfmpeg, type ILogger, type IMediaSourceInitParams, type IPlatform, type IRunningProcess } from 'lossless-cut-application';
 import type { Options as ExecaOptions } from 'execa';
-import { injectable } from 'tsyringe';
+import { inject, injectable } from 'tsyringe';
+import { join } from 'node:path';
 
 @injectable()
 export class FfmpegExeca implements IFfmpeg {
@@ -12,7 +13,7 @@ export class FfmpegExeca implements IFfmpeg {
     platform: IPlatform;
     customFfPath: string | undefined;
 
-    constructor(logger: ILogger, platform: IPlatform) {
+    constructor(@inject(TOKENS.Logger) logger: ILogger, @inject(TOKENS.Platform) platform: IPlatform) {
         this.logger = logger;
         this.platform = platform;
     }
@@ -134,12 +135,40 @@ export class FfmpegExeca implements IFfmpeg {
         return execa(this.getFfmpegPath(), args, this.getExecaOptions({ buffer: false, stderr: this.enableLog ? 'inherit' : 'pipe' })) as unknown as IRunningProcess;
     }
 
-    getFfmpegPath(): string {
-        throw new Error('Method not implemented.');
+    private getFfPath(cmd: string): string {
+        const exeName = this.platform.isWindows() ? `${cmd}.exe` : cmd;
+
+        if (this.customFfPath) return join(this.customFfPath, exeName);
+
+        if (this.platform.isPackaged()) {
+            return join(this.platform.getResourcesPath(), exeName);
+        }
+
+        // local dev
+        const components = ['ffmpeg', `${this.platform.getPlatform()}-${this.platform.arch()}`];
+        if (this.platform.isWindows() || this.platform.isLinux()) components.push('lib');
+        components.push(exeName);
+        return join(...components);
     }
 
-    getFfCommandLine(_cmd: string, _args: readonly string[]): string {
-        throw new Error('Method not implemented.');
+    /**
+    * ⚠️ Do not use directly when running ffmpeg, because we need to add certain options before running, like `LD_LIBRARY_PATH` on linux
+    */
+    getFfmpegPath(): string {
+        return this.getFfPath('ffmpeg');
+    }
+
+    private escapeCliArg(arg: string) {
+        // todo change String(arg) => arg when ts no-implicit-any is turned on
+        if (this.platform.isWindows()) {
+            // https://github.com/mifi/lossless-cut/issues/2151
+            return /[\s"&<>^|]/.test(arg) ? `"${String(arg).replaceAll('"', '""')}"` : arg;
+        }
+        return /[^\w-]/.test(arg) ? `'${String(arg).replaceAll("'", '\'"\'"\'')}'` : arg;
+    }
+
+    getFfCommandLine(cmd: string, args: readonly string[]): string {
+        return `${cmd} ${args.map((arg) => this.escapeCliArg(arg)).join(' ')}`;
     }
 
     private getExecaOptions({ env, cancelSignal, ...rest }: ExecaOptions = {}) {

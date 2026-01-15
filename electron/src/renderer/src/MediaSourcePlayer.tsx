@@ -8,11 +8,10 @@ import isDev from './isDev';
 import type { ChromiumHTMLVideoElement } from './types';
 import type { FFprobeStream } from '../../common/ffprobe';
 import { getFrameDuration } from './util';
-import { container } from 'tsyringe';
-import type { IMediaSourceStreamFactory } from "lossless-cut-application";
 
 // const { compatPlayer: { createMediaSourceStream } } = window.require('@electron/remote').require('./index.js');
-const mediaSourceStreamFactory = container.resolve<IMediaSourceStreamFactory>("TOKENS.MEDIA_SOURCE_STREAM_FACTORY"); // {} as any;
+// const mediaSourceStreamFactory = container.resolve<IMediaSourceStreamFactory>(TOKENS.MediaSourceStreamFactory); // {} as any;
+const { mediaSourceStreamFactory } = window.require('@electron/remote').require('./index.js');
 
 async function startPlayback({ path, slaveVideo, masterVideo, videoStreamIndex, audioStreamIndexes, seekTo, signal, size, fps, rotate, onCanPlay, onResetNeeded, onWaiting }: {
   path: string,

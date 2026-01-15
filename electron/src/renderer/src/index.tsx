@@ -1,3 +1,5 @@
+import 'reflect-metadata';
+import './di';
 import { Suspense, StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import { enableMapSet } from 'immer';

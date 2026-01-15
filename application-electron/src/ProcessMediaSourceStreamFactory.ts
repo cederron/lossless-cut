@@ -1,11 +1,13 @@
-import { IFfmpeg, ILogger, IMediaSourceInitParams, IMediaSourceStreamFactory, IMediaStream } from "lossless-cut-application";
+import { TOKENS, type IFfmpeg, type ILogger, type IMediaSourceInitParams, type IMediaSourceStreamFactory, type IMediaStream } from "lossless-cut-application";
+import { inject, injectable } from "tsyringe";
 
+@injectable()
 export class ProcessMediaSourceStreamFactory implements IMediaSourceStreamFactory {
 
     logger: ILogger;
     ffmpeg: IFfmpeg;
 
-    constructor(logger: ILogger, ffmpeg: IFfmpeg) {
+    constructor(@inject(TOKENS.Logger) logger: ILogger, @inject(TOKENS.Ffmpeg) ffmpeg: IFfmpeg) {
         this.logger = logger;
         this.ffmpeg = ffmpeg;
     }

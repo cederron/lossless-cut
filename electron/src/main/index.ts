@@ -40,6 +40,8 @@ import type { ApiActionRequest } from '../common/types.js';
 import * as ffmpeg from './ffmpeg.js';
 import * as compatPlayer from './compatPlayer.js';
 import { downloadMediaUrl } from './ffmpeg.js';
+import { container } from 'tsyringe';
+import { TOKENS, type IMediaSourceStreamFactory } from "lossless-cut-application";
 
 
 electronUnhandled({ showDialog: true, logger: (err) => logger.error('electron-unhandled', err) });
@@ -419,6 +421,9 @@ export type RemoteRpcApi = {
   [K in keyof RemoteApi]: Asyncify<RemoteApi[K]>;
 };
 
+const mediaSourceStreamFactory = container.resolve<IMediaSourceStreamFactory>(TOKENS.MediaSourceStreamFactory); // {} as any;
+  
+
 // using @electron/remote
 const remoteApiLegacy = {
   ffmpeg,
@@ -434,6 +439,7 @@ const remoteApiLegacy = {
   lossyMode,
   pathToFileURL,
   hasDisabledNetworking,
+  mediaSourceStreamFactory,
 };
 
 export type RemoteApiLegacy = typeof remoteApiLegacy;

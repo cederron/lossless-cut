@@ -6,7 +6,10 @@ import assert from 'node:assert';
 
 import { homepageUrl } from '../common/constants.js';
 import logger from './logger.js';
+import { container } from 'tsyringe';
+import { TOKENS, type IFfmpeg, type ILogger } from 'lossless-cut-application';
 
+    // const logger = container.resolve<ILogger>(TOKENS.Logger);
 
 export default ({ port, onKeyboardAction }: {
   port: number, onKeyboardAction: (action: string, args: unknown[]) => Promise<void>,
@@ -23,6 +26,39 @@ export default ({ port, onKeyboardAction }: {
   const apiRouter = express.Router();
 
   app.get('/', (_req, res) => res.send(`See ${homepageUrl}`));
+
+  app.get('/stream', (req, res) => {
+    
+    const { path, videoStreamIndex, audioStreamIndexes, seekTo, size, fps, rotate } = req.query;
+
+    res.contentType('video/mp4');
+    res.setHeader('Cache-Control', 'no-store');
+    
+    logger.info('Received /stream request', { path, videoStreamIndex, audioStreamIndexes, seekTo, size, fps, rotate });
+    
+    const ffmpeg = container.resolve<IFfmpeg>(TOKENS.Ffmpeg);
+    const process = ffmpeg.getStreamProcess({
+      path: path as string, 
+      videoStreamIndex: videoStreamIndex != null ? Number(videoStreamIndex) : undefined,
+      audioStreamIndexes: audioStreamIndexes != null ? (Array.isArray(audioStreamIndexes) ? audioStreamIndexes.map((v) => Number(v)) : [Number(audioStreamIndexes)]) : [],
+      seekTo: seekTo != null ? Number(seekTo) : 0,
+      size: size != null ? Number(size) : undefined,
+      fps: fps != null ? Number(fps) : undefined,
+      rotate: rotate != null ? Number(rotate) : undefined,
+    });
+
+    const { stdout } = process;
+
+    if(!stdout) {
+      throw new Error('Process stdout is null');
+    }
+    stdout.pipe(res);
+
+    req.on('close', () => {
+      stdout.unpipe(res);
+      process.kill('SIGKILL');
+    });
+  });
 
   app.use('/api', apiRouter);
 

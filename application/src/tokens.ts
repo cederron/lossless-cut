@@ -1,6 +1,6 @@
 export const TOKENS = {
-    Platform: Symbol("Platform"),
-    Logger: Symbol("Logger"),
-    Ffmpeg:   Symbol("Ffmpeg"),
-    MediaSourceStreamFactory: Symbol("MediaSourceStreamFactory"),
+    Platform: "Platform",
+    Logger: "Logger",
+    Ffmpeg:   "Ffmpeg",
+    MediaSourceStreamFactory: "MediaSourceStreamFactory",
 }
