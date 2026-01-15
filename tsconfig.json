@@ -1,7 +1,6 @@
 {
   "files": [],
   "references": [
-    { "path": "shared" },
     { "path": "backend" },
     { "path": "electron/tsconfig.json" }
   ]

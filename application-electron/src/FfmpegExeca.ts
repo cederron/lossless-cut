@@ -1,7 +1,9 @@
 import { execa } from 'execa';
 import { IFfmpeg, ILogger, IMediaSourceInitParams, IPlatform, IRunningProcess } from 'lossless-cut-application';
-import type { Options as ExecaOptions, ResultPromise } from 'execa';
+import type { Options as ExecaOptions } from 'execa';
+import { injectable } from 'tsyringe';
 
+@injectable()
 export class FfmpegExeca implements IFfmpeg {
 
     logger: ILogger;
@@ -136,7 +138,7 @@ export class FfmpegExeca implements IFfmpeg {
         throw new Error('Method not implemented.');
     }
 
-    getFfCommandLine(cmd: string, args: readonly string[]): string {
+    getFfCommandLine(_cmd: string, _args: readonly string[]): string {
         throw new Error('Method not implemented.');
     }
 

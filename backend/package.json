@@ -21,7 +21,7 @@
     "clean": "rimraf dist tsconfig.tsbuildinfo"
   },
   "dependencies": {
-    "lossless-cut-shared": "workspace:*"
+    "lossless-cut-application": "workspace:*"
   },
   "devDependencies": {
     "@tsconfig/node22": "^22.0.5",

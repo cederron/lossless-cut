@@ -75,9 +75,9 @@ export class ProcessMediaSourceStreamFactory implements IMediaSourceStreamFactor
             try {
                 await process;
             } catch (err) {
-                if (err instanceof ExecaError && err.isTerminated) {
-                    return;
-                }
+                // if (err instanceof ExecaError && err.isTerminated) {
+                //     return;
+                // }
 
                 this.logger.warn(err instanceof Error ? err.message : String(err));
                 this.logger.warn(stderr.toString('utf8'));
@@ -86,16 +86,4 @@ export class ProcessMediaSourceStreamFactory implements IMediaSourceStreamFactor
 
         return { abort, readChunk };
     };
-
-    // createMediaSourceProcess({ path, videoStreamIndex, audioStreamIndexes, seekTo, size, fps, rotate }: {
-    //     path: string,
-    //     videoStreamIndex?: number | undefined,
-    //     audioStreamIndexes: number[],
-    //     seekTo: number,
-    //     size?: number | undefined,
-    //     fps?: number | undefined,
-    //     rotate: number | undefined,
-    // }) {
-
-    // }
 }

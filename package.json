@@ -5,15 +5,14 @@
   "workspaces": [
     "electron",
     "backend",
-    "shared",
     "application",
     "application-electron"
   ],
   "scripts": {
     "dev": "yarn workspace lossless-cut dev",
     "start": "yarn workspace lossless-cut start",
-    "build": "yarn workspaces foreach -tv run build",
-    "clean": "yarn workspaces foreach -tv run clean",
+    "build": "yarn workspaces foreach -Atv run build",
+    "clean": "yarn workspaces foreach -Atv run clean",
     "tsc": "tsc -b",
     "lint": "yarn workspace lossless-cut lint",
     "test": "yarn workspace lossless-cut test"

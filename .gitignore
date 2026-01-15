@@ -20,4 +20,7 @@ node_modules
 /electron/main-ts-dist
 /electron/common-ts-dist
 
+/application/dist
+/application-electron/dist
+
 tsconfig.*.tsbuildinfo

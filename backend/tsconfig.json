@@ -12,8 +12,8 @@
     "moduleResolution": "NodeNext",
     "baseUrl": ".",
     "paths": {
-      "lossless-cut-shared": ["../shared/src/index.ts"],
-      "lossless-cut-shared/*": ["../shared/src/*"]
+      "lossless-cut-application": ["../application/src/index.ts"],
+      "lossless-cut-application/*": ["../application/src/*"]
     },
     "allowImportingTsExtensions": true,
     "rewriteRelativeImportExtensions": true,
@@ -25,6 +25,6 @@
   },
   "include": ["src/**/*"],
   "references": [
-    { "path": "../shared" }
+    { "path": "../application" }
   ]
 }
