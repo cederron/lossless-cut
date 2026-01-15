@@ -1,6 +1,8 @@
 process.traceDeprecation = true;
 process.traceProcessWarnings = true;
 
+import 'reflect-metadata';
+
 /* eslint-disable import/first */
 // eslint-disable-next-line import/no-extraneous-dependencies
 import electron, { BrowserWindow, type BrowserWindowConstructorOptions, nativeTheme, shell, app, ipcMain, Notification, type NotificationConstructorOptions } from 'electron';
@@ -33,6 +35,7 @@ import { getAboutPanelOptions } from './aboutPanel.js';
 import { checkNewVersion } from './updateChecker.js';
 import * as i18nCommon from './i18nCommon.js';
 import './i18n.js';
+import './di.js';
 import type { ApiActionRequest } from '../common/types.js';
 import * as ffmpeg from './ffmpeg.js';
 import * as compatPlayer from './compatPlayer.js';
