@@ -47,6 +47,12 @@ export default ({ port, onKeyboardAction }: {
       rotate: rotate != null ? Number(rotate) : undefined,
     });
 
+    // Prevent unhandled rejection when we kill the process
+    process.catch((err: any) => {
+      if (err && (err.signal === 'SIGKILL' || err.killed)) return;
+      logger.error('Stream process error', err);
+    });
+
     const { stdout } = process;
 
     if(!stdout) {
