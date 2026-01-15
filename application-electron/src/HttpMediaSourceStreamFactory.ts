@@ -17,7 +17,7 @@ export class HttpMediaSourceStreamFactory implements IMediaSourceStreamFactory {
 
         // const streamUrl = params.path; // `${API_BASE_URL}/stream?filePath=${encodeURIComponent(path)}&start=${seekTo}`;
         // add params to url
-        const streamUrlBase = 'http://localhost:3001/stream';
+        const streamUrlBase = 'http://localhost:8080/stream';
         const url = new URL(streamUrlBase);
         Object.entries(params).forEach(([key, value]) => {
             if (value !== undefined && value !== null) {
@@ -53,7 +53,7 @@ export class HttpMediaSourceStreamFactory implements IMediaSourceStreamFactory {
 
         return {
             readChunk: async (): Promise<Buffer<ArrayBufferLike> | null> => {
-                this.logger.info('Reading chunk from HTTP media source stream', { streamUrl, params, aborted });
+                // this.logger.info('Reading chunk from HTTP media source stream', { streamUrl, params, aborted });
                 if (aborted) return null;
 
                 try {
