@@ -1,5 +1,5 @@
 import { execa } from 'execa';
-import { IFfmpeg, ILogger, IMediaSourceInitParams, IPlatform, IRunningProcess } from 'lossless-cut-application';
+import type { IFfmpeg, ILogger, IMediaSourceInitParams, IPlatform, IRunningProcess } from 'lossless-cut-application';
 import type { Options as ExecaOptions } from 'execa';
 import { injectable } from 'tsyringe';
 
