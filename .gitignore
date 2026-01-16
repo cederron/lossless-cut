@@ -20,6 +20,16 @@ node_modules
 /electron/main-ts-dist
 /electron/common-ts-dist
 
+/electron-stream/dist
+/electron-stream/out
+/electron-stream/icon-build
+/electron-stream/build-resources
+/electron-stream/notes
+/electron-stream/ffmpeg
+/electron-stream/app*.log
+/electron-stream/main-ts-dist
+/electron-stream/common-ts-dist
+
 /application/dist
 /application-electron/dist
 
