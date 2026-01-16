@@ -1,0 +1,1711 @@
+2026-01-09T17:15:43.193Z info: LosslessCut version 3.67.2 { isDev: true }
+2026-01-09T17:15:43.274Z info: Backed up config file to C:\Users\alex\AppData\Roaming\LosslessCut\config.json.backup-v3.67.2-1-1767978943267
+2026-01-09T17:15:43.274Z error: Failed to migrate old keyboard binding ShiftLeft+Equal addSegment AssertionError [ERR_ASSERTION]: Unknown key: ShiftLeft
+    at file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:473:11
+    at Array.map (<anonymous>)
+    at file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:471:12
+    at Array.map (<anonymous>)
+    at init$1 (file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:358:37)
+    at async init (file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:1877:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+2026-01-09T17:15:43.275Z error: Failed to migrate old keyboard binding KeyK togglePlayNoResetSpeed AssertionError [ERR_ASSERTION]: Unknown key: KeyK
+    at file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:473:11
+    at Array.map (<anonymous>)
+    at file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:471:12
+    at Array.map (<anonymous>)
+    at init$1 (file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:358:37)
+    at async init (file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:1877:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+2026-01-09T17:15:43.275Z error: Failed to migrate old keyboard binding KeyJ reducePlaybackRate AssertionError [ERR_ASSERTION]: Unknown key: KeyJ
+    at file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:473:11
+    at Array.map (<anonymous>)
+    at file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:471:12
+    at Array.map (<anonymous>)
+    at init$1 (file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:358:37)
+    at async init (file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:1877:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+2026-01-09T17:15:43.275Z error: Failed to migrate old keyboard binding ShiftLeft+KeyJ reducePlaybackRateMore AssertionError [ERR_ASSERTION]: Unknown key: ShiftLeft
+    at file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:473:11
+    at Array.map (<anonymous>)
+    at file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:471:12
+    at Array.map (<anonymous>)
+    at init$1 (file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:358:37)
+    at async init (file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:1877:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+2026-01-09T17:15:43.276Z error: Failed to migrate old keyboard binding KeyL increasePlaybackRate AssertionError [ERR_ASSERTION]: Unknown key: KeyL
+    at file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:473:11
+    at Array.map (<anonymous>)
+    at file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:471:12
+    at Array.map (<anonymous>)
+    at init$1 (file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:358:37)
+    at async init (file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:1877:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+2026-01-09T17:15:43.276Z error: Failed to migrate old keyboard binding ShiftLeft+KeyL increasePlaybackRateMore AssertionError [ERR_ASSERTION]: Unknown key: ShiftLeft
+    at file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:473:11
+    at Array.map (<anonymous>)
+    at file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:471:12
+    at Array.map (<anonymous>)
+    at init$1 (file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:358:37)
+    at async init (file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:1877:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+2026-01-09T17:15:43.276Z error: Failed to migrate old keyboard binding KeyZ timelineToggleComfortZoom AssertionError [ERR_ASSERTION]: Unknown key: KeyZ
+    at file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:473:11
+    at Array.map (<anonymous>)
+    at file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:471:12
+    at Array.map (<anonymous>)
+    at init$1 (file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:358:37)
+    at async init (file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:1877:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+2026-01-09T17:15:43.276Z error: Failed to migrate old keyboard binding ShiftLeft+KeyZ makeCursorTimeZero AssertionError [ERR_ASSERTION]: Unknown key: ShiftLeft
+    at file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:473:11
+    at Array.map (<anonymous>)
+    at file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:471:12
+    at Array.map (<anonymous>)
+    at init$1 (file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:358:37)
+    at async init (file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:1877:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+2026-01-09T17:15:43.277Z error: Failed to migrate old keyboard binding Comma seekPreviousFrame AssertionError [ERR_ASSERTION]: Unknown key: Comma
+    at file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:473:11
+    at Array.map (<anonymous>)
+    at file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:471:12
+    at Array.map (<anonymous>)
+    at init$1 (file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:358:37)
+    at async init (file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:1877:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+2026-01-09T17:15:43.277Z error: Failed to migrate old keyboard binding Period seekNextFrame AssertionError [ERR_ASSERTION]: Unknown key: Period
+    at file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:473:11
+    at Array.map (<anonymous>)
+    at file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:471:12
+    at Array.map (<anonymous>)
+    at init$1 (file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:358:37)
+    at async init (file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:1877:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+2026-01-09T17:15:43.277Z error: Failed to migrate old keyboard binding KeyC captureSnapshot AssertionError [ERR_ASSERTION]: Unknown key: KeyC
+    at file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:473:11
+    at Array.map (<anonymous>)
+    at file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:471:12
+    at Array.map (<anonymous>)
+    at init$1 (file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:358:37)
+    at async init (file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:1877:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+2026-01-09T17:15:43.277Z error: Failed to migrate old keyboard binding ControlLeft+KeyC copySegmentsToClipboard AssertionError [ERR_ASSERTION]: Unknown key: ControlLeft
+    at file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:473:11
+    at Array.map (<anonymous>)
+    at file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:471:12
+    at Array.map (<anonymous>)
+    at init$1 (file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:358:37)
+    at async init (file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:1877:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+2026-01-09T17:15:43.278Z error: Failed to migrate old keyboard binding MetaLeft+KeyC copySegmentsToClipboard AssertionError [ERR_ASSERTION]: Unknown key: MetaLeft
+    at file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:473:11
+    at Array.map (<anonymous>)
+    at file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:471:12
+    at Array.map (<anonymous>)
+    at init$1 (file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:358:37)
+    at async init (file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:1877:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+2026-01-09T17:15:43.278Z error: Failed to migrate old keyboard binding ShiftLeft+KeyC captureSnapshotToClipboard AssertionError [ERR_ASSERTION]: Unknown key: ShiftLeft
+    at file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:473:11
+    at Array.map (<anonymous>)
+    at file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:471:12
+    at Array.map (<anonymous>)
+    at init$1 (file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:358:37)
+    at async init (file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:1877:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+2026-01-09T17:15:43.278Z error: Failed to migrate old keyboard binding KeyI setCutStart AssertionError [ERR_ASSERTION]: Unknown key: KeyI
+    at file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:473:11
+    at Array.map (<anonymous>)
+    at file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:471:12
+    at Array.map (<anonymous>)
+    at init$1 (file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:358:37)
+    at async init (file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:1877:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+2026-01-09T17:15:43.278Z error: Failed to migrate old keyboard binding KeyO setCutEnd AssertionError [ERR_ASSERTION]: Unknown key: KeyO
+    at file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:473:11
+    at Array.map (<anonymous>)
+    at file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:471:12
+    at Array.map (<anonymous>)
+    at init$1 (file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:358:37)
+    at async init (file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:1877:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+2026-01-09T17:15:43.278Z error: Failed to migrate old keyboard binding KeyD cleanupFilesDialog AssertionError [ERR_ASSERTION]: Unknown key: KeyD
+    at file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:473:11
+    at Array.map (<anonymous>)
+    at file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:471:12
+    at Array.map (<anonymous>)
+    at init$1 (file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:358:37)
+    at async init (file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:1877:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+2026-01-09T17:15:43.279Z error: Failed to migrate old keyboard binding KeyB splitCurrentSegment AssertionError [ERR_ASSERTION]: Unknown key: KeyB
+    at file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:473:11
+    at Array.map (<anonymous>)
+    at file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:471:12
+    at Array.map (<anonymous>)
+    at init$1 (file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:358:37)
+    at async init (file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:1877:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+2026-01-09T17:15:43.279Z error: Failed to migrate old keyboard binding KeyR increaseRotation AssertionError [ERR_ASSERTION]: Unknown key: KeyR
+    at file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:473:11
+    at Array.map (<anonymous>)
+    at file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:471:12
+    at Array.map (<anonymous>)
+    at init$1 (file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:358:37)
+    at async init (file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:1877:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+2026-01-09T17:15:43.279Z error: Failed to migrate old keyboard binding KeyG goToTimecode AssertionError [ERR_ASSERTION]: Unknown key: KeyG
+    at file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:473:11
+    at Array.map (<anonymous>)
+    at file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:471:12
+    at Array.map (<anonymous>)
+    at init$1 (file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:358:37)
+    at async init (file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:1877:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+2026-01-09T17:15:43.279Z error: Failed to migrate old keyboard binding KeyT toggleStripAll AssertionError [ERR_ASSERTION]: Unknown key: KeyT
+    at file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:473:11
+    at Array.map (<anonymous>)
+    at file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:471:12
+    at Array.map (<anonymous>)
+    at init$1 (file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:358:37)
+    at async init (file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:1877:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+2026-01-09T17:15:43.280Z error: Failed to migrate old keyboard binding ShiftLeft+KeyT toggleStripCurrentFilter AssertionError [ERR_ASSERTION]: Unknown key: ShiftLeft
+    at file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:473:11
+    at Array.map (<anonymous>)
+    at file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:471:12
+    at Array.map (<anonymous>)
+    at init$1 (file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:358:37)
+    at async init (file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:1877:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+2026-01-09T17:15:43.280Z error: Failed to migrate old keyboard binding ArrowLeft seekBackwards AssertionError [ERR_ASSERTION]: Unknown key: ArrowLeft
+    at file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:473:11
+    at Array.map (<anonymous>)
+    at file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:471:12
+    at Array.map (<anonymous>)
+    at init$1 (file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:358:37)
+    at async init (file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:1877:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+2026-01-09T17:15:43.280Z error: Failed to migrate old keyboard binding ControlLeft+ShiftLeft+ArrowLeft seekBackwards2 AssertionError [ERR_ASSERTION]: Unknown key: ControlLeft
+    at file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:473:11
+    at Array.map (<anonymous>)
+    at file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:471:12
+    at Array.map (<anonymous>)
+    at init$1 (file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:358:37)
+    at async init (file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:1877:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+2026-01-09T17:15:43.280Z error: Failed to migrate old keyboard binding ControlLeft+ArrowLeft seekBackwardsPercent AssertionError [ERR_ASSERTION]: Unknown key: ControlLeft
+    at file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:473:11
+    at Array.map (<anonymous>)
+    at file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:471:12
+    at Array.map (<anonymous>)
+    at init$1 (file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:358:37)
+    at async init (file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:1877:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+2026-01-09T17:15:43.281Z error: Failed to migrate old keyboard binding MetaLeft+ArrowLeft seekBackwardsPercent AssertionError [ERR_ASSERTION]: Unknown key: MetaLeft
+    at file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:473:11
+    at Array.map (<anonymous>)
+    at file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:471:12
+    at Array.map (<anonymous>)
+    at init$1 (file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:358:37)
+    at async init (file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:1877:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+2026-01-09T17:15:43.281Z error: Failed to migrate old keyboard binding AltLeft+ArrowLeft seekBackwardsKeyframe AssertionError [ERR_ASSERTION]: Unknown key: AltLeft
+    at file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:473:11
+    at Array.map (<anonymous>)
+    at file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:471:12
+    at Array.map (<anonymous>)
+    at init$1 (file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:358:37)
+    at async init (file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:1877:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+2026-01-09T17:15:43.281Z error: Failed to migrate old keyboard binding ShiftLeft+ArrowLeft jumpCutStart AssertionError [ERR_ASSERTION]: Unknown key: ShiftLeft
+    at file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:473:11
+    at Array.map (<anonymous>)
+    at file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:471:12
+    at Array.map (<anonymous>)
+    at init$1 (file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:358:37)
+    at async init (file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:1877:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+2026-01-09T17:15:43.281Z error: Failed to migrate old keyboard binding ArrowRight seekForwards AssertionError [ERR_ASSERTION]: Unknown key: ArrowRight
+    at file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:473:11
+    at Array.map (<anonymous>)
+    at file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:471:12
+    at Array.map (<anonymous>)
+    at init$1 (file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:358:37)
+    at async init (file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:1877:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+2026-01-09T17:15:43.281Z error: Failed to migrate old keyboard binding ControlLeft+ShiftLeft+ArrowRight seekForwards2 AssertionError [ERR_ASSERTION]: Unknown key: ControlLeft
+    at file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:473:11
+    at Array.map (<anonymous>)
+    at file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:471:12
+    at Array.map (<anonymous>)
+    at init$1 (file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:358:37)
+    at async init (file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:1877:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+2026-01-09T17:15:43.282Z error: Failed to migrate old keyboard binding ControlLeft+ArrowRight seekForwardsPercent AssertionError [ERR_ASSERTION]: Unknown key: ControlLeft
+    at file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:473:11
+    at Array.map (<anonymous>)
+    at file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:471:12
+    at Array.map (<anonymous>)
+    at init$1 (file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:358:37)
+    at async init (file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:1877:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+2026-01-09T17:15:43.282Z error: Failed to migrate old keyboard binding MetaLeft+ArrowRight seekForwardsPercent AssertionError [ERR_ASSERTION]: Unknown key: MetaLeft
+    at file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:473:11
+    at Array.map (<anonymous>)
+    at file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:471:12
+    at Array.map (<anonymous>)
+    at init$1 (file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:358:37)
+    at async init (file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:1877:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+2026-01-09T17:15:43.282Z error: Failed to migrate old keyboard binding AltLeft+ArrowRight seekForwardsKeyframe AssertionError [ERR_ASSERTION]: Unknown key: AltLeft
+    at file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:473:11
+    at Array.map (<anonymous>)
+    at file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:471:12
+    at Array.map (<anonymous>)
+    at init$1 (file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:358:37)
+    at async init (file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:1877:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+2026-01-09T17:15:43.283Z error: Failed to migrate old keyboard binding ShiftLeft+ArrowRight jumpCutEnd AssertionError [ERR_ASSERTION]: Unknown key: ShiftLeft
+    at file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:473:11
+    at Array.map (<anonymous>)
+    at file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:471:12
+    at Array.map (<anonymous>)
+    at init$1 (file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:358:37)
+    at async init (file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:1877:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+2026-01-09T17:15:43.283Z error: Failed to migrate old keyboard binding ControlLeft+Home jumpTimelineStart AssertionError [ERR_ASSERTION]: Unknown key: ControlLeft
+    at file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:473:11
+    at Array.map (<anonymous>)
+    at file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:471:12
+    at Array.map (<anonymous>)
+    at init$1 (file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:358:37)
+    at async init (file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:1877:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+2026-01-09T17:15:43.283Z error: Failed to migrate old keyboard binding ControlLeft+End jumpTimelineEnd AssertionError [ERR_ASSERTION]: Unknown key: ControlLeft
+    at file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:473:11
+    at Array.map (<anonymous>)
+    at file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:471:12
+    at Array.map (<anonymous>)
+    at init$1 (file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:358:37)
+    at async init (file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:1877:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+2026-01-09T17:15:43.283Z error: Failed to migrate old keyboard binding ArrowUp jumpPrevSegment AssertionError [ERR_ASSERTION]: Unknown key: ArrowUp
+    at file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:473:11
+    at Array.map (<anonymous>)
+    at file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:471:12
+    at Array.map (<anonymous>)
+    at init$1 (file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:358:37)
+    at async init (file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:1877:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+2026-01-09T17:15:43.283Z error: Failed to migrate old keyboard binding ShiftLeft+AltLeft+PageUp jumpSeekFirstSegment AssertionError [ERR_ASSERTION]: Unknown key: ShiftLeft
+    at file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:473:11
+    at Array.map (<anonymous>)
+    at file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:471:12
+    at Array.map (<anonymous>)
+    at init$1 (file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:358:37)
+    at async init (file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:1877:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+2026-01-09T17:15:43.284Z error: Failed to migrate old keyboard binding ShiftLeft+AltLeft+ArrowUp jumpSeekPrevSegment AssertionError [ERR_ASSERTION]: Unknown key: ShiftLeft
+    at file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:473:11
+    at Array.map (<anonymous>)
+    at file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:471:12
+    at Array.map (<anonymous>)
+    at init$1 (file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:358:37)
+    at async init (file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:1877:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+2026-01-09T17:15:43.284Z error: Failed to migrate old keyboard binding ControlLeft+ArrowUp timelineZoomIn AssertionError [ERR_ASSERTION]: Unknown key: ControlLeft
+    at file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:473:11
+    at Array.map (<anonymous>)
+    at file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:471:12
+    at Array.map (<anonymous>)
+    at init$1 (file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:358:37)
+    at async init (file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:1877:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+2026-01-09T17:15:43.284Z error: Failed to migrate old keyboard binding MetaLeft+ArrowUp timelineZoomIn AssertionError [ERR_ASSERTION]: Unknown key: MetaLeft
+    at file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:473:11
+    at Array.map (<anonymous>)
+    at file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:471:12
+    at Array.map (<anonymous>)
+    at init$1 (file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:358:37)
+    at async init (file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:1877:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+2026-01-09T17:15:43.284Z error: Failed to migrate old keyboard binding ShiftLeft+ArrowUp batchPreviousFile AssertionError [ERR_ASSERTION]: Unknown key: ShiftLeft
+    at file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:473:11
+    at Array.map (<anonymous>)
+    at file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:471:12
+    at Array.map (<anonymous>)
+    at init$1 (file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:358:37)
+    at async init (file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:1877:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+2026-01-09T17:15:43.285Z error: Failed to migrate old keyboard binding ControlLeft+ShiftLeft+ArrowUp batchOpenPreviousFile AssertionError [ERR_ASSERTION]: Unknown key: ControlLeft
+    at file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:473:11
+    at Array.map (<anonymous>)
+    at file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:471:12
+    at Array.map (<anonymous>)
+    at init$1 (file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:358:37)
+    at async init (file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:1877:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+2026-01-09T17:15:43.285Z error: Failed to migrate old keyboard binding ArrowDown jumpNextSegment AssertionError [ERR_ASSERTION]: Unknown key: ArrowDown
+    at file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:473:11
+    at Array.map (<anonymous>)
+    at file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:471:12
+    at Array.map (<anonymous>)
+    at init$1 (file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:358:37)
+    at async init (file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:1877:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+2026-01-09T17:15:43.285Z error: Failed to migrate old keyboard binding ShiftLeft+AltLeft+PageDown jumpSeekLastSegment AssertionError [ERR_ASSERTION]: Unknown key: ShiftLeft
+    at file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:473:11
+    at Array.map (<anonymous>)
+    at file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:471:12
+    at Array.map (<anonymous>)
+    at init$1 (file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:358:37)
+    at async init (file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:1877:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+2026-01-09T17:15:43.285Z error: Failed to migrate old keyboard binding ShiftLeft+AltLeft+ArrowDown jumpSeekNextSegment AssertionError [ERR_ASSERTION]: Unknown key: ShiftLeft
+    at file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:473:11
+    at Array.map (<anonymous>)
+    at file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:471:12
+    at Array.map (<anonymous>)
+    at init$1 (file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:358:37)
+    at async init (file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:1877:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+2026-01-09T17:15:43.285Z error: Failed to migrate old keyboard binding ControlLeft+ArrowDown timelineZoomOut AssertionError [ERR_ASSERTION]: Unknown key: ControlLeft
+    at file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:473:11
+    at Array.map (<anonymous>)
+    at file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:471:12
+    at Array.map (<anonymous>)
+    at init$1 (file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:358:37)
+    at async init (file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:1877:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+2026-01-09T17:15:43.286Z error: Failed to migrate old keyboard binding MetaLeft+ArrowDown timelineZoomOut AssertionError [ERR_ASSERTION]: Unknown key: MetaLeft
+    at file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:473:11
+    at Array.map (<anonymous>)
+    at file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:471:12
+    at Array.map (<anonymous>)
+    at init$1 (file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:358:37)
+    at async init (file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:1877:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+2026-01-09T17:15:43.286Z error: Failed to migrate old keyboard binding ShiftLeft+ArrowDown batchNextFile AssertionError [ERR_ASSERTION]: Unknown key: ShiftLeft
+    at file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:473:11
+    at Array.map (<anonymous>)
+    at file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:471:12
+    at Array.map (<anonymous>)
+    at init$1 (file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:358:37)
+    at async init (file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:1877:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+2026-01-09T17:15:43.286Z error: Failed to migrate old keyboard binding ControlLeft+ShiftLeft+ArrowDown batchOpenNextFile AssertionError [ERR_ASSERTION]: Unknown key: ControlLeft
+    at file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:473:11
+    at Array.map (<anonymous>)
+    at file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:471:12
+    at Array.map (<anonymous>)
+    at init$1 (file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:358:37)
+    at async init (file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:1877:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+2026-01-09T17:15:43.286Z error: Failed to migrate old keyboard binding ShiftLeft+Enter batchOpenSelectedFile AssertionError [ERR_ASSERTION]: Unknown key: ShiftLeft
+    at file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:473:11
+    at Array.map (<anonymous>)
+    at file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:471:12
+    at Array.map (<anonymous>)
+    at init$1 (file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:358:37)
+    at async init (file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:1877:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+2026-01-09T17:15:43.287Z error: Failed to migrate old keyboard binding ControlLeft+KeyZ undo AssertionError [ERR_ASSERTION]: Unknown key: ControlLeft
+    at file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:473:11
+    at Array.map (<anonymous>)
+    at file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:471:12
+    at Array.map (<anonymous>)
+    at init$1 (file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:358:37)
+    at async init (file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:1877:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+2026-01-09T17:15:43.287Z error: Failed to migrate old keyboard binding MetaLeft+KeyZ undo AssertionError [ERR_ASSERTION]: Unknown key: MetaLeft
+    at file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:473:11
+    at Array.map (<anonymous>)
+    at file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:471:12
+    at Array.map (<anonymous>)
+    at init$1 (file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:358:37)
+    at async init (file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:1877:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+2026-01-09T17:15:43.287Z error: Failed to migrate old keyboard binding ControlLeft+ShiftLeft+KeyZ redo AssertionError [ERR_ASSERTION]: Unknown key: ControlLeft
+    at file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:473:11
+    at Array.map (<anonymous>)
+    at file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:471:12
+    at Array.map (<anonymous>)
+    at init$1 (file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:358:37)
+    at async init (file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:1877:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+2026-01-09T17:15:43.287Z error: Failed to migrate old keyboard binding MetaLeft+ShiftLeft+KeyZ redo AssertionError [ERR_ASSERTION]: Unknown key: MetaLeft
+    at file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:473:11
+    at Array.map (<anonymous>)
+    at file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:471:12
+    at Array.map (<anonymous>)
+    at init$1 (file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:358:37)
+    at async init (file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:1877:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+2026-01-09T17:15:43.287Z error: Failed to migrate old keyboard binding KeyF toggleFullscreenVideo AssertionError [ERR_ASSERTION]: Unknown key: KeyF
+    at file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:473:11
+    at Array.map (<anonymous>)
+    at file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:471:12
+    at Array.map (<anonymous>)
+    at init$1 (file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:358:37)
+    at async init (file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:1877:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+2026-01-09T17:15:43.287Z error: Failed to migrate old keyboard binding KeyE export AssertionError [ERR_ASSERTION]: Unknown key: KeyE
+    at file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:473:11
+    at Array.map (<anonymous>)
+    at file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:471:12
+    at Array.map (<anonymous>)
+    at init$1 (file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:358:37)
+    at async init (file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:1877:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+2026-01-09T17:15:43.288Z error: Failed to migrate old keyboard binding ShiftLeft+Slash toggleKeyboardShortcuts AssertionError [ERR_ASSERTION]: Unknown key: ShiftLeft
+    at file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:473:11
+    at Array.map (<anonymous>)
+    at file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:471:12
+    at Array.map (<anonymous>)
+    at init$1 (file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:358:37)
+    at async init (file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:1877:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+2026-01-09T17:15:43.288Z error: Failed to migrate old keyboard binding AltLeft+ArrowUp increaseVolume AssertionError [ERR_ASSERTION]: Unknown key: AltLeft
+    at file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:473:11
+    at Array.map (<anonymous>)
+    at file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:471:12
+    at Array.map (<anonymous>)
+    at init$1 (file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:358:37)
+    at async init (file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:1877:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+2026-01-09T17:15:43.288Z error: Failed to migrate old keyboard binding AltLeft+ArrowDown decreaseVolume AssertionError [ERR_ASSERTION]: Unknown key: AltLeft
+    at file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:473:11
+    at Array.map (<anonymous>)
+    at file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:471:12
+    at Array.map (<anonymous>)
+    at init$1 (file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:358:37)
+    at async init (file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:1877:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+2026-01-09T17:15:43.288Z error: Failed to migrate old keyboard binding KeyM toggleMuted AssertionError [ERR_ASSERTION]: Unknown key: KeyM
+    at file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:473:11
+    at Array.map (<anonymous>)
+    at file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:471:12
+    at Array.map (<anonymous>)
+    at init$1 (file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:358:37)
+    at async init (file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:1877:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+2026-01-09T17:15:43.290Z info: Migrated config to version 2
+2026-01-09T17:15:43.291Z info: Initialized config store
+2026-01-09T17:15:43.299Z info: Waiting for app to become ready
+2026-01-09T17:15:43.299Z info: CLI arguments { _: [] }
+2026-01-09T17:15:43.518Z info: Current version 3.67.2
+2026-01-09T17:15:43.519Z info: Newest version 3.67.2
+2026-01-09T17:15:43.751Z info: Added Extension React Developer Tools
+2026-01-09T17:15:48.573Z info: ffmpeg -hide_banner -f lavfi -i nullsrc=s=256x256:d=1 -f null -
+2026-01-09T17:15:48.589Z info: ffmpeg -hide_banner -f lavfi -i nullsrc=s=256x256:d=1 -f null -
+2026-01-09T17:32:22.187Z info: LosslessCut version 3.67.2 { isDev: true }
+2026-01-09T17:32:22.224Z info: Initialized config store
+2026-01-09T17:32:22.227Z info: Waiting for app to become ready
+2026-01-09T17:32:22.230Z info: CLI arguments { _: [] }
+2026-01-09T17:32:22.321Z info: Added Extension React Developer Tools
+2026-01-09T17:32:22.581Z info: Current version 3.67.2
+2026-01-09T17:32:22.581Z info: Newest version 3.67.2
+2026-01-09T17:32:25.182Z info: ffmpeg -hide_banner -f lavfi -i nullsrc=s=256x256:d=1 -f null -
+2026-01-09T17:32:25.206Z info: ffmpeg -hide_banner -f lavfi -i nullsrc=s=256x256:d=1 -f null -
+2026-01-09T17:33:53.884Z info: LosslessCut version 3.67.2 { isDev: true }
+2026-01-09T17:33:53.925Z info: Initialized config store
+2026-01-09T17:33:53.928Z info: Waiting for app to become ready
+2026-01-09T17:33:53.931Z info: CLI arguments { _: [] }
+2026-01-09T17:33:54.013Z info: Added Extension React Developer Tools
+2026-01-09T17:33:54.105Z info: Current version 3.67.2
+2026-01-09T17:33:54.106Z info: Newest version 3.67.2
+2026-01-09T17:33:56.723Z info: ffmpeg -hide_banner -f lavfi -i nullsrc=s=256x256:d=1 -f null -
+2026-01-09T17:33:56.850Z info: ffmpeg -hide_banner -f lavfi -i nullsrc=s=256x256:d=1 -f null -
+2026-01-15T11:45:18.859Z info: LosslessCut version 3.67.2 { isDev: true }
+2026-01-15T11:45:18.923Z info: Initialized config store
+2026-01-15T11:45:18.923Z info: Waiting for app to become ready
+2026-01-15T11:45:18.927Z info: CLI arguments { _: [] }
+2026-01-15T11:45:19.061Z info: Added Extension React Developer Tools
+2026-01-15T11:45:19.285Z info: Current version 3.67.2
+2026-01-15T11:45:19.285Z info: Newest version 3.67.2
+2026-01-15T11:47:09.820Z info: LosslessCut version 3.67.2 { isDev: true }
+2026-01-15T11:47:09.856Z info: Initialized config store
+2026-01-15T11:47:09.857Z info: Waiting for app to become ready
+2026-01-15T11:47:09.862Z info: CLI arguments { _: [] }
+2026-01-15T11:47:09.929Z info: Added Extension React Developer Tools
+2026-01-15T11:47:10.209Z info: Current version 3.67.2
+2026-01-15T11:47:10.209Z info: Newest version 3.67.2
+2026-01-15T11:51:51.705Z info: LosslessCut version 3.67.2 { isDev: true }
+2026-01-15T11:51:51.741Z info: Initialized config store
+2026-01-15T11:51:51.742Z info: Waiting for app to become ready
+2026-01-15T11:51:51.747Z info: CLI arguments { _: [] }
+2026-01-15T11:51:51.816Z info: Added Extension React Developer Tools
+2026-01-15T11:51:52.122Z info: Current version 3.67.2
+2026-01-15T11:51:52.123Z info: Newest version 3.67.2
+2026-01-15T11:55:42.483Z info: LosslessCut version 3.67.2 { isDev: true }
+2026-01-15T11:55:42.521Z info: Initialized config store
+2026-01-15T11:55:42.521Z info: Waiting for app to become ready
+2026-01-15T11:55:42.527Z info: CLI arguments { _: [] }
+2026-01-15T11:55:42.599Z info: Added Extension React Developer Tools
+2026-01-15T11:55:42.858Z info: Current version 3.67.2
+2026-01-15T11:55:42.858Z info: Newest version 3.67.2
+2026-01-15T11:56:40.491Z info: LosslessCut version 3.67.2 { isDev: true }
+2026-01-15T11:56:40.520Z info: Initialized config store
+2026-01-15T11:56:40.520Z info: Waiting for app to become ready
+2026-01-15T11:56:40.523Z info: CLI arguments { _: [] }
+2026-01-15T11:56:40.595Z info: Added Extension React Developer Tools
+2026-01-15T11:56:40.858Z info: Current version 3.67.2
+2026-01-15T11:56:40.858Z info: Newest version 3.67.2
+2026-01-15T11:58:42.509Z info: LosslessCut version 3.67.2 { isDev: true }
+2026-01-15T11:58:42.538Z info: Initialized config store
+2026-01-15T11:58:42.539Z info: Waiting for app to become ready
+2026-01-15T11:58:42.543Z info: CLI arguments { _: [] }
+2026-01-15T11:58:42.614Z info: Added Extension React Developer Tools
+2026-01-15T11:58:42.716Z info: Current version 3.67.2
+2026-01-15T11:58:42.716Z info: Newest version 3.67.2
+2026-01-15T12:05:50.467Z info: LosslessCut version 3.67.2 { isDev: true }
+2026-01-15T12:05:50.496Z info: Initialized config store
+2026-01-15T12:05:50.497Z info: Waiting for app to become ready
+2026-01-15T12:05:50.502Z info: CLI arguments { _: [] }
+2026-01-15T12:05:50.569Z info: Added Extension React Developer Tools
+2026-01-15T12:05:50.670Z info: Current version 3.67.2
+2026-01-15T12:05:50.670Z info: Newest version 3.67.2
+2026-01-15T12:17:03.813Z info: LosslessCut version 3.67.2 { isDev: true }
+2026-01-15T12:17:03.842Z info: Initialized config store
+2026-01-15T12:17:03.843Z info: Waiting for app to become ready
+2026-01-15T12:17:03.849Z info: CLI arguments { _: [] }
+2026-01-15T12:17:03.921Z info: Added Extension React Developer Tools
+2026-01-15T12:17:04.189Z info: Current version 3.67.2
+2026-01-15T12:17:04.189Z info: Newest version 3.67.2
+2026-01-15T12:22:04.025Z error: electron-unhandled Cannot inject the dependency "logger" at position #0 of "ProcessMediaSourceStreamFactory" constructor. Reason:
+    TypeInfo not known for "Object" Error: Cannot inject the dependency "logger" at position #0 of "ProcessMediaSourceStreamFactory" constructor. Reason:
+    TypeInfo not known for "Object"
+    at C:\Users\alex\Codigos\lossless-cut\node_modules\tsyringe\dist\cjs\dependency-container.js:330:23
+    at Array.map (<anonymous>)
+    at C:\Users\alex\Codigos\lossless-cut\node_modules\tsyringe\dist\cjs\dependency-container.js:301:38
+    at InternalDependencyContainer.construct (C:\Users\alex\Codigos\lossless-cut\node_modules\tsyringe\dist\cjs\dependency-container.js:303:11)
+    at InternalDependencyContainer.resolveRegistration (C:\Users\alex\Codigos\lossless-cut\node_modules\tsyringe\dist\cjs\dependency-container.js:170:24)
+    at InternalDependencyContainer.resolve (C:\Users\alex\Codigos\lossless-cut\node_modules\tsyringe\dist\cjs\dependency-container.js:112:33)
+    at file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:2013:44
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2026-01-15T12:22:46.306Z error: electron-unhandled Cannot inject the dependency "logger" at position #0 of "ProcessMediaSourceStreamFactory" constructor. Reason:
+    TypeInfo not known for "Object" Error: Cannot inject the dependency "logger" at position #0 of "ProcessMediaSourceStreamFactory" constructor. Reason:
+    TypeInfo not known for "Object"
+    at C:\Users\alex\Codigos\lossless-cut\node_modules\tsyringe\dist\cjs\dependency-container.js:330:23
+    at Array.map (<anonymous>)
+    at C:\Users\alex\Codigos\lossless-cut\node_modules\tsyringe\dist\cjs\dependency-container.js:301:38
+    at InternalDependencyContainer.construct (C:\Users\alex\Codigos\lossless-cut\node_modules\tsyringe\dist\cjs\dependency-container.js:303:11)
+    at InternalDependencyContainer.resolveRegistration (C:\Users\alex\Codigos\lossless-cut\node_modules\tsyringe\dist\cjs\dependency-container.js:170:24)
+    at InternalDependencyContainer.resolve (C:\Users\alex\Codigos\lossless-cut\node_modules\tsyringe\dist\cjs\dependency-container.js:112:33)
+    at file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:2030:44
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2026-01-15T12:23:07.343Z error: electron-unhandled Cannot inject the dependency "logger" at position #0 of "ProcessMediaSourceStreamFactory" constructor. Reason:
+    TypeInfo not known for "Object" Error: Cannot inject the dependency "logger" at position #0 of "ProcessMediaSourceStreamFactory" constructor. Reason:
+    TypeInfo not known for "Object"
+    at C:\Users\alex\Codigos\lossless-cut\node_modules\tsyringe\dist\cjs\dependency-container.js:330:23
+    at Array.map (<anonymous>)
+    at C:\Users\alex\Codigos\lossless-cut\node_modules\tsyringe\dist\cjs\dependency-container.js:301:38
+    at InternalDependencyContainer.construct (C:\Users\alex\Codigos\lossless-cut\node_modules\tsyringe\dist\cjs\dependency-container.js:303:11)
+    at InternalDependencyContainer.resolveRegistration (C:\Users\alex\Codigos\lossless-cut\node_modules\tsyringe\dist\cjs\dependency-container.js:170:24)
+    at InternalDependencyContainer.resolve (C:\Users\alex\Codigos\lossless-cut\node_modules\tsyringe\dist\cjs\dependency-container.js:112:33)
+    at file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:2030:44
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2026-01-15T12:25:00.765Z error: electron-unhandled Cannot inject the dependency "logger" at position #0 of "ProcessMediaSourceStreamFactory" constructor. Reason:
+    TypeInfo not known for "Object" Error: Cannot inject the dependency "logger" at position #0 of "ProcessMediaSourceStreamFactory" constructor. Reason:
+    TypeInfo not known for "Object"
+    at C:\Users\alex\Codigos\lossless-cut\node_modules\tsyringe\dist\cjs\dependency-container.js:330:23
+    at Array.map (<anonymous>)
+    at C:\Users\alex\Codigos\lossless-cut\node_modules\tsyringe\dist\cjs\dependency-container.js:301:38
+    at InternalDependencyContainer.construct (C:\Users\alex\Codigos\lossless-cut\node_modules\tsyringe\dist\cjs\dependency-container.js:303:11)
+    at InternalDependencyContainer.resolveRegistration (C:\Users\alex\Codigos\lossless-cut\node_modules\tsyringe\dist\cjs\dependency-container.js:170:24)
+    at InternalDependencyContainer.resolve (C:\Users\alex\Codigos\lossless-cut\node_modules\tsyringe\dist\cjs\dependency-container.js:112:33)
+    at file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:2082:44
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2026-01-15T12:25:26.793Z error: electron-unhandled Cannot inject the dependency "logger" at position #0 of "ProcessMediaSourceStreamFactory" constructor. Reason:
+    TypeInfo not known for "Object" Error: Cannot inject the dependency "logger" at position #0 of "ProcessMediaSourceStreamFactory" constructor. Reason:
+    TypeInfo not known for "Object"
+    at C:\Users\alex\Codigos\lossless-cut\node_modules\tsyringe\dist\cjs\dependency-container.js:330:23
+    at Array.map (<anonymous>)
+    at C:\Users\alex\Codigos\lossless-cut\node_modules\tsyringe\dist\cjs\dependency-container.js:301:38
+    at InternalDependencyContainer.construct (C:\Users\alex\Codigos\lossless-cut\node_modules\tsyringe\dist\cjs\dependency-container.js:303:11)
+    at InternalDependencyContainer.resolveRegistration (C:\Users\alex\Codigos\lossless-cut\node_modules\tsyringe\dist\cjs\dependency-container.js:170:24)
+    at InternalDependencyContainer.resolve (C:\Users\alex\Codigos\lossless-cut\node_modules\tsyringe\dist\cjs\dependency-container.js:112:33)
+    at file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:2082:44
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2026-01-15T12:31:12.146Z error: electron-unhandled Cannot inject the dependency "logger" at position #0 of "ProcessMediaSourceStreamFactory" constructor. Reason:
+    Attempted to resolve unregistered dependency token: "Symbol(Logger)" Error: Cannot inject the dependency "logger" at position #0 of "ProcessMediaSourceStreamFactory" constructor. Reason:
+    Attempted to resolve unregistered dependency token: "Symbol(Logger)"
+    at C:\Users\alex\Codigos\lossless-cut\node_modules\tsyringe\dist\cjs\dependency-container.js:330:23
+    at Array.map (<anonymous>)
+    at C:\Users\alex\Codigos\lossless-cut\node_modules\tsyringe\dist\cjs\dependency-container.js:301:38
+    at InternalDependencyContainer.construct (C:\Users\alex\Codigos\lossless-cut\node_modules\tsyringe\dist\cjs\dependency-container.js:303:11)
+    at InternalDependencyContainer.resolveRegistration (C:\Users\alex\Codigos\lossless-cut\node_modules\tsyringe\dist\cjs\dependency-container.js:170:24)
+    at InternalDependencyContainer.resolve (C:\Users\alex\Codigos\lossless-cut\node_modules\tsyringe\dist\cjs\dependency-container.js:112:33)
+    at file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:2082:44
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2026-01-15T12:32:29.140Z error: electron-unhandled Cannot inject the dependency "logger" at position #0 of "ProcessMediaSourceStreamFactory" constructor. Reason:
+    Attempted to resolve unregistered dependency token: "Symbol(Logger)" Error: Cannot inject the dependency "logger" at position #0 of "ProcessMediaSourceStreamFactory" constructor. Reason:
+    Attempted to resolve unregistered dependency token: "Symbol(Logger)"
+    at C:\Users\alex\Codigos\lossless-cut\node_modules\tsyringe\dist\cjs\dependency-container.js:330:23
+    at Array.map (<anonymous>)
+    at C:\Users\alex\Codigos\lossless-cut\node_modules\tsyringe\dist\cjs\dependency-container.js:301:38
+    at InternalDependencyContainer.construct (C:\Users\alex\Codigos\lossless-cut\node_modules\tsyringe\dist\cjs\dependency-container.js:303:11)
+    at InternalDependencyContainer.resolveRegistration (C:\Users\alex\Codigos\lossless-cut\node_modules\tsyringe\dist\cjs\dependency-container.js:170:24)
+    at InternalDependencyContainer.resolve (C:\Users\alex\Codigos\lossless-cut\node_modules\tsyringe\dist\cjs\dependency-container.js:112:33)
+    at file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:2082:44
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2026-01-15T12:35:43.145Z info: LosslessCut version 3.67.2 { isDev: true }
+2026-01-15T12:35:43.182Z info: Initialized config store
+2026-01-15T12:35:43.183Z info: Waiting for app to become ready
+2026-01-15T12:35:43.188Z info: CLI arguments { _: [] }
+2026-01-15T12:35:43.257Z info: Added Extension React Developer Tools
+2026-01-15T12:35:43.361Z info: Current version 3.67.2
+2026-01-15T12:35:43.362Z info: Newest version 3.67.2
+2026-01-15T12:35:45.829Z info: ffmpeg -hide_banner -f lavfi -i nullsrc=s=256x256:d=1 -f null -
+2026-01-15T12:35:45.914Z info: ffmpeg -hide_banner -f lavfi -i nullsrc=s=256x256:d=1 -f null -
+2026-01-15T12:36:01.830Z info: ffprobe -of json -show_chapters -show_format -show_entries stream -i "C:\Dors Feline-1941_Foot_Fun.wmv" -hide_banner
+2026-01-15T12:36:01.999Z info: readFormatData C:\Dors Feline-1941_Foot_Fun.wmv
+2026-01-15T12:36:01.999Z info: ffprobe -of json -show_format -i "C:\Dors Feline-1941_Foot_Fun.wmv" -hide_banner
+2026-01-15T12:36:02.036Z info: readFormatData C:\Dors Feline-1941_Foot_Fun.wmv
+2026-01-15T12:36:02.036Z info: ffprobe -of json -show_format -i "C:\Dors Feline-1941_Foot_Fun.wmv" -hide_banner
+2026-01-15T12:36:02.071Z info: ffmpeg -hide_banner -f lavfi -i anullsrc=channel_layout=stereo:sample_rate=44100 -t 771.157 -acodec flac -y "C:\Dors Feline-1941_Foot_Fun-html5ified-dummy.mkv"
+2026-01-15T12:36:59.646Z info: readFormatData C:\Dors Feline-1941_Foot_Fun.wmv
+2026-01-15T12:36:59.646Z info: ffprobe -of json -show_format -i "C:\Dors Feline-1941_Foot_Fun.wmv" -hide_banner
+2026-01-15T12:36:59.685Z info: ffmpeg -hide_banner -f lavfi -i anullsrc=channel_layout=stereo:sample_rate=44100 -t 771.157 -acodec flac -y "C:\Dors Feline-1941_Foot_Fun-html5ified-dummy.mkv"
+2026-01-15T13:01:44.188Z info: LosslessCut version 3.67.2 { isDev: true }
+2026-01-15T13:01:44.220Z info: Initialized config store
+2026-01-15T13:01:44.220Z info: Waiting for app to become ready
+2026-01-15T13:01:44.226Z info: CLI arguments { _: [] }
+2026-01-15T13:01:44.298Z info: Added Extension React Developer Tools
+2026-01-15T13:01:44.574Z info: Current version 3.67.2
+2026-01-15T13:01:44.574Z info: Newest version 3.67.2
+2026-01-15T13:01:46.740Z info: ffmpeg -hide_banner -f lavfi -i nullsrc=s=256x256:d=1 -f null -
+2026-01-15T13:01:46.754Z info: ffmpeg -hide_banner -f lavfi -i nullsrc=s=256x256:d=1 -f null -
+2026-01-15T13:01:51.650Z info: ffprobe -of json -show_chapters -show_format -show_entries stream -i "C:\Dors Feline-1941_Foot_Fun.wmv" -hide_banner
+2026-01-15T13:01:51.730Z info: readFormatData C:\Dors Feline-1941_Foot_Fun.wmv
+2026-01-15T13:01:51.730Z info: ffprobe -of json -show_format -i "C:\Dors Feline-1941_Foot_Fun.wmv" -hide_banner
+2026-01-15T13:01:51.768Z info: readFormatData C:\Dors Feline-1941_Foot_Fun.wmv
+2026-01-15T13:01:51.768Z info: ffprobe -of json -show_format -i "C:\Dors Feline-1941_Foot_Fun.wmv" -hide_banner
+2026-01-15T13:01:51.803Z info: ffmpeg -hide_banner -f lavfi -i anullsrc=channel_layout=stereo:sample_rate=44100 -t 771.157 -acodec flac -y "C:\Dors Feline-1941_Foot_Fun-html5ified-dummy.mkv"
+2026-01-15T13:03:54.695Z info: LosslessCut version 3.67.2 { isDev: true }
+2026-01-15T13:03:54.726Z info: Initialized config store
+2026-01-15T13:03:54.728Z info: Waiting for app to become ready
+2026-01-15T13:03:54.731Z info: CLI arguments { _: [] }
+2026-01-15T13:03:54.799Z info: Added Extension React Developer Tools
+2026-01-15T13:03:55.086Z info: Current version 3.67.2
+2026-01-15T13:03:55.087Z info: Newest version 3.67.2
+2026-01-15T13:03:57.198Z info: ffmpeg -hide_banner -f lavfi -i nullsrc=s=256x256:d=1 -f null -
+2026-01-15T13:03:57.210Z info: ffmpeg -hide_banner -f lavfi -i nullsrc=s=256x256:d=1 -f null -
+2026-01-15T13:05:13.454Z info: ffprobe -of json -show_chapters -show_format -show_entries stream -i "C:\Users\alex\Downloads\Dors Feline-1941_Foot_Fun.wmv" -hide_banner
+2026-01-15T13:05:13.536Z info: readFormatData C:\Users\alex\Downloads\Dors Feline-1941_Foot_Fun.wmv
+2026-01-15T13:05:13.537Z info: ffprobe -of json -show_format -i "C:\Users\alex\Downloads\Dors Feline-1941_Foot_Fun.wmv" -hide_banner
+2026-01-15T13:05:13.574Z info: readFormatData C:\Users\alex\Downloads\Dors Feline-1941_Foot_Fun.wmv
+2026-01-15T13:05:13.575Z info: ffprobe -of json -show_format -i "C:\Users\alex\Downloads\Dors Feline-1941_Foot_Fun.wmv" -hide_banner
+2026-01-15T13:05:13.608Z info: ffmpeg -hide_banner -f lavfi -i anullsrc=channel_layout=stereo:sample_rate=44100 -t 771.157 -acodec flac -y "C:\Users\alex\Downloads\Dors Feline-1941_Foot_Fun-html5ified-dummy.mkv"
+2026-01-15T14:47:23.174Z info: LosslessCut version 3.67.2 { isDev: true }
+2026-01-15T14:47:23.204Z info: Initialized config store
+2026-01-15T14:47:23.205Z info: Waiting for app to become ready
+2026-01-15T14:47:23.210Z info: CLI arguments { _: [] }
+2026-01-15T14:47:23.293Z info: Added Extension React Developer Tools
+2026-01-15T14:47:23.397Z info: Current version 3.67.2
+2026-01-15T14:47:23.397Z info: Newest version 3.67.2
+2026-01-15T14:47:25.686Z info: ffmpeg -hide_banner -f lavfi -i nullsrc=s=256x256:d=1 -f null -
+2026-01-15T14:47:25.699Z info: ffmpeg -hide_banner -f lavfi -i nullsrc=s=256x256:d=1 -f null -
+2026-01-15T14:47:33.451Z info: ffprobe -of json -show_chapters -show_format -show_entries stream -i "C:\Users\alex\Downloads\Dors Feline-1941_Foot_Fun.wmv" -hide_banner
+2026-01-15T14:47:33.531Z info: readFormatData C:\Users\alex\Downloads\Dors Feline-1941_Foot_Fun.wmv
+2026-01-15T14:47:33.531Z info: ffprobe -of json -show_format -i "C:\Users\alex\Downloads\Dors Feline-1941_Foot_Fun.wmv" -hide_banner
+2026-01-15T14:47:33.570Z info: readFormatData C:\Users\alex\Downloads\Dors Feline-1941_Foot_Fun.wmv
+2026-01-15T14:47:33.571Z info: ffprobe -of json -show_format -i "C:\Users\alex\Downloads\Dors Feline-1941_Foot_Fun.wmv" -hide_banner
+2026-01-15T14:47:33.609Z info: ffmpeg -hide_banner -f lavfi -i anullsrc=channel_layout=stereo:sample_rate=44100 -t 771.157 -acodec flac -y "C:\Users\alex\Downloads\Dors Feline-1941_Foot_Fun-html5ified-dummy.mkv"
+2026-01-15T14:52:30.197Z info: readFormatData C:\Users\alex\Downloads\Dors Feline-1941_Foot_Fun.wmv
+2026-01-15T14:52:30.198Z info: ffprobe -of json -show_format -i "C:\Users\alex\Downloads\Dors Feline-1941_Foot_Fun.wmv" -hide_banner
+2026-01-15T14:52:30.234Z info: ffmpeg -hide_banner -f lavfi -i anullsrc=channel_layout=stereo:sample_rate=44100 -t 771.157 -acodec flac -y "C:\Users\alex\Downloads\Dors Feline-1941_Foot_Fun-html5ified-dummy.mkv"
+2026-01-15T15:00:24.367Z error: electron-unhandled TypeInfo not known for "HttpMediaSourceStreamFactory" Error: TypeInfo not known for "HttpMediaSourceStreamFactory"
+    at C:\Users\alex\Codigos\lossless-cut\node_modules\tsyringe\dist\cjs\dependency-container.js:298:27
+    at InternalDependencyContainer.construct (C:\Users\alex\Codigos\lossless-cut\node_modules\tsyringe\dist\cjs\dependency-container.js:303:11)
+    at InternalDependencyContainer.resolveRegistration (C:\Users\alex\Codigos\lossless-cut\node_modules\tsyringe\dist\cjs\dependency-container.js:170:24)
+    at InternalDependencyContainer.resolve (C:\Users\alex\Codigos\lossless-cut\node_modules\tsyringe\dist\cjs\dependency-container.js:112:33)
+    at file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:2107:44
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2026-01-15T15:00:50.259Z error: electron-unhandled TypeInfo not known for "HttpMediaSourceStreamFactory" Error: TypeInfo not known for "HttpMediaSourceStreamFactory"
+    at C:\Users\alex\Codigos\lossless-cut\node_modules\tsyringe\dist\cjs\dependency-container.js:298:27
+    at InternalDependencyContainer.construct (C:\Users\alex\Codigos\lossless-cut\node_modules\tsyringe\dist\cjs\dependency-container.js:303:11)
+    at InternalDependencyContainer.resolveRegistration (C:\Users\alex\Codigos\lossless-cut\node_modules\tsyringe\dist\cjs\dependency-container.js:170:24)
+    at InternalDependencyContainer.resolve (C:\Users\alex\Codigos\lossless-cut\node_modules\tsyringe\dist\cjs\dependency-container.js:112:33)
+    at file:///C:/Users/alex/Codigos/lossless-cut/electron/out/main/index.js:2107:44
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2026-01-15T15:01:14.429Z info: LosslessCut version 3.67.2 { isDev: true }
+2026-01-15T15:01:14.457Z info: Initialized config store
+2026-01-15T15:01:14.457Z info: Waiting for app to become ready
+2026-01-15T15:01:14.462Z info: CLI arguments { _: [] }
+2026-01-15T15:01:14.532Z info: Added Extension React Developer Tools
+2026-01-15T15:01:14.815Z info: Current version 3.67.2
+2026-01-15T15:01:14.815Z info: Newest version 3.67.2
+2026-01-15T15:01:16.927Z info: ffmpeg -hide_banner -f lavfi -i nullsrc=s=256x256:d=1 -f null -
+2026-01-15T15:01:16.940Z info: ffmpeg -hide_banner -f lavfi -i nullsrc=s=256x256:d=1 -f null -
+2026-01-15T15:01:22.507Z info: ffprobe -of json -show_chapters -show_format -show_entries stream -i "C:\Users\alex\Downloads\Dors Feline-1941_Foot_Fun.wmv" -hide_banner
+2026-01-15T15:06:08.363Z info: LosslessCut version 3.67.2 { isDev: true }
+2026-01-15T15:06:08.395Z info: Initialized config store
+2026-01-15T15:06:08.395Z info: Waiting for app to become ready
+2026-01-15T15:06:08.400Z info: CLI arguments { _: [] }
+2026-01-15T15:06:08.472Z info: Added Extension React Developer Tools
+2026-01-15T15:06:08.761Z info: Current version 3.67.2
+2026-01-15T15:06:08.762Z info: Newest version 3.67.2
+2026-01-15T15:06:10.966Z info: ffmpeg -hide_banner -f lavfi -i nullsrc=s=256x256:d=1 -f null -
+2026-01-15T15:06:10.984Z info: ffmpeg -hide_banner -f lavfi -i nullsrc=s=256x256:d=1 -f null -
+2026-01-15T15:06:14.712Z info: ffprobe -of json -show_chapters -show_format -show_entries stream -i "C:\Users\alex\Downloads\Dors Feline-1941_Foot_Fun.wmv" -hide_banner
+2026-01-15T15:06:14.792Z info: readFormatData C:\Users\alex\Downloads\Dors Feline-1941_Foot_Fun.wmv
+2026-01-15T15:06:14.792Z info: ffprobe -of json -show_format -i "C:\Users\alex\Downloads\Dors Feline-1941_Foot_Fun.wmv" -hide_banner
+2026-01-15T15:06:14.831Z info: readFormatData C:\Users\alex\Downloads\Dors Feline-1941_Foot_Fun.wmv
+2026-01-15T15:06:14.831Z info: ffprobe -of json -show_format -i "C:\Users\alex\Downloads\Dors Feline-1941_Foot_Fun.wmv" -hide_banner
+2026-01-15T15:06:14.865Z info: ffmpeg -hide_banner -f lavfi -i anullsrc=channel_layout=stereo:sample_rate=44100 -t 771.157 -acodec flac -y "C:\Users\alex\Downloads\Dors Feline-1941_Foot_Fun-html5ified-dummy.mkv"
+2026-01-15T15:12:32.920Z info: LosslessCut version 3.67.2 { isDev: true }
+2026-01-15T15:12:32.949Z info: Initialized config store
+2026-01-15T15:12:32.949Z info: Waiting for app to become ready
+2026-01-15T15:12:32.954Z info: CLI arguments { _: [] }
+2026-01-15T15:12:33.019Z info: Added Extension React Developer Tools
+2026-01-15T15:12:33.349Z info: Current version 3.67.2
+2026-01-15T15:12:33.349Z info: Newest version 3.67.2
+2026-01-15T15:12:34.193Z info: ffmpeg -hide_banner -f lavfi -i nullsrc=s=256x256:d=1 -f null -
+2026-01-15T15:12:34.206Z info: ffmpeg -hide_banner -f lavfi -i nullsrc=s=256x256:d=1 -f null -
+2026-01-15T15:12:51.521Z info: LosslessCut version 3.67.2 { isDev: true }
+2026-01-15T15:12:51.551Z info: Initialized config store
+2026-01-15T15:12:51.552Z info: Waiting for app to become ready
+2026-01-15T15:12:51.557Z info: CLI arguments { _: [] }
+2026-01-15T15:12:51.633Z info: Added Extension React Developer Tools
+2026-01-15T15:12:51.727Z info: Current version 3.67.2
+2026-01-15T15:12:51.727Z info: Newest version 3.67.2
+2026-01-15T15:12:54.056Z info: ffmpeg -hide_banner -f lavfi -i nullsrc=s=256x256:d=1 -f null -
+2026-01-15T15:12:54.070Z info: ffmpeg -hide_banner -f lavfi -i nullsrc=s=256x256:d=1 -f null -
+2026-01-15T15:12:58.888Z info: ffprobe -of json -show_chapters -show_format -show_entries stream -i "C:\Users\alex\Downloads\Dors Feline-1941_Foot_Fun.wmv" -hide_banner
+2026-01-15T15:41:16.644Z info: LosslessCut version 3.67.2 { isDev: true }
+2026-01-15T15:41:16.674Z info: Initialized config store
+2026-01-15T15:41:16.675Z info: Waiting for app to become ready
+2026-01-15T15:41:16.680Z info: CLI arguments { _: [] }
+2026-01-15T15:41:16.752Z info: Added Extension React Developer Tools
+2026-01-15T15:41:17.049Z info: Current version 3.67.2
+2026-01-15T15:41:17.050Z info: Newest version 3.67.2
+2026-01-15T15:41:19.120Z info: ffmpeg -hide_banner -f lavfi -i nullsrc=s=256x256:d=1 -f null -
+2026-01-15T15:41:19.133Z info: ffmpeg -hide_banner -f lavfi -i nullsrc=s=256x256:d=1 -f null -
+2026-01-15T15:41:23.148Z info: ffprobe -of json -show_chapters -show_format -show_entries stream -i "C:\Users\alex\Downloads\Dors Feline-1941_Foot_Fun.wmv" -hide_banner
+2026-01-15T15:44:13.984Z info: LosslessCut version 3.67.2 { isDev: true }
+2026-01-15T15:44:14.014Z info: Initialized config store
+2026-01-15T15:44:14.015Z info: Waiting for app to become ready
+2026-01-15T15:44:14.019Z info: CLI arguments { _: [] }
+2026-01-15T15:44:14.095Z info: Added Extension React Developer Tools
+2026-01-15T15:44:14.201Z info: Current version 3.67.2
+2026-01-15T15:44:14.201Z info: Newest version 3.67.2
+2026-01-15T15:44:16.453Z info: ffmpeg -hide_banner -f lavfi -i nullsrc=s=256x256:d=1 -f null -
+2026-01-15T15:44:16.468Z info: ffmpeg -hide_banner -f lavfi -i nullsrc=s=256x256:d=1 -f null -
+2026-01-15T15:44:22.019Z info: ffprobe -of json -show_chapters -show_format -show_entries stream -i "C:\Users\alex\Downloads\Dors Feline-1941_Foot_Fun.wmv" -hide_banner
+2026-01-15T15:47:29.046Z info: LosslessCut version 3.67.2 { isDev: true }
+2026-01-15T15:47:29.075Z info: Initialized config store
+2026-01-15T15:47:29.076Z info: Waiting for app to become ready
+2026-01-15T15:47:29.081Z info: CLI arguments { _: [] }
+2026-01-15T15:47:29.156Z info: Added Extension React Developer Tools
+2026-01-15T15:47:29.436Z info: Current version 3.67.2
+2026-01-15T15:47:29.436Z info: Newest version 3.67.2
+2026-01-15T15:47:31.595Z info: ffmpeg -hide_banner -f lavfi -i nullsrc=s=256x256:d=1 -f null -
+2026-01-15T15:47:31.608Z info: ffmpeg -hide_banner -f lavfi -i nullsrc=s=256x256:d=1 -f null -
+2026-01-15T15:47:35.688Z info: ffprobe -of json -show_chapters -show_format -show_entries stream -i "C:\Users\alex\Downloads\Dors Feline-1941_Foot_Fun.wmv" -hide_banner
+2026-01-15T15:54:49.451Z info: LosslessCut version 3.67.2 { isDev: true }
+2026-01-15T15:54:49.489Z info: Initialized config store
+2026-01-15T15:54:49.489Z info: Waiting for app to become ready
+2026-01-15T15:54:49.494Z info: CLI arguments { _: [] }
+2026-01-15T15:54:49.575Z info: Added Extension React Developer Tools
+2026-01-15T15:54:49.679Z info: Current version 3.67.2
+2026-01-15T15:54:49.680Z info: Newest version 3.67.2
+2026-01-15T15:54:51.957Z info: ffmpeg -hide_banner -f lavfi -i nullsrc=s=256x256:d=1 -f null -
+2026-01-15T15:54:51.970Z info: ffmpeg -hide_banner -f lavfi -i nullsrc=s=256x256:d=1 -f null -
+2026-01-15T15:54:56.460Z info: ffprobe -of json -show_chapters -show_format -show_entries stream -i "C:\Users\alex\Downloads\Dors Feline-1941_Foot_Fun.wmv" -hide_banner
+2026-01-15T15:56:22.266Z info: LosslessCut version 3.67.2 { isDev: true }
+2026-01-15T15:56:22.295Z info: Initialized config store
+2026-01-15T15:56:22.296Z info: Waiting for app to become ready
+2026-01-15T15:56:22.302Z info: CLI arguments { _: [] }
+2026-01-15T15:56:22.370Z info: Added Extension React Developer Tools
+2026-01-15T15:56:22.470Z info: Current version 3.67.2
+2026-01-15T15:56:22.471Z info: Newest version 3.67.2
+2026-01-15T15:56:24.721Z info: ffmpeg -hide_banner -f lavfi -i nullsrc=s=256x256:d=1 -f null -
+2026-01-15T15:56:24.733Z info: ffmpeg -hide_banner -f lavfi -i nullsrc=s=256x256:d=1 -f null -
+2026-01-15T15:56:28.842Z info: ffprobe -of json -show_chapters -show_format -show_entries stream -i "C:\Users\alex\Downloads\Dors Feline-1941_Foot_Fun.wmv" -hide_banner
+2026-01-15T15:58:54.990Z info: ffmpeg -hide_banner -f lavfi -i nullsrc=s=256x256:d=1 -f null -
+2026-01-15T15:58:54.998Z info: ffmpeg -hide_banner -f lavfi -i nullsrc=s=256x256:d=1 -f null -
+2026-01-15T15:58:59.559Z info: ffprobe -of json -show_chapters -show_format -show_entries stream -i "C:\Users\alex\Downloads\Dors Feline-1941_Foot_Fun.wmv" -hide_banner
+2026-01-15T16:00:04.623Z info: ffmpeg -hide_banner -f lavfi -i nullsrc=s=256x256:d=1 -f null -
+2026-01-15T16:00:04.630Z info: ffmpeg -hide_banner -f lavfi -i nullsrc=s=256x256:d=1 -f null -
+2026-01-15T16:00:09.375Z info: ffprobe -of json -show_chapters -show_format -show_entries stream -i "C:\Users\alex\Downloads\Dors Feline-1941_Foot_Fun.wmv" -hide_banner
+2026-01-15T16:00:19.004Z info: ffmpeg -hide_banner -f lavfi -i nullsrc=s=256x256:d=1 -f null -
+2026-01-15T16:00:19.010Z info: ffmpeg -hide_banner -f lavfi -i nullsrc=s=256x256:d=1 -f null -
+2026-01-15T16:00:23.142Z info: ffprobe -of json -show_chapters -show_format -show_entries stream -i "C:\Users\alex\Downloads\Dors Feline-1941_Foot_Fun.wmv" -hide_banner
+2026-01-15T16:55:33.993Z info: LosslessCut version 3.67.2 { isDev: true }
+2026-01-15T16:55:34.023Z info: Initialized config store
+2026-01-15T16:55:34.024Z info: Waiting for app to become ready
+2026-01-15T16:55:34.029Z info: CLI arguments { _: [] }
+2026-01-15T16:55:34.101Z info: Added Extension React Developer Tools
+2026-01-15T16:55:34.203Z info: Current version 3.67.2
+2026-01-15T16:55:34.203Z info: Newest version 3.67.2
+2026-01-15T16:55:36.564Z info: ffmpeg -hide_banner -f lavfi -i nullsrc=s=256x256:d=1 -f null -
+2026-01-15T16:55:36.580Z info: ffmpeg -hide_banner -f lavfi -i nullsrc=s=256x256:d=1 -f null -
+2026-01-15T16:55:44.393Z info: ffprobe -of json -show_chapters -show_format -show_entries stream -i "C:\Users\alex\Downloads\Dors Feline-1941_Foot_Fun.wmv" -hide_banner
+2026-01-15T16:57:22.389Z info: LosslessCut version 3.67.2 { isDev: true }
+2026-01-15T16:57:22.420Z info: Initialized config store
+2026-01-15T16:57:22.421Z info: Waiting for app to become ready
+2026-01-15T16:57:22.426Z info: CLI arguments { _: [] }
+2026-01-15T16:57:22.497Z info: Added Extension React Developer Tools
+2026-01-15T16:57:24.932Z info: ffmpeg -hide_banner -f lavfi -i nullsrc=s=256x256:d=1 -f null -
+2026-01-15T16:57:24.945Z info: ffmpeg -hide_banner -f lavfi -i nullsrc=s=256x256:d=1 -f null -
+2026-01-15T16:57:26.432Z info: Current version 3.67.2
+2026-01-15T16:57:26.432Z info: Newest version 3.67.2
+2026-01-15T16:57:28.554Z info: ffprobe -of json -show_chapters -show_format -show_entries stream -i "C:\Users\alex\Downloads\Dors Feline-1941_Foot_Fun.wmv" -hide_banner
+2026-01-15T17:00:01.266Z info: LosslessCut version 3.67.2 { isDev: true }
+2026-01-15T17:00:01.296Z info: Initialized config store
+2026-01-15T17:00:01.297Z info: Waiting for app to become ready
+2026-01-15T17:00:01.302Z info: CLI arguments { _: [] }
+2026-01-15T17:00:01.383Z info: Added Extension React Developer Tools
+2026-01-15T17:00:03.804Z info: ffmpeg -hide_banner -f lavfi -i nullsrc=s=256x256:d=1 -f null -
+2026-01-15T17:00:03.818Z info: ffmpeg -hide_banner -f lavfi -i nullsrc=s=256x256:d=1 -f null -
+2026-01-15T17:00:04.017Z info: Current version 3.67.2
+2026-01-15T17:00:04.017Z info: Newest version 3.67.2
+2026-01-15T17:00:07.462Z info: ffprobe -of json -show_chapters -show_format -show_entries stream -i "C:\Users\alex\Downloads\Dors Feline-1941_Foot_Fun.wmv" -hide_banner
+2026-01-15T17:07:39.754Z info: LosslessCut version 3.67.2 { isDev: true }
+2026-01-15T17:07:39.784Z info: Initialized config store
+2026-01-15T17:07:39.785Z info: Waiting for app to become ready
+2026-01-15T17:07:39.789Z info: CLI arguments { _: [] }
+2026-01-15T17:07:39.798Z info: HTTP API listening on http://127.0.0.1:8080/
+2026-01-15T17:07:39.798Z info: HTTP API listening on port 8080
+2026-01-15T17:07:39.864Z info: Added Extension React Developer Tools
+2026-01-15T17:07:39.973Z info: Current version 3.67.2
+2026-01-15T17:07:39.973Z info: Newest version 3.67.2
+2026-01-15T17:07:42.261Z info: ffmpeg -hide_banner -f lavfi -i nullsrc=s=256x256:d=1 -f null -
+2026-01-15T17:07:42.276Z info: ffmpeg -hide_banner -f lavfi -i nullsrc=s=256x256:d=1 -f null -
+2026-01-15T17:07:45.919Z info: ffprobe -of json -show_chapters -show_format -show_entries stream -i "C:\Users\alex\Downloads\Dors Feline-1941_Foot_Fun.wmv" -hide_banner
+2026-01-15T17:07:45.997Z info: Received /stream request {
+  path: 'C:\\Users\\alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  videoStreamIndex: '1',
+  audioStreamIndexes: '0',
+  seekTo: '0',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-15T17:08:02.047Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5Calex%5CDownloads%5CDors+Feline-1941_Foot_Fun.wmv&videoStreamIndex=1&audioStreamIndexes=0&seekTo=0&size=800&fps=30 HTTP/1.1 200 - 91.578 ms
+2026-01-15T17:08:02.057Z info: Received /stream request {
+  path: 'C:\\Users\\alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  videoStreamIndex: '1',
+  audioStreamIndexes: '0',
+  seekTo: '299.030783',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-15T17:08:02.065Z error: electron-unhandled Command was killed with SIGKILL (Forced termination): "ffmpeg\win32-x64\lib\ffmpeg.exe" -hide_banner -loglevel error -fflags "+nobuffer+flush_packets+discardcorrupt" -avioflags direct -flush_packets 1 -ss 0 -i "C:\Users\alex\Downloads\Dors Feline-1941_Foot_Fun.wmv" -fps_mode passthrough -map_metadata -1 -map_chapters -1 -filter_complex "[0:1]fps=30,scale=800:800:flags=lanczos:force_original_aspect_ratio=decrease:force_divisible_by=2:in_color_matrix=auto:in_range=auto:out_color_matrix=bt709:out_range=tv,format=yuv420p,setparams=color_primaries=bt709:color_trc=bt709:colorspace=bt709[video];[0:0]anull[audio]" -map "[video]" "-c:v" libx264 -preset ultrafast -tune zerolatency -crf 10 -g 1 -map "[audio]" -ac 2 "-c:a" aac "-b:a" 128k -f mp4 -movflags "+frag_keyframe+empty_moov+default_base_moof" - ExecaError: Command was killed with SIGKILL (Forced termination): "ffmpeg\win32-x64\lib\ffmpeg.exe" -hide_banner -loglevel error -fflags "+nobuffer+flush_packets+discardcorrupt" -avioflags direct -flush_packets 1 -ss 0 -i "C:\Users\alex\Downloads\Dors Feline-1941_Foot_Fun.wmv" -fps_mode passthrough -map_metadata -1 -map_chapters -1 -filter_complex "[0:1]fps=30,scale=800:800:flags=lanczos:force_original_aspect_ratio=decrease:force_divisible_by=2:in_color_matrix=auto:in_range=auto:out_color_matrix=bt709:out_range=tv,format=yuv420p,setparams=color_primaries=bt709:color_trc=bt709:colorspace=bt709[video];[0:0]anull[audio]" -map "[video]" "-c:v" libx264 -preset ultrafast -tune zerolatency -crf 10 -g 1 -map "[audio]" -ac 2 "-c:a" aac "-b:a" 128k -f mp4 -movflags "+frag_keyframe+empty_moov+default_base_moof" -
+    at getFinalError (file:///C:/Users/alex/Codigos/lossless-cut/node_modules/execa/lib/return/final-error.js:6:9)
+    at makeError (file:///C:/Users/alex/Codigos/lossless-cut/node_modules/execa/lib/return/result.js:108:16)
+    at getAsyncResult (file:///C:/Users/alex/Codigos/lossless-cut/node_modules/execa/lib/methods/main-async.js:168:4)
+    at handlePromise (file:///C:/Users/alex/Codigos/lossless-cut/node_modules/execa/lib/methods/main-async.js:151:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5) {
+  shortMessage: 'Command was killed with SIGKILL (Forced termination): "ffmpeg\\win32-x64\\lib\\ffmpeg.exe" -hide_banner -loglevel error -fflags "+nobuffer+flush_packets+discardcorrupt" -avioflags direct -flush_packets 1 -ss 0 -i "C:\\Users\\alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv" -fps_mode passthrough -map_metadata -1 -map_chapters -1 -filter_complex "[0:1]fps=30,scale=800:800:flags=lanczos:force_original_aspect_ratio=decrease:force_divisible_by=2:in_color_matrix=auto:in_range=auto:out_color_matrix=bt709:out_range=tv,format=yuv420p,setparams=color_primaries=bt709:color_trc=bt709:colorspace=bt709[video];[0:0]anull[audio]" -map "[video]" "-c:v" libx264 -preset ultrafast -tune zerolatency -crf 10 -g 1 -map "[audio]" -ac 2 "-c:a" aac "-b:a" 128k -f mp4 -movflags "+frag_keyframe+empty_moov+default_base_moof" -',
+  command: 'ffmpeg\\win32-x64\\lib\\ffmpeg.exe -hide_banner -loglevel error -fflags +nobuffer+flush_packets+discardcorrupt -avioflags direct -flush_packets 1 -ss 0 -i C:\\Users\\alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv -fps_mode passthrough -map_metadata -1 -map_chapters -1 -filter_complex [0:1]fps=30,scale=800:800:flags=lanczos:force_original_aspect_ratio=decrease:force_divisible_by=2:in_color_matrix=auto:in_range=auto:out_color_matrix=bt709:out_range=tv,format=yuv420p,setparams=color_primaries=bt709:color_trc=bt709:colorspace=bt709[video];[0:0]anull[audio] -map [video] -c:v libx264 -preset ultrafast -tune zerolatency -crf 10 -g 1 -map [audio] -ac 2 -c:a aac -b:a 128k -f mp4 -movflags +frag_keyframe+empty_moov+default_base_moof -',
+  escapedCommand: '"ffmpeg\\win32-x64\\lib\\ffmpeg.exe" -hide_banner -loglevel error -fflags "+nobuffer+flush_packets+discardcorrupt" -avioflags direct -flush_packets 1 -ss 0 -i "C:\\Users\\alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv" -fps_mode passthrough -map_metadata -1 -map_chapters -1 -filter_complex "[0:1]fps=30,scale=800:800:flags=lanczos:force_original_aspect_ratio=decrease:force_divisible_by=2:in_color_matrix=auto:in_range=auto:out_color_matrix=bt709:out_range=tv,format=yuv420p,setparams=color_primaries=bt709:color_trc=bt709:colorspace=bt709[video];[0:0]anull[audio]" -map "[video]" "-c:v" libx264 -preset ultrafast -tune zerolatency -crf 10 -g 1 -map "[audio]" -ac 2 "-c:a" aac "-b:a" 128k -f mp4 -movflags "+frag_keyframe+empty_moov+default_base_moof" -',
+  cwd: 'C:\\Users\\alex\\Codigos\\lossless-cut\\electron',
+  durationMs: 16066.9688,
+  failed: true,
+  timedOut: false,
+  isCanceled: false,
+  isGracefullyCanceled: false,
+  isTerminated: true,
+  isMaxBuffer: false,
+  isForcefullyTerminated: false,
+  signal: 'SIGKILL',
+  signalDescription: 'Forced termination',
+  stdio: [ undefined, undefined, undefined ],
+  ipcOutput: [],
+  pipedFrom: []
+}
+2026-01-15T17:08:21.094Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5Calex%5CDownloads%5CDors+Feline-1941_Foot_Fun.wmv&videoStreamIndex=1&audioStreamIndexes=0&seekTo=299.030783&size=800&fps=30 HTTP/1.1 200 - 19036.699 ms
+2026-01-15T17:08:21.103Z error: electron-unhandled Command was killed with SIGKILL (Forced termination): "ffmpeg\win32-x64\lib\ffmpeg.exe" -hide_banner -loglevel error -fflags "+nobuffer+flush_packets+discardcorrupt" -avioflags direct -flush_packets 1 -ss 299.030783 -i "C:\Users\alex\Downloads\Dors Feline-1941_Foot_Fun.wmv" -fps_mode passthrough -map_metadata -1 -map_chapters -1 -filter_complex "[0:1]fps=30,scale=800:800:flags=lanczos:force_original_aspect_ratio=decrease:force_divisible_by=2:in_color_matrix=auto:in_range=auto:out_color_matrix=bt709:out_range=tv,format=yuv420p,setparams=color_primaries=bt709:color_trc=bt709:colorspace=bt709[video];[0:0]anull[audio]" -map "[video]" "-c:v" libx264 -preset ultrafast -tune zerolatency -crf 10 -g 1 -map "[audio]" -ac 2 "-c:a" aac "-b:a" 128k -f mp4 -movflags "+frag_keyframe+empty_moov+default_base_moof" - ExecaError: Command was killed with SIGKILL (Forced termination): "ffmpeg\win32-x64\lib\ffmpeg.exe" -hide_banner -loglevel error -fflags "+nobuffer+flush_packets+discardcorrupt" -avioflags direct -flush_packets 1 -ss 299.030783 -i "C:\Users\alex\Downloads\Dors Feline-1941_Foot_Fun.wmv" -fps_mode passthrough -map_metadata -1 -map_chapters -1 -filter_complex "[0:1]fps=30,scale=800:800:flags=lanczos:force_original_aspect_ratio=decrease:force_divisible_by=2:in_color_matrix=auto:in_range=auto:out_color_matrix=bt709:out_range=tv,format=yuv420p,setparams=color_primaries=bt709:color_trc=bt709:colorspace=bt709[video];[0:0]anull[audio]" -map "[video]" "-c:v" libx264 -preset ultrafast -tune zerolatency -crf 10 -g 1 -map "[audio]" -ac 2 "-c:a" aac "-b:a" 128k -f mp4 -movflags "+frag_keyframe+empty_moov+default_base_moof" -
+    at getFinalError (file:///C:/Users/alex/Codigos/lossless-cut/node_modules/execa/lib/return/final-error.js:6:9)
+    at makeError (file:///C:/Users/alex/Codigos/lossless-cut/node_modules/execa/lib/return/result.js:108:16)
+    at getAsyncResult (file:///C:/Users/alex/Codigos/lossless-cut/node_modules/execa/lib/methods/main-async.js:168:4)
+    at handlePromise (file:///C:/Users/alex/Codigos/lossless-cut/node_modules/execa/lib/methods/main-async.js:151:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5) {
+  shortMessage: 'Command was killed with SIGKILL (Forced termination): "ffmpeg\\win32-x64\\lib\\ffmpeg.exe" -hide_banner -loglevel error -fflags "+nobuffer+flush_packets+discardcorrupt" -avioflags direct -flush_packets 1 -ss 299.030783 -i "C:\\Users\\alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv" -fps_mode passthrough -map_metadata -1 -map_chapters -1 -filter_complex "[0:1]fps=30,scale=800:800:flags=lanczos:force_original_aspect_ratio=decrease:force_divisible_by=2:in_color_matrix=auto:in_range=auto:out_color_matrix=bt709:out_range=tv,format=yuv420p,setparams=color_primaries=bt709:color_trc=bt709:colorspace=bt709[video];[0:0]anull[audio]" -map "[video]" "-c:v" libx264 -preset ultrafast -tune zerolatency -crf 10 -g 1 -map "[audio]" -ac 2 "-c:a" aac "-b:a" 128k -f mp4 -movflags "+frag_keyframe+empty_moov+default_base_moof" -',
+  command: 'ffmpeg\\win32-x64\\lib\\ffmpeg.exe -hide_banner -loglevel error -fflags +nobuffer+flush_packets+discardcorrupt -avioflags direct -flush_packets 1 -ss 299.030783 -i C:\\Users\\alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv -fps_mode passthrough -map_metadata -1 -map_chapters -1 -filter_complex [0:1]fps=30,scale=800:800:flags=lanczos:force_original_aspect_ratio=decrease:force_divisible_by=2:in_color_matrix=auto:in_range=auto:out_color_matrix=bt709:out_range=tv,format=yuv420p,setparams=color_primaries=bt709:color_trc=bt709:colorspace=bt709[video];[0:0]anull[audio] -map [video] -c:v libx264 -preset ultrafast -tune zerolatency -crf 10 -g 1 -map [audio] -ac 2 -c:a aac -b:a 128k -f mp4 -movflags +frag_keyframe+empty_moov+default_base_moof -',
+  escapedCommand: '"ffmpeg\\win32-x64\\lib\\ffmpeg.exe" -hide_banner -loglevel error -fflags "+nobuffer+flush_packets+discardcorrupt" -avioflags direct -flush_packets 1 -ss 299.030783 -i "C:\\Users\\alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv" -fps_mode passthrough -map_metadata -1 -map_chapters -1 -filter_complex "[0:1]fps=30,scale=800:800:flags=lanczos:force_original_aspect_ratio=decrease:force_divisible_by=2:in_color_matrix=auto:in_range=auto:out_color_matrix=bt709:out_range=tv,format=yuv420p,setparams=color_primaries=bt709:color_trc=bt709:colorspace=bt709[video];[0:0]anull[audio]" -map "[video]" "-c:v" libx264 -preset ultrafast -tune zerolatency -crf 10 -g 1 -map "[audio]" -ac 2 "-c:a" aac "-b:a" 128k -f mp4 -movflags "+frag_keyframe+empty_moov+default_base_moof" -',
+  cwd: 'C:\\Users\\alex\\Codigos\\lossless-cut\\electron',
+  durationMs: 19045.3209,
+  failed: true,
+  timedOut: false,
+  isCanceled: false,
+  isGracefullyCanceled: false,
+  isTerminated: true,
+  isMaxBuffer: false,
+  isForcefullyTerminated: false,
+  signal: 'SIGKILL',
+  signalDescription: 'Forced termination',
+  stdio: [ undefined, undefined, undefined ],
+  ipcOutput: [],
+  pipedFrom: []
+}
+2026-01-15T17:08:23.123Z info: Received /stream request {
+  path: 'C:\\Users\\alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  videoStreamIndex: '1',
+  audioStreamIndexes: '0',
+  seekTo: '317.96622',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-15T17:08:32.275Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5Calex%5CDownloads%5CDors+Feline-1941_Foot_Fun.wmv&videoStreamIndex=1&audioStreamIndexes=0&seekTo=317.96622&size=800&fps=30 HTTP/1.1 200 - 216.973 ms
+2026-01-15T17:08:32.283Z info: Received /stream request {
+  path: 'C:\\Users\\alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  videoStreamIndex: '1',
+  audioStreamIndexes: '0',
+  seekTo: '660.351612',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-15T17:08:32.291Z error: electron-unhandled Command was killed with SIGKILL (Forced termination): "ffmpeg\win32-x64\lib\ffmpeg.exe" -hide_banner -loglevel error -fflags "+nobuffer+flush_packets+discardcorrupt" -avioflags direct -flush_packets 1 -ss 317.96622 -i "C:\Users\alex\Downloads\Dors Feline-1941_Foot_Fun.wmv" -fps_mode passthrough -map_metadata -1 -map_chapters -1 -filter_complex "[0:1]fps=30,scale=800:800:flags=lanczos:force_original_aspect_ratio=decrease:force_divisible_by=2:in_color_matrix=auto:in_range=auto:out_color_matrix=bt709:out_range=tv,format=yuv420p,setparams=color_primaries=bt709:color_trc=bt709:colorspace=bt709[video];[0:0]anull[audio]" -map "[video]" "-c:v" libx264 -preset ultrafast -tune zerolatency -crf 10 -g 1 -map "[audio]" -ac 2 "-c:a" aac "-b:a" 128k -f mp4 -movflags "+frag_keyframe+empty_moov+default_base_moof" - ExecaError: Command was killed with SIGKILL (Forced termination): "ffmpeg\win32-x64\lib\ffmpeg.exe" -hide_banner -loglevel error -fflags "+nobuffer+flush_packets+discardcorrupt" -avioflags direct -flush_packets 1 -ss 317.96622 -i "C:\Users\alex\Downloads\Dors Feline-1941_Foot_Fun.wmv" -fps_mode passthrough -map_metadata -1 -map_chapters -1 -filter_complex "[0:1]fps=30,scale=800:800:flags=lanczos:force_original_aspect_ratio=decrease:force_divisible_by=2:in_color_matrix=auto:in_range=auto:out_color_matrix=bt709:out_range=tv,format=yuv420p,setparams=color_primaries=bt709:color_trc=bt709:colorspace=bt709[video];[0:0]anull[audio]" -map "[video]" "-c:v" libx264 -preset ultrafast -tune zerolatency -crf 10 -g 1 -map "[audio]" -ac 2 "-c:a" aac "-b:a" 128k -f mp4 -movflags "+frag_keyframe+empty_moov+default_base_moof" -
+    at getFinalError (file:///C:/Users/alex/Codigos/lossless-cut/node_modules/execa/lib/return/final-error.js:6:9)
+    at makeError (file:///C:/Users/alex/Codigos/lossless-cut/node_modules/execa/lib/return/result.js:108:16)
+    at getAsyncResult (file:///C:/Users/alex/Codigos/lossless-cut/node_modules/execa/lib/methods/main-async.js:168:4)
+    at handlePromise (file:///C:/Users/alex/Codigos/lossless-cut/node_modules/execa/lib/methods/main-async.js:151:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5) {
+  shortMessage: 'Command was killed with SIGKILL (Forced termination): "ffmpeg\\win32-x64\\lib\\ffmpeg.exe" -hide_banner -loglevel error -fflags "+nobuffer+flush_packets+discardcorrupt" -avioflags direct -flush_packets 1 -ss 317.96622 -i "C:\\Users\\alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv" -fps_mode passthrough -map_metadata -1 -map_chapters -1 -filter_complex "[0:1]fps=30,scale=800:800:flags=lanczos:force_original_aspect_ratio=decrease:force_divisible_by=2:in_color_matrix=auto:in_range=auto:out_color_matrix=bt709:out_range=tv,format=yuv420p,setparams=color_primaries=bt709:color_trc=bt709:colorspace=bt709[video];[0:0]anull[audio]" -map "[video]" "-c:v" libx264 -preset ultrafast -tune zerolatency -crf 10 -g 1 -map "[audio]" -ac 2 "-c:a" aac "-b:a" 128k -f mp4 -movflags "+frag_keyframe+empty_moov+default_base_moof" -',
+  command: 'ffmpeg\\win32-x64\\lib\\ffmpeg.exe -hide_banner -loglevel error -fflags +nobuffer+flush_packets+discardcorrupt -avioflags direct -flush_packets 1 -ss 317.96622 -i C:\\Users\\alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv -fps_mode passthrough -map_metadata -1 -map_chapters -1 -filter_complex [0:1]fps=30,scale=800:800:flags=lanczos:force_original_aspect_ratio=decrease:force_divisible_by=2:in_color_matrix=auto:in_range=auto:out_color_matrix=bt709:out_range=tv,format=yuv420p,setparams=color_primaries=bt709:color_trc=bt709:colorspace=bt709[video];[0:0]anull[audio] -map [video] -c:v libx264 -preset ultrafast -tune zerolatency -crf 10 -g 1 -map [audio] -ac 2 -c:a aac -b:a 128k -f mp4 -movflags +frag_keyframe+empty_moov+default_base_moof -',
+  escapedCommand: '"ffmpeg\\win32-x64\\lib\\ffmpeg.exe" -hide_banner -loglevel error -fflags "+nobuffer+flush_packets+discardcorrupt" -avioflags direct -flush_packets 1 -ss 317.96622 -i "C:\\Users\\alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv" -fps_mode passthrough -map_metadata -1 -map_chapters -1 -filter_complex "[0:1]fps=30,scale=800:800:flags=lanczos:force_original_aspect_ratio=decrease:force_divisible_by=2:in_color_matrix=auto:in_range=auto:out_color_matrix=bt709:out_range=tv,format=yuv420p,setparams=color_primaries=bt709:color_trc=bt709:colorspace=bt709[video];[0:0]anull[audio]" -map "[video]" "-c:v" libx264 -preset ultrafast -tune zerolatency -crf 10 -g 1 -map "[audio]" -ac 2 "-c:a" aac "-b:a" 128k -f mp4 -movflags "+frag_keyframe+empty_moov+default_base_moof" -',
+  cwd: 'C:\\Users\\alex\\Codigos\\lossless-cut\\electron',
+  durationMs: 9166.7699,
+  failed: true,
+  timedOut: false,
+  isCanceled: false,
+  isGracefullyCanceled: false,
+  isTerminated: true,
+  isMaxBuffer: false,
+  isForcefullyTerminated: false,
+  signal: 'SIGKILL',
+  signalDescription: 'Forced termination',
+  stdio: [ undefined, undefined, undefined ],
+  ipcOutput: [],
+  pipedFrom: []
+}
+2026-01-15T17:08:35.046Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5Calex%5CDownloads%5CDors+Feline-1941_Foot_Fun.wmv&videoStreamIndex=1&audioStreamIndexes=0&seekTo=660.351612&size=800&fps=30 HTTP/1.1 200 - 2762.482 ms
+2026-01-15T17:08:35.056Z error: electron-unhandled Command was killed with SIGKILL (Forced termination): "ffmpeg\win32-x64\lib\ffmpeg.exe" -hide_banner -loglevel error -fflags "+nobuffer+flush_packets+discardcorrupt" -avioflags direct -flush_packets 1 -ss 660.351612 -i "C:\Users\alex\Downloads\Dors Feline-1941_Foot_Fun.wmv" -fps_mode passthrough -map_metadata -1 -map_chapters -1 -filter_complex "[0:1]fps=30,scale=800:800:flags=lanczos:force_original_aspect_ratio=decrease:force_divisible_by=2:in_color_matrix=auto:in_range=auto:out_color_matrix=bt709:out_range=tv,format=yuv420p,setparams=color_primaries=bt709:color_trc=bt709:colorspace=bt709[video];[0:0]anull[audio]" -map "[video]" "-c:v" libx264 -preset ultrafast -tune zerolatency -crf 10 -g 1 -map "[audio]" -ac 2 "-c:a" aac "-b:a" 128k -f mp4 -movflags "+frag_keyframe+empty_moov+default_base_moof" - ExecaError: Command was killed with SIGKILL (Forced termination): "ffmpeg\win32-x64\lib\ffmpeg.exe" -hide_banner -loglevel error -fflags "+nobuffer+flush_packets+discardcorrupt" -avioflags direct -flush_packets 1 -ss 660.351612 -i "C:\Users\alex\Downloads\Dors Feline-1941_Foot_Fun.wmv" -fps_mode passthrough -map_metadata -1 -map_chapters -1 -filter_complex "[0:1]fps=30,scale=800:800:flags=lanczos:force_original_aspect_ratio=decrease:force_divisible_by=2:in_color_matrix=auto:in_range=auto:out_color_matrix=bt709:out_range=tv,format=yuv420p,setparams=color_primaries=bt709:color_trc=bt709:colorspace=bt709[video];[0:0]anull[audio]" -map "[video]" "-c:v" libx264 -preset ultrafast -tune zerolatency -crf 10 -g 1 -map "[audio]" -ac 2 "-c:a" aac "-b:a" 128k -f mp4 -movflags "+frag_keyframe+empty_moov+default_base_moof" -
+    at getFinalError (file:///C:/Users/alex/Codigos/lossless-cut/node_modules/execa/lib/return/final-error.js:6:9)
+    at makeError (file:///C:/Users/alex/Codigos/lossless-cut/node_modules/execa/lib/return/result.js:108:16)
+    at getAsyncResult (file:///C:/Users/alex/Codigos/lossless-cut/node_modules/execa/lib/methods/main-async.js:168:4)
+    at handlePromise (file:///C:/Users/alex/Codigos/lossless-cut/node_modules/execa/lib/methods/main-async.js:151:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5) {
+  shortMessage: 'Command was killed with SIGKILL (Forced termination): "ffmpeg\\win32-x64\\lib\\ffmpeg.exe" -hide_banner -loglevel error -fflags "+nobuffer+flush_packets+discardcorrupt" -avioflags direct -flush_packets 1 -ss 660.351612 -i "C:\\Users\\alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv" -fps_mode passthrough -map_metadata -1 -map_chapters -1 -filter_complex "[0:1]fps=30,scale=800:800:flags=lanczos:force_original_aspect_ratio=decrease:force_divisible_by=2:in_color_matrix=auto:in_range=auto:out_color_matrix=bt709:out_range=tv,format=yuv420p,setparams=color_primaries=bt709:color_trc=bt709:colorspace=bt709[video];[0:0]anull[audio]" -map "[video]" "-c:v" libx264 -preset ultrafast -tune zerolatency -crf 10 -g 1 -map "[audio]" -ac 2 "-c:a" aac "-b:a" 128k -f mp4 -movflags "+frag_keyframe+empty_moov+default_base_moof" -',
+  command: 'ffmpeg\\win32-x64\\lib\\ffmpeg.exe -hide_banner -loglevel error -fflags +nobuffer+flush_packets+discardcorrupt -avioflags direct -flush_packets 1 -ss 660.351612 -i C:\\Users\\alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv -fps_mode passthrough -map_metadata -1 -map_chapters -1 -filter_complex [0:1]fps=30,scale=800:800:flags=lanczos:force_original_aspect_ratio=decrease:force_divisible_by=2:in_color_matrix=auto:in_range=auto:out_color_matrix=bt709:out_range=tv,format=yuv420p,setparams=color_primaries=bt709:color_trc=bt709:colorspace=bt709[video];[0:0]anull[audio] -map [video] -c:v libx264 -preset ultrafast -tune zerolatency -crf 10 -g 1 -map [audio] -ac 2 -c:a aac -b:a 128k -f mp4 -movflags +frag_keyframe+empty_moov+default_base_moof -',
+  escapedCommand: '"ffmpeg\\win32-x64\\lib\\ffmpeg.exe" -hide_banner -loglevel error -fflags "+nobuffer+flush_packets+discardcorrupt" -avioflags direct -flush_packets 1 -ss 660.351612 -i "C:\\Users\\alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv" -fps_mode passthrough -map_metadata -1 -map_chapters -1 -filter_complex "[0:1]fps=30,scale=800:800:flags=lanczos:force_original_aspect_ratio=decrease:force_divisible_by=2:in_color_matrix=auto:in_range=auto:out_color_matrix=bt709:out_range=tv,format=yuv420p,setparams=color_primaries=bt709:color_trc=bt709:colorspace=bt709[video];[0:0]anull[audio]" -map "[video]" "-c:v" libx264 -preset ultrafast -tune zerolatency -crf 10 -g 1 -map "[audio]" -ac 2 "-c:a" aac "-b:a" 128k -f mp4 -movflags "+frag_keyframe+empty_moov+default_base_moof" -',
+  cwd: 'C:\\Users\\alex\\Codigos\\lossless-cut\\electron',
+  durationMs: 2772.0944,
+  failed: true,
+  timedOut: false,
+  isCanceled: false,
+  isGracefullyCanceled: false,
+  isTerminated: true,
+  isMaxBuffer: false,
+  isForcefullyTerminated: false,
+  signal: 'SIGKILL',
+  signalDescription: 'Forced termination',
+  stdio: [ undefined, undefined, undefined ],
+  ipcOutput: [],
+  pipedFrom: []
+}
+2026-01-15T17:08:36.133Z info: Received /stream request {
+  path: 'C:\\Users\\alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  videoStreamIndex: '1',
+  audioStreamIndexes: '0',
+  seekTo: '660.793438',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-15T17:08:40.873Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5Calex%5CDownloads%5CDors+Feline-1941_Foot_Fun.wmv&videoStreamIndex=1&audioStreamIndexes=0&seekTo=660.793438&size=800&fps=30 HTTP/1.1 200 - 165.183 ms
+2026-01-15T17:08:40.881Z info: Received /stream request {
+  path: 'C:\\Users\\alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  videoStreamIndex: '1',
+  audioStreamIndexes: '0',
+  seekTo: '739.69746',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-15T17:08:40.890Z error: electron-unhandled Command was killed with SIGKILL (Forced termination): "ffmpeg\win32-x64\lib\ffmpeg.exe" -hide_banner -loglevel error -fflags "+nobuffer+flush_packets+discardcorrupt" -avioflags direct -flush_packets 1 -ss 660.793438 -i "C:\Users\alex\Downloads\Dors Feline-1941_Foot_Fun.wmv" -fps_mode passthrough -map_metadata -1 -map_chapters -1 -filter_complex "[0:1]fps=30,scale=800:800:flags=lanczos:force_original_aspect_ratio=decrease:force_divisible_by=2:in_color_matrix=auto:in_range=auto:out_color_matrix=bt709:out_range=tv,format=yuv420p,setparams=color_primaries=bt709:color_trc=bt709:colorspace=bt709[video];[0:0]anull[audio]" -map "[video]" "-c:v" libx264 -preset ultrafast -tune zerolatency -crf 10 -g 1 -map "[audio]" -ac 2 "-c:a" aac "-b:a" 128k -f mp4 -movflags "+frag_keyframe+empty_moov+default_base_moof" - ExecaError: Command was killed with SIGKILL (Forced termination): "ffmpeg\win32-x64\lib\ffmpeg.exe" -hide_banner -loglevel error -fflags "+nobuffer+flush_packets+discardcorrupt" -avioflags direct -flush_packets 1 -ss 660.793438 -i "C:\Users\alex\Downloads\Dors Feline-1941_Foot_Fun.wmv" -fps_mode passthrough -map_metadata -1 -map_chapters -1 -filter_complex "[0:1]fps=30,scale=800:800:flags=lanczos:force_original_aspect_ratio=decrease:force_divisible_by=2:in_color_matrix=auto:in_range=auto:out_color_matrix=bt709:out_range=tv,format=yuv420p,setparams=color_primaries=bt709:color_trc=bt709:colorspace=bt709[video];[0:0]anull[audio]" -map "[video]" "-c:v" libx264 -preset ultrafast -tune zerolatency -crf 10 -g 1 -map "[audio]" -ac 2 "-c:a" aac "-b:a" 128k -f mp4 -movflags "+frag_keyframe+empty_moov+default_base_moof" -
+    at getFinalError (file:///C:/Users/alex/Codigos/lossless-cut/node_modules/execa/lib/return/final-error.js:6:9)
+    at makeError (file:///C:/Users/alex/Codigos/lossless-cut/node_modules/execa/lib/return/result.js:108:16)
+    at getAsyncResult (file:///C:/Users/alex/Codigos/lossless-cut/node_modules/execa/lib/methods/main-async.js:168:4)
+    at handlePromise (file:///C:/Users/alex/Codigos/lossless-cut/node_modules/execa/lib/methods/main-async.js:151:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5) {
+  shortMessage: 'Command was killed with SIGKILL (Forced termination): "ffmpeg\\win32-x64\\lib\\ffmpeg.exe" -hide_banner -loglevel error -fflags "+nobuffer+flush_packets+discardcorrupt" -avioflags direct -flush_packets 1 -ss 660.793438 -i "C:\\Users\\alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv" -fps_mode passthrough -map_metadata -1 -map_chapters -1 -filter_complex "[0:1]fps=30,scale=800:800:flags=lanczos:force_original_aspect_ratio=decrease:force_divisible_by=2:in_color_matrix=auto:in_range=auto:out_color_matrix=bt709:out_range=tv,format=yuv420p,setparams=color_primaries=bt709:color_trc=bt709:colorspace=bt709[video];[0:0]anull[audio]" -map "[video]" "-c:v" libx264 -preset ultrafast -tune zerolatency -crf 10 -g 1 -map "[audio]" -ac 2 "-c:a" aac "-b:a" 128k -f mp4 -movflags "+frag_keyframe+empty_moov+default_base_moof" -',
+  command: 'ffmpeg\\win32-x64\\lib\\ffmpeg.exe -hide_banner -loglevel error -fflags +nobuffer+flush_packets+discardcorrupt -avioflags direct -flush_packets 1 -ss 660.793438 -i C:\\Users\\alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv -fps_mode passthrough -map_metadata -1 -map_chapters -1 -filter_complex [0:1]fps=30,scale=800:800:flags=lanczos:force_original_aspect_ratio=decrease:force_divisible_by=2:in_color_matrix=auto:in_range=auto:out_color_matrix=bt709:out_range=tv,format=yuv420p,setparams=color_primaries=bt709:color_trc=bt709:colorspace=bt709[video];[0:0]anull[audio] -map [video] -c:v libx264 -preset ultrafast -tune zerolatency -crf 10 -g 1 -map [audio] -ac 2 -c:a aac -b:a 128k -f mp4 -movflags +frag_keyframe+empty_moov+default_base_moof -',
+  escapedCommand: '"ffmpeg\\win32-x64\\lib\\ffmpeg.exe" -hide_banner -loglevel error -fflags "+nobuffer+flush_packets+discardcorrupt" -avioflags direct -flush_packets 1 -ss 660.793438 -i "C:\\Users\\alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv" -fps_mode passthrough -map_metadata -1 -map_chapters -1 -filter_complex "[0:1]fps=30,scale=800:800:flags=lanczos:force_original_aspect_ratio=decrease:force_divisible_by=2:in_color_matrix=auto:in_range=auto:out_color_matrix=bt709:out_range=tv,format=yuv420p,setparams=color_primaries=bt709:color_trc=bt709:colorspace=bt709[video];[0:0]anull[audio]" -map "[video]" "-c:v" libx264 -preset ultrafast -tune zerolatency -crf 10 -g 1 -map "[audio]" -ac 2 "-c:a" aac "-b:a" 128k -f mp4 -movflags "+frag_keyframe+empty_moov+default_base_moof" -',
+  cwd: 'C:\\Users\\alex\\Codigos\\lossless-cut\\electron',
+  durationMs: 4756.2632,
+  failed: true,
+  timedOut: false,
+  isCanceled: false,
+  isGracefullyCanceled: false,
+  isTerminated: true,
+  isMaxBuffer: false,
+  isForcefullyTerminated: false,
+  signal: 'SIGKILL',
+  signalDescription: 'Forced termination',
+  stdio: [ undefined, undefined, undefined ],
+  ipcOutput: [],
+  pipedFrom: []
+}
+2026-01-15T17:08:46.812Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5Calex%5CDownloads%5CDors+Feline-1941_Foot_Fun.wmv&videoStreamIndex=1&audioStreamIndexes=0&seekTo=739.69746&size=800&fps=30 HTTP/1.1 200 - 5930.167 ms
+2026-01-15T17:08:46.820Z error: electron-unhandled Command was killed with SIGKILL (Forced termination): "ffmpeg\win32-x64\lib\ffmpeg.exe" -hide_banner -loglevel error -fflags "+nobuffer+flush_packets+discardcorrupt" -avioflags direct -flush_packets 1 -ss 739.69746 -i "C:\Users\alex\Downloads\Dors Feline-1941_Foot_Fun.wmv" -fps_mode passthrough -map_metadata -1 -map_chapters -1 -filter_complex "[0:1]fps=30,scale=800:800:flags=lanczos:force_original_aspect_ratio=decrease:force_divisible_by=2:in_color_matrix=auto:in_range=auto:out_color_matrix=bt709:out_range=tv,format=yuv420p,setparams=color_primaries=bt709:color_trc=bt709:colorspace=bt709[video];[0:0]anull[audio]" -map "[video]" "-c:v" libx264 -preset ultrafast -tune zerolatency -crf 10 -g 1 -map "[audio]" -ac 2 "-c:a" aac "-b:a" 128k -f mp4 -movflags "+frag_keyframe+empty_moov+default_base_moof" - ExecaError: Command was killed with SIGKILL (Forced termination): "ffmpeg\win32-x64\lib\ffmpeg.exe" -hide_banner -loglevel error -fflags "+nobuffer+flush_packets+discardcorrupt" -avioflags direct -flush_packets 1 -ss 739.69746 -i "C:\Users\alex\Downloads\Dors Feline-1941_Foot_Fun.wmv" -fps_mode passthrough -map_metadata -1 -map_chapters -1 -filter_complex "[0:1]fps=30,scale=800:800:flags=lanczos:force_original_aspect_ratio=decrease:force_divisible_by=2:in_color_matrix=auto:in_range=auto:out_color_matrix=bt709:out_range=tv,format=yuv420p,setparams=color_primaries=bt709:color_trc=bt709:colorspace=bt709[video];[0:0]anull[audio]" -map "[video]" "-c:v" libx264 -preset ultrafast -tune zerolatency -crf 10 -g 1 -map "[audio]" -ac 2 "-c:a" aac "-b:a" 128k -f mp4 -movflags "+frag_keyframe+empty_moov+default_base_moof" -
+    at getFinalError (file:///C:/Users/alex/Codigos/lossless-cut/node_modules/execa/lib/return/final-error.js:6:9)
+    at makeError (file:///C:/Users/alex/Codigos/lossless-cut/node_modules/execa/lib/return/result.js:108:16)
+    at getAsyncResult (file:///C:/Users/alex/Codigos/lossless-cut/node_modules/execa/lib/methods/main-async.js:168:4)
+    at handlePromise (file:///C:/Users/alex/Codigos/lossless-cut/node_modules/execa/lib/methods/main-async.js:151:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5) {
+  shortMessage: 'Command was killed with SIGKILL (Forced termination): "ffmpeg\\win32-x64\\lib\\ffmpeg.exe" -hide_banner -loglevel error -fflags "+nobuffer+flush_packets+discardcorrupt" -avioflags direct -flush_packets 1 -ss 739.69746 -i "C:\\Users\\alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv" -fps_mode passthrough -map_metadata -1 -map_chapters -1 -filter_complex "[0:1]fps=30,scale=800:800:flags=lanczos:force_original_aspect_ratio=decrease:force_divisible_by=2:in_color_matrix=auto:in_range=auto:out_color_matrix=bt709:out_range=tv,format=yuv420p,setparams=color_primaries=bt709:color_trc=bt709:colorspace=bt709[video];[0:0]anull[audio]" -map "[video]" "-c:v" libx264 -preset ultrafast -tune zerolatency -crf 10 -g 1 -map "[audio]" -ac 2 "-c:a" aac "-b:a" 128k -f mp4 -movflags "+frag_keyframe+empty_moov+default_base_moof" -',
+  command: 'ffmpeg\\win32-x64\\lib\\ffmpeg.exe -hide_banner -loglevel error -fflags +nobuffer+flush_packets+discardcorrupt -avioflags direct -flush_packets 1 -ss 739.69746 -i C:\\Users\\alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv -fps_mode passthrough -map_metadata -1 -map_chapters -1 -filter_complex [0:1]fps=30,scale=800:800:flags=lanczos:force_original_aspect_ratio=decrease:force_divisible_by=2:in_color_matrix=auto:in_range=auto:out_color_matrix=bt709:out_range=tv,format=yuv420p,setparams=color_primaries=bt709:color_trc=bt709:colorspace=bt709[video];[0:0]anull[audio] -map [video] -c:v libx264 -preset ultrafast -tune zerolatency -crf 10 -g 1 -map [audio] -ac 2 -c:a aac -b:a 128k -f mp4 -movflags +frag_keyframe+empty_moov+default_base_moof -',
+  escapedCommand: '"ffmpeg\\win32-x64\\lib\\ffmpeg.exe" -hide_banner -loglevel error -fflags "+nobuffer+flush_packets+discardcorrupt" -avioflags direct -flush_packets 1 -ss 739.69746 -i "C:\\Users\\alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv" -fps_mode passthrough -map_metadata -1 -map_chapters -1 -filter_complex "[0:1]fps=30,scale=800:800:flags=lanczos:force_original_aspect_ratio=decrease:force_divisible_by=2:in_color_matrix=auto:in_range=auto:out_color_matrix=bt709:out_range=tv,format=yuv420p,setparams=color_primaries=bt709:color_trc=bt709:colorspace=bt709[video];[0:0]anull[audio]" -map "[video]" "-c:v" libx264 -preset ultrafast -tune zerolatency -crf 10 -g 1 -map "[audio]" -ac 2 "-c:a" aac "-b:a" 128k -f mp4 -movflags "+frag_keyframe+empty_moov+default_base_moof" -',
+  cwd: 'C:\\Users\\alex\\Codigos\\lossless-cut\\electron',
+  durationMs: 5938.1897,
+  failed: true,
+  timedOut: false,
+  isCanceled: false,
+  isGracefullyCanceled: false,
+  isTerminated: true,
+  isMaxBuffer: false,
+  isForcefullyTerminated: false,
+  signal: 'SIGKILL',
+  signalDescription: 'Forced termination',
+  stdio: [ undefined, undefined, undefined ],
+  ipcOutput: [],
+  pipedFrom: []
+}
+2026-01-15T17:08:47.826Z info: Received /stream request {
+  path: 'C:\\Users\\alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  videoStreamIndex: '1',
+  audioStreamIndexes: '0',
+  seekTo: '740.140781',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-15T17:08:51.636Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5Calex%5CDownloads%5CDors+Feline-1941_Foot_Fun.wmv&videoStreamIndex=1&audioStreamIndexes=0&seekTo=740.140781&size=800&fps=30 HTTP/1.1 200 - 129.283 ms
+2026-01-15T17:08:51.645Z info: Received /stream request {
+  path: 'C:\\Users\\alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  videoStreamIndex: '1',
+  audioStreamIndexes: '0',
+  seekTo: '36.739341',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-15T17:08:51.652Z error: electron-unhandled Command was killed with SIGKILL (Forced termination): "ffmpeg\win32-x64\lib\ffmpeg.exe" -hide_banner -loglevel error -fflags "+nobuffer+flush_packets+discardcorrupt" -avioflags direct -flush_packets 1 -ss 740.140781 -i "C:\Users\alex\Downloads\Dors Feline-1941_Foot_Fun.wmv" -fps_mode passthrough -map_metadata -1 -map_chapters -1 -filter_complex "[0:1]fps=30,scale=800:800:flags=lanczos:force_original_aspect_ratio=decrease:force_divisible_by=2:in_color_matrix=auto:in_range=auto:out_color_matrix=bt709:out_range=tv,format=yuv420p,setparams=color_primaries=bt709:color_trc=bt709:colorspace=bt709[video];[0:0]anull[audio]" -map "[video]" "-c:v" libx264 -preset ultrafast -tune zerolatency -crf 10 -g 1 -map "[audio]" -ac 2 "-c:a" aac "-b:a" 128k -f mp4 -movflags "+frag_keyframe+empty_moov+default_base_moof" - ExecaError: Command was killed with SIGKILL (Forced termination): "ffmpeg\win32-x64\lib\ffmpeg.exe" -hide_banner -loglevel error -fflags "+nobuffer+flush_packets+discardcorrupt" -avioflags direct -flush_packets 1 -ss 740.140781 -i "C:\Users\alex\Downloads\Dors Feline-1941_Foot_Fun.wmv" -fps_mode passthrough -map_metadata -1 -map_chapters -1 -filter_complex "[0:1]fps=30,scale=800:800:flags=lanczos:force_original_aspect_ratio=decrease:force_divisible_by=2:in_color_matrix=auto:in_range=auto:out_color_matrix=bt709:out_range=tv,format=yuv420p,setparams=color_primaries=bt709:color_trc=bt709:colorspace=bt709[video];[0:0]anull[audio]" -map "[video]" "-c:v" libx264 -preset ultrafast -tune zerolatency -crf 10 -g 1 -map "[audio]" -ac 2 "-c:a" aac "-b:a" 128k -f mp4 -movflags "+frag_keyframe+empty_moov+default_base_moof" -
+    at getFinalError (file:///C:/Users/alex/Codigos/lossless-cut/node_modules/execa/lib/return/final-error.js:6:9)
+    at makeError (file:///C:/Users/alex/Codigos/lossless-cut/node_modules/execa/lib/return/result.js:108:16)
+    at getAsyncResult (file:///C:/Users/alex/Codigos/lossless-cut/node_modules/execa/lib/methods/main-async.js:168:4)
+    at handlePromise (file:///C:/Users/alex/Codigos/lossless-cut/node_modules/execa/lib/methods/main-async.js:151:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5) {
+  shortMessage: 'Command was killed with SIGKILL (Forced termination): "ffmpeg\\win32-x64\\lib\\ffmpeg.exe" -hide_banner -loglevel error -fflags "+nobuffer+flush_packets+discardcorrupt" -avioflags direct -flush_packets 1 -ss 740.140781 -i "C:\\Users\\alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv" -fps_mode passthrough -map_metadata -1 -map_chapters -1 -filter_complex "[0:1]fps=30,scale=800:800:flags=lanczos:force_original_aspect_ratio=decrease:force_divisible_by=2:in_color_matrix=auto:in_range=auto:out_color_matrix=bt709:out_range=tv,format=yuv420p,setparams=color_primaries=bt709:color_trc=bt709:colorspace=bt709[video];[0:0]anull[audio]" -map "[video]" "-c:v" libx264 -preset ultrafast -tune zerolatency -crf 10 -g 1 -map "[audio]" -ac 2 "-c:a" aac "-b:a" 128k -f mp4 -movflags "+frag_keyframe+empty_moov+default_base_moof" -',
+  command: 'ffmpeg\\win32-x64\\lib\\ffmpeg.exe -hide_banner -loglevel error -fflags +nobuffer+flush_packets+discardcorrupt -avioflags direct -flush_packets 1 -ss 740.140781 -i C:\\Users\\alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv -fps_mode passthrough -map_metadata -1 -map_chapters -1 -filter_complex [0:1]fps=30,scale=800:800:flags=lanczos:force_original_aspect_ratio=decrease:force_divisible_by=2:in_color_matrix=auto:in_range=auto:out_color_matrix=bt709:out_range=tv,format=yuv420p,setparams=color_primaries=bt709:color_trc=bt709:colorspace=bt709[video];[0:0]anull[audio] -map [video] -c:v libx264 -preset ultrafast -tune zerolatency -crf 10 -g 1 -map [audio] -ac 2 -c:a aac -b:a 128k -f mp4 -movflags +frag_keyframe+empty_moov+default_base_moof -',
+  escapedCommand: '"ffmpeg\\win32-x64\\lib\\ffmpeg.exe" -hide_banner -loglevel error -fflags "+nobuffer+flush_packets+discardcorrupt" -avioflags direct -flush_packets 1 -ss 740.140781 -i "C:\\Users\\alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv" -fps_mode passthrough -map_metadata -1 -map_chapters -1 -filter_complex "[0:1]fps=30,scale=800:800:flags=lanczos:force_original_aspect_ratio=decrease:force_divisible_by=2:in_color_matrix=auto:in_range=auto:out_color_matrix=bt709:out_range=tv,format=yuv420p,setparams=color_primaries=bt709:color_trc=bt709:colorspace=bt709[video];[0:0]anull[audio]" -map "[video]" "-c:v" libx264 -preset ultrafast -tune zerolatency -crf 10 -g 1 -map "[audio]" -ac 2 "-c:a" aac "-b:a" 128k -f mp4 -movflags "+frag_keyframe+empty_moov+default_base_moof" -',
+  cwd: 'C:\\Users\\alex\\Codigos\\lossless-cut\\electron',
+  durationMs: 3825.7813,
+  failed: true,
+  timedOut: false,
+  isCanceled: false,
+  isGracefullyCanceled: false,
+  isTerminated: true,
+  isMaxBuffer: false,
+  isForcefullyTerminated: false,
+  signal: 'SIGKILL',
+  signalDescription: 'Forced termination',
+  stdio: [ undefined, undefined, undefined ],
+  ipcOutput: [],
+  pipedFrom: []
+}
+2026-01-15T17:08:52.983Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5Calex%5CDownloads%5CDors+Feline-1941_Foot_Fun.wmv&videoStreamIndex=1&audioStreamIndexes=0&seekTo=36.739341&size=800&fps=30 HTTP/1.1 200 - 1337.686 ms
+2026-01-15T17:08:52.991Z error: electron-unhandled Command was killed with SIGKILL (Forced termination): "ffmpeg\win32-x64\lib\ffmpeg.exe" -hide_banner -loglevel error -fflags "+nobuffer+flush_packets+discardcorrupt" -avioflags direct -flush_packets 1 -ss 36.739341 -i "C:\Users\alex\Downloads\Dors Feline-1941_Foot_Fun.wmv" -fps_mode passthrough -map_metadata -1 -map_chapters -1 -filter_complex "[0:1]fps=30,scale=800:800:flags=lanczos:force_original_aspect_ratio=decrease:force_divisible_by=2:in_color_matrix=auto:in_range=auto:out_color_matrix=bt709:out_range=tv,format=yuv420p,setparams=color_primaries=bt709:color_trc=bt709:colorspace=bt709[video];[0:0]anull[audio]" -map "[video]" "-c:v" libx264 -preset ultrafast -tune zerolatency -crf 10 -g 1 -map "[audio]" -ac 2 "-c:a" aac "-b:a" 128k -f mp4 -movflags "+frag_keyframe+empty_moov+default_base_moof" - ExecaError: Command was killed with SIGKILL (Forced termination): "ffmpeg\win32-x64\lib\ffmpeg.exe" -hide_banner -loglevel error -fflags "+nobuffer+flush_packets+discardcorrupt" -avioflags direct -flush_packets 1 -ss 36.739341 -i "C:\Users\alex\Downloads\Dors Feline-1941_Foot_Fun.wmv" -fps_mode passthrough -map_metadata -1 -map_chapters -1 -filter_complex "[0:1]fps=30,scale=800:800:flags=lanczos:force_original_aspect_ratio=decrease:force_divisible_by=2:in_color_matrix=auto:in_range=auto:out_color_matrix=bt709:out_range=tv,format=yuv420p,setparams=color_primaries=bt709:color_trc=bt709:colorspace=bt709[video];[0:0]anull[audio]" -map "[video]" "-c:v" libx264 -preset ultrafast -tune zerolatency -crf 10 -g 1 -map "[audio]" -ac 2 "-c:a" aac "-b:a" 128k -f mp4 -movflags "+frag_keyframe+empty_moov+default_base_moof" -
+    at getFinalError (file:///C:/Users/alex/Codigos/lossless-cut/node_modules/execa/lib/return/final-error.js:6:9)
+    at makeError (file:///C:/Users/alex/Codigos/lossless-cut/node_modules/execa/lib/return/result.js:108:16)
+    at getAsyncResult (file:///C:/Users/alex/Codigos/lossless-cut/node_modules/execa/lib/methods/main-async.js:168:4)
+    at handlePromise (file:///C:/Users/alex/Codigos/lossless-cut/node_modules/execa/lib/methods/main-async.js:151:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5) {
+  shortMessage: 'Command was killed with SIGKILL (Forced termination): "ffmpeg\\win32-x64\\lib\\ffmpeg.exe" -hide_banner -loglevel error -fflags "+nobuffer+flush_packets+discardcorrupt" -avioflags direct -flush_packets 1 -ss 36.739341 -i "C:\\Users\\alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv" -fps_mode passthrough -map_metadata -1 -map_chapters -1 -filter_complex "[0:1]fps=30,scale=800:800:flags=lanczos:force_original_aspect_ratio=decrease:force_divisible_by=2:in_color_matrix=auto:in_range=auto:out_color_matrix=bt709:out_range=tv,format=yuv420p,setparams=color_primaries=bt709:color_trc=bt709:colorspace=bt709[video];[0:0]anull[audio]" -map "[video]" "-c:v" libx264 -preset ultrafast -tune zerolatency -crf 10 -g 1 -map "[audio]" -ac 2 "-c:a" aac "-b:a" 128k -f mp4 -movflags "+frag_keyframe+empty_moov+default_base_moof" -',
+  command: 'ffmpeg\\win32-x64\\lib\\ffmpeg.exe -hide_banner -loglevel error -fflags +nobuffer+flush_packets+discardcorrupt -avioflags direct -flush_packets 1 -ss 36.739341 -i C:\\Users\\alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv -fps_mode passthrough -map_metadata -1 -map_chapters -1 -filter_complex [0:1]fps=30,scale=800:800:flags=lanczos:force_original_aspect_ratio=decrease:force_divisible_by=2:in_color_matrix=auto:in_range=auto:out_color_matrix=bt709:out_range=tv,format=yuv420p,setparams=color_primaries=bt709:color_trc=bt709:colorspace=bt709[video];[0:0]anull[audio] -map [video] -c:v libx264 -preset ultrafast -tune zerolatency -crf 10 -g 1 -map [audio] -ac 2 -c:a aac -b:a 128k -f mp4 -movflags +frag_keyframe+empty_moov+default_base_moof -',
+  escapedCommand: '"ffmpeg\\win32-x64\\lib\\ffmpeg.exe" -hide_banner -loglevel error -fflags "+nobuffer+flush_packets+discardcorrupt" -avioflags direct -flush_packets 1 -ss 36.739341 -i "C:\\Users\\alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv" -fps_mode passthrough -map_metadata -1 -map_chapters -1 -filter_complex "[0:1]fps=30,scale=800:800:flags=lanczos:force_original_aspect_ratio=decrease:force_divisible_by=2:in_color_matrix=auto:in_range=auto:out_color_matrix=bt709:out_range=tv,format=yuv420p,setparams=color_primaries=bt709:color_trc=bt709:colorspace=bt709[video];[0:0]anull[audio]" -map "[video]" "-c:v" libx264 -preset ultrafast -tune zerolatency -crf 10 -g 1 -map "[audio]" -ac 2 "-c:a" aac "-b:a" 128k -f mp4 -movflags "+frag_keyframe+empty_moov+default_base_moof" -',
+  cwd: 'C:\\Users\\alex\\Codigos\\lossless-cut\\electron',
+  durationMs: 1344.8988,
+  failed: true,
+  timedOut: false,
+  isCanceled: false,
+  isGracefullyCanceled: false,
+  isTerminated: true,
+  isMaxBuffer: false,
+  isForcefullyTerminated: false,
+  signal: 'SIGKILL',
+  signalDescription: 'Forced termination',
+  stdio: [ undefined, undefined, undefined ],
+  ipcOutput: [],
+  pipedFrom: []
+}
+2026-01-15T17:08:53.625Z info: Received /stream request {
+  path: 'C:\\Users\\alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  videoStreamIndex: '1',
+  audioStreamIndexes: '0',
+  seekTo: '36.721761',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-15T17:12:45.513Z info: LosslessCut version 3.67.2 { isDev: true }
+2026-01-15T17:12:45.541Z info: Initialized config store
+2026-01-15T17:12:45.542Z info: Waiting for app to become ready
+2026-01-15T17:12:45.547Z info: CLI arguments { _: [] }
+2026-01-15T17:12:45.554Z info: HTTP API listening on http://127.0.0.1:8080/
+2026-01-15T17:12:45.554Z info: HTTP API listening on port 8080
+2026-01-15T17:12:45.621Z info: Added Extension React Developer Tools
+2026-01-15T17:12:48.039Z info: ffmpeg -hide_banner -f lavfi -i nullsrc=s=256x256:d=1 -f null -
+2026-01-15T17:12:48.051Z info: ffmpeg -hide_banner -f lavfi -i nullsrc=s=256x256:d=1 -f null -
+2026-01-15T17:12:50.395Z info: ffprobe -of json -show_chapters -show_format -show_entries stream -i "C:\Users\alex\Downloads\Dors Feline-1941_Foot_Fun.wmv" -hide_banner
+2026-01-15T17:12:50.470Z info: Received /stream request {
+  path: 'C:\\Users\\alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  videoStreamIndex: '1',
+  audioStreamIndexes: '0',
+  seekTo: '0',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-15T17:12:51.745Z info: Current version 3.67.2
+2026-01-15T17:12:51.745Z info: Newest version 3.67.2
+2026-01-15T17:12:54.372Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5Calex%5CDownloads%5CDors+Feline-1941_Foot_Fun.wmv&videoStreamIndex=1&audioStreamIndexes=0&seekTo=0&size=800&fps=30 HTTP/1.1 200 - 88.469 ms
+2026-01-15T17:12:54.382Z info: Received /stream request {
+  path: 'C:\\Users\\alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  videoStreamIndex: '1',
+  audioStreamIndexes: '0',
+  seekTo: '310.837522',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-15T17:12:54.388Z error: electron-unhandled Command was killed with SIGKILL (Forced termination): "ffmpeg\win32-x64\lib\ffmpeg.exe" -hide_banner -loglevel error -fflags "+nobuffer+flush_packets+discardcorrupt" -avioflags direct -flush_packets 1 -ss 0 -i "C:\Users\alex\Downloads\Dors Feline-1941_Foot_Fun.wmv" -fps_mode passthrough -map_metadata -1 -map_chapters -1 -filter_complex "[0:1]fps=30,scale=800:800:flags=lanczos:force_original_aspect_ratio=decrease:force_divisible_by=2:in_color_matrix=auto:in_range=auto:out_color_matrix=bt709:out_range=tv,format=yuv420p,setparams=color_primaries=bt709:color_trc=bt709:colorspace=bt709[video];[0:0]anull[audio]" -map "[video]" "-c:v" libx264 -preset ultrafast -tune zerolatency -crf 10 -g 1 -map "[audio]" -ac 2 "-c:a" aac "-b:a" 128k -f mp4 -movflags "+frag_keyframe+empty_moov+default_base_moof" - ExecaError: Command was killed with SIGKILL (Forced termination): "ffmpeg\win32-x64\lib\ffmpeg.exe" -hide_banner -loglevel error -fflags "+nobuffer+flush_packets+discardcorrupt" -avioflags direct -flush_packets 1 -ss 0 -i "C:\Users\alex\Downloads\Dors Feline-1941_Foot_Fun.wmv" -fps_mode passthrough -map_metadata -1 -map_chapters -1 -filter_complex "[0:1]fps=30,scale=800:800:flags=lanczos:force_original_aspect_ratio=decrease:force_divisible_by=2:in_color_matrix=auto:in_range=auto:out_color_matrix=bt709:out_range=tv,format=yuv420p,setparams=color_primaries=bt709:color_trc=bt709:colorspace=bt709[video];[0:0]anull[audio]" -map "[video]" "-c:v" libx264 -preset ultrafast -tune zerolatency -crf 10 -g 1 -map "[audio]" -ac 2 "-c:a" aac "-b:a" 128k -f mp4 -movflags "+frag_keyframe+empty_moov+default_base_moof" -
+    at getFinalError (file:///C:/Users/alex/Codigos/lossless-cut/node_modules/execa/lib/return/final-error.js:6:9)
+    at makeError (file:///C:/Users/alex/Codigos/lossless-cut/node_modules/execa/lib/return/result.js:108:16)
+    at getAsyncResult (file:///C:/Users/alex/Codigos/lossless-cut/node_modules/execa/lib/methods/main-async.js:168:4)
+    at handlePromise (file:///C:/Users/alex/Codigos/lossless-cut/node_modules/execa/lib/methods/main-async.js:151:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5) {
+  shortMessage: 'Command was killed with SIGKILL (Forced termination): "ffmpeg\\win32-x64\\lib\\ffmpeg.exe" -hide_banner -loglevel error -fflags "+nobuffer+flush_packets+discardcorrupt" -avioflags direct -flush_packets 1 -ss 0 -i "C:\\Users\\alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv" -fps_mode passthrough -map_metadata -1 -map_chapters -1 -filter_complex "[0:1]fps=30,scale=800:800:flags=lanczos:force_original_aspect_ratio=decrease:force_divisible_by=2:in_color_matrix=auto:in_range=auto:out_color_matrix=bt709:out_range=tv,format=yuv420p,setparams=color_primaries=bt709:color_trc=bt709:colorspace=bt709[video];[0:0]anull[audio]" -map "[video]" "-c:v" libx264 -preset ultrafast -tune zerolatency -crf 10 -g 1 -map "[audio]" -ac 2 "-c:a" aac "-b:a" 128k -f mp4 -movflags "+frag_keyframe+empty_moov+default_base_moof" -',
+  command: 'ffmpeg\\win32-x64\\lib\\ffmpeg.exe -hide_banner -loglevel error -fflags +nobuffer+flush_packets+discardcorrupt -avioflags direct -flush_packets 1 -ss 0 -i C:\\Users\\alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv -fps_mode passthrough -map_metadata -1 -map_chapters -1 -filter_complex [0:1]fps=30,scale=800:800:flags=lanczos:force_original_aspect_ratio=decrease:force_divisible_by=2:in_color_matrix=auto:in_range=auto:out_color_matrix=bt709:out_range=tv,format=yuv420p,setparams=color_primaries=bt709:color_trc=bt709:colorspace=bt709[video];[0:0]anull[audio] -map [video] -c:v libx264 -preset ultrafast -tune zerolatency -crf 10 -g 1 -map [audio] -ac 2 -c:a aac -b:a 128k -f mp4 -movflags +frag_keyframe+empty_moov+default_base_moof -',
+  escapedCommand: '"ffmpeg\\win32-x64\\lib\\ffmpeg.exe" -hide_banner -loglevel error -fflags "+nobuffer+flush_packets+discardcorrupt" -avioflags direct -flush_packets 1 -ss 0 -i "C:\\Users\\alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv" -fps_mode passthrough -map_metadata -1 -map_chapters -1 -filter_complex "[0:1]fps=30,scale=800:800:flags=lanczos:force_original_aspect_ratio=decrease:force_divisible_by=2:in_color_matrix=auto:in_range=auto:out_color_matrix=bt709:out_range=tv,format=yuv420p,setparams=color_primaries=bt709:color_trc=bt709:colorspace=bt709[video];[0:0]anull[audio]" -map "[video]" "-c:v" libx264 -preset ultrafast -tune zerolatency -crf 10 -g 1 -map "[audio]" -ac 2 "-c:a" aac "-b:a" 128k -f mp4 -movflags "+frag_keyframe+empty_moov+default_base_moof" -',
+  cwd: 'C:\\Users\\alex\\Codigos\\lossless-cut\\electron',
+  durationMs: 3916.9289,
+  failed: true,
+  timedOut: false,
+  isCanceled: false,
+  isGracefullyCanceled: false,
+  isTerminated: true,
+  isMaxBuffer: false,
+  isForcefullyTerminated: false,
+  signal: 'SIGKILL',
+  signalDescription: 'Forced termination',
+  stdio: [ undefined, undefined, undefined ],
+  ipcOutput: [],
+  pipedFrom: []
+}
+2026-01-15T17:15:33.290Z info: LosslessCut version 3.67.2 { isDev: true }
+2026-01-15T17:15:33.319Z info: Initialized config store
+2026-01-15T17:15:33.320Z info: Waiting for app to become ready
+2026-01-15T17:15:33.325Z info: CLI arguments { _: [] }
+2026-01-15T17:15:33.332Z info: HTTP API listening on http://127.0.0.1:8080/
+2026-01-15T17:15:33.332Z info: HTTP API listening on port 8080
+2026-01-15T17:15:33.398Z info: Added Extension React Developer Tools
+2026-01-15T17:15:33.500Z info: Current version 3.67.2
+2026-01-15T17:15:33.500Z info: Newest version 3.67.2
+2026-01-15T17:15:35.803Z info: ffmpeg -hide_banner -f lavfi -i nullsrc=s=256x256:d=1 -f null -
+2026-01-15T17:15:35.818Z info: ffmpeg -hide_banner -f lavfi -i nullsrc=s=256x256:d=1 -f null -
+2026-01-15T17:15:40.815Z info: ffprobe -of json -show_chapters -show_format -show_entries stream -i "C:\Users\alex\Downloads\Dors Feline-1941_Foot_Fun.wmv" -hide_banner
+2026-01-15T17:15:40.900Z info: Received /stream request {
+  path: 'C:\\Users\\alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  videoStreamIndex: '1',
+  audioStreamIndexes: '0',
+  seekTo: '0',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-15T17:15:47.230Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5Calex%5CDownloads%5CDors+Feline-1941_Foot_Fun.wmv&videoStreamIndex=1&audioStreamIndexes=0&seekTo=0&size=800&fps=30 HTTP/1.1 200 - 87.674 ms
+2026-01-15T17:15:47.239Z info: Received /stream request {
+  path: 'C:\\Users\\alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  videoStreamIndex: '1',
+  audioStreamIndexes: '0',
+  seekTo: '311.496149',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-15T17:15:51.771Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5Calex%5CDownloads%5CDors+Feline-1941_Foot_Fun.wmv&videoStreamIndex=1&audioStreamIndexes=0&seekTo=311.496149&size=800&fps=30 HTTP/1.1 200 - 139.379 ms
+2026-01-15T17:15:51.784Z info: Received /stream request {
+  path: 'C:\\Users\\alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  videoStreamIndex: '1',
+  audioStreamIndexes: '0',
+  seekTo: '630.186846',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-15T17:15:53.705Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5Calex%5CDownloads%5CDors+Feline-1941_Foot_Fun.wmv&videoStreamIndex=1&audioStreamIndexes=0&seekTo=630.186846&size=800&fps=30 HTTP/1.1 200 - 144.868 ms
+2026-01-15T17:15:53.714Z info: Received /stream request {
+  path: 'C:\\Users\\alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  videoStreamIndex: '1',
+  audioStreamIndexes: '0',
+  seekTo: '419.033752',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-15T17:15:56.871Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5Calex%5CDownloads%5CDors+Feline-1941_Foot_Fun.wmv&videoStreamIndex=1&audioStreamIndexes=0&seekTo=419.033752&size=800&fps=30 HTTP/1.1 200 - 129.971 ms
+2026-01-15T17:15:56.883Z info: Received /stream request {
+  path: 'C:\\Users\\alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  videoStreamIndex: '1',
+  audioStreamIndexes: '0',
+  seekTo: '465.586497',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-15T17:30:21.375Z info: LosslessCut version 3.67.2 { isDev: true }
+2026-01-15T17:30:21.406Z info: Initialized config store
+2026-01-15T17:30:21.406Z info: Waiting for app to become ready
+2026-01-15T17:30:21.410Z info: CLI arguments { _: [] }
+2026-01-15T17:30:21.419Z info: HTTP API listening on http://127.0.0.1:8080/
+2026-01-15T17:30:21.419Z info: HTTP API listening on port 8080
+2026-01-15T17:30:21.493Z info: Added Extension React Developer Tools
+2026-01-15T17:30:21.596Z info: Current version 3.67.2
+2026-01-15T17:30:21.596Z info: Newest version 3.67.2
+2026-01-15T17:42:52.481Z info: LosslessCut version 3.67.2 { isDev: true }
+2026-01-15T17:42:52.511Z info: Initialized config store
+2026-01-15T17:42:52.511Z info: Waiting for app to become ready
+2026-01-15T17:42:52.516Z info: CLI arguments { _: [] }
+2026-01-15T17:42:52.523Z info: HTTP API listening on http://127.0.0.1:8080/
+2026-01-15T17:42:52.523Z info: HTTP API listening on port 8080
+2026-01-15T17:42:52.593Z info: Added Extension React Developer Tools
+2026-01-15T17:42:52.694Z info: Current version 3.67.2
+2026-01-15T17:42:52.694Z info: Newest version 3.67.2
+2026-01-15T17:42:55.069Z info: ffmpeg -hide_banner -f lavfi -i nullsrc=s=256x256:d=1 -f null -
+2026-01-15T17:42:55.083Z info: ffmpeg -hide_banner -f lavfi -i nullsrc=s=256x256:d=1 -f null -
+2026-01-15T17:42:57.366Z info: ffprobe -of json -show_chapters -show_format -show_entries stream -i "C:\Users\alex\Downloads\Dors Feline-1941_Foot_Fun.wmv" -hide_banner
+2026-01-15T17:42:57.792Z info: Received /stream request {
+  path: 'C:\\Users\\alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  videoStreamIndex: '1',
+  audioStreamIndexes: '0',
+  seekTo: '0',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-15T17:43:02.916Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5Calex%5CDownloads%5CDors+Feline-1941_Foot_Fun.wmv&videoStreamIndex=1&audioStreamIndexes=0&seekTo=0&size=800&fps=30 HTTP/1.1 200 - 85.949 ms
+2026-01-15T17:43:02.920Z info: Received /stream request {
+  path: 'C:\\Users\\alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  videoStreamIndex: '1',
+  audioStreamIndexes: '0',
+  seekTo: '169.84287',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-15T17:43:04.279Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5Calex%5CDownloads%5CDors+Feline-1941_Foot_Fun.wmv&videoStreamIndex=1&audioStreamIndexes=0&seekTo=169.84287&size=800&fps=30 HTTP/1.1 200 - 255.794 ms
+2026-01-15T17:43:04.599Z info: Received /stream request {
+  path: 'C:\\Users\\alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  videoStreamIndex: '1',
+  audioStreamIndexes: '0',
+  seekTo: '556.737976',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-15T17:43:09.402Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5Calex%5CDownloads%5CDors+Feline-1941_Foot_Fun.wmv&videoStreamIndex=1&audioStreamIndexes=0&seekTo=556.737976&size=800&fps=30 HTTP/1.1 200 - 210.800 ms
+2026-01-16T09:40:28.393Z info: LosslessCut version 3.67.2 { isDev: true }
+2026-01-16T09:40:28.458Z info: Initialized config store
+2026-01-16T09:40:28.459Z info: Waiting for app to become ready
+2026-01-16T09:40:28.462Z info: CLI arguments { _: [] }
+2026-01-16T09:40:28.469Z info: HTTP API listening on http://127.0.0.1:8080/
+2026-01-16T09:40:28.469Z info: HTTP API listening on port 8080
+2026-01-16T09:40:28.575Z info: Added Extension React Developer Tools
+2026-01-16T09:40:28.651Z info: Current version 3.67.2
+2026-01-16T09:40:28.651Z info: Newest version 3.67.2
+2026-01-16T09:40:33.152Z info: ffmpeg -hide_banner -f lavfi -i nullsrc=s=256x256:d=1 -f null -
+2026-01-16T09:40:33.213Z info: ffmpeg -hide_banner -f lavfi -i nullsrc=s=256x256:d=1 -f null -
+2026-01-16T09:43:46.371Z info: ffprobe -of json -show_chapters -show_format -show_entries stream -i "C:\Users\alex\Downloads\Dors Feline-1941_Foot_Fun.wmv" -hide_banner
+2026-01-16T09:43:46.859Z info: Received /stream request {
+  path: 'C:\\Users\\alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  videoStreamIndex: '1',
+  audioStreamIndexes: '0',
+  seekTo: '0',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-16T09:43:51.184Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5Calex%5CDownloads%5CDors+Feline-1941_Foot_Fun.wmv&videoStreamIndex=1&audioStreamIndexes=0&seekTo=0&size=800&fps=30 HTTP/1.1 200 - 89.824 ms

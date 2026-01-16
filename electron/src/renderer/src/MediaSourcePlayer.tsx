@@ -12,9 +12,7 @@ import { container } from 'tsyringe';
 import { TOKENS, type IMediaSourceStreamFactory } from 'lossless-cut-application';
 import '../../renderer/src/di.ts';
 
-// const { compatPlayer: { createMediaSourceStream } } = window.require('@electron/remote').require('./index.js');
-const mediaSourceStreamFactory = container.resolve<IMediaSourceStreamFactory>(TOKENS.MediaSourceStreamFactory); // {} as any;
-// const { mediaSourceStreamFactory } = window.require('@electron/remote').require('./index.js');
+const { mediaSourceStreamFactory } = window.require('@electron/remote').require('./index.js');
 
 async function startPlayback({ path, slaveVideo, masterVideo, videoStreamIndex, audioStreamIndexes, seekTo, signal, size, fps, rotate, onCanPlay, onResetNeeded, onWaiting }: {
   path: string,
@@ -322,6 +320,8 @@ function MediaSourcePlayer({ rotate, filePath, videoStream, audioStreams, master
 
   const audioStreamIndexes = useMemo(() => audioStreams.map((s) => s.index), [audioStreams]);
 
+  const mediaSourceStreamFactory = useMemo(() => container.resolve<IMediaSourceStreamFactory>(TOKENS.MediaSourceStreamFactory), []);
+
   useEffect(() => {
     const video = videoRef.current;
     invariant(video != null);
@@ -392,7 +392,7 @@ function MediaSourcePlayer({ rotate, filePath, videoStream, audioStreams, master
 
     return () => abortController.abort();
     // Important that we also have eventId in the deps, so that we can restart the preview when the eventId changes
-  }, [audioStreamIndexes, filePath, masterVideoRef, mediaSourceQuality, rotate, videoStream]);
+  }, [audioStreamIndexes, filePath, masterVideoRef, mediaSourceQuality, rotate, videoStream, mediaSourceStreamFactory]);
 
   const onFocus = useCallback<FocusEventHandler<HTMLVideoElement>>((e) => {
     // prevent video element from stealing focus in fullscreen mode https://github.com/mifi/lossless-cut/issues/543#issuecomment-1868167775

@@ -11,6 +11,10 @@
       "types": "./dist/index.d.ts",
       "import": "./dist/index.js"
     },
+    "./HttpMediaSourceStreamFactory": {
+      "types": "./dist/HttpMediaSourceStreamFactory.d.ts",
+      "import": "./dist/HttpMediaSourceStreamFactory.js"
+    },
     "./package.json": "./package.json"
   },
   "files": [

@@ -1,7 +1,7 @@
 import { container, injectable, Lifecycle } from "tsyringe";
 import type { IFfmpeg, ILogger, IPlatform } from "lossless-cut-application";
 import { TOKENS } from "lossless-cut-application";
-import { Platform, FfmpegExeca, ProcessMediaSourceStreamFactory, HttpMediaSourceStreamFactory } from "lossless-cut-application-electron";
+import { Platform, FfmpegExeca, ProcessMediaSourceStreamFactory } from "lossless-cut-application-electron";
 
 @injectable()
 class ConsoleLogger implements ILogger {
@@ -35,8 +35,8 @@ container.register<IFfmpeg>(TOKENS.Ffmpeg, {
 })
 
 container.register(TOKENS.MediaSourceStreamFactory, {
-    // useClass: ProcessMediaSourceStreamFactory,
-    useClass: HttpMediaSourceStreamFactory,
+    useClass: ProcessMediaSourceStreamFactory,
+    // useClass: HttpMediaSourceStreamFactory,
 }, {
     lifecycle: Lifecycle.Transient,
 })

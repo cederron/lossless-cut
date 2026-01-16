@@ -351,23 +351,8 @@ async function init() {
 
     const { httpApi } = argv;
 
-
-    // We need to start the HTTP server because HttpMediaSourceStreamFactory relies on it.
-    // Ideally we should check if HttpMediaSourceStreamFactory is actually used, 
-    // or configure the port in a shared place.
-    
-    // TODO this is original lossless.cut code
-    // if (httpApi != null) {
-    //   const port = typeof httpApi === 'number' ? httpApi : 8080;
-    //   const { startHttpServer } = HttpServer({ port, onKeyboardAction: sendApiAction });
-    //   await startHttpServer();
-    //   logger.info('HTTP API listening on port', port);
-    // }
-    
-    const shouldStartHttpServer = httpApi != null || true;
-
-    if (shouldStartHttpServer) {
-      const port = (httpApi != null && typeof httpApi === 'number') ? httpApi : 8080;
+    if (httpApi != null) {
+      const port = typeof httpApi === 'number' ? httpApi : 8080;
       const { startHttpServer } = HttpServer({ port, onKeyboardAction: sendApiAction });
       await startHttpServer();
       logger.info('HTTP API listening on port', port);

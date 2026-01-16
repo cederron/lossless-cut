@@ -4,6 +4,7 @@
   "packageManager": "yarn@4.11.0",
   "workspaces": [
     "electron",
+    "electron-stream",
     "backend",
     "application",
     "application-electron"
@@ -11,6 +12,8 @@
   "scripts": {
     "dev": "yarn workspace lossless-cut dev",
     "start": "yarn workspace lossless-cut start",
+    "dev-stream": "yarn workspace lossless-cut-stream dev",
+    "start-stream": "yarn workspace lossless-cut-stream start",
     "build": "yarn workspaces foreach -Atv run build",
     "clean": "yarn workspaces foreach -Atv run clean",
     "tsc": "tsc -b",
