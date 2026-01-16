@@ -1709,3 +1709,46 @@
   rotate: undefined
 }
 2026-01-16T09:43:51.184Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5Calex%5CDownloads%5CDors+Feline-1941_Foot_Fun.wmv&videoStreamIndex=1&audioStreamIndexes=0&seekTo=0&size=800&fps=30 HTTP/1.1 200 - 89.824 ms
+2026-01-16T11:02:01.547Z info: LosslessCut version 3.67.2 { isDev: true }
+2026-01-16T11:02:01.576Z info: Initialized config store
+2026-01-16T11:02:01.577Z info: Waiting for app to become ready
+2026-01-16T11:02:01.582Z info: CLI arguments { _: [] }
+2026-01-16T11:02:01.589Z info: HTTP API listening on http://127.0.0.1:8080/
+2026-01-16T11:02:01.589Z info: HTTP API listening on port 8080
+2026-01-16T11:02:01.654Z info: Added Extension React Developer Tools
+2026-01-16T11:02:01.940Z info: Current version 3.67.2
+2026-01-16T11:02:01.940Z info: Newest version 3.67.2
+2026-01-16T11:02:05.201Z info: ffmpeg -hide_banner -f lavfi -i nullsrc=s=256x256:d=1 -f null -
+2026-01-16T11:02:05.376Z info: ffmpeg -hide_banner -f lavfi -i nullsrc=s=256x256:d=1 -f null -
+2026-01-16T11:02:10.014Z info: ffprobe -of json -show_chapters -show_format -show_entries stream -i "C:\Users\alex\Downloads\Dors Feline-1941_Foot_Fun.wmv" -hide_banner
+2026-01-16T11:02:10.530Z info: Received /stream request {
+  path: 'C:\\Users\\alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  videoStreamIndex: '1',
+  audioStreamIndexes: '0',
+  seekTo: '0',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-16T11:02:15.682Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5Calex%5CDownloads%5CDors+Feline-1941_Foot_Fun.wmv&videoStreamIndex=1&audioStreamIndexes=0&seekTo=0&size=800&fps=30 HTTP/1.1 200 - 88.939 ms
+2026-01-16T12:56:36.655Z info: LosslessCut version 3.67.2 { isDev: true }
+2026-01-16T12:56:36.686Z info: Initialized config store
+2026-01-16T12:56:36.686Z info: Waiting for app to become ready
+2026-01-16T12:56:36.691Z info: CLI arguments { _: [] }
+2026-01-16T12:56:36.699Z info: HTTP API listening on http://127.0.0.1:8080/
+2026-01-16T12:56:36.699Z info: HTTP API listening on port 8080
+2026-01-16T12:56:36.763Z info: Added Extension React Developer Tools
+2026-01-16T12:56:37.027Z info: Current version 3.67.2
+2026-01-16T12:56:37.027Z info: Newest version 3.67.2
+2026-01-16T12:56:39.624Z info: ffmpeg -hide_banner -f lavfi -i nullsrc=s=256x256:d=1 -f null -
+2026-01-16T12:56:39.643Z info: ffmpeg -hide_banner -f lavfi -i nullsrc=s=256x256:d=1 -f null -
+2026-01-16T12:56:47.194Z info: ffprobe -of json -show_chapters -show_format -show_entries stream -i "C:\Users\alex\Downloads\Dors Feline-1941_Foot_Fun.wmv" -hide_banner
+2026-01-16T12:56:47.628Z info: Received /stream request {
+  path: 'C:\\Users\\alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  videoStreamIndex: '1',
+  audioStreamIndexes: '0',
+  seekTo: '0',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}

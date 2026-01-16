@@ -14,8 +14,8 @@ import remote from '@electron/remote/main/index.js';
 import { stat } from 'node:fs/promises';
 import assert from 'node:assert';
 import timers from 'node:timers/promises';
-import { z } from 'zod';
-import { fileURLToPath, pathToFileURL } from 'node:url';
+// import { z } from 'zod';
+import { fileURLToPath } from 'node:url';
 import electronUnhandled from 'electron-unhandled';
 import { fileTypeFromFile } from 'file-type/node';
 import type { Asyncify } from 'type-fest';
@@ -41,7 +41,7 @@ import * as ffmpeg from './ffmpeg.js';
 import * as compatPlayer from './compatPlayer.js';
 import { downloadMediaUrl } from './ffmpeg.js';
 import { container } from 'tsyringe';
-import { TOKENS, type IMediaSourceStreamFactory } from "lossless-cut-application";
+import { TOKENS, type IMediaSourceStreamFactory, type IState, type IUtils } from "lossless-cut-application";
 
 
 electronUnhandled({ showDialog: true, logger: (err) => logger.error('electron-unhandled', err) });
@@ -66,6 +66,8 @@ if (isWindows) {
 // https://www.electronjs.org/docs/latest/api/app#appsetaboutpaneloptionsoptions
 app.setAboutPanelOptions(getAboutPanelOptions());
 
+const state = container.resolve<IState>(TOKENS.State);
+
 let filesToOpen: string[] = [];
 
 // Keep a global reference of the window object, if you don't, the window will
@@ -75,7 +77,7 @@ let mainWindow: BrowserWindow | null;
 let askBeforeClose = false;
 let rendererReady = false;
 let newVersion: string | undefined;
-let disableNetworking: boolean;
+// let disableNetworking: boolean;
 
 const openFiles = (paths: string[]) => mainWindow!.webContents.send('openFiles', paths);
 
@@ -225,11 +227,11 @@ function parseCliArgs(rawArgv = process.argv) {
 
 const argv = parseCliArgs();
 
-const lossyModeSchema = z.object({ videoEncoder: z.union([z.literal('libx264'), z.literal('libx265'), z.literal('libsvtav1')]) });
+// const lossyModeSchema = z.object({ videoEncoder: z.union([z.literal('libx264'), z.literal('libx265'), z.literal('libsvtav1')]) });
 // eslint-disable-next-line prefer-destructuring
-const lossyMode = argv['lossyMode'] ? lossyModeSchema.parse(JSON5.parse(argv['lossyMode'])) : undefined;
+// const lossyMode = argv['lossyMode'] ? lossyModeSchema.parse(JSON5.parse(argv['lossyMode'])) : undefined;
 
-export type LossyMode = z.infer<typeof lossyModeSchema>;
+// export type LossyMode = z.infer<typeof lossyModeSchema>;
 
 if (argv['localesPath'] != null) i18nCommon.setCustomLocalesPath(argv['localesPath']);
 
@@ -339,7 +341,8 @@ async function init() {
     if (filesToOpen.length === 0) filesToOpen = argv._.map(String);
     const { settingsJson } = argv;
 
-    ({ disableNetworking } = argv);
+    // ({ disableNetworking } = argv);
+    state.setDisabledNetworking(!!argv['disableNetworking']);
 
     if (settingsJson != null) {
       logger.info('initializing settings', settingsJson);
@@ -386,7 +389,7 @@ async function init() {
 
     const enableUpdateCheck = configStore.get('enableUpdateCheck');
 
-    if (!disableNetworking && enableUpdateCheck && !isStoreBuild) {
+    if (!state.getDisabledNetworking() && enableUpdateCheck && !isStoreBuild) {
       newVersion = await checkNewVersion();
       // newVersion = '1.2.3';
       if (newVersion) updateMenu();
@@ -409,7 +412,7 @@ function quitApp() {
   timers.setTimeout(1000).then(() => electron.app.quit());
 }
 
-const hasDisabledNetworking = () => !!disableNetworking;
+// const hasDisabledNetworking = () => !!disableNetworking;
 
 const setProgressBar = (v: number) => mainWindow?.setProgressBar(v);
 
@@ -437,7 +440,7 @@ export type RemoteRpcApi = {
 };
 
 const mediaSourceStreamFactory = container.resolve<IMediaSourceStreamFactory>(TOKENS.MediaSourceStreamFactory); // {} as any;
-  
+const utils = container.resolve<IUtils>(TOKENS.Utils);
 
 // using @electron/remote
 const remoteApiLegacy = {
@@ -451,10 +454,12 @@ const remoteApiLegacy = {
   platform,
   arch,
   isDev,
-  lossyMode,
-  pathToFileURL,
-  hasDisabledNetworking,
+  // lossyMode,
+  // pathToFileURL,
+  // hasDisabledNetworking,
   mediaSourceStreamFactory,
+  utils,
+  state
 };
 
 export type RemoteApiLegacy = typeof remoteApiLegacy;

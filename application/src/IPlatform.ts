@@ -7,4 +7,5 @@ export interface IPlatform {
     getResourcesPath: () => string; // Need to point to ffmpeg binaries in Linux, see getExecaOptions, In electron resolves to 'process.resourcesPath'
     getPlatform: () => string;
     isPackaged: () => boolean;
+    isMasBuild: () => boolean;
 }

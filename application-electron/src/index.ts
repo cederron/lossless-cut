@@ -3,3 +3,5 @@ export * from './Platform.js';
 export * from './FfmpegExeca.js';
 export * from './ProcessMediaSourceStreamFactory.js';
 export * from './HttpMediaSourceStreamFactory.js';
+export * from './Utils.js';
+export * from './State.js';

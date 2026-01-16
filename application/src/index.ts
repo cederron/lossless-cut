@@ -7,3 +7,7 @@ export * from './IMediaSourceStreamFactory.ts';
 export * from './IRunningProcess.ts';
 export * from './IPlatform.ts';
 export * from './tokens.ts';
+export * from './IUtils.ts';
+export * from './IState.ts';
+export * from './types/LossyMode.ts';
+export * from './ISettings.ts';

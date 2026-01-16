@@ -3,4 +3,7 @@ export const TOKENS = {
     Logger: "Logger",
     Ffmpeg:   "Ffmpeg",
     MediaSourceStreamFactory: "MediaSourceStreamFactory",
+    Utils: "Utils",
+    State: "State",
+    Settings: "Settings",
 }
