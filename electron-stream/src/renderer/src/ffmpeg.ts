@@ -11,8 +11,9 @@ import { isExecaError } from './util';
 import { isDurationValid } from './segments';
 import type { FFprobeChapter, FFprobeFormat, FFprobeProbeResult, FFprobeStream } from '../../common/ffprobe';
 import { parseSrt, parseSrtToSegments } from './edlFormats';
-import { UnsupportedFileError, UserFacingError } from '../errors';
+import { UserFacingError } from '../errors';
 import mainApi from './mainApi';
+import { UnsupportedFileError } from 'lossless-cut-application';
 
 const { ffmpeg } = window.require('@electron/remote').require('./index.js');
 

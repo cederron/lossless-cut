@@ -4,7 +4,6 @@ import i18n from 'i18next';
 import { useTranslation } from 'react-i18next';
 
 import type { Html5ifyMode } from '../../../common/types';
-import { DirectoryAccessDeclinedError } from '../../errors';
 import getSwal from '../swal';
 import Checkbox from '../components/Checkbox';
 import { getSuffixedOutPath, html5dummySuffix, html5ifiedPrefix } from '../util';
@@ -16,6 +15,7 @@ import { useGenericDialogContext } from '../components/GenericDialog';
 import * as Dialog from '../components/Dialog';
 import { ButtonRow } from '../components/Dialog';
 import { DialogButton } from '../components/Button';
+import { DirectoryAccessDeclinedError } from 'lossless-cut-application';
 
 
 export default function useHtml5ify({ filePath, hasVideo, hasAudio, workingRef, setWorking, ensureWritableOutDir, customOutDir, batchFiles, enableAutoHtml5ify, setProgress, html5ify, html5ifyDummy, withErrorHandling, showGenericDialog }: {

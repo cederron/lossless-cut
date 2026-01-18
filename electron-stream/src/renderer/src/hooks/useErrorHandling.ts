@@ -1,9 +1,10 @@
 import i18n from 'i18next';
 import { useCallback, useState } from 'react';
 
-import { DirectoryAccessDeclinedError, UnsupportedFileError } from '../../errors';
+// import { DirectoryAccessDeclinedError, UnsupportedFileError } from '../../errors';
 import { isAbortedError } from '../util';
 import type { GenericError } from '../components/ErrorDialog';
+import { DirectoryAccessDeclinedError, UnsupportedFileError } from 'lossless-cut-application';
 
 
 export default function useErrorHandling() {
