@@ -2,15 +2,15 @@ import { useCallback } from 'react';
 import i18n from 'i18next';
 import invariant from 'tiny-invariant';
 
-import { getOutDir, getFileDir, checkDirWriteAccess, isMasBuild } from '../util';
+import { /* getOutDir,*/ getFileDir, checkDirWriteAccess, isMasBuild } from '../util';
 import { askForOutDir, askForInputDir } from '../dialogs';
 import { errorToast } from '../swal';
-import mainApi from '../mainApi';
+// import mainApi from '../mainApi';
 import { DirectoryAccessDeclinedError, MasDirectoryAccessDeclinedError } from 'lossless-cut-application';
 // import isDev from '../isDev';
 
 
-const { lstat } = window.require('fs/promises');
+// const { lstat } = window.require('fs/promises');
 const { utils, settings } = window.require('@electron/remote').require('./index.js');
 
 
@@ -115,7 +115,7 @@ export default function useDirectoryAccess(/*{ setCustomOutDir }: { setCustomOut
     // }
 
     // return newCustomOutDir;
-  }, [setCustomOutDir]);
+  }, []);
 
   return {
     ensureAccessToSourceDir,
