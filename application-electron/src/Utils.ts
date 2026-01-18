@@ -1,4 +1,4 @@
-import { type ISettings, IUtils, TOKENS } from "lossless-cut-application";
+import { DirectoryAccessDeclinedError, type IPlatform, type ISettings, IUtils, MasDirectoryAccessDeclinedError, TOKENS } from "lossless-cut-application";
 import { access, lstat, constants } from "node:fs/promises";
 import { dirname } from "node:path";
 import { pathToFileURL } from "node:url";
@@ -8,9 +8,15 @@ import { inject, injectable } from "tsyringe";
 export class Utils implements IUtils {
     
     settings: ISettings;
+    platform: IPlatform;
+    simulateMasBuild = false;
 
-    constructor(@inject(TOKENS.Settings) settings: ISettings) {
+    constructor(
+        @inject(TOKENS.Settings) settings: ISettings,
+        @inject(TOKENS.Platform) platform: IPlatform,
+    ) {
         this.settings = settings;
+        this.platform = platform;
     }
 
     getFileUri(path: string | undefined, cacheBuster: number): string {
@@ -79,18 +85,19 @@ export class Utils implements IUtils {
 
         const effectiveOutDirPath = this.getOutDir(newCustomOutDir, inputPath);
         const hasDirWriteAccess = effectiveOutDirPath != null && await this.checkDirWriteAccess(effectiveOutDirPath);
-        if (!hasDirWriteAccess || simulateMasBuild) {
-            if (masMode) {
-                const newOutDir = await askForOutDir(effectiveOutDirPath);
+        if (!hasDirWriteAccess || this.simulateMasBuild) {
+            if (this.platform.isMasBuild() || this.simulateMasBuild) {
+                throw new MasDirectoryAccessDeclinedError();
+                // const newOutDir = await askForOutDir(effectiveOutDirPath);
 
-                // If user canceled open dialog, refuse to continue, because we will get permission denied error from MAS sandbox
-                if (!newOutDir) throw new DirectoryAccessDeclinedError();
+                // // If user canceled open dialog, refuse to continue, because we will get permission denied error from MAS sandbox
+                // if (!newOutDir) throw new DirectoryAccessDeclinedError();
 
-                // OK, use the dir that the user gave us access to
-                this.settings.setCustomOutDir(newOutDir);
-                newCustomOutDir = newOutDir;
+                // // OK, use the dir that the user gave us access to
+                // this.settings.setCustomOutDir(newOutDir);
+                // newCustomOutDir = newOutDir;
             } else {
-                errorToast(i18n.t('You have no write access to the directory of this file, please select a custom working dir'));
+                // errorToast(i18n.t('You have no write access to the directory of this file, please select a custom working dir'));
                 this.settings.setCustomOutDir(undefined);
                 throw new DirectoryAccessDeclinedError();
             }

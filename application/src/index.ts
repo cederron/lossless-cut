@@ -11,3 +11,4 @@ export * from './IUtils.ts';
 export * from './IState.ts';
 export * from './types/LossyMode.ts';
 export * from './ISettings.ts';
+export * from './errors.ts';

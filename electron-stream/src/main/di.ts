@@ -52,3 +52,9 @@ container.register(TOKENS.State, {
 }, {
     lifecycle: Lifecycle.Singleton,
 });
+
+container.register(TOKENS.Settings, {
+    useClass: templateSettings,
+}, {
+    lifecycle: Lifecycle.Singleton,
+});

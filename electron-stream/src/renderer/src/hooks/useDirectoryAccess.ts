@@ -5,12 +5,13 @@ import invariant from 'tiny-invariant';
 import { getOutDir, getFileDir, checkDirWriteAccess, isMasBuild } from '../util';
 import { askForOutDir, askForInputDir } from '../dialogs';
 import { errorToast } from '../swal';
-import { DirectoryAccessDeclinedError } from '../../errors';
 import mainApi from '../mainApi';
+import { DirectoryAccessDeclinedError, MasDirectoryAccessDeclinedError } from 'lossless-cut-application';
 // import isDev from '../isDev';
 
 
 const { lstat } = window.require('fs/promises');
+const { utils, settings } = window.require('@electron/remote').require('./index.js');
 
 
 // MacOS App Store sandbox doesn't allow reading/writing anywhere,
@@ -59,41 +60,61 @@ export default function useDirectoryAccess(/*{ setCustomOutDir }: { setCustomOut
   }, []);
 
   const ensureWritableOutDir = useCallback(async ({ inputPath, outDir }: { inputPath?: string | undefined, outDir: string | undefined }) => {
-    // we might need to change the output directory if the user chooses to give us a different one.
-    let newCustomOutDir = outDir;
+    
+    try {
+      return utils.ensureWritableOutDir({ inputPath, outDir });
+    } catch (e) {
+      if (e instanceof MasDirectoryAccessDeclinedError) {
+        const newOutDir = await askForOutDir(utils.getOutDir(outDir, inputPath));
 
-    if (newCustomOutDir) {
-      // Reset if working directory doesn't exist anymore
-      const customOutDirExists = (await mainApi.pathExists(newCustomOutDir)) && (await lstat(newCustomOutDir)).isDirectory();
-      if (!customOutDirExists) {
-        setCustomOutDir(undefined);
-        newCustomOutDir = undefined;
-      }
-    }
-
-    // if we don't (no longer) have a working dir, and not an main file path, then there's nothing we can do, just return the dir
-    if (!newCustomOutDir && !inputPath) return newCustomOutDir;
-
-    const effectiveOutDirPath = getOutDir(newCustomOutDir, inputPath);
-    const hasDirWriteAccess = effectiveOutDirPath != null && await checkDirWriteAccess(effectiveOutDirPath);
-    if (!hasDirWriteAccess || simulateMasBuild) {
-      if (masMode) {
-        const newOutDir = await askForOutDir(effectiveOutDirPath);
-
-        // If user canceled open dialog, refuse to continue, because we will get permission denied error from MAS sandbox
+        // // If user canceled open dialog, refuse to continue, because we will get permission denied error from MAS sandbox
         if (!newOutDir) throw new DirectoryAccessDeclinedError();
-
+        
         // OK, use the dir that the user gave us access to
-        setCustomOutDir(newOutDir);
-        newCustomOutDir = newOutDir;
-      } else {
-        errorToast(i18n.t('You have no write access to the directory of this file, please select a custom working dir'));
-        setCustomOutDir(undefined);
-        throw new DirectoryAccessDeclinedError();
+        settings.setCustomOutDir(newOutDir);
+        return newOutDir;
       }
-    }
 
-    return newCustomOutDir;
+      errorToast(i18n.t('You have no write access to the directory of this file, please select a custom working dir'));
+      settings.setCustomOutDir(undefined);
+
+      throw e;
+    }
+    // // we might need to change the output directory if the user chooses to give us a different one.
+    // let newCustomOutDir = outDir;
+
+    // if (newCustomOutDir) {
+    //   // Reset if working directory doesn't exist anymore
+    //   const customOutDirExists = (await mainApi.pathExists(newCustomOutDir)) && (await lstat(newCustomOutDir)).isDirectory();
+    //   if (!customOutDirExists) {
+    //     setCustomOutDir(undefined);
+    //     newCustomOutDir = undefined;
+    //   }
+    // }
+
+    // // if we don't (no longer) have a working dir, and not an main file path, then there's nothing we can do, just return the dir
+    // if (!newCustomOutDir && !inputPath) return newCustomOutDir;
+
+    // const effectiveOutDirPath = getOutDir(newCustomOutDir, inputPath);
+    // const hasDirWriteAccess = effectiveOutDirPath != null && await checkDirWriteAccess(effectiveOutDirPath);
+    // if (!hasDirWriteAccess || simulateMasBuild) {
+    //   if (masMode) {
+    //     const newOutDir = await askForOutDir(effectiveOutDirPath);
+
+    //     // If user canceled open dialog, refuse to continue, because we will get permission denied error from MAS sandbox
+    //     if (!newOutDir) throw new DirectoryAccessDeclinedError();
+
+    //     // OK, use the dir that the user gave us access to
+    //     setCustomOutDir(newOutDir);
+    //     newCustomOutDir = newOutDir;
+    //   } else {
+    //     errorToast(i18n.t('You have no write access to the directory of this file, please select a custom working dir'));
+    //     setCustomOutDir(undefined);
+    //     throw new DirectoryAccessDeclinedError();
+    //   }
+    // }
+
+    // return newCustomOutDir;
   }, [setCustomOutDir]);
 
   return {

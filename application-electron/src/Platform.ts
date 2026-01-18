@@ -14,5 +14,5 @@ export class Platform implements IPlatform {
     isDev = () => {
         return true;
     }
-    isMasBuild = () => window.process
+    isMasBuild = () => process.mas === true;
 }

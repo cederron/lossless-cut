@@ -104,7 +104,7 @@ import useSubtitles from './hooks/useSubtitles';
 import useStreamsMeta from './hooks/useStreamsMeta';
 import { bottomStyle, videoStyle } from './styles';
 import styles from './App.module.css';
-import { DirectoryAccessDeclinedError, UserFacingError } from '../errors';
+// import { DirectoryAccessDeclinedError, UserFacingError } from '../errors';
 import SwalContainer from './components/SwalContainer';
 import ErrorDialog from './components/ErrorDialog';
 import useErrorHandling from './hooks/useErrorHandling';
@@ -112,6 +112,7 @@ import GenericDialog, { useDialog } from './components/GenericDialog';
 import useHtml5ify from './hooks/useHtml5ify';
 import WhatsNew from './components/WhatsNew';
 import mainApi from './mainApi.js';
+import { DirectoryAccessDeclinedError } from 'lossless-cut-application';
 
 const electron = window.require('electron');
 const { lstat } = window.require('fs/promises');
