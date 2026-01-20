@@ -34,3 +34,8 @@ node_modules
 /application-electron/dist
 
 tsconfig.*.tsbuildinfo
+
+build-resources/
+ffmpeg/
+icon-build/
+out/
