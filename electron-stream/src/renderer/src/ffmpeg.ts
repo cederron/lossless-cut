@@ -7,17 +7,15 @@ import minBy from 'lodash/minBy';
 import invariant from 'tiny-invariant';
 
 import { pcmAudioCodecs, isMov } from './util/streams';
-import { isExecaError } from './util';
 import { isDurationValid } from './segments';
-import type { FFprobeChapter, FFprobeFormat, FFprobeProbeResult, FFprobeStream } from '../../common/ffprobe';
+import type { FFprobeChapter, FFprobeFormat, FFprobeStream } from '../../common/ffprobe';
 import { parseSrt, parseSrtToSegments } from './edlFormats';
 import { UserFacingError } from '../errors';
 import mainApi from './mainApi';
-import { UnsupportedFileError } from 'lossless-cut-application';
 
 const { ffmpeg } = window.require('@electron/remote').require('./index.js');
 
-const { renderWaveformPng, mapTimesToSegments, detectSceneChanges, captureFrames, captureFrameToFile, captureFrameToClipboard, getFfCommandLine, runFfmpegConcat, runFfmpegWithProgress, getDuration, abortFfmpegs, renderThumbnail: renderThumbnailApi, extractSubtitleTrack: extractSubtitleTrackApi, extractSubtitleTrackVtt: extractSubtitleTrackVttApi, /* runFfmpeg,*/ extractWaveform: extractWaveformApi, runFfmpegStartupCheck: runFfmpegStartupCheckApi, /*runFfprobe,*/ readFileFfprobeMeta: readFileFfprobeMetaApi, getFfmpegPath, setCustomFfPath } = ffmpeg;
+const { renderWaveformPng, mapTimesToSegments, detectSceneChanges, captureFrames, captureFrameToFile, captureFrameToClipboard, getFfCommandLine, runFfmpegConcat, runFfmpegWithProgress, getDuration, abortFfmpegs, renderThumbnail: renderThumbnailApi, extractSubtitleTrack: extractSubtitleTrackApi, extractSubtitleTrackVtt: extractSubtitleTrackVttApi, /* runFfmpeg,*/ extractWaveform: extractWaveformApi, runFfmpegStartupCheck: runFfmpegStartupCheckApi, /*runFfprobe,*/ readFileFfprobeMeta: readFileFfprobeMetaApi, getFfmpegPath, readFrames: readFramesApi, setCustomFfPath } = ffmpeg;
 
 
 export { renderWaveformPng, mapTimesToSegments, detectSceneChanges, captureFrames, captureFrameToFile, captureFrameToClipboard, getFfCommandLine, runFfmpegConcat, runFfmpegWithProgress, getDuration, abortFfmpegs, /* runFfmpeg,*/ getFfmpegPath, setCustomFfPath };
@@ -75,17 +73,18 @@ export interface Frame {
 export async function readFrames({ filePath, from, to, streamIndex }: {
   filePath: string, from?: number | undefined, to?: number | undefined, streamIndex: number,
 }) {
-  const intervalsArgs = from != null && to != null ? ['-read_intervals', `${from}%${to}`] : [];
-  const { stdout } = await runFfprobe(['-v', 'error', ...intervalsArgs, '-show_packets', '-select_streams', String(streamIndex), '-show_entries', 'packet=pts_time,flags', '-of', 'json', filePath], { logCli: false });
-  const packetsFiltered: Frame[] = (JSON.parse(new TextDecoder().decode(stdout)).packets as { flags: string, pts_time: string }[])
-    .map((p) => ({
-      keyframe: p.flags[0] === 'K',
-      time: parseFloat(p.pts_time),
-      createdAt: new Date(),
-    }))
-    .filter((p) => !Number.isNaN(p.time));
+  return readFramesApi({ filePath, from, to, streamIndex });
+  // const intervalsArgs = from != null && to != null ? ['-read_intervals', `${from}%${to}`] : [];
+  // const { stdout } = await runFfprobe(['-v', 'error', ...intervalsArgs, '-show_packets', '-select_streams', String(streamIndex), '-show_entries', 'packet=pts_time,flags', '-of', 'json', filePath], { logCli: false });
+  // const packetsFiltered: Frame[] = (JSON.parse(new TextDecoder().decode(stdout)).packets as { flags: string, pts_time: string }[])
+  //   .map((p) => ({
+  //     keyframe: p.flags[0] === 'K',
+  //     time: parseFloat(p.pts_time),
+  //     createdAt: new Date(),
+  //   }))
+  //   .filter((p) => !Number.isNaN(p.time));
 
-  return sortBy(packetsFiltered, 'time');
+  // return sortBy(packetsFiltered, 'time');
 }
 
 export async function readFramesAroundTime({ filePath, streamIndex, aroundTime, window }: { filePath: string, streamIndex: number, aroundTime: number, window: number }) {

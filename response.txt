@@ -1,0 +1,1 @@
+I've updated `IFfmpeg.ts` to allow `undefined` for the `guessedType` property, which resolves the assignment error with `exactOptionalPropertyTypes`.

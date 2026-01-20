@@ -31,7 +31,7 @@ container.register<IPlatform>(TOKENS.Platform, {
 container.register<IFfmpeg>(TOKENS.Ffmpeg, {
     useClass: FfmpegExeca,
 }, {
-    lifecycle: Lifecycle.Transient,
+    lifecycle: Lifecycle.Singleton,
 })
 
 container.register<IMediaSourceStreamFactory>(TOKENS.MediaSourceStreamFactory, {

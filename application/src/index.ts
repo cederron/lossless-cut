@@ -19,3 +19,4 @@ export * from './types/CaptureFormat.ts'
 export * from './types/Waveform.ts'
 export * from './types/DetectedSegment.ts'
 export * from './ffprobe.ts'
+export * from './types/Frame.ts';

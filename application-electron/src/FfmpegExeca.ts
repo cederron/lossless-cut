@@ -1,5 +1,5 @@
 import { execa } from 'execa';
-import { CaptureFormat, DetectedSegment, FFprobeProbeResult, type IUtils, TOKENS, UnsupportedFileError, Waveform, type IFfmpeg, type ILogger, type IMediaSourceInitParams, type IPlatform, type IRunningProcess } from 'lossless-cut-application';
+import { CaptureFormat, DetectedSegment, FFprobeProbeResult, type IUtils, TOKENS, UnsupportedFileError, Waveform, type IFfmpeg, type ILogger, type IMediaSourceInitParams, type IPlatform, type IRunningProcess, Frame } from 'lossless-cut-application';
 import type { ExecaError, Options as ExecaOptions, ResultPromise } from 'execa';
 import { inject, injectable } from 'tsyringe';
 import { join } from 'node:path';
@@ -746,5 +746,24 @@ export class FfmpegExeca implements IFfmpeg {
         }
     }
 
+    async readFrames({ filePath, from, to, streamIndex }: {
+      filePath: string, from?: number | undefined, to?: number | undefined, streamIndex: number,
+    }) {
+      const intervalsArgs = from != null && to != null ? ['-read_intervals', `${from}%${to}`] : [];
+      const { stdout } = await this.runFfprobe(['-v', 'error', ...intervalsArgs, '-show_packets', '-select_streams', String(streamIndex), '-show_entries', 'packet=pts_time,flags', '-of', 'json', filePath], { logCli: false });
+      const packetsFiltered: Frame[] = (JSON.parse(new TextDecoder().decode(stdout)).packets as { flags: string, pts_time: string }[])
+        .map((p) => ({
+          keyframe: p.flags[0] === 'K',
+          time: parseFloat(p.pts_time),
+          createdAt: new Date(),
+        }))
+        .filter((p) => !Number.isNaN(p.time));
+    
+      return packetsFiltered.sort((a, b) => a.time - b.time);
+    }
 
+    setCustomFfPath(path: string | undefined) {
+        this.customFfPath = path;
+    }
+    
 }

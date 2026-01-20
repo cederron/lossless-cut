@@ -1,5 +1,5 @@
 import type { IMediaSourceInitParams } from "./IMediaSource.ts";
-import type { CaptureFormat, DetectedSegment, FFprobeChapter, FFprobeFormat, FFprobeStream, Waveform } from "./index.ts";
+import type { CaptureFormat, DetectedSegment, FFprobeChapter, FFprobeFormat, FFprobeStream, Frame, Waveform } from "./index.ts";
 import type { IRunningProcess } from "./IRunningProcess.ts";
 
 export interface IFfmpeg {
@@ -73,6 +73,9 @@ export interface IFfmpeg {
     extractSubtitleTrackVtt(filePath: string, streamId: number): Promise<Uint8Array<ArrayBufferLike>>;
     extractWaveform({ filePath, outPath }: { filePath: string, outPath: string }): Promise<void>;
     runFfmpegStartupCheck(): Promise<void>;
-    readFileFfprobeMeta(filePath: string): Promise<FFprobeStream & {guessedType?: 'dji-gps-srt'}[] | {format: FFprobeFormat, streams: FFprobeStream[], chapters: FFprobeChapter[]}>;
-
+    readFileFfprobeMeta(filePath: string): Promise<{ format: FFprobeFormat, streams: (FFprobeStream & { guessedType?: 'dji-gps-srt' | undefined })[], chapters: FFprobeChapter[] }>;
+    readFrames({ filePath, from, to, streamIndex }: {
+        filePath: string, from?: number | undefined, to?: number | undefined, streamIndex: number,
+    }): Promise<Frame[]>;
+    setCustomFfPath(path: string | undefined): void;
 }
