@@ -11,7 +11,7 @@ import { DirectoryAccessDeclinedError, MasDirectoryAccessDeclinedError } from 'l
 
 
 // const { lstat } = window.require('fs/promises');
-const { utils, settings } = window.require('@electron/remote').require('./index.js');
+const { utils } = window.require('@electron/remote').require('./index.js');
 
 
 // MacOS App Store sandbox doesn't allow reading/writing anywhere,
@@ -26,7 +26,7 @@ const simulateMasBuild = false;
 
 const masMode = isMasBuild || simulateMasBuild;
 
-export default function useDirectoryAccess(/*{ setCustomOutDir }: { setCustomOutDir: (a: string | undefined) => void }*/) {
+export default function useDirectoryAccess({ setCustomOutDir }: { setCustomOutDir: (a: string | undefined) => void }) {
   const ensureAccessToSourceDir = useCallback(async (inputPath: string) => {
     // Called if we need to read/write to the source file's directory (probably to read/write the project file)
     const inputFileDir = getFileDir(inputPath);
@@ -71,12 +71,12 @@ export default function useDirectoryAccess(/*{ setCustomOutDir }: { setCustomOut
         if (!newOutDir) throw new DirectoryAccessDeclinedError();
         
         // OK, use the dir that the user gave us access to
-        settings.setCustomOutDir(newOutDir);
+        setCustomOutDir(newOutDir);
         return newOutDir;
       }
 
       errorToast(i18n.t('You have no write access to the directory of this file, please select a custom working dir'));
-      settings.setCustomOutDir(undefined);
+      setCustomOutDir(undefined);
 
       throw e;
     }
@@ -115,7 +115,7 @@ export default function useDirectoryAccess(/*{ setCustomOutDir }: { setCustomOut
     // }
 
     // return newCustomOutDir;
-  }, []);
+  }, [setCustomOutDir]);
 
   return {
     ensureAccessToSourceDir,

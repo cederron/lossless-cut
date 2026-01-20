@@ -7,7 +7,7 @@ import path from "path";
 @injectable()
 export class Settings implements ISettings {
     private settingsPath: string;
-    private settings: { customOutDir?: string } = {};
+    private settings: { customOutDir?: string; [key: string]: any } = {};
 
     constructor() {
         this.settingsPath = path.join(app.getPath("userData"), "settings.json");
@@ -33,16 +33,30 @@ export class Settings implements ISettings {
         }
     }
 
-    getCustomOutDir(): string | undefined {
-        return this.settings.customOutDir;
+    // getCustomOutDir(): string | undefined {
+    //     return this.settings.customOutDir;
+    // }
+
+    // setCustomOutDir(path: string | undefined): void {
+    //     if (path === undefined) {
+    //         delete this.settings.customOutDir;
+    //     } else {
+    //         this.settings.customOutDir = path;
+    //     }
+    //     this.saveSettings();
+    // }
+
+    get<T>(key: string): T | undefined {
+        return this.settings[key];
     }
 
-    setCustomOutDir(path: string | undefined): void {
-        if (path === undefined) {
-            delete this.settings.customOutDir;
-        } else {
-            this.settings.customOutDir = path;
-        }
+    set<T>(key: string, value: T): void {
+        this.settings[key] = value;
+        this.saveSettings();
+    }
+
+    reset(key: string): void {
+        delete this.settings[key];
         this.saveSettings();
     }
 }

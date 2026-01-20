@@ -10,5 +10,12 @@ export * from './tokens.ts';
 export * from './IUtils.ts';
 export * from './IState.ts';
 export * from './types/LossyMode.ts';
+export * from './types/Waveform.ts';
 export * from './ISettings.ts';
 export * from './errors.ts';
+export * from './ISystem.ts';
+export * from './types/DetectedSegment.ts'
+export * from './types/CaptureFormat.ts'
+export * from './types/Waveform.ts'
+export * from './types/DetectedSegment.ts'
+export * from './ffprobe.ts'

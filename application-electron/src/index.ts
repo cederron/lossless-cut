@@ -6,3 +6,4 @@ export * from './HttpMediaSourceStreamFactory.js';
 export * from './Utils.js';
 export * from './State.js';
 export * from './Settings.js';
+export * from './SystemElectron.js';

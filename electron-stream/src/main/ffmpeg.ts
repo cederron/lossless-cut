@@ -9,10 +9,12 @@ import type { Readable } from 'node:stream';
 import { app, clipboard, nativeImage } from 'electron';
 
 import { platform, arch, isWindows, isLinux } from './util.js';
-import type { CaptureFormat, Waveform } from '../common/types.js';
+import type { CaptureFormat } from '../common/types.js';
 import isDev from './isDev.js';
 import logger from './logger.js';
 import { parseFfmpegProgressLine } from './progress.js';
+
+import type { Waveform, DetectedSegment } from 'lossless-cut-application';
 
 // cannot use process.kill: https://github.com/sindresorhus/execa/issues/1177
 const runningFfmpegs = new Set<{
@@ -262,10 +264,10 @@ export function mapTimesToSegments(times: number[], includeLast: boolean) {
   return segments;
 }
 
-interface DetectedSegment {
-  start: number,
-  end: number,
-}
+// interface DetectedSegment {
+//   start: number,
+//   end: number,
+// }
 
 // https://stackoverflow.com/questions/35675529/using-ffmpeg-how-to-do-a-scene-change-detection-with-timecode
 export async function detectSceneChanges({ filePath, streamId, minChange, onProgress, onSegmentDetected, from, to }: {

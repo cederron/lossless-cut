@@ -6,4 +6,5 @@ export const TOKENS = {
     Utils: "Utils",
     State: "State",
     Settings: "Settings",
+    System: "System",
 }

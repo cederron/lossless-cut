@@ -1,21 +1,39 @@
 import { execa } from 'execa';
-import { TOKENS, type IFfmpeg, type ILogger, type IMediaSourceInitParams, type IPlatform, type IRunningProcess } from 'lossless-cut-application';
-import type { Options as ExecaOptions } from 'execa';
+import { CaptureFormat, DetectedSegment, FFprobeProbeResult, type IUtils, TOKENS, UnsupportedFileError, Waveform, type IFfmpeg, type ILogger, type IMediaSourceInitParams, type IPlatform, type IRunningProcess } from 'lossless-cut-application';
+import type { ExecaError, Options as ExecaOptions, ResultPromise } from 'execa';
 import { inject, injectable } from 'tsyringe';
 import { join } from 'node:path';
+import assert from 'node:assert';
+import { Readable } from 'node:stream';
+import readline from 'node:readline';
+import { app, clipboard, nativeImage } from 'electron';
+import stringToStream from 'string-to-stream';
+import invariant from 'tiny-invariant';
+
+// todo this is not a correct assumption
+type InvariantExecaError = ExecaError<{ encoding: 'utf8' }> | ExecaError<{ encoding: 'buffer' }>;
 
 @injectable()
 export class FfmpegExeca implements IFfmpeg {
 
+    utils: IUtils;
     logger: ILogger;
     enableLog = false;
     encode = true;
     platform: IPlatform;
     customFfPath: string | undefined;
+    runningFfmpegs: Set<{
+        process: ResultPromise<Omit<ExecaOptions, 'encoding'> & { encoding: 'buffer' }>,
+        abortController: AbortController
+    }> = new Set();
 
-    constructor(@inject(TOKENS.Logger) logger: ILogger, @inject(TOKENS.Platform) platform: IPlatform) {
+    constructor(
+        @inject(TOKENS.Logger) logger: ILogger,
+        @inject(TOKENS.Platform) platform: IPlatform,
+        @inject(TOKENS.Utils) utils: IUtils) {
         this.logger = logger;
         this.platform = platform;
+        this.utils = utils;
     }
 
     getStreamProcess(params: IMediaSourceInitParams): IRunningProcess {
@@ -189,5 +207,544 @@ export class FfmpegExeca implements IFfmpeg {
         };
         return execaOptions;
     }
+
+    // todo collect warnings from ffmpeg output and show them after export? example: https://github.com/mifi/lossless-cut/issues/1469
+    runFfmpegProcess(args: readonly string[], customExecaOptions?: ExecaOptions, additionalOptions?: { logCli?: boolean }) {
+        const ffmpegPath = this.getFfmpegPath();
+        const { logCli = true } = additionalOptions ?? {};
+        if (logCli) this.logger.info(this.getFfCommandLine('ffmpeg', args));
+
+        const abortController = new AbortController();
+        const process = execa(ffmpegPath, args, this.getExecaOptions({ ...customExecaOptions, cancelSignal: abortController.signal }));
+
+        const wrapped = { process, abortController };
+
+        (async () => {
+            this.runningFfmpegs.add(wrapped);
+            try {
+                await process;
+            } catch {
+                // ignored here
+            } finally {
+                this.runningFfmpegs.delete(wrapped);
+            }
+        })();
+        return process;
+    }
+
+    async renderWaveformPng({ filePath, start, duration, resample, color, streamIndex, timeout }: {
+        filePath: string,
+        start?: number,
+        duration?: number,
+        resample?: number,
+        color: string,
+        streamIndex: number,
+        timeout?: number,
+    }): Promise<Waveform> {
+        const args1 = [
+            '-hide_banner',
+            '-i', filePath,
+            '-vn',
+            '-map', `0:${streamIndex}`,
+            ...(start != null ? ['-ss', String(start)] : []),
+            ...(duration != null ? ['-t', String(duration)] : []),
+            ...(resample != null ? [
+                // the operation is faster if we resample
+                // the higher the resample rate, the faster the resample
+                // but the slower the showwavespic operation will be...
+                // https://github.com/mifi/lossless-cut/issues/260#issuecomment-605603456
+                '-c:a', 'pcm_s32le',
+                '-ar', String(resample),
+            ] : [
+                '-c', 'copy',
+            ]),
+            '-f', 'matroska', // mpegts doesn't support vorbis etc
+            '-',
+        ];
+
+        const args2 = [
+            '-hide_banner',
+            '-i', '-',
+            '-filter_complex', `showwavespic=s=2000x300:scale=lin:filter=peak:split_channels=1:colors=${color}`,
+            '-frames:v', '1',
+            '-vcodec', 'png',
+            '-f', 'image2',
+            '-',
+        ];
+
+        this.logger.info(`${this.getFfCommandLine('ffmpeg', args1)} | \n${this.getFfCommandLine('ffmpeg', args2)}`);
+
+        let ps1: ResultPromise<{ encoding: 'buffer' }> | undefined;
+        let ps2: ResultPromise<{ encoding: 'buffer' }> | undefined;
+        try {
+            ps1 = this.runFfmpegProcess(args1, { buffer: false, ...(timeout != null && { timeout }) }, { logCli: false });
+            ps2 = this.runFfmpegProcess(args2, timeout != null ? { timeout } : undefined, { logCli: false });
+            assert(ps1.stdout != null);
+            assert(ps2.stdin != null);
+            ps1.stdout.pipe(ps2.stdin);
+
+            const { stdout } = await ps2;
+
+            return {
+                buffer: Buffer.from(stdout),
+            };
+        } catch (err) {
+            ps1?.kill();
+            ps2?.kill();
+            throw err;
+        }
+    }
+
+    mapTimesToSegments(times: number[], includeLast: boolean) {
+        const segments: { start: number, end: number | undefined }[] = [];
+        for (let i = 0; i < times.length; i += 1) {
+            const start = times[i];
+            const end = times[i + 1];
+            if (start != null) {
+                if (end != null) {
+                    segments.push({ start, end });
+                } else if (includeLast) {
+                    segments.push({ start, end }); // end undefined is allowed (means until end of video)
+                }
+            }
+        }
+        return segments;
+    }
+
+    getInputSeekArgs = ({ filePath, from, to }: { filePath: string, from?: number | undefined, to?: number | undefined }) => [
+        ...(from != null ? ['-ss', from.toFixed(5)] : []),
+        '-i', filePath,
+        ...(from != null && to != null ? ['-t', (to - from).toFixed(5)] : []),
+    ];
+
+    parseFfmpegProgressLine({ line, customMatcher, duration: durationIn }: {
+        line: string,
+        customMatcher?: ((a: string) => void) | undefined,
+        duration: number | undefined,
+    }) {
+        let match = line.match(/frame=\s*\S+\s+fps=\s*\S+\s+q=\s*\S+\s+(?:size|Lsize)=\s*\S+\s+time=\s*(\S+)\s+/);
+        if (!match) {
+            // Audio only looks like this: "size=  233422kB time=01:45:50.68 bitrate= 301.1kbits/s speed= 353x    "
+            match = line.match(/(?:size|Lsize)=\s*\S+\s+time=\s*(\S+)\s+/);
+        }
+        if (!match) {
+            customMatcher?.(line);
+            return undefined;
+        }
+
+        if (durationIn == null) return undefined;
+        const duration = Math.max(0, durationIn);
+        if (duration === 0) return undefined;
+
+        const timeStr = match[1];
+        // console.log(timeStr);
+        const match2 = timeStr!.match(/^(-?)(\d+):(\d+):(\d+)\.(\d+)$/);
+        if (!match2) throw new Error(`Invalid time from ffmpeg progress ${timeStr}`);
+
+        const sign = match2[1];
+
+        if (sign === '-') {
+            // For some reason, ffmpeg sometimes gives a negative progress, e.g. "-00:00:06.46"
+            // let's just ignore those lines
+            return undefined;
+        }
+
+        const h = parseInt(match2[2]!, 10);
+        const m = parseInt(match2[3]!, 10);
+        const s = parseInt(match2[4]!, 10);
+        const cs = parseInt(match2[5]!, 10);
+        const time = (((h * 60) + m) * 60 + s) + cs / 100;
+        // console.log(time);
+
+        const progressTime = Math.max(0, time);
+        // console.log(progressTime);
+
+        const progress = Math.min(progressTime / duration, 1); // sometimes progressTime will be greater than cutDuration
+        return progress;
+    }
+
+    handleProgress(
+        process: { stderr: Readable | null },
+        duration: number | undefined,
+        onProgress: (a: number) => void,
+        customMatcher?: (a: string) => void,
+    ) {
+        if (!onProgress) return;
+        if (process.stderr == null) return;
+        onProgress(0);
+
+        const rl = readline.createInterface({ input: process.stderr });
+        rl.on('line', (line) => {
+            // console.log('progress', line);
+
+            try {
+                const progress = this.parseFfmpegProgressLine({ line, customMatcher, duration });
+                if (progress != null) {
+                    onProgress(progress);
+                }
+            } catch (err: any) { // TODO added any
+                this.logger.error('Failed to parse ffmpeg progress line:', err instanceof Error ? err.message : err);
+            }
+        });
+    }
+
+
+    async detectSceneChanges({ filePath, streamId, minChange, onProgress, onSegmentDetected, from, to }: {
+        filePath: string,
+        streamId: number | undefined
+        minChange: number | string,
+        onProgress: (p: number) => void,
+        onSegmentDetected: (p: DetectedSegment) => void,
+        from: number,
+        to: number,
+    }) {
+        const args = [
+            '-hide_banner',
+            ...this.getInputSeekArgs({ filePath, from, to }),
+            '-map', streamId != null ? `0:${streamId}` : 'v:0',
+            '-filter:v', `select='gt(scene,${minChange})',metadata=print:file=-:direct=1`, // direct=1 to flush stdout immediately
+            '-f', 'null', '-',
+        ];
+        const process = this.runFfmpegProcess(args, { buffer: false });
+
+        this.handleProgress(process, to - from, onProgress);
+
+        assert(process.stdout != null);
+        const rl = readline.createInterface({ input: process.stdout });
+
+        let lastTime: number | undefined;
+
+        rl.on('line', (line) => {
+            // eslint-disable-next-line unicorn/better-regex
+            const match = line.match(/^frame:\d+\s+pts:\d+\s+pts_time:([\d.]+)/);
+            if (!match) return;
+            const time = parseFloat(match[1]!);
+            if (!Number.isNaN(time)) {
+                if (lastTime != null && time > lastTime) {
+                    onSegmentDetected({ start: from + lastTime, end: from + time });
+                }
+                lastTime = time;
+            }
+        });
+
+        await process;
+
+        return { ffmpegArgs: args };
+    }
+
+    getFfmpegJpegQuality(quality: number) {
+        // Normal range for JPEG is 2-31 with 31 being the worst quality.
+        const qMin = 2;
+        const qMax = 31;
+        return Math.min(Math.max(qMin, quality, Math.round((1 - quality) * (qMax - qMin) + qMin)), qMax);
+    }
+
+    getQualityOpts({ captureFormat, quality }: { captureFormat: CaptureFormat, quality: number }) {
+        if (captureFormat === 'jpeg') return ['-q:v', String(this.getFfmpegJpegQuality(quality))];
+        if (captureFormat === 'webp') return ['-q:v', String(Math.max(0, Math.min(100, Math.round(quality * 100))))];
+        return [];
+    }
+
+    getCodecOpts(captureFormat: CaptureFormat) {
+        if (captureFormat === 'webp') return ['-c:v', 'libwebp']; // else we get only a single file for webp https://github.com/mifi/lossless-cut/issues/1693
+        return [];
+    }
+
+    async captureFrames({ from, to, videoPath, outPathTemplate, quality, filter, framePts, onProgress, captureFormat }: {
+        from: number,
+        to?: number | undefined,
+        videoPath: string,
+        outPathTemplate: string,
+        quality: number,
+        filter?: string | undefined,
+        framePts?: boolean | undefined,
+        onProgress: (p: number) => void,
+        captureFormat: CaptureFormat,
+    }) {
+        const args = [
+            '-ss', String(from),
+            '-i', videoPath,
+            ...(to != null ? ['-t', String(Math.max(0, to - from))] : []),
+            ...this.getQualityOpts({ captureFormat, quality }),
+            // only apply filter for non-markers
+            ...(to == null
+                ? [
+                    '-frames:v', '1', // for markers, just capture 1 frame
+                ] : (
+                    // for segments (non markers), apply filter (but only if there is one)
+                    filter != null ? [
+                        '-vf', filter,
+                        // https://superuser.com/questions/1336285/use-ffmpeg-for-thumbnail-selections
+                        ...(framePts ? ['-frame_pts', '1'] : []),
+                        '-vsync', '0', // else we get a ton of duplicates (thumbnail filter)
+                    ] : [])
+            ),
+            ...this.getCodecOpts(captureFormat),
+            '-f', 'image2',
+            '-y', outPathTemplate,
+        ];
+
+        const process = this.runFfmpegProcess(args, { buffer: false });
+
+        if (to != null) {
+            this.handleProgress(process, to - from, onProgress);
+        }
+
+        await process;
+
+        onProgress(1);
+
+        return args;
+    }
+
+    getCaptureFrameArgs({ timestamp, videoPath, quality }: {
+        timestamp: number,
+        videoPath: string,
+        quality: number,
+    }) {
+        const ffmpegQuality = this.getFfmpegJpegQuality(quality);
+        return [
+            '-ss', String(timestamp),
+            '-i', videoPath,
+            '-frames:v', '1',
+            '-q:v', String(ffmpegQuality),
+        ];
+    }
+
+    async captureFrameToFile({ timestamp, videoPath, outPath, quality }: {
+        timestamp: number,
+        videoPath: string,
+        outPath: string,
+        quality: number,
+    }) {
+        const args = [
+            ...this.getCaptureFrameArgs({ timestamp, videoPath, quality }),
+            '-y', outPath,
+        ];
+        await this.runFfmpegProcess(args);
+        return args;
+    }
+
+    async captureFrameToClipboard({ timestamp, videoPath, quality }: {
+        timestamp: number,
+        videoPath: string,
+        quality: number,
+    }) {
+        const args = [
+            ...this.getCaptureFrameArgs({ timestamp, videoPath, quality }),
+            '-c:v', 'mjpeg',
+            '-f', 'image2',
+            '-',
+        ];
+        const { stdout } = await this.runFfmpegProcess(args);
+
+        clipboard.writeImage(nativeImage.createFromBuffer(Buffer.from(stdout)));
+    }
+
+    logStdoutStderr({ stdout, stderr }: { stdout: Uint8Array, stderr: Uint8Array }) {
+        if (stdout.length > 0) {
+            console.log('%cSTDOUT:', 'color: green; font-weight: bold');
+            console.log(new TextDecoder().decode(stdout));
+        }
+        if (stderr.length > 0) {
+            console.log('%cSTDERR:', 'color: blue; font-weight: bold');
+            console.log(new TextDecoder().decode(stderr));
+        }
+    }
+
+    async runFfmpegConcat({ ffmpegArgs, concatTxt, totalDuration, onProgress }: {
+        ffmpegArgs: string[], concatTxt: string, totalDuration: number, onProgress: (a: number) => void
+    }) {
+        const process = this.runFfmpegProcess(ffmpegArgs);
+
+        this.handleProgress(process, totalDuration, onProgress);
+
+        assert(process.stdin != null);
+        stringToStream(concatTxt).pipe(process.stdin);
+        this.logStdoutStderr(await process);
+        // return process;
+    }
+
+    async runFfmpegWithProgress({ ffmpegArgs, duration, onProgress }: {
+        ffmpegArgs: string[],
+        duration?: number | undefined,
+        onProgress: (a: number) => void,
+    }) {
+        const process = this.runFfmpegProcess(ffmpegArgs);
+        assert(process.stderr != null);
+        this.handleProgress(process, duration, onProgress);
+        // return process;
+        this.logStdoutStderr(await process);
+    }
+
+    getFfprobePath = () => this.getFfPath('ffprobe');
+
+    async runFfprobe(args: readonly string[], { timeout = this.platform.isDev() ? 10000 : 30000, logCli = true } = {}) {
+        const ffprobePath = this.getFfprobePath();
+        if (logCli) this.logger.info(this.getFfCommandLine('ffprobe', args));
+        const ps = execa(ffprobePath, args, this.getExecaOptions());
+        const timer = setTimeout(() => {
+            this.logger.warn('killing timed out ffprobe');
+            ps.kill();
+        }, timeout);
+        try {
+            return await ps;
+        } finally {
+            clearTimeout(timer);
+        }
+    }
+
+    async readFormatData(filePath: string) {
+        this.logger.info('readFormatData', filePath);
+
+        const { stdout } = await this.runFfprobe([
+            '-of', 'json', '-show_format', '-i', filePath, '-hide_banner',
+        ]);
+        return JSON.parse(new TextDecoder().decode(stdout)).format;
+    }
+
+    async getDuration(filePath: string) {
+        return parseFloat((await this.readFormatData(filePath)).duration);
+    }
+
+    abortFfmpegs() {
+        this.logger.info('Aborting', this.runningFfmpegs.size, 'ffmpeg process(es)');
+        this.runningFfmpegs.forEach((process) => {
+            process.abortController.abort();
+        });
+    }
+
+    runFfmpeg = async (...args: Parameters<typeof this.runFfmpegProcess>) => this.runFfmpegProcess(...args);
+
+    // safeCreateBlob(array: Uint8Array, options?: BlobPropertyBag) {
+    //   // if we don't do this when creating a Blob, we get:
+    //   // "Failed to construct 'Blob': The provided ArrayBufferView value must not be resizable."
+    //   // maybe when moving away from @electron/remote, it's not needed anymore?
+    //   // https://stackoverflow.com/a/25255750/6519037
+    //   const cloned = new Uint8Array(array);
+    //   return new Blob([cloned], options);
+    // }
+
+    async renderThumbnail(filePath: string, timestamp: number, signal: AbortSignal) {
+        const args = [
+            '-ss', String(timestamp),
+            '-i', filePath,
+            '-vf', 'scale=-2:200',
+            '-f', 'image2',
+            '-vframes', '1',
+            '-q:v', '10',
+            '-',
+        ];
+
+        const { stdout } = await this.runFfmpeg(args, { cancelSignal: signal }, { logCli: false });
+
+        return stdout;
+        // const blob = safeCreateBlob(stdout, { type: 'image/jpeg' });
+        // return URL.createObjectURL(blob);
+    }
+
+    async extractSubtitleTrack(filePath: string, streamId: number) {
+        const args = [
+            '-hide_banner',
+            '-i', filePath,
+            '-map', `0:${streamId}`,
+            '-f', 'srt',
+            '-',
+        ];
+
+        const { stdout } = await this.runFfmpeg(args);
+        return new TextDecoder().decode(stdout);
+    }
+
+    async extractSubtitleTrackVtt(filePath: string, streamId: number) {
+        const args = [
+            '-hide_banner',
+            '-i', filePath,
+            '-map', `0:${streamId}`,
+            '-f', 'webvtt',
+            '-',
+        ];
+
+        const { stdout } = await this.runFfmpeg(args);
+
+        return stdout;
+
+        // const blob = safeCreateBlob(stdout, { type: 'text/vtt' });
+        // return URL.createObjectURL(blob);
+    }
+
+    async extractWaveform({ filePath, outPath }: { filePath: string, outPath: string }) {
+        const numSegs = 10;
+        const duration = 60 * 60;
+        const maxLen = 0.1;
+        const segments = Array.from({ length: numSegs }).fill(undefined).map((_unused, i) => [i * (duration / numSegs), Math.min(duration / numSegs, maxLen)] as const);
+
+        // https://superuser.com/questions/681885/how-can-i-remove-multiple-segments-from-a-video-using-ffmpeg
+        let filter = segments.map(([from, len], i) => `[0:a]atrim=start=${from}:end=${from + len},asetpts=PTS-STARTPTS[a${i}]`).join(';');
+        filter += ';';
+        filter += segments.map((_arr, i) => `[a${i}]`).join('');
+        filter += `concat=n=${segments.length}:v=0:a=1[out]`;
+
+        console.time('ffmpeg');
+        await this.runFfmpeg([
+            '-i',
+            filePath,
+            '-filter_complex',
+            filter,
+            '-map',
+            '[out]',
+            '-f', 'wav',
+            '-y',
+            outPath,
+        ], undefined, { logCli: false });
+        console.timeEnd('ffmpeg');
+    }
+
+    async runFfmpegStartupCheck() {
+        // will throw if exit code != 0
+        await this.runFfmpeg(['-hide_banner', '-f', 'lavfi', '-i', 'nullsrc=s=256x256:d=1', '-f', 'null', '-']);
+    }
+
+    // We can't use `instanceof ExecaError` because the error has been sent over the main-renderer bridge (@electron/remote)
+    // so instead we just check if it has some of execa's specific error properties
+    isExecaError(err: unknown): err is InvariantExecaError {
+        // https://github.com/sindresorhus/execa/blob/main/docs/api.md#resultfailed
+        return err instanceof Error && ('failed' in err && 'shortMessage' in err && 'isForcefullyTerminated' in err);
+    }
+
+    async readFileFfprobeMeta(filePath: string) {
+        try {
+            const { stdout } = await this.runFfprobe([
+                '-of', 'json', '-show_chapters', '-show_format', '-show_entries', 'stream', '-i', filePath, '-hide_banner',
+            ]);
+
+            let parsedJson: FFprobeProbeResult;
+            let decoded: string | undefined;
+            try {
+                // https://github.com/mifi/lossless-cut/issues/1342
+                decoded = new TextDecoder().decode(stdout);
+                parsedJson = JSON.parse(decoded);
+            } catch {
+                console.log('ffprobe stdout:', decoded ?? stdout);
+                throw new Error('ffprobe returned malformed data');
+            }
+            const { format, chapters = [] } = parsedJson;
+            invariant(format != null);
+
+            const streams = (parsedJson.streams ?? []).map((s) => {
+                if (/DJI_[^/\\]+SRT$/.test(filePath)) {
+                    return { ...s, guessedType: 'dji-gps-srt' as const };
+                }
+                return { ...s, guessedType: undefined };
+            });
+            return { format, streams, chapters };
+        } catch (err: any) {
+            if (this.isExecaError(err) && err.code == null && err.exitCode != null) {
+                throw new UnsupportedFileError('Unsupported file', { cause: err });
+            }
+            throw err;
+        }
+    }
+
 
 }

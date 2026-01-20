@@ -99,9 +99,9 @@ export interface Config {
   reducedMotion: 'always' | 'never' | 'user',
 }
 
-export interface Waveform {
-  buffer: Buffer,
-}
+// export interface Waveform {
+//   buffer: Buffer,
+// }
 
 export interface ApiActionRequest {
   id: number

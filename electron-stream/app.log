@@ -2357,3 +2357,100 @@
   rotate: undefined
 }
 2026-01-18T13:08:32.193Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5Calex%5CDownloads%5CDors+Feline-1941_Foot_Fun.wmv&videoStreamIndex=1&audioStreamIndexes=0&seekTo=1.737907&size=800&fps=30 HTTP/1.1 200 - 138.836 ms
+2026-01-18T16:12:20.205Z info: LosslessCut version 3.67.2 { isDev: true }
+2026-01-18T16:12:20.234Z info: Initialized config store
+2026-01-18T16:12:20.235Z info: Waiting for app to become ready
+2026-01-18T16:12:20.240Z info: CLI arguments { _: [] }
+2026-01-18T16:12:20.247Z info: HTTP API listening on http://127.0.0.1:8080/
+2026-01-18T16:12:20.247Z info: HTTP API listening on port 8080
+2026-01-18T16:12:20.323Z info: Added Extension React Developer Tools
+2026-01-18T16:12:20.576Z info: Current version 3.67.2
+2026-01-18T16:12:20.576Z info: Newest version 3.67.2
+2026-01-18T16:12:22.791Z info: ffmpeg -hide_banner -f lavfi -i nullsrc=s=256x256:d=1 -f null -
+2026-01-18T16:12:22.868Z info: ffmpeg -hide_banner -f lavfi -i nullsrc=s=256x256:d=1 -f null -
+2026-01-18T19:55:56.884Z info: LosslessCut version 3.67.2 { isDev: true }
+2026-01-18T19:55:56.926Z info: Initialized config store
+2026-01-18T19:55:56.927Z info: Waiting for app to become ready
+2026-01-18T19:55:56.931Z info: CLI arguments { _: [] }
+2026-01-18T19:55:56.939Z info: HTTP API listening on http://127.0.0.1:8080/
+2026-01-18T19:55:56.939Z info: HTTP API listening on port 8080
+2026-01-18T19:55:57.029Z info: Added Extension React Developer Tools
+2026-01-18T19:55:57.121Z info: Current version 3.67.2
+2026-01-18T19:55:57.121Z info: Newest version 3.67.2
+2026-01-18T19:55:59.549Z info: ffmpeg -hide_banner -f lavfi -i nullsrc=s=256x256:d=1 -f null -
+2026-01-18T19:55:59.621Z info: ffmpeg -hide_banner -f lavfi -i nullsrc=s=256x256:d=1 -f null -
+2026-01-18T19:57:46.184Z info: LosslessCut version 3.67.2 { isDev: true }
+2026-01-18T19:57:46.213Z info: Initialized config store
+2026-01-18T19:57:46.214Z info: Waiting for app to become ready
+2026-01-18T19:57:46.219Z info: CLI arguments { _: [] }
+2026-01-18T19:57:46.227Z info: HTTP API listening on http://127.0.0.1:8080/
+2026-01-18T19:57:46.227Z info: HTTP API listening on port 8080
+2026-01-18T19:57:46.298Z info: Added Extension React Developer Tools
+2026-01-18T19:57:46.401Z info: Current version 3.67.2
+2026-01-18T19:57:46.402Z info: Newest version 3.67.2
+2026-01-18T19:57:48.726Z info: ffmpeg -hide_banner -f lavfi -i nullsrc=s=256x256:d=1 -f null -
+2026-01-18T19:57:48.739Z info: ffmpeg -hide_banner -f lavfi -i nullsrc=s=256x256:d=1 -f null -
+2026-01-18T19:57:55.949Z info: ffprobe -of json -show_chapters -show_format -show_entries stream -i "C:\Users\alex\Downloads\Dors Feline-1941_Foot_Fun.wmv" -hide_banner
+2026-01-18T19:57:56.456Z info: Received /stream request {
+  path: 'C:\\Users\\alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  videoStreamIndex: '1',
+  audioStreamIndexes: '0',
+  seekTo: '0',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-18T19:57:59.248Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5Calex%5CDownloads%5CDors+Feline-1941_Foot_Fun.wmv&videoStreamIndex=1&audioStreamIndexes=0&seekTo=0&size=800&fps=30 HTTP/1.1 200 - 103.354 ms
+2026-01-18T19:57:59.259Z info: Received /stream request {
+  path: 'C:\\Users\\alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  videoStreamIndex: '1',
+  audioStreamIndexes: '0',
+  seekTo: '275.552934',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-18T19:57:59.964Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5Calex%5CDownloads%5CDors+Feline-1941_Foot_Fun.wmv&videoStreamIndex=1&audioStreamIndexes=0&seekTo=275.552934&size=800&fps=30 HTTP/1.1 200 - 256.250 ms
+2026-01-18T19:58:00.281Z info: Received /stream request {
+  path: 'C:\\Users\\alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  videoStreamIndex: '1',
+  audioStreamIndexes: '0',
+  seekTo: '486.685953',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-18T19:58:00.636Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5Calex%5CDownloads%5CDors+Feline-1941_Foot_Fun.wmv&videoStreamIndex=1&audioStreamIndexes=0&seekTo=486.685953&size=800&fps=30 HTTP/1.1 200 - 195.256 ms
+2026-01-18T19:58:00.641Z info: Received /stream request {
+  path: 'C:\\Users\\alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  videoStreamIndex: '1',
+  audioStreamIndexes: '0',
+  seekTo: '648.614725',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-18T19:58:02.207Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5Calex%5CDownloads%5CDors+Feline-1941_Foot_Fun.wmv&videoStreamIndex=1&audioStreamIndexes=0&seekTo=648.614725&size=800&fps=30 HTTP/1.1 200 - 214.281 ms
+2026-01-18T19:58:02.210Z error: Stream process error Command was killed with SIGTERM (Termination): "ffmpeg\win32-x64\lib\ffmpeg.exe" -hide_banner -loglevel error -fflags "+nobuffer+flush_packets+discardcorrupt" -avioflags direct -flush_packets 1 -ss 648.614725 -i "C:\Users\alex\Downloads\Dors Feline-1941_Foot_Fun.wmv" -fps_mode passthrough -map_metadata -1 -map_chapters -1 -filter_complex "[0:1]fps=30,scale=800:800:flags=lanczos:force_original_aspect_ratio=decrease:force_divisible_by=2:in_color_matrix=auto:in_range=auto:out_color_matrix=bt709:out_range=tv,format=yuv420p,setparams=color_primaries=bt709:color_trc=bt709:colorspace=bt709[video];[0:0]anull[audio]" -map "[video]" "-c:v" libx264 -preset ultrafast -tune zerolatency -crf 10 -g 1 -map "[audio]" -ac 2 "-c:a" aac "-b:a" 128k -f mp4 -movflags "+frag_keyframe+empty_moov+default_base_moof" - ExecaError: Command was killed with SIGTERM (Termination): "ffmpeg\win32-x64\lib\ffmpeg.exe" -hide_banner -loglevel error -fflags "+nobuffer+flush_packets+discardcorrupt" -avioflags direct -flush_packets 1 -ss 648.614725 -i "C:\Users\alex\Downloads\Dors Feline-1941_Foot_Fun.wmv" -fps_mode passthrough -map_metadata -1 -map_chapters -1 -filter_complex "[0:1]fps=30,scale=800:800:flags=lanczos:force_original_aspect_ratio=decrease:force_divisible_by=2:in_color_matrix=auto:in_range=auto:out_color_matrix=bt709:out_range=tv,format=yuv420p,setparams=color_primaries=bt709:color_trc=bt709:colorspace=bt709[video];[0:0]anull[audio]" -map "[video]" "-c:v" libx264 -preset ultrafast -tune zerolatency -crf 10 -g 1 -map "[audio]" -ac 2 "-c:a" aac "-b:a" 128k -f mp4 -movflags "+frag_keyframe+empty_moov+default_base_moof" -
+    at getFinalError (file:///C:/Users/alex/Codigos/lossless-cut/node_modules/execa/lib/return/final-error.js:6:9)
+    at makeError (file:///C:/Users/alex/Codigos/lossless-cut/node_modules/execa/lib/return/result.js:108:16)
+    at getAsyncResult (file:///C:/Users/alex/Codigos/lossless-cut/node_modules/execa/lib/methods/main-async.js:168:4)
+    at handlePromise (file:///C:/Users/alex/Codigos/lossless-cut/node_modules/execa/lib/methods/main-async.js:151:17) {
+  shortMessage: 'Command was killed with SIGTERM (Termination): "ffmpeg\\win32-x64\\lib\\ffmpeg.exe" -hide_banner -loglevel error -fflags "+nobuffer+flush_packets+discardcorrupt" -avioflags direct -flush_packets 1 -ss 648.614725 -i "C:\\Users\\alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv" -fps_mode passthrough -map_metadata -1 -map_chapters -1 -filter_complex "[0:1]fps=30,scale=800:800:flags=lanczos:force_original_aspect_ratio=decrease:force_divisible_by=2:in_color_matrix=auto:in_range=auto:out_color_matrix=bt709:out_range=tv,format=yuv420p,setparams=color_primaries=bt709:color_trc=bt709:colorspace=bt709[video];[0:0]anull[audio]" -map "[video]" "-c:v" libx264 -preset ultrafast -tune zerolatency -crf 10 -g 1 -map "[audio]" -ac 2 "-c:a" aac "-b:a" 128k -f mp4 -movflags "+frag_keyframe+empty_moov+default_base_moof" -',
+  command: 'ffmpeg\\win32-x64\\lib\\ffmpeg.exe -hide_banner -loglevel error -fflags +nobuffer+flush_packets+discardcorrupt -avioflags direct -flush_packets 1 -ss 648.614725 -i C:\\Users\\alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv -fps_mode passthrough -map_metadata -1 -map_chapters -1 -filter_complex [0:1]fps=30,scale=800:800:flags=lanczos:force_original_aspect_ratio=decrease:force_divisible_by=2:in_color_matrix=auto:in_range=auto:out_color_matrix=bt709:out_range=tv,format=yuv420p,setparams=color_primaries=bt709:color_trc=bt709:colorspace=bt709[video];[0:0]anull[audio] -map [video] -c:v libx264 -preset ultrafast -tune zerolatency -crf 10 -g 1 -map [audio] -ac 2 -c:a aac -b:a 128k -f mp4 -movflags +frag_keyframe+empty_moov+default_base_moof -',
+  escapedCommand: '"ffmpeg\\win32-x64\\lib\\ffmpeg.exe" -hide_banner -loglevel error -fflags "+nobuffer+flush_packets+discardcorrupt" -avioflags direct -flush_packets 1 -ss 648.614725 -i "C:\\Users\\alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv" -fps_mode passthrough -map_metadata -1 -map_chapters -1 -filter_complex "[0:1]fps=30,scale=800:800:flags=lanczos:force_original_aspect_ratio=decrease:force_divisible_by=2:in_color_matrix=auto:in_range=auto:out_color_matrix=bt709:out_range=tv,format=yuv420p,setparams=color_primaries=bt709:color_trc=bt709:colorspace=bt709[video];[0:0]anull[audio]" -map "[video]" "-c:v" libx264 -preset ultrafast -tune zerolatency -crf 10 -g 1 -map "[audio]" -ac 2 "-c:a" aac "-b:a" 128k -f mp4 -movflags "+frag_keyframe+empty_moov+default_base_moof" -',
+  cwd: 'C:\\Users\\alex\\Codigos\\lossless-cut\\electron-stream',
+  durationMs: 1567.903,
+  failed: true,
+  timedOut: false,
+  isCanceled: false,
+  isGracefullyCanceled: false,
+  isTerminated: true,
+  isMaxBuffer: false,
+  isForcefullyTerminated: false,
+  signal: 'SIGTERM',
+  signalDescription: 'Termination',
+  stdio: [ undefined, undefined, undefined ],
+  ipcOutput: [],
+  pipedFrom: []
+}

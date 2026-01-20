@@ -1,6 +1,6 @@
 import { DirectoryAccessDeclinedError, type IPlatform, type ISettings, IUtils, MasDirectoryAccessDeclinedError, TOKENS } from "lossless-cut-application";
-import { access, lstat, constants } from "node:fs/promises";
-import { dirname } from "node:path";
+import { access, lstat, constants, writeFile, mkdir } from "node:fs/promises";
+import { basename, dirname, join, parse, resolve } from "node:path";
 import { pathToFileURL } from "node:url";
 import { inject, injectable } from "tsyringe";
 
@@ -75,7 +75,7 @@ export class Utils implements IUtils {
             // Reset if working directory doesn't exist anymore
             const customOutDirExists = (await this.pathExists(newCustomOutDir)) && (await lstat(newCustomOutDir)).isDirectory();
             if (!customOutDirExists) {
-                this.settings.setCustomOutDir(undefined);
+                this.settings.set('customOutDir', undefined);
                 newCustomOutDir = undefined;
             }
         }
@@ -98,11 +98,77 @@ export class Utils implements IUtils {
                 // newCustomOutDir = newOutDir;
             } else {
                 // errorToast(i18n.t('You have no write access to the directory of this file, please select a custom working dir'));
-                this.settings.setCustomOutDir(undefined);
+                this.settings.set('customOutDir', undefined);
                 throw new DirectoryAccessDeclinedError();
             }
         }
 
         return newCustomOutDir;
+    }
+
+    async isFile(path: string): Promise<boolean> {
+        try {
+            const stats = await lstat(path);
+            return stats.isFile();
+        } catch {
+            return false;
+        }
+    }
+
+    async isDirectory(path: string): Promise<boolean> {
+        try {
+            const stats = await lstat(path);
+            return stats.isDirectory();
+        } catch {
+            return false;
+        }
+    }
+
+    pathsNames(paths: string[]): string[] {
+        return paths.map((p) => {
+            return parse(p).name;
+        });
+    }
+
+    pathJoin(...paths: string[]): string {
+        return join(...paths);
+    }
+
+    basename(path: string): string {
+        return basename(path);
+    }
+
+    dirname(path: string): string {
+        return dirname(path);
+    }
+
+    pathResolve(...paths: string[]): string {
+        return resolve(...paths);
+    }
+
+    async writeFile(path: string, data: string | Uint8Array): Promise<void> {
+        await writeFile(path, data);
+    }
+
+    async mkdir(path: string, options?: { recursive?: boolean }): Promise<void> {
+        await mkdir(path, options);
+    }
+
+    async access(path: string, mode: 'wok' | 'rok' | 'fok'): Promise<void> {
+        let fsMode: number;
+        switch (mode) {
+            case 'wok':
+                fsMode = constants.W_OK;
+                break;
+            case 'rok':
+                fsMode = constants.R_OK;
+                break;
+            case 'fok':
+                fsMode = constants.F_OK;
+                break;
+            default:
+                fsMode = constants.F_OK;
+        }
+        await access(path, fsMode);
     }
 }

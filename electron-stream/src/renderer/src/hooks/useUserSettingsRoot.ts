@@ -1,6 +1,7 @@
 import { useEffect, useState, useRef, useCallback, useMemo } from 'react';
 import i18n from 'i18next';
 import type { Transition } from 'motion/react';
+import type { ISettings } from 'lossless-cut-application';
 
 import type { Config } from '../../../common/types.js';
 
@@ -8,7 +9,7 @@ import { errorToast } from '../swal';
 import isDev from '../isDev';
 import { mySpring, emitter as animationsEmitter } from '../animations';
 
-const { configStore } = window.require('@electron/remote').require('./index.js');
+const { settings: settingsApi, configStore } = window.require('@electron/remote').require('./index.js') as { settings: ISettings, configStore: { defaults: Config } };
 const { systemPreferences } = window.require('@electron/remote');
 
 const animationSettings = systemPreferences.getAnimationSettings();
@@ -26,23 +27,23 @@ export default function useUserSettingsRoot() {
 
     if (isDev) console.log('save', key, value);
     try {
-      configStore.set(key, value);
+      settingsApi.set(key, value);
     } catch (err) {
       console.error('Failed to set config', key, err);
       errorToast(i18n.t('Unable to save your preferences. Try to disable any anti-virus'));
     }
   }
 
-  function safeGetConfig<T extends keyof Config>(key: T) {
-    const rawVal = configStore.get(key);
+  function safeGetConfig<T extends keyof Config>(key: T): Config[T] {
+    const rawVal = settingsApi.get<Config[T]>(key) ?? configStore.defaults[key];
     // NOTE: Need to clone any non-primitive in renderer, or it will become very slow
     // I think because Electron is proxying objects over the bridge
-    const cloned: typeof rawVal = rawVal === undefined
+    const cloned = rawVal === undefined
       ? undefined
       // eslint-disable-next-line unicorn/prefer-structured-clone
-      : JSON.parse(JSON.stringify(rawVal));
+      : (JSON.parse(JSON.stringify(rawVal)) as Config[T]);
 
-    return cloned;
+    return cloned as Config[T];
   }
 
   // From https://reactjs.org/docs/hooks-reference.html#lazy-initial-state
@@ -195,7 +196,8 @@ export default function useUserSettingsRoot() {
 
 
   const resetKeyBindings = useCallback(() => {
-    configStore.reset('keyBindings');
+    // configStore.reset('keyBindings');
+    settingsApi.reset('keyBindings');
     setKeyBindings(safeGetConfig('keyBindings'));
   }, []);
 

@@ -1,0 +1,1 @@
+export type CaptureFormat = 'jpeg' | 'png' | 'webp';

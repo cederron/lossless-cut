@@ -13,12 +13,13 @@ import { getGuaranteedSegments, isDurationValid } from '../segments';
 import type { FFprobeStream } from '../../../common/ffprobe';
 import type { AvoidNegativeTs, Html5ifyMode, PreserveMetadata } from '../../../common/types';
 import type { AllFilesMeta, Chapter, CopyfileStreams, CustomTagsByFile, LiteFFprobeStream, ParamsByStreamId, SegmentToExport } from '../types';
-import type { LossyMode } from '../../../main';
 import { UserFacingError } from '../../errors';
 import mainApi from '../mainApi';
+import type { LossyMode } from 'lossless-cut-application';
 
-const { join, resolve, dirname } = window.require('path');
-const { writeFile, mkdir, access, constants: { W_OK } } = window.require('fs/promises');
+const { utils } = window.require('@electron/remote').require('./index.js');
+// const { join, resolve, dirname } = window.require('path');
+// const { /*writeFile,*/ /*mkdir,*/ /*access,*/ constants: { W_OK } } = window.require('fs/promises');
 
 
 export class OutputNotWritableError extends Error {
@@ -31,13 +32,13 @@ export class OutputNotWritableError extends Error {
 async function writeChaptersFfmetadata(outDir: string, chapters: Chapter[] | undefined) {
   if (!chapters || chapters.length === 0) return undefined;
 
-  const path = join(outDir, `ffmetadata-${Date.now()}.txt`);
+  const path = utils.pathJoin(outDir, `ffmetadata-${Date.now()}.txt`);
 
   const ffmetadata = chapters.map(({ start, end, name }) => (
     `[CHAPTER]\nTIMEBASE=1/1000\nSTART=${Math.floor(start * 1000)}\nEND=${Math.floor(end * 1000)}\ntitle=${name || ''}`
   )).join('\n\n');
   console.log('Writing chapters', ffmetadata);
-  await writeFile(path, ffmetadata);
+  await utils.writeFile(path, ffmetadata);
   return path;
 }
 
@@ -74,8 +75,8 @@ async function tryDeleteFiles(paths: string[]) {
 export async function maybeMkDeepOutDir({ outputDir, fileOutPath }: { outputDir: string, fileOutPath: string }) {
   // cutFileNames might contain slashes and therefore might have a subdir(tree) that we need to mkdir
   // https://github.com/mifi/lossless-cut/issues/1532
-  const actualOutputDir = dirname(fileOutPath);
-  if (actualOutputDir !== outputDir) await mkdir(actualOutputDir, { recursive: true });
+  const actualOutputDir = utils.dirname(fileOutPath);
+  if (actualOutputDir !== outputDir) await utils.mkdir(actualOutputDir, { recursive: true });
 }
 
 
@@ -100,7 +101,7 @@ function useFfmpegOperations({ filePath, treatInputFileModifiedTimeAsStart, trea
     // this seems to sometimes happen on Windows, not sure why.
     if (fileExists) {
       try {
-        await access(path, W_OK);
+        await utils.access(path, 'wok');
       } catch {
         throw new OutputNotWritableError();
       }
@@ -217,7 +218,7 @@ function useFfmpegOperations({ filePath, treatInputFileModifiedTimeAsStart, trea
       // https://superuser.com/questions/787064/filename-quoting-in-ffmpeg-concat
       // Must add "file:" or we get "Impossible to open 'pipe:xyz.mp4'" on newer ffmpeg versions
       // https://superuser.com/questions/718027/ffmpeg-concat-doesnt-work-with-absolute-path
-      const concatTxt = paths.map((file) => `file 'file:${resolve(file).replaceAll('\'', String.raw`'\''`)}'`).join('\n');
+      const concatTxt = paths.map((file) => `file 'file:${utils.pathResolve(file).replaceAll('\'', String.raw`'\''`)}'`).join('\n');
 
       const ffmpegCommandLine = getFfCommandLine('ffmpeg', ffmpegArgs);
 
@@ -225,8 +226,10 @@ function useFfmpegOperations({ filePath, treatInputFileModifiedTimeAsStart, trea
       console.log(fullCommandLine);
       appendLastCommandsLog(fullCommandLine);
 
-      const result = await runFfmpegConcat({ ffmpegArgs, concatTxt, totalDuration, onProgress });
-      logStdoutStderr(result);
+      // const result = await runFfmpegConcat({ ffmpegArgs, concatTxt, totalDuration, onProgress });
+      // logStdoutStderr(result);
+      await runFfmpegConcat({ ffmpegArgs, concatTxt, totalDuration, onProgress });
+
 
       await transferTimestamps({ inPath: metadataFromPath, outPath, treatInputFileModifiedTimeAsStart, treatOutputFileModifiedTimeAsStart, duration: totalDuration });
 
@@ -420,8 +423,10 @@ function useFfmpegOperations({ filePath, treatInputFileModifiedTimeAsStart, trea
     ];
 
     appendFfmpegCommandLog(ffmpegArgs);
-    const result = await runFfmpegWithProgress({ ffmpegArgs, duration: cutDuration, onProgress });
-    logStdoutStderr(result);
+    // const result = await runFfmpegWithProgress({ ffmpegArgs, duration: cutDuration, onProgress });
+    // logStdoutStderr(result);
+    await runFfmpegWithProgress({ ffmpegArgs, duration: cutDuration, onProgress });
+
 
     await transferTimestamps({ inPath: filePath, outPath, cutFrom, cutTo, treatInputFileModifiedTimeAsStart, duration: isDurationValid(fileDuration) ? fileDuration : undefined, treatOutputFileModifiedTimeAsStart });
   }, [appendFfmpegCommandLog, cutFromAdjustmentFrames, cutToAdjustmentFrames, filePath, getOutputPlaybackRateArgs, treatInputFileModifiedTimeAsStart, treatOutputFileModifiedTimeAsStart]);
@@ -538,7 +543,7 @@ function useFfmpegOperations({ filePath, treatInputFileModifiedTimeAsStart, trea
       const onProgress = (progress: number) => onSingleProgress(i, progress / 2);
       const onConcatProgress = (progress: number) => onSingleProgress(i, (1 + progress) / 2);
 
-      const finalOutPath = join(outputDir, cutFileNames[i]!);
+      const finalOutPath = utils.pathJoin(outputDir, cutFileNames[i]!);
 
       if (await shouldSkipExistingFile(finalOutPath)) return { path: finalOutPath, created: false };
 
@@ -788,9 +793,11 @@ function useFfmpegOperations({ filePath, treatInputFileModifiedTimeAsStart, trea
 
     const duration = await getDuration(filePathArg);
     appendFfmpegCommandLog(ffmpegArgs);
-    const { stdout } = await runFfmpegWithProgress({ ffmpegArgs, duration, onProgress });
+    await runFfmpegWithProgress({ ffmpegArgs, duration, onProgress });
 
-    console.log(new TextDecoder().decode(stdout));
+    // const { stdout } = await runFfmpegWithProgress({ ffmpegArgs, duration, onProgress });
+
+    // console.log(new TextDecoder().decode(stdout));
 
     invariant(outPath != null);
     await transferTimestamps({ inPath: filePathArg, outPath, duration, treatInputFileModifiedTimeAsStart, treatOutputFileModifiedTimeAsStart });
@@ -819,8 +826,9 @@ function useFfmpegOperations({ filePath, treatInputFileModifiedTimeAsStart, trea
     ];
 
     appendFfmpegCommandLog(ffmpegArgs);
-    const result = await runFfmpegWithProgress({ ffmpegArgs, duration, onProgress });
-    logStdoutStderr(result);
+    // const result = await runFfmpegWithProgress({ ffmpegArgs, duration, onProgress });
+    // logStdoutStderr(result);
+    await runFfmpegWithProgress({ ffmpegArgs, duration, onProgress });
 
     await transferTimestamps({ inPath: filePathArg, outPath, duration, treatInputFileModifiedTimeAsStart, treatOutputFileModifiedTimeAsStart });
   }, [appendFfmpegCommandLog, treatInputFileModifiedTimeAsStart, treatOutputFileModifiedTimeAsStart]);
@@ -850,8 +858,10 @@ function useFfmpegOperations({ filePath, treatInputFileModifiedTimeAsStart, trea
     ];
 
     appendFfmpegCommandLog(ffmpegArgs);
-    const result = await runFfmpegWithProgress({ ffmpegArgs, onProgress });
-    logStdoutStderr(result);
+    // const result = await runFfmpegWithProgress({ ffmpegArgs, onProgress });
+    // logStdoutStderr(result);
+    await runFfmpegWithProgress({ ffmpegArgs, onProgress });
+
 
     await transferTimestamps({ inPath: filePath, outPath, duration: undefined, treatInputFileModifiedTimeAsStart, treatOutputFileModifiedTimeAsStart });
 

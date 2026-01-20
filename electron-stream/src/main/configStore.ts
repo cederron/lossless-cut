@@ -95,7 +95,7 @@ const defaultKeyBindings: KeyBinding[] = [
   { keys: 'KeyM', action: 'toggleMuted' },
 ];
 
-const defaults: Config = {
+export const defaults: Config = {
   version: 1,
   lastAppVersion: app.getVersion(),
   captureFormat: 'jpeg',
