@@ -12,10 +12,12 @@ import type { FFprobeChapter, FFprobeFormat, FFprobeStream } from '../../common/
 import { parseSrt, parseSrtToSegments } from './edlFormats';
 import { UserFacingError } from '../errors';
 import mainApi from './mainApi';
+import { UnsupportedFileError, type FFprobeProbeResult } from 'lossless-cut-application';
+import { isExecaError } from './util';
 
 const { ffmpeg } = window.require('@electron/remote').require('./index.js');
 
-const { renderWaveformPng, mapTimesToSegments, detectSceneChanges, captureFrames, captureFrameToFile, captureFrameToClipboard, getFfCommandLine, runFfmpegConcat, runFfmpegWithProgress, getDuration, abortFfmpegs, renderThumbnail: renderThumbnailApi, extractSubtitleTrack: extractSubtitleTrackApi, extractSubtitleTrackVtt: extractSubtitleTrackVttApi, /* runFfmpeg,*/ extractWaveform: extractWaveformApi, runFfmpegStartupCheck: runFfmpegStartupCheckApi, /*runFfprobe,*/ readFileFfprobeMeta: readFileFfprobeMetaApi, getFfmpegPath, readFrames: readFramesApi, setCustomFfPath } = ffmpeg;
+const { renderWaveformPng, mapTimesToSegments, detectSceneChanges, captureFrames, captureFrameToFile, captureFrameToClipboard, getFfCommandLine, runFfmpegConcat, runFfmpegWithProgress, getDuration, abortFfmpegs, /* renderThumbnail: renderThumbnailApi,*/ /*extractSubtitleTrack: extractSubtitleTrackApi, extractSubtitleTrackVtt: extractSubtitleTrackVttApi,*/ /*runFfmpeg,*/ /* extractWaveform: extractWaveformApi, runFfmpegStartupCheck: runFfmpegStartupCheckApi, */ /*runFfprobe,*/ /*readFileFfprobeMeta: readFileFfprobeMetaApi,*/ getFfmpegPath, /*readFrames: readFramesApi,*/ setCustomFfPath } = ffmpeg;
 
 
 export { renderWaveformPng, mapTimesToSegments, detectSceneChanges, captureFrames, captureFrameToFile, captureFrameToClipboard, getFfCommandLine, runFfmpegConcat, runFfmpegWithProgress, getDuration, abortFfmpegs, /* runFfmpeg,*/ getFfmpegPath, setCustomFfPath };
@@ -73,18 +75,18 @@ export interface Frame {
 export async function readFrames({ filePath, from, to, streamIndex }: {
   filePath: string, from?: number | undefined, to?: number | undefined, streamIndex: number,
 }) {
-  return readFramesApi({ filePath, from, to, streamIndex });
-  // const intervalsArgs = from != null && to != null ? ['-read_intervals', `${from}%${to}`] : [];
-  // const { stdout } = await runFfprobe(['-v', 'error', ...intervalsArgs, '-show_packets', '-select_streams', String(streamIndex), '-show_entries', 'packet=pts_time,flags', '-of', 'json', filePath], { logCli: false });
-  // const packetsFiltered: Frame[] = (JSON.parse(new TextDecoder().decode(stdout)).packets as { flags: string, pts_time: string }[])
-  //   .map((p) => ({
-  //     keyframe: p.flags[0] === 'K',
-  //     time: parseFloat(p.pts_time),
-  //     createdAt: new Date(),
-  //   }))
-  //   .filter((p) => !Number.isNaN(p.time));
+  // return readFramesApi({ filePath, from, to, streamIndex });
+  const intervalsArgs = from != null && to != null ? ['-read_intervals', `${from}%${to}`] : [];
+  const stdoutText = await ffmpeg.runFfprobeText(['-v', 'error', ...intervalsArgs, '-show_packets', '-select_streams', String(streamIndex), '-show_entries', 'packet=pts_time,flags', '-of', 'json', filePath], { logCli: false });
+  const packetsFiltered: Frame[] = (JSON.parse(stdoutText).packets as { flags: string, pts_time: string }[])
+    .map((p) => ({
+      keyframe: p.flags[0] === 'K',
+      time: parseFloat(p.pts_time),
+      createdAt: new Date(),
+    }))
+    .filter((p) => !Number.isNaN(p.time));
 
-  // return sortBy(packetsFiltered, 'time');
+  return sortBy(packetsFiltered, 'time');
 }
 
 export async function readFramesAroundTime({ filePath, streamIndex, aroundTime, window }: { filePath: string, streamIndex: number, aroundTime: number, window: number }) {
@@ -347,38 +349,39 @@ export async function getDefaultOutFormat({ filePath, fileMeta: { format } }: { 
 }
 
 export async function readFileFfprobeMeta(filePath: string) {
-  return readFileFfprobeMetaApi(filePath);
-  // try {
-  //   const { stdout } = await runFfprobe([
-  //     '-of', 'json', '-show_chapters', '-show_format', '-show_entries', 'stream', '-i', filePath, '-hide_banner',
-  //   ]);
+  // return readFileFfprobeMetaApi(filePath);
+  try {
+    const stdoutText = await ffmpeg.runFfprobeText([
+      '-of', 'json', '-show_chapters', '-show_format', '-show_entries', 'stream', '-i', filePath, '-hide_banner',
+    ]);
 
-  //   let parsedJson: FFprobeProbeResult;
-  //   let decoded: string | undefined;
-  //   try {
-  //     // https://github.com/mifi/lossless-cut/issues/1342
-  //     decoded = new TextDecoder().decode(stdout);
-  //     parsedJson = JSON.parse(decoded);
-  //   } catch {
-  //     console.log('ffprobe stdout:', decoded ?? stdout);
-  //     throw new Error('ffprobe returned malformed data');
-  //   }
-  //   const { format, chapters = [] } = parsedJson;
-  //   invariant(format != null);
+    let parsedJson: FFprobeProbeResult;
+    let decoded: string | undefined;
+    try {
+      // https://github.com/mifi/lossless-cut/issues/1342
+      decoded = stdoutText;
+      parsedJson = JSON.parse(decoded);
+    } catch {
+      // console.log('ffprobe stdout:', decoded ?? stdout);
+      console.log('ffprobe stdout:', decoded);
+      throw new Error('ffprobe returned malformed data');
+    }
+    const { format, chapters = [] } = parsedJson;
+    invariant(format != null);
 
-  //   const streams = (parsedJson.streams ?? []).map((s) => {
-  //     if (/DJI_[^/\\]+SRT$/.test(filePath)) {
-  //       return { ...s, guessedType: 'dji-gps-srt' as const };
-  //     }
-  //     return { ...s, guessedType: undefined };
-  //   });
-  //   return { format, streams, chapters };
-  // } catch (err) {
-  //   if (isExecaError(err) && err.code == null && err.exitCode != null) {
-  //     throw new UnsupportedFileError('Unsupported file', { cause: err });
-  //   }
-  //   throw err;
-  // }
+    const streams = (parsedJson.streams ?? []).map((s) => {
+      if (/DJI_[^/\\]+SRT$/.test(filePath)) {
+        return { ...s, guessedType: 'dji-gps-srt' as const };
+      }
+      return { ...s, guessedType: undefined };
+    });
+    return { format, streams, chapters };
+  } catch (err) {
+    if (isExecaError(err) && err.code == null && err.exitCode != null) {
+      throw new UnsupportedFileError('Unsupported file', { cause: err });
+    }
+    throw err;
+  }
 }
 
 export type FileFfprobeMeta = Awaited<ReturnType<typeof readFileFfprobeMeta>>;
@@ -386,39 +389,41 @@ export type FileStream = FileFfprobeMeta['streams'][number];
 
 async function renderThumbnail(filePath: string, timestamp: number, signal: AbortSignal) {
   
-  const stdout = await renderThumbnailApi(filePath, timestamp, signal);
-
-  const blob = safeCreateBlob(stdout, { type: 'image/jpeg' });
-  return URL.createObjectURL(blob);
-}
-//   const args = [
-//     '-ss', String(timestamp),
-//     '-i', filePath,
-//     '-vf', 'scale=-2:200',
-//     '-f', 'image2',
-//     '-vframes', '1',
-//     '-q:v', '10',
-//     '-',
-//   ];
-
-//   const { stdout } = await runFfmpeg(args, { cancelSignal: signal }, { logCli: false });
+//   const stdout = await renderThumbnailApi(filePath, timestamp, signal);
 
 //   const blob = safeCreateBlob(stdout, { type: 'image/jpeg' });
 //   return URL.createObjectURL(blob);
 // }
+  const args = [
+    '-ss', String(timestamp),
+    '-i', filePath,
+    '-vf', 'scale=-2:200',
+    '-f', 'image2',
+    '-vframes', '1',
+    '-q:v', '10',
+    '-',
+  ];
+
+  // const { stdout } = await runFfmpeg(args, { cancelSignal: signal }, { logCli: false });
+
+  // const blob = safeCreateBlob(stdout, { type: 'image/jpeg' });
+  // return URL.createObjectURL(blob);
+  return ffmpeg.runFfmpegUrl(args, 'image/jpeg');
+}
 
 export async function extractSubtitleTrack(filePath: string, streamId: number) {
-  return await extractSubtitleTrackApi(filePath, streamId);
-  // const args = [
-  //   '-hide_banner',
-  //   '-i', filePath,
-  //   '-map', `0:${streamId}`,
-  //   '-f', 'srt',
-  //   '-',
-  // ];
+  // return await extractSubtitleTrackApi(filePath, streamId);
+  const args = [
+    '-hide_banner',
+    '-i', filePath,
+    '-map', `0:${streamId}`,
+    '-f', 'srt',
+    '-',
+  ];
 
   // const { stdout } = await runFfmpeg(args);
   // return new TextDecoder().decode(stdout);
+  return ffmpeg.runFfmpegText(args);
 }
 
 export async function extractSubtitleTrackToSegments(filePath: string, streamId: number) {
@@ -432,20 +437,21 @@ export async function extractSrtGpsTrack(filePath: string, streamId: number) {
 }
 
 export async function extractSubtitleTrackVtt(filePath: string, streamId: number) {
-  // const args = [
-  //   '-hide_banner',
-  //   '-i', filePath,
-  //   '-map', `0:${streamId}`,
-  //   '-f', 'webvtt',
-  //   '-',
-  // ];
+  const args = [
+    '-hide_banner',
+    '-i', filePath,
+    '-map', `0:${streamId}`,
+    '-f', 'webvtt',
+    '-',
+  ];
 
   // const { stdout } = await runFfmpeg(args);
 
-  const stdout = await extractSubtitleTrackVttApi(filePath, streamId);
+  // const stdout = await extractSubtitleTrackVttApi(filePath, streamId);
 
-  const blob = safeCreateBlob(stdout, { type: 'text/vtt' });
-  return URL.createObjectURL(blob);
+  // const blob = safeCreateBlob(stdout, { type: 'text/vtt' });
+  // return URL.createObjectURL(blob);
+  return ffmpeg.runFfmpegUrl(args, 'text/vtt');
 }
 
 export async function renderThumbnails({ filePath, from, duration, onThumbnail, signal }: {
@@ -466,31 +472,32 @@ export async function renderThumbnails({ filePath, from, duration, onThumbnail, 
 }
 
 export async function extractWaveform({ filePath, outPath }: { filePath: string, outPath: string }) {
-  await extractWaveformApi({filePath, outPath});
-  // const numSegs = 10;
-  // const duration = 60 * 60;
-  // const maxLen = 0.1;
-  // const segments = Array.from({ length: numSegs }).fill(undefined).map((_unused, i) => [i * (duration / numSegs), Math.min(duration / numSegs, maxLen)] as const);
+  // await extractWaveformApi({filePath, outPath});
+  const numSegs = 10;
+  const duration = 60 * 60;
+  const maxLen = 0.1;
+  const segments = Array.from({ length: numSegs }).fill(undefined).map((_unused, i) => [i * (duration / numSegs), Math.min(duration / numSegs, maxLen)] as const);
 
-  // // https://superuser.com/questions/681885/how-can-i-remove-multiple-segments-from-a-video-using-ffmpeg
-  // let filter = segments.map(([from, len], i) => `[0:a]atrim=start=${from}:end=${from + len},asetpts=PTS-STARTPTS[a${i}]`).join(';');
-  // filter += ';';
-  // filter += segments.map((_arr, i) => `[a${i}]`).join('');
-  // filter += `concat=n=${segments.length}:v=0:a=1[out]`;
+  // https://superuser.com/questions/681885/how-can-i-remove-multiple-segments-from-a-video-using-ffmpeg
+  let filter = segments.map(([from, len], i) => `[0:a]atrim=start=${from}:end=${from + len},asetpts=PTS-STARTPTS[a${i}]`).join(';');
+  filter += ';';
+  filter += segments.map((_arr, i) => `[a${i}]`).join('');
+  filter += `concat=n=${segments.length}:v=0:a=1[out]`;
 
-  // console.time('ffmpeg');
-  // await runFfmpeg([
-  //   '-i',
-  //   filePath,
-  //   '-filter_complex',
-  //   filter,
-  //   '-map',
-  //   '[out]',
-  //   '-f', 'wav',
-  //   '-y',
-  //   outPath,
-  // ], undefined, { logCli: false });
-  // console.timeEnd('ffmpeg');
+  console.time('ffmpeg');
+  await ffmpeg.runFfmpegVoid([
+    '-i',
+    filePath,
+    '-filter_complex',
+    filter,
+    '-map',
+    '[out]',
+    '-f', 'wav',
+    '-y',
+    outPath,
+  ]);
+  // , undefined, { logCli: false });
+  console.timeEnd('ffmpeg');
 }
 
 export function isIphoneHevc(format: FFprobeFormat, streams: FFprobeStream[]) {
@@ -573,7 +580,8 @@ export function getTimecodeFromStreams(streams: FFprobeStream[]) {
 export async function runFfmpegStartupCheck() {
   // will throw if exit code != 0
   // await runFfmpeg(['-hide_banner', '-f', 'lavfi', '-i', 'nullsrc=s=256x256:d=1', '-f', 'null', '-']);
-  await runFfmpegStartupCheckApi();
+  await ffmpeg.runFfmpegVoid(['-hide_banner', '-f', 'lavfi', '-i', 'nullsrc=s=256x256:d=1', '-f', 'null', '-']);
+  // await runFfmpegStartupCheckApi();
 }
 
 // https://superuser.com/questions/543589/information-about-ffmpeg-command-line-options

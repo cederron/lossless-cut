@@ -58,9 +58,9 @@ export class HttpMediaSourceStreamFactory implements IMediaSourceStreamFactory {
 
                 try {
                     const currentReader = await initPromise;
-                    this.logger.info('Reading chunk from HTTP media source stream - reader ready', { streamUrl, params });
+                    // this.logger.info('Reading chunk from HTTP media source stream - reader ready', { streamUrl, params });
                     const { done, value } = await currentReader.read();
-                    this.logger.info('Reading chunk from HTTP media source stream - chunk read', { streamUrl, params, done, valueLength: value?.length ?? 0 });
+                    // this.logger.info('Reading chunk from HTTP media source stream - chunk read', { streamUrl, params, done, valueLength: value?.length ?? 0 });
                     if (done) {
                         // return null;
                     }

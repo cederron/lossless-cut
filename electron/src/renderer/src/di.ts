@@ -2,7 +2,8 @@ import { container, Lifecycle } from "tsyringe";
 import type { ILogger } from "lossless-cut-application";
 import { TOKENS } from "lossless-cut-application";
 // import { HttpMediaSourceStreamFactory } from "lossless-cut-application-electron";
-import { HttpMediaSourceStreamFactory } from "lossless-cut-application-electron/HttpMediaSourceStreamFactory";
+// import { HttpMediaSourceStreamFactory } from "lossless-cut-application-electron/HttpMediaSourceStreamFactory";
+import { ProcessMediaSourceStreamFactory } from "lossless-cut-application-electron/ProcessMediaSourceStreamFactory";
 
 class ConsoleLogger implements ILogger {
     info(message: any, ...meta: any[]) {
@@ -31,11 +32,17 @@ container.register<ILogger>(TOKENS.Logger, {
 // container.register<IFfmpeg>(TOKENS.Ffmpeg, {
 //     useClass: FfmpegExeca,
 // }, {
-//     lifecycle: Lifecycle.Transient,
+//     lifecycle: Lifecycle.Singleton,
 // });
 
 container.register(TOKENS.MediaSourceStreamFactory, {
-    useClass: HttpMediaSourceStreamFactory,
+    useClass: ProcessMediaSourceStreamFactory, // HttpMediaSourceStreamFactory,
 }, {
     lifecycle: Lifecycle.Transient,
 });
+
+// container.register<IUtils>(TOKENS.Utils, {
+//     useClass: Utils,
+// }, {
+//     lifecycle: Lifecycle.Singleton,
+// });

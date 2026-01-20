@@ -6,9 +6,10 @@ import { join } from 'node:path';
 import assert from 'node:assert';
 import { Readable } from 'node:stream';
 import readline from 'node:readline';
-import { app, clipboard, nativeImage } from 'electron';
+import { clipboard, nativeImage } from 'electron';
 import stringToStream from 'string-to-stream';
 import invariant from 'tiny-invariant';
+import pMap from 'p-map';
 
 // todo this is not a correct assumption
 type InvariantExecaError = ExecaError<{ encoding: 'utf8' }> | ExecaError<{ encoding: 'buffer' }>;
@@ -615,7 +616,25 @@ export class FfmpegExeca implements IFfmpeg {
     }
 
     runFfmpeg = async (...args: Parameters<typeof this.runFfmpegProcess>) => this.runFfmpegProcess(...args);
+    runFfmpegVoid = async (args: readonly string[]): Promise<void> => {
+        await this.runFfmpegProcess(args);
+    }
+    runFfmpegText = async (args: readonly string[]): Promise<string> => {
+        const { stdout } = await this.runFfmpegProcess(args);
+        return new TextDecoder().decode(stdout);
+    }
+    runFfmpegUrl = async (args: readonly string[], type: string): Promise<string> => {
+        const { stdout } = await this.runFfmpegProcess(args);
+        const blob = new Blob([stdout], { type: type });
+        return URL.createObjectURL(blob);
+    }
 
+    getExperimentalArgs = (ffmpegExperimental: boolean): string[] => (
+        ffmpegExperimental ? ['-strict', 'experimental'] : []
+    );
+
+    getVideoTimescaleArgs = (videoTimebase: number | undefined) => (videoTimebase != null ? ['-video_track_timescale', String(videoTimebase)] : []);
+    
     // safeCreateBlob(array: Uint8Array, options?: BlobPropertyBag) {
     //   // if we don't do this when creating a Blob, we get:
     //   // "Failed to construct 'Blob': The provided ArrayBufferView value must not be resizable."
@@ -764,6 +783,50 @@ export class FfmpegExeca implements IFfmpeg {
 
     setCustomFfPath(path: string | undefined) {
         this.customFfPath = path;
+    }
+
+    isDurationValid = (duration?: number): duration is number => duration != null && Number.isFinite(duration) && duration > 0;
+
+
+    isCuttingStart(cutFrom: number) {
+        return cutFrom > 0;
+    }
+
+    isCuttingEnd(cutTo: number, fileDuration: number | undefined) {
+        if (!this.isDurationValid(fileDuration)) return true;
+        return cutTo < fileDuration;
+    }
+
+    async createChaptersFromSegments({ segmentPaths, chapterNames }: { segmentPaths: string[], chapterNames?: (string | undefined)[] | undefined }) {
+      if (!chapterNames) return undefined;
+      try {
+        const durations = await pMap(segmentPaths, (segmentPath) => this.getDuration(segmentPath), { concurrency: 3 });
+        let timeAt = 0;
+        return durations.map((duration, i) => {
+          const ret = { start: timeAt, end: timeAt + duration, name: chapterNames[i] };
+          timeAt += duration;
+          return ret;
+        });
+      } catch (err) {
+        console.error('Failed to create chapters from segments', err);
+        return undefined;
+      }
+    }
+
+    async runFfprobeText(args: readonly string[], { timeout = this.platform.isDev() ? 10000 : 30000, logCli = true } = {}) {
+        const ffprobePath = this.getFfprobePath();
+        if (logCli) this.logger.info(this.getFfCommandLine('ffprobe', args));
+        const ps = execa(ffprobePath, args, this.getExecaOptions());
+        const timer = setTimeout(() => {
+            this.logger.warn('killing timed out ffprobe');
+            ps.kill();
+        }, timeout);
+        try {
+            const { stdout } = await ps;
+            return new TextDecoder().decode(stdout);
+        } finally {
+            clearTimeout(timer);
+        }
     }
     
 }

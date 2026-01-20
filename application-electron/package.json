@@ -2,7 +2,7 @@
   "name": "lossless-cut-application-electron",
   "private": true,
   "version": "0.0.0",
-  "description": "Electron support package for LesslessCut",
+  "description": "Electron support package for LosslessCut",
   "type": "module",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -14,6 +14,10 @@
     "./HttpMediaSourceStreamFactory": {
       "types": "./dist/HttpMediaSourceStreamFactory.d.ts",
       "import": "./dist/HttpMediaSourceStreamFactory.js"
+    },
+    "./ProcessMediaSourceStreamFactory": {
+      "types": "./dist/ProcessMediaSourceStreamFactory.d.ts",
+      "import": "./dist/ProcessMediaSourceStreamFactory.js"
     },
     "./package.json": "./package.json"
   },

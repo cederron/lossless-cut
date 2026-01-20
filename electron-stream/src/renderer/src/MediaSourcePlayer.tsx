@@ -137,7 +137,7 @@ async function startPlayback({ path, slaveVideo, masterVideo, videoStreamIndex, 
 
       if (!firstChunkReceived) {
         firstChunkReceived = true;
-        console.log('First chunk received');
+        // console.log('First chunk received');
       }
 
       sourceBuffer.appendBuffer(chunk as BufferSource);
@@ -237,7 +237,7 @@ async function startPlayback({ path, slaveVideo, masterVideo, videoStreamIndex, 
       return;
     }
 
-    console.log(`bufferStartTime: ${bufferStartTime}, bufferEndTime: ${bufferEndTime}, master time: ${masterVideo.currentTime}, slave time: ${slaveVideo.currentTime} (diff: ${masterVideo.currentTime - slaveVideo.currentTime}), streamTimestamp: ${streamTimestamp}`);
+    // console.log(`bufferStartTime: ${bufferStartTime}, bufferEndTime: ${bufferEndTime}, master time: ${masterVideo.currentTime}, slave time: ${slaveVideo.currentTime} (diff: ${masterVideo.currentTime - slaveVideo.currentTime}), streamTimestamp: ${streamTimestamp}`);
     // console.log(sourceBuffer.buffered.length, sourceBuffer.buffered.start(0), sourceBuffer.buffered.end(0))
 
     if (sourceBuffer.buffered.length !== 1) {
@@ -251,7 +251,7 @@ async function startPlayback({ path, slaveVideo, masterVideo, videoStreamIndex, 
     try {
       const maxSecAfterBufferToWaitFor = 5;
       if (masterVideo.currentTime < bufferStartTime || (bufferEndTime != null && masterVideo.currentTime - bufferEndTime > maxSecAfterBufferToWaitFor)) {
-        console.log('Seeked before/after buffered range, resetting playback');
+        // console.log('Seeked before/after buffered range, resetting playback');
         onResetNeeded();
         return;
       }
@@ -268,14 +268,14 @@ async function startPlayback({ path, slaveVideo, masterVideo, videoStreamIndex, 
         // https://stackoverflow.com/questions/23301496/how-to-keep-a-live-mediasource-video-stream-in-sync
         const playbackDiff = masterVideo.currentTime - slaveVideo.currentTime;
         if (Math.abs(playbackDiff) > 1) {
-          console.log(`Playback ${playbackDiff > 0 ? 'behind' : 'ahead'} master player time by ${playbackDiff}s, jumping to desired time`);
+          // console.log(`Playback ${playbackDiff > 0 ? 'behind' : 'ahead'} master player time by ${playbackDiff}s, jumping to desired time`);
           // eslint-disable-next-line no-param-reassign
           slaveVideo.currentTime = masterVideo.currentTime;
           setStandardPlaybackRate();
         } else if (playbackDiff != null && playbackDiff > 0.3) {
           // eslint-disable-next-line no-param-reassign
           if (setPlaybackRate(1.5)) {
-            console.warn(`Playback behind by ${playbackDiff}s, speeding up playback`);
+            // console.warn(`Playback behind by ${playbackDiff}s, speeding up playback`);
           }
         } else {
           setStandardPlaybackRate();

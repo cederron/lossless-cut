@@ -1,7 +1,7 @@
 import { container, injectable, Lifecycle } from "tsyringe";
-import type { IFfmpeg, ILogger, IPlatform, ISettings } from "lossless-cut-application";
-import { TOKENS } from "lossless-cut-application";
-import { Platform, FfmpegExeca, ProcessMediaSourceStreamFactory, Settings } from "lossless-cut-application-electron";
+import type { IFfmpeg, ILogger, IPlatform, ISettings, IState, ISystem, IUtils } from "lossless-cut-application";
+import { type IMediaSourceStreamFactory, TOKENS } from "lossless-cut-application";
+import { Platform, FfmpegExeca, ProcessMediaSourceStreamFactory, Settings, Utils, State, SystemElectron } from "lossless-cut-application-electron";
 
 @injectable()
 class ConsoleLogger implements ILogger {
@@ -31,10 +31,10 @@ container.register<IPlatform>(TOKENS.Platform, {
 container.register<IFfmpeg>(TOKENS.Ffmpeg, {
     useClass: FfmpegExeca,
 }, {
-    lifecycle: Lifecycle.Transient,
+    lifecycle: Lifecycle.Singleton,
 })
 
-container.register(TOKENS.MediaSourceStreamFactory, {
+container.register<IMediaSourceStreamFactory>(TOKENS.MediaSourceStreamFactory, {
     useClass: ProcessMediaSourceStreamFactory,
     // useClass: HttpMediaSourceStreamFactory,
 }, {
@@ -45,4 +45,22 @@ container.register<ISettings>(TOKENS.Settings, {
     useClass: Settings,
 }, {
     lifecycle: Lifecycle.Singleton,
+})
+
+container.register<IUtils>(TOKENS.Utils, {
+    useClass: Utils,
+}, {
+    lifecycle: Lifecycle.Transient,
+})
+
+container.register<IState>(TOKENS.State, {
+    useClass: State,
+}, {
+    lifecycle: Lifecycle.Singleton,
+});
+
+container.register<ISystem>(TOKENS.System, {
+    useClass: SystemElectron,
+}, {
+    lifecycle: Lifecycle.Transient,
 })

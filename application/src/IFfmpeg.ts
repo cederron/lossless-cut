@@ -78,4 +78,23 @@ export interface IFfmpeg {
         filePath: string, from?: number | undefined, to?: number | undefined, streamIndex: number,
     }): Promise<Frame[]>;
     setCustomFfPath(path: string | undefined): void;
+
+    runFfmpegVoid(args: readonly string[]): Promise<void>;
+    runFfmpegText(args: readonly string[]): Promise<string>;
+    runFfmpegUrl(args: readonly string[], type: string): Promise<string>;
+
+    getExperimentalArgs(ffmpegExperimental: boolean): string[];
+    getVideoTimescaleArgs(videoTimebase: number | undefined): string[];
+
+    isCuttingStart(cutFrom: number): boolean;
+    isCuttingEnd(cutTo: number, fileDuration: number | undefined): boolean;
+    // isDurationValid(duration?: number): duration is number;
+
+    createChaptersFromSegments({ segmentPaths, chapterNames }: { segmentPaths: string[], chapterNames?: (string | undefined)[] | undefined }): Promise<{
+        start: number;
+        end: number;
+        name: string | undefined;
+    }[] | undefined>
+
+    runFfprobeText(args: readonly string[], { timeout, logCli}?: { timeout?: number, logCli?: boolean }): Promise<string>;
 }

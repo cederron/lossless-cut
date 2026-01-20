@@ -117,7 +117,7 @@ import { UserFacingError } from '../errors.js';
 
 const electron = window.require('electron');
 // const { lstat } = window.require('fs/promises');
-// const { /*parse: parsePath,*/ /* join: pathJoin,*/ /* basename,*/ dirname } = window.require('path');
+// const { parse: parsePath, join: pathJoin, basename, dirname } = window.require('path');
 
 const { utils, state/*, settings*/ } = window.require('@electron/remote').require('./index.js');
 
@@ -1751,6 +1751,7 @@ function App() {
       let firstNewFilePath = newFilePaths[0]!;
 
       // first check if it is a single directory, and if so, read it recursively
+      // if (newFilePaths.length === 1 && (await lstat(firstNewFilePath)).isDirectory()) {
       if (newFilePaths.length === 1 && (await utils.isDirectory(firstNewFilePath))) {
         console.log('Reading directory...');
         invariant(firstNewFilePath != null);
@@ -1759,7 +1760,7 @@ function App() {
 
       // Only allow opening regular files
       for (const path of newFilePaths) {
-        // const fileStat = await utils.isFile(path);
+        // const fileStat = await lstat(path);
 
         if (!await utils.isFile(path)) {
           errorToast(i18n.t('Cannot open anything else than regular files'));

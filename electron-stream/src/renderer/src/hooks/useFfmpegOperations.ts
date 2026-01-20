@@ -6,7 +6,7 @@ import invariant from 'tiny-invariant';
 import i18n from 'i18next';
 
 import { getSuffixedOutPath, transferTimestamps, getOutFileExtension, getOutDir, deleteDispositionValue, getHtml5ifiedPath, unlinkWithRetry, getFrameDuration, isMac } from '../util';
-import { isCuttingStart, isCuttingEnd, runFfmpegWithProgress, getFfCommandLine, getDuration, createChaptersFromSegments, readFileFfprobeMeta, getExperimentalArgs, getVideoTimescaleArgs, logStdoutStderr, runFfmpegConcat, RefuseOverwriteError, runFfmpeg } from '../ffmpeg';
+// import { isCuttingStart, isCuttingEnd, runFfmpegWithProgress, getFfCommandLine, getDuration, createChaptersFromSegments, readFileFfprobeMeta, getExperimentalArgs, getVideoTimescaleArgs, logStdoutStderr, runFfmpegConcat, RefuseOverwriteError, runFfmpegVoid } from '../ffmpeg';
 import { getMapStreamsArgs, getStreamIdsToCopy } from '../util/streams';
 import { needsSmartCut, getCodecParams } from '../smartcut';
 import { getGuaranteedSegments, isDurationValid } from '../segments';
@@ -15,11 +15,12 @@ import type { AvoidNegativeTs, Html5ifyMode, PreserveMetadata } from '../../../c
 import type { AllFilesMeta, Chapter, CopyfileStreams, CustomTagsByFile, LiteFFprobeStream, ParamsByStreamId, SegmentToExport } from '../types';
 import { UserFacingError } from '../../errors';
 import mainApi from '../mainApi';
-import type { LossyMode } from 'lossless-cut-application';
+import { RefuseOverwriteError, type LossyMode } from 'lossless-cut-application';
+import { createChaptersFromSegments, getExperimentalArgs, getVideoTimescaleArgs, isCuttingEnd, isCuttingStart, readFileFfprobeMeta } from '../ffmpeg';
 
-const { utils } = window.require('@electron/remote').require('./index.js');
+const { utils, ffmpeg } = window.require('@electron/remote').require('./index.js');
 // const { join, resolve, dirname } = window.require('path');
-// const { /*writeFile,*/ /*mkdir,*/ /*access,*/ constants: { W_OK } } = window.require('fs/promises');
+// const { writeFile, mkdir, access, constants: { W_OK } } = window.require('fs/promises');
 
 
 export class OutputNotWritableError extends Error {
@@ -133,7 +134,7 @@ function useFfmpegOperations({ filePath, treatInputFileModifiedTimeAsStart, trea
 
     console.log('Merging files', { paths }, 'to', outPath);
 
-    const durations = await pMap(paths, getDuration, { concurrency: 1 });
+    const durations = await pMap(paths, ffmpeg.getDuration, { concurrency: 1 });
     const totalDuration = sum(durations);
 
     let chaptersPath: string | undefined;
@@ -220,7 +221,7 @@ function useFfmpegOperations({ filePath, treatInputFileModifiedTimeAsStart, trea
       // https://superuser.com/questions/718027/ffmpeg-concat-doesnt-work-with-absolute-path
       const concatTxt = paths.map((file) => `file 'file:${utils.pathResolve(file).replaceAll('\'', String.raw`'\''`)}'`).join('\n');
 
-      const ffmpegCommandLine = getFfCommandLine('ffmpeg', ffmpegArgs);
+      const ffmpegCommandLine = ffmpeg.getFfCommandLine('ffmpeg', ffmpegArgs);
 
       const fullCommandLine = `echo -e "${concatTxt.replace(/\n/, String.raw`\n`)}" | ${ffmpegCommandLine}`;
       console.log(fullCommandLine);
@@ -228,7 +229,7 @@ function useFfmpegOperations({ filePath, treatInputFileModifiedTimeAsStart, trea
 
       // const result = await runFfmpegConcat({ ffmpegArgs, concatTxt, totalDuration, onProgress });
       // logStdoutStderr(result);
-      await runFfmpegConcat({ ffmpegArgs, concatTxt, totalDuration, onProgress });
+      await ffmpeg.runFfmpegConcat({ ffmpegArgs, concatTxt, totalDuration, onProgress });
 
 
       await transferTimestamps({ inPath: metadataFromPath, outPath, treatInputFileModifiedTimeAsStart, treatOutputFileModifiedTimeAsStart, duration: totalDuration });
@@ -425,7 +426,7 @@ function useFfmpegOperations({ filePath, treatInputFileModifiedTimeAsStart, trea
     appendFfmpegCommandLog(ffmpegArgs);
     // const result = await runFfmpegWithProgress({ ffmpegArgs, duration: cutDuration, onProgress });
     // logStdoutStderr(result);
-    await runFfmpegWithProgress({ ffmpegArgs, duration: cutDuration, onProgress });
+    await ffmpeg.runFfmpegWithProgress({ ffmpegArgs, duration: cutDuration, onProgress });
 
 
     await transferTimestamps({ inPath: filePath, outPath, cutFrom, cutTo, treatInputFileModifiedTimeAsStart, duration: isDurationValid(fileDuration) ? fileDuration : undefined, treatOutputFileModifiedTimeAsStart });
@@ -492,7 +493,7 @@ function useFfmpegOperations({ filePath, treatInputFileModifiedTimeAsStart, trea
     ];
 
     appendFfmpegCommandLog(ffmpegArgs);
-    await runFfmpeg(ffmpegArgs);
+    await ffmpeg.runFfmpegVoid(ffmpegArgs);
   }, [appendFfmpegCommandLog, filePath]);
 
   const cutMultiple = useCallback(async ({
@@ -791,9 +792,9 @@ function useFfmpegOperations({ filePath, treatInputFileModifiedTimeAsStart, trea
       '-y', outPath,
     ];
 
-    const duration = await getDuration(filePathArg);
+    const duration = await ffmpeg.getDuration(filePathArg);
     appendFfmpegCommandLog(ffmpegArgs);
-    await runFfmpegWithProgress({ ffmpegArgs, duration, onProgress });
+    await ffmpeg.runFfmpegWithProgress({ ffmpegArgs, duration, onProgress });
 
     // const { stdout } = await runFfmpegWithProgress({ ffmpegArgs, duration, onProgress });
 
@@ -813,7 +814,7 @@ function useFfmpegOperations({ filePath, treatInputFileModifiedTimeAsStart, trea
   }) => {
     console.log('Making ffmpeg-assisted dummy file', { filePathArg, outPath });
 
-    const duration = await getDuration(filePathArg);
+    const duration = await ffmpeg.getDuration(filePathArg);
 
     const ffmpegArgs = [
       '-hide_banner',
@@ -828,7 +829,7 @@ function useFfmpegOperations({ filePath, treatInputFileModifiedTimeAsStart, trea
     appendFfmpegCommandLog(ffmpegArgs);
     // const result = await runFfmpegWithProgress({ ffmpegArgs, duration, onProgress });
     // logStdoutStderr(result);
-    await runFfmpegWithProgress({ ffmpegArgs, duration, onProgress });
+    await ffmpeg.runFfmpegWithProgress({ ffmpegArgs, duration, onProgress });
 
     await transferTimestamps({ inPath: filePathArg, outPath, duration, treatInputFileModifiedTimeAsStart, treatOutputFileModifiedTimeAsStart });
   }, [appendFfmpegCommandLog, treatInputFileModifiedTimeAsStart, treatOutputFileModifiedTimeAsStart]);
@@ -860,7 +861,7 @@ function useFfmpegOperations({ filePath, treatInputFileModifiedTimeAsStart, trea
     appendFfmpegCommandLog(ffmpegArgs);
     // const result = await runFfmpegWithProgress({ ffmpegArgs, onProgress });
     // logStdoutStderr(result);
-    await runFfmpegWithProgress({ ffmpegArgs, onProgress });
+    await ffmpeg.runFfmpegWithProgress({ ffmpegArgs, onProgress });
 
 
     await transferTimestamps({ inPath: filePath, outPath, duration: undefined, treatInputFileModifiedTimeAsStart, treatOutputFileModifiedTimeAsStart });
@@ -944,8 +945,12 @@ function useFfmpegOperations({ filePath, treatInputFileModifiedTimeAsStart, trea
     ];
 
     appendFfmpegCommandLog(ffmpegArgs);
-    const { stdout } = await runFfmpeg(ffmpegArgs);
-    console.log(new TextDecoder().decode(stdout));
+    // const { stdout } = await ffmpeg.runFfmpeg(ffmpegArgs);
+    const stdoutText = await ffmpeg.runFfmpegText(ffmpegArgs);
+    console.log(stdoutText);
+    // console.log(new TextDecoder().decode(stdout));
+    // const res = await ffmpeg.runFfmpegText(ffmpegArgs);
+    // console.log(res);
 
     return outPaths;
   }, [appendFfmpegCommandLog, enableOverwriteOutput, filePath]);
@@ -982,8 +987,10 @@ function useFfmpegOperations({ filePath, treatInputFileModifiedTimeAsStart, trea
 
     try {
       appendFfmpegCommandLog(ffmpegArgs);
-      const { stdout } = await runFfmpeg(ffmpegArgs);
-      console.log(new TextDecoder().decode(stdout));
+      const res = await ffmpeg.runFfmpegText(ffmpegArgs);
+      console.log(res);
+      // const { stdout } = await ffmpeg.runFfmpeg(ffmpegArgs);
+      // console.log(new TextDecoder().decode(stdout));
     } catch (err) {
       // Unfortunately ffmpeg will exit with code 1 even though it's a success
       // Note: This is kind of hacky:

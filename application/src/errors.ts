@@ -19,6 +19,13 @@ export class UnsupportedFileError extends Error {
   }
 }
 
+export class RefuseOverwriteError extends Error {
+  constructor() {
+    super();
+    this.name = 'RefuseOverwriteError';
+  }
+}
+
 // export class UserFacingError extends Error {
 //   constructor(message: string) {
 //     super(message);
