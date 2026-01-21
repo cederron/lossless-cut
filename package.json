@@ -7,7 +7,8 @@
     "electron-stream",
     "backend",
     "application",
-    "application-electron"
+    "application-electron",
+    "web"
   ],
   "scripts": {
     "dev": "yarn workspace lossless-cut dev",
