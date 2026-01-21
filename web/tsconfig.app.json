@@ -6,6 +6,10 @@
     "lib": ["ES2022", "DOM", "DOM.Iterable"],
     "module": "ESNext",
     "types": ["vite/client"],
+    "paths": {
+      "lossless-cut-application": ["../application/src/index.ts"],
+      "lossless-cut-application/*": ["../application/src/*"]
+    },
     "skipLibCheck": true,
 
     /* Bundler mode */
