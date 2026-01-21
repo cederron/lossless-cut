@@ -1,0 +1,18 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Run Backend (Dev)",
+			"type": "shell",
+			"command": "yarn",
+			"args": [
+				"workspace",
+				"lossless-cut-backend",
+				"dev"
+			],
+			"isBackground": true,
+			"problemMatcher": [],
+			"group": "none"
+		}
+	]
+}

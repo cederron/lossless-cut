@@ -18,17 +18,31 @@
   ],
   "scripts": {
     "build": "tsc -b",
-    "clean": "rimraf dist tsconfig.tsbuildinfo"
+    "clean": "rimraf dist tsconfig.tsbuildinfo",
+    "dev": "tsx watch src/index.ts",
+    "start": "node dist/index.js",
+    "prisma:generate": "prisma generate",
+    "prisma:migrate": "prisma migrate dev"
   },
   "dependencies": {
+    "@prisma/client": "5.17.0",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.2.1",
     "lossless-cut-application": "workspace:*"
   },
   "devDependencies": {
     "@tsconfig/node22": "^22.0.5",
     "@tsconfig/strictest": "^2.0.8",
-    "@types/node": "22.19.3",
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.6",
+    "@types/node": "^25.0.9",
+    "nodemon": "^3.1.11",
+    "prisma": "5.17.0",
     "rimraf": "^5.0.10",
-    "typescript": "~5.9.3"
+    "ts-node": "^10.9.2",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3"
   },
   "license": "GPL-2.0-only"
 }
