@@ -1,3 +1,7 @@
+export const appPath = 'appPath';
+export const isWindowsStoreBuild = false;
+export const isMasBuild = false;
+export const testFailFsOperation = false;
 // import i18n from 'i18next';
 // import pMap from 'p-map';
 // import prettyBytes from 'pretty-bytes';

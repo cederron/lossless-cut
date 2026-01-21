@@ -1,0 +1,1 @@
+export type PreserveMetadata = 'default' | 'nonglobal' | 'none';

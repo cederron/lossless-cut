@@ -7,4 +7,4 @@ export const TOKENS = {
     State: "State",
     Settings: "Settings",
     System: "System",
-}
+} as const;

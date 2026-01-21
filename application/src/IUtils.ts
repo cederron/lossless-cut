@@ -13,4 +13,6 @@ export interface IUtils {
     writeFile(path: string, data: string | Uint8Array): Promise<void>;
     mkdir(path: string, options?: { recursive?: boolean }): Promise<void>;
     access(path: string, mode: 'wok' | 'rok' | 'fok'): Promise<void>;
+    trashFile(path: string): Promise<void>;
+    unlinkWithRetry(path: string, options?: {signal:AbortSignal}): Promise<void>;
 }

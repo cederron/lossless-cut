@@ -20,3 +20,14 @@ export * from './types/Waveform.ts'
 export * from './types/DetectedSegment.ts'
 export * from './ffprobe.ts'
 export * from './types/Frame.ts';
+export * from './types/Config.ts';
+export * from './types/TimecodeFormat.ts';
+export * from './types/PreserveMetadata.ts';
+export * from './types/AvoidNegativeTs.ts';
+export * from './types/KeyBinding.ts';
+export * from './types/ModifierKey.ts';
+export * from './types/WaveformMode.ts';
+export * from './types/KeyboardAction.ts';
+export * from './types/Html5ifyMode.ts';
+export * from './types/segments.ts';
+export * from './types/PlaybackMode.ts';

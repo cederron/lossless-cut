@@ -1,24 +1,23 @@
 import { useEffect, useState, useRef, useCallback, useMemo } from 'react';
 // import i18n from 'i18next';
 import type { Transition } from 'motion/react';
-import { TOKENS, type ISettings } from 'lossless-cut-application';
+import { TOKENS, type Config, type ISettings } from 'lossless-cut-application';
 
 //import type { Config } from '../../../common/types.js';
 
 import { errorToast } from '../swal';
 import isDev from '../isDev';
 import { mySpring, emitter as animationsEmitter } from '../animations';
-import type { Config } from '../types';
 import { useInjection } from '../../../di/useInjection';
 
-const { /* settings: settingsApi,*/ configStore } = window.require('@electron/remote').require('./index.js') as { settings: ISettings, configStore: { defaults: Config } };
-const { systemPreferences } = window.require('@electron/remote');
+// const { /* settings: settingsApi,*/ configStore } = window.require('@electron/remote').require('./index.js') as { settings: ISettings, configStore: { defaults: Config } };
+// const { systemPreferences } = window.require('@electron/remote');
 
-const animationSettings = systemPreferences.getAnimationSettings();
+// const animationSettings = systemPreferences.getAnimationSettings();
 
 export default function useUserSettingsRoot() {
   const firstUpdateRef = useRef(true);
-  const settingsApi = useInjection<ISettings>('foo');
+  const settingsApi = useInjection<ISettings>(TOKENS.Settings);
 
   function safeSetConfig<T extends keyof Config>(keyValue: Record<T, Config[T]>) {
     const entry = Object.entries(keyValue)[0]!;
@@ -38,7 +37,7 @@ export default function useUserSettingsRoot() {
   }
 
   function safeGetConfig<T extends keyof Config>(key: T): Config[T] {
-    const rawVal = settingsApi.get<Config[T]>(key) ?? configStore.defaults[key];
+    const rawVal = settingsApi.get<Config[T]>(key) ?? settingsApi.getDefaults()[key];
     // NOTE: Need to clone any non-primitive in renderer, or it will become very slow
     // I think because Electron is proxying objects over the bridge
     const cloned = rawVal === undefined
@@ -218,7 +217,8 @@ export default function useUserSettingsRoot() {
     if (reducedMotion !== 'user') return reducedMotion === 'always';
     // fallback to electron detected system setting
     // note: user has to restart app for changes here to be detected
-    return animationSettings.prefersReducedMotion;
+    // return animationSettings.prefersReducedMotion;
+    return false;
   }, [reducedMotion]);
 
   useEffect(() => {

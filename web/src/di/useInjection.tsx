@@ -2,6 +2,8 @@ import { TOKENS } from "lossless-cut-application";
 import { container } from "tsyringe";
 import { type InjectionToken } from "tsyringe";
 
-export function useInjection<T>(token: InjectionToken<T> | typeof TOKENS[keyof typeof TOKENS]): T {
+type TokenValues = typeof TOKENS[keyof typeof TOKENS];
+
+export function useInjection<T>(token: Exclude<InjectionToken<T>, string> | TokenValues): T {
     return container.resolve<T>(token as InjectionToken<T>);
 }

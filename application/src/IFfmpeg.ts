@@ -97,4 +97,5 @@ export interface IFfmpeg {
     }[] | undefined>
 
     runFfprobeText(args: readonly string[], { timeout, logCli}?: { timeout?: number, logCli?: boolean }): Promise<string>;
+    downloadMediaUrl(url: string, outPath: string): Promise<void>;
 }
