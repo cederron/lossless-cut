@@ -1,4 +1,5 @@
 
+import type { StateSegment } from 'lossless-cut-application';
 import { z } from 'zod';
 
 export type GetFrameCount = (sec: number) => number | undefined;
@@ -50,4 +51,5 @@ export type FormatTimecode = (a: { seconds: number, shorten?: boolean | undefine
 
 export const segmentTagsSchema = z.record(z.string(), z.string());
 
+export type UpdateSegAtIndex = (index: number, newProps: Partial<StateSegment>) => void;
 

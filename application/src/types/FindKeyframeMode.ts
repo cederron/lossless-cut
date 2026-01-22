@@ -1,0 +1,1 @@
+export type FindKeyframeMode = 'nearest' | 'before' | 'after';

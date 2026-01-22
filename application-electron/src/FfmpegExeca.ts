@@ -1,5 +1,5 @@
 import { execa } from 'execa';
-import { CaptureFormat, DetectedSegment, FFprobeProbeResult, type IUtils, TOKENS, UnsupportedFileError, Waveform, type IFfmpeg, type ILogger, type IMediaSourceInitParams, type IPlatform, type IRunningProcess, Frame } from 'lossless-cut-application';
+import { CaptureFormat, DetectedSegment, FFprobeProbeResult, type IUtils, TOKENS, UnsupportedFileError, Waveform, type IFfmpeg, type ILogger, type IMediaSourceInitParams, type IPlatform, type IRunningProcess, Frame, FindKeyframeMode } from 'lossless-cut-application';
 import type { ExecaError, Options as ExecaOptions, ResultPromise } from 'execa';
 import { inject, injectable } from 'tsyringe';
 import { join } from 'node:path';
@@ -872,5 +872,176 @@ async readKeyframesAroundTime({ filePath, streamIndex, aroundTime, window }: { f
 
 findKeyframeAtExactTime = (keyframes: Frame[], time: number) => keyframes.find((keyframe) => Math.abs(keyframe.time - time) < 0.000001);
 findNextKeyframe = (keyframes: Frame[], time: number) => keyframes.find((keyframe) => keyframe.time >= time); // (assume they are already sorted)
+
+async detectIntervals({ filePath, customArgs, onProgress, onSegmentDetected, from, to, matchLineTokens, boundingMode }: {
+  filePath: string,
+  customArgs: string[],
+  onProgress: (p: number) => void,
+  onSegmentDetected: (p: DetectedSegment) => void,
+  from: number,
+  to: number,
+  matchLineTokens: (line: string) => DetectedSegment | undefined,
+  boundingMode: boolean,
+}) {
+  const args = [
+    '-hide_banner',
+    ...this.getInputSeekArgs({ filePath, from, to }),
+    ...customArgs,
+    '-f', 'null', '-',
+  ];
+  const process = this.runFfmpegProcess(args, { buffer: false });
+
+  let lastMidpoint: number | undefined;
+
+  function customMatcher(line: string) {
+    const match = matchLineTokens(line);
+    if (match == null) return;
+    const { start, end } = match;
+
+    if (boundingMode) {
+      onSegmentDetected({ start: from + start, end: from + end });
+    } else {
+      const midpoint = start + ((end - start) / 2);
+
+      onSegmentDetected({ start: from + (lastMidpoint ?? 0), end: from + midpoint });
+      lastMidpoint = midpoint;
+    }
+  }
+
+  this.handleProgress(process, to - from, onProgress, customMatcher);
+
+  await process;
+
+  if (!boundingMode && lastMidpoint != null) {
+    onSegmentDetected({
+      start: from + lastMidpoint,
+      end: to,
+    });
+  }
+
+  return { ffmpegArgs: args };
+}
+
+mapFilterOptions = (options: Record<string, string>) => Object.entries(options).map(([key, value]) => `${key}=${value}`).join(':');
+
+
+
+async blackDetect({ filePath, streamId, filterOptions, boundingMode, onProgress, onSegmentDetected, from, to }: {
+  filePath: string,
+  streamId: number | undefined,
+  filterOptions: Record<string, string>,
+  boundingMode: boolean,
+  onProgress: (p: number) => void,
+  onSegmentDetected: (p: DetectedSegment) => void,
+  from: number,
+  to: number,
+}) {
+  return this.detectIntervals({
+    filePath,
+    onProgress,
+    onSegmentDetected,
+    from,
+    to,
+    boundingMode,
+    matchLineTokens: (line) => {
+      // eslint-disable-next-line unicorn/better-regex
+      const match = line.match(/^[blackdetect\s*@\s*0x[0-9a-f]+] black_start:([\d\\.]+) black_end:([\d\\.]+) black_duration:[\d\\.]+/);
+      if (!match) {
+        return undefined;
+      }
+      const start = parseFloat(match[1]!);
+      const end = parseFloat(match[2]!);
+      if (Number.isNaN(start) || Number.isNaN(end)) {
+        return undefined;
+      }
+      if (start < 0 || end <= 0 || start >= end) {
+        return undefined;
+      }
+      return { start, end };
+    },
+    customArgs: [
+      '-map', streamId != null ? `0:${streamId}` : 'v:0',
+      '-filter:v', `blackdetect=${this.mapFilterOptions(filterOptions)}`,
+    ],
+  });
+}
+
+async silenceDetect({ filePath, streamId, filterOptions, boundingMode, onProgress, onSegmentDetected, from, to }: {
+  filePath: string,
+  streamId: number | undefined,
+  filterOptions: Record<string, string>,
+  boundingMode: boolean,
+  onProgress: (p: number) => void,
+  onSegmentDetected: (p: DetectedSegment) => void,
+  from: number, to: number,
+}) {
+  return this.detectIntervals({
+    filePath,
+    onProgress,
+    onSegmentDetected,
+    from,
+    to,
+    boundingMode,
+    matchLineTokens: (line) => {
+      // eslint-disable-next-line unicorn/better-regex
+      const match = line.match(/^[silencedetect\s*@\s*0x[0-9a-f]+] silence_end: ([\d\\.]+)[|\s]+silence_duration: ([\d\\.]+)/);
+      if (!match) {
+        return undefined;
+      }
+      const end = parseFloat(match[1]!);
+      const silenceDuration = parseFloat(match[2]!);
+      if (Number.isNaN(end) || Number.isNaN(silenceDuration)) {
+        return undefined;
+      }
+      const start = end - silenceDuration;
+      if (start < 0 || end <= 0 || start >= end) {
+        return undefined;
+      }
+      return { start, end };
+    },
+    customArgs: [
+      '-map', streamId != null ? `0:${streamId}` : 'a:0',
+      '-filter:a', `silencedetect=${this.mapFilterOptions(filterOptions)}`,
+    ],
+  });
+}
+
+// findKeyframeAtExactTime = (keyframes: Frame[], time: number) => keyframes.find((keyframe) => Math.abs(keyframe.time - time) < 0.000001);
+// findNextKeyframe = (keyframes: Frame[], time: number) => keyframes.find((keyframe) => keyframe.time >= time); // (assume they are already sorted)
+findPreviousKeyframe = (keyframes: Frame[], time: number) => keyframes.findLast((keyframe) => keyframe.time <= time);
+findNearestKeyframe = (keyframes: Frame[], time: number) => minBy(keyframes, (keyframe) => Math.abs(keyframe.time - time));
+
+
+findKeyframe(keyframes: Frame[], time: number, mode: FindKeyframeMode) {
+  switch (mode) {
+    case 'nearest': {
+      return this.findNearestKeyframe(keyframes, time);
+    }
+    case 'before': {
+      return this.findPreviousKeyframe(keyframes, time);
+    }
+    case 'after': {
+      return this.findNextKeyframe(keyframes, time);
+    }
+    default: {
+      return undefined;
+    }
+  }
+}
+
+async findKeyframeNearTime({ filePath, streamIndex, time, mode }: { filePath: string, streamIndex: number, time: number, mode: FindKeyframeMode }) {
+  let keyframes = await this.readKeyframesAroundTime({ filePath, streamIndex, aroundTime: time, window: 10 });
+  let nearByKeyframe = this.findKeyframe(keyframes, time, mode);
+
+  if (!nearByKeyframe) {
+    keyframes = await this.readKeyframesAroundTime({ filePath, streamIndex, aroundTime: time, window: 60 });
+    nearByKeyframe = this.findKeyframe(keyframes, time, mode);
+  }
+
+  if (!nearByKeyframe) return undefined;
+  return nearByKeyframe.time;
+}
+
+
 
 }

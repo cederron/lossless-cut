@@ -17,7 +17,7 @@ import { createSegment, sortSegments, invertSegments, combineOverlappingSegments
 import type { FfmpegDialog } from '../components/ffmpegParameters';
 import { parameters as allFfmpegParameters, getHint, getLabel } from '../components/ffmpegParameters';
 import { maxSegmentsAllowed } from '../util/constants';
-import type { ParseTimecode, } from '../types';
+import type { ParseTimecode, UpdateSegAtIndex, } from '../types';
 import { segmentTagsSchema } from '../types';
 import safeishEval from '../worker/eval';
 // import type { FFprobeFormat, FFprobeStream } from '../../../common/ffprobe';
@@ -28,12 +28,13 @@ import { useGenericDialogContext } from '../components/GenericDialog';
 import Button, { DialogButton } from '../components/Button';
 import { ButtonRow } from '../components/Dialog';
 import * as Dialog from '../components/Dialog';
-import type { DefiniteSegmentBase, FFprobeFormat, FFprobeStream, SegmentBase, StateSegment } from 'lossless-cut-application';
+import { TOKENS, type DefiniteSegmentBase, type FFprobeFormat, type FFprobeStream, type IFfmpeg, type SegmentBase, type StateSegment } from 'lossless-cut-application';
 import { UserFacingError } from '../errors';
 import { shuffleArray } from '../util';
 // import { UserFacingError } from '../../errors';
 // import { editSegmentByExpressionHelpUrl, selectSegmentByExpressionHelpUrl } from '../../../common/constants';
 import type { Segment as ScopeSegment } from 'lossless-cut-application';
+import { useInjection } from '../../../di/useInjection';
 
 // const remote = window.require('@electron/remote');
 // const { shell } = remote;
@@ -68,6 +69,7 @@ function useSegments({ filePath, workingRef, setWorking, setProgress, videoStrea
   showGenericDialog: ShowGenericDialog,
 }) {
   const { t } = useTranslation();
+  const ffmpeg = useInjection<IFfmpeg>(TOKENS.Ffmpeg);
 
   // Segment related state
   const [segColorCounter, setSegColorCounterState] = useState(0);
@@ -272,7 +274,7 @@ function useSegments({ filePath, workingRef, setWorking, setProgress, videoStrea
 
           <Dialog.Description>{description}</Dialog.Description>
 
-          {docUrl && <p><Button onClick={() => shell.openExternal(docUrl)}><FaLink style={{ fontSize: '.8em' }} /> {t('Read more')}</Button></p>}
+          {docUrl && <p><Button onClick={() => /* shell.openExternal(docUrl)*/ { throw new Error('Not implemented') } }><FaLink style={{ fontSize: '.8em' }} /> {t('Read more')}</Button></p>}
 
           <form onSubmit={handleSubmit}>
             {Object.entries(parametersIn).map(([key, parameter], i) => {
@@ -320,7 +322,7 @@ function useSegments({ filePath, workingRef, setWorking, setProgress, videoStrea
     setFfmpegParametersForDialog(dialogType, parameters);
     invariant(mode === '1' || mode === '2');
     invariant(filePath != null);
-    await detectSegments({ name: 'blackScenes', workingText: i18n.t('Detecting black scenes'), errorText: i18n.t('Failed to detect black scenes'), fn: async (onSegmentDetected) => blackDetect({ filePath, streamId: activeVideoStreamIndex, filterOptions, boundingMode: mode === '1', onProgress: setProgress, onSegmentDetected, from: start, to: end }) });
+    await detectSegments({ name: 'blackScenes', workingText: i18n.t('Detecting black scenes'), errorText: i18n.t('Failed to detect black scenes'), fn: async (onSegmentDetected) => ffmpeg.blackDetect({ filePath, streamId: activeVideoStreamIndex, filterOptions, boundingMode: mode === '1', onProgress: setProgress, onSegmentDetected, from: start, to: end }) });
   }, [currentCutSegOrWholeTimeline, deleteCurrentCutSeg, showParametersDialog, getFfmpegParameters, setFfmpegParametersForDialog, filePath, detectSegments, activeVideoStreamIndex, setProgress]);
 
   const detectSilentScenes = useCallback(async () => {
@@ -333,7 +335,7 @@ function useSegments({ filePath, workingRef, setWorking, setProgress, videoStrea
     const { mode, ...filterOptions } = parameters;
     invariant(mode === '1' || mode === '2');
     invariant(filePath != null);
-    await detectSegments({ name: 'silentScenes', workingText: i18n.t('Detecting silent scenes'), errorText: i18n.t('Failed to detect silent scenes'), fn: async (onSegmentDetected) => silenceDetect({ filePath, streamId: [...activeAudioStreamIndexes][0], filterOptions, boundingMode: mode === '1', onProgress: setProgress, onSegmentDetected, from: start, to: end }) });
+    await detectSegments({ name: 'silentScenes', workingText: i18n.t('Detecting silent scenes'), errorText: i18n.t('Failed to detect silent scenes'), fn: async (onSegmentDetected) => ffmpeg.silenceDetect({ filePath, streamId: [...activeAudioStreamIndexes][0], filterOptions, boundingMode: mode === '1', onProgress: setProgress, onSegmentDetected, from: start, to: end }) });
   }, [activeAudioStreamIndexes, currentCutSegOrWholeTimeline, deleteCurrentCutSeg, detectSegments, filePath, getFfmpegParameters, setFfmpegParametersForDialog, setProgress, showParametersDialog]);
 
   const detectSceneChanges = useCallback(async () => {
@@ -355,8 +357,8 @@ function useSegments({ filePath, workingRef, setWorking, setProgress, videoStrea
     deleteCurrentCutSeg();
     if (!videoStream) return;
     invariant(filePath != null);
-    const keyframes = (await readFrames({ filePath, from: start, to: end, streamIndex: videoStream.index })).filter((frame) => frame.keyframe);
-    const newSegments = mapTimesToSegments(keyframes.map((keyframe) => keyframe.time), true);
+    const keyframes = (await ffmpeg.readFrames({ filePath, from: start, to: end, streamIndex: videoStream.index })).filter((frame) => frame.keyframe);
+    const newSegments = ffmpeg.mapTimesToSegments(keyframes.map((keyframe) => keyframe.time), true);
     loadCutSegments({ segments: newSegments, append: true, getNextCurrentSegIndex: (edl) => edl.length - 1, clampDuration: fileDuration });
   }, [currentCutSegOrWholeTimeline, deleteCurrentCutSeg, fileDuration, filePath, loadCutSegments, videoStream]);
 
@@ -521,7 +523,7 @@ function useSegments({ filePath, workingRef, setWorking, setProgress, videoStrea
           const time = newSegment[key];
           invariant(filePath != null);
           if (time != null) {
-            const keyframe = await findKeyframeNearTime({ filePath, streamIndex: videoStream.index, time, mode });
+            const keyframe = await ffmpeg.findKeyframeNearTime({ filePath, streamIndex: videoStream.index, time, mode });
             if (keyframe == null) throw new UserFacingError(i18n.t('Cannot find any keyframe within 60 seconds of frame {{time}}', { time }));
             newSegment[key] = keyframe;
           }

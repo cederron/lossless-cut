@@ -1,5 +1,5 @@
 import type { IMediaSourceInitParams } from "./IMediaSource.ts";
-import type { CaptureFormat, DetectedSegment, FFprobeChapter, FFprobeFormat, FFprobeStream, Frame, Waveform } from "./index.ts";
+import type { CaptureFormat, DetectedSegment, FFprobeChapter, FFprobeFormat, FFprobeStream, FindKeyframeMode, Frame, Waveform } from "./index.ts";
 import type { IRunningProcess } from "./IRunningProcess.ts";
 
 export interface IFfmpeg {
@@ -108,4 +108,32 @@ export interface IFfmpeg {
     readKeyframesAroundTime({ filePath, streamIndex, aroundTime, window }: { filePath: string, streamIndex: number, aroundTime: number, window: number }): Promise<Frame[]>;
     findKeyframeAtExactTime(keyframes: Frame[], time: number): Frame | undefined;
     findNextKeyframe(keyframes: Frame[], time: number): Frame | undefined;
+
+    blackDetect({ filePath, streamId, filterOptions, boundingMode, onProgress, onSegmentDetected, from, to }: {
+  filePath: string,
+  streamId: number | undefined,
+  filterOptions: Record<string, string>,
+  boundingMode: boolean,
+  onProgress: (p: number) => void,
+  onSegmentDetected: (p: DetectedSegment) => void,
+  from: number,
+  to: number,
+}): Promise<{
+  ffmpegArgs: string[];
+}>;
+
+silenceDetect({ filePath, streamId, filterOptions, boundingMode, onProgress, onSegmentDetected, from, to }: {
+  filePath: string,
+  streamId: number | undefined,
+  filterOptions: Record<string, string>,
+  boundingMode: boolean,
+  onProgress: (p: number) => void,
+  onSegmentDetected: (p: DetectedSegment) => void,
+  from: number, to: number,
+}): Promise<{
+  ffmpegArgs: string[];
+}>;
+
+findKeyframeNearTime({ filePath, streamIndex, time, mode }: { filePath: string, streamIndex: number, time: number, mode: FindKeyframeMode }): Promise<number | undefined>;
+
 }
