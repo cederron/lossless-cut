@@ -1,5 +1,5 @@
 import { execa } from 'execa';
-import { CaptureFormat, DetectedSegment, FFprobeProbeResult, type IUtils, TOKENS, UnsupportedFileError, Waveform, type IFfmpeg, type ILogger, type IMediaSourceInitParams, type IPlatform, type IRunningProcess, Frame, FindKeyframeMode } from 'lossless-cut-application';
+import { CaptureFormat, DetectedSegment, FFprobeProbeResult, type IUtils, TOKENS, UnsupportedFileError, Waveform, type IFfmpeg, type ILogger, type IMediaSourceInitParams, type IPlatform, type IRunningProcess, Frame, FindKeyframeMode, FFprobeStream } from 'lossless-cut-application';
 import type { ExecaError, Options as ExecaOptions, ResultPromise } from 'execa';
 import { inject, injectable } from 'tsyringe';
 import { join } from 'node:path';
@@ -1009,10 +1009,13 @@ async silenceDetect({ filePath, streamId, filterOptions, boundingMode, onProgres
 // findKeyframeAtExactTime = (keyframes: Frame[], time: number) => keyframes.find((keyframe) => Math.abs(keyframe.time - time) < 0.000001);
 // findNextKeyframe = (keyframes: Frame[], time: number) => keyframes.find((keyframe) => keyframe.time >= time); // (assume they are already sorted)
 findPreviousKeyframe = (keyframes: Frame[], time: number) => keyframes.findLast((keyframe) => keyframe.time <= time);
-findNearestKeyframe = (keyframes: Frame[], time: number) => minBy(keyframes, (keyframe) => Math.abs(keyframe.time - time));
+    findNearestKeyframe = (keyframes: Frame[], time: number) => {
+        if (keyframes.length === 0) return undefined;
+        return keyframes.reduce((prev, curr) => (Math.abs(curr.time - time) < Math.abs(prev.time - time) ? curr : prev));
+    };
 
 
-findKeyframe(keyframes: Frame[], time: number, mode: FindKeyframeMode) {
+    findKeyframe(keyframes: Frame[], time: number, mode: FindKeyframeMode) {
   switch (mode) {
     case 'nearest': {
       return this.findNearestKeyframe(keyframes, time);
@@ -1042,6 +1045,39 @@ async findKeyframeNearTime({ filePath, streamIndex, time, mode }: { filePath: st
   return nearByKeyframe.time;
 }
 
+parseFfprobeFps(stream: FFprobeStream) {
+  const match = typeof stream.avg_frame_rate === 'string' && stream.avg_frame_rate.match(/^(\d+)\/(\d+)$/);
+  if (!match) return undefined;
+  const num = parseInt(match[1]!, 10);
+  const den = parseInt(match[2]!, 10);
+  if (den > 0) return num / den;
+  return undefined;
+}
 
+getStreamFps(stream: FFprobeStream) {
+  if (stream.codec_type === 'video') {
+    const fps = this.parseFfprobeFps(stream);
+    return fps;
+  }
+  if (stream.codec_type === 'audio') {
+    // eslint-disable-next-line unicorn/no-lonely-if
+    if (typeof stream.sample_rate === 'string') {
+      const sampleRate = parseInt(stream.sample_rate, 10);
+      if (!Number.isNaN(sampleRate) && sampleRate > 0) {
+        if (stream.codec_name === 'mp3') {
+          // https://github.com/mifi/lossless-cut/issues/1754#issuecomment-1774107468
+          const frameSize = 1152;
+          return sampleRate / frameSize;
+        }
+        if (stream.codec_name === 'aac') {
+          // https://stackoverflow.com/questions/59173435/aac-packet-size
+          const frameSize = 1024;
+          return sampleRate / frameSize;
+        }
+      }
+    }
+  }
+  return undefined;
+}
 
 }

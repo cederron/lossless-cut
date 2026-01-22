@@ -36,3 +36,5 @@ export * from './types/FFprobeStream.ts';
 export * from './types/Chapter.ts';
 export * from './types/Segment.ts';
 export * from './types/FindKeyframeMode.ts';
+export * from './types/SourceFile.ts';
+export * from './types/FileNameTemplateContext.ts';

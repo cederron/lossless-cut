@@ -5,7 +5,7 @@ import i18n from 'i18next';
 import pMap from 'p-map';
 import invariant from 'tiny-invariant';
 import sortBy from 'lodash/sortBy';
-import { Trans, useTranslation } from 'react-i18next';
+import { useTranslation } from 'react-i18next';
 import { FaLink } from 'react-icons/fa';
 
 import TextInput from '../components/TextInput';
@@ -30,10 +30,10 @@ import { ButtonRow } from '../components/Dialog';
 import * as Dialog from '../components/Dialog';
 import { TOKENS, type DefiniteSegmentBase, type FFprobeFormat, type FFprobeStream, type IFfmpeg, type SegmentBase, type StateSegment } from 'lossless-cut-application';
 import { UserFacingError } from '../errors';
-import { shuffleArray } from '../util';
+import { getFileSize, shuffleArray } from '../util';
 // import { UserFacingError } from '../../errors';
 // import { editSegmentByExpressionHelpUrl, selectSegmentByExpressionHelpUrl } from '../../../common/constants';
-import type { Segment as ScopeSegment } from 'lossless-cut-application';
+import type { IUtils, Segment as ScopeSegment, SegmentToExport } from 'lossless-cut-application';
 import { useInjection } from '../../../di/useInjection';
 
 // const remote = window.require('@electron/remote');
@@ -70,6 +70,7 @@ function useSegments({ filePath, workingRef, setWorking, setProgress, videoStrea
 }) {
   const { t } = useTranslation();
   const ffmpeg = useInjection<IFfmpeg>(TOKENS.Ffmpeg);
+  // const utils = useInjection<IUtils>(TOKENS.Utils);
 
   // Segment related state
   const [segColorCounter, setSegColorCounterState] = useState(0);
@@ -349,7 +350,7 @@ function useSegments({ filePath, workingRef, setWorking, setProgress, videoStrea
     // eslint-disable-next-line prefer-destructuring
     const minChange = parameters['minChange'];
     invariant(minChange != null);
-    await detectSegments({ name: 'sceneChanges', workingText: i18n.t('Detecting scene changes'), errorText: i18n.t('Failed to detect scene changes'), fn: async (onSegmentDetected) => ffmpegDetectSceneChanges({ filePath, streamId: activeVideoStreamIndex, minChange, onProgress: setProgress, onSegmentDetected, from: start, to: end }) });
+    await detectSegments({ name: 'sceneChanges', workingText: i18n.t('Detecting scene changes'), errorText: i18n.t('Failed to detect scene changes'), fn: async (onSegmentDetected) => ffmpeg.detectSceneChanges({ filePath, streamId: activeVideoStreamIndex, minChange, onProgress: setProgress, onSegmentDetected, from: start, to: end }) });
   }, [activeVideoStreamIndex, currentCutSegOrWholeTimeline, deleteCurrentCutSeg, detectSegments, filePath, getFfmpegParameters, setFfmpegParametersForDialog, setProgress, showParametersDialog]);
 
   const createSegmentsFromKeyframes = useCallback(async () => {
@@ -797,7 +798,7 @@ function useSegments({ filePath, workingRef, setWorking, setProgress, videoStrea
 
     showGenericDialog({
       isAlert: true,
-      render: () => (
+      render: () => (<></>
         // <ExpressionDialog
         //   onSubmit={onSubmit}
         //   confirmButtonText={t('Select segments')}

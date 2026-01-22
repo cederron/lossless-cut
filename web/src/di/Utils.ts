@@ -1,8 +1,8 @@
-import { readdir, rename, stat, utimes } from "fs/promises";
+import { constants, access, readdir, rename, stat, utimes } from "fs/promises";
 import { TOKENS, type Html5ifyMode, type IPlatform, type IUtils } from "lossless-cut-application";
 import type { Options } from 'p-retry';
 import pRetry from 'p-retry';
-import { dirname, extname, join, parse } from "path";
+import path, { dirname, extname, join, parse } from "path";
 import { inject, injectable } from "tsyringe";
 import mime from 'mime-types';
 
@@ -207,5 +207,30 @@ readdir(path: string | undefined): Promise<string[]> {
 getMimeExtension(mimeType: string): string | false {
     return mime.extension(mimeType);
 }
+
+    async checkDirWriteAccess(dirPath: string) {
+        try {
+            await access(dirPath, constants.W_OK);
+        } catch (err) {
+            if (err instanceof Error && 'code' in err) {
+                if (err.code === 'EPERM') return false; // Thrown on Mac (MAS build) when user has not yet allowed access
+                if (err.code === 'EACCES') return false; // Thrown on Linux when user doesn't have access to output dir
+            }
+            console.error(err);
+        }
+        return true;
+    }
+
+    pathNormalize(path: string): string {
+        return path.normalize(path);
+    }
+
+    pathSep(): string {
+        return path.sep;
+    }
+
+    pathParsedName(path: string): string {
+        return parse(path).name;
+    }
 
 }

@@ -12,6 +12,9 @@ export interface IUtils {
     dirname(path: string): string;
     pathExists(path: string): Promise<boolean>;
     pathResolve(...paths: string[]): string;
+    pathNormalize(path: string): string;
+    pathParsedName(path: string): string;
+    pathSep(): string;
     writeFile(path: string, data: string | Uint8Array): Promise<void>;
     mkdir(path: string, options?: { recursive?: boolean }): Promise<void>;
     access(path: string, mode: 'wok' | 'rok' | 'fok'): Promise<void>;
@@ -38,4 +41,6 @@ getSuffixedFileName(filePath: string | undefined, nameSuffix: string): string
 getOutPath({ customOutDir, filePath, fileName }: { customOutDir?: string | undefined, filePath?: string | undefined, fileName: string }): string;
 renameWithRetry(renameFromPath: string, renameToPath: string): Promise<void>;
 getMimeExtension(mimeType: string): string | false;
+getFileDir(filePath?: string): string | undefined;
+checkDirWriteAccess(dirPath: string): Promise<boolean>;
 }

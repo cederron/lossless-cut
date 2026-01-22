@@ -1,6 +1,9 @@
+import type { FFprobeFormat } from "lossless-cut-application";
+
 export const appPath = 'appPath';
 export const isWindowsStoreBuild = false;
 export const isMasBuild = false;
+export const isStoreBuild = false;
 export const testFailFsOperation = false;
 
 export const getFrameDuration = (fps?: number) => 1 / (fps ?? 30);
@@ -40,6 +43,30 @@ export function shuffleArray<T>(arrayIn: T[]) {
   return array;
 }
 
+export function getFileSize(format: FFprobeFormat) {
+  const fileSize = parseInt(format.size, 10);
+  if (Number.isNaN(fileSize)) return undefined;
+  return fileSize;
+}
+
+export const mirrorTransform = 'matrix(-1, 0, 0, 1, 0, 0)';
+
+export const splitKeyboardKeys = (keys: string) => keys.split('+');
+
+// eslint-disable-next-line space-before-function-paren
+export function withBlur<T extends { target?: { blur?: () => unknown } | object }>(cb: (a: T) => void) {
+  return (e: T) => {
+    cb(e);
+    if (e.target && 'blur' in e.target) e.target?.blur?.();
+  };
+}
+
+export const hasDuplicates = (arr: unknown[]) => new Set(arr).size !== arr.length;
+
+export function filenamify(name: string) {
+  // \p{L}\p{N} are unicode letters and numbers
+  return name.replaceAll(/[^\p{L}\p{N} .-_]/gu, '_');
+}
 
 // import i18n from 'i18next';
 // import pMap from 'p-map';
@@ -459,11 +486,11 @@ export function shuffleArray<T>(arrayIn: T[]) {
 // export const allModifiers = new Set([...shiftModifiers, ...controlModifiers, ...altModifiers, ...metaModifiers]);
 
 
-// export function getMetaKeyName() {
-//   if (isMac) return i18n.t('⌘ Cmd');
-//   if (isWindows) return i18n.t('⊞ Win');
-//   return i18n.t('Meta');
-// }
+export function getMetaKeyName() {
+  // if (isMac) return i18n.t('⌘ Cmd');
+  // if (isWindows) return i18n.t('⊞ Win');
+  return ('Meta');
+}
 
 // export const dialogButtonOrder = isWindows ? 'rtl' : 'ltr'; // use ltr for mac and linux, rtl for windows
 

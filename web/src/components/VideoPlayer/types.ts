@@ -1,5 +1,5 @@
 
-import type { StateSegment } from 'lossless-cut-application';
+import type { FFprobeChapter, FFprobeFormat, FileStream, StateSegment } from 'lossless-cut-application';
 import { z } from 'zod';
 
 export type GetFrameCount = (sec: number) => number | undefined;
@@ -53,3 +53,38 @@ export const segmentTagsSchema = z.record(z.string(), z.string());
 
 export type UpdateSegAtIndex = (index: number, newProps: Partial<StateSegment>) => void;
 
+export type FfmpegCommandLog = { command: string, time: Date }[];
+
+export type FilesMeta = Record<string, {
+  streams: FileStream[];
+  format: FFprobeFormat;
+  chapters: FFprobeChapter[];
+}>
+
+export type TunerType = 'wheelSensitivity' | 'waveformHeight' | 'keyboardNormalSeekSpeed' | 'keyboardSeekSpeed2' | 'keyboardSeekSpeed3' | 'keyboardSeekAccFactor';
+
+export interface WaveformSlice extends WaveformBase {
+  from: number,
+  to: number,
+  duration: number,
+  url?: string, // undefined while rendering
+}
+
+export interface OverviewWaveform extends WaveformBase {
+  url: string,
+}
+
+export type RenderableWaveform = WaveformSlice | OverviewWaveform;
+
+export interface Thumbnail {
+  time: number
+  url: string
+}
+
+export interface FileStats {
+  size: number | bigint,
+  atime: number,
+  mtime: number,
+  ctime: number,
+  birthtime: number,
+}
