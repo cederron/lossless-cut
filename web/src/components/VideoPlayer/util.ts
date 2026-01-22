@@ -2,6 +2,45 @@ export const appPath = 'appPath';
 export const isWindowsStoreBuild = false;
 export const isMasBuild = false;
 export const testFailFsOperation = false;
+
+export const getFrameDuration = (fps?: number) => 1 / (fps ?? 30);
+
+// source: https://developer.mozilla.org/en-US/docs/Web/API/UI_Events/Keyboard_event_code_values
+// copy([...new Set([temp1, temp2, temp3].map((t) => t.querySelectorAll('tr td:nth-child(3) code:first-child')).flatMap((l) => [...l]).map((code) => code.innerText.replace(/"/g, '')))].join('\n'))
+export const shiftModifiers = new Set(['ShiftLeft', 'ShiftRight']);
+export const controlModifiers = new Set(['ControlLeft', 'ControlRight']);
+export const altModifiers = new Set(['AltLeft', 'AltRight']);
+export const metaModifiers = new Set(['MetaLeft', 'MetaRight']);
+export const allModifiers = new Set([...shiftModifiers, ...controlModifiers, ...altModifiers, ...metaModifiers]);
+
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#escaping
+export function escapeRegExp(str: string) {
+  // eslint-disable-next-line unicorn/better-regex
+  return str.replaceAll(/[.*+?^${}()|[\]\\]/g, String.raw`\$&`); // $& means the whole matched string
+}
+
+// https://stackoverflow.com/a/2450976/6519037
+export function shuffleArray<T>(arrayIn: T[]) {
+  const array = [...arrayIn];
+  let currentIndex = array.length;
+  let randomIndex: number;
+
+  // While there remain elements to shuffle...
+  while (currentIndex !== 0) {
+    // Pick a remaining element...
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex -= 1;
+
+    // And swap it with the current element.
+    [array[currentIndex], array[randomIndex]] = [
+      array[randomIndex]!, array[currentIndex]!,
+    ] as const;
+  }
+
+  return array;
+}
+
+
 // import i18n from 'i18next';
 // import pMap from 'p-map';
 // import prettyBytes from 'pretty-bytes';

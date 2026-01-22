@@ -1,0 +1,1 @@
+export interface Chapter { start: number, end: number, name?: string | undefined }

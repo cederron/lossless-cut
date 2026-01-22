@@ -384,7 +384,7 @@ export async function readFileFfprobeMeta(filePath: string) {
   }
 }
 
-export type FileFfprobeMeta = Awaited<ReturnType<typeof readFileFfprobeMeta>>;
+export type FileFfprobeMeta = Awaited<{ format: FFprobeFormat, streams: (FFprobeStream & { guessedType?: 'dji-gps-srt' | undefined })[], chapters: FFprobeChapter[] }>;
 export type FileStream = FileFfprobeMeta['streams'][number];
 
 async function renderThumbnail(filePath: string, timestamp: number, signal: AbortSignal) {

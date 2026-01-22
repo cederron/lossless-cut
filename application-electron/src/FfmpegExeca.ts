@@ -634,7 +634,7 @@ export class FfmpegExeca implements IFfmpeg {
     );
 
     getVideoTimescaleArgs = (videoTimebase: number | undefined) => (videoTimebase != null ? ['-video_track_timescale', String(videoTimebase)] : []);
-    
+
     // safeCreateBlob(array: Uint8Array, options?: BlobPropertyBag) {
     //   // if we don't do this when creating a Blob, we get:
     //   // "Failed to construct 'Blob': The provided ArrayBufferView value must not be resizable."
@@ -766,19 +766,19 @@ export class FfmpegExeca implements IFfmpeg {
     }
 
     async readFrames({ filePath, from, to, streamIndex }: {
-      filePath: string, from?: number | undefined, to?: number | undefined, streamIndex: number,
+        filePath: string, from?: number | undefined, to?: number | undefined, streamIndex: number,
     }) {
-      const intervalsArgs = from != null && to != null ? ['-read_intervals', `${from}%${to}`] : [];
-      const { stdout } = await this.runFfprobe(['-v', 'error', ...intervalsArgs, '-show_packets', '-select_streams', String(streamIndex), '-show_entries', 'packet=pts_time,flags', '-of', 'json', filePath], { logCli: false });
-      const packetsFiltered: Frame[] = (JSON.parse(new TextDecoder().decode(stdout)).packets as { flags: string, pts_time: string }[])
-        .map((p) => ({
-          keyframe: p.flags[0] === 'K',
-          time: parseFloat(p.pts_time),
-          createdAt: new Date(),
-        }))
-        .filter((p) => !Number.isNaN(p.time));
-    
-      return packetsFiltered.sort((a, b) => a.time - b.time);
+        const intervalsArgs = from != null && to != null ? ['-read_intervals', `${from}%${to}`] : [];
+        const { stdout } = await this.runFfprobe(['-v', 'error', ...intervalsArgs, '-show_packets', '-select_streams', String(streamIndex), '-show_entries', 'packet=pts_time,flags', '-of', 'json', filePath], { logCli: false });
+        const packetsFiltered: Frame[] = (JSON.parse(new TextDecoder().decode(stdout)).packets as { flags: string, pts_time: string }[])
+            .map((p) => ({
+                keyframe: p.flags[0] === 'K',
+                time: parseFloat(p.pts_time),
+                createdAt: new Date(),
+            }))
+            .filter((p) => !Number.isNaN(p.time));
+
+        return packetsFiltered.sort((a, b) => a.time - b.time);
     }
 
     setCustomFfPath(path: string | undefined) {
@@ -798,19 +798,19 @@ export class FfmpegExeca implements IFfmpeg {
     }
 
     async createChaptersFromSegments({ segmentPaths, chapterNames }: { segmentPaths: string[], chapterNames?: (string | undefined)[] | undefined }) {
-      if (!chapterNames) return undefined;
-      try {
-        const durations = await pMap(segmentPaths, (segmentPath) => this.getDuration(segmentPath), { concurrency: 3 });
-        let timeAt = 0;
-        return durations.map((duration, i) => {
-          const ret = { start: timeAt, end: timeAt + duration, name: chapterNames[i] };
-          timeAt += duration;
-          return ret;
-        });
-      } catch (err) {
-        console.error('Failed to create chapters from segments', err);
-        return undefined;
-      }
+        if (!chapterNames) return undefined;
+        try {
+            const durations = await pMap(segmentPaths, (segmentPath) => this.getDuration(segmentPath), { concurrency: 3 });
+            let timeAt = 0;
+            return durations.map((duration, i) => {
+                const ret = { start: timeAt, end: timeAt + duration, name: chapterNames[i] };
+                timeAt += duration;
+                return ret;
+            });
+        } catch (err) {
+            console.error('Failed to create chapters from segments', err);
+            return undefined;
+        }
     }
 
     async runFfprobeText(args: readonly string[], { timeout = this.platform.isDev() ? 10000 : 30000, logCli = true } = {}) {
@@ -828,5 +828,49 @@ export class FfmpegExeca implements IFfmpeg {
             clearTimeout(timer);
         }
     }
-    
+
+    getIntervalAroundTime(time: number, window: number) {
+        return {
+            from: Math.max(time - window / 2, 0),
+            to: time + window / 2,
+        };
+    }
+
+    async readFramesAroundTime({ filePath, streamIndex, aroundTime, window }: { filePath: string, streamIndex: number, aroundTime: number, window: number }) {
+        invariant(aroundTime != null);
+        const { from, to } = this.getIntervalAroundTime(aroundTime, window);
+        return this.readFrames({ filePath, from, to, streamIndex });
+    }
+
+    async downloadMediaUrl(url: string, outPath: string) {
+  // User agent taken from https://techblog.willshouse.com/2012/01/03/most-common-user-agents/
+  const userAgent = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36';
+  const args = [
+    '-hide_banner', '-loglevel', 'error',
+    '-user_agent', userAgent,
+    '-i', url,
+    '-c', 'copy',
+    outPath,
+  ];
+
+  await this.runFfmpegVoid(args);
+}
+
+findNearestKeyFrameTime({ frames, time, direction, fps }: { frames: Frame[], time: number, direction: number, fps: number | undefined }) {
+  const sigma = fps ? (1 / fps) : 0.1;
+  const keyframes = frames.filter((f) => f.keyframe && (direction > 0 ? f.time > time + sigma : f.time < time - sigma));
+  if (keyframes.length === 0) return undefined;
+  const nearestKeyFrame = keyframes.sort((a, b) => (direction > 0 ? a.time - b.time : b.time - a.time))[0];
+  if (!nearestKeyFrame) return undefined;
+  return nearestKeyFrame.time;
+}
+
+async readKeyframesAroundTime({ filePath, streamIndex, aroundTime, window }: { filePath: string, streamIndex: number, aroundTime: number, window: number }) {
+  const frames = await this.readFramesAroundTime({ filePath, aroundTime, streamIndex, window });
+  return frames.filter((frame) => frame.keyframe);
+}
+
+findKeyframeAtExactTime = (keyframes: Frame[], time: number) => keyframes.find((keyframe) => Math.abs(keyframe.time - time) < 0.000001);
+findNextKeyframe = (keyframes: Frame[], time: number) => keyframes.find((keyframe) => keyframe.time >= time); // (assume they are already sorted)
+
 }

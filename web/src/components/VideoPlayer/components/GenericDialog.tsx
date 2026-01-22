@@ -112,7 +112,7 @@ export function useDialog() {
 
       return (
         <AlertDialog.Content aria-describedby={description} style={{ width: '40vw' }} onOpenAutoFocus={handleOpenAutoFocus}>
-          <AlertDialog.Title>{title}</AlertDialog.Title>
+          <AlertDialog.Title>{title as any}</AlertDialog.Title>
 
           {description && <AlertDialog.Description>{description}</AlertDialog.Description>}
 
@@ -153,7 +153,7 @@ export function useDialog() {
           <Dialog.Content aria-describedby={undefined} style={{ width }}>
             <Dialog.Title>{t('Success!')}</Dialog.Title>
 
-            {children}
+            {children as any}
 
             <Dialog.ButtonRow>
               <Dialog.Close asChild>

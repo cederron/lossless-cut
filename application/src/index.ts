@@ -31,3 +31,7 @@ export * from './types/KeyboardAction.ts';
 export * from './types/Html5ifyMode.ts';
 export * from './types/segments.ts';
 export * from './types/PlaybackMode.ts';
+export * from './types/FileStream.ts';
+export * from './types/FFprobeStream.ts';
+export * from './types/Chapter.ts';
+export * from './types/Segment.ts';
