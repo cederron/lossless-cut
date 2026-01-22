@@ -8,8 +8,8 @@ import { motion, AnimatePresence } from 'motion/react';
 import { FaCaretUp, FaEdit, FaExclamationTriangle, FaEye, FaFile, FaUndo } from 'react-icons/fa';
 
 import HighlightedText from './HighlightedText';
-import type { GenerateOutFileNames, GeneratedOutFileNames } from '../util/outputNameTemplate';
-import { segNumVariable, segSuffixVariable, extVariable, segTagsVariable, segNumIntVariable, selectedSegNumVariable, selectedSegNumIntVariable } from '../util/outputNameTemplate';
+import type { GenerateOutFileNames, GeneratedOutFileNames } from '../util/outputNameTemplate.ts';
+import { segNumVariable, segSuffixVariable, extVariable, segTagsVariable, segNumIntVariable, selectedSegNumVariable, selectedSegNumIntVariable } from '../util/outputNameTemplate.ts';
 import useUserSettings from '../hooks/useUserSettings';
 import Switch from './Switch';
 import Select from './Select';

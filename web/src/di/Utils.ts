@@ -1,10 +1,11 @@
 import { constants, access, readdir, rename, stat, utimes } from "fs/promises";
-import { TOKENS, type Html5ifyMode, type IPlatform, type IUtils } from "lossless-cut-application";
+import { TOKENS, type FFprobeFormat, type Html5ifyMode, type IPlatform, type IUtils } from "lossless-cut-application";
 import type { Options } from 'p-retry';
 import pRetry from 'p-retry';
 import path, { dirname, extname, join, parse } from "path";
 import { inject, injectable } from "tsyringe";
 import mime from 'mime-types';
+import { fileTypeFromFile } from 'file-type/node';
 
 @injectable()
 export class Utils implements IUtils {
@@ -232,5 +233,124 @@ getMimeExtension(mimeType: string): string | false {
     pathParsedName(path: string): string {
         return parse(path).name;
     }
+
+    async readFileStats(path: string): Promise<{ size: number; atimeMs: number; mtimeMs: number; ctimeMs: number; birthtimeMs: number; }> {
+        const stats = await stat(path);
+        return {
+            size: stats.size,
+            atimeMs: stats.atimeMs,
+            mtimeMs: stats.mtimeMs,
+            ctimeMs: stats.ctimeMs,
+            birthtimeMs: stats.birthtimeMs,
+        };
+    }
+
+    async determineSourceFileFormat(ffprobeFormatsStr: string | undefined, filePath: string) {
+  const ffprobeFormats = (ffprobeFormatsStr || '').split(',').map((str) => str.trim()).filter(Boolean);
+
+  const [firstFfprobeFormat] = ffprobeFormats;
+
+  if (firstFfprobeFormat == null) {
+    console.warn('FFprobe returned no formats', ffprobeFormatsStr);
+    return undefined;
+  }
+
+  console.log('FFprobe detected format(s)', ffprobeFormatsStr);
+
+  // We need to test mp3 first because ffprobe seems to report the wrong format sometimes https://github.com/mifi/lossless-cut/issues/2129
+  if (firstFfprobeFormat === 'mp3') {
+    // file-type detects it correctly
+    const fileTypeResponse = await fileTypeFromFile(filePath);
+    if (fileTypeResponse?.mime === 'audio/mpeg') {
+      return 'mp2';
+    }
+  }
+
+  if (ffprobeFormats.length === 1) {
+    return firstFfprobeFormat;
+  }
+
+  // If ffprobe returned a list of formats, use `file-type` to try to detect more accurately.
+  // This should only be the case for matroska (matroska,webm) and mov (mov,mp4,m4a,3gp,3g2,mj2),
+  // so if it's another format, then just return the first format from the list.
+  // See also `ffmpeg -formats`
+  if (!['matroska', 'mov'].includes(firstFfprobeFormat)) {
+    console.warn('Unknown ffprobe format list', ffprobeFormats);
+    return firstFfprobeFormat;
+  }
+
+  const fileTypeResponse = await fileTypeFromFile(filePath);
+  if (fileTypeResponse == null) {
+    console.warn('file-type failed to detect format, defaulting to first FFprobe detected format', ffprobeFormats);
+    return firstFfprobeFormat;
+  }
+
+  // https://github.com/sindresorhus/file-type/blob/main/core.js
+  // https://www.ftyps.com/
+  // https://exiftool.org/TagNames/QuickTime.html
+  switch (fileTypeResponse.mime) {
+    case 'video/x-matroska': {
+      return 'matroska';
+    }
+    case 'video/webm': {
+      return 'webm';
+    }
+    case 'video/quicktime': {
+      return 'mov';
+    }
+    case 'video/3gpp2': {
+      return '3g2';
+    }
+    case 'video/3gpp': {
+      return '3gp';
+    }
+
+    // These two cmds produce identical output, so we assume that encoding "ipod" means encoding m4a
+    // ffmpeg -i example.aac -c copy OutputFile2.m4a
+    // ffmpeg -i example.aac -c copy -f ipod OutputFile.m4a
+    // See also https://github.com/mifi/lossless-cut/issues/28
+    case 'audio/x-m4a':
+    case 'audio/mp4': {
+      return 'ipod';
+    }
+    case 'image/avif':
+    case 'image/heif':
+    case 'image/heif-sequence':
+    case 'image/heic':
+    case 'image/heic-sequence':
+    case 'video/x-m4v':
+    case 'video/mp4':
+    case 'image/x-canon-cr3': {
+      return 'mp4';
+    }
+
+    default: {
+      console.warn('file-type returned unknown format', ffprobeFormats, fileTypeResponse.mime);
+      return firstFfprobeFormat;
+    }
+  }
+}
+
+/**
+ * Some of the detected input formats are not the same as the muxer name used for encoding.
+ * Therefore we have to map between detected input format and encode format
+ * See also ffmpeg -formats
+ */
+mapInputToOutputFormat(requestedFormat: string | undefined) {
+  // see file aac raw adts.aac
+  if (requestedFormat === 'aac') return 'adts';
+
+  return requestedFormat;
+}
+
+async getDefaultOutFormat({ filePath, fileMeta: { format } }: { filePath: string, fileMeta: { format: Pick<FFprobeFormat, 'format_name'> } }) {
+  const assumedFormat = await this.determineSourceFileFormat(format.format_name, filePath);
+
+  return this.mapInputToOutputFormat(assumedFormat);
+}
+
+async readFile(path: string, encoding?: string): Promise<Buffer<ArrayBuffer> | string> {
+    return this.readFile(path, encoding);
+}
 
 }

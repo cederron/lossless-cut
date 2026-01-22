@@ -19,17 +19,18 @@ import getSwal from '../swal';
 import { isMov as ffmpegIsMov } from '../util/streams';
 import useUserSettings from '../hooks/useUserSettings';
 import styles from './ExportConfirm.module.css';
-import type { SegmentToExport } from '../types';
-import type { GenerateOutFileNames } from '../util/outputNameTemplate';
-import { defaultCutFileTemplate, defaultCutMergedFileTemplate } from '../util/outputNameTemplate';
-import type { FFprobeStream } from '../../../common/ffprobe';
-import type { AvoidNegativeTs, PreserveMetadata } from '../../../common/types';
+// import type { SegmentToExport } from '../types';
+import type { GenerateOutFileNames } from '../util/outputNameTemplate.ts';
+import { defaultCutFileTemplate, defaultCutMergedFileTemplate } from '../util/outputNameTemplate.ts';
+// import type { FFprobeStream } from '../../../common/ffprobe';
+// import type { AvoidNegativeTs, PreserveMetadata } from '../../../common/types';
 import TextInput from './TextInput';
 import type { UseSegments } from '../hooks/useSegments';
 import ExportSheet from './ExportSheet';
 import ToggleExportConfirm from './ToggleExportConfirm';
-import type { LossyMode } from '../../../main';
+// import type { LossyMode } from '../../../main';
 import AnimatedTr from './AnimatedTr';
+import type { AvoidNegativeTs, FFprobeStream, LossyMode, PreserveMetadata, SegmentToExport } from 'lossless-cut-application';
 
 
 const noticeStyle: CSSProperties = { marginBottom: '.5em' };

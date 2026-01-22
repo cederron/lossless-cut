@@ -48,52 +48,51 @@ import Working from './components/Working';
 import OutputFormatSelect from './components/OutputFormatSelect';
 import * as Dialog from './components/Dialog';
 
-import { loadMifiLink, runStartupCheck } from './mifi';
+// import { loadMifiLink, runStartupCheck } from './mifi';
 import { darkModeTransition } from './colors';
 import { getSegColor } from './util/colors';
-import type {
-  FileFfprobeMeta } from './ffmpeg';
-import {
-  getStreamFps, isCuttingStart, isCuttingEnd,
-  readFileFfprobeMeta, getDefaultOutFormat,
-  setCustomFfPath as ffmpegSetCustomFfPath,
-  isIphoneHevc, isProblematicAvc1, tryMapChaptersToEdl,
-  getDuration, getTimecodeFromStreams, createChaptersFromSegments,
-  RefuseOverwriteError, extractSubtitleTrackToSegments,
-  mapRecommendedDefaultFormat,
-  getFfCommandLine,
-} from './ffmpeg';
+
+// import {
+//   getStreamFps, isCuttingStart, isCuttingEnd,
+//   readFileFfprobeMeta, getDefaultOutFormat,
+//   setCustomFfPath as ffmpegSetCustomFfPath,
+//   isIphoneHevc, isProblematicAvc1, tryMapChaptersToEdl,
+//   getDuration, getTimecodeFromStreams, createChaptersFromSegments,
+//   RefuseOverwriteError, extractSubtitleTrackToSegments,
+//   mapRecommendedDefaultFormat,
+//   getFfCommandLine,
+// } from './ffmpeg';
 import { shouldCopyStreamByDefault, getAudioStreams, getRealVideoStreams, isAudioDefinitelyNotSupported, willPlayerProperlyHandleVideo, doesPlayerSupportHevcPlayback, getSubtitleStreams, enableVideoTrack, enableAudioTrack, canHtml5PlayerPlayStreams, isMatroska } from './util/streams';
 import { exportEdlFile, readEdlFile, loadLlcProject, askForEdlImport } from './edlStore';
 import { formatYouTube, getFrameCountRaw, formatTsvHuman } from './edlFormats';
-import {
-  getOutPath, getOutDir,
-  isStoreBuild, dragPreventer,
-  havePermissionToReadFile, resolvePathIfNeeded, getPathReadAccessError, findExistingHtml5FriendlyFile,
-  isOutOfSpaceError, readFileSize, readFileSizes, checkFileSizes, setDocumentTitle, readVideoTs, readDirRecursively, getImportProjectType,
-  calcShouldShowWaveform, calcShouldShowKeyframes, mediaSourceQualities, isExecaError, getStdioString,
-  isMuxNotSupported,
-  getDownloadMediaOutPath,
-  isAbortedError,
-  shootConfetti,
-  isMasBuild,
-  readFileStats,
-} from './util';
+// import {
+//   getOutPath, getOutDir,
+//   isStoreBuild, dragPreventer,
+//   havePermissionToReadFile, resolvePathIfNeeded, getPathReadAccessError, findExistingHtml5FriendlyFile,
+//   isOutOfSpaceError, readFileSize, readFileSizes, checkFileSizes, setDocumentTitle, readVideoTs, readDirRecursively, getImportProjectType,
+//   calcShouldShowWaveform, calcShouldShowKeyframes, mediaSourceQualities, isExecaError, getStdioString,
+//   isMuxNotSupported,
+//   getDownloadMediaOutPath,
+//   isAbortedError,
+//   shootConfetti,
+//   isMasBuild,
+//   readFileStats,
+// } from './util';
 import getSwal, { errorToast, showPlaybackFailedMessage } from './swal';
 import { adjustRate } from './util/rate-calculator';
 import { askExtractFramesAsImages } from './dialogs/extractFrames';
 import type { CleanupChoicesType } from './dialogs';
 import { askForOutDir, askForImportChapters, askForFileOpenAction, showDiskFull, showExportFailedDialog, showConcatFailedDialog, openYouTubeChaptersDialog, showRefuseToOverwrite, showOpenDialog, showMuxNotSupported, promptDownloadMediaUrl, showOutputNotWritable, deleteFiles, mustDisallowVob, toastError } from './dialogs';
-import { openSendReportDialog } from './reporting';
+// import { openSendReportDialog } from './reporting';
 import { sortSegments, convertSegmentsToChaptersWithGaps, hasAnySegmentOverlap, isDurationValid, getPlaybackAction, getSegmentTags, filterNonMarkers, isInitialSegment } from './segments';
-import type { GenerateMergedOutFileNamesParams, GeneratedOutFileNames } from './util/outputNameTemplate';
-import { generateCutFileNames as generateCutFileNamesRaw, generateCutMergedFileNames as generateCutMergedFileNamesRaw, generateMergedFileNames as generateMergedFileNamesRaw, defaultCutFileTemplate, defaultCutMergedFileTemplate, defaultMergedFileTemplate } from './util/outputNameTemplate';
+import type { GenerateMergedOutFileNamesParams, GeneratedOutFileNames } from './util/outputNameTemplate.ts';
+import { generateCutFileNames as generateCutFileNamesRaw, generateCutMergedFileNames as generateCutMergedFileNamesRaw, generateMergedFileNames as generateMergedFileNamesRaw, defaultCutFileTemplate, defaultCutMergedFileTemplate, defaultMergedFileTemplate } from './util/outputNameTemplate.ts';
 import { rightBarWidth, leftBarWidth, ffmpegExtractWindow, zoomMax } from './util/constants';
 import BigWaveform from './components/BigWaveform';
 
-import type { BatchFile, Chapter, CustomTagsByFile, EdlExportType, EdlFileType, EdlImportType, FfmpegCommandLog, FilesMeta, FileStats, ParamsByStreamId, PlaybackMode, SegmentBase, SegmentColorIndex, SegmentTags, StateSegment, TunerType } from './types';
-import { goToTimecodeDirectArgsSchema, openFilesActionArgsSchema } from './types';
-import type { CaptureFormat, KeyboardAction, ApiActionRequest } from '../../common/types.js';
+import type { BatchFile, CustomTagsByFile, FfmpegCommandLog, FilesMeta, FileStats, ParamsByStreamId, SegmentColorIndex, TunerType } from './types';
+// import { goToTimecodeDirectArgsSchema, openFilesActionArgsSchema } from './types';
+// import type { CaptureFormat, KeyboardAction, ApiActionRequest } from '../../common/types.js';
 import type { FFprobeChapter, FFprobeStream } from '../../common/ffprobe.js';
 import useLoading from './hooks/useLoading';
 import useVideo from './hooks/useVideo';

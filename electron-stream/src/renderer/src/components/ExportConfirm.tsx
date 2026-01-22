@@ -28,8 +28,9 @@ import TextInput from './TextInput';
 import type { UseSegments } from '../hooks/useSegments';
 import ExportSheet from './ExportSheet';
 import ToggleExportConfirm from './ToggleExportConfirm';
-import type { LossyMode } from '../../../main';
+// import type { LossyMode } from '../../../main';
 import AnimatedTr from './AnimatedTr';
+import type { LossyMode } from 'lossless-cut-application';
 
 
 const noticeStyle: CSSProperties = { marginBottom: '.5em' };

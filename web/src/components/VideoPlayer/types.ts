@@ -88,3 +88,40 @@ export interface FileStats {
   ctime: number,
   birthtime: number,
 }
+
+export interface BatchFile {
+  path: string,
+  name: string,
+}
+
+// todo remove some time in the future
+export const llcProjectV1Schema = z.object({
+  version: z.literal(1),
+  mediaFileName: z.string().optional(),
+  cutSegments: z.object({
+    start: z.number().optional(),
+    end: z.number().optional(),
+    name: z.string(),
+    tags: segmentTagsSchema.optional(),
+  }).array(),
+});
+
+export const llcProjectV2Schema = z.object({
+  version: z.literal(2),
+  mediaFileName: z.string().optional(),
+  cutSegments: z.object({
+    start: z.number(),
+    end: z.number().optional(),
+    name: z.string(),
+    tags: segmentTagsSchema.optional(),
+    selected: z.boolean().optional(),
+  }).array(),
+});
+
+export type LlcProject = z.infer<typeof llcProjectV2Schema>
+
+export type EdlFileType = 'llc' | 'csv' | 'csv-frames' | 'cutlist' | 'xmeml' | 'fcpxml' | 'dv-analyzer-summary-txt' | 'cue' | 'pbf' | 'edl' | 'srt' | 'otio';
+
+export type EdlImportType = 'youtube' | EdlFileType;
+
+export type EdlExportType = 'csv' | 'tsv-human' | 'csv-human' | 'csv-frames' | 'srt' | 'llc';

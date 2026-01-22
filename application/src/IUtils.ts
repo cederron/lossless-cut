@@ -1,3 +1,4 @@
+import type { FFprobeFormat } from "./ffprobe.ts";
 import type { Html5ifyMode } from "./types/Html5ifyMode.ts";
 
 export interface IUtils {
@@ -43,4 +44,10 @@ renameWithRetry(renameFromPath: string, renameToPath: string): Promise<void>;
 getMimeExtension(mimeType: string): string | false;
 getFileDir(filePath?: string): string | undefined;
 checkDirWriteAccess(dirPath: string): Promise<boolean>;
+readFileStats(path: string): Promise<{ size: number, atimeMs: number, mtimeMs: number, ctimeMs: number, birthtimeMs: number }>;
+getDefaultOutFormat({ filePath, fileMeta: { format } }: { filePath: string, fileMeta: { format: Pick<FFprobeFormat, 'format_name'> } }): Promise<string | undefined>;
+readFile(
+        path: string,
+        encoding?: string,
+    ): Promise<Buffer<ArrayBuffer> | string>;
 }
