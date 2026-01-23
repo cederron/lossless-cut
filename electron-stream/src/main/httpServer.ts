@@ -117,7 +117,7 @@ export default ({ port, onKeyboardAction }: {
     assert(streamIndex != null);
     const ffmpeg = container.resolve<IFfmpeg>(TOKENS.Ffmpeg);
     const result = await ffmpeg.renderWaveformPng({ filePath, start, duration, resample, color, streamIndex, timeout });
-    res.json({ buffer: result.buffer.toString('base64'), width: result.width, height: result.height });
+    res.json({ buffer: result.buffer.toString('base64')});
   }));
 
   const server = http.createServer(app);

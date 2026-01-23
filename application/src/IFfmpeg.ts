@@ -9,12 +9,12 @@ export interface IFfmpeg {
     getFfCommandLine: (cmd: string, args: readonly string[]) => string;
     renderWaveformPng({ filePath, start, duration, resample, color, streamIndex, timeout }: {
         filePath: string,
-        start?: number,
-        duration?: number,
-        resample?: number,
+        start?: number | undefined,
+        duration?: number | undefined,
+        resample?: number | undefined,
         color: string,
         streamIndex: number,
-        timeout?: number,
+        timeout?: number | undefined,
     }): Promise<Waveform>;
     mapTimesToSegments(times: number[], includeLast: boolean): {
         start: number;
