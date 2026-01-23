@@ -5726,3 +5726,676 @@
   rotate: undefined
 }
 2026-01-23T12:05:23.751Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5Calex%5CDownloads%5CDors+Feline-1941_Foot_Fun.wmv&videoStreamIndex=1&audioStreamIndexes=0&seekTo=0&size=800&fps=30 HTTP/1.1 200 - 87.617 ms
+2026-01-23T12:15:53.794Z info: LosslessCut version 3.67.2 { isDev: true }
+2026-01-23T12:15:53.827Z info: Initialized config store
+2026-01-23T12:15:53.828Z info: Waiting for app to become ready
+2026-01-23T12:15:53.833Z info: CLI arguments { _: [] }
+2026-01-23T12:15:53.840Z info: HTTP API listening on http://127.0.0.1:8080/
+2026-01-23T12:15:53.840Z info: HTTP API listening on port 8080
+2026-01-23T12:15:53.906Z info: Added Extension React Developer Tools
+2026-01-23T12:15:54.197Z info: Current version 3.67.2
+2026-01-23T12:15:54.197Z info: Newest version 3.67.2
+2026-01-23T12:16:33.322Z info: API readFramesAroundTime called {
+  filePath: 'C:\\Users\\alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  aroundTime: 0,
+  streamIndex: 1,
+  window: 60
+}
+2026-01-23T12:16:33.347Z info: Received /stream request {
+  path: 'C:\\Users\\alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  videoStreamIndex: '1',
+  audioStreamIndexes: '0',
+  seekTo: '0',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-23T12:16:33.352Z info: API renderWaveformPng called {
+  filePath: 'C:\\Users\\alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  start: 0,
+  duration: 60,
+  resample: undefined,
+  color: '#ffffff',
+  streamIndex: 0,
+  timeout: 10000
+}
+2026-01-23T12:16:33.373Z info: 127.0.0.1 POST /api/readFramesAroundTime HTTP/1.1 200 - 54.935 ms
+2026-01-23T12:16:33.434Z info: 127.0.0.1 POST /api/renderWaveformPng HTTP/1.1 200 - 82.180 ms
+2026-01-23T12:16:33.436Z info: API renderWaveformPng called {
+  filePath: 'C:\\Users\\alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  start: 60,
+  duration: 60,
+  resample: undefined,
+  color: '#ffffff',
+  streamIndex: 0,
+  timeout: 10000
+}
+2026-01-23T12:16:33.553Z info: 127.0.0.1 POST /api/renderWaveformPng HTTP/1.1 200 - 116.524 ms
+2026-01-23T12:16:33.555Z info: API renderWaveformPng called {
+  filePath: 'C:\\Users\\alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  start: -60,
+  duration: 60,
+  resample: undefined,
+  color: '#ffffff',
+  streamIndex: 0,
+  timeout: 10000
+}
+2026-01-23T12:16:33.614Z info: 127.0.0.1 POST /api/renderWaveformPng HTTP/1.1 500 - 59.079 ms
+2026-01-23T12:16:40.159Z info: API readFramesAroundTime called {
+  filePath: 'C:\\Users\\alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  aroundTime: 1.21683,
+  streamIndex: 1,
+  window: 60
+}
+2026-01-23T12:16:40.210Z info: 127.0.0.1 POST /api/readFramesAroundTime HTTP/1.1 200 - 50.581 ms
+2026-01-23T12:16:45.548Z info: API readFramesAroundTime called {
+  filePath: 'C:\\Users\\alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  aroundTime: 2.638447,
+  streamIndex: 1,
+  window: 60
+}
+2026-01-23T12:16:45.595Z info: 127.0.0.1 POST /api/readFramesAroundTime HTTP/1.1 200 - 47.012 ms
+2026-01-23T12:16:45.826Z info: API renderWaveformPng called {
+  filePath: 'C:\\Users\\alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  start: 120,
+  duration: 60,
+  resample: undefined,
+  color: '#ffffff',
+  streamIndex: 0,
+  timeout: 10000
+}
+2026-01-23T12:16:45.836Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5Calex%5CDownloads%5CDors+Feline-1941_Foot_Fun.wmv&videoStreamIndex=1&audioStreamIndexes=0&seekTo=0&size=800&fps=30 HTTP/1.1 200 - 88.389 ms
+2026-01-23T12:16:45.922Z info: 127.0.0.1 POST /api/renderWaveformPng HTTP/1.1 200 - 96.031 ms
+2026-01-23T12:16:45.923Z info: Received /stream request {
+  path: 'C:\\Users\\alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  videoStreamIndex: '1',
+  audioStreamIndexes: '0',
+  seekTo: '131.238427',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-23T12:16:46.020Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5Calex%5CDownloads%5CDors+Feline-1941_Foot_Fun.wmv&videoStreamIndex=1&audioStreamIndexes=0&seekTo=131.238427&size=800&fps=30 HTTP/1.1 - - - ms
+2026-01-23T12:16:46.153Z info: API renderWaveformPng called {
+  filePath: 'C:\\Users\\alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  start: 180,
+  duration: 60,
+  resample: undefined,
+  color: '#ffffff',
+  streamIndex: 0,
+  timeout: 10000
+}
+2026-01-23T12:16:46.257Z info: 127.0.0.1 POST /api/renderWaveformPng HTTP/1.1 200 - 104.342 ms
+2026-01-23T12:16:46.511Z info: Received /stream request {
+  path: 'C:\\Users\\alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  videoStreamIndex: '1',
+  audioStreamIndexes: '0',
+  seekTo: '0',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-23T12:16:46.902Z info: API readFramesAroundTime called {
+  filePath: 'C:\\Users\\alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  aroundTime: 0,
+  streamIndex: 1,
+  window: 60
+}
+2026-01-23T12:16:46.949Z info: 127.0.0.1 POST /api/readFramesAroundTime HTTP/1.1 200 - 47.174 ms
+2026-01-23T12:16:52.964Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5Calex%5CDownloads%5CDors+Feline-1941_Foot_Fun.wmv&videoStreamIndex=1&audioStreamIndexes=0&seekTo=0&size=800&fps=30 HTTP/1.1 200 - 89.416 ms
+2026-01-23T12:16:53.270Z info: Received /stream request {
+  path: 'C:\\Users\\alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  videoStreamIndex: '1',
+  audioStreamIndexes: '0',
+  seekTo: '0',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-23T12:16:56.484Z info: API renderWaveformPng called {
+  filePath: 'C:\\Users\\alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  start: 420,
+  duration: 60,
+  resample: undefined,
+  color: '#ffffff',
+  streamIndex: 0,
+  timeout: 10000
+}
+2026-01-23T12:16:56.502Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5Calex%5CDownloads%5CDors+Feline-1941_Foot_Fun.wmv&videoStreamIndex=1&audioStreamIndexes=0&seekTo=0&size=800&fps=30 HTTP/1.1 200 - 91.067 ms
+2026-01-23T12:16:56.611Z info: 127.0.0.1 POST /api/renderWaveformPng HTTP/1.1 200 - 127.085 ms
+2026-01-23T12:16:56.612Z info: Received /stream request {
+  path: 'C:\\Users\\alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  videoStreamIndex: '1',
+  audioStreamIndexes: '0',
+  seekTo: '463.009172',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-23T12:16:56.816Z info: API renderWaveformPng called {
+  filePath: 'C:\\Users\\alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  start: undefined,
+  duration: undefined,
+  resample: 10000,
+  color: '#ffffff',
+  streamIndex: 0,
+  timeout: undefined
+}
+2026-01-23T12:16:56.847Z info: API renderWaveformPng called {
+  filePath: 'C:\\Users\\alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  start: 480,
+  duration: 60,
+  resample: undefined,
+  color: '#ffffff',
+  streamIndex: 0,
+  timeout: 10000
+}
+2026-01-23T12:16:56.984Z info: API readFramesAroundTime called {
+  filePath: 'C:\\Users\\alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  aroundTime: 463.00917222600407,
+  streamIndex: 1,
+  window: 60
+}
+2026-01-23T12:16:57.030Z info: 127.0.0.1 POST /api/renderWaveformPng HTTP/1.1 200 - 183.522 ms
+2026-01-23T12:16:57.032Z info: API renderWaveformPng called {
+  filePath: 'C:\\Users\\alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  start: 360,
+  duration: 60,
+  resample: undefined,
+  color: '#ffffff',
+  streamIndex: 0,
+  timeout: 10000
+}
+2026-01-23T12:16:57.083Z info: 127.0.0.1 POST /api/readFramesAroundTime HTTP/1.1 200 - 99.089 ms
+2026-01-23T12:16:57.210Z info: 127.0.0.1 POST /api/renderWaveformPng HTTP/1.1 200 - 177.500 ms
+2026-01-23T12:16:57.311Z info: 127.0.0.1 POST /api/renderWaveformPng HTTP/1.1 200 - 494.642 ms
+2026-01-23T12:16:58.640Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5Calex%5CDownloads%5CDors+Feline-1941_Foot_Fun.wmv&videoStreamIndex=1&audioStreamIndexes=0&seekTo=463.009172&size=800&fps=30 HTTP/1.1 200 - 252.140 ms
+2026-01-23T12:16:58.656Z info: Received /stream request {
+  path: 'C:\\Users\\alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  videoStreamIndex: '1',
+  audioStreamIndexes: '0',
+  seekTo: '277.700512',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-23T12:16:58.687Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5Calex%5CDownloads%5CDors+Feline-1941_Foot_Fun.wmv&videoStreamIndex=1&audioStreamIndexes=0&seekTo=277.700512&size=800&fps=30 HTTP/1.1 - - - ms
+2026-01-23T12:16:58.693Z info: API renderWaveformPng called {
+  filePath: 'C:\\Users\\alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  start: 240,
+  duration: 60,
+  resample: undefined,
+  color: '#ffffff',
+  streamIndex: 0,
+  timeout: 10000
+}
+2026-01-23T12:16:58.798Z info: 127.0.0.1 POST /api/renderWaveformPng HTTP/1.1 200 - 105.224 ms
+2026-01-23T12:16:58.799Z info: API renderWaveformPng called {
+  filePath: 'C:\\Users\\alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  start: 300,
+  duration: 60,
+  resample: undefined,
+  color: '#ffffff',
+  streamIndex: 0,
+  timeout: 10000
+}
+2026-01-23T12:16:58.913Z info: 127.0.0.1 POST /api/renderWaveformPng HTTP/1.1 200 - 113.927 ms
+2026-01-23T12:16:59.193Z info: Received /stream request {
+  path: 'C:\\Users\\alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  videoStreamIndex: '1',
+  audioStreamIndexes: '0',
+  seekTo: '131.763381',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-23T12:16:59.571Z info: API readFramesAroundTime called {
+  filePath: 'C:\\Users\\alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  aroundTime: 131.76338121170863,
+  streamIndex: 1,
+  window: 60
+}
+2026-01-23T12:16:59.641Z info: 127.0.0.1 POST /api/readFramesAroundTime HTTP/1.1 200 - 70.599 ms
+2026-01-23T12:16:59.884Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5Calex%5CDownloads%5CDors+Feline-1941_Foot_Fun.wmv&videoStreamIndex=1&audioStreamIndexes=0&seekTo=131.763381&size=800&fps=30 HTTP/1.1 200 - 160.662 ms
+2026-01-23T12:16:59.888Z info: Received /stream request {
+  path: 'C:\\Users\\alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  videoStreamIndex: '1',
+  audioStreamIndexes: '0',
+  seekTo: '123.364121',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-23T12:16:59.921Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5Calex%5CDownloads%5CDors+Feline-1941_Foot_Fun.wmv&videoStreamIndex=1&audioStreamIndexes=0&seekTo=123.364121&size=800&fps=30 HTTP/1.1 - - - ms
+2026-01-23T12:17:00.731Z info: Received /stream request {
+  path: 'C:\\Users\\alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  videoStreamIndex: '1',
+  audioStreamIndexes: '0',
+  seekTo: '0',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-23T12:17:00.984Z info: API readFramesAroundTime called {
+  filePath: 'C:\\Users\\alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  aroundTime: 0,
+  streamIndex: 1,
+  window: 60
+}
+2026-01-23T12:17:01.040Z info: 127.0.0.1 POST /api/readFramesAroundTime HTTP/1.1 200 - 55.917 ms
+2026-01-23T12:17:02.242Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5Calex%5CDownloads%5CDors+Feline-1941_Foot_Fun.wmv&videoStreamIndex=1&audioStreamIndexes=0&seekTo=0&size=800&fps=30 HTTP/1.1 200 - 89.601 ms
+2026-01-23T12:17:02.246Z error: Stream process error Command was killed with SIGTERM (Termination): "ffmpeg\win32-x64\lib\ffmpeg.exe" -hide_banner -loglevel error -fflags "+nobuffer+flush_packets+discardcorrupt" -avioflags direct -flush_packets 1 -ss 0 -i "C:\Users\alex\Downloads\Dors Feline-1941_Foot_Fun.wmv" -fps_mode passthrough -map_metadata -1 -map_chapters -1 -filter_complex "[0:1]fps=30,scale=800:800:flags=lanczos:force_original_aspect_ratio=decrease:force_divisible_by=2:in_color_matrix=auto:in_range=auto:out_color_matrix=bt709:out_range=tv,format=yuv420p,setparams=color_primaries=bt709:color_trc=bt709:colorspace=bt709[video];[0:0]anull[audio]" -map "[video]" "-c:v" libx264 -preset ultrafast -tune zerolatency -crf 10 -g 1 -map "[audio]" -ac 2 "-c:a" aac "-b:a" 128k -f mp4 -movflags "+frag_keyframe+empty_moov+default_base_moof" - ExecaError: Command was killed with SIGTERM (Termination): "ffmpeg\win32-x64\lib\ffmpeg.exe" -hide_banner -loglevel error -fflags "+nobuffer+flush_packets+discardcorrupt" -avioflags direct -flush_packets 1 -ss 0 -i "C:\Users\alex\Downloads\Dors Feline-1941_Foot_Fun.wmv" -fps_mode passthrough -map_metadata -1 -map_chapters -1 -filter_complex "[0:1]fps=30,scale=800:800:flags=lanczos:force_original_aspect_ratio=decrease:force_divisible_by=2:in_color_matrix=auto:in_range=auto:out_color_matrix=bt709:out_range=tv,format=yuv420p,setparams=color_primaries=bt709:color_trc=bt709:colorspace=bt709[video];[0:0]anull[audio]" -map "[video]" "-c:v" libx264 -preset ultrafast -tune zerolatency -crf 10 -g 1 -map "[audio]" -ac 2 "-c:a" aac "-b:a" 128k -f mp4 -movflags "+frag_keyframe+empty_moov+default_base_moof" -
+    at getFinalError (file:///C:/Users/alex/Codigos/lossless-cut/node_modules/execa/lib/return/final-error.js:6:9)
+    at makeError (file:///C:/Users/alex/Codigos/lossless-cut/node_modules/execa/lib/return/result.js:108:16)
+    at getAsyncResult (file:///C:/Users/alex/Codigos/lossless-cut/node_modules/execa/lib/methods/main-async.js:168:4)
+    at handlePromise (file:///C:/Users/alex/Codigos/lossless-cut/node_modules/execa/lib/methods/main-async.js:151:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5) {
+  shortMessage: 'Command was killed with SIGTERM (Termination): "ffmpeg\\win32-x64\\lib\\ffmpeg.exe" -hide_banner -loglevel error -fflags "+nobuffer+flush_packets+discardcorrupt" -avioflags direct -flush_packets 1 -ss 0 -i "C:\\Users\\alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv" -fps_mode passthrough -map_metadata -1 -map_chapters -1 -filter_complex "[0:1]fps=30,scale=800:800:flags=lanczos:force_original_aspect_ratio=decrease:force_divisible_by=2:in_color_matrix=auto:in_range=auto:out_color_matrix=bt709:out_range=tv,format=yuv420p,setparams=color_primaries=bt709:color_trc=bt709:colorspace=bt709[video];[0:0]anull[audio]" -map "[video]" "-c:v" libx264 -preset ultrafast -tune zerolatency -crf 10 -g 1 -map "[audio]" -ac 2 "-c:a" aac "-b:a" 128k -f mp4 -movflags "+frag_keyframe+empty_moov+default_base_moof" -',
+  command: 'ffmpeg\\win32-x64\\lib\\ffmpeg.exe -hide_banner -loglevel error -fflags +nobuffer+flush_packets+discardcorrupt -avioflags direct -flush_packets 1 -ss 0 -i C:\\Users\\alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv -fps_mode passthrough -map_metadata -1 -map_chapters -1 -filter_complex [0:1]fps=30,scale=800:800:flags=lanczos:force_original_aspect_ratio=decrease:force_divisible_by=2:in_color_matrix=auto:in_range=auto:out_color_matrix=bt709:out_range=tv,format=yuv420p,setparams=color_primaries=bt709:color_trc=bt709:colorspace=bt709[video];[0:0]anull[audio] -map [video] -c:v libx264 -preset ultrafast -tune zerolatency -crf 10 -g 1 -map [audio] -ac 2 -c:a aac -b:a 128k -f mp4 -movflags +frag_keyframe+empty_moov+default_base_moof -',
+  escapedCommand: '"ffmpeg\\win32-x64\\lib\\ffmpeg.exe" -hide_banner -loglevel error -fflags "+nobuffer+flush_packets+discardcorrupt" -avioflags direct -flush_packets 1 -ss 0 -i "C:\\Users\\alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv" -fps_mode passthrough -map_metadata -1 -map_chapters -1 -filter_complex "[0:1]fps=30,scale=800:800:flags=lanczos:force_original_aspect_ratio=decrease:force_divisible_by=2:in_color_matrix=auto:in_range=auto:out_color_matrix=bt709:out_range=tv,format=yuv420p,setparams=color_primaries=bt709:color_trc=bt709:colorspace=bt709[video];[0:0]anull[audio]" -map "[video]" "-c:v" libx264 -preset ultrafast -tune zerolatency -crf 10 -g 1 -map "[audio]" -ac 2 "-c:a" aac "-b:a" 128k -f mp4 -movflags "+frag_keyframe+empty_moov+default_base_moof" -',
+  cwd: 'C:\\Users\\alex\\Codigos\\lossless-cut\\electron-stream',
+  durationMs: 1514.2183,
+  failed: true,
+  timedOut: false,
+  isCanceled: false,
+  isGracefullyCanceled: false,
+  isTerminated: true,
+  isMaxBuffer: false,
+  isForcefullyTerminated: false,
+  signal: 'SIGTERM',
+  signalDescription: 'Termination',
+  stdio: [ undefined, undefined, undefined ],
+  ipcOutput: [],
+  pipedFrom: []
+}
+2026-01-23T12:20:04.870Z info: LosslessCut version 3.67.2 { isDev: true }
+2026-01-23T12:20:04.898Z info: Initialized config store
+2026-01-23T12:20:04.898Z info: Waiting for app to become ready
+2026-01-23T12:20:04.903Z info: CLI arguments { _: [] }
+2026-01-23T12:20:04.911Z info: HTTP API listening on http://127.0.0.1:8080/
+2026-01-23T12:20:04.911Z info: HTTP API listening on port 8080
+2026-01-23T12:20:04.976Z info: Added Extension React Developer Tools
+2026-01-23T12:20:05.077Z info: Current version 3.67.2
+2026-01-23T12:20:05.078Z info: Newest version 3.67.2
+2026-01-23T12:20:13.688Z info: API readFramesAroundTime called {
+  filePath: 'C:\\Users\\alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  aroundTime: 0,
+  streamIndex: 1,
+  window: 60
+}
+2026-01-23T12:20:13.741Z info: 127.0.0.1 POST /api/readFramesAroundTime HTTP/1.1 200 - 57.180 ms
+2026-01-23T12:20:53.561Z info: API readFramesAroundTime called {
+  filePath: 'C:\\Users\\alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  aroundTime: 0,
+  streamIndex: 1,
+  window: 60
+}
+2026-01-23T12:20:53.607Z info: 127.0.0.1 POST /api/readFramesAroundTime HTTP/1.1 200 - 46.961 ms
+2026-01-23T12:23:09.772Z info: Received /stream request {
+  path: 'C:\\Users\\alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  videoStreamIndex: '1',
+  audioStreamIndexes: '0',
+  seekTo: '0',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-23T12:23:09.788Z info: API renderWaveformPng called {
+  filePath: 'C:\\Users\\alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  start: 0,
+  duration: 60,
+  resample: undefined,
+  color: '#ffffff',
+  streamIndex: 0,
+  timeout: 10000
+}
+2026-01-23T12:23:09.835Z info: API readFramesAroundTime called {
+  filePath: 'C:\\Users\\alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  aroundTime: 0,
+  streamIndex: 1,
+  window: 60
+}
+2026-01-23T12:23:09.877Z info: 127.0.0.1 POST /api/renderWaveformPng HTTP/1.1 200 - 89.246 ms
+2026-01-23T12:23:09.880Z info: API renderWaveformPng called {
+  filePath: 'C:\\Users\\alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  start: 60,
+  duration: 60,
+  resample: undefined,
+  color: '#ffffff',
+  streamIndex: 0,
+  timeout: 10000
+}
+2026-01-23T12:23:09.893Z info: 127.0.0.1 POST /api/readFramesAroundTime HTTP/1.1 200 - 58.345 ms
+2026-01-23T12:23:09.997Z info: 127.0.0.1 POST /api/renderWaveformPng HTTP/1.1 200 - 116.939 ms
+2026-01-23T12:23:09.999Z info: API renderWaveformPng called {
+  filePath: 'C:\\Users\\alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  start: -60,
+  duration: 60,
+  resample: undefined,
+  color: '#ffffff',
+  streamIndex: 0,
+  timeout: 10000
+}
+2026-01-23T12:23:10.055Z info: 127.0.0.1 POST /api/renderWaveformPng HTTP/1.1 500 - 55.827 ms
+2026-01-23T12:23:16.248Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5Calex%5CDownloads%5CDors+Feline-1941_Foot_Fun.wmv&videoStreamIndex=1&audioStreamIndexes=0&seekTo=0&size=800&fps=30 HTTP/1.1 200 - 96.851 ms
+2026-01-23T12:23:16.252Z info: Received /stream request {
+  path: 'C:\\Users\\alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  videoStreamIndex: '1',
+  audioStreamIndexes: '0',
+  seekTo: '0',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-23T12:23:20.513Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5Calex%5CDownloads%5CDors+Feline-1941_Foot_Fun.wmv&videoStreamIndex=1&audioStreamIndexes=0&seekTo=0&size=800&fps=30 HTTP/1.1 200 - 92.518 ms
+2026-01-23T12:23:20.830Z info: Received /stream request {
+  path: 'C:\\Users\\alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  videoStreamIndex: '1',
+  audioStreamIndexes: '0',
+  seekTo: '234.147815',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-23T12:23:20.838Z info: API renderWaveformPng called {
+  filePath: 'C:\\Users\\alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  start: 180,
+  duration: 60,
+  resample: undefined,
+  color: '#ffffff',
+  streamIndex: 0,
+  timeout: 10000
+}
+2026-01-23T12:23:20.937Z info: 127.0.0.1 POST /api/renderWaveformPng HTTP/1.1 200 - 99.919 ms
+2026-01-23T12:23:20.939Z info: API renderWaveformPng called {
+  filePath: 'C:\\Users\\alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  start: 240,
+  duration: 60,
+  resample: undefined,
+  color: '#ffffff',
+  streamIndex: 0,
+  timeout: 10000
+}
+2026-01-23T12:23:21.053Z info: 127.0.0.1 POST /api/renderWaveformPng HTTP/1.1 200 - 113.273 ms
+2026-01-23T12:23:21.053Z info: API readFramesAroundTime called {
+  filePath: 'C:\\Users\\alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  aroundTime: 234.12935466303608,
+  streamIndex: 1,
+  window: 60
+}
+2026-01-23T12:23:21.071Z info: API renderWaveformPng called {
+  filePath: 'C:\\Users\\alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  start: 120,
+  duration: 60,
+  resample: undefined,
+  color: '#ffffff',
+  streamIndex: 0,
+  timeout: 10000
+}
+2026-01-23T12:23:21.130Z info: 127.0.0.1 POST /api/readFramesAroundTime HTTP/1.1 200 - 76.431 ms
+2026-01-23T12:23:21.203Z info: 127.0.0.1 POST /api/renderWaveformPng HTTP/1.1 200 - 131.879 ms
+2026-01-23T12:23:21.717Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5Calex%5CDownloads%5CDors+Feline-1941_Foot_Fun.wmv&videoStreamIndex=1&audioStreamIndexes=0&seekTo=234.147815&size=800&fps=30 HTTP/1.1 200 - 239.973 ms
+2026-01-23T12:23:21.721Z info: Received /stream request {
+  path: 'C:\\Users\\alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  videoStreamIndex: '1',
+  audioStreamIndexes: '0',
+  seekTo: '524.434666',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-23T12:23:21.728Z info: API renderWaveformPng called {
+  filePath: 'C:\\Users\\alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  start: 480,
+  duration: 60,
+  resample: undefined,
+  color: '#ffffff',
+  streamIndex: 0,
+  timeout: 10000
+}
+2026-01-23T12:23:21.872Z info: 127.0.0.1 POST /api/renderWaveformPng HTTP/1.1 200 - 144.958 ms
+2026-01-23T12:23:21.874Z info: API renderWaveformPng called {
+  filePath: 'C:\\Users\\alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  start: 540,
+  duration: 60,
+  resample: undefined,
+  color: '#ffffff',
+  streamIndex: 0,
+  timeout: 10000
+}
+2026-01-23T12:23:22.044Z info: 127.0.0.1 POST /api/renderWaveformPng HTTP/1.1 200 - 169.714 ms
+2026-01-23T12:23:22.046Z info: API renderWaveformPng called {
+  filePath: 'C:\\Users\\alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  start: 420,
+  duration: 60,
+  resample: undefined,
+  color: '#ffffff',
+  streamIndex: 0,
+  timeout: 10000
+}
+2026-01-23T12:23:22.193Z info: 127.0.0.1 POST /api/renderWaveformPng HTTP/1.1 200 - 147.273 ms
+2026-01-23T12:23:22.202Z info: API readFramesAroundTime called {
+  filePath: 'C:\\Users\\alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  aroundTime: 524.4287562968005,
+  streamIndex: 1,
+  window: 60
+}
+2026-01-23T12:23:22.256Z info: 127.0.0.1 POST /api/readFramesAroundTime HTTP/1.1 200 - 54.096 ms
+2026-01-23T12:23:22.742Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5Calex%5CDownloads%5CDors+Feline-1941_Foot_Fun.wmv&videoStreamIndex=1&audioStreamIndexes=0&seekTo=524.434666&size=800&fps=30 HTTP/1.1 200 - 139.851 ms
+2026-01-23T12:23:22.758Z info: Received /stream request {
+  path: 'C:\\Users\\alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  videoStreamIndex: '1',
+  audioStreamIndexes: '0',
+  seekTo: '124.948882',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-23T12:23:22.789Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5Calex%5CDownloads%5CDors+Feline-1941_Foot_Fun.wmv&videoStreamIndex=1&audioStreamIndexes=0&seekTo=124.948882&size=800&fps=30 HTTP/1.1 - - - ms
+2026-01-23T12:23:23.291Z info: Received /stream request {
+  path: 'C:\\Users\\alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  videoStreamIndex: '1',
+  audioStreamIndexes: '0',
+  seekTo: '0.013851',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-23T12:23:23.472Z info: API readFramesAroundTime called {
+  filePath: 'C:\\Users\\alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  aroundTime: 0,
+  streamIndex: 1,
+  window: 60
+}
+2026-01-23T12:23:23.529Z info: 127.0.0.1 POST /api/readFramesAroundTime HTTP/1.1 200 - 56.794 ms
+2026-01-23T12:23:25.363Z info: API readFramesAroundTime called {
+  filePath: 'C:\\Users\\alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  aroundTime: 1.515302,
+  streamIndex: 1,
+  window: 60
+}
+2026-01-23T12:23:25.408Z info: 127.0.0.1 POST /api/readFramesAroundTime HTTP/1.1 200 - 45.001 ms
+2026-01-23T12:23:25.545Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5Calex%5CDownloads%5CDors+Feline-1941_Foot_Fun.wmv&videoStreamIndex=1&audioStreamIndexes=0&seekTo=0.013851&size=800&fps=30 HTTP/1.1 200 - 95.494 ms
+2026-01-23T12:23:25.554Z info: Received /stream request {
+  path: 'C:\\Users\\alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  videoStreamIndex: '1',
+  audioStreamIndexes: '0',
+  seekTo: '81.367825',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-23T12:23:25.585Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5Calex%5CDownloads%5CDors+Feline-1941_Foot_Fun.wmv&videoStreamIndex=1&audioStreamIndexes=0&seekTo=81.367825&size=800&fps=30 HTTP/1.1 - - - ms
+2026-01-23T12:23:26.407Z info: Received /stream request {
+  path: 'C:\\Users\\alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  videoStreamIndex: '1',
+  audioStreamIndexes: '0',
+  seekTo: '0',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-23T12:23:26.549Z info: API readFramesAroundTime called {
+  filePath: 'C:\\Users\\alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  aroundTime: 0,
+  streamIndex: 1,
+  window: 60
+}
+2026-01-23T12:23:26.605Z info: 127.0.0.1 POST /api/readFramesAroundTime HTTP/1.1 200 - 55.867 ms
+2026-01-23T12:23:32.845Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5Calex%5CDownloads%5CDors+Feline-1941_Foot_Fun.wmv&videoStreamIndex=1&audioStreamIndexes=0&seekTo=0&size=800&fps=30 HTTP/1.1 200 - 89.221 ms
+2026-01-23T12:23:32.849Z info: Received /stream request {
+  path: 'C:\\Users\\alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  videoStreamIndex: '1',
+  audioStreamIndexes: '0',
+  seekTo: '0',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-23T12:23:39.303Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5Calex%5CDownloads%5CDors+Feline-1941_Foot_Fun.wmv&videoStreamIndex=1&audioStreamIndexes=0&seekTo=0&size=800&fps=30 HTTP/1.1 200 - 90.294 ms
+2026-01-23T12:23:39.609Z info: Received /stream request {
+  path: 'C:\\Users\\alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  videoStreamIndex: '1',
+  audioStreamIndexes: '0',
+  seekTo: '0',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-23T12:23:46.119Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5Calex%5CDownloads%5CDors+Feline-1941_Foot_Fun.wmv&videoStreamIndex=1&audioStreamIndexes=0&seekTo=0&size=800&fps=30 HTTP/1.1 200 - 98.661 ms
+2026-01-23T12:23:46.123Z info: Received /stream request {
+  path: 'C:\\Users\\alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  videoStreamIndex: '1',
+  audioStreamIndexes: '0',
+  seekTo: '0',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-23T12:23:52.606Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5Calex%5CDownloads%5CDors+Feline-1941_Foot_Fun.wmv&videoStreamIndex=1&audioStreamIndexes=0&seekTo=0&size=800&fps=30 HTTP/1.1 200 - 96.572 ms
+2026-01-23T12:23:52.921Z info: Received /stream request {
+  path: 'C:\\Users\\alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  videoStreamIndex: '1',
+  audioStreamIndexes: '0',
+  seekTo: '0',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-23T12:24:04.125Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5Calex%5CDownloads%5CDors+Feline-1941_Foot_Fun.wmv&videoStreamIndex=1&audioStreamIndexes=0&seekTo=0&size=800&fps=30 HTTP/1.1 200 - 94.695 ms
+2026-01-23T12:24:04.129Z info: Received /stream request {
+  path: 'C:\\Users\\alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  videoStreamIndex: '1',
+  audioStreamIndexes: '0',
+  seekTo: '0',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-23T12:24:16.127Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5Calex%5CDownloads%5CDors+Feline-1941_Foot_Fun.wmv&videoStreamIndex=1&audioStreamIndexes=0&seekTo=0&size=800&fps=30 HTTP/1.1 200 - 94.460 ms
+2026-01-23T12:24:16.454Z info: Received /stream request {
+  path: 'C:\\Users\\alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  videoStreamIndex: '1',
+  audioStreamIndexes: '0',
+  seekTo: '0',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-23T12:24:29.134Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5Calex%5CDownloads%5CDors+Feline-1941_Foot_Fun.wmv&videoStreamIndex=1&audioStreamIndexes=0&seekTo=0&size=800&fps=30 HTTP/1.1 200 - 88.602 ms
+2026-01-23T12:24:29.137Z info: Received /stream request {
+  path: 'C:\\Users\\alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  videoStreamIndex: '1',
+  audioStreamIndexes: '0',
+  seekTo: '0',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-23T12:24:40.121Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5Calex%5CDownloads%5CDors+Feline-1941_Foot_Fun.wmv&videoStreamIndex=1&audioStreamIndexes=0&seekTo=0&size=800&fps=30 HTTP/1.1 200 - 93.688 ms
+2026-01-23T12:24:40.431Z info: Received /stream request {
+  path: 'C:\\Users\\alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  videoStreamIndex: '1',
+  audioStreamIndexes: '0',
+  seekTo: '0',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-23T12:24:51.121Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5Calex%5CDownloads%5CDors+Feline-1941_Foot_Fun.wmv&videoStreamIndex=1&audioStreamIndexes=0&seekTo=0&size=800&fps=30 HTTP/1.1 200 - 89.981 ms
+2026-01-23T12:24:51.135Z info: Received /stream request {
+  path: 'C:\\Users\\alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  videoStreamIndex: '1',
+  audioStreamIndexes: '0',
+  seekTo: '0',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-23T12:25:20.123Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5Calex%5CDownloads%5CDors+Feline-1941_Foot_Fun.wmv&videoStreamIndex=1&audioStreamIndexes=0&seekTo=0&size=800&fps=30 HTTP/1.1 200 - 94.644 ms
+2026-01-23T12:25:20.432Z info: Received /stream request {
+  path: 'C:\\Users\\alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  videoStreamIndex: '1',
+  audioStreamIndexes: '0',
+  seekTo: '0',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-23T12:26:20.130Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5Calex%5CDownloads%5CDors+Feline-1941_Foot_Fun.wmv&videoStreamIndex=1&audioStreamIndexes=0&seekTo=0&size=800&fps=30 HTTP/1.1 200 - 88.186 ms
+2026-01-23T12:26:20.134Z info: Received /stream request {
+  path: 'C:\\Users\\alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  videoStreamIndex: '1',
+  audioStreamIndexes: '0',
+  seekTo: '0',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-23T12:27:02.185Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5Calex%5CDownloads%5CDors+Feline-1941_Foot_Fun.wmv&videoStreamIndex=1&audioStreamIndexes=0&seekTo=0&size=800&fps=30 HTTP/1.1 200 - 97.941 ms
+2026-01-23T12:27:02.466Z info: API renderWaveformPng called {
+  filePath: 'C:\\Users\\alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  start: 0,
+  duration: 60,
+  resample: undefined,
+  color: '#ffffff',
+  streamIndex: 0,
+  timeout: 10000
+}
+2026-01-23T12:27:02.529Z info: Received /stream request {
+  path: 'C:\\Users\\alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  videoStreamIndex: '1',
+  audioStreamIndexes: '0',
+  seekTo: '0',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-23T12:27:02.560Z info: 127.0.0.1 POST /api/renderWaveformPng HTTP/1.1 200 - 93.861 ms
+2026-01-23T12:27:02.562Z info: API renderWaveformPng called {
+  filePath: 'C:\\Users\\alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  start: 60,
+  duration: 60,
+  resample: undefined,
+  color: '#ffffff',
+  streamIndex: 0,
+  timeout: 10000
+}
+2026-01-23T12:27:02.687Z info: 127.0.0.1 POST /api/renderWaveformPng HTTP/1.1 200 - 124.436 ms
+2026-01-23T12:27:02.690Z info: API renderWaveformPng called {
+  filePath: 'C:\\Users\\alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  start: -60,
+  duration: 60,
+  resample: undefined,
+  color: '#ffffff',
+  streamIndex: 0,
+  timeout: 10000
+}
+2026-01-23T12:27:02.761Z info: 127.0.0.1 POST /api/renderWaveformPng HTTP/1.1 500 - 69.875 ms
+2026-01-23T12:27:03.122Z info: API readFramesAroundTime called {
+  filePath: 'C:\\Users\\alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  aroundTime: 0,
+  streamIndex: 1,
+  window: 60
+}
+2026-01-23T12:27:03.183Z info: 127.0.0.1 POST /api/readFramesAroundTime HTTP/1.1 200 - 60.827 ms

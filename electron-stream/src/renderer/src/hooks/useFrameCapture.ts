@@ -5,9 +5,10 @@ import { useCallback } from 'react';
 import { getSuffixedOutPath, getOutDir, transferTimestamps, getSuffixedFileName, getOutPath, escapeRegExp, fsOperationWithRetry } from '../util';
 import { getNumDigits, isDurationValid } from '../segments';
 
-import * as ffmpeg from '../ffmpeg';
+// import * as ffmpeg from '../ffmpeg';
 import type { FormatTimecode } from '../types';
-import type { CaptureFormat } from '../../../common/types';
+import type { CaptureFormat } from 'lossless-cut-application';
+// import type { CaptureFormat } from '../../../common/types';
 
 const mime = window.require('mime-types');
 const { rename, readdir, writeFile } = window.require('fs/promises');

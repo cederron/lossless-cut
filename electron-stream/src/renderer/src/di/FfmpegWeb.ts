@@ -22,7 +22,19 @@ export class FfmpegWeb implements IFfmpeg {
             throw new Error(`Failed to render waveform PNG: ${res.status} ${res.statusText}`);
         }
         const data = await res.json();
-        return data as Waveform;
+        
+        // Decode base64 string to Uint8Array
+        const binaryString = atob(data.buffer);
+        const len = binaryString.length;
+        const bytes = new Uint8Array(len);
+        for (let i = 0; i < len; i++) {
+            bytes[i] = binaryString.charCodeAt(i);
+        }
+
+        return {
+            ...data,
+            buffer: bytes
+        } as Waveform;
     }
     mapTimesToSegments(times: number[], includeLast: boolean): { start: number; end: number | undefined; }[] {
         throw new Error("Method not implemented.");
