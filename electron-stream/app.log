@@ -14089,3 +14089,12 @@
   nameSuffix: 'proj.llc'
 }
 2026-01-23T17:59:23.208Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.634 ms
+2026-01-23T18:24:25.074Z info: LosslessCut version 3.67.2 { isDev: true }
+2026-01-23T18:24:25.112Z info: Initialized config store
+2026-01-23T18:24:25.112Z info: Waiting for app to become ready
+2026-01-23T18:24:25.116Z info: CLI arguments { _: [] }
+2026-01-23T18:24:25.123Z info: HTTP API listening on http://127.0.0.1:8080/
+2026-01-23T18:24:25.123Z info: HTTP API listening on port 8080
+2026-01-23T18:24:25.188Z info: Added Extension React Developer Tools
+2026-01-23T18:24:25.285Z info: Current version 3.67.2
+2026-01-23T18:24:25.285Z info: Newest version 3.67.2

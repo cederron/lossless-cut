@@ -112,14 +112,15 @@ import GenericDialog, { useDialog } from './components/GenericDialog';
 import useHtml5ify from './hooks/useHtml5ify';
 import WhatsNew from './components/WhatsNew';
 import mainApi from './mainApi.js';
-import { DirectoryAccessDeclinedError } from 'lossless-cut-application';
+import { DirectoryAccessDeclinedError, TOKENS, type IUtils } from 'lossless-cut-application';
 import { UserFacingError } from '../errors.js';
+import { container } from 'tsyringe';
 
 const electron = window.require('electron');
 // const { lstat } = window.require('fs/promises');
 // const { parse: parsePath, join: pathJoin, basename, dirname } = window.require('path');
 
-const { utils, state/*, settings*/ } = window.require('@electron/remote').require('./index.js');
+const { /*utils,*/ state/*, settings*/ } = window.require('@electron/remote').require('./index.js');
 
 
 const hevcPlaybackSupportedPromise = doesPlayerSupportHevcPlayback();
@@ -128,6 +129,7 @@ hevcPlaybackSupportedPromise.catch((err) => console.error(err));
 
 function App() {
   const { t } = useTranslation();
+  const utils = container.resolve<IUtils>(TOKENS.Utils);
 
   // Per project state
   const [ffmpegCommandLog, setFfmpegCommandLog] = useState<FfmpegCommandLog>([]);
@@ -395,7 +397,11 @@ function App() {
 
   // const getSafeCutTime = useCallback((cutTime, next) => ffmpeg.getSafeCutTime(neighbouringFrames, cutTime, next), [neighbouringFrames]);
 
-  const outputDir = await utils.getOutDir(customOutDir, filePath);
+  const [outputDir, setOutputDir] = useState<string>();
+
+  useEffect(() => {
+    utils.getOutDir(customOutDir, filePath).then(setOutputDir);
+  }, [customOutDir, filePath]);
 
   const increaseRotation = useCallback(() => {
     setRotation((r) => (r + 90) % 450);
@@ -618,7 +624,7 @@ function App() {
   const usingPreviewFile = !!previewFilePath;
   const effectiveFilePath = previewFilePath || filePath;
   const fileUri = useMemo(() => {
-    return utils.getFileUri(effectiveFilePath, cacheBuster);
+    return await utils.getFileUri(effectiveFilePath, cacheBuster);
     // if (!effectiveFilePath) return ''; // Setting video src="" prevents memory leak in chromium
     // const uri = pathToFileURL(effectiveFilePath).href;
     // // https://github.com/mifi/lossless-cut/issues/1674

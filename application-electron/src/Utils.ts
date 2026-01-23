@@ -32,7 +32,7 @@ export class Utils implements IUtils {
         return this.fsOperationWithRetry(async () => unlink(path), { ...options, onFailedAttempt: ({ attemptNumber, error }) => console.warn('Retrying delete', path, attemptNumber, error.message) });
     }
 
-    getFileUri(path: string | undefined, cacheBuster: number): string {
+    async getFileUri(path: string | undefined, cacheBuster: number): Promise<string> {
         if (!path) return ''; // Setting video src="" prevents memory leak in chromium
         const uri = pathToFileURL(path).href;
         // https://github.com/mifi/lossless-cut/issues/1674

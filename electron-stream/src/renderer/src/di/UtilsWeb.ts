@@ -7,7 +7,7 @@ export class UtilsWeb implements IUtils {
 
     apiUrl = 'http://localhost:8080/api';
 
-    getFileUri(path: string | undefined, cacheBuster: number): string {
+    async getFileUri(path: string | undefined, cacheBuster: number): Promise<string> {
         throw new Error("Method not implemented.");
     }
     ensureWritableOutDir({ inputPath, outDir }: { inputPath?: string | undefined; outDir: string | undefined; }): Promise<string | undefined> {

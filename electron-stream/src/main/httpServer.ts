@@ -177,6 +177,14 @@ export default ({ port, onKeyboardAction }: {
     res.json({ outPath });
   }));
 
+  apiRouter.post('/getFileUri', express.json(), asyncHandler(async (req, res) => {
+    const { path, cacheBuster } = req.body as { path?: string; cacheBuster: number; };
+    logger.info('API getFileUri called', { path, cacheBuster });
+    const utils = container.resolve<IUtils>(TOKENS.Utils);
+    const fileUri =  await utils.getFileUri(path, cacheBuster);
+    res.json({ fileUri });
+  }));
+
   const server = http.createServer(app);
 
   server.on('error', (err) => logger.error('http server error', err));
