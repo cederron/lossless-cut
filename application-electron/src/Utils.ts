@@ -293,13 +293,13 @@ export class Utils implements IUtils {
         return join(this.getOutDir(customOutDir, filePath), fileName);
     }
 
-    getSuffixedOutPath<T extends string | undefined>(a: { customOutDir?: string | undefined, filePath?: T | undefined, nameSuffix: string }): T extends string ? string : undefined;
-    getSuffixedOutPath({ customOutDir, filePath, nameSuffix }: { customOutDir?: string | undefined, filePath?: string | undefined, nameSuffix: string }) {
+    async getSuffixedOutPath<T extends string | undefined>(a: { customOutDir?: string | undefined, filePath?: T | undefined, nameSuffix: string }): Promise<T extends string ? string : undefined>;
+    async getSuffixedOutPath({ customOutDir, filePath, nameSuffix }: { customOutDir?: string | undefined, filePath?: string | undefined, nameSuffix: string }) {
         if (filePath == null) return undefined;
         return this.getOutPath({ customOutDir, filePath, fileName: this.getSuffixedFileName(filePath, nameSuffix) });
     }
 
-    getHtml5ifiedPath(cod: string | undefined, fp: string, type: Html5ifyMode) {
+    async getHtml5ifiedPath(cod: string | undefined, fp: string, type: Html5ifyMode) {
         // See also inside ffmpegHtml5ify
         const ext = (this.platform.isMac() && ['slowest', 'slow', 'slow-audio'].includes(type)) ? 'mp4' : 'mkv';
         return this.getSuffixedOutPath({ customOutDir: cod, filePath: fp, nameSuffix: `${this.html5ifiedPrefix}${type}.${ext}` });

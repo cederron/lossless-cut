@@ -36,9 +36,9 @@ readFileSize(path: string): Promise<number>;
 getOutFileExtension({ isCustomFormatSelected, outFormat, filePath }: {
   isCustomFormatSelected?: boolean, outFormat: string, filePath: string,
 }): string;
-getSuffixedOutPath<T extends string | undefined>(a: { customOutDir?: string | undefined, filePath?: T | undefined, nameSuffix: string }): T extends string ? string : undefined;
-getSuffixedOutPath({ customOutDir, filePath, nameSuffix }: { customOutDir?: string | undefined, filePath?: string | undefined, nameSuffix: string }): string | undefined;
-getHtml5ifiedPath(cod: string | undefined, fp: string, type: Html5ifyMode): string;
+getSuffixedOutPath<T extends string | undefined>(a: { customOutDir?: string | undefined, filePath?: T | undefined, nameSuffix: string }): Promise<T extends string ? string : undefined>;
+getSuffixedOutPath({ customOutDir, filePath, nameSuffix }: { customOutDir?: string | undefined, filePath?: string | undefined, nameSuffix: string }): Promise<string | undefined>;
+getHtml5ifiedPath(cod: string | undefined, fp: string, type: Html5ifyMode): Promise<string>;
 getSuffixedFileName(filePath: string | undefined, nameSuffix: string): string
 getOutPath({ customOutDir, filePath, fileName }: { customOutDir?: string | undefined, filePath?: string | undefined, fileName: string }): string;
 renameWithRetry(renameFromPath: string, renameToPath: string): Promise<void>;

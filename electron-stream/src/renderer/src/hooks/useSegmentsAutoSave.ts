@@ -5,10 +5,12 @@ import isEqual from 'lodash/isEqual';
 import isDev from '../isDev';
 import { saveLlcProject } from '../edlStore';
 import { mapSaveableSegments } from '../segments';
-import { getSuffixedOutPath } from '../util';
+// import { getSuffixedOutPath } from '../util';
 import type { StateSegment } from '../types';
 import { errorToast } from '../swal';
 import i18n from '../i18n';
+import { container } from 'tsyringe';
+import { TOKENS, type IUtils } from 'lossless-cut-application';
 
 
 export default ({ autoSaveProjectFile, storeProjectInWorkingDir, filePath, customOutDir, cutSegments }: {
@@ -18,9 +20,10 @@ export default ({ autoSaveProjectFile, storeProjectInWorkingDir, filePath, custo
   customOutDir: string | undefined,
   cutSegments: StateSegment[],
 }) => {
+  const utils = container.resolve<IUtils>(TOKENS.Utils);
   const projectSuffix = 'proj.llc';
   // New LLC format can be stored along with input file or in working dir (customOutDir)
-  const getEdlFilePath = useCallback((fp?: string, cod?: string) => getSuffixedOutPath({ customOutDir: cod, filePath: fp, nameSuffix: projectSuffix }), []);
+  const getEdlFilePath = useCallback((fp?: string, cod?: string) => utils.getSuffixedOutPath({ customOutDir: cod, filePath: fp, nameSuffix: projectSuffix }), []);
   const getProjectFileSavePath = useCallback((storeProjectInWorkingDirIn: boolean) => getEdlFilePath(filePath, storeProjectInWorkingDirIn ? customOutDir : undefined), [getEdlFilePath, filePath, customOutDir]);
   const projectFileSavePath = useMemo(() => getProjectFileSavePath(storeProjectInWorkingDir), [getProjectFileSavePath, storeProjectInWorkingDir]);
 

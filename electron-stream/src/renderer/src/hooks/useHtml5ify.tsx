@@ -6,7 +6,7 @@ import { useTranslation } from 'react-i18next';
 import type { Html5ifyMode } from '../../../common/types';
 import getSwal from '../swal';
 import Checkbox from '../components/Checkbox';
-import { getSuffixedOutPath, html5dummySuffix, html5ifiedPrefix } from '../util';
+import { /* getSuffixedOutPath,*/ html5dummySuffix, html5ifiedPrefix } from '../util';
 import type { SetWorking } from './useLoading';
 import type { WithErrorHandling } from './useErrorHandling';
 import type { FfmpegOperations } from './useFfmpegOperations';
@@ -15,7 +15,8 @@ import { useGenericDialogContext } from '../components/GenericDialog';
 import * as Dialog from '../components/Dialog';
 import { ButtonRow } from '../components/Dialog';
 import { DialogButton } from '../components/Button';
-import { DirectoryAccessDeclinedError } from 'lossless-cut-application';
+import { DirectoryAccessDeclinedError, TOKENS, type IUtils } from 'lossless-cut-application';
+import { container } from 'tsyringe';
 
 
 export default function useHtml5ify({ filePath, hasVideo, hasAudio, workingRef, setWorking, ensureWritableOutDir, customOutDir, batchFiles, enableAutoHtml5ify, setProgress, html5ify, html5ifyDummy, withErrorHandling, showGenericDialog }: {
@@ -34,6 +35,7 @@ export default function useHtml5ify({ filePath, hasVideo, hasAudio, workingRef, 
   withErrorHandling: WithErrorHandling,
   showGenericDialog: ShowGenericDialog,
 }) {
+  const utils = container.resolve<IUtils>(TOKENS.Utils);
   const [previewFilePath, setPreviewFilePath] = useState<string>();
   const [usingDummyVideo, setUsingDummyVideo] = useState(false);
   const [rememberConvertToSupportedFormat, setRememberConvertToSupportedFormat] = useState<Html5ifyMode>();
@@ -45,7 +47,7 @@ export default function useHtml5ify({ filePath, hasVideo, hasAudio, workingRef, 
     async function doHtml5ify() {
       if (speed == null) return undefined;
       if (speed === 'fastest') {
-        const path = getSuffixedOutPath({ customOutDir: cod, filePath: fp, nameSuffix: `${html5ifiedPrefix}${html5dummySuffix}.mkv` });
+        const path = await utils.getSuffixedOutPath({ customOutDir: cod, filePath: fp, nameSuffix: `${html5ifiedPrefix}${html5dummySuffix}.mkv` });
         try {
           setProgress(0);
           await html5ifyDummy({ filePath: fp, outPath: path, onProgress: setProgress });
