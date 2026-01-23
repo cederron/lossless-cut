@@ -7,7 +7,7 @@ import assert from 'node:assert';
 import { homepageUrl } from '../common/constants.js';
 import logger from './logger.js';
 import { container } from 'tsyringe';
-import { TOKENS, type IFfmpeg } from 'lossless-cut-application';
+import { TOKENS, type IFfmpeg, type IUtils } from 'lossless-cut-application';
 
     // const logger = container.resolve<ILogger>(TOKENS.Logger);
 
@@ -118,6 +118,23 @@ export default ({ port, onKeyboardAction }: {
     const ffmpeg = container.resolve<IFfmpeg>(TOKENS.Ffmpeg);
     const result = await ffmpeg.renderWaveformPng({ filePath, start, duration, resample, color, streamIndex, timeout });
     res.json({ buffer: result.buffer.toString('base64')});
+  }));
+
+  /* TODO, this is called very frequently when a video is playing, consider optimizing */
+  apiRouter.post('/getSuffixedOutPath', express.json(), asyncHandler(async (req, res) => {
+    const { customOutDir, filePath, nameSuffix } = req.body as { customOutDir?: string; filePath?: string; nameSuffix: string; };
+    logger.info('API getSuffixedOutPath called', { customOutDir, filePath, nameSuffix });
+    const utils = container.resolve<IUtils>(TOKENS.Utils);
+    const outPath = await utils.getSuffixedOutPath({ customOutDir, filePath, nameSuffix });
+    res.json({ outPath });
+  }));
+
+  apiRouter.post('/transferTimestamps', express.json(), asyncHandler(async (req, res) => {
+    const { inPath, outPath, cutFrom, cutTo, duration, treatInputFileModifiedTimeAsStart, treatOutputFileModifiedTimeAsStart } = req.body as { inPath: string; outPath: string; cutFrom?: number; cutTo?: number; duration?: number; treatInputFileModifiedTimeAsStart: boolean; treatOutputFileModifiedTimeAsStart: boolean | null; };
+    logger.info('API transferTimestamps called', { inPath, outPath, cutFrom, cutTo, duration, treatInputFileModifiedTimeAsStart, treatOutputFileModifiedTimeAsStart });
+    const utils = container.resolve<IUtils>(TOKENS.Utils);
+    await utils.transferTimestamps({ inPath, outPath, cutFrom, cutTo, duration, treatInputFileModifiedTimeAsStart, treatOutputFileModifiedTimeAsStart });
+    res.end();
   }));
 
   const server = http.createServer(app);

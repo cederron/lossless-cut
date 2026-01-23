@@ -5,17 +5,17 @@ import pMap from 'p-map';
 import invariant from 'tiny-invariant';
 import i18n from 'i18next';
 
-import { /*getSuffixedOutPath,*/ transferTimestamps, getOutFileExtension, getOutDir, deleteDispositionValue, getHtml5ifiedPath, unlinkWithRetry, getFrameDuration, isMac } from '../util';
+import { /*getSuffixedOutPath,*/ /* transferTimestamps,*/ getOutFileExtension, getOutDir, deleteDispositionValue, getHtml5ifiedPath, unlinkWithRetry, getFrameDuration, isMac } from '../util';
 // import { isCuttingStart, isCuttingEnd, runFfmpegWithProgress, getFfCommandLine, getDuration, createChaptersFromSegments, readFileFfprobeMeta, getExperimentalArgs, getVideoTimescaleArgs, logStdoutStderr, runFfmpegConcat, RefuseOverwriteError, runFfmpegVoid } from '../ffmpeg';
 import { getMapStreamsArgs, getStreamIdsToCopy } from '../util/streams';
 import { needsSmartCut, getCodecParams } from '../smartcut';
 import { getGuaranteedSegments, isDurationValid } from '../segments';
-import type { FFprobeStream } from '../../../common/ffprobe';
-import type { AvoidNegativeTs, Html5ifyMode, PreserveMetadata } from '../../../common/types';
+// import type { FFprobeStream } from '../../../common/ffprobe';
+// import type { AvoidNegativeTs, Html5ifyMode, PreserveMetadata } from '../../../common/types';
 import type { AllFilesMeta, Chapter, CopyfileStreams, CustomTagsByFile, LiteFFprobeStream, ParamsByStreamId, SegmentToExport } from '../types';
 import { UserFacingError } from '../../errors';
 import mainApi from '../mainApi';
-import { RefuseOverwriteError, TOKENS, type IUtils, type LossyMode } from 'lossless-cut-application';
+import { RefuseOverwriteError, TOKENS, type AvoidNegativeTs, type FFprobeStream, type Html5ifyMode, type IUtils, type LossyMode, type PreserveMetadata } from 'lossless-cut-application';
 import { createChaptersFromSegments, getExperimentalArgs, getVideoTimescaleArgs, isCuttingEnd, isCuttingStart, readFileFfprobeMeta } from '../ffmpeg';
 import { container } from 'tsyringe';
 
@@ -236,7 +236,7 @@ function useFfmpegOperations({ filePath, treatInputFileModifiedTimeAsStart, trea
       await ffmpeg.runFfmpegConcat({ ffmpegArgs, concatTxt, totalDuration, onProgress });
 
 
-      await transferTimestamps({ inPath: metadataFromPath, outPath, treatInputFileModifiedTimeAsStart, treatOutputFileModifiedTimeAsStart, duration: totalDuration });
+      await utils.transferTimestamps({ inPath: metadataFromPath, outPath, treatInputFileModifiedTimeAsStart, treatOutputFileModifiedTimeAsStart, duration: totalDuration });
 
       return { haveExcludedStreams: excludedStreamIds.length > 0 };
     } finally {
@@ -433,7 +433,7 @@ function useFfmpegOperations({ filePath, treatInputFileModifiedTimeAsStart, trea
     await ffmpeg.runFfmpegWithProgress({ ffmpegArgs, duration: cutDuration, onProgress });
 
 
-    await transferTimestamps({ inPath: filePath, outPath, cutFrom, cutTo, treatInputFileModifiedTimeAsStart, duration: isDurationValid(fileDuration) ? fileDuration : undefined, treatOutputFileModifiedTimeAsStart });
+    await utils.transferTimestamps({ inPath: filePath, outPath, cutFrom, cutTo, treatInputFileModifiedTimeAsStart, duration: isDurationValid(fileDuration) ? fileDuration : undefined, treatOutputFileModifiedTimeAsStart });
   }, [appendFfmpegCommandLog, cutFromAdjustmentFrames, cutToAdjustmentFrames, filePath, getOutputPlaybackRateArgs, treatInputFileModifiedTimeAsStart, treatOutputFileModifiedTimeAsStart]);
 
   // inspired by https://gist.github.com/fernandoherreradelasheras/5eca67f4200f1a7cc8281747da08496e
@@ -805,7 +805,7 @@ function useFfmpegOperations({ filePath, treatInputFileModifiedTimeAsStart, trea
     // console.log(new TextDecoder().decode(stdout));
 
     invariant(outPath != null);
-    await transferTimestamps({ inPath: filePathArg, outPath, duration, treatInputFileModifiedTimeAsStart, treatOutputFileModifiedTimeAsStart });
+    await utils.transferTimestamps({ inPath: filePathArg, outPath, duration, treatInputFileModifiedTimeAsStart, treatOutputFileModifiedTimeAsStart });
     return outPath;
   }, [appendFfmpegCommandLog, treatInputFileModifiedTimeAsStart, treatOutputFileModifiedTimeAsStart]);
 
@@ -835,7 +835,7 @@ function useFfmpegOperations({ filePath, treatInputFileModifiedTimeAsStart, trea
     // logStdoutStderr(result);
     await ffmpeg.runFfmpegWithProgress({ ffmpegArgs, duration, onProgress });
 
-    await transferTimestamps({ inPath: filePathArg, outPath, duration, treatInputFileModifiedTimeAsStart, treatOutputFileModifiedTimeAsStart });
+    await utils.transferTimestamps({ inPath: filePathArg, outPath, duration, treatInputFileModifiedTimeAsStart, treatOutputFileModifiedTimeAsStart });
   }, [appendFfmpegCommandLog, treatInputFileModifiedTimeAsStart, treatOutputFileModifiedTimeAsStart]);
 
   // https://stackoverflow.com/questions/34118013/how-to-determine-webm-duration-using-ffprobe
@@ -868,7 +868,7 @@ function useFfmpegOperations({ filePath, treatInputFileModifiedTimeAsStart, trea
     await ffmpeg.runFfmpegWithProgress({ ffmpegArgs, onProgress });
 
 
-    await transferTimestamps({ inPath: filePath, outPath, duration: undefined, treatInputFileModifiedTimeAsStart, treatOutputFileModifiedTimeAsStart });
+    await utils.transferTimestamps({ inPath: filePath, outPath, duration: undefined, treatInputFileModifiedTimeAsStart, treatOutputFileModifiedTimeAsStart });
 
     return outPath;
   }, [appendFfmpegCommandLog, filePath, treatInputFileModifiedTimeAsStart, treatOutputFileModifiedTimeAsStart]);

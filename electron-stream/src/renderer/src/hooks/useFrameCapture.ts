@@ -2,7 +2,7 @@ import { dataUriToBuffer } from 'data-uri-to-buffer';
 import pMap from 'p-map';
 import { useCallback } from 'react';
 
-import { /*getSuffixedOutPath,*/ getOutDir, transferTimestamps, getSuffixedFileName, getOutPath, escapeRegExp, fsOperationWithRetry } from '../util';
+import { /*getSuffixedOutPath,*/ getOutDir, /*transferTimestamps,*/ getSuffixedFileName, getOutPath, escapeRegExp, fsOperationWithRetry } from '../util';
 import { getNumDigits, isDurationValid } from '../segments';
 
 // import * as ffmpeg from '../ffmpeg';
@@ -110,7 +110,7 @@ export default ({ appendFfmpegCommandLog, formatTimecode, treatInputFileModified
     const args = await ffmpeg.captureFrameToFile({ timestamp: time, videoPath: filePath, outPath, quality });
     appendFfmpegCommandLog(args);
 
-    await transferTimestamps({ inPath: filePath, outPath, cutFrom: time, cutTo: time, duration: isDurationValid(fileDuration) ? fileDuration : undefined, treatInputFileModifiedTimeAsStart, treatOutputFileModifiedTimeAsStart });
+    await utils.transferTimestamps({ inPath: filePath, outPath, cutFrom: time, cutTo: time, duration: isDurationValid(fileDuration) ? fileDuration : undefined, treatInputFileModifiedTimeAsStart, treatOutputFileModifiedTimeAsStart });
     return outPath;
   }, [appendFfmpegCommandLog, fileDuration, formatTimecode, treatInputFileModifiedTimeAsStart, treatOutputFileModifiedTimeAsStart]);
 
@@ -130,7 +130,7 @@ export default ({ appendFfmpegCommandLog, formatTimecode, treatInputFileModified
     const outPath = await utils.getSuffixedOutPath({ customOutDir, filePath, nameSuffix: `${timecode}.${ext}` });
     await writeFile(outPath, new Uint8Array(dataUri.buffer));
 
-    await transferTimestamps({ inPath: filePath, outPath, cutFrom: time, cutTo: time, duration: isDurationValid(fileDuration) ? fileDuration : undefined, treatInputFileModifiedTimeAsStart, treatOutputFileModifiedTimeAsStart });
+    await utils.transferTimestamps({ inPath: filePath, outPath, cutFrom: time, cutTo: time, duration: isDurationValid(fileDuration) ? fileDuration : undefined, treatInputFileModifiedTimeAsStart, treatOutputFileModifiedTimeAsStart });
     return outPath;
   }, [fileDuration, formatTimecode, treatInputFileModifiedTimeAsStart, treatOutputFileModifiedTimeAsStart]);
 

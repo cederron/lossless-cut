@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useMemo, useRef } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { useDebounce } from 'use-debounce';
 import isEqual from 'lodash/isEqual';
 
@@ -20,9 +20,21 @@ export default ({ autoSaveProjectFile, storeProjectInWorkingDir, filePath, custo
   const projectSuffix = 'proj.llc';
   const utils = useInjection<IUtils>(TOKENS.Utils);
   // New LLC format can be stored along with input file or in working dir (customOutDir)
-  const getEdlFilePath = useCallback((fp?: string, cod?: string) => utils.getSuffixedOutPath({ customOutDir: cod, filePath: fp, nameSuffix: projectSuffix }), []);
+  const getEdlFilePath = useCallback((fp?: string, cod?: string) => utils.getSuffixedOutPath({ customOutDir: cod, filePath: fp, nameSuffix: projectSuffix }), [utils]);
   const getProjectFileSavePath = useCallback((storeProjectInWorkingDirIn: boolean) => getEdlFilePath(filePath, storeProjectInWorkingDirIn ? customOutDir : undefined), [getEdlFilePath, filePath, customOutDir]);
-  const projectFileSavePath = useMemo(() => getProjectFileSavePath(storeProjectInWorkingDir), [getProjectFileSavePath, storeProjectInWorkingDir]);
+
+  const [projectFileSavePath, setProjectFileSavePath] = useState<string>();
+  useEffect(() => {
+    let canceled = false;
+    getProjectFileSavePath(storeProjectInWorkingDir)
+      .then((res) => {
+        if (!canceled) setProjectFileSavePath(res);
+      })
+      .catch((err) => console.error(err));
+    return () => {
+      canceled = true;
+    };
+  }, [getProjectFileSavePath, storeProjectInWorkingDir]);
 
   const currentSaveOperation = useMemo(() => {
     if (!projectFileSavePath) return undefined;

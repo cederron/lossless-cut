@@ -463,7 +463,7 @@ function VideoPlayer() {
 
   const toggleStoreProjectInWorkingDir = useCallback(async () => {
     const newValue = !storeProjectInWorkingDir;
-    const path = getProjectFileSavePath(newValue);
+    const path = await getProjectFileSavePath(newValue);
     if (path) { // path will be falsy if no file loaded
       try {
         await ensureAccessToSourceDir(path);
@@ -1363,10 +1363,10 @@ function VideoPlayer() {
     async function tryFindAndLoadProjectFile({ chapters, cod }: { chapters: FFprobeChapter[], cod: string | undefined }) {
       try {
         // First try to open from from working dir
-        if (await tryOpenProjectPath(getEdlFilePath(fp, cod))) return;
+        if (await tryOpenProjectPath(await getEdlFilePath(fp, cod))) return;
 
         // then try to open project from source file dir
-        const sameDirEdlFilePath = getEdlFilePath(fp);
+        const sameDirEdlFilePath = await getEdlFilePath(fp);
         // MAS only allows fs.access (pathExists) if we don't have access to input dir yet, so check first if the file exists,
         // so we don't need to annoy the user by asking for permission if the project file doesn't exist
         if (await utils.pathExists(sameDirEdlFilePath)) {

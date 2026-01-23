@@ -4,6 +4,9 @@ import type { ICueSheet } from "cue-parser/lib/types";
 import type { FFprobeFormat, Html5ifyMode, IUtils } from "lossless-cut-application";
 
 export class UtilsWeb implements IUtils {
+
+    apiUrl = 'http://localhost:8080/api';
+
     getFileUri(path: string | undefined, cacheBuster: number): string {
         throw new Error("Method not implemented.");
     }
@@ -66,8 +69,14 @@ export class UtilsWeb implements IUtils {
     unlinkWithRetry(path: string, options?: { signal: AbortSignal; }): Promise<void> {
         throw new Error("Method not implemented.");
     }
-    transferTimestamps({ inPath, outPath, cutFrom, cutTo, duration, treatInputFileModifiedTimeAsStart, treatOutputFileModifiedTimeAsStart }: { inPath: string; outPath: string; cutFrom?: number | undefined; cutTo?: number | undefined; duration: number | undefined; treatInputFileModifiedTimeAsStart: boolean; treatOutputFileModifiedTimeAsStart: boolean | null | undefined; }): Promise<void> {
-        throw new Error("Method not implemented.");
+    async transferTimestamps({ inPath, outPath, cutFrom, cutTo, duration, treatInputFileModifiedTimeAsStart, treatOutputFileModifiedTimeAsStart }: { inPath: string; outPath: string; cutFrom?: number | undefined; cutTo?: number | undefined; duration: number | undefined; treatInputFileModifiedTimeAsStart: boolean; treatOutputFileModifiedTimeAsStart: boolean | null | undefined; }): Promise<void> {
+        await fetch(`${this.apiUrl}/transferTimestamps`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ inPath, outPath, cutFrom, cutTo, duration, treatInputFileModifiedTimeAsStart, treatOutputFileModifiedTimeAsStart }),
+        });
     }
     readFileSize(path: string): Promise<number> {
         throw new Error("Method not implemented.");
@@ -78,7 +87,7 @@ export class UtilsWeb implements IUtils {
     async getSuffixedOutPath<T extends string | undefined>(a: { customOutDir?: string | undefined; filePath?: T | undefined; nameSuffix: string; }): Promise<T extends string ? string : undefined>;
     async getSuffixedOutPath({ customOutDir, filePath, nameSuffix }: { customOutDir?: string | undefined; filePath?: string | undefined; nameSuffix: string; }): Promise<string | undefined>
     {
-        const res = await fetch('/api/utils/getSuffixedOutPath', {
+        const res = await fetch(`${this.apiUrl}/getSuffixedOutPath`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
