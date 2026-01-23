@@ -1725,22 +1725,23 @@ function App() {
     }, i18n.t('Failed to capture frame'));
   }, [addStreamSourceFile, captureFormat, captureFrameFromFfmpeg, captureFrameQuality, customOutDir, filePath, getRelevantTime, showNotification, updateStreamParams, withErrorHandling]);
 
-  const batchLoadPaths = useCallback((newPaths: string[], append?: boolean) => {
+  const batchLoadPaths = useCallback(async (newPaths: string[], append?: boolean) => {
+    const newFiles = await Promise.all(newPaths.map(async (path) => ({ path, name: await utils.basename(path) })));
+
     setBatchFiles((existingFiles) => {
-      const mapPathsToFiles = (paths: string[]) => paths.map((path) => ({ path, name: utils.basename(path) }));
       if (append) {
-        const newUniquePaths = newPaths.filter((newPath) => !existingFiles.some(({ path: existingPath }) => newPath === existingPath));
-        const [firstNewUniquePath] = newUniquePaths;
-        if (firstNewUniquePath == null) return existingFiles;
-        setSelectedBatchFiles([firstNewUniquePath]);
-        return [...existingFiles, ...mapPathsToFiles(newUniquePaths)];
+        const newUniqueFiles = newFiles.filter((newFile) => !existingFiles.some(({ path: existingPath }) => newFile.path === existingPath));
+        const [firstNewUniqueFile] = newUniqueFiles;
+        if (firstNewUniqueFile == null) return existingFiles;
+        setSelectedBatchFiles([firstNewUniqueFile.path]);
+        return [...existingFiles, ...newUniqueFiles];
       }
-      const [firstNewPath] = newPaths;
-      invariant(firstNewPath != null);
-      setSelectedBatchFiles([firstNewPath]);
-      return mapPathsToFiles(newPaths);
+      const [firstNewFile] = newFiles;
+      invariant(firstNewFile != null);
+      setSelectedBatchFiles([firstNewFile.path]);
+      return newFiles;
     });
-  }, []);
+  }, [utils]);
 
   const userOpenFiles = useCallback(async (newFilePathsIn?: string[]) => {
     await withErrorHandling(async () => {
@@ -1774,7 +1775,7 @@ function App() {
       }
 
       if (newFilePaths.length > 1 && alwaysConcatMultipleFiles) {
-        batchLoadPaths(newFilePaths);
+        await batchLoadPaths(newFilePaths);
         setConcatDialogOpen(true);
         return;
       }
@@ -1844,14 +1845,14 @@ function App() {
           return;
         }
         if (openFileResponse === 'addToBatch') {
-          batchLoadPaths(newFilePaths, true);
+          await batchLoadPaths(newFilePaths, true);
           return;
         }
         if (openFileResponse === 'mergeWithCurrentFile') {
           const batchPaths = new Set<string>();
           if (filePath) batchPaths.add(filePath);
           newFilePaths.forEach((path) => batchPaths.add(path));
-          batchLoadPaths([...batchPaths]);
+          await batchLoadPaths([...batchPaths]);
           if (batchPaths.size > 1) setConcatDialogOpen(true);
         }
         // else: no match means dialog canceled or nothing useful to do:
@@ -2325,7 +2326,7 @@ function App() {
     await withErrorHandling(async () => {
       const filePaths = [...ev.dataTransfer.files].map((f) => electron.webUtils.getPathForFile(f));
       await mainApi.focusWindow();
-      batchLoadPaths(filePaths, true);
+      await batchLoadPaths(filePaths, true);
     });
   }, [batchLoadPaths, withErrorHandling]);
 
