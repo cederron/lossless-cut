@@ -8,7 +8,15 @@ export class UtilsWeb implements IUtils {
     apiUrl = 'http://localhost:8080/api';
 
     async getFileUri(path: string | undefined, cacheBuster: number): Promise<string> {
-        throw new Error("Method not implemented.");
+        const res = await fetch(`${this.apiUrl}/getFileUri`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ path, cacheBuster }),
+        });
+        const data = await res.json();
+        return data.fileUri;
     }
     ensureWritableOutDir({ inputPath, outDir }: { inputPath?: string | undefined; outDir: string | undefined; }): Promise<string | undefined> {
         throw new Error("Method not implemented.");
@@ -24,11 +32,27 @@ export class UtilsWeb implements IUtils {
         const data = await res.json();
         return data.outDir;
     }
-    isFile(path: string): Promise<boolean> {
-        throw new Error("Method not implemented.");
+    async isFile(path: string): Promise<boolean> {
+        const res = await fetch(`${this.apiUrl}/isFile`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ path }),
+        });
+        const data = await res.json();
+        return data.isFile;
     }
-    isDirectory(path: string): Promise<boolean> {
-        throw new Error("Method not implemented.");
+    async isDirectory(path: string): Promise<boolean> {
+        const res = await fetch(`${this.apiUrl}/isDirectory`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ path }),
+        });
+        const data = await res.json();
+        return data.isDirectory;
     }
     pathsNames(paths: string[]): string[] {
         throw new Error("Method not implemented.");
@@ -44,8 +68,16 @@ export class UtilsWeb implements IUtils {
         const data = await res.json();
         return data.joinedPath;
     }
-    basename(path: string): string {
-        throw new Error("Method not implemented.");
+    async basename(path: string): Promise<string> {
+        const res = await fetch(`${this.apiUrl}/basename`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ path }),
+        });
+        const data = await res.json();
+        return data.baseName;
     }
     async dirname(path: string): Promise<string> {
         const res = await fetch(`${this.apiUrl}/dirname`, {

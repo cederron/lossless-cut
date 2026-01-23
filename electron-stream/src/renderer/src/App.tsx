@@ -623,18 +623,16 @@ function App() {
 
   const usingPreviewFile = !!previewFilePath;
   const effectiveFilePath = previewFilePath || filePath;
-  const fileUri = useMemo(() => {
-    return await utils.getFileUri(effectiveFilePath, cacheBuster);
-    // if (!effectiveFilePath) return ''; // Setting video src="" prevents memory leak in chromium
-    // const uri = pathToFileURL(effectiveFilePath).href;
-    // // https://github.com/mifi/lossless-cut/issues/1674
-    // if (cacheBuster !== 0) {
-    //   const qs = new URLSearchParams();
-    //   qs.set('t', String(cacheBuster));
-    //   return `${uri}?${qs.toString()}`;
-    // }
-    // return uri;
-  }, [cacheBuster, effectiveFilePath]);
+  const [fileUri, setFileUri] = useState('');
+  useEffect(() => {
+    let canceled = false;
+    utils.getFileUri(effectiveFilePath, cacheBuster).then((res) => {
+      if (!canceled) setFileUri(res);
+    });
+    return () => {
+      canceled = true;
+    };
+  }, [cacheBuster, effectiveFilePath, utils]);
 
   const resetState = useCallback(() => {
     console.log('State reset');

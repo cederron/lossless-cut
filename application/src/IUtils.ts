@@ -10,7 +10,7 @@ export interface IUtils {
     isDirectory(path: string): Promise<boolean>;
     pathsNames(paths: string[]): string[];
     pathJoin(...paths: string[]): Promise<string>;
-    basename(path: string): string;
+    basename(path: string): Promise<string>;
     dirname(path: string): Promise<string>;
     pathExists(path: string): Promise<boolean>;
     pathResolve(...paths: string[]): string;

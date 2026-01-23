@@ -185,6 +185,30 @@ export default ({ port, onKeyboardAction }: {
     res.json({ fileUri });
   }));
 
+  apiRouter.post('/isDirectory', express.json(), asyncHandler(async (req, res) => {
+    const { path } = req.body as { path: string; };
+    logger.info('API isDirectory called', { path });
+    const utils = container.resolve<IUtils>(TOKENS.Utils);
+    const isDirectory =  await utils.isDirectory(path);
+    res.json({ isDirectory });
+  }));
+
+  apiRouter.post('/isFile', express.json(), asyncHandler(async (req, res) => {
+    const { path } = req.body as { path: string; };
+    logger.info('API isFile called', { path });
+    const utils = container.resolve<IUtils>(TOKENS.Utils);
+    const isFile =  await utils.isFile(path);
+    res.json({ isFile });
+  }));
+
+  apiRouter.post('/basename', express.json(), asyncHandler(async (req, res) => {
+    const { path } = req.body as { path: string; };
+    logger.info('API basename called', { path });
+    const utils = container.resolve<IUtils>(TOKENS.Utils);
+    const baseName =  await utils.basename(path);
+    res.json({ baseName });
+  }));
+
   const server = http.createServer(app);
 
   server.on('error', (err) => logger.error('http server error', err));

@@ -147,7 +147,7 @@ export class Utils implements IUtils {
         return join(...paths);
     }
 
-    basename(path: string): string {
+    async basename(path: string): Promise<string> {
         return basename(path);
     }
 
