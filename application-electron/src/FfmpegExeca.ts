@@ -1080,4 +1080,21 @@ getStreamFps(stream: FFprobeStream) {
   return undefined;
 }
 
+//     async renderThumbnails({ filePath, from, duration, onThumbnail, signal }: {
+//   filePath: string,
+//   from: number,
+//   duration: number,
+//   onThumbnail: (a: { time: number, url: string }) => void,
+//   signal: AbortSignal,
+// }) {
+//   const numThumbs = 10;
+//   const thumbTimes = Array.from({ length: numThumbs }).fill(undefined).map((_unused, i) => (from + ((duration * i) / numThumbs)));
+//   // console.log(thumbTimes);
+
+//   await pMap(thumbTimes, async (time) => {
+//     const url = await this.renderThumbnail(filePath, time, signal);
+//     onThumbnail({ time, url });
+//   }, { concurrency: 2 });
+// }
+
 }

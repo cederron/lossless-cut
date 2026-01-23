@@ -1,4 +1,4 @@
-import { constants, access, readdir, rename, stat, utimes } from "fs/promises";
+import { constants, access, readdir, rename, stat, utimes, readFile, writeFile } from "fs/promises";
 import { TOKENS, type FFprobeFormat, type Html5ifyMode, type IPlatform, type IUtils } from "lossless-cut-application";
 import type { Options } from 'p-retry';
 import pRetry from 'p-retry';
@@ -6,6 +6,8 @@ import path, { dirname, extname, join, parse } from "path";
 import { inject, injectable } from "tsyringe";
 import mime from 'mime-types';
 import { fileTypeFromFile } from 'file-type/node';
+import type { ICueSheet } from "cue-parser/lib/types";
+import { parse as parseCue } from "cue-parser";
 
 @injectable()
 export class Utils implements IUtils {
@@ -349,8 +351,20 @@ async getDefaultOutFormat({ filePath, fileMeta: { format } }: { filePath: string
   return this.mapInputToOutputFormat(assumedFormat);
 }
 
-async readFile(path: string, encoding?: string): Promise<Buffer<ArrayBuffer> | string> {
-    return this.readFile(path, encoding);
-}
+    readFile(path: string): Promise<Buffer<ArrayBuffer>>;
+    readFile(path: string, encoding: string): Promise<string>;
+    async readFile(path: string, encoding?: string): Promise<string | Buffer<ArrayBuffer>> {
+        if (encoding) {
+            // @ts-expect-error encoding type mismatch
+            return readFile(path, encoding);
+        }
+        return readFile(path);
+    }
+
+    parseCue(path: string): ICueSheet {
+        return parseCue(path);
+    }
+
+
 
 }

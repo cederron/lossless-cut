@@ -50,23 +50,23 @@ async function loadPbf(path: string) {
 }
 
 async function loadEdl(path: string, fps: number) {
-  return parseEdl(trimBom(await readFile(path, 'utf8')), fps);
+  return parseEdl(trimBom(await utils.readFile(path, 'utf8')), fps);
 }
 
 async function loadCue(path: string) {
-  return parseCuesheet(cueParser.parse(path));
+  return parseCuesheet(utils.parseCue(path));
 }
 
 async function loadSrt(path: string) {
-  return parseSrtToSegments(await readFile(path, 'utf8'));
+  return parseSrtToSegments(await utils.readFile(path, 'utf8'));
 }
 
 export async function saveCsv(path: string, cutSegments: SegmentBase[]) {
-  await writeFile(path, formatCsvSeconds(cutSegments));
+  await utils.writeFile(path, formatCsvSeconds(cutSegments));
 }
 
 export async function saveCsvHuman(path: string, cutSegments: SegmentBase[]) {
-  await writeFile(path, formatCsvHuman(cutSegments));
+  await utils.writeFile(path, formatCsvHuman(cutSegments));
 }
 
 export async function saveCsvFrames({ path, cutSegments, getFrameCount }: {
@@ -74,15 +74,15 @@ export async function saveCsvFrames({ path, cutSegments, getFrameCount }: {
   cutSegments: SegmentBase[],
   getFrameCount: GetFrameCount,
 }) {
-  await writeFile(path, formatCsvFrames({ cutSegments, getFrameCount }));
+  await utils.writeFile(path, formatCsvFrames({ cutSegments, getFrameCount }));
 }
 
 export async function saveTsv(path: string, cutSegments: SegmentBase[]) {
-  await writeFile(path, formatTsvHuman(cutSegments));
+  await utils.writeFile(path, formatTsvHuman(cutSegments));
 }
 
 export async function saveSrt(path: string, cutSegments: SegmentBase[]) {
-  await writeFile(path, formatSrt(cutSegments));
+  await utils.writeFile(path, formatSrt(cutSegments));
 }
 
 export async function saveLlcProject({ savePath, mediaFilePath, cutSegments }: {
@@ -92,14 +92,14 @@ export async function saveLlcProject({ savePath, mediaFilePath, cutSegments }: {
 }) {
   const projectData: LlcProject = {
     version: 2,
-    mediaFileName: basename(mediaFilePath),
+    mediaFileName: utils.basename(mediaFilePath),
     cutSegments: mapSaveableSegments(cutSegments),
   };
-  await writeFile(savePath, JSON5.stringify(projectData, null, 2));
+  await utils.writeFile(savePath, JSON5.stringify(projectData, null, 2));
 }
 
 export async function loadLlcProject(path: string) {
-  const json = JSON5.parse(await readFile(path, 'utf8'));
+  const json = JSON5.parse(await utils.readFile(path, 'utf8'));
 
   async function doLoad(): Promise<LlcProject> {
     // todo probably remove migration in future
@@ -130,7 +130,7 @@ export async function loadLlcProject(path: string) {
 }
 
 export async function loadOtio(path: string) {
-  return parseOtio(JSON.parse(await readFile(path, 'utf8')));
+  return parseOtio(JSON.parse(await utils.readFile(path, 'utf8')));
 }
 
 export async function readEdlFile({ type, path, fps }: {
@@ -218,16 +218,17 @@ export async function exportEdlFile({ type, cutSegments, customOutDir, filePath,
     filters = [{ name: i18n.t('LosslessCut project'), extensions: [ext, 'llc'] }];
   }
 
-  const defaultPath = utils.getOutPath({ filePath, customOutDir, fileName: `${basename(filePath)}.${ext}` });
+  const defaultPath = utils.getOutPath({ filePath, customOutDir, fileName: `${utils.basename(filePath)}.${ext}` });
 
-  const { canceled, filePath: savePath } = await dialog.showSaveDialog({ defaultPath, title: i18n.t('Export project'), ...(filters != null ? { filters } : {}) });
-  if (canceled || !savePath) return;
-  console.log('Saving', type, savePath);
-  // eslint-disable-next-line unicorn/prefer-switch
-  if (type === 'csv') await saveCsv(savePath, cutSegments);
-  else if (type === 'tsv-human') await saveTsv(savePath, cutSegments);
-  else if (type === 'csv-human') await saveCsvHuman(savePath, cutSegments);
-  else if (type === 'csv-frames') await saveCsvFrames({ path: savePath, cutSegments, getFrameCount });
-  else if (type === 'llc') await saveLlcProject({ savePath, mediaFilePath: filePath, cutSegments });
-  else if (type === 'srt') await saveSrt(savePath, cutSegments);
+  throw new Error('Not implemented');
+//   const { canceled, filePath: savePath } = await dialog.showSaveDialog({ defaultPath, title: i18n.t('Export project'), ...(filters != null ? { filters } : {}) });
+//   if (canceled || !savePath) return;
+//   console.log('Saving', type, savePath);
+//   // eslint-disable-next-line unicorn/prefer-switch
+//   if (type === 'csv') await saveCsv(savePath, cutSegments);
+//   else if (type === 'tsv-human') await saveTsv(savePath, cutSegments);
+//   else if (type === 'csv-human') await saveCsvHuman(savePath, cutSegments);
+//   else if (type === 'csv-frames') await saveCsvFrames({ path: savePath, cutSegments, getFrameCount });
+//   else if (type === 'llc') await saveLlcProject({ savePath, mediaFilePath: filePath, cutSegments });
+//   else if (type === 'srt') await saveSrt(savePath, cutSegments);
 }

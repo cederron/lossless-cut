@@ -1,5 +1,6 @@
 import type { FFprobeFormat } from "./ffprobe.ts";
 import type { Html5ifyMode } from "./types/Html5ifyMode.ts";
+import type { ICueSheet } from 'cue-parser/lib/types.d.ts';
 
 export interface IUtils {
     getFileUri(path: string | undefined, cacheBuster: number): string;
@@ -46,8 +47,15 @@ getFileDir(filePath?: string): string | undefined;
 checkDirWriteAccess(dirPath: string): Promise<boolean>;
 readFileStats(path: string): Promise<{ size: number, atimeMs: number, mtimeMs: number, ctimeMs: number, birthtimeMs: number }>;
 getDefaultOutFormat({ filePath, fileMeta: { format } }: { filePath: string, fileMeta: { format: Pick<FFprobeFormat, 'format_name'> } }): Promise<string | undefined>;
-readFile(
-        path: string,
-        encoding?: string,
-    ): Promise<Buffer<ArrayBuffer> | string>;
+    readFile(path: string): Promise<Buffer<ArrayBuffer>>;
+    readFile(path: string, encoding: string): Promise<string>;
+    writeFile(path: string, data: string | Uint8Array): Promise<void>;
+    parseCue(path:string): ICueSheet;
+    // renderThumbnails({ filePath, from, duration, onThumbnail, signal }: {
+    //   filePath: string,
+    //   from: number,
+    //   duration: number,
+    //   onThumbnail: (a: { time: number, url: string }) => void,
+    //   signal: AbortSignal,
+    // }): Promise<void>;
 }

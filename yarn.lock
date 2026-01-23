@@ -9422,6 +9422,7 @@ __metadata:
   resolution: "lossless-cut-application@workspace:application"
   dependencies:
     "@tsconfig/strictest": "npm:^2.0.8"
+    cue-parser: "npm:^0.3.0"
     rimraf: "npm:^5.0.10"
     typescript: "npm:~5.9.3"
   languageName: unknown

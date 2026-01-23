@@ -1,4 +1,6 @@
 import type { FFprobeFormat } from "lossless-cut-application";
+import { ffmpegExtractWindow } from "./util/constants";
+import confetti from 'canvas-confetti';
 
 export const appPath = 'appPath';
 export const isWindowsStoreBuild = false;
@@ -68,6 +70,38 @@ export function filenamify(name: string) {
   return name.replaceAll(/[^\p{L}\p{N} .-_]/gu, '_');
 }
 
+export const isAbortedError = (err: any) => (
+  // execa killed (aborted by user). isTerminated because runningFfmpegs process.kill
+  (/*isExecaError(err) &&*/ (err.isCanceled || err.isTerminated))
+  || (err instanceof Error && err.name === 'AbortError')
+);
+
+export const html5ifiedPrefix = 'html5ified-';
+export const html5dummySuffix = 'dummy';
+
+export const mediaSourceQualities = ['HD', 'SD', 'OG']; // OG is original
+
+export const calcShouldShowWaveform = (zoomedDuration: number | undefined) => (zoomedDuration != null && zoomedDuration < ffmpegExtractWindow * 8);
+export const calcShouldShowKeyframes = (zoomedDuration: number | undefined) => (zoomedDuration != null && zoomedDuration < ffmpegExtractWindow * 8);
+
+// export const readFileSizes = (paths: string[]) => pMap(paths, async (path) => readFileSize(path), { concurrency: 5 });
+
+export function shootConfetti(options?: confetti.Options) {
+  confetti({
+    particleCount: 30,
+    angle: 110,
+    startVelocity: 30,
+    spread: 40,
+    ticks: 25,
+    disableForReducedMotion: true,
+    origin: {
+      x: 0.98,
+      // since they fall down, start a bit higher than random
+      y: 1.03,
+    },
+    ...options,
+  });
+}
 // import i18n from 'i18next';
 // import pMap from 'p-map';
 // import prettyBytes from 'pretty-bytes';

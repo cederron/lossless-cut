@@ -2,6 +2,10 @@ import 'dotenv/config';
 import express from 'express';
 import cors from 'cors';
 import { PrismaClient } from '@prisma/client';
+import path from 'path';
+import { fileURLToPath } from 'url';
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 const app = express();
 const prisma = new PrismaClient();
 app.use(cors());
@@ -37,5 +41,15 @@ app.post('/users', async (req, res) => {
 });
 const PORT = process.env['PORT'] || 3001;
 app.listen(PORT, () => {
-    console.log(`Server running on port ${PORT}`);
+    console.log(`API Server running on port ${PORT}`);
+});
+const frontendApp = express();
+const FRONTEND_PORT = process.env['FRONTEND_PORT'] || 3002;
+const frontendBuildPath = path.join(__dirname, '../../web/dist');
+frontendApp.use(express.static(frontendBuildPath));
+frontendApp.get('*', (_req, res) => {
+    res.sendFile(path.join(frontendBuildPath, 'index.html'));
+});
+frontendApp.listen(FRONTEND_PORT, () => {
+    console.log(`Frontend served on port ${FRONTEND_PORT}`);
 });

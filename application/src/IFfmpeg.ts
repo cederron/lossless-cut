@@ -136,5 +136,13 @@ silenceDetect({ filePath, streamId, filterOptions, boundingMode, onProgress, onS
 
 findKeyframeNearTime({ filePath, streamIndex, time, mode }: { filePath: string, streamIndex: number, time: number, mode: FindKeyframeMode }): Promise<number | undefined>;
 getStreamFps(stream: FFprobeStream): number | undefined;
+// renderThumbnails({ filePath, from, duration, onThumbnail, signal }: {
+//   filePath: string,
+//   from: number,
+//   duration: number,
+//   onThumbnail: (a: { time: number, url: string }) => void,
+//   signal: AbortSignal,
+// }): Promise<void>;
+
 
 }

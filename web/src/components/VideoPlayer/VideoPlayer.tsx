@@ -90,10 +90,10 @@ import { generateCutFileNames as generateCutFileNamesRaw, generateCutMergedFileN
 import { rightBarWidth, leftBarWidth, ffmpegExtractWindow, zoomMax } from './util/constants';
 import BigWaveform from './components/BigWaveform';
 
-import type { BatchFile, CustomTagsByFile, FfmpegCommandLog, FilesMeta, FileStats, ParamsByStreamId, SegmentColorIndex, TunerType } from './types';
+import type { BatchFile, CustomTagsByFile, EdlExportType, EdlImportType, FfmpegCommandLog, FilesMeta, FileStats, ParamsByStreamId, SegmentColorIndex, TunerType } from './types';
 // import { goToTimecodeDirectArgsSchema, openFilesActionArgsSchema } from './types';
 // import type { CaptureFormat, KeyboardAction, ApiActionRequest } from '../../common/types.js';
-import type { FFprobeChapter, FFprobeStream } from '../../common/ffprobe.js';
+// import type { FFprobeChapter, FFprobeStream } from '../../common/ffprobe.js';
 import useLoading from './hooks/useLoading';
 import useVideo from './hooks/useVideo';
 import useTimecode from './hooks/useTimecode';
@@ -102,24 +102,29 @@ import useThumbnails from './hooks/useThumbnails';
 import useSubtitles from './hooks/useSubtitles';
 import useStreamsMeta from './hooks/useStreamsMeta';
 import { bottomStyle, videoStyle } from './styles';
-import styles from './App.module.css';
+import styles from './VideoPlayer.module.css';
 // import { DirectoryAccessDeclinedError, UserFacingError } from '../errors';
 import SwalContainer from './components/SwalContainer';
 import ErrorDialog from './components/ErrorDialog';
 import useErrorHandling from './hooks/useErrorHandling';
 import GenericDialog, { useDialog } from './components/GenericDialog';
 import useHtml5ify from './hooks/useHtml5ify';
-import WhatsNew from './components/WhatsNew';
-import mainApi from './mainApi.js';
-import { DirectoryAccessDeclinedError } from 'lossless-cut-application';
-import { UserFacingError } from '../errors.js';
+// import WhatsNew from './components/WhatsNew';
+// import mainApi from './mainApi.js';
+import { DirectoryAccessDeclinedError, RefuseOverwriteError, TOKENS, type CaptureFormat, type Chapter, type FFprobeChapter, type FFprobeStream, type FileFfprobeMeta, type IFfmpeg, type IState, type IUtils, type KeyboardAction, type PlaybackMode, type SegmentBase, type SegmentTags, type StateSegment } from 'lossless-cut-application';
+import { calcShouldShowKeyframes, calcShouldShowWaveform, isAbortedError, mediaSourceQualities } from './util.ts';
+import { container } from 'tsyringe';
+import { UserFacingError } from './errors.ts';
+// import { UserFacingError } from '../errors.js';
 
-const electron = window.require('electron');
+// const electron = window.require('electron');
 // const { lstat } = window.require('fs/promises');
 // const { parse: parsePath, join: pathJoin, basename, dirname } = window.require('path');
 
-const { utils, state/*, settings*/ } = window.require('@electron/remote').require('./index.js');
-
+// const { utils, state/*, settings*/ } = window.require('@electron/remote').require('./index.js');
+const utils = container.resolve<IUtils>(TOKENS.Utils);
+const state = container.resolve<IState>(TOKENS.State);
+const ffmpeg = container.resolve<IFfmpeg>(TOKENS.Ffmpeg);
 
 const hevcPlaybackSupportedPromise = doesPlayerSupportHevcPlayback();
 // eslint-disable-next-line unicorn/prefer-top-level-await
@@ -156,7 +161,7 @@ function VideoPlayer() {
   const { fileFormat, setFileFormat, detectedFileFormat, setDetectedFileFormat, isCustomFormatSelected } = useFileFormatState();
 
   // State per application launch
-  const lastOpenedPathRef = useRef<string>();
+  const lastOpenedPathRef = useRef<string>(undefined);
   const [showRightBar, setShowRightBar] = useState(true);
   const [lastCommandsVisible, setLastCommandsVisible] = useState(false);
   const [settingsVisible, setSettingsVisible] = useState(false);
@@ -200,14 +205,14 @@ function VideoPlayer() {
   const zoomedDuration = isDurationValid(fileDuration) ? fileDuration / zoom : undefined;
   const zoomWindowEndTime = useMemo(() => (zoomedDuration != null ? zoomWindowStartTime + zoomedDuration : undefined), [zoomedDuration, zoomWindowStartTime]);
 
-  useEffect(() => setDocumentTitle({ filePath, working: working?.text, progress }), [progress, filePath, working?.text]);
+  // useEffect(() => setDocumentTitle({ filePath, working: working?.text, progress }), [progress, filePath, working?.text]);
 
   useEffect(() => {
-    mainApi.setProgressBar(progress ?? -1);
+    // mainApi.setProgressBar(progress ?? -1);
   }, [progress]);
 
   useEffect(() => {
-    ffmpegSetCustomFfPath(customFfPath);
+    // ffmpegSetCustomFfPath(customFfPath);
   }, [customFfPath]);
 
   const cutFileTemplateOrDefault = cutFileTemplate ?? defaultCutFileTemplate;
@@ -215,8 +220,9 @@ function VideoPlayer() {
   const mergedFileTemplateOrDefault = mergedFileTemplate ?? defaultMergedFileTemplate;
 
   useEffect(() => {
-    i18n.changeLanguage(language ?? undefined).catch(console.error);
-    electron.ipcRenderer.send('setLanguage', language);
+    console.warn('Language change not implementes');
+    // i18n.changeLanguage(language ?? undefined).catch(console.error);
+    // electron.ipcRenderer.send('setLanguage', language);
   }, [language]);
 
 
@@ -252,7 +258,8 @@ function VideoPlayer() {
 
   const showOsNotification = useCallback((text: string) => {
     if (hideOsNotifications == null) {
-      mainApi.sendOsNotification({ title: text });
+      console.warn(text);
+      // mainApi.sendOsNotification({ title: text });
     }
   }, [hideOsNotifications]);
 
@@ -275,7 +282,7 @@ function VideoPlayer() {
   const appendLastCommandsLog = useCallback((command: string) => {
     setFfmpegCommandLog((old) => [...old, { command, time: new Date() }]);
   }, []);
-  const appendFfmpegCommandLog = useCallback((args: string[]) => appendLastCommandsLog(getFfCommandLine('ffmpeg', args)), [appendLastCommandsLog]);
+  const appendFfmpegCommandLog = useCallback((args: string[]) => appendLastCommandsLog(ffmpeg.getFfCommandLine('ffmpeg', args)), [appendLastCommandsLog]);
 
   const toggleSegmentsList = useCallback(() => setShowRightBar((v) => !v), []);
 
@@ -356,7 +363,7 @@ function VideoPlayer() {
   const segmentsAtCursor = useMemo(() => findSegmentsAtCursor(commandedTime).map((index) => cutSegments[index]), [commandedTime, cutSegments, findSegmentsAtCursor]);
   const firstSegmentAtCursor = useMemo(() => segmentsAtCursor[0], [segmentsAtCursor]);
 
-  const segmentAtCursorRef = useRef<StateSegment>();
+  const segmentAtCursorRef = useRef<StateSegment>(undefined);
   useEffect(() => {
     segmentAtCursorRef.current = firstSegmentAtCursor;
   }, [firstSegmentAtCursor]);
@@ -394,7 +401,7 @@ function VideoPlayer() {
 
   // const getSafeCutTime = useCallback((cutTime, next) => ffmpeg.getSafeCutTime(neighbouringFrames, cutTime, next), [neighbouringFrames]);
 
-  const outputDir = getOutDir(customOutDir, filePath);
+  const outputDir = utils.getOutDir(customOutDir, filePath);
 
   const increaseRotation = useCallback(() => {
     setRotation((r) => (r + 90) % 450);
@@ -439,8 +446,9 @@ function VideoPlayer() {
   }, [autoDeleteMergedSegments, autoMerge, segmentsToChaptersOnly]);
 
   const changeOutDir = useCallback(async () => {
-    const newOutDir = await askForOutDir(outputDir);
-    if (newOutDir) setCustomOutDir(newOutDir);
+    throw new Error('Not implemented');
+    // const newOutDir = await askForOutDir(outputDir);
+    // if (newOutDir) setCustomOutDir(newOutDir);
   }, [outputDir, setCustomOutDir]);
 
   const clearOutDir = useCallback(async () => {
@@ -578,7 +586,7 @@ function VideoPlayer() {
   const shouldShowKeyframes = keyframesEnabled && hasVideo && calcShouldShowKeyframes(zoomedDuration);
   const shouldShowWaveform = calcShouldShowWaveform(zoomedDuration) || overviewWaveform != null;
 
-  const areWeCutting = useMemo(() => segmentsToExport.some(({ start, end }) => isCuttingStart(start) || isCuttingEnd(end, fileDuration)), [fileDuration, segmentsToExport]);
+  const areWeCutting = useMemo(() => segmentsToExport.some(({ start, end }) => ffmpeg.isCuttingStart(start) || ffmpeg.isCuttingEnd(end, fileDuration)), [fileDuration, segmentsToExport]);
   const needSmartCut = areWeCutting && enableSmartCut;
   const isEncoding = needSmartCut || state.getLossyMode() != null;
 
@@ -823,27 +831,29 @@ function VideoPlayer() {
   }, [allUserSettings]);
 
   const openSendReportDialogWithState = useCallback(async (err?: unknown) => {
-    const state = {
-      ...commonSettings,
+    throw new Error('Not implemented');
+    // const state = {
+    //   ...commonSettings,
 
-      filePath,
-      fileFormat,
-      externalFilesMeta,
-      mainStreams,
-      copyStreamIdsByFile,
-      cutSegments: cutSegments.map((s) => ({ start: s.start, end: s.end })),
-      mainFileFormat,
-      rotation,
-      shortestFlag,
-      effectiveExportMode,
-    };
+    //   filePath,
+    //   fileFormat,
+    //   externalFilesMeta,
+    //   mainStreams,
+    //   copyStreamIdsByFile,
+    //   cutSegments: cutSegments.map((s) => ({ start: s.start, end: s.end })),
+    //   mainFileFormat,
+    //   rotation,
+    //   shortestFlag,
+    //   effectiveExportMode,
+    // };
 
-    openSendReportDialog({ err, state });
+    // openSendReportDialog({ err, state });
   }, [commonSettings, copyStreamIdsByFile, cutSegments, effectiveExportMode, externalFilesMeta, fileFormat, filePath, mainFileFormat, mainStreams, rotation, shortestFlag]);
 
   const openSendConcatReportDialogWithState = useCallback(async (err: unknown, reportState?: object) => {
-    const state = { ...commonSettings, ...reportState };
-    openSendReportDialog({ err, state });
+    throw new Error('Not implemented');
+    // const state = { ...commonSettings, ...reportState };
+    // openSendReportDialog({ err, state });
   }, [commonSettings]);
 
   const handleExportFailed = useCallback(async (err: unknown) => {
@@ -906,18 +916,18 @@ function VideoPlayer() {
         warnings.add(t('Fell back to default output file name'));
       }
 
-      const outDir = getOutDir(customOutDir, firstPath);
+      const outDir = utils.getOutDir(customOutDir, firstPath);
 
       const [fileName] = fileNames;
       invariant(fileName != null);
-      const outPath = getOutPath({ customOutDir, filePath: firstPath, fileName });
-      let chaptersFromSegments: Awaited<ReturnType<typeof createChaptersFromSegments>>;
+      const outPath = utils.getOutPath({ customOutDir, filePath: firstPath, fileName });
+      let chaptersFromSegments: Awaited<ReturnType<typeof ffmpeg.createChaptersFromSegments>>;
       if (segmentsToChapters) {
         const chapterNames = await utils.pathsNames(paths);
-        chaptersFromSegments = await createChaptersFromSegments({ segmentPaths: paths, chapterNames });
+        chaptersFromSegments = await ffmpeg.createChaptersFromSegments({ segmentPaths: paths, chapterNames });
       }
 
-      const inputSize = sum(await readFileSizes(paths));
+      const inputSize = sum(await utils.readFileSizes(paths));
 
       // console.log('merge', paths);
       const metadataFromPath = paths[0];
@@ -1118,7 +1128,7 @@ function VideoPlayer() {
 
         const [fileName] = fileNames;
         invariant(fileName != null);
-        mergedOutFilePath = getOutPath({ customOutDir, filePath, fileName });
+        mergedOutFilePath = utils.getOutPath({ customOutDir, filePath, fileName });
 
         await concatCutSegments({
           customOutDir,
@@ -1359,7 +1369,7 @@ function VideoPlayer() {
         const sameDirEdlFilePath = getEdlFilePath(fp);
         // MAS only allows fs.access (pathExists) if we don't have access to input dir yet, so check first if the file exists,
         // so we don't need to annoy the user by asking for permission if the project file doesn't exist
-        if (await mainApi.pathExists(sameDirEdlFilePath)) {
+        if (await utils.pathExists(sameDirEdlFilePath)) {
           // Ok, the file exists. now we have to ask the user, because we need to read that file
           await ensureAccessToSourceDir(fp);
           // Ok, we got access from the user (or already have access), now read the project file
@@ -1398,8 +1408,8 @@ function VideoPlayer() {
         return;
       }
 
-      const ffprobeMeta = await readFileFfprobeMeta(fp);
-      const fileStats = await readFileStats(fp);
+      const ffprobeMeta = await ffmpeg.readFileFfprobeMeta(fp);
+      const fileStats = await utils.readFileStats(fp);
       // console.log('file meta read', fileMeta);
 
       const fileFormatNew = await getDefaultOutFormat({ filePath: fp, fileMeta: ffprobeMeta });
@@ -1458,8 +1468,8 @@ function VideoPlayer() {
 
       // eslint-disable-next-line no-inner-declarations
       function getFps() {
-        if (firstVideoStream != null) return getStreamFps(firstVideoStream);
-        if (firstAudioStream != null) return getStreamFps(firstAudioStream);
+        if (firstVideoStream != null) return ffmpeg.getStreamFps(firstVideoStream);
+        if (firstAudioStream != null) return ffmpeg.getStreamFps(firstAudioStream);
         return undefined;
       }
 
@@ -1527,7 +1537,7 @@ function VideoPlayer() {
       const mediaFilePath = utils.pathJoin(utils.dirname(path), mediaFileName);
 
       // Note: MAS only allows fs.stat (pathExists) if we don't have access to input dir yet
-      if (!(await mainApi.pathExists(mediaFilePath))) {
+      if (!(await utils.pathExists(mediaFilePath))) {
         errorToast(i18n.t('The media file referenced by the project file you tried to open does not exist in the same directory as the project file: {{mediaFileName}}', { mediaFileName }));
         return;
       }
@@ -1688,7 +1698,7 @@ function VideoPlayer() {
 
   const addStreamSourceFile = useCallback(async (path: string) => {
     if (allFilesMeta[path]) return undefined; // Already added?
-    const fileMeta = await readFileFfprobeMeta(path);
+    const fileMeta = await ffmpeg.readFileFfprobeMeta(path);
     // console.log('streams', fileMeta.streams);
     setExternalFilesMeta((old) => ({ ...old, [path]: fileMeta }));
     setCopyStreamIdsForPath(path, () => fromPairs(fileMeta.streams.map(({ index }) => [index, true])));
@@ -1882,8 +1892,9 @@ function VideoPlayer() {
   const toggleLoopSelectedSegments = useCallback(() => togglePlay({ resetPlaybackRate: true, requestPlaybackMode: 'loop-selected-segments' }), [togglePlay]);
 
   const copySegmentsToClipboard = useCallback(async () => {
-    if (!isFileOpened || selectedSegments.length === 0) return;
-    electron.clipboard.writeText(formatTsvHuman(selectedSegments));
+    console.warn('copySegmentsToClipboard is disabled');
+    // if (!isFileOpened || selectedSegments.length === 0) return;
+    // electron.clipboard.writeText(formatTsvHuman(selectedSegments));
   }, [isFileOpened, selectedSegments]);
 
   const showIncludeExternalStreamsDialog = useCallback(async () => {
@@ -2123,9 +2134,9 @@ function VideoPlayer() {
     electron.ipcRenderer.send('renderer-ready');
   }, []);
 
-  useEffect(() => {
-    electron.ipcRenderer.send('setAskBeforeClose', askBeforeClose && isFileOpened);
-  }, [askBeforeClose, isFileOpened]);
+  // useEffect(() => {
+  //   electron.ipcRenderer.send('setAskBeforeClose', askBeforeClose && isFileOpened);
+  // }, [askBeforeClose, isFileOpened]);
 
   const extractSingleStream = useCallback(async (index: number) => {
     if (!filePath) return;
@@ -2189,7 +2200,7 @@ function VideoPlayer() {
 
           console.log('Trying to create preview');
 
-          if (!isDurationValid(await getDuration(filePath))) throw new UserFacingError(i18n.t('Invalid duration'));
+          if (!isDurationValid(await ffmpeg.getDuration(filePath))) throw new UserFacingError(i18n.t('Invalid duration'));
 
           if (hasVideo || hasAudio) {
             await html5ifyAndLoadWithPreferences(customOutDir, filePath, 'fastest', hasVideo, hasAudio);
@@ -2370,11 +2381,11 @@ function VideoPlayer() {
   }, [setWaveformMode]);
 
   useEffect(() => {
-    if (!isStoreBuild && !state.getDisabledNetworking()) loadMifiLink().then(setMifiLink);
+    // if (!isStoreBuild && !state.getDisabledNetworking()) loadMifiLink().then(setMifiLink);
   }, []);
 
   useEffect(() => {
-    runStartupCheck({ onError: ({ title, message }) => setGenericError({ title, err: message }) });
+    // runStartupCheck({ onError: ({ title, message }) => setGenericError({ title, err: message }) });
   }, [customFfPath, setGenericError]);
 
   const appContext = useMemo<AppContextType>(() => ({
@@ -2741,7 +2752,7 @@ function VideoPlayer() {
 
               <GenericDialog dialog={genericDialog} onOpenChange={(open) => !open && closeGenericDialog()} />
 
-              <WhatsNew />
+              {/* <WhatsNew /> */}
 
               <ErrorDialog error={genericError} onOpenChange={(open) => !open && setGenericError(undefined)} />
             </div>
