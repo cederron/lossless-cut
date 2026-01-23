@@ -13,8 +13,16 @@ export class UtilsWeb implements IUtils {
     ensureWritableOutDir({ inputPath, outDir }: { inputPath?: string | undefined; outDir: string | undefined; }): Promise<string | undefined> {
         throw new Error("Method not implemented.");
     }
-    getOutDir(customOutDir?: string | undefined, filePath?: string | undefined): string | undefined {
-        throw new Error("Method not implemented.");
+    async getOutDir(customOutDir?: string | undefined, filePath?: string | undefined): Promise<string | undefined> {
+        const res = await fetch(`${this.apiUrl}/getOutDir`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ customOutDir, filePath }),
+        });
+        const data = await res.json();
+        return data.outDir;
     }
     isFile(path: string): Promise<boolean> {
         throw new Error("Method not implemented.");
@@ -39,8 +47,16 @@ export class UtilsWeb implements IUtils {
     basename(path: string): string {
         throw new Error("Method not implemented.");
     }
-    dirname(path: string): string {
-        throw new Error("Method not implemented.");
+    async dirname(path: string): Promise<string> {
+        const res = await fetch(`${this.apiUrl}/dirname`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ path }),
+        });
+        const data = await res.json();
+        return data.dirName;
     }
     pathExists(path: string): Promise<boolean> {
         throw new Error("Method not implemented.");
@@ -119,7 +135,7 @@ export class UtilsWeb implements IUtils {
     getSuffixedFileName(filePath: string | undefined, nameSuffix: string): string {
         throw new Error("Method not implemented.");
     }
-    getOutPath({ customOutDir, filePath, fileName }: { customOutDir?: string | undefined; filePath?: string | undefined; fileName: string; }): string {
+    async getOutPath({ customOutDir, filePath, fileName }: { customOutDir?: string | undefined; filePath?: string | undefined; fileName: string; }): Promise<string> {
         throw new Error("Method not implemented.");
     }
     renameWithRetry(renameFromPath: string, renameToPath: string): Promise<void> {

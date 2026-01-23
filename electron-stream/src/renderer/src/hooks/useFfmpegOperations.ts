@@ -5,7 +5,7 @@ import pMap from 'p-map';
 import invariant from 'tiny-invariant';
 import i18n from 'i18next';
 
-import { /*getSuffixedOutPath,*/ /* transferTimestamps, getOutFileExtension,*/ getOutDir, deleteDispositionValue, getHtml5ifiedPath, unlinkWithRetry, getFrameDuration, isMac } from '../util';
+import { /*getSuffixedOutPath,*/ /* transferTimestamps, getOutFileExtension, getOutDir,*/ deleteDispositionValue, getHtml5ifiedPath, unlinkWithRetry, getFrameDuration, isMac } from '../util';
 // import { isCuttingStart, isCuttingEnd, runFfmpegWithProgress, getFfCommandLine, getDuration, createChaptersFromSegments, readFileFfprobeMeta, getExperimentalArgs, getVideoTimescaleArgs, logStdoutStderr, runFfmpegConcat, RefuseOverwriteError, runFfmpegVoid } from '../ffmpeg';
 import { getMapStreamsArgs, getStreamIdsToCopy } from '../util/streams';
 import { needsSmartCut, getCodecParams } from '../smartcut';
@@ -15,14 +15,16 @@ import { getGuaranteedSegments, isDurationValid } from '../segments';
 import type { AllFilesMeta, Chapter, CopyfileStreams, CustomTagsByFile, LiteFFprobeStream, ParamsByStreamId, SegmentToExport } from '../types';
 import { UserFacingError } from '../../errors';
 import mainApi from '../mainApi';
-import { RefuseOverwriteError, TOKENS, type AvoidNegativeTs, type FFprobeStream, type Html5ifyMode, type IUtils, type LossyMode, type PreserveMetadata } from 'lossless-cut-application';
+import { RefuseOverwriteError, TOKENS, type AvoidNegativeTs, type FFprobeStream, type Html5ifyMode, type IFfmpeg, type IUtils, type LossyMode, type PreserveMetadata } from 'lossless-cut-application';
 import { createChaptersFromSegments, getExperimentalArgs, getVideoTimescaleArgs, isCuttingEnd, isCuttingStart, readFileFfprobeMeta } from '../ffmpeg';
 import { container } from 'tsyringe';
 
-const { utils, ffmpeg } = window.require('@electron/remote').require('./index.js');
+// const { utils, ffmpeg } = window.require('@electron/remote').require('./index.js');
 // const { join, resolve, dirname } = window.require('path');
 // const { writeFile, mkdir, access, constants: { W_OK } } = window.require('fs/promises');
 
+const utils = container.resolve<IUtils>(TOKENS.Utils);
+const ffmpeg = container.resolve<IFfmpeg>(TOKENS.Ffmpeg);
 
 export class OutputNotWritableError extends Error {
   constructor() {
@@ -77,7 +79,7 @@ async function tryDeleteFiles(paths: string[]) {
 export async function maybeMkDeepOutDir({ outputDir, fileOutPath }: { outputDir: string, fileOutPath: string }) {
   // cutFileNames might contain slashes and therefore might have a subdir(tree) that we need to mkdir
   // https://github.com/mifi/lossless-cut/issues/1532
-  const actualOutputDir = utils.dirname(fileOutPath);
+  const actualOutputDir = await utils.dirname(fileOutPath);
   if (actualOutputDir !== outputDir) await utils.mkdir(actualOutputDir, { recursive: true });
 }
 
@@ -679,7 +681,7 @@ function useFfmpegOperations({ filePath, treatInputFileModifiedTimeAsStart, trea
     preserveMetadataOnMerge: boolean,
     mergedOutFilePath: string,
   }) => {
-    const outDir = getOutDir(customOutDir, filePath);
+    const outDir = await utils.getOutDir(customOutDir, filePath);
 
     if (await shouldSkipExistingFile(mergedOutFilePath)) return;
 

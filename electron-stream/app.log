@@ -12308,3 +12308,1784 @@
   nameSuffix: 'proj.llc'
 }
 2026-01-23T17:19:30.445Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.375 ms
+2026-01-23T17:46:38.037Z info: LosslessCut version 3.67.2 { isDev: true }
+2026-01-23T17:46:38.078Z info: Initialized config store
+2026-01-23T17:46:38.081Z info: Waiting for app to become ready
+2026-01-23T17:46:38.084Z info: CLI arguments { _: [] }
+2026-01-23T17:46:38.091Z info: HTTP API listening on http://127.0.0.1:8080/
+2026-01-23T17:46:38.091Z info: HTTP API listening on port 8080
+2026-01-23T17:46:38.162Z info: Added Extension React Developer Tools
+2026-01-23T17:46:38.448Z info: Current version 3.67.2
+2026-01-23T17:46:38.448Z info: Newest version 3.67.2
+2026-01-23T17:46:40.758Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: undefined,
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:46:40.760Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 5.497 ms
+2026-01-23T17:46:40.761Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: undefined,
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:46:40.762Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.659 ms
+2026-01-23T17:46:40.762Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: undefined,
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:46:40.762Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.460 ms
+2026-01-23T17:46:40.763Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: undefined,
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:46:40.763Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.401 ms
+2026-01-23T17:46:40.764Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: undefined,
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:46:40.764Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.440 ms
+2026-01-23T17:47:13.482Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: undefined,
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:47:13.482Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.688 ms
+2026-01-23T17:47:13.557Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: undefined,
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:47:13.558Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.692 ms
+2026-01-23T17:47:13.605Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:47:13.606Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.791 ms
+2026-01-23T17:47:13.613Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: undefined,
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:47:13.614Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.687 ms
+2026-01-23T17:47:13.620Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: undefined,
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:47:13.621Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.659 ms
+2026-01-23T17:47:13.631Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: undefined,
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:47:13.632Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.673 ms
+2026-01-23T17:47:13.658Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:47:13.659Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.736 ms
+2026-01-23T17:47:13.693Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:47:13.694Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.735 ms
+2026-01-23T17:47:13.695Z info: Received /stream request {
+  path: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  videoStreamIndex: '0',
+  audioStreamIndexes: '1',
+  seekTo: '0',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-23T17:47:13.711Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:47:13.712Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 1.063 ms
+2026-01-23T17:47:13.978Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:47:13.979Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.792 ms
+2026-01-23T17:47:13.989Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:47:13.989Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.647 ms
+2026-01-23T17:47:14.160Z info: API readFramesAroundTime called {
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  aroundTime: 0,
+  streamIndex: 0,
+  window: 60
+}
+2026-01-23T17:47:14.197Z info: 127.0.0.1 POST /api/readFramesAroundTime HTTP/1.1 200 - 36.362 ms
+2026-01-23T17:47:14.205Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:47:14.205Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.649 ms
+2026-01-23T17:47:15.718Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:47:15.718Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.624 ms
+2026-01-23T17:47:15.857Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:47:15.858Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.650 ms
+2026-01-23T17:47:15.862Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5CAlex%5CDownloads%5CDors+Feline-1941_Foot_Fun.wmv&videoStreamIndex=0&audioStreamIndexes=1&seekTo=0&size=800&fps=30 HTTP/1.1 200 - 49.667 ms
+2026-01-23T17:47:15.865Z info: Received /stream request {
+  path: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  videoStreamIndex: '0',
+  audioStreamIndexes: '1',
+  seekTo: '222.423811',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-23T17:47:15.878Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:47:15.878Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.671 ms
+2026-01-23T17:47:16.360Z info: API readFramesAroundTime called {
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  aroundTime: 222.42381185426862,
+  streamIndex: 0,
+  window: 60
+}
+2026-01-23T17:47:16.403Z info: 127.0.0.1 POST /api/readFramesAroundTime HTTP/1.1 200 - 43.508 ms
+2026-01-23T17:47:16.411Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:47:16.412Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.540 ms
+2026-01-23T17:47:17.732Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:47:17.732Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.643 ms
+2026-01-23T17:47:17.740Z info: API getOutFileExtension called {
+  isCustomFormatSelected: false,
+  outFormat: 'asf',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv'
+}
+2026-01-23T17:47:17.740Z info: 127.0.0.1 POST /api/getOutFileExtension HTTP/1.1 200 - 0.546 ms
+2026-01-23T17:47:17.740Z info: API getOutFileExtension called {
+  isCustomFormatSelected: false,
+  outFormat: 'asf',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv'
+}
+2026-01-23T17:47:17.741Z info: 127.0.0.1 POST /api/getOutFileExtension HTTP/1.1 200 - 0.356 ms
+2026-01-23T17:47:17.748Z info: API pathJoin called {
+  paths: [
+    'C:\\Users\\Alex\\Downloads',
+    'Dors Feline-1941_Foot_Fun-00.03.01.742-00.08.02.687.wmv'
+  ]
+}
+2026-01-23T17:47:17.749Z info: 127.0.0.1 POST /api/pathJoin HTTP/1.1 200 - 0.698 ms
+2026-01-23T17:47:17.749Z info: API pathJoin called {
+  paths: [
+    'C:\\Users\\Alex\\Downloads',
+    'Dors Feline-1941_Foot_Fun-00.03.01.742-00.08.02.687.wmv'
+  ]
+}
+2026-01-23T17:47:17.750Z info: 127.0.0.1 POST /api/pathJoin HTTP/1.1 200 - 0.363 ms
+2026-01-23T17:47:20.652Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:47:20.653Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.717 ms
+2026-01-23T17:47:20.656Z info: API getOutFileExtension called {
+  isCustomFormatSelected: false,
+  outFormat: 'asf',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv'
+}
+2026-01-23T17:47:20.656Z info: 127.0.0.1 POST /api/getOutFileExtension HTTP/1.1 200 - 0.546 ms
+2026-01-23T17:47:20.661Z info: API pathJoin called {
+  paths: [
+    'C:\\Users\\Alex\\Downloads',
+    'Dors Feline-1941_Foot_Fun-00.03.01.742-00.08.02.687.wmv'
+  ]
+}
+2026-01-23T17:47:20.662Z info: 127.0.0.1 POST /api/pathJoin HTTP/1.1 200 - 0.583 ms
+2026-01-23T17:47:20.663Z info: API pathJoin called {
+  paths: [
+    'C:\\Users\\Alex\\Downloads',
+    'Dors Feline-1941_Foot_Fun-00.03.01.742-00.08.02.687.wmv'
+  ]
+}
+2026-01-23T17:47:20.664Z info: 127.0.0.1 POST /api/pathJoin HTTP/1.1 200 - 0.414 ms
+2026-01-23T17:47:20.683Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:47:20.684Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.591 ms
+2026-01-23T17:47:20.694Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:47:20.695Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.596 ms
+2026-01-23T17:47:20.778Z info: API transferTimestamps called {
+  inPath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  outPath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun-00.03.01.742-00.08.02.687.wmv',
+  cutFrom: 181.74171,
+  cutTo: 482.686628,
+  duration: 1051.51,
+  treatInputFileModifiedTimeAsStart: true,
+  treatOutputFileModifiedTimeAsStart: true
+}
+2026-01-23T17:47:20.779Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:47:20.780Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.417 ms
+2026-01-23T17:47:20.780Z info: 127.0.0.1 POST /api/transferTimestamps HTTP/1.1 200 - 2.070 ms
+2026-01-23T17:47:20.801Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:47:20.801Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.692 ms
+2026-01-23T17:47:22.167Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5CAlex%5CDownloads%5CDors+Feline-1941_Foot_Fun.wmv&videoStreamIndex=0&audioStreamIndexes=1&seekTo=222.423811&size=800&fps=30 HTTP/1.1 200 - 75.573 ms
+2026-01-23T17:47:22.172Z info: Received /stream request {
+  path: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  videoStreamIndex: '0',
+  audioStreamIndexes: '1',
+  seekTo: '222.423811',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-23T17:47:23.862Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:47:23.863Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.641 ms
+2026-01-23T17:47:28.504Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5CAlex%5CDownloads%5CDors+Feline-1941_Foot_Fun.wmv&videoStreamIndex=0&audioStreamIndexes=1&seekTo=222.423811&size=800&fps=30 HTTP/1.1 200 - 73.783 ms
+2026-01-23T17:47:28.509Z info: Received /stream request {
+  path: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  videoStreamIndex: '0',
+  audioStreamIndexes: '1',
+  seekTo: '222.423811',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-23T17:47:34.900Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5CAlex%5CDownloads%5CDors+Feline-1941_Foot_Fun.wmv&videoStreamIndex=0&audioStreamIndexes=1&seekTo=222.423811&size=800&fps=30 HTTP/1.1 200 - 88.671 ms
+2026-01-23T17:47:35.206Z info: Received /stream request {
+  path: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  videoStreamIndex: '0',
+  audioStreamIndexes: '1',
+  seekTo: '222.423811',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-23T17:47:39.302Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:47:39.302Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.711 ms
+2026-01-23T17:47:39.310Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:47:39.311Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.602 ms
+2026-01-23T17:47:39.318Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:47:39.319Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.657 ms
+2026-01-23T17:47:39.320Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5CAlex%5CDownloads%5CDors+Feline-1941_Foot_Fun.wmv&videoStreamIndex=0&audioStreamIndexes=1&seekTo=222.423811&size=800&fps=30 HTTP/1.1 200 - 82.270 ms
+2026-01-23T17:47:39.323Z info: Received /stream request {
+  path: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  videoStreamIndex: '0',
+  audioStreamIndexes: '1',
+  seekTo: '192.119282',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-23T17:47:39.448Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5CAlex%5CDownloads%5CDors+Feline-1941_Foot_Fun.wmv&videoStreamIndex=0&audioStreamIndexes=1&seekTo=192.119282&size=800&fps=30 HTTP/1.1 200 - 73.834 ms
+2026-01-23T17:47:39.757Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:47:39.757Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.666 ms
+2026-01-23T17:47:39.758Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:47:39.758Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.355 ms
+2026-01-23T17:47:39.758Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:47:39.759Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.306 ms
+2026-01-23T17:47:39.759Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:47:39.759Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.292 ms
+2026-01-23T17:47:39.760Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:47:39.760Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.287 ms
+2026-01-23T17:47:39.760Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:47:39.761Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.314 ms
+2026-01-23T17:47:39.761Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:47:39.761Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.308 ms
+2026-01-23T17:47:39.762Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:47:39.762Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.301 ms
+2026-01-23T17:47:39.762Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:47:39.763Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.325 ms
+2026-01-23T17:47:39.763Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:47:39.763Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.352 ms
+2026-01-23T17:47:39.764Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:47:39.764Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.317 ms
+2026-01-23T17:47:39.764Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:47:39.765Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.343 ms
+2026-01-23T17:47:39.765Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:47:39.765Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.358 ms
+2026-01-23T17:47:39.766Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:47:39.766Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.292 ms
+2026-01-23T17:47:39.766Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:47:39.767Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.325 ms
+2026-01-23T17:47:39.806Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:47:39.806Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.771 ms
+2026-01-23T17:47:39.826Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:47:39.827Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.658 ms
+2026-01-23T17:47:39.847Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:47:39.848Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.715 ms
+2026-01-23T17:47:39.889Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:47:39.889Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.645 ms
+2026-01-23T17:47:39.954Z info: Received /stream request {
+  path: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  videoStreamIndex: '0',
+  audioStreamIndexes: '1',
+  seekTo: '182.970744',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-23T17:47:40.405Z info: API readFramesAroundTime called {
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  aroundTime: 182.97074497009245,
+  streamIndex: 0,
+  window: 60
+}
+2026-01-23T17:47:40.448Z info: 127.0.0.1 POST /api/readFramesAroundTime HTTP/1.1 200 - 42.965 ms
+2026-01-23T17:47:40.456Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:47:40.456Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.587 ms
+2026-01-23T17:47:41.160Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:47:41.161Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.642 ms
+2026-01-23T17:47:41.169Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:47:41.169Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.585 ms
+2026-01-23T17:47:41.185Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5CAlex%5CDownloads%5CDors+Feline-1941_Foot_Fun.wmv&videoStreamIndex=0&audioStreamIndexes=1&seekTo=182.970744&size=800&fps=30 HTTP/1.1 200 - 89.320 ms
+2026-01-23T17:47:41.189Z info: Received /stream request {
+  path: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  videoStreamIndex: '0',
+  audioStreamIndexes: '1',
+  seekTo: '473.436802',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-23T17:47:41.557Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:47:41.558Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.620 ms
+2026-01-23T17:47:41.565Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:47:41.565Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.572 ms
+2026-01-23T17:47:41.573Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:47:41.573Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.610 ms
+2026-01-23T17:47:41.581Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:47:41.582Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.613 ms
+2026-01-23T17:47:41.590Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:47:41.591Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.629 ms
+2026-01-23T17:47:41.598Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:47:41.599Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.735 ms
+2026-01-23T17:47:41.613Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:47:41.613Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.607 ms
+2026-01-23T17:47:42.101Z info: API readFramesAroundTime called {
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  aroundTime: 475.72393692224034,
+  streamIndex: 0,
+  window: 60
+}
+2026-01-23T17:47:42.145Z info: 127.0.0.1 POST /api/readFramesAroundTime HTTP/1.1 200 - 43.549 ms
+2026-01-23T17:47:42.152Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:47:42.153Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.582 ms
+2026-01-23T17:47:49.855Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:47:49.855Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.764 ms
+2026-01-23T17:47:51.232Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:47:51.233Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.602 ms
+2026-01-23T17:47:51.493Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:47:51.493Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 1.017 ms
+2026-01-23T17:47:51.758Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:47:51.759Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.618 ms
+2026-01-23T17:47:52.026Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:47:52.027Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.599 ms
+2026-01-23T17:47:52.297Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:47:52.297Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.636 ms
+2026-01-23T17:47:52.399Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:47:52.400Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.601 ms
+2026-01-23T17:47:52.406Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:47:52.407Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.556 ms
+2026-01-23T17:47:52.664Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:47:52.665Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.635 ms
+2026-01-23T17:47:52.900Z info: API readFramesAroundTime called {
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  aroundTime: 480.853404,
+  streamIndex: 0,
+  window: 60
+}
+2026-01-23T17:47:52.930Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:47:52.930Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.585 ms
+2026-01-23T17:47:52.947Z info: 127.0.0.1 POST /api/readFramesAroundTime HTTP/1.1 200 - 46.438 ms
+2026-01-23T17:47:52.953Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:47:52.954Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.647 ms
+2026-01-23T17:47:53.196Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:47:53.197Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.663 ms
+2026-01-23T17:47:53.466Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:47:53.467Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.687 ms
+2026-01-23T17:47:53.609Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5CAlex%5CDownloads%5CDors+Feline-1941_Foot_Fun.wmv&videoStreamIndex=0&audioStreamIndexes=1&seekTo=473.436802&size=800&fps=30 HTTP/1.1 200 - 125.766 ms
+2026-01-23T17:47:53.613Z info: Received /stream request {
+  path: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  videoStreamIndex: '0',
+  audioStreamIndexes: '1',
+  seekTo: '482.030003',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-23T17:47:53.743Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:47:53.743Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.719 ms
+2026-01-23T17:47:53.994Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:47:53.995Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.810 ms
+2026-01-23T17:47:54.258Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:47:54.259Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.681 ms
+2026-01-23T17:47:54.522Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:47:54.523Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.623 ms
+2026-01-23T17:47:54.790Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:47:54.791Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.618 ms
+2026-01-23T17:47:54.973Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:47:54.974Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.669 ms
+2026-01-23T17:47:54.981Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:47:54.981Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.683 ms
+2026-01-23T17:47:55.473Z info: API readFramesAroundTime called {
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  aroundTime: 483.383348,
+  streamIndex: 0,
+  window: 60
+}
+2026-01-23T17:47:55.515Z info: 127.0.0.1 POST /api/readFramesAroundTime HTTP/1.1 200 - 41.701 ms
+2026-01-23T17:47:55.523Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:47:55.523Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.558 ms
+2026-01-23T17:47:58.004Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:47:58.005Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 1.057 ms
+2026-01-23T17:48:03.093Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5CAlex%5CDownloads%5CDors+Feline-1941_Foot_Fun.wmv&videoStreamIndex=0&audioStreamIndexes=1&seekTo=482.030003&size=800&fps=30 HTTP/1.1 200 - 99.552 ms
+2026-01-23T17:51:33.208Z info: LosslessCut version 3.67.2 { isDev: true }
+2026-01-23T17:51:33.243Z info: Initialized config store
+2026-01-23T17:51:33.246Z info: Waiting for app to become ready
+2026-01-23T17:51:33.249Z info: CLI arguments { _: [] }
+2026-01-23T17:51:33.257Z info: HTTP API listening on http://127.0.0.1:8080/
+2026-01-23T17:51:33.257Z info: HTTP API listening on port 8080
+2026-01-23T17:51:33.324Z info: Added Extension React Developer Tools
+2026-01-23T17:51:33.580Z info: Current version 3.67.2
+2026-01-23T17:51:33.580Z info: Newest version 3.67.2
+2026-01-23T17:51:36.093Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: undefined,
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:51:36.095Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 5.970 ms
+2026-01-23T17:51:36.096Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: undefined,
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:51:36.097Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.619 ms
+2026-01-23T17:51:36.097Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: undefined,
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:51:36.097Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.486 ms
+2026-01-23T17:51:36.098Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: undefined,
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:51:36.098Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.474 ms
+2026-01-23T17:51:36.099Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: undefined,
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:51:36.099Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.510 ms
+2026-01-23T17:51:41.654Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: undefined,
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:51:41.654Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.697 ms
+2026-01-23T17:51:41.747Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: undefined,
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:51:41.748Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.720 ms
+2026-01-23T17:51:41.790Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:51:41.791Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.727 ms
+2026-01-23T17:51:41.798Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: undefined,
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:51:41.799Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.741 ms
+2026-01-23T17:51:41.806Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: undefined,
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:51:41.806Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.729 ms
+2026-01-23T17:51:41.815Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: undefined,
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:51:41.816Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.592 ms
+2026-01-23T17:51:41.841Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:51:41.841Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.747 ms
+2026-01-23T17:51:41.876Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:51:41.877Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.677 ms
+2026-01-23T17:51:41.877Z info: Received /stream request {
+  path: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  videoStreamIndex: '0',
+  audioStreamIndexes: '1',
+  seekTo: '0',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-23T17:51:41.891Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:51:41.892Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.622 ms
+2026-01-23T17:51:42.150Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:51:42.150Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.764 ms
+2026-01-23T17:51:42.157Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:51:42.158Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.566 ms
+2026-01-23T17:51:42.341Z info: API readFramesAroundTime called {
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  aroundTime: 0,
+  streamIndex: 0,
+  window: 60
+}
+2026-01-23T17:51:42.378Z info: 127.0.0.1 POST /api/readFramesAroundTime HTTP/1.1 200 - 37.336 ms
+2026-01-23T17:51:42.387Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:51:42.388Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.668 ms
+2026-01-23T17:51:43.901Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:51:43.902Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.655 ms
+2026-01-23T17:51:44.165Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:51:44.166Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.641 ms
+2026-01-23T17:51:44.416Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:51:44.417Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.627 ms
+2026-01-23T17:51:44.681Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:51:44.682Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.644 ms
+2026-01-23T17:51:44.946Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:51:44.946Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.663 ms
+2026-01-23T17:51:45.214Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:51:45.214Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.698 ms
+2026-01-23T17:51:45.248Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:51:45.249Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.698 ms
+2026-01-23T17:51:45.258Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:51:45.258Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.641 ms
+2026-01-23T17:51:45.268Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5CAlex%5CDownloads%5CDors+Feline-1941_Foot_Fun.wmv&videoStreamIndex=0&audioStreamIndexes=1&seekTo=0&size=800&fps=30 HTTP/1.1 200 - 46.890 ms
+2026-01-23T17:51:45.272Z info: Received /stream request {
+  path: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  videoStreamIndex: '0',
+  audioStreamIndexes: '1',
+  seekTo: '129.021078',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-23T17:51:45.522Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:51:45.523Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.688 ms
+2026-01-23T17:51:45.753Z info: API readFramesAroundTime called {
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  aroundTime: 129.0126275787188,
+  streamIndex: 0,
+  window: 60
+}
+2026-01-23T17:51:45.790Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:51:45.790Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.632 ms
+2026-01-23T17:51:45.801Z info: 127.0.0.1 POST /api/readFramesAroundTime HTTP/1.1 200 - 47.642 ms
+2026-01-23T17:51:45.809Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:51:45.810Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.624 ms
+2026-01-23T17:51:46.060Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:51:46.060Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.654 ms
+2026-01-23T17:51:46.295Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:51:46.296Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.700 ms
+2026-01-23T17:51:46.303Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:51:46.304Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.556 ms
+2026-01-23T17:51:46.305Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5CAlex%5CDownloads%5CDors+Feline-1941_Foot_Fun.wmv&videoStreamIndex=0&audioStreamIndexes=1&seekTo=129.021078&size=800&fps=30 HTTP/1.1 200 - 77.808 ms
+2026-01-23T17:51:46.307Z info: Received /stream request {
+  path: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  videoStreamIndex: '0',
+  audioStreamIndexes: '1',
+  seekTo: '667.338465',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-23T17:51:46.319Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:51:46.320Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.554 ms
+2026-01-23T17:51:46.589Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:51:46.590Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.843 ms
+2026-01-23T17:51:46.818Z info: API readFramesAroundTime called {
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  aroundTime: 667.8972312703582,
+  streamIndex: 0,
+  window: 60
+}
+2026-01-23T17:51:46.838Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:51:46.838Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.627 ms
+2026-01-23T17:51:46.865Z info: 127.0.0.1 POST /api/readFramesAroundTime HTTP/1.1 200 - 47.199 ms
+2026-01-23T17:51:46.872Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:51:46.873Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.646 ms
+2026-01-23T17:51:47.101Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:51:47.101Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.711 ms
+2026-01-23T17:51:47.369Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:51:47.369Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.622 ms
+2026-01-23T17:51:47.634Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:51:47.634Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.606 ms
+2026-01-23T17:51:47.904Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:51:47.904Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.639 ms
+2026-01-23T17:51:48.174Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:51:48.174Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.642 ms
+2026-01-23T17:51:48.444Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:51:48.444Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.612 ms
+2026-01-23T17:51:48.696Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:51:48.696Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.646 ms
+2026-01-23T17:51:48.961Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:51:48.962Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.678 ms
+2026-01-23T17:51:49.226Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:51:49.227Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.634 ms
+2026-01-23T17:51:49.493Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:51:49.494Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.624 ms
+2026-01-23T17:51:49.764Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:51:49.764Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.606 ms
+2026-01-23T17:51:49.919Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:51:49.919Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.784 ms
+2026-01-23T17:51:49.927Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:51:49.928Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.577 ms
+2026-01-23T17:51:49.938Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5CAlex%5CDownloads%5CDors+Feline-1941_Foot_Fun.wmv&videoStreamIndex=0&audioStreamIndexes=1&seekTo=667.338465&size=800&fps=30 HTTP/1.1 200 - 123.188 ms
+2026-01-23T17:51:49.943Z info: Received /stream request {
+  path: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  videoStreamIndex: '0',
+  audioStreamIndexes: '1',
+  seekTo: '328.819172',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-23T17:51:50.194Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:51:50.194Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.671 ms
+2026-01-23T17:51:50.424Z info: API readFramesAroundTime called {
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  aroundTime: 328.81094462540716,
+  streamIndex: 0,
+  window: 60
+}
+2026-01-23T17:51:50.461Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:51:50.461Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.592 ms
+2026-01-23T17:51:50.468Z info: 127.0.0.1 POST /api/readFramesAroundTime HTTP/1.1 200 - 43.876 ms
+2026-01-23T17:51:50.475Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:51:50.476Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.659 ms
+2026-01-23T17:51:50.710Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:51:50.710Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.648 ms
+2026-01-23T17:51:50.975Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:51:50.976Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.667 ms
+2026-01-23T17:51:51.249Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:51:51.250Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.666 ms
+2026-01-23T17:51:51.262Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:51:51.263Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.647 ms
+2026-01-23T17:51:51.510Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:51:51.510Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.630 ms
+2026-01-23T17:51:51.780Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:51:51.780Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.651 ms
+2026-01-23T17:51:52.050Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:51:52.051Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.673 ms
+2026-01-23T17:51:52.321Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:51:52.321Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.624 ms
+2026-01-23T17:51:52.591Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:51:52.592Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.604 ms
+2026-01-23T17:51:52.860Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:51:52.861Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.606 ms
+2026-01-23T17:51:53.130Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:51:53.131Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.610 ms
+2026-01-23T17:51:53.279Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:51:53.280Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.672 ms
+2026-01-23T17:51:53.382Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:51:53.383Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.588 ms
+2026-01-23T17:51:53.391Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:51:53.392Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.578 ms
+2026-01-23T17:51:53.397Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:51:53.398Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.717 ms
+2026-01-23T17:51:53.904Z info: API readFramesAroundTime called {
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  aroundTime: 332.238219,
+  streamIndex: 0,
+  window: 60
+}
+2026-01-23T17:51:53.947Z info: 127.0.0.1 POST /api/readFramesAroundTime HTTP/1.1 200 - 43.230 ms
+2026-01-23T17:51:53.954Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:51:53.954Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.609 ms
+2026-01-23T17:51:54.606Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:51:54.607Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.623 ms
+2026-01-23T17:51:54.614Z info: API getOutFileExtension called {
+  isCustomFormatSelected: false,
+  outFormat: 'asf',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv'
+}
+2026-01-23T17:51:54.614Z info: 127.0.0.1 POST /api/getOutFileExtension HTTP/1.1 200 - 0.584 ms
+2026-01-23T17:51:54.615Z info: API getOutFileExtension called {
+  isCustomFormatSelected: false,
+  outFormat: 'asf',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv'
+}
+2026-01-23T17:51:54.615Z info: 127.0.0.1 POST /api/getOutFileExtension HTTP/1.1 200 - 0.365 ms
+2026-01-23T17:51:54.622Z info: API pathJoin called {
+  paths: [
+    'C:\\Users\\Alex\\Downloads',
+    'Dors Feline-1941_Foot_Fun-00.03.01.742-00.05.30.110.wmv'
+  ]
+}
+2026-01-23T17:51:54.623Z info: 127.0.0.1 POST /api/pathJoin HTTP/1.1 200 - 0.802 ms
+2026-01-23T17:51:54.624Z info: API pathJoin called {
+  paths: [
+    'C:\\Users\\Alex\\Downloads',
+    'Dors Feline-1941_Foot_Fun-00.03.01.742-00.05.30.110.wmv'
+  ]
+}
+2026-01-23T17:51:54.624Z info: 127.0.0.1 POST /api/pathJoin HTTP/1.1 200 - 0.551 ms
+2026-01-23T17:51:57.997Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:51:57.998Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.643 ms
+2026-01-23T17:51:58.000Z info: API getOutFileExtension called {
+  isCustomFormatSelected: false,
+  outFormat: 'asf',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv'
+}
+2026-01-23T17:51:58.001Z info: 127.0.0.1 POST /api/getOutFileExtension HTTP/1.1 200 - 0.476 ms
+2026-01-23T17:51:58.005Z info: API pathJoin called {
+  paths: [
+    'C:\\Users\\Alex\\Downloads',
+    'Dors Feline-1941_Foot_Fun-00.03.01.742-00.05.30.110.wmv'
+  ]
+}
+2026-01-23T17:51:58.006Z info: 127.0.0.1 POST /api/pathJoin HTTP/1.1 200 - 0.525 ms
+2026-01-23T17:51:58.008Z info: API pathJoin called {
+  paths: [
+    'C:\\Users\\Alex\\Downloads',
+    'Dors Feline-1941_Foot_Fun-00.03.01.742-00.05.30.110.wmv'
+  ]
+}
+2026-01-23T17:51:58.009Z info: 127.0.0.1 POST /api/pathJoin HTTP/1.1 200 - 0.503 ms
+2026-01-23T17:51:58.039Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:51:58.039Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.569 ms
+2026-01-23T17:52:03.386Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5CAlex%5CDownloads%5CDors+Feline-1941_Foot_Fun.wmv&videoStreamIndex=0&audioStreamIndexes=1&seekTo=328.819172&size=800&fps=30 HTTP/1.1 200 - 122.798 ms
+2026-01-23T17:52:03.391Z info: Received /stream request {
+  path: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  videoStreamIndex: '0',
+  audioStreamIndexes: '1',
+  seekTo: '332.238219',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-23T17:52:09.723Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5CAlex%5CDownloads%5CDors+Feline-1941_Foot_Fun.wmv&videoStreamIndex=0&audioStreamIndexes=1&seekTo=332.238219&size=800&fps=30 HTTP/1.1 200 - 93.459 ms
+2026-01-23T17:52:10.033Z info: Received /stream request {
+  path: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  videoStreamIndex: '0',
+  audioStreamIndexes: '1',
+  seekTo: '332.238219',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-23T17:52:16.331Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5CAlex%5CDownloads%5CDors+Feline-1941_Foot_Fun.wmv&videoStreamIndex=0&audioStreamIndexes=1&seekTo=332.238219&size=800&fps=30 HTTP/1.1 200 - 92.723 ms
+2026-01-23T17:52:16.336Z info: Received /stream request {
+  path: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  videoStreamIndex: '0',
+  audioStreamIndexes: '1',
+  seekTo: '332.238219',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-23T17:52:22.728Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5CAlex%5CDownloads%5CDors+Feline-1941_Foot_Fun.wmv&videoStreamIndex=0&audioStreamIndexes=1&seekTo=332.238219&size=800&fps=30 HTTP/1.1 200 - 93.043 ms
+2026-01-23T17:52:23.033Z info: Received /stream request {
+  path: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  videoStreamIndex: '0',
+  audioStreamIndexes: '1',
+  seekTo: '332.238219',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-23T17:52:36.085Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5CAlex%5CDownloads%5CDors+Feline-1941_Foot_Fun.wmv&videoStreamIndex=0&audioStreamIndexes=1&seekTo=332.238219&size=800&fps=30 HTTP/1.1 200 - 113.923 ms
+2026-01-23T17:52:36.091Z info: Received /stream request {
+  path: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  videoStreamIndex: '0',
+  audioStreamIndexes: '1',
+  seekTo: '332.238219',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-23T17:52:48.088Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5CAlex%5CDownloads%5CDors+Feline-1941_Foot_Fun.wmv&videoStreamIndex=0&audioStreamIndexes=1&seekTo=332.238219&size=800&fps=30 HTTP/1.1 200 - 112.345 ms
+2026-01-23T17:52:48.400Z info: Received /stream request {
+  path: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  videoStreamIndex: '0',
+  audioStreamIndexes: '1',
+  seekTo: '332.238219',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-23T17:52:59.094Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5CAlex%5CDownloads%5CDors+Feline-1941_Foot_Fun.wmv&videoStreamIndex=0&audioStreamIndexes=1&seekTo=332.238219&size=800&fps=30 HTTP/1.1 200 - 113.836 ms
+2026-01-23T17:52:59.099Z info: Received /stream request {
+  path: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  videoStreamIndex: '0',
+  audioStreamIndexes: '1',
+  seekTo: '332.238219',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-23T17:53:12.093Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5CAlex%5CDownloads%5CDors+Feline-1941_Foot_Fun.wmv&videoStreamIndex=0&audioStreamIndexes=1&seekTo=332.238219&size=800&fps=30 HTTP/1.1 200 - 110.115 ms
+2026-01-23T17:53:12.409Z info: Received /stream request {
+  path: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  videoStreamIndex: '0',
+  audioStreamIndexes: '1',
+  seekTo: '332.238219',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-23T17:53:29.824Z info: LosslessCut version 3.67.2 { isDev: true }
+2026-01-23T17:53:29.853Z info: Initialized config store
+2026-01-23T17:53:29.854Z info: Waiting for app to become ready
+2026-01-23T17:53:29.859Z info: CLI arguments { _: [] }
+2026-01-23T17:53:29.867Z info: HTTP API listening on http://127.0.0.1:8080/
+2026-01-23T17:53:29.867Z info: HTTP API listening on port 8080
+2026-01-23T17:53:29.940Z info: Added Extension React Developer Tools
+2026-01-23T17:53:30.057Z info: Current version 3.67.2
+2026-01-23T17:53:30.057Z info: Newest version 3.67.2
+2026-01-23T17:53:31.233Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: undefined,
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:53:31.235Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 5.646 ms
+2026-01-23T17:53:31.236Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: undefined,
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:53:31.236Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.626 ms
+2026-01-23T17:53:31.238Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: undefined,
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:53:31.238Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.464 ms
+2026-01-23T17:53:31.239Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: undefined,
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:53:31.239Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.392 ms
+2026-01-23T17:53:31.239Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: undefined,
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:53:31.240Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.430 ms
+2026-01-23T17:57:39.052Z info: LosslessCut version 3.67.2 { isDev: true }
+2026-01-23T17:57:39.079Z info: Initialized config store
+2026-01-23T17:57:39.080Z info: Waiting for app to become ready
+2026-01-23T17:57:39.084Z info: CLI arguments { _: [] }
+2026-01-23T17:57:39.091Z info: HTTP API listening on http://127.0.0.1:8080/
+2026-01-23T17:57:39.092Z info: HTTP API listening on port 8080
+2026-01-23T17:57:39.158Z info: Added Extension React Developer Tools
+2026-01-23T17:57:39.424Z info: Current version 3.67.2
+2026-01-23T17:57:39.424Z info: Newest version 3.67.2
+2026-01-23T17:57:41.908Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: undefined,
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:57:41.910Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 5.766 ms
+2026-01-23T17:57:41.911Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: undefined,
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:57:41.911Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.643 ms
+2026-01-23T17:57:41.912Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: undefined,
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:57:41.912Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.446 ms
+2026-01-23T17:57:41.912Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: undefined,
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:57:41.913Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.379 ms
+2026-01-23T17:57:41.914Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: undefined,
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:57:41.914Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.378 ms
+2026-01-23T17:57:46.394Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: undefined,
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:57:46.395Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.678 ms
+2026-01-23T17:57:46.484Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: undefined,
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:57:46.485Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.723 ms
+2026-01-23T17:57:46.541Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Joeys FeetGirls . Fina Administers Foot Therapy-00.03.15.610-00.10.17.967.mp4',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:57:46.542Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.745 ms
+2026-01-23T17:57:46.547Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: undefined,
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:57:46.548Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.577 ms
+2026-01-23T17:57:46.574Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Joeys FeetGirls . Fina Administers Foot Therapy-00.03.15.610-00.10.17.967.mp4',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:57:46.575Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.860 ms
+2026-01-23T17:57:46.596Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Joeys FeetGirls . Fina Administers Foot Therapy-00.03.15.610-00.10.17.967.mp4',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:57:46.597Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 1.001 ms
+2026-01-23T17:57:46.607Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Joeys FeetGirls . Fina Administers Foot Therapy-00.03.15.610-00.10.17.967.mp4',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:57:46.608Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.700 ms
+2026-01-23T17:57:46.633Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Joeys FeetGirls . Fina Administers Foot Therapy-00.03.15.610-00.10.17.967.mp4',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:57:46.634Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.651 ms
+2026-01-23T17:57:46.948Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Joeys FeetGirls . Fina Administers Foot Therapy-00.03.15.610-00.10.17.967.mp4',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:57:46.948Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.733 ms
+2026-01-23T17:57:46.958Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Joeys FeetGirls . Fina Administers Foot Therapy-00.03.15.610-00.10.17.967.mp4',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:57:46.959Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.784 ms
+2026-01-23T17:57:47.077Z info: API readFramesAroundTime called {
+  filePath: 'C:\\Users\\Alex\\Downloads\\Joeys FeetGirls . Fina Administers Foot Therapy-00.03.15.610-00.10.17.967.mp4',
+  aroundTime: 0,
+  streamIndex: 0,
+  window: 60
+}
+2026-01-23T17:57:47.136Z info: 127.0.0.1 POST /api/readFramesAroundTime HTTP/1.1 200 - 58.360 ms
+2026-01-23T17:57:47.146Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Joeys FeetGirls . Fina Administers Foot Therapy-00.03.15.610-00.10.17.967.mp4',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:57:47.147Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.687 ms
+2026-01-23T17:57:48.616Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Joeys FeetGirls . Fina Administers Foot Therapy-00.03.15.610-00.10.17.967.mp4',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:57:48.617Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.596 ms
+2026-01-23T17:57:48.710Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Joeys FeetGirls . Fina Administers Foot Therapy-00.03.15.610-00.10.17.967.mp4',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:57:48.711Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.685 ms
+2026-01-23T17:57:48.843Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Joeys FeetGirls . Fina Administers Foot Therapy-00.03.15.610-00.10.17.967.mp4',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:57:48.843Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.655 ms
+2026-01-23T17:57:49.214Z info: API readFramesAroundTime called {
+  filePath: 'C:\\Users\\Alex\\Downloads\\Joeys FeetGirls . Fina Administers Foot Therapy-00.03.15.610-00.10.17.967.mp4',
+  aroundTime: 74.06169055374593,
+  streamIndex: 0,
+  window: 60
+}
+2026-01-23T17:57:49.291Z info: 127.0.0.1 POST /api/readFramesAroundTime HTTP/1.1 200 - 76.810 ms
+2026-01-23T17:57:49.303Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Joeys FeetGirls . Fina Administers Foot Therapy-00.03.15.610-00.10.17.967.mp4',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:57:49.304Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.639 ms
+2026-01-23T17:57:49.940Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Joeys FeetGirls . Fina Administers Foot Therapy-00.03.15.610-00.10.17.967.mp4',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:57:49.941Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.732 ms
+2026-01-23T17:57:49.978Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Joeys FeetGirls . Fina Administers Foot Therapy-00.03.15.610-00.10.17.967.mp4',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:57:49.979Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.683 ms
+2026-01-23T17:57:50.442Z info: API readFramesAroundTime called {
+  filePath: 'C:\\Users\\Alex\\Downloads\\Joeys FeetGirls . Fina Administers Foot Therapy-00.03.15.610-00.10.17.967.mp4',
+  aroundTime: 122.90113355048861,
+  streamIndex: 0,
+  window: 60
+}
+2026-01-23T17:57:50.519Z info: 127.0.0.1 POST /api/readFramesAroundTime HTTP/1.1 200 - 76.888 ms
+2026-01-23T17:57:50.527Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Joeys FeetGirls . Fina Administers Foot Therapy-00.03.15.610-00.10.17.967.mp4',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:57:50.528Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.564 ms
+2026-01-23T17:57:52.792Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Joeys FeetGirls . Fina Administers Foot Therapy-00.03.15.610-00.10.17.967.mp4',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:57:52.793Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.676 ms
+2026-01-23T17:57:52.800Z info: API getOutFileExtension called {
+  isCustomFormatSelected: false,
+  outFormat: 'mp4',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Joeys FeetGirls . Fina Administers Foot Therapy-00.03.15.610-00.10.17.967.mp4'
+}
+2026-01-23T17:57:52.801Z info: 127.0.0.1 POST /api/getOutFileExtension HTTP/1.1 200 - 0.614 ms
+2026-01-23T17:57:52.801Z info: API getOutFileExtension called {
+  isCustomFormatSelected: false,
+  outFormat: 'mp4',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Joeys FeetGirls . Fina Administers Foot Therapy-00.03.15.610-00.10.17.967.mp4'
+}
+2026-01-23T17:57:52.802Z info: 127.0.0.1 POST /api/getOutFileExtension HTTP/1.1 200 - 0.401 ms
+2026-01-23T17:57:52.807Z info: API pathJoin called {
+  paths: [
+    'C:\\Users\\Alex\\Downloads',
+    'Joeys FeetGirls . Fina Administers Foot Therapy-00.03.15.610-00.10.17.967-00.01.31.859-00.02.47.194.mp4'
+  ]
+}
+2026-01-23T17:57:52.808Z info: 127.0.0.1 POST /api/pathJoin HTTP/1.1 200 - 0.656 ms
+2026-01-23T17:57:52.808Z info: API pathJoin called {
+  paths: [
+    'C:\\Users\\Alex\\Downloads',
+    'Joeys FeetGirls . Fina Administers Foot Therapy-00.03.15.610-00.10.17.967-00.01.31.859-00.02.47.194.mp4'
+  ]
+}
+2026-01-23T17:57:52.809Z info: 127.0.0.1 POST /api/pathJoin HTTP/1.1 200 - 0.440 ms
+2026-01-23T17:57:58.132Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Joeys FeetGirls . Fina Administers Foot Therapy-00.03.15.610-00.10.17.967.mp4',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:57:58.133Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.759 ms
+2026-01-23T17:57:58.135Z info: API getOutFileExtension called {
+  isCustomFormatSelected: false,
+  outFormat: 'mp4',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Joeys FeetGirls . Fina Administers Foot Therapy-00.03.15.610-00.10.17.967.mp4'
+}
+2026-01-23T17:57:58.135Z info: 127.0.0.1 POST /api/getOutFileExtension HTTP/1.1 200 - 0.437 ms
+2026-01-23T17:57:58.140Z info: API pathJoin called {
+  paths: [
+    'C:\\Users\\Alex\\Downloads',
+    'Joeys FeetGirls . Fina Administers Foot Therapy-00.03.15.610-00.10.17.967-00.01.31.859-00.02.47.194.mp4'
+  ]
+}
+2026-01-23T17:57:58.141Z info: 127.0.0.1 POST /api/pathJoin HTTP/1.1 200 - 0.671 ms
+2026-01-23T17:57:58.143Z info: API pathJoin called {
+  paths: [
+    'C:\\Users\\Alex\\Downloads',
+    'Joeys FeetGirls . Fina Administers Foot Therapy-00.03.15.610-00.10.17.967-00.01.31.859-00.02.47.194.mp4'
+  ]
+}
+2026-01-23T17:57:58.143Z info: 127.0.0.1 POST /api/pathJoin HTTP/1.1 200 - 0.518 ms
+2026-01-23T17:57:58.171Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Joeys FeetGirls . Fina Administers Foot Therapy-00.03.15.610-00.10.17.967.mp4',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:57:58.171Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.611 ms
+2026-01-23T17:59:12.689Z info: LosslessCut version 3.67.2 { isDev: true }
+2026-01-23T17:59:12.724Z info: Initialized config store
+2026-01-23T17:59:12.727Z info: Waiting for app to become ready
+2026-01-23T17:59:12.730Z info: CLI arguments { _: [] }
+2026-01-23T17:59:12.738Z info: HTTP API listening on http://127.0.0.1:8080/
+2026-01-23T17:59:12.738Z info: HTTP API listening on port 8080
+2026-01-23T17:59:12.811Z info: Added Extension React Developer Tools
+2026-01-23T17:59:13.088Z info: Current version 3.67.2
+2026-01-23T17:59:13.088Z info: Newest version 3.67.2
+2026-01-23T17:59:15.408Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: undefined,
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:59:15.410Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 5.547 ms
+2026-01-23T17:59:15.411Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: undefined,
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:59:15.411Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.602 ms
+2026-01-23T17:59:15.411Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: undefined,
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:59:15.412Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.404 ms
+2026-01-23T17:59:15.412Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: undefined,
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:59:15.413Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.384 ms
+2026-01-23T17:59:15.413Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: undefined,
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:59:15.413Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.369 ms
+2026-01-23T17:59:19.295Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: undefined,
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:59:19.295Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.779 ms
+2026-01-23T17:59:19.383Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: undefined,
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:59:19.383Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.808 ms
+2026-01-23T17:59:19.439Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Joeys FeetGirls . Fina Administers Foot Therapy-00.03.15.610-00.10.17.967.mp4',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:59:19.440Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.709 ms
+2026-01-23T17:59:19.445Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: undefined,
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:59:19.445Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.636 ms
+2026-01-23T17:59:19.471Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Joeys FeetGirls . Fina Administers Foot Therapy-00.03.15.610-00.10.17.967.mp4',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:59:19.471Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.850 ms
+2026-01-23T17:59:19.491Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Joeys FeetGirls . Fina Administers Foot Therapy-00.03.15.610-00.10.17.967.mp4',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:59:19.492Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.856 ms
+2026-01-23T17:59:19.509Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Joeys FeetGirls . Fina Administers Foot Therapy-00.03.15.610-00.10.17.967.mp4',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:59:19.510Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.667 ms
+2026-01-23T17:59:19.537Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Joeys FeetGirls . Fina Administers Foot Therapy-00.03.15.610-00.10.17.967.mp4',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:59:19.537Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.675 ms
+2026-01-23T17:59:19.855Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Joeys FeetGirls . Fina Administers Foot Therapy-00.03.15.610-00.10.17.967.mp4',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:59:19.856Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.700 ms
+2026-01-23T17:59:19.864Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Joeys FeetGirls . Fina Administers Foot Therapy-00.03.15.610-00.10.17.967.mp4',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:59:19.865Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.643 ms
+2026-01-23T17:59:19.971Z info: API readFramesAroundTime called {
+  filePath: 'C:\\Users\\Alex\\Downloads\\Joeys FeetGirls . Fina Administers Foot Therapy-00.03.15.610-00.10.17.967.mp4',
+  aroundTime: 0,
+  streamIndex: 0,
+  window: 60
+}
+2026-01-23T17:59:20.031Z info: 127.0.0.1 POST /api/readFramesAroundTime HTTP/1.1 200 - 59.765 ms
+2026-01-23T17:59:20.040Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Joeys FeetGirls . Fina Administers Foot Therapy-00.03.15.610-00.10.17.967.mp4',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:59:20.040Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.644 ms
+2026-01-23T17:59:21.523Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Joeys FeetGirls . Fina Administers Foot Therapy-00.03.15.610-00.10.17.967.mp4',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:59:21.524Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.666 ms
+2026-01-23T17:59:21.651Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Joeys FeetGirls . Fina Administers Foot Therapy-00.03.15.610-00.10.17.967.mp4',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:59:21.651Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.658 ms
+2026-01-23T17:59:21.659Z info: API getOutFileExtension called {
+  isCustomFormatSelected: false,
+  outFormat: 'mp4',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Joeys FeetGirls . Fina Administers Foot Therapy-00.03.15.610-00.10.17.967.mp4'
+}
+2026-01-23T17:59:21.660Z info: 127.0.0.1 POST /api/getOutFileExtension HTTP/1.1 200 - 0.717 ms
+2026-01-23T17:59:21.660Z info: API getOutFileExtension called {
+  isCustomFormatSelected: false,
+  outFormat: 'mp4',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Joeys FeetGirls . Fina Administers Foot Therapy-00.03.15.610-00.10.17.967.mp4'
+}
+2026-01-23T17:59:21.660Z info: 127.0.0.1 POST /api/getOutFileExtension HTTP/1.1 200 - 0.375 ms
+2026-01-23T17:59:21.666Z info: API pathJoin called {
+  paths: [
+    'C:\\Users\\Alex\\Downloads',
+    'Joeys FeetGirls . Fina Administers Foot Therapy-00.03.15.610-00.10.17.967-00.01.31.859-00.02.47.194.mp4'
+  ]
+}
+2026-01-23T17:59:21.667Z info: 127.0.0.1 POST /api/pathJoin HTTP/1.1 200 - 0.710 ms
+2026-01-23T17:59:21.667Z info: API pathJoin called {
+  paths: [
+    'C:\\Users\\Alex\\Downloads',
+    'Joeys FeetGirls . Fina Administers Foot Therapy-00.03.15.610-00.10.17.967-00.01.31.859-00.02.47.194.mp4'
+  ]
+}
+2026-01-23T17:59:21.668Z info: 127.0.0.1 POST /api/pathJoin HTTP/1.1 200 - 0.373 ms
+2026-01-23T17:59:23.168Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Joeys FeetGirls . Fina Administers Foot Therapy-00.03.15.610-00.10.17.967.mp4',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:59:23.169Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.686 ms
+2026-01-23T17:59:23.171Z info: API getOutFileExtension called {
+  isCustomFormatSelected: false,
+  outFormat: 'mp4',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Joeys FeetGirls . Fina Administers Foot Therapy-00.03.15.610-00.10.17.967.mp4'
+}
+2026-01-23T17:59:23.171Z info: 127.0.0.1 POST /api/getOutFileExtension HTTP/1.1 200 - 0.467 ms
+2026-01-23T17:59:23.176Z info: API pathJoin called {
+  paths: [
+    'C:\\Users\\Alex\\Downloads',
+    'Joeys FeetGirls . Fina Administers Foot Therapy-00.03.15.610-00.10.17.967-00.01.31.859-00.02.47.194.mp4'
+  ]
+}
+2026-01-23T17:59:23.177Z info: 127.0.0.1 POST /api/pathJoin HTTP/1.1 200 - 0.734 ms
+2026-01-23T17:59:23.179Z info: API pathJoin called {
+  paths: [
+    'C:\\Users\\Alex\\Downloads',
+    'Joeys FeetGirls . Fina Administers Foot Therapy-00.03.15.610-00.10.17.967-00.01.31.859-00.02.47.194.mp4'
+  ]
+}
+2026-01-23T17:59:23.180Z info: 127.0.0.1 POST /api/pathJoin HTTP/1.1 200 - 0.600 ms
+2026-01-23T17:59:23.181Z info: API dirname called {
+  path: 'C:\\Users\\Alex\\Downloads\\Joeys FeetGirls . Fina Administers Foot Therapy-00.03.15.610-00.10.17.967-00.01.31.859-00.02.47.194.mp4'
+}
+2026-01-23T17:59:23.182Z info: 127.0.0.1 POST /api/dirname HTTP/1.1 200 - 0.449 ms
+2026-01-23T17:59:23.208Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Joeys FeetGirls . Fina Administers Foot Therapy-00.03.15.610-00.10.17.967.mp4',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:59:23.208Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.634 ms

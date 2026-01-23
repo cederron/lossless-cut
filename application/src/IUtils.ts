@@ -5,13 +5,13 @@ import type { ICueSheet } from 'cue-parser/lib/types.d.ts';
 export interface IUtils {
     getFileUri(path: string | undefined, cacheBuster: number): string;
     ensureWritableOutDir({ inputPath, outDir }: { inputPath?: string | undefined, outDir: string | undefined }): Promise<string | undefined>;
-    getOutDir(customOutDir?: string | undefined, filePath?: string | undefined): string | undefined;
+    getOutDir(customOutDir?: string | undefined, filePath?: string | undefined): Promise<string | undefined>;
     isFile(path: string): Promise<boolean>;
     isDirectory(path: string): Promise<boolean>;
     pathsNames(paths: string[]): string[];
     pathJoin(...paths: string[]): Promise<string>;
     basename(path: string): string;
-    dirname(path: string): string;
+    dirname(path: string): Promise<string>;
     pathExists(path: string): Promise<boolean>;
     pathResolve(...paths: string[]): string;
     pathNormalize(path: string): string;
@@ -40,7 +40,7 @@ getSuffixedOutPath<T extends string | undefined>(a: { customOutDir?: string | un
 getSuffixedOutPath({ customOutDir, filePath, nameSuffix }: { customOutDir?: string | undefined, filePath?: string | undefined, nameSuffix: string }): Promise<string | undefined>;
 getHtml5ifiedPath(cod: string | undefined, fp: string, type: Html5ifyMode): Promise<string>;
 getSuffixedFileName(filePath: string | undefined, nameSuffix: string): string
-getOutPath({ customOutDir, filePath, fileName }: { customOutDir?: string | undefined, filePath?: string | undefined, fileName: string }): string;
+getOutPath({ customOutDir, filePath, fileName }: { customOutDir?: string | undefined, filePath?: string | undefined, fileName: string }): Promise<string>;
 renameWithRetry(renameFromPath: string, renameToPath: string): Promise<void>;
 getMimeExtension(mimeType: string): string | false;
 getFileDir(filePath?: string): string | undefined;

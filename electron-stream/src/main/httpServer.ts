@@ -153,6 +153,30 @@ export default ({ port, onKeyboardAction }: {
     res.json({ joinedPath });
   }));
 
+  apiRouter.post('/dirname', express.json(), asyncHandler(async (req, res) => {
+    const { path } = req.body as { path: string; };
+    logger.info('API dirname called', { path });
+    const utils = container.resolve<IUtils>(TOKENS.Utils);
+    const dirName =  await utils.dirname(path);
+    res.json({ dirName });
+  }));
+
+  apiRouter.post('/getOutDir', express.json(), asyncHandler(async (req, res) => {
+    const { customOutDir, filePath } = req.body as { customOutDir?: string; filePath?: string; };
+    logger.info('API getOutDir called', { customOutDir, filePath });
+    const utils = container.resolve<IUtils>(TOKENS.Utils);
+    const outDir =  await utils.getOutDir(customOutDir, filePath);
+    res.json({ outDir });
+  }));
+
+  apiRouter.post('/getOutPath', express.json(), asyncHandler(async (req, res) => {
+    const { customOutDir, filePath, fileName } = req.body as { customOutDir?: string; filePath?: string; fileName: string; };
+    logger.info('API getOutPath called', { customOutDir, filePath, fileName });
+    const utils = container.resolve<IUtils>(TOKENS.Utils);
+    const outPath =  await utils.getOutPath({ customOutDir, filePath, fileName });
+    res.json({ outPath });
+  }));
+
   const server = http.createServer(app);
 
   server.on('error', (err) => logger.error('http server error', err));

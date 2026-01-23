@@ -53,7 +53,7 @@ export interface GenerateMergedOutFileNamesParams {
   epochMs: number;
 }
 
-function getTemplateProblems({ fileNames, filePath, outputDir, safeOutputFileName }: {
+async function getTemplateProblems({ fileNames, filePath, outputDir, safeOutputFileName }: {
   fileNames: string[],
   filePath: string,
   outputDir: string,
@@ -259,7 +259,7 @@ async function generateWithFallback({ generate, desiredTemplate, defaultTemplate
 
   try {
     originalFileNames = await generate({ template: desiredTemplate, sanitizeName: (name: string) => sanitizeName(name, safeOutputFileName), safeOutputFileName });
-    problems = getTemplateProblems({ fileNames: originalFileNames, filePath, outputDir, safeOutputFileName });
+    problems = await getTemplateProblems({ fileNames: originalFileNames, filePath, outputDir, safeOutputFileName });
   } catch (err) {
     console.warn(err);
     problems = {

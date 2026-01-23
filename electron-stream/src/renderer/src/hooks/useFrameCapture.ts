@@ -2,7 +2,7 @@ import { dataUriToBuffer } from 'data-uri-to-buffer';
 import pMap from 'p-map';
 import { useCallback } from 'react';
 
-import { /*getSuffixedOutPath,*/ getOutDir, /*transferTimestamps,*/ getSuffixedFileName, getOutPath, escapeRegExp, fsOperationWithRetry } from '../util';
+import { /*getSuffixedOutPath,*/ getOutDir, /*transferTimestamps,*/ getSuffixedFileName, /*getOutPath,*/ escapeRegExp, fsOperationWithRetry } from '../util';
 import { getNumDigits, isDurationValid } from '../segments';
 
 // import * as ffmpeg from '../ffmpeg';
@@ -88,8 +88,8 @@ export default ({ appendFfmpegCommandLog, formatTimecode, treatInputFileModified
     console.log('Renaming temp files...');
     const outPaths = await pMap(matches, async ({ fileName, frameNum }) => {
       const duration = formatTimecode({ seconds: fromTime + (frameNum / fps), fileNameFriendly: true });
-      const renameFromPath = getOutPath({ customOutDir, filePath, fileName });
-      const renameToPath = getOutPath({ customOutDir, filePath, fileName: getSuffixedFileName(filePath, getSuffix(duration)) });
+      const renameFromPath = await utils.getOutPath({ customOutDir, filePath, fileName });
+      const renameToPath = await utils.getOutPath({ customOutDir, filePath, fileName: getSuffixedFileName(filePath, getSuffix(duration)) });
       await fsOperationWithRetry(async () => rename(renameFromPath, renameToPath));
       return renameToPath;
     }, { concurrency: 1 });

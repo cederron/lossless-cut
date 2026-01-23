@@ -57,11 +57,11 @@ export class Utils implements IUtils {
         return filePath ? dirname(filePath) : undefined;
     }
 
-    getOutDir(customOutDir: string | undefined, filePath: string): string;
-    getOutDir(customOutDir: string, filePath: undefined): string;
-    getOutDir(customOutDir: undefined, filePath: undefined): undefined;
-    getOutDir(customOutDir: string | undefined, filePath: string | undefined): string | undefined;
-    getOutDir(customOutDir?: string | undefined, filePath?: string | undefined) {
+    async getOutDir(customOutDir: string | undefined, filePath: string): Promise<string>;
+    async getOutDir(customOutDir: string, filePath: undefined): Promise<string>;
+    async getOutDir(customOutDir: undefined, filePath: undefined): Promise<undefined>;
+    async getOutDir(customOutDir: string | undefined, filePath: string | undefined): Promise<string | undefined>;
+    async getOutDir(customOutDir?: string | undefined, filePath?: string | undefined) {
         if (customOutDir != null) return customOutDir;
         if (filePath != null) return this.getFileDir(filePath);
         return undefined;
@@ -96,7 +96,7 @@ export class Utils implements IUtils {
         // if we don't (no longer) have a working dir, and not an main file path, then there's nothing we can do, just return the dir
         if (!newCustomOutDir && !inputPath) return newCustomOutDir;
 
-        const effectiveOutDirPath = this.getOutDir(newCustomOutDir, inputPath);
+        const effectiveOutDirPath = await this.getOutDir(newCustomOutDir, inputPath);
         const hasDirWriteAccess = effectiveOutDirPath != null && await this.checkDirWriteAccess(effectiveOutDirPath);
         if (!hasDirWriteAccess || this.simulateMasBuild) {
             if (this.platform.isMasBuild() || this.simulateMasBuild) {
@@ -143,7 +143,7 @@ export class Utils implements IUtils {
         });
     }
 
-    pathJoin(...paths: string[]): string {
+    async pathJoin(...paths: string[]): Promise<string> {
         return join(...paths);
     }
 
@@ -151,7 +151,7 @@ export class Utils implements IUtils {
         return basename(path);
     }
 
-    dirname(path: string): string {
+    async dirname(path: string): Promise<string> {
         return dirname(path);
     }
 
@@ -261,7 +261,7 @@ export class Utils implements IUtils {
         return ext || format;
     }
 
-    getOutFileExtension({ isCustomFormatSelected, outFormat, filePath }: {
+    async getOutFileExtension({ isCustomFormatSelected, outFormat, filePath }: {
         isCustomFormatSelected?: boolean, outFormat: string, filePath: string,
     }) {
         if (!isCustomFormatSelected) {
@@ -287,10 +287,10 @@ export class Utils implements IUtils {
     getSuffixedFileName = (filePath: string | undefined, nameSuffix: string) => `${this.getFileBaseName(filePath)}-${nameSuffix}`;
 
 
-    getOutPath<T extends string | undefined>(a: { customOutDir?: string | undefined, filePath?: T | undefined, fileName: string }): T extends string ? string : undefined;
-    getOutPath({ customOutDir, filePath, fileName }: { customOutDir?: string | undefined, filePath?: string | undefined, fileName: string }) {
+    async getOutPath<T extends string | undefined>(a: { customOutDir?: string | undefined, filePath?: T | undefined, fileName: string }): Promise<T extends string ? string : undefined>;
+    async getOutPath({ customOutDir, filePath, fileName }: { customOutDir?: string | undefined, filePath?: string | undefined, fileName: string }) {
         if (filePath == null) return undefined;
-        return join(this.getOutDir(customOutDir, filePath), fileName);
+        return join(await this.getOutDir(customOutDir, filePath), fileName);
     }
 
     async getSuffixedOutPath<T extends string | undefined>(a: { customOutDir?: string | undefined, filePath?: T | undefined, nameSuffix: string }): Promise<T extends string ? string : undefined>;

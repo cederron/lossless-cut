@@ -67,7 +67,7 @@ import { shouldCopyStreamByDefault, getAudioStreams, getRealVideoStreams, isAudi
 import { exportEdlFile, readEdlFile, loadLlcProject, askForEdlImport } from './edlStore';
 import { formatYouTube, getFrameCountRaw, formatTsvHuman } from './edlFormats';
 import {
-  getOutPath, getOutDir,
+  /* getOutPath, getOutDir, */
   isStoreBuild, dragPreventer,
   havePermissionToReadFile, resolvePathIfNeeded, getPathReadAccessError, findExistingHtml5FriendlyFile,
   isOutOfSpaceError, readFileSize, readFileSizes, checkFileSizes, setDocumentTitle, readVideoTs, readDirRecursively, getImportProjectType,
@@ -395,7 +395,7 @@ function App() {
 
   // const getSafeCutTime = useCallback((cutTime, next) => ffmpeg.getSafeCutTime(neighbouringFrames, cutTime, next), [neighbouringFrames]);
 
-  const outputDir = getOutDir(customOutDir, filePath);
+  const outputDir = await utils.getOutDir(customOutDir, filePath);
 
   const increaseRotation = useCallback(() => {
     setRotation((r) => (r + 90) % 450);
@@ -907,11 +907,11 @@ function App() {
         warnings.add(t('Fell back to default output file name'));
       }
 
-      const outDir = getOutDir(customOutDir, firstPath);
+      const outDir = await utils.getOutDir(customOutDir, firstPath);
 
       const [fileName] = fileNames;
       invariant(fileName != null);
-      const outPath = getOutPath({ customOutDir, filePath: firstPath, fileName });
+      const outPath = await utils.getOutPath({ customOutDir, filePath: firstPath, fileName });
       let chaptersFromSegments: Awaited<ReturnType<typeof createChaptersFromSegments>>;
       if (segmentsToChapters) {
         const chapterNames = await utils.pathsNames(paths);
@@ -924,7 +924,7 @@ function App() {
       const metadataFromPath = paths[0];
       invariant(metadataFromPath != null);
 
-      await maybeMkDeepOutDir({ outputDir: outDir, fileOutPath: outPath });
+      await maybeMkDeepOutDir({ outputDir: outDir || '', fileOutPath: outPath });
 
       const { haveExcludedStreams } = await concatFiles({ paths, outPath, outDir, outFormat, metadataFromPath, includeAllStreams, streams, ffmpegExperimental, onProgress: setProgress, preserveMovData, movFastStart, preserveMetadataOnMerge, chapters: chaptersFromSegments });
 
@@ -1119,7 +1119,7 @@ function App() {
 
         const [fileName] = fileNames;
         invariant(fileName != null);
-        mergedOutFilePath = getOutPath({ customOutDir, filePath, fileName });
+        mergedOutFilePath = await utils.getOutPath({ customOutDir, filePath, fileName });
 
         await concatCutSegments({
           customOutDir,
@@ -1525,7 +1525,7 @@ function App() {
       console.log({ mediaFileName });
       if (!mediaFileName) return;
 
-      const mediaFilePath = await utils.pathJoin(utils.dirname(path), mediaFileName);
+      const mediaFilePath = await utils.pathJoin(await utils.dirname(path), mediaFileName);
 
       // Note: MAS only allows fs.stat (pathExists) if we don't have access to input dir yet
       if (!(await mainApi.pathExists(mediaFilePath))) {
