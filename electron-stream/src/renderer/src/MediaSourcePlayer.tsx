@@ -10,7 +10,7 @@ import type { FFprobeStream } from '../../common/ffprobe';
 import { getFrameDuration } from './util';
 import { container } from 'tsyringe';
 import { TOKENS, type IMediaSourceStreamFactory } from 'lossless-cut-application';
-import '../../renderer/src/di.ts';
+import './di/di-web.ts';
 
 // const { compatPlayer: { createMediaSourceStream } } = window.require('@electron/remote').require('./index.js');
 // const mediaSourceStreamFactory = container.resolve<IMediaSourceStreamFactory>(TOKENS.MediaSourceStreamFactory); // {} as any;

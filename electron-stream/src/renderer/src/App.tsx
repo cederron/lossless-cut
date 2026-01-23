@@ -1502,8 +1502,8 @@ function App() {
   const toggleLastCommands = useCallback(() => setLastCommandsVisible((val) => !val), []);
   const toggleSettings = useCallback(() => setSettingsVisible((val) => !val), []);
 
-  const seekClosestKeyframe = useCallback((direction: number) => {
-    const time = findNearestKeyFrameTime({ time: getRelevantTime(), direction });
+  const seekClosestKeyframe = useCallback(async (direction: number) => {
+    const time = await findNearestKeyFrameTime({ time: getRelevantTime(), direction });
     if (time == null) return;
     seekAbs(time);
   }, [findNearestKeyFrameTime, getRelevantTime, seekAbs]);

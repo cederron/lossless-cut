@@ -3,8 +3,9 @@ import { useCallback } from 'react';
 import { t } from 'i18next';
 
 import normalizeWheel from './normalizeWheel';
-import type { ModifierKey } from '../../../common/types';
+// import type { ModifierKey } from '../../../common/types';
 import { getMetaKeyName } from '../util';
+import type { ModifierKey } from 'lossless-cut-application';
 
 export const keyMap = {
   ctrl: 'ctrlKey',

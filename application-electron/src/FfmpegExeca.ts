@@ -856,7 +856,7 @@ export class FfmpegExeca implements IFfmpeg {
   await this.runFfmpegVoid(args);
 }
 
-findNearestKeyFrameTime({ frames, time, direction, fps }: { frames: Frame[], time: number, direction: number, fps: number | undefined }) {
+async findNearestKeyFrameTime({ frames, time, direction, fps }: { frames: Frame[], time: number, direction: number, fps: number | undefined }) {
   const sigma = fps ? (1 / fps) : 0.1;
   const keyframes = frames.filter((f) => f.keyframe && (direction > 0 ? f.time > time + sigma : f.time < time - sigma));
   if (keyframes.length === 0) return undefined;

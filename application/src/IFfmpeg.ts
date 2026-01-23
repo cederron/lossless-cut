@@ -104,7 +104,7 @@ export interface IFfmpeg {
         streamIndex: number,
         window: number,
     }): Promise<Frame[]>;
-    findNearestKeyFrameTime({ frames, time, direction, fps }: { frames: Frame[], time: number, direction: number, fps: number | undefined }): number | undefined;
+    findNearestKeyFrameTime({ frames, time, direction, fps }: { frames: Frame[], time: number, direction: number, fps: number | undefined }): Promise<number | undefined>;
     readKeyframesAroundTime({ filePath, streamIndex, aroundTime, window }: { filePath: string, streamIndex: number, aroundTime: number, window: number }): Promise<Frame[]>;
     findKeyframeAtExactTime(keyframes: Frame[], time: number): Frame | undefined;
     findNextKeyframe(keyframes: Frame[], time: number): Frame | undefined;

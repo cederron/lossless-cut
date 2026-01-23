@@ -77,6 +77,49 @@ export default ({ port, onKeyboardAction }: {
     res.end();
   }));
 
+  apiRouter.post('/readFrames', express.json(), asyncHandler(async (req, res) => {
+    const { filePath, from, to, streamIndex } = req.body as { filePath: string; from?: number; to?: number; streamIndex: number; };
+    logger.info('API readFrames called', { filePath, from, to, streamIndex });
+    assert(filePath != null);
+    assert(streamIndex != null);
+    const ffmpeg = container.resolve<IFfmpeg>(TOKENS.Ffmpeg);
+    const frames = await ffmpeg.readFrames({ filePath, from, to, streamIndex });
+    res.json({ frames });
+  }));
+
+  apiRouter.post('/readFramesAroundTime', express.json(), asyncHandler(async (req, res) => {
+    const { filePath, aroundTime, streamIndex, window } = req.body as { filePath: string; aroundTime: number; streamIndex: number; window: number; };
+    logger.info('API readFramesAroundTime called', { filePath, aroundTime, streamIndex, window });
+    assert(filePath != null);
+    assert(aroundTime != null);
+    assert(streamIndex != null);
+    assert(window != null);
+    const ffmpeg = container.resolve<IFfmpeg>(TOKENS.Ffmpeg);
+    const frames = await ffmpeg.readFramesAroundTime({ filePath, aroundTime, streamIndex, window });
+    res.json({ frames });
+  }));
+
+  apiRouter.post('/findNearestKeyFrameTime', express.json(), asyncHandler(async (req, res) => {
+    const { frames, time, direction, fps } = req.body as { frames: any[]; time: number; direction: number; fps: number | undefined; };
+    logger.info('API findNearestKeyFrameTime called', { time, direction, fps, frameCount: frames.length });
+    assert(frames != null);
+    assert(time != null);
+    assert(direction != null);
+    const ffmpeg = container.resolve<IFfmpeg>(TOKENS.Ffmpeg);
+    const nearestTime = await ffmpeg.findNearestKeyFrameTime({ frames, time, direction, fps });
+    res.json({ nearestTime });
+  }));
+
+  apiRouter.post('/renderWaveformPng', express.json(), asyncHandler(async (req, res) => {
+    const { filePath, start, duration, resample, color, streamIndex, timeout } = req.body as { filePath: string; start?: number; duration?: number; resample?: number; color: string; streamIndex: number; timeout?: number; };
+    logger.info('API renderWaveformPng called', { filePath, start, duration, resample, color, streamIndex, timeout });
+    assert(filePath != null);
+    assert(streamIndex != null);
+    const ffmpeg = container.resolve<IFfmpeg>(TOKENS.Ffmpeg);
+    const result = await ffmpeg.renderWaveformPng({ filePath, start, duration, resample, color, streamIndex, timeout });
+    res.json({ buffer: result.buffer.toString('base64'), width: result.width, height: result.height });
+  }));
+
   const server = http.createServer(app);
 
   server.on('error', (err) => logger.error('http server error', err));

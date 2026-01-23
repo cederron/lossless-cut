@@ -294,7 +294,7 @@ function BottomBar({
   hasAudio: boolean,
   keyframesEnabled: boolean,
   toggleShowKeyframes: () => void,
-  seekClosestKeyframe: (a: number) => void,
+  seekClosestKeyframe: (a: number) => Promise<void>,
   detectedFps: number | undefined,
   isFileOpened: boolean,
   selectedSegments: SegmentColorIndex[],
