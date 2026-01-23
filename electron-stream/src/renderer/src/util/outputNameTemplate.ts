@@ -6,13 +6,15 @@ import invariant from 'tiny-invariant';
 
 import type { FileNameTemplateContext } from '../../../common/userTypes.ts';
 
-import { isMac, isWindows, hasDuplicates, filenamify, getOutFileExtension } from '../util';
+import { isMac, isWindows, hasDuplicates, filenamify/*, getOutFileExtension*/ } from '../util';
 import isDev from '../isDev';
 import { getSegmentTags, formatSegNum, getGuaranteedSegments } from '../segments';
 import type { FileStats, FormatTimecode, SegmentToExport } from '../types';
 import safeishEval from '../worker/eval';
 import { UserFacingError } from '../../errors';
 import type { FileFfprobeMeta } from '../ffmpeg';
+import { TOKENS, type IUtils } from 'lossless-cut-application';
+import { container } from 'tsyringe';
 
 
 export const segNumVariable = 'SEG_NUM';
@@ -26,8 +28,9 @@ export const segTagsVariable = 'SEG_TAGS';
 // I don't remember why I set it to 200, but on Windows max length seems to be 256, on MacOS it seems to be 255.
 export const maxFileNameLength = 200;
 
-const { parse: parsePath, sep: pathSep, join: pathJoin, normalize: pathNormalize, basename }: PlatformPath = window.require('path');
+const { parse: parsePath, sep: pathSep, /*join: pathJoin,*/ normalize: pathNormalize, basename }: PlatformPath = window.require('path');
 
+const utils = container.resolve<IUtils>(TOKENS.Utils);
 
 export interface GeneratedOutFileNames {
   fileNames: string[],
@@ -88,7 +91,7 @@ function getTemplateProblems({ fileNames, filePath, outputDir, safeOutputFileNam
     }
 
     const inPathNormalized = pathNormalize(filePath);
-    const outPathNormalized = pathNormalize(pathJoin(outputDir, fileName));
+    const outPathNormalized = pathNormalize(await utils.pathJoin(outputDir, fileName));
     const sameAsInputPath = outPathNormalized === inPathNormalized;
     const windowsMaxPathLength = 259;
     const shouldCheckPathLength = isWindows || isDev;
@@ -324,7 +327,7 @@ export async function generateCutFileNames({ fileDuration, segmentsToExport: seg
           segSuffix: getSegSuffix(),
           sourceFiles: [sourceFile],
           inputFileNameWithoutExt,
-          ext: getOutFileExtension({ isCustomFormatSelected, outFormat: fileFormat, filePath: sourceFile.path }),
+          ext: await utils.getOutFileExtension({ isCustomFormatSelected, outFormat: fileFormat, filePath: sourceFile.path }),
           segLabels: [sanitizeName(name)],
           cutFrom: start,
           cutFromStr: formatTimecode({ seconds: start, fileNameFriendly: true }),
@@ -371,7 +374,7 @@ export async function generateCutMergedFileNames({ template: desiredTemplate, is
         epochMs,
         sourceFiles: [sourceFile],
         inputFileNameWithoutExt,
-        ext: getOutFileExtension({ isCustomFormatSelected, outFormat: fileFormat, filePath: sourceFile.path }),
+        ext: await utils.getOutFileExtension({ isCustomFormatSelected, outFormat: fileFormat, filePath: sourceFile.path }),
         exportCount,
         currentFileExportCount,
         segLabels: segLabels.map((label) => sanitizeName(label)),
@@ -410,7 +413,7 @@ export async function generateMergedFileNames({ template: desiredTemplate, isCus
         epochMs,
         sourceFiles,
         inputFileNameWithoutExt,
-        ext: getOutFileExtension({ isCustomFormatSelected, outFormat: fileFormat, filePath: firstFile.path }),
+        ext: await utils.getOutFileExtension({ isCustomFormatSelected, outFormat: fileFormat, filePath: firstFile.path }),
         exportCount,
         segLabels: sourceFiles.map((file) => sanitizeName(basename(file.path))),
       });

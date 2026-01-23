@@ -137,6 +137,22 @@ export default ({ port, onKeyboardAction }: {
     res.end();
   }));
 
+  apiRouter.post('/getOutFileExtension', express.json(), asyncHandler(async (req, res) => {
+    const { isCustomFormatSelected, outFormat, filePath } = req.body as { isCustomFormatSelected?: boolean; outFormat: string; filePath: string; };
+    logger.info('API getOutFileExtension called', { isCustomFormatSelected, outFormat, filePath });
+    const utils = container.resolve<IUtils>(TOKENS.Utils);
+    const extension =  await utils.getOutFileExtension({ isCustomFormatSelected, outFormat, filePath });
+    res.json({ extension });
+  }));
+
+  apiRouter.post('/pathJoin', express.json(), asyncHandler(async (req, res) => {
+    const { paths } = req.body as { paths: string[]; };
+    logger.info('API pathJoin called', { paths });
+    const utils = container.resolve<IUtils>(TOKENS.Utils);
+    const joinedPath =  await utils.pathJoin(...paths);
+    res.json({ joinedPath });
+  }));
+
   const server = http.createServer(app);
 
   server.on('error', (err) => logger.error('http server error', err));

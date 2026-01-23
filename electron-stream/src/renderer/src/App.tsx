@@ -1525,7 +1525,7 @@ function App() {
       console.log({ mediaFileName });
       if (!mediaFileName) return;
 
-      const mediaFilePath = utils.pathJoin(utils.dirname(path), mediaFileName);
+      const mediaFilePath = await utils.pathJoin(utils.dirname(path), mediaFileName);
 
       // Note: MAS only allows fs.stat (pathExists) if we don't have access to input dir yet
       if (!(await mainApi.pathExists(mediaFilePath))) {

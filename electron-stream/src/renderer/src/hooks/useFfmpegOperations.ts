@@ -5,7 +5,7 @@ import pMap from 'p-map';
 import invariant from 'tiny-invariant';
 import i18n from 'i18next';
 
-import { /*getSuffixedOutPath,*/ /* transferTimestamps,*/ getOutFileExtension, getOutDir, deleteDispositionValue, getHtml5ifiedPath, unlinkWithRetry, getFrameDuration, isMac } from '../util';
+import { /*getSuffixedOutPath,*/ /* transferTimestamps, getOutFileExtension,*/ getOutDir, deleteDispositionValue, getHtml5ifiedPath, unlinkWithRetry, getFrameDuration, isMac } from '../util';
 // import { isCuttingStart, isCuttingEnd, runFfmpegWithProgress, getFfCommandLine, getDuration, createChaptersFromSegments, readFileFfprobeMeta, getExperimentalArgs, getVideoTimescaleArgs, logStdoutStderr, runFfmpegConcat, RefuseOverwriteError, runFfmpegVoid } from '../ffmpeg';
 import { getMapStreamsArgs, getStreamIdsToCopy } from '../util/streams';
 import { needsSmartCut, getCodecParams } from '../smartcut';
@@ -34,7 +34,7 @@ export class OutputNotWritableError extends Error {
 async function writeChaptersFfmetadata(outDir: string, chapters: Chapter[] | undefined) {
   if (!chapters || chapters.length === 0) return undefined;
 
-  const path = utils.pathJoin(outDir, `ffmetadata-${Date.now()}.txt`);
+  const path = await utils.pathJoin(outDir, `ffmetadata-${Date.now()}.txt`);
 
   const ffmetadata = chapters.map(({ start, end, name }) => (
     `[CHAPTER]\nTIMEBASE=1/1000\nSTART=${Math.floor(start * 1000)}\nEND=${Math.floor(end * 1000)}\ntitle=${name || ''}`
@@ -548,7 +548,7 @@ function useFfmpegOperations({ filePath, treatInputFileModifiedTimeAsStart, trea
       const onProgress = (progress: number) => onSingleProgress(i, progress / 2);
       const onConcatProgress = (progress: number) => onSingleProgress(i, (1 + progress) / 2);
 
-      const finalOutPath = utils.pathJoin(outputDir, cutFileNames[i]!);
+      const finalOutPath = await utils.pathJoin(outputDir, cutFileNames[i]!);
 
       if (await shouldSkipExistingFile(finalOutPath)) return { path: finalOutPath, created: false };
 
@@ -619,7 +619,7 @@ function useFfmpegOperations({ filePath, treatInputFileModifiedTimeAsStart, trea
 
       invariant(outFormat != null);
 
-      const ext = getOutFileExtension({ isCustomFormatSelected: true, outFormat, filePath });
+      const ext = await utils.getOutFileExtension({ isCustomFormatSelected: true, outFormat, filePath });
 
       if (segmentNeedsSmartCut) {
         console.log('Cutting/encoding lossless part', { from: losslessCutFrom, to: cutTo });
@@ -845,7 +845,7 @@ function useFfmpegOperations({ filePath, treatInputFileModifiedTimeAsStart, trea
     onProgress: (a: number) => void,
   }) => {
     invariant(filePath != null);
-    const ext = getOutFileExtension({ outFormat: fileFormat, filePath });
+    const ext = await utils.getOutFileExtension({ outFormat: fileFormat, filePath });
     const outPath = await utils.getSuffixedOutPath({ customOutDir, filePath, nameSuffix: `reformatted${ext}` });
 
     const ffmpegArgs = [

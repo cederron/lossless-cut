@@ -8427,3 +8427,3884 @@
   ipcOutput: [],
   pipedFrom: []
 }
+2026-01-23T16:53:48.526Z info: LosslessCut version 3.67.2 { isDev: true }
+2026-01-23T16:53:48.617Z info: Backed up config file to C:\Users\Alex\AppData\Roaming\LosslessCut\config.json.backup-v3.67.2-1-1769187228599
+2026-01-23T16:53:48.617Z error: Failed to migrate old keyboard binding ShiftLeft+Equal addSegment AssertionError [ERR_ASSERTION]: Unknown key: ShiftLeft
+    at file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:523:11
+    at Array.map (<anonymous>)
+    at file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:521:12
+    at Array.map (<anonymous>)
+    at init$1 (file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:408:37)
+    at async init (file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:1661:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+2026-01-23T16:53:48.618Z error: Failed to migrate old keyboard binding KeyK togglePlayNoResetSpeed AssertionError [ERR_ASSERTION]: Unknown key: KeyK
+    at file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:523:11
+    at Array.map (<anonymous>)
+    at file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:521:12
+    at Array.map (<anonymous>)
+    at init$1 (file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:408:37)
+    at async init (file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:1661:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+2026-01-23T16:53:48.618Z error: Failed to migrate old keyboard binding KeyJ reducePlaybackRate AssertionError [ERR_ASSERTION]: Unknown key: KeyJ
+    at file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:523:11
+    at Array.map (<anonymous>)
+    at file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:521:12
+    at Array.map (<anonymous>)
+    at init$1 (file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:408:37)
+    at async init (file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:1661:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+2026-01-23T16:53:48.618Z error: Failed to migrate old keyboard binding ShiftLeft+KeyJ reducePlaybackRateMore AssertionError [ERR_ASSERTION]: Unknown key: ShiftLeft
+    at file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:523:11
+    at Array.map (<anonymous>)
+    at file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:521:12
+    at Array.map (<anonymous>)
+    at init$1 (file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:408:37)
+    at async init (file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:1661:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+2026-01-23T16:53:48.618Z error: Failed to migrate old keyboard binding KeyL increasePlaybackRate AssertionError [ERR_ASSERTION]: Unknown key: KeyL
+    at file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:523:11
+    at Array.map (<anonymous>)
+    at file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:521:12
+    at Array.map (<anonymous>)
+    at init$1 (file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:408:37)
+    at async init (file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:1661:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+2026-01-23T16:53:48.619Z error: Failed to migrate old keyboard binding ShiftLeft+KeyL increasePlaybackRateMore AssertionError [ERR_ASSERTION]: Unknown key: ShiftLeft
+    at file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:523:11
+    at Array.map (<anonymous>)
+    at file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:521:12
+    at Array.map (<anonymous>)
+    at init$1 (file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:408:37)
+    at async init (file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:1661:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+2026-01-23T16:53:48.619Z error: Failed to migrate old keyboard binding KeyZ timelineToggleComfortZoom AssertionError [ERR_ASSERTION]: Unknown key: KeyZ
+    at file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:523:11
+    at Array.map (<anonymous>)
+    at file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:521:12
+    at Array.map (<anonymous>)
+    at init$1 (file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:408:37)
+    at async init (file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:1661:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+2026-01-23T16:53:48.619Z error: Failed to migrate old keyboard binding ShiftLeft+KeyZ makeCursorTimeZero AssertionError [ERR_ASSERTION]: Unknown key: ShiftLeft
+    at file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:523:11
+    at Array.map (<anonymous>)
+    at file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:521:12
+    at Array.map (<anonymous>)
+    at init$1 (file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:408:37)
+    at async init (file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:1661:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+2026-01-23T16:53:48.620Z error: Failed to migrate old keyboard binding Comma seekPreviousFrame AssertionError [ERR_ASSERTION]: Unknown key: Comma
+    at file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:523:11
+    at Array.map (<anonymous>)
+    at file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:521:12
+    at Array.map (<anonymous>)
+    at init$1 (file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:408:37)
+    at async init (file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:1661:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+2026-01-23T16:53:48.620Z error: Failed to migrate old keyboard binding Period seekNextFrame AssertionError [ERR_ASSERTION]: Unknown key: Period
+    at file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:523:11
+    at Array.map (<anonymous>)
+    at file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:521:12
+    at Array.map (<anonymous>)
+    at init$1 (file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:408:37)
+    at async init (file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:1661:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+2026-01-23T16:53:48.620Z error: Failed to migrate old keyboard binding KeyC captureSnapshot AssertionError [ERR_ASSERTION]: Unknown key: KeyC
+    at file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:523:11
+    at Array.map (<anonymous>)
+    at file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:521:12
+    at Array.map (<anonymous>)
+    at init$1 (file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:408:37)
+    at async init (file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:1661:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+2026-01-23T16:53:48.621Z error: Failed to migrate old keyboard binding ControlLeft+KeyC copySegmentsToClipboard AssertionError [ERR_ASSERTION]: Unknown key: ControlLeft
+    at file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:523:11
+    at Array.map (<anonymous>)
+    at file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:521:12
+    at Array.map (<anonymous>)
+    at init$1 (file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:408:37)
+    at async init (file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:1661:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+2026-01-23T16:53:48.621Z error: Failed to migrate old keyboard binding MetaLeft+KeyC copySegmentsToClipboard AssertionError [ERR_ASSERTION]: Unknown key: MetaLeft
+    at file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:523:11
+    at Array.map (<anonymous>)
+    at file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:521:12
+    at Array.map (<anonymous>)
+    at init$1 (file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:408:37)
+    at async init (file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:1661:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+2026-01-23T16:53:48.621Z error: Failed to migrate old keyboard binding ShiftLeft+KeyC captureSnapshotToClipboard AssertionError [ERR_ASSERTION]: Unknown key: ShiftLeft
+    at file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:523:11
+    at Array.map (<anonymous>)
+    at file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:521:12
+    at Array.map (<anonymous>)
+    at init$1 (file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:408:37)
+    at async init (file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:1661:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+2026-01-23T16:53:48.621Z error: Failed to migrate old keyboard binding KeyI setCutStart AssertionError [ERR_ASSERTION]: Unknown key: KeyI
+    at file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:523:11
+    at Array.map (<anonymous>)
+    at file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:521:12
+    at Array.map (<anonymous>)
+    at init$1 (file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:408:37)
+    at async init (file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:1661:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+2026-01-23T16:53:48.621Z error: Failed to migrate old keyboard binding KeyO setCutEnd AssertionError [ERR_ASSERTION]: Unknown key: KeyO
+    at file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:523:11
+    at Array.map (<anonymous>)
+    at file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:521:12
+    at Array.map (<anonymous>)
+    at init$1 (file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:408:37)
+    at async init (file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:1661:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+2026-01-23T16:53:48.622Z error: Failed to migrate old keyboard binding KeyD cleanupFilesDialog AssertionError [ERR_ASSERTION]: Unknown key: KeyD
+    at file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:523:11
+    at Array.map (<anonymous>)
+    at file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:521:12
+    at Array.map (<anonymous>)
+    at init$1 (file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:408:37)
+    at async init (file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:1661:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+2026-01-23T16:53:48.622Z error: Failed to migrate old keyboard binding KeyB splitCurrentSegment AssertionError [ERR_ASSERTION]: Unknown key: KeyB
+    at file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:523:11
+    at Array.map (<anonymous>)
+    at file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:521:12
+    at Array.map (<anonymous>)
+    at init$1 (file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:408:37)
+    at async init (file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:1661:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+2026-01-23T16:53:48.622Z error: Failed to migrate old keyboard binding KeyR increaseRotation AssertionError [ERR_ASSERTION]: Unknown key: KeyR
+    at file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:523:11
+    at Array.map (<anonymous>)
+    at file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:521:12
+    at Array.map (<anonymous>)
+    at init$1 (file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:408:37)
+    at async init (file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:1661:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+2026-01-23T16:53:48.622Z error: Failed to migrate old keyboard binding KeyG goToTimecode AssertionError [ERR_ASSERTION]: Unknown key: KeyG
+    at file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:523:11
+    at Array.map (<anonymous>)
+    at file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:521:12
+    at Array.map (<anonymous>)
+    at init$1 (file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:408:37)
+    at async init (file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:1661:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+2026-01-23T16:53:48.623Z error: Failed to migrate old keyboard binding KeyT toggleStripAll AssertionError [ERR_ASSERTION]: Unknown key: KeyT
+    at file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:523:11
+    at Array.map (<anonymous>)
+    at file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:521:12
+    at Array.map (<anonymous>)
+    at init$1 (file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:408:37)
+    at async init (file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:1661:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+2026-01-23T16:53:48.623Z error: Failed to migrate old keyboard binding ShiftLeft+KeyT toggleStripCurrentFilter AssertionError [ERR_ASSERTION]: Unknown key: ShiftLeft
+    at file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:523:11
+    at Array.map (<anonymous>)
+    at file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:521:12
+    at Array.map (<anonymous>)
+    at init$1 (file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:408:37)
+    at async init (file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:1661:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+2026-01-23T16:53:48.623Z error: Failed to migrate old keyboard binding ArrowLeft seekBackwards AssertionError [ERR_ASSERTION]: Unknown key: ArrowLeft
+    at file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:523:11
+    at Array.map (<anonymous>)
+    at file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:521:12
+    at Array.map (<anonymous>)
+    at init$1 (file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:408:37)
+    at async init (file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:1661:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+2026-01-23T16:53:48.623Z error: Failed to migrate old keyboard binding ControlLeft+ShiftLeft+ArrowLeft seekBackwards2 AssertionError [ERR_ASSERTION]: Unknown key: ControlLeft
+    at file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:523:11
+    at Array.map (<anonymous>)
+    at file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:521:12
+    at Array.map (<anonymous>)
+    at init$1 (file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:408:37)
+    at async init (file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:1661:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+2026-01-23T16:53:48.623Z error: Failed to migrate old keyboard binding ControlLeft+ArrowLeft seekBackwardsPercent AssertionError [ERR_ASSERTION]: Unknown key: ControlLeft
+    at file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:523:11
+    at Array.map (<anonymous>)
+    at file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:521:12
+    at Array.map (<anonymous>)
+    at init$1 (file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:408:37)
+    at async init (file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:1661:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+2026-01-23T16:53:48.624Z error: Failed to migrate old keyboard binding MetaLeft+ArrowLeft seekBackwardsPercent AssertionError [ERR_ASSERTION]: Unknown key: MetaLeft
+    at file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:523:11
+    at Array.map (<anonymous>)
+    at file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:521:12
+    at Array.map (<anonymous>)
+    at init$1 (file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:408:37)
+    at async init (file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:1661:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+2026-01-23T16:53:48.624Z error: Failed to migrate old keyboard binding AltLeft+ArrowLeft seekBackwardsKeyframe AssertionError [ERR_ASSERTION]: Unknown key: AltLeft
+    at file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:523:11
+    at Array.map (<anonymous>)
+    at file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:521:12
+    at Array.map (<anonymous>)
+    at init$1 (file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:408:37)
+    at async init (file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:1661:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+2026-01-23T16:53:48.624Z error: Failed to migrate old keyboard binding ShiftLeft+ArrowLeft jumpCutStart AssertionError [ERR_ASSERTION]: Unknown key: ShiftLeft
+    at file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:523:11
+    at Array.map (<anonymous>)
+    at file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:521:12
+    at Array.map (<anonymous>)
+    at init$1 (file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:408:37)
+    at async init (file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:1661:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+2026-01-23T16:53:48.624Z error: Failed to migrate old keyboard binding ArrowRight seekForwards AssertionError [ERR_ASSERTION]: Unknown key: ArrowRight
+    at file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:523:11
+    at Array.map (<anonymous>)
+    at file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:521:12
+    at Array.map (<anonymous>)
+    at init$1 (file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:408:37)
+    at async init (file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:1661:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+2026-01-23T16:53:48.625Z error: Failed to migrate old keyboard binding ControlLeft+ShiftLeft+ArrowRight seekForwards2 AssertionError [ERR_ASSERTION]: Unknown key: ControlLeft
+    at file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:523:11
+    at Array.map (<anonymous>)
+    at file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:521:12
+    at Array.map (<anonymous>)
+    at init$1 (file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:408:37)
+    at async init (file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:1661:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+2026-01-23T16:53:48.625Z error: Failed to migrate old keyboard binding ControlLeft+ArrowRight seekForwardsPercent AssertionError [ERR_ASSERTION]: Unknown key: ControlLeft
+    at file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:523:11
+    at Array.map (<anonymous>)
+    at file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:521:12
+    at Array.map (<anonymous>)
+    at init$1 (file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:408:37)
+    at async init (file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:1661:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+2026-01-23T16:53:48.625Z error: Failed to migrate old keyboard binding MetaLeft+ArrowRight seekForwardsPercent AssertionError [ERR_ASSERTION]: Unknown key: MetaLeft
+    at file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:523:11
+    at Array.map (<anonymous>)
+    at file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:521:12
+    at Array.map (<anonymous>)
+    at init$1 (file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:408:37)
+    at async init (file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:1661:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+2026-01-23T16:53:48.625Z error: Failed to migrate old keyboard binding AltLeft+ArrowRight seekForwardsKeyframe AssertionError [ERR_ASSERTION]: Unknown key: AltLeft
+    at file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:523:11
+    at Array.map (<anonymous>)
+    at file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:521:12
+    at Array.map (<anonymous>)
+    at init$1 (file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:408:37)
+    at async init (file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:1661:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+2026-01-23T16:53:48.625Z error: Failed to migrate old keyboard binding ShiftLeft+ArrowRight jumpCutEnd AssertionError [ERR_ASSERTION]: Unknown key: ShiftLeft
+    at file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:523:11
+    at Array.map (<anonymous>)
+    at file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:521:12
+    at Array.map (<anonymous>)
+    at init$1 (file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:408:37)
+    at async init (file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:1661:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+2026-01-23T16:53:48.626Z error: Failed to migrate old keyboard binding ControlLeft+Home jumpTimelineStart AssertionError [ERR_ASSERTION]: Unknown key: ControlLeft
+    at file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:523:11
+    at Array.map (<anonymous>)
+    at file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:521:12
+    at Array.map (<anonymous>)
+    at init$1 (file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:408:37)
+    at async init (file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:1661:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+2026-01-23T16:53:48.626Z error: Failed to migrate old keyboard binding ControlLeft+End jumpTimelineEnd AssertionError [ERR_ASSERTION]: Unknown key: ControlLeft
+    at file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:523:11
+    at Array.map (<anonymous>)
+    at file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:521:12
+    at Array.map (<anonymous>)
+    at init$1 (file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:408:37)
+    at async init (file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:1661:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+2026-01-23T16:53:48.626Z error: Failed to migrate old keyboard binding ArrowUp jumpPrevSegment AssertionError [ERR_ASSERTION]: Unknown key: ArrowUp
+    at file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:523:11
+    at Array.map (<anonymous>)
+    at file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:521:12
+    at Array.map (<anonymous>)
+    at init$1 (file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:408:37)
+    at async init (file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:1661:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+2026-01-23T16:53:48.626Z error: Failed to migrate old keyboard binding ShiftLeft+AltLeft+PageUp jumpSeekFirstSegment AssertionError [ERR_ASSERTION]: Unknown key: ShiftLeft
+    at file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:523:11
+    at Array.map (<anonymous>)
+    at file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:521:12
+    at Array.map (<anonymous>)
+    at init$1 (file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:408:37)
+    at async init (file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:1661:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+2026-01-23T16:53:48.627Z error: Failed to migrate old keyboard binding ShiftLeft+AltLeft+ArrowUp jumpSeekPrevSegment AssertionError [ERR_ASSERTION]: Unknown key: ShiftLeft
+    at file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:523:11
+    at Array.map (<anonymous>)
+    at file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:521:12
+    at Array.map (<anonymous>)
+    at init$1 (file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:408:37)
+    at async init (file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:1661:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+2026-01-23T16:53:48.627Z error: Failed to migrate old keyboard binding ControlLeft+ArrowUp timelineZoomIn AssertionError [ERR_ASSERTION]: Unknown key: ControlLeft
+    at file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:523:11
+    at Array.map (<anonymous>)
+    at file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:521:12
+    at Array.map (<anonymous>)
+    at init$1 (file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:408:37)
+    at async init (file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:1661:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+2026-01-23T16:53:48.627Z error: Failed to migrate old keyboard binding MetaLeft+ArrowUp timelineZoomIn AssertionError [ERR_ASSERTION]: Unknown key: MetaLeft
+    at file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:523:11
+    at Array.map (<anonymous>)
+    at file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:521:12
+    at Array.map (<anonymous>)
+    at init$1 (file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:408:37)
+    at async init (file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:1661:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+2026-01-23T16:53:48.627Z error: Failed to migrate old keyboard binding ShiftLeft+ArrowUp batchPreviousFile AssertionError [ERR_ASSERTION]: Unknown key: ShiftLeft
+    at file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:523:11
+    at Array.map (<anonymous>)
+    at file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:521:12
+    at Array.map (<anonymous>)
+    at init$1 (file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:408:37)
+    at async init (file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:1661:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+2026-01-23T16:53:48.627Z error: Failed to migrate old keyboard binding ControlLeft+ShiftLeft+ArrowUp batchOpenPreviousFile AssertionError [ERR_ASSERTION]: Unknown key: ControlLeft
+    at file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:523:11
+    at Array.map (<anonymous>)
+    at file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:521:12
+    at Array.map (<anonymous>)
+    at init$1 (file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:408:37)
+    at async init (file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:1661:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+2026-01-23T16:53:48.628Z error: Failed to migrate old keyboard binding ArrowDown jumpNextSegment AssertionError [ERR_ASSERTION]: Unknown key: ArrowDown
+    at file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:523:11
+    at Array.map (<anonymous>)
+    at file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:521:12
+    at Array.map (<anonymous>)
+    at init$1 (file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:408:37)
+    at async init (file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:1661:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+2026-01-23T16:53:48.628Z error: Failed to migrate old keyboard binding ShiftLeft+AltLeft+PageDown jumpSeekLastSegment AssertionError [ERR_ASSERTION]: Unknown key: ShiftLeft
+    at file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:523:11
+    at Array.map (<anonymous>)
+    at file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:521:12
+    at Array.map (<anonymous>)
+    at init$1 (file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:408:37)
+    at async init (file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:1661:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+2026-01-23T16:53:48.628Z error: Failed to migrate old keyboard binding ShiftLeft+AltLeft+ArrowDown jumpSeekNextSegment AssertionError [ERR_ASSERTION]: Unknown key: ShiftLeft
+    at file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:523:11
+    at Array.map (<anonymous>)
+    at file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:521:12
+    at Array.map (<anonymous>)
+    at init$1 (file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:408:37)
+    at async init (file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:1661:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+2026-01-23T16:53:48.628Z error: Failed to migrate old keyboard binding ControlLeft+ArrowDown timelineZoomOut AssertionError [ERR_ASSERTION]: Unknown key: ControlLeft
+    at file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:523:11
+    at Array.map (<anonymous>)
+    at file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:521:12
+    at Array.map (<anonymous>)
+    at init$1 (file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:408:37)
+    at async init (file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:1661:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+2026-01-23T16:53:48.629Z error: Failed to migrate old keyboard binding MetaLeft+ArrowDown timelineZoomOut AssertionError [ERR_ASSERTION]: Unknown key: MetaLeft
+    at file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:523:11
+    at Array.map (<anonymous>)
+    at file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:521:12
+    at Array.map (<anonymous>)
+    at init$1 (file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:408:37)
+    at async init (file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:1661:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+2026-01-23T16:53:48.629Z error: Failed to migrate old keyboard binding ShiftLeft+ArrowDown batchNextFile AssertionError [ERR_ASSERTION]: Unknown key: ShiftLeft
+    at file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:523:11
+    at Array.map (<anonymous>)
+    at file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:521:12
+    at Array.map (<anonymous>)
+    at init$1 (file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:408:37)
+    at async init (file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:1661:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+2026-01-23T16:53:48.629Z error: Failed to migrate old keyboard binding ControlLeft+ShiftLeft+ArrowDown batchOpenNextFile AssertionError [ERR_ASSERTION]: Unknown key: ControlLeft
+    at file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:523:11
+    at Array.map (<anonymous>)
+    at file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:521:12
+    at Array.map (<anonymous>)
+    at init$1 (file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:408:37)
+    at async init (file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:1661:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+2026-01-23T16:53:48.629Z error: Failed to migrate old keyboard binding ShiftLeft+Enter batchOpenSelectedFile AssertionError [ERR_ASSERTION]: Unknown key: ShiftLeft
+    at file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:523:11
+    at Array.map (<anonymous>)
+    at file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:521:12
+    at Array.map (<anonymous>)
+    at init$1 (file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:408:37)
+    at async init (file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:1661:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+2026-01-23T16:53:48.629Z error: Failed to migrate old keyboard binding ControlLeft+KeyZ undo AssertionError [ERR_ASSERTION]: Unknown key: ControlLeft
+    at file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:523:11
+    at Array.map (<anonymous>)
+    at file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:521:12
+    at Array.map (<anonymous>)
+    at init$1 (file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:408:37)
+    at async init (file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:1661:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+2026-01-23T16:53:48.630Z error: Failed to migrate old keyboard binding MetaLeft+KeyZ undo AssertionError [ERR_ASSERTION]: Unknown key: MetaLeft
+    at file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:523:11
+    at Array.map (<anonymous>)
+    at file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:521:12
+    at Array.map (<anonymous>)
+    at init$1 (file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:408:37)
+    at async init (file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:1661:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+2026-01-23T16:53:48.630Z error: Failed to migrate old keyboard binding ControlLeft+ShiftLeft+KeyZ redo AssertionError [ERR_ASSERTION]: Unknown key: ControlLeft
+    at file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:523:11
+    at Array.map (<anonymous>)
+    at file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:521:12
+    at Array.map (<anonymous>)
+    at init$1 (file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:408:37)
+    at async init (file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:1661:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+2026-01-23T16:53:48.630Z error: Failed to migrate old keyboard binding MetaLeft+ShiftLeft+KeyZ redo AssertionError [ERR_ASSERTION]: Unknown key: MetaLeft
+    at file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:523:11
+    at Array.map (<anonymous>)
+    at file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:521:12
+    at Array.map (<anonymous>)
+    at init$1 (file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:408:37)
+    at async init (file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:1661:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+2026-01-23T16:53:48.630Z error: Failed to migrate old keyboard binding KeyF toggleFullscreenVideo AssertionError [ERR_ASSERTION]: Unknown key: KeyF
+    at file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:523:11
+    at Array.map (<anonymous>)
+    at file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:521:12
+    at Array.map (<anonymous>)
+    at init$1 (file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:408:37)
+    at async init (file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:1661:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+2026-01-23T16:53:48.631Z error: Failed to migrate old keyboard binding KeyE export AssertionError [ERR_ASSERTION]: Unknown key: KeyE
+    at file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:523:11
+    at Array.map (<anonymous>)
+    at file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:521:12
+    at Array.map (<anonymous>)
+    at init$1 (file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:408:37)
+    at async init (file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:1661:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+2026-01-23T16:53:48.631Z error: Failed to migrate old keyboard binding ShiftLeft+Slash toggleKeyboardShortcuts AssertionError [ERR_ASSERTION]: Unknown key: ShiftLeft
+    at file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:523:11
+    at Array.map (<anonymous>)
+    at file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:521:12
+    at Array.map (<anonymous>)
+    at init$1 (file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:408:37)
+    at async init (file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:1661:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+2026-01-23T16:53:48.631Z error: Failed to migrate old keyboard binding AltLeft+ArrowUp increaseVolume AssertionError [ERR_ASSERTION]: Unknown key: AltLeft
+    at file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:523:11
+    at Array.map (<anonymous>)
+    at file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:521:12
+    at Array.map (<anonymous>)
+    at init$1 (file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:408:37)
+    at async init (file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:1661:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+2026-01-23T16:53:48.631Z error: Failed to migrate old keyboard binding AltLeft+ArrowDown decreaseVolume AssertionError [ERR_ASSERTION]: Unknown key: AltLeft
+    at file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:523:11
+    at Array.map (<anonymous>)
+    at file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:521:12
+    at Array.map (<anonymous>)
+    at init$1 (file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:408:37)
+    at async init (file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:1661:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+2026-01-23T16:53:48.632Z error: Failed to migrate old keyboard binding KeyM toggleMuted AssertionError [ERR_ASSERTION]: Unknown key: KeyM
+    at file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:523:11
+    at Array.map (<anonymous>)
+    at file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:521:12
+    at Array.map (<anonymous>)
+    at init$1 (file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:408:37)
+    at async init (file:///C:/Users/Alex/Codigos/lossless-cut/electron-stream/out/main/index.js:1661:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+2026-01-23T16:53:48.634Z info: Migrated config to version 2
+2026-01-23T16:53:48.635Z info: Initialized config store
+2026-01-23T16:53:48.644Z info: Waiting for app to become ready
+2026-01-23T16:53:48.644Z info: CLI arguments { _: [] }
+2026-01-23T16:53:48.653Z info: HTTP API listening on http://127.0.0.1:8080/
+2026-01-23T16:53:48.653Z info: HTTP API listening on port 8080
+2026-01-23T16:53:49.052Z info: Current version 3.67.2
+2026-01-23T16:53:49.052Z info: Newest version 3.67.2
+2026-01-23T16:53:49.276Z info: Added Extension React Developer Tools
+2026-01-23T16:53:53.916Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: undefined,
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T16:53:53.918Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 143.324 ms
+2026-01-23T16:53:53.919Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: undefined,
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T16:53:53.920Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.483 ms
+2026-01-23T16:53:53.920Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: undefined,
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T16:53:53.920Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.356 ms
+2026-01-23T16:53:53.921Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: undefined,
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T16:53:53.921Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.494 ms
+2026-01-23T16:53:53.922Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: undefined,
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T16:53:53.922Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.512 ms
+2026-01-23T17:02:16.840Z info: LosslessCut version 3.67.2 { isDev: true }
+2026-01-23T17:02:16.885Z info: Initialized config store
+2026-01-23T17:02:16.886Z info: Waiting for app to become ready
+2026-01-23T17:02:16.889Z info: CLI arguments { _: [] }
+2026-01-23T17:02:16.897Z info: HTTP API listening on http://127.0.0.1:8080/
+2026-01-23T17:02:16.897Z info: HTTP API listening on port 8080
+2026-01-23T17:02:16.966Z info: Added Extension React Developer Tools
+2026-01-23T17:02:17.255Z info: Current version 3.67.2
+2026-01-23T17:02:17.255Z info: Newest version 3.67.2
+2026-01-23T17:02:19.951Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: undefined,
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:02:19.953Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 5.703 ms
+2026-01-23T17:02:19.953Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: undefined,
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:02:19.954Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.556 ms
+2026-01-23T17:02:19.954Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: undefined,
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:02:19.955Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.441 ms
+2026-01-23T17:02:19.955Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: undefined,
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:02:19.955Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.318 ms
+2026-01-23T17:02:19.956Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: undefined,
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:02:19.956Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.353 ms
+2026-01-23T17:02:46.782Z info: LosslessCut version 3.67.2 { isDev: true }
+2026-01-23T17:02:46.816Z info: Initialized config store
+2026-01-23T17:02:46.818Z info: Waiting for app to become ready
+2026-01-23T17:02:46.821Z info: CLI arguments { _: [] }
+2026-01-23T17:02:46.829Z info: HTTP API listening on http://127.0.0.1:8080/
+2026-01-23T17:02:46.829Z info: HTTP API listening on port 8080
+2026-01-23T17:02:46.892Z info: Added Extension React Developer Tools
+2026-01-23T17:02:46.980Z info: Current version 3.67.2
+2026-01-23T17:02:46.980Z info: Newest version 3.67.2
+2026-01-23T17:02:49.695Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: undefined,
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:02:49.697Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 5.704 ms
+2026-01-23T17:02:49.697Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: undefined,
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:02:49.698Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.589 ms
+2026-01-23T17:02:49.699Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: undefined,
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:02:49.699Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.387 ms
+2026-01-23T17:02:49.700Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: undefined,
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:02:49.700Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.324 ms
+2026-01-23T17:02:49.700Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: undefined,
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:02:49.701Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.349 ms
+2026-01-23T17:03:05.829Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: undefined,
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:03:05.829Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.586 ms
+2026-01-23T17:03:05.904Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: undefined,
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:03:05.905Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.652 ms
+2026-01-23T17:03:06.005Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:03:06.005Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.586 ms
+2026-01-23T17:03:06.011Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: undefined,
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:03:06.011Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.567 ms
+2026-01-23T17:03:06.013Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:03:06.014Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.562 ms
+2026-01-23T17:03:06.040Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:03:06.040Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.571 ms
+2026-01-23T17:03:06.050Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:03:06.051Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.673 ms
+2026-01-23T17:03:06.057Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:03:06.058Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.629 ms
+2026-01-23T17:03:06.075Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:03:06.075Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.511 ms
+2026-01-23T17:03:06.100Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'html5ified-dummy.mkv'
+}
+2026-01-23T17:03:06.101Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.613 ms
+2026-01-23T17:03:06.107Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:03:06.108Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.534 ms
+2026-01-23T17:03:06.119Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:03:06.119Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.526 ms
+2026-01-23T17:03:06.166Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:03:06.166Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.564 ms
+2026-01-23T17:03:06.196Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:03:06.197Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.582 ms
+2026-01-23T17:03:06.346Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:03:06.347Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.574 ms
+2026-01-23T17:03:06.352Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:03:06.352Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.481 ms
+2026-01-23T17:03:06.544Z info: API readFramesAroundTime called {
+  filePath: 'C:\\Dors Feline-1941_Foot_Fun.wmv',
+  aroundTime: 0,
+  streamIndex: 0,
+  window: 60
+}
+2026-01-23T17:03:06.593Z info: 127.0.0.1 POST /api/readFramesAroundTime HTTP/1.1 200 - 48.159 ms
+2026-01-23T17:03:06.599Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:03:06.599Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.510 ms
+2026-01-23T17:03:08.068Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:03:08.069Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.570 ms
+2026-01-23T17:03:15.755Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: undefined,
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:03:15.756Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.620 ms
+2026-01-23T17:03:15.769Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: undefined,
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:03:15.770Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.479 ms
+2026-01-23T17:03:15.777Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: undefined,
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:03:15.777Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.502 ms
+2026-01-23T17:03:16.062Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: undefined,
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:03:16.063Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.551 ms
+2026-01-23T17:03:16.069Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: undefined,
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:03:16.070Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.440 ms
+2026-01-23T17:03:17.783Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: undefined,
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:03:17.784Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.527 ms
+2026-01-23T17:03:19.910Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: undefined,
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:03:19.910Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.513 ms
+2026-01-23T17:03:19.969Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: undefined,
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:03:19.970Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.572 ms
+2026-01-23T17:03:20.012Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:03:20.013Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 1.109 ms
+2026-01-23T17:03:20.020Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: undefined,
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:03:20.020Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.444 ms
+2026-01-23T17:03:20.021Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:03:20.021Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.335 ms
+2026-01-23T17:03:20.035Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:03:20.035Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.537 ms
+2026-01-23T17:03:20.043Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:03:20.044Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.595 ms
+2026-01-23T17:03:20.051Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:03:20.052Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.549 ms
+2026-01-23T17:03:20.064Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:03:20.065Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.581 ms
+2026-01-23T17:03:20.092Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'html5ified-dummy.mkv'
+}
+2026-01-23T17:03:20.093Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.447 ms
+2026-01-23T17:03:20.102Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:03:20.103Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.478 ms
+2026-01-23T17:03:20.110Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:03:20.110Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.487 ms
+2026-01-23T17:03:20.147Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:03:20.147Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.510 ms
+2026-01-23T17:03:20.181Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:03:20.181Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.529 ms
+2026-01-23T17:03:20.342Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:03:20.343Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.515 ms
+2026-01-23T17:03:20.350Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:03:20.350Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.565 ms
+2026-01-23T17:03:20.539Z info: API readFramesAroundTime called {
+  filePath: 'C:\\Dors Feline-1941_Foot_Fun.wmv',
+  aroundTime: 0,
+  streamIndex: 0,
+  window: 60
+}
+2026-01-23T17:03:20.579Z info: 127.0.0.1 POST /api/readFramesAroundTime HTTP/1.1 200 - 39.447 ms
+2026-01-23T17:03:20.585Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:03:20.586Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.454 ms
+2026-01-23T17:03:22.058Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:03:22.059Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.544 ms
+2026-01-23T17:04:44.145Z info: LosslessCut version 3.67.2 { isDev: true }
+2026-01-23T17:04:44.179Z info: Initialized config store
+2026-01-23T17:04:44.181Z info: Waiting for app to become ready
+2026-01-23T17:04:44.184Z info: CLI arguments { _: [] }
+2026-01-23T17:04:44.192Z info: HTTP API listening on http://127.0.0.1:8080/
+2026-01-23T17:04:44.192Z info: HTTP API listening on port 8080
+2026-01-23T17:04:44.262Z info: Added Extension React Developer Tools
+2026-01-23T17:04:44.569Z info: Current version 3.67.2
+2026-01-23T17:04:44.569Z info: Newest version 3.67.2
+2026-01-23T17:04:47.093Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: undefined,
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:04:47.095Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 5.338 ms
+2026-01-23T17:04:47.096Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: undefined,
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:04:47.096Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.558 ms
+2026-01-23T17:04:47.097Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: undefined,
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:04:47.097Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.334 ms
+2026-01-23T17:04:47.097Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: undefined,
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:04:47.098Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.324 ms
+2026-01-23T17:04:47.098Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: undefined,
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:04:47.098Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.322 ms
+2026-01-23T17:04:57.105Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: undefined,
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:04:57.106Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.604 ms
+2026-01-23T17:04:57.173Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: undefined,
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:04:57.174Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.591 ms
+2026-01-23T17:04:57.216Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:04:57.216Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.612 ms
+2026-01-23T17:04:57.222Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: undefined,
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:04:57.223Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.605 ms
+2026-01-23T17:04:57.225Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:04:57.226Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.600 ms
+2026-01-23T17:04:57.245Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:04:57.246Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.668 ms
+2026-01-23T17:04:57.252Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:04:57.253Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.564 ms
+2026-01-23T17:04:57.259Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:04:57.260Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.622 ms
+2026-01-23T17:04:57.275Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:04:57.275Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.524 ms
+2026-01-23T17:04:57.300Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'html5ified-dummy.mkv'
+}
+2026-01-23T17:04:57.301Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.575 ms
+2026-01-23T17:04:57.311Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:04:57.312Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.527 ms
+2026-01-23T17:04:57.322Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:04:57.322Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.489 ms
+2026-01-23T17:04:57.365Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:04:57.366Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.553 ms
+2026-01-23T17:04:57.554Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:04:57.555Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.601 ms
+2026-01-23T17:04:57.561Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:04:57.562Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.590 ms
+2026-01-23T17:04:57.721Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:04:57.721Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.520 ms
+2026-01-23T17:04:57.722Z info: API transferTimestamps called {
+  inPath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  outPath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun-html5ified-dummy.mkv',
+  cutFrom: undefined,
+  cutTo: undefined,
+  duration: 1051.51,
+  treatInputFileModifiedTimeAsStart: true,
+  treatOutputFileModifiedTimeAsStart: true
+}
+2026-01-23T17:04:57.723Z info: 127.0.0.1 POST /api/transferTimestamps HTTP/1.1 200 - 1.315 ms
+2026-01-23T17:04:57.745Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:04:57.746Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.570 ms
+2026-01-23T17:04:57.751Z info: API readFramesAroundTime called {
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  aroundTime: 0,
+  streamIndex: 0,
+  window: 60
+}
+2026-01-23T17:04:57.757Z info: Received /stream request {
+  path: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  videoStreamIndex: '0',
+  audioStreamIndexes: '1',
+  seekTo: '0',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-23T17:04:57.786Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:04:57.787Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.517 ms
+2026-01-23T17:04:57.793Z info: 127.0.0.1 POST /api/readFramesAroundTime HTTP/1.1 200 - 42.158 ms
+2026-01-23T17:04:57.802Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:04:57.803Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.604 ms
+2026-01-23T17:04:58.101Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:04:58.101Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.584 ms
+2026-01-23T17:04:58.109Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:04:58.110Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.583 ms
+2026-01-23T17:04:59.521Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:04:59.521Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.751 ms
+2026-01-23T17:04:59.774Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:04:59.775Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.590 ms
+2026-01-23T17:04:59.799Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:04:59.799Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.711 ms
+2026-01-23T17:05:00.040Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:05:00.041Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.512 ms
+2026-01-23T17:05:00.308Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:05:00.309Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.528 ms
+2026-01-23T17:05:00.580Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:05:00.581Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.570 ms
+2026-01-23T17:05:00.850Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:05:00.850Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.527 ms
+2026-01-23T17:05:01.102Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:05:01.103Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.486 ms
+2026-01-23T17:05:01.367Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:05:01.367Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.518 ms
+2026-01-23T17:05:01.633Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:05:01.634Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.520 ms
+2026-01-23T17:05:01.899Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:05:01.900Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.682 ms
+2026-01-23T17:05:02.170Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:05:02.170Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.505 ms
+2026-01-23T17:05:02.440Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:05:02.440Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.576 ms
+2026-01-23T17:05:02.551Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:05:02.552Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.553 ms
+2026-01-23T17:05:02.558Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5CAlex%5CDownloads%5CDors+Feline-1941_Foot_Fun.wmv&videoStreamIndex=0&audioStreamIndexes=1&seekTo=0&size=800&fps=30 HTTP/1.1 200 - 49.544 ms
+2026-01-23T17:05:02.568Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:05:02.568Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.473 ms
+2026-01-23T17:05:02.571Z info: Received /stream request {
+  path: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  videoStreamIndex: '0',
+  audioStreamIndexes: '1',
+  seekTo: '200.677934',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-23T17:05:02.582Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:05:02.582Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.517 ms
+2026-01-23T17:05:02.858Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:05:02.858Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.531 ms
+2026-01-23T17:05:03.054Z info: API readFramesAroundTime called {
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  aroundTime: 200.6698473282443,
+  streamIndex: 0,
+  window: 60
+}
+2026-01-23T17:05:03.101Z info: 127.0.0.1 POST /api/readFramesAroundTime HTTP/1.1 200 - 46.868 ms
+2026-01-23T17:05:03.104Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:05:03.104Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.555 ms
+2026-01-23T17:05:03.111Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:05:03.111Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.479 ms
+2026-01-23T17:05:03.254Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:05:03.254Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.491 ms
+2026-01-23T17:05:03.262Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:05:03.262Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.490 ms
+2026-01-23T17:05:03.262Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5CAlex%5CDownloads%5CDors+Feline-1941_Foot_Fun.wmv&videoStreamIndex=0&audioStreamIndexes=1&seekTo=200.677934&size=800&fps=30 HTTP/1.1 200 - 162.571 ms
+2026-01-23T17:05:03.266Z info: Received /stream request {
+  path: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  videoStreamIndex: '0',
+  audioStreamIndexes: '1',
+  seekTo: '379.948103',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-23T17:05:03.524Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:05:03.524Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.618 ms
+2026-01-23T17:05:03.754Z info: API readFramesAroundTime called {
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  aroundTime: 379.93491094147583,
+  streamIndex: 0,
+  window: 60
+}
+2026-01-23T17:05:03.801Z info: 127.0.0.1 POST /api/readFramesAroundTime HTTP/1.1 200 - 46.246 ms
+2026-01-23T17:05:03.802Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:05:03.802Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.387 ms
+2026-01-23T17:05:03.809Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:05:03.809Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.426 ms
+2026-01-23T17:05:04.053Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:05:04.053Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.542 ms
+2026-01-23T17:05:04.190Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:05:04.191Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.534 ms
+2026-01-23T17:05:04.199Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:05:04.200Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.627 ms
+2026-01-23T17:05:04.208Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5CAlex%5CDownloads%5CDors+Feline-1941_Foot_Fun.wmv&videoStreamIndex=0&audioStreamIndexes=1&seekTo=379.948103&size=800&fps=30 HTTP/1.1 200 - 96.471 ms
+2026-01-23T17:05:04.210Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:05:04.210Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.451 ms
+2026-01-23T17:05:04.211Z info: Received /stream request {
+  path: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  videoStreamIndex: '0',
+  audioStreamIndexes: '1',
+  seekTo: '719.735852',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-23T17:05:04.223Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:05:04.223Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.515 ms
+2026-01-23T17:05:04.486Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:05:04.487Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.550 ms
+2026-01-23T17:05:04.699Z info: API readFramesAroundTime called {
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  aroundTime: 719.7358524173028,
+  streamIndex: 0,
+  window: 60
+}
+2026-01-23T17:05:04.747Z info: 127.0.0.1 POST /api/readFramesAroundTime HTTP/1.1 200 - 47.446 ms
+2026-01-23T17:05:04.754Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:05:04.754Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.430 ms
+2026-01-23T17:05:04.760Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:05:04.760Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.381 ms
+2026-01-23T17:05:04.934Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:05:04.934Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.515 ms
+2026-01-23T17:05:04.937Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5CAlex%5CDownloads%5CDors+Feline-1941_Foot_Fun.wmv&videoStreamIndex=0&audioStreamIndexes=1&seekTo=719.735852&size=800&fps=30 HTTP/1.1 200 - 68.737 ms
+2026-01-23T17:05:04.947Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:05:04.947Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.455 ms
+2026-01-23T17:05:04.948Z info: Received /stream request {
+  path: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  videoStreamIndex: '0',
+  audioStreamIndexes: '1',
+  seekTo: '896.333454',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-23T17:05:05.504Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:05:05.504Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.533 ms
+2026-01-23T17:05:05.505Z info: API readFramesAroundTime called {
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  aroundTime: 896.3253180661578,
+  streamIndex: 0,
+  window: 60
+}
+2026-01-23T17:05:05.554Z info: 127.0.0.1 POST /api/readFramesAroundTime HTTP/1.1 200 - 49.369 ms
+2026-01-23T17:05:05.555Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:05:05.555Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.380 ms
+2026-01-23T17:05:05.561Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:05:05.561Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.541 ms
+2026-01-23T17:05:05.734Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:05:05.735Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.545 ms
+2026-01-23T17:05:06.004Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:05:06.004Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.508 ms
+2026-01-23T17:05:06.054Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:05:06.054Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.500 ms
+2026-01-23T17:05:06.060Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:05:06.061Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.444 ms
+2026-01-23T17:05:06.072Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5CAlex%5CDownloads%5CDors+Feline-1941_Foot_Fun.wmv&videoStreamIndex=0&audioStreamIndexes=1&seekTo=896.333454&size=800&fps=30 HTTP/1.1 200 - 116.198 ms
+2026-01-23T17:05:06.073Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:05:06.074Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.392 ms
+2026-01-23T17:05:06.082Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:05:06.083Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.592 ms
+2026-01-23T17:05:06.091Z info: Received /stream request {
+  path: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  videoStreamIndex: '0',
+  audioStreamIndexes: '1',
+  seekTo: '291.640178',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-23T17:05:06.097Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:05:06.097Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.522 ms
+2026-01-23T17:05:06.106Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:05:06.106Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.490 ms
+2026-01-23T17:05:06.115Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:05:06.115Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.461 ms
+2026-01-23T17:05:06.123Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:05:06.124Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.544 ms
+2026-01-23T17:05:06.132Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:05:06.133Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.504 ms
+2026-01-23T17:05:06.140Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5CAlex%5CDownloads%5CDors+Feline-1941_Foot_Fun.wmv&videoStreamIndex=0&audioStreamIndexes=1&seekTo=291.640178&size=800&fps=30 HTTP/1.1 - - - ms
+2026-01-23T17:05:06.141Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:05:06.141Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.432 ms
+2026-01-23T17:05:06.149Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:05:06.149Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.466 ms
+2026-01-23T17:05:06.157Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:05:06.158Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.516 ms
+2026-01-23T17:05:06.165Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:05:06.165Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.504 ms
+2026-01-23T17:05:06.173Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:05:06.173Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.525 ms
+2026-01-23T17:05:06.181Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:05:06.181Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.519 ms
+2026-01-23T17:05:06.190Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:05:06.190Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.478 ms
+2026-01-23T17:05:06.198Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:05:06.198Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.494 ms
+2026-01-23T17:05:06.206Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:05:06.206Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.515 ms
+2026-01-23T17:05:06.214Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:05:06.215Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.510 ms
+2026-01-23T17:05:06.222Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:05:06.223Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.490 ms
+2026-01-23T17:05:06.231Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:05:06.231Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.467 ms
+2026-01-23T17:05:06.239Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:05:06.239Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.461 ms
+2026-01-23T17:05:06.247Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:05:06.247Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.488 ms
+2026-01-23T17:05:06.255Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:05:06.255Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.508 ms
+2026-01-23T17:05:06.263Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:05:06.263Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.475 ms
+2026-01-23T17:05:06.271Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:05:06.271Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.500 ms
+2026-01-23T17:05:06.278Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:05:06.279Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.469 ms
+2026-01-23T17:05:06.286Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:05:06.286Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.509 ms
+2026-01-23T17:05:06.293Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:05:06.294Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.500 ms
+2026-01-23T17:05:06.306Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:05:06.307Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.568 ms
+2026-01-23T17:05:06.318Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:05:06.318Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.570 ms
+2026-01-23T17:05:06.326Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:05:06.327Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.505 ms
+2026-01-23T17:05:06.335Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:05:06.335Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.539 ms
+2026-01-23T17:05:06.343Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:05:06.343Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.509 ms
+2026-01-23T17:05:06.352Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:05:06.353Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.622 ms
+2026-01-23T17:05:06.361Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:05:06.362Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.526 ms
+2026-01-23T17:05:06.373Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:05:06.373Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.418 ms
+2026-01-23T17:05:06.391Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:05:06.392Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.511 ms
+2026-01-23T17:05:06.404Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:05:06.404Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.511 ms
+2026-01-23T17:05:06.414Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:05:06.415Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.573 ms
+2026-01-23T17:05:06.424Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:05:06.424Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.520 ms
+2026-01-23T17:05:06.433Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:05:06.433Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.469 ms
+2026-01-23T17:05:06.442Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:05:06.442Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.498 ms
+2026-01-23T17:05:06.450Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:05:06.451Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.524 ms
+2026-01-23T17:05:06.459Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:05:06.459Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.469 ms
+2026-01-23T17:05:06.469Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:05:06.469Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.496 ms
+2026-01-23T17:05:06.476Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:05:06.477Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.617 ms
+2026-01-23T17:05:06.486Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:05:06.486Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.547 ms
+2026-01-23T17:05:06.495Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:05:06.495Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.485 ms
+2026-01-23T17:05:06.504Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:05:06.505Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.586 ms
+2026-01-23T17:05:06.513Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:05:06.514Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.497 ms
+2026-01-23T17:05:06.524Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:05:06.525Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.491 ms
+2026-01-23T17:05:06.633Z info: Received /stream request {
+  path: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  videoStreamIndex: '0',
+  audioStreamIndexes: '1',
+  seekTo: '0.082074',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-23T17:05:06.792Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:05:06.793Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.441 ms
+2026-01-23T17:05:06.793Z info: API readFramesAroundTime called {
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  aroundTime: 0,
+  streamIndex: 0,
+  window: 60
+}
+2026-01-23T17:05:06.837Z info: 127.0.0.1 POST /api/readFramesAroundTime HTTP/1.1 200 - 43.665 ms
+2026-01-23T17:05:06.848Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:05:06.848Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.581 ms
+2026-01-23T17:05:07.058Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:05:07.059Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.473 ms
+2026-01-23T17:05:07.329Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:05:07.329Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.466 ms
+2026-01-23T17:05:07.599Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:05:07.600Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.503 ms
+2026-01-23T17:05:07.850Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:05:07.850Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.496 ms
+2026-01-23T17:05:08.115Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:05:08.116Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.491 ms
+2026-01-23T17:05:08.281Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:05:08.281Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.492 ms
+2026-01-23T17:05:08.288Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:05:08.288Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.517 ms
+2026-01-23T17:05:08.794Z info: API readFramesAroundTime called {
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  aroundTime: 1.723253,
+  streamIndex: 0,
+  window: 60
+}
+2026-01-23T17:05:08.832Z info: 127.0.0.1 POST /api/readFramesAroundTime HTTP/1.1 200 - 38.210 ms
+2026-01-23T17:05:08.839Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:05:08.839Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.455 ms
+2026-01-23T17:05:23.127Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5CAlex%5CDownloads%5CDors+Feline-1941_Foot_Fun.wmv&videoStreamIndex=0&audioStreamIndexes=1&seekTo=0.082074&size=800&fps=30 HTTP/1.1 200 - 46.704 ms
+2026-01-23T17:05:23.132Z info: Received /stream request {
+  path: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  videoStreamIndex: '0',
+  audioStreamIndexes: '1',
+  seekTo: '1.723253',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-23T17:05:25.075Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:05:25.076Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.539 ms
+2026-01-23T17:05:26.498Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:05:26.498Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.535 ms
+2026-01-23T17:05:26.769Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:05:26.770Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.485 ms
+2026-01-23T17:05:26.969Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:05:26.969Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.528 ms
+2026-01-23T17:05:26.973Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5CAlex%5CDownloads%5CDors+Feline-1941_Foot_Fun.wmv&videoStreamIndex=0&audioStreamIndexes=1&seekTo=1.723253&size=800&fps=30 HTTP/1.1 200 - 104.062 ms
+2026-01-23T17:05:26.990Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:05:26.991Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.516 ms
+2026-01-23T17:05:26.992Z info: Received /stream request {
+  path: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  videoStreamIndex: '0',
+  audioStreamIndexes: '1',
+  seekTo: '180.603891',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-23T17:05:27.559Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:05:27.559Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.617 ms
+2026-01-23T17:05:27.560Z info: API readFramesAroundTime called {
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  aroundTime: 180.60286259541985,
+  streamIndex: 0,
+  window: 60
+}
+2026-01-23T17:05:27.613Z info: 127.0.0.1 POST /api/readFramesAroundTime HTTP/1.1 200 - 53.115 ms
+2026-01-23T17:05:27.614Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:05:27.614Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.339 ms
+2026-01-23T17:05:27.620Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:05:27.620Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.459 ms
+2026-01-23T17:05:27.777Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:05:27.778Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.572 ms
+2026-01-23T17:05:28.050Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:05:28.051Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.541 ms
+2026-01-23T17:05:28.161Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:05:28.161Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.459 ms
+2026-01-23T17:05:28.320Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:05:28.321Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.521 ms
+2026-01-23T17:05:28.570Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:05:28.571Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.486 ms
+2026-01-23T17:05:28.836Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:05:28.836Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.493 ms
+2026-01-23T17:05:29.052Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:05:29.052Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.499 ms
+2026-01-23T17:05:29.060Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:05:29.061Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.461 ms
+2026-01-23T17:05:29.063Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5CAlex%5CDownloads%5CDors+Feline-1941_Foot_Fun.wmv&videoStreamIndex=0&audioStreamIndexes=1&seekTo=180.603891&size=800&fps=30 HTTP/1.1 200 - 142.364 ms
+2026-01-23T17:05:29.065Z info: Received /stream request {
+  path: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  videoStreamIndex: '0',
+  audioStreamIndexes: '1',
+  seekTo: '481.623101',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-23T17:05:29.321Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:05:29.322Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.592 ms
+2026-01-23T17:05:29.553Z info: API readFramesAroundTime called {
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  aroundTime: 481.60763358778627,
+  streamIndex: 0,
+  window: 60
+}
+2026-01-23T17:05:29.585Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:05:29.586Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.505 ms
+2026-01-23T17:05:29.607Z info: 127.0.0.1 POST /api/readFramesAroundTime HTTP/1.1 200 - 54.016 ms
+2026-01-23T17:05:29.614Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:05:29.614Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.481 ms
+2026-01-23T17:05:29.850Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:05:29.851Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.529 ms
+2026-01-23T17:05:30.121Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:05:30.121Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.559 ms
+2026-01-23T17:05:30.175Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:05:30.176Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.519 ms
+2026-01-23T17:05:30.391Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:05:30.392Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.543 ms
+2026-01-23T17:05:30.661Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:05:30.661Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.478 ms
+2026-01-23T17:05:30.914Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:05:30.914Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.480 ms
+2026-01-23T17:05:31.002Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:05:31.002Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.542 ms
+2026-01-23T17:05:31.009Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:05:31.009Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.455 ms
+2026-01-23T17:05:31.503Z info: API readFramesAroundTime called {
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  aroundTime: 483.510404,
+  streamIndex: 0,
+  window: 60
+}
+2026-01-23T17:05:31.554Z info: 127.0.0.1 POST /api/readFramesAroundTime HTTP/1.1 200 - 51.392 ms
+2026-01-23T17:05:31.563Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:05:31.563Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.435 ms
+2026-01-23T17:05:31.910Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:05:31.911Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.601 ms
+2026-01-23T17:05:31.918Z info: API getOutFileExtension called {
+  isCustomFormatSelected: false,
+  outFormat: 'asf',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv'
+}
+2026-01-23T17:05:31.919Z info: 127.0.0.1 POST /api/getOutFileExtension HTTP/1.1 200 - 0.648 ms
+2026-01-23T17:05:31.919Z info: API getOutFileExtension called {
+  isCustomFormatSelected: false,
+  outFormat: 'asf',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv'
+}
+2026-01-23T17:05:31.919Z info: 127.0.0.1 POST /api/getOutFileExtension HTTP/1.1 200 - 0.323 ms
+2026-01-23T17:05:31.930Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:05:31.938Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 7.062 ms
+2026-01-23T17:05:32.193Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:05:32.194Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.514 ms
+2026-01-23T17:05:40.667Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:05:40.668Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.690 ms
+2026-01-23T17:05:40.669Z info: API getOutFileExtension called {
+  isCustomFormatSelected: false,
+  outFormat: 'asf',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv'
+}
+2026-01-23T17:05:40.669Z info: 127.0.0.1 POST /api/getOutFileExtension HTTP/1.1 200 - 0.422 ms
+2026-01-23T17:05:40.695Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:05:40.696Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.659 ms
+2026-01-23T17:05:41.427Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5CAlex%5CDownloads%5CDors+Feline-1941_Foot_Fun.wmv&videoStreamIndex=0&audioStreamIndexes=1&seekTo=481.623101&size=800&fps=30 HTTP/1.1 200 - 91.573 ms
+2026-01-23T17:05:41.431Z info: Received /stream request {
+  path: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  videoStreamIndex: '0',
+  audioStreamIndexes: '1',
+  seekTo: '483.510404',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-23T17:05:46.742Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5CAlex%5CDownloads%5CDors+Feline-1941_Foot_Fun.wmv&videoStreamIndex=0&audioStreamIndexes=1&seekTo=483.510404&size=800&fps=30 HTTP/1.1 200 - 125.317 ms
+2026-01-23T17:05:46.744Z info: Received /stream request {
+  path: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  videoStreamIndex: '0',
+  audioStreamIndexes: '1',
+  seekTo: '483.510404',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-23T17:05:52.056Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5CAlex%5CDownloads%5CDors+Feline-1941_Foot_Fun.wmv&videoStreamIndex=0&audioStreamIndexes=1&seekTo=483.510404&size=800&fps=30 HTTP/1.1 200 - 123.416 ms
+2026-01-23T17:05:52.366Z info: Received /stream request {
+  path: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  videoStreamIndex: '0',
+  audioStreamIndexes: '1',
+  seekTo: '483.510404',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-23T17:05:57.703Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5CAlex%5CDownloads%5CDors+Feline-1941_Foot_Fun.wmv&videoStreamIndex=0&audioStreamIndexes=1&seekTo=483.510404&size=800&fps=30 HTTP/1.1 200 - 139.520 ms
+2026-01-23T17:05:57.705Z info: Received /stream request {
+  path: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  videoStreamIndex: '0',
+  audioStreamIndexes: '1',
+  seekTo: '483.510404',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-23T17:06:02.986Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5CAlex%5CDownloads%5CDors+Feline-1941_Foot_Fun.wmv&videoStreamIndex=0&audioStreamIndexes=1&seekTo=483.510404&size=800&fps=30 HTTP/1.1 200 - 121.581 ms
+2026-01-23T17:06:03.303Z info: Received /stream request {
+  path: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  videoStreamIndex: '0',
+  audioStreamIndexes: '1',
+  seekTo: '483.510404',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-23T17:06:10.088Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5CAlex%5CDownloads%5CDors+Feline-1941_Foot_Fun.wmv&videoStreamIndex=0&audioStreamIndexes=1&seekTo=483.510404&size=800&fps=30 HTTP/1.1 200 - 120.703 ms
+2026-01-23T17:06:10.093Z info: Received /stream request {
+  path: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  videoStreamIndex: '0',
+  audioStreamIndexes: '1',
+  seekTo: '483.510404',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-23T17:06:21.086Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5CAlex%5CDownloads%5CDors+Feline-1941_Foot_Fun.wmv&videoStreamIndex=0&audioStreamIndexes=1&seekTo=483.510404&size=800&fps=30 HTTP/1.1 200 - 201.309 ms
+2026-01-23T17:06:21.398Z info: Received /stream request {
+  path: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  videoStreamIndex: '0',
+  audioStreamIndexes: '1',
+  seekTo: '483.510404',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-23T17:06:30.082Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5CAlex%5CDownloads%5CDors+Feline-1941_Foot_Fun.wmv&videoStreamIndex=0&audioStreamIndexes=1&seekTo=483.510404&size=800&fps=30 HTTP/1.1 200 - 148.886 ms
+2026-01-23T17:06:30.086Z info: Received /stream request {
+  path: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  videoStreamIndex: '0',
+  audioStreamIndexes: '1',
+  seekTo: '483.510404',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-23T17:06:40.100Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5CAlex%5CDownloads%5CDors+Feline-1941_Foot_Fun.wmv&videoStreamIndex=0&audioStreamIndexes=1&seekTo=483.510404&size=800&fps=30 HTTP/1.1 200 - 157.035 ms
+2026-01-23T17:06:40.419Z info: Received /stream request {
+  path: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  videoStreamIndex: '0',
+  audioStreamIndexes: '1',
+  seekTo: '483.510404',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-23T17:06:51.092Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5CAlex%5CDownloads%5CDors+Feline-1941_Foot_Fun.wmv&videoStreamIndex=0&audioStreamIndexes=1&seekTo=483.510404&size=800&fps=30 HTTP/1.1 200 - 161.267 ms
+2026-01-23T17:06:51.096Z info: Received /stream request {
+  path: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  videoStreamIndex: '0',
+  audioStreamIndexes: '1',
+  seekTo: '483.510404',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-23T17:07:02.092Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5CAlex%5CDownloads%5CDors+Feline-1941_Foot_Fun.wmv&videoStreamIndex=0&audioStreamIndexes=1&seekTo=483.510404&size=800&fps=30 HTTP/1.1 200 - 160.326 ms
+2026-01-23T17:07:02.403Z info: Received /stream request {
+  path: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  videoStreamIndex: '0',
+  audioStreamIndexes: '1',
+  seekTo: '483.510404',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-23T17:07:13.555Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:07:13.556Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.665 ms
+2026-01-23T17:07:13.556Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5CAlex%5CDownloads%5CDors+Feline-1941_Foot_Fun.wmv&videoStreamIndex=0&audioStreamIndexes=1&seekTo=483.510404&size=800&fps=30 HTTP/1.1 200 - 147.797 ms
+2026-01-23T17:07:13.560Z info: Received /stream request {
+  path: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  videoStreamIndex: '0',
+  audioStreamIndexes: '1',
+  seekTo: '483.510404',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-23T17:07:18.871Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5CAlex%5CDownloads%5CDors+Feline-1941_Foot_Fun.wmv&videoStreamIndex=0&audioStreamIndexes=1&seekTo=483.510404&size=800&fps=30 HTTP/1.1 200 - 126.910 ms
+2026-01-23T17:07:19.179Z info: Received /stream request {
+  path: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  videoStreamIndex: '0',
+  audioStreamIndexes: '1',
+  seekTo: '483.510404',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-23T17:07:23.708Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:07:23.709Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.631 ms
+2026-01-23T17:07:23.744Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:07:23.751Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 6.592 ms
+2026-01-23T17:07:24.486Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5CAlex%5CDownloads%5CDors+Feline-1941_Foot_Fun.wmv&videoStreamIndex=0&audioStreamIndexes=1&seekTo=483.510404&size=800&fps=30 HTTP/1.1 200 - 123.671 ms
+2026-01-23T17:07:24.491Z info: Received /stream request {
+  path: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  videoStreamIndex: '0',
+  audioStreamIndexes: '1',
+  seekTo: '483.510404',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-23T17:07:25.820Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:07:25.821Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.745 ms
+2026-01-23T17:07:25.821Z info: API getOutFileExtension called {
+  isCustomFormatSelected: false,
+  outFormat: 'asf',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv'
+}
+2026-01-23T17:07:25.821Z info: 127.0.0.1 POST /api/getOutFileExtension HTTP/1.1 200 - 0.413 ms
+2026-01-23T17:07:25.822Z info: API getOutFileExtension called {
+  isCustomFormatSelected: false,
+  outFormat: 'asf',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv'
+}
+2026-01-23T17:07:25.822Z info: 127.0.0.1 POST /api/getOutFileExtension HTTP/1.1 200 - 0.285 ms
+2026-01-23T17:07:29.802Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5CAlex%5CDownloads%5CDors+Feline-1941_Foot_Fun.wmv&videoStreamIndex=0&audioStreamIndexes=1&seekTo=483.510404&size=800&fps=30 HTTP/1.1 200 - 123.384 ms
+2026-01-23T17:07:29.804Z info: Received /stream request {
+  path: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  videoStreamIndex: '0',
+  audioStreamIndexes: '1',
+  seekTo: '483.510404',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-23T17:07:30.593Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:07:30.594Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.661 ms
+2026-01-23T17:07:30.596Z info: API getOutFileExtension called {
+  isCustomFormatSelected: false,
+  outFormat: 'asf',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv'
+}
+2026-01-23T17:07:30.597Z info: 127.0.0.1 POST /api/getOutFileExtension HTTP/1.1 200 - 0.454 ms
+2026-01-23T17:07:30.625Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:07:30.625Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.550 ms
+2026-01-23T17:07:35.117Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5CAlex%5CDownloads%5CDors+Feline-1941_Foot_Fun.wmv&videoStreamIndex=0&audioStreamIndexes=1&seekTo=483.510404&size=800&fps=30 HTTP/1.1 200 - 126.282 ms
+2026-01-23T17:07:35.119Z info: Received /stream request {
+  path: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  videoStreamIndex: '0',
+  audioStreamIndexes: '1',
+  seekTo: '483.510404',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-23T17:07:40.463Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5CAlex%5CDownloads%5CDors+Feline-1941_Foot_Fun.wmv&videoStreamIndex=0&audioStreamIndexes=1&seekTo=483.510404&size=800&fps=30 HTTP/1.1 200 - 133.072 ms
+2026-01-23T17:07:40.771Z info: Received /stream request {
+  path: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  videoStreamIndex: '0',
+  audioStreamIndexes: '1',
+  seekTo: '483.510404',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-23T17:07:46.077Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5CAlex%5CDownloads%5CDors+Feline-1941_Foot_Fun.wmv&videoStreamIndex=0&audioStreamIndexes=1&seekTo=483.510404&size=800&fps=30 HTTP/1.1 200 - 124.383 ms
+2026-01-23T17:07:46.082Z info: Received /stream request {
+  path: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  videoStreamIndex: '0',
+  audioStreamIndexes: '1',
+  seekTo: '483.510404',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-23T17:07:51.453Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5CAlex%5CDownloads%5CDors+Feline-1941_Foot_Fun.wmv&videoStreamIndex=0&audioStreamIndexes=1&seekTo=483.510404&size=800&fps=30 HTTP/1.1 200 - 137.466 ms
+2026-01-23T17:07:51.766Z info: Received /stream request {
+  path: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  videoStreamIndex: '0',
+  audioStreamIndexes: '1',
+  seekTo: '483.510404',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-23T17:07:57.097Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5CAlex%5CDownloads%5CDors+Feline-1941_Foot_Fun.wmv&videoStreamIndex=0&audioStreamIndexes=1&seekTo=483.510404&size=800&fps=30 HTTP/1.1 200 - 126.400 ms
+2026-01-23T17:07:57.101Z info: Received /stream request {
+  path: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  videoStreamIndex: '0',
+  audioStreamIndexes: '1',
+  seekTo: '483.510404',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-23T17:08:02.445Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5CAlex%5CDownloads%5CDors+Feline-1941_Foot_Fun.wmv&videoStreamIndex=0&audioStreamIndexes=1&seekTo=483.510404&size=800&fps=30 HTTP/1.1 200 - 124.377 ms
+2026-01-23T17:08:02.760Z info: Received /stream request {
+  path: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  videoStreamIndex: '0',
+  audioStreamIndexes: '1',
+  seekTo: '483.510404',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-23T17:08:08.093Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5CAlex%5CDownloads%5CDors+Feline-1941_Foot_Fun.wmv&videoStreamIndex=0&audioStreamIndexes=1&seekTo=483.510404&size=800&fps=30 HTTP/1.1 200 - 121.786 ms
+2026-01-23T17:08:08.095Z info: Received /stream request {
+  path: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  videoStreamIndex: '0',
+  audioStreamIndexes: '1',
+  seekTo: '483.510404',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-23T17:08:13.437Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5CAlex%5CDownloads%5CDors+Feline-1941_Foot_Fun.wmv&videoStreamIndex=0&audioStreamIndexes=1&seekTo=483.510404&size=800&fps=30 HTTP/1.1 200 - 126.008 ms
+2026-01-23T17:08:13.749Z info: Received /stream request {
+  path: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  videoStreamIndex: '0',
+  audioStreamIndexes: '1',
+  seekTo: '483.510404',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-23T17:08:19.083Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5CAlex%5CDownloads%5CDors+Feline-1941_Foot_Fun.wmv&videoStreamIndex=0&audioStreamIndexes=1&seekTo=483.510404&size=800&fps=30 HTTP/1.1 200 - 121.311 ms
+2026-01-23T17:08:19.087Z info: Received /stream request {
+  path: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  videoStreamIndex: '0',
+  audioStreamIndexes: '1',
+  seekTo: '483.510404',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-23T17:08:24.430Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5CAlex%5CDownloads%5CDors+Feline-1941_Foot_Fun.wmv&videoStreamIndex=0&audioStreamIndexes=1&seekTo=483.510404&size=800&fps=30 HTTP/1.1 200 - 123.439 ms
+2026-01-23T17:08:24.744Z info: Received /stream request {
+  path: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  videoStreamIndex: '0',
+  audioStreamIndexes: '1',
+  seekTo: '483.510404',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-23T17:08:30.076Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5CAlex%5CDownloads%5CDors+Feline-1941_Foot_Fun.wmv&videoStreamIndex=0&audioStreamIndexes=1&seekTo=483.510404&size=800&fps=30 HTTP/1.1 200 - 122.219 ms
+2026-01-23T17:08:30.081Z info: Received /stream request {
+  path: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  videoStreamIndex: '0',
+  audioStreamIndexes: '1',
+  seekTo: '483.510404',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-23T17:08:35.422Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5CAlex%5CDownloads%5CDors+Feline-1941_Foot_Fun.wmv&videoStreamIndex=0&audioStreamIndexes=1&seekTo=483.510404&size=800&fps=30 HTTP/1.1 200 - 123.762 ms
+2026-01-23T17:08:35.734Z info: Received /stream request {
+  path: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  videoStreamIndex: '0',
+  audioStreamIndexes: '1',
+  seekTo: '483.510404',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-23T17:08:38.399Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:08:38.400Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.781 ms
+2026-01-23T17:08:38.529Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:08:38.530Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.696 ms
+2026-01-23T17:08:38.775Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:08:38.776Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.576 ms
+2026-01-23T17:08:39.041Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:08:39.041Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.588 ms
+2026-01-23T17:08:39.307Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:08:39.307Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.610 ms
+2026-01-23T17:08:39.573Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:08:39.574Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.602 ms
+2026-01-23T17:08:39.844Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:08:39.844Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.572 ms
+2026-01-23T17:08:40.112Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:08:40.112Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.608 ms
+2026-01-23T17:08:40.382Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:08:40.383Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.599 ms
+2026-01-23T17:08:40.634Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:08:40.635Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.592 ms
+2026-01-23T17:08:40.900Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:08:40.900Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.618 ms
+2026-01-23T17:08:41.165Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:08:41.166Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.603 ms
+2026-01-23T17:08:41.434Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:08:41.435Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.580 ms
+2026-01-23T17:08:41.703Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:08:41.704Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.765 ms
+2026-01-23T17:08:41.972Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:08:41.972Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.617 ms
+2026-01-23T17:08:42.243Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:08:42.243Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.598 ms
+2026-01-23T17:08:42.512Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:08:42.513Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.611 ms
+2026-01-23T17:08:42.783Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:08:42.783Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.602 ms
+2026-01-23T17:08:43.052Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:08:43.053Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.682 ms
+2026-01-23T17:08:43.305Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:08:43.305Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.600 ms
+2026-01-23T17:08:43.571Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:08:43.572Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.771 ms
+2026-01-23T17:08:43.837Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:08:43.838Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.562 ms
+2026-01-23T17:08:44.108Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:08:44.109Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.622 ms
+2026-01-23T17:08:44.372Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:08:44.373Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.602 ms
+2026-01-23T17:08:44.645Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:08:44.645Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.681 ms
+2026-01-23T17:08:44.913Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:08:44.914Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.591 ms
+2026-01-23T17:08:45.166Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:08:45.167Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.681 ms
+2026-01-23T17:08:45.429Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:08:45.429Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.639 ms
+2026-01-23T17:08:45.695Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:08:45.695Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.587 ms
+2026-01-23T17:08:45.963Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:08:45.964Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.736 ms
+2026-01-23T17:08:46.233Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:08:46.234Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.609 ms
+2026-01-23T17:08:46.502Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:08:46.502Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.647 ms
+2026-01-23T17:08:46.774Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:08:46.774Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.591 ms
+2026-01-23T17:08:47.043Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:08:47.043Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.586 ms
+2026-01-23T17:08:47.312Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:08:47.313Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.609 ms
+2026-01-23T17:08:47.582Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:08:47.583Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.667 ms
+2026-01-23T17:08:47.837Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:08:47.838Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.608 ms
+2026-01-23T17:08:48.101Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:08:48.102Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.632 ms
+2026-01-23T17:08:48.369Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:08:48.369Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.621 ms
+2026-01-23T17:08:48.633Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:08:48.633Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.624 ms
+2026-01-23T17:08:48.901Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:08:48.902Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.583 ms
+2026-01-23T17:08:49.173Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:08:49.173Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.615 ms
+2026-01-23T17:08:49.441Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:08:49.442Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.680 ms
+2026-01-23T17:08:49.697Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:08:49.697Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.627 ms
+2026-01-23T17:08:49.962Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:08:49.963Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.645 ms
+2026-01-23T17:08:50.226Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:08:50.227Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.616 ms
+2026-01-23T17:08:50.493Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:08:50.494Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.640 ms
+2026-01-23T17:08:50.762Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:08:50.762Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.567 ms
+2026-01-23T17:08:51.033Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:08:51.034Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.614 ms
+2026-01-23T17:08:51.301Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:08:51.301Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.626 ms
+2026-01-23T17:08:51.555Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:08:51.555Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.583 ms
+2026-01-23T17:08:51.820Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:08:51.821Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.655 ms
+2026-01-23T17:08:52.085Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:08:52.086Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.646 ms
+2026-01-23T17:08:52.353Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:08:52.354Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.591 ms
+2026-01-23T17:08:52.621Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:08:52.622Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.596 ms
+2026-01-23T17:08:52.892Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:08:52.892Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.614 ms
+2026-01-23T17:08:53.161Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:08:53.162Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.668 ms
+2026-01-23T17:08:53.413Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:08:53.414Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.571 ms
+2026-01-23T17:08:53.488Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:08:53.488Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.632 ms
+2026-01-23T17:08:53.495Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:08:53.496Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.528 ms
+2026-01-23T17:08:53.995Z info: API readFramesAroundTime called {
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  aroundTime: 498.434718,
+  streamIndex: 0,
+  window: 60
+}
+2026-01-23T17:08:54.041Z info: 127.0.0.1 POST /api/readFramesAroundTime HTTP/1.1 200 - 45.256 ms
+2026-01-23T17:08:54.048Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:08:54.049Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.515 ms
+2026-01-23T17:08:54.592Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:08:54.592Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.591 ms
+2026-01-23T17:08:54.597Z info: API getOutFileExtension called {
+  isCustomFormatSelected: false,
+  outFormat: 'asf',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv'
+}
+2026-01-23T17:08:54.597Z info: 127.0.0.1 POST /api/getOutFileExtension HTTP/1.1 200 - 0.450 ms
+2026-01-23T17:08:54.598Z info: API getOutFileExtension called {
+  isCustomFormatSelected: false,
+  outFormat: 'asf',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv'
+}
+2026-01-23T17:08:54.598Z info: 127.0.0.1 POST /api/getOutFileExtension HTTP/1.1 200 - 0.299 ms
+2026-01-23T17:08:58.286Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5CAlex%5CDownloads%5CDors+Feline-1941_Foot_Fun.wmv&videoStreamIndex=0&audioStreamIndexes=1&seekTo=483.510404&size=800&fps=30 HTTP/1.1 200 - 121.574 ms
+2026-01-23T17:08:58.290Z info: Received /stream request {
+  path: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  videoStreamIndex: '0',
+  audioStreamIndexes: '1',
+  seekTo: '498.434718',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-23T17:09:04.652Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5CAlex%5CDownloads%5CDors+Feline-1941_Foot_Fun.wmv&videoStreamIndex=0&audioStreamIndexes=1&seekTo=498.434718&size=800&fps=30 HTTP/1.1 200 - 118.850 ms
+2026-01-23T17:09:04.656Z info: Received /stream request {
+  path: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  videoStreamIndex: '0',
+  audioStreamIndexes: '1',
+  seekTo: '498.434718',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-23T17:09:11.018Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5CAlex%5CDownloads%5CDors+Feline-1941_Foot_Fun.wmv&videoStreamIndex=0&audioStreamIndexes=1&seekTo=498.434718&size=800&fps=30 HTTP/1.1 200 - 117.739 ms
+2026-01-23T17:09:11.332Z info: Received /stream request {
+  path: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  videoStreamIndex: '0',
+  audioStreamIndexes: '1',
+  seekTo: '498.434718',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-23T17:09:17.685Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5CAlex%5CDownloads%5CDors+Feline-1941_Foot_Fun.wmv&videoStreamIndex=0&audioStreamIndexes=1&seekTo=498.434718&size=800&fps=30 HTTP/1.1 200 - 113.556 ms
+2026-01-23T17:09:17.688Z info: Received /stream request {
+  path: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  videoStreamIndex: '0',
+  audioStreamIndexes: '1',
+  seekTo: '498.434718',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-23T17:09:21.249Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:09:21.249Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.728 ms
+2026-01-23T17:09:24.110Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5CAlex%5CDownloads%5CDors+Feline-1941_Foot_Fun.wmv&videoStreamIndex=0&audioStreamIndexes=1&seekTo=498.434718&size=800&fps=30 HTTP/1.1 200 - 116.591 ms
+2026-01-23T17:09:24.113Z info: Received /stream request {
+  path: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  videoStreamIndex: '0',
+  audioStreamIndexes: '1',
+  seekTo: '498.434718',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-23T17:09:30.504Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5CAlex%5CDownloads%5CDors+Feline-1941_Foot_Fun.wmv&videoStreamIndex=0&audioStreamIndexes=1&seekTo=498.434718&size=800&fps=30 HTTP/1.1 200 - 137.813 ms
+2026-01-23T17:09:30.823Z info: Received /stream request {
+  path: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  videoStreamIndex: '0',
+  audioStreamIndexes: '1',
+  seekTo: '498.434718',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-23T17:09:37.170Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5CAlex%5CDownloads%5CDors+Feline-1941_Foot_Fun.wmv&videoStreamIndex=0&audioStreamIndexes=1&seekTo=498.434718&size=800&fps=30 HTTP/1.1 200 - 112.503 ms
+2026-01-23T17:09:37.176Z info: Received /stream request {
+  path: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  videoStreamIndex: '0',
+  audioStreamIndexes: '1',
+  seekTo: '498.434718',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-23T17:09:43.507Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5CAlex%5CDownloads%5CDors+Feline-1941_Foot_Fun.wmv&videoStreamIndex=0&audioStreamIndexes=1&seekTo=498.434718&size=800&fps=30 HTTP/1.1 200 - 123.190 ms
+2026-01-23T17:09:43.826Z info: Received /stream request {
+  path: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  videoStreamIndex: '0',
+  audioStreamIndexes: '1',
+  seekTo: '498.434718',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-23T17:09:45.669Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:09:45.670Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.643 ms
+2026-01-23T17:09:50.142Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5CAlex%5CDownloads%5CDors+Feline-1941_Foot_Fun.wmv&videoStreamIndex=0&audioStreamIndexes=1&seekTo=498.434718&size=800&fps=30 HTTP/1.1 200 - 114.265 ms
+2026-01-23T17:09:50.145Z info: Received /stream request {
+  path: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  videoStreamIndex: '0',
+  audioStreamIndexes: '1',
+  seekTo: '498.434718',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-23T17:09:56.508Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5CAlex%5CDownloads%5CDors+Feline-1941_Foot_Fun.wmv&videoStreamIndex=0&audioStreamIndexes=1&seekTo=498.434718&size=800&fps=30 HTTP/1.1 200 - 128.614 ms
+2026-01-23T17:09:56.816Z info: Received /stream request {
+  path: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  videoStreamIndex: '0',
+  audioStreamIndexes: '1',
+  seekTo: '498.434718',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-23T17:10:03.172Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5CAlex%5CDownloads%5CDors+Feline-1941_Foot_Fun.wmv&videoStreamIndex=0&audioStreamIndexes=1&seekTo=498.434718&size=800&fps=30 HTTP/1.1 200 - 112.470 ms
+2026-01-23T17:10:03.174Z info: Received /stream request {
+  path: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  videoStreamIndex: '0',
+  audioStreamIndexes: '1',
+  seekTo: '498.434718',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-23T17:10:09.537Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5CAlex%5CDownloads%5CDors+Feline-1941_Foot_Fun.wmv&videoStreamIndex=0&audioStreamIndexes=1&seekTo=498.434718&size=800&fps=30 HTTP/1.1 200 - 121.852 ms
+2026-01-23T17:10:09.849Z info: Received /stream request {
+  path: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  videoStreamIndex: '0',
+  audioStreamIndexes: '1',
+  seekTo: '498.434718',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-23T17:10:16.233Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5CAlex%5CDownloads%5CDors+Feline-1941_Foot_Fun.wmv&videoStreamIndex=0&audioStreamIndexes=1&seekTo=498.434718&size=800&fps=30 HTTP/1.1 200 - 116.505 ms
+2026-01-23T17:10:16.237Z info: Received /stream request {
+  path: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  videoStreamIndex: '0',
+  audioStreamIndexes: '1',
+  seekTo: '498.434718',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-23T17:10:22.598Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5CAlex%5CDownloads%5CDors+Feline-1941_Foot_Fun.wmv&videoStreamIndex=0&audioStreamIndexes=1&seekTo=498.434718&size=800&fps=30 HTTP/1.1 200 - 115.510 ms
+2026-01-23T17:10:22.913Z info: Received /stream request {
+  path: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  videoStreamIndex: '0',
+  audioStreamIndexes: '1',
+  seekTo: '498.434718',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-23T17:10:29.264Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5CAlex%5CDownloads%5CDors+Feline-1941_Foot_Fun.wmv&videoStreamIndex=0&audioStreamIndexes=1&seekTo=498.434718&size=800&fps=30 HTTP/1.1 200 - 112.087 ms
+2026-01-23T17:10:29.269Z info: Received /stream request {
+  path: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  videoStreamIndex: '0',
+  audioStreamIndexes: '1',
+  seekTo: '498.434718',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-23T17:10:35.660Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5CAlex%5CDownloads%5CDors+Feline-1941_Foot_Fun.wmv&videoStreamIndex=0&audioStreamIndexes=1&seekTo=498.434718&size=800&fps=30 HTTP/1.1 200 - 135.443 ms
+2026-01-23T17:10:35.979Z info: Received /stream request {
+  path: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  videoStreamIndex: '0',
+  audioStreamIndexes: '1',
+  seekTo: '498.434718',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-23T17:10:42.356Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5CAlex%5CDownloads%5CDors+Feline-1941_Foot_Fun.wmv&videoStreamIndex=0&audioStreamIndexes=1&seekTo=498.434718&size=800&fps=30 HTTP/1.1 200 - 124.098 ms
+2026-01-23T17:10:42.363Z info: Received /stream request {
+  path: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  videoStreamIndex: '0',
+  audioStreamIndexes: '1',
+  seekTo: '498.434718',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-23T17:10:48.753Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5CAlex%5CDownloads%5CDors+Feline-1941_Foot_Fun.wmv&videoStreamIndex=0&audioStreamIndexes=1&seekTo=498.434718&size=800&fps=30 HTTP/1.1 200 - 124.913 ms
+2026-01-23T17:10:49.066Z info: Received /stream request {
+  path: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  videoStreamIndex: '0',
+  audioStreamIndexes: '1',
+  seekTo: '498.434718',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-23T17:10:55.448Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5CAlex%5CDownloads%5CDors+Feline-1941_Foot_Fun.wmv&videoStreamIndex=0&audioStreamIndexes=1&seekTo=498.434718&size=800&fps=30 HTTP/1.1 200 - 122.585 ms
+2026-01-23T17:10:55.454Z info: Received /stream request {
+  path: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  videoStreamIndex: '0',
+  audioStreamIndexes: '1',
+  seekTo: '498.434718',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-23T17:11:01.820Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5CAlex%5CDownloads%5CDors+Feline-1941_Foot_Fun.wmv&videoStreamIndex=0&audioStreamIndexes=1&seekTo=498.434718&size=800&fps=30 HTTP/1.1 200 - 121.651 ms
+2026-01-23T17:11:02.130Z info: Received /stream request {
+  path: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  videoStreamIndex: '0',
+  audioStreamIndexes: '1',
+  seekTo: '498.434718',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-23T17:11:08.514Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5CAlex%5CDownloads%5CDors+Feline-1941_Foot_Fun.wmv&videoStreamIndex=0&audioStreamIndexes=1&seekTo=498.434718&size=800&fps=30 HTTP/1.1 200 - 126.721 ms
+2026-01-23T17:11:08.519Z info: Received /stream request {
+  path: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  videoStreamIndex: '0',
+  audioStreamIndexes: '1',
+  seekTo: '498.434718',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-23T17:11:14.910Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5CAlex%5CDownloads%5CDors+Feline-1941_Foot_Fun.wmv&videoStreamIndex=0&audioStreamIndexes=1&seekTo=498.434718&size=800&fps=30 HTTP/1.1 200 - 121.709 ms
+2026-01-23T17:11:15.217Z info: Received /stream request {
+  path: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  videoStreamIndex: '0',
+  audioStreamIndexes: '1',
+  seekTo: '498.434718',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-23T17:11:21.605Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5CAlex%5CDownloads%5CDors+Feline-1941_Foot_Fun.wmv&videoStreamIndex=0&audioStreamIndexes=1&seekTo=498.434718&size=800&fps=30 HTTP/1.1 200 - 122.544 ms
+2026-01-23T17:11:21.611Z info: Received /stream request {
+  path: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  videoStreamIndex: '0',
+  audioStreamIndexes: '1',
+  seekTo: '498.434718',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-23T17:11:28.004Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5CAlex%5CDownloads%5CDors+Feline-1941_Foot_Fun.wmv&videoStreamIndex=0&audioStreamIndexes=1&seekTo=498.434718&size=800&fps=30 HTTP/1.1 200 - 128.961 ms
+2026-01-23T17:11:28.321Z info: Received /stream request {
+  path: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  videoStreamIndex: '0',
+  audioStreamIndexes: '1',
+  seekTo: '498.434718',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-23T17:11:34.701Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5CAlex%5CDownloads%5CDors+Feline-1941_Foot_Fun.wmv&videoStreamIndex=0&audioStreamIndexes=1&seekTo=498.434718&size=800&fps=30 HTTP/1.1 200 - 124.285 ms
+2026-01-23T17:11:34.706Z info: Received /stream request {
+  path: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  videoStreamIndex: '0',
+  audioStreamIndexes: '1',
+  seekTo: '498.434718',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-23T17:11:36.062Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:11:36.062Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.599 ms
+2026-01-23T17:11:41.127Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5CAlex%5CDownloads%5CDors+Feline-1941_Foot_Fun.wmv&videoStreamIndex=0&audioStreamIndexes=1&seekTo=498.434718&size=800&fps=30 HTTP/1.1 200 - 138.615 ms
+2026-01-23T17:11:41.131Z info: Received /stream request {
+  path: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  videoStreamIndex: '0',
+  audioStreamIndexes: '1',
+  seekTo: '498.434718',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-23T17:11:47.494Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5CAlex%5CDownloads%5CDors+Feline-1941_Foot_Fun.wmv&videoStreamIndex=0&audioStreamIndexes=1&seekTo=498.434718&size=800&fps=30 HTTP/1.1 200 - 120.732 ms
+2026-01-23T17:11:47.807Z info: Received /stream request {
+  path: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  videoStreamIndex: '0',
+  audioStreamIndexes: '1',
+  seekTo: '498.434718',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-23T17:11:52.152Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:11:52.152Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.703 ms
+2026-01-23T17:11:52.155Z info: API getOutFileExtension called {
+  isCustomFormatSelected: false,
+  outFormat: 'asf',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv'
+}
+2026-01-23T17:11:52.156Z info: 127.0.0.1 POST /api/getOutFileExtension HTTP/1.1 200 - 0.555 ms
+2026-01-23T17:11:52.193Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:11:52.193Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.602 ms
+2026-01-23T17:11:54.159Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5CAlex%5CDownloads%5CDors+Feline-1941_Foot_Fun.wmv&videoStreamIndex=0&audioStreamIndexes=1&seekTo=498.434718&size=800&fps=30 HTTP/1.1 200 - 113.715 ms
+2026-01-23T17:11:54.165Z info: Received /stream request {
+  path: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  videoStreamIndex: '0',
+  audioStreamIndexes: '1',
+  seekTo: '498.434718',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-23T17:12:04.090Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5CAlex%5CDownloads%5CDors+Feline-1941_Foot_Fun.wmv&videoStreamIndex=0&audioStreamIndexes=1&seekTo=498.434718&size=800&fps=30 HTTP/1.1 200 - 113.991 ms
+2026-01-23T17:12:04.401Z info: Received /stream request {
+  path: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  videoStreamIndex: '0',
+  audioStreamIndexes: '1',
+  seekTo: '498.434718',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-23T17:12:15.092Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5CAlex%5CDownloads%5CDors+Feline-1941_Foot_Fun.wmv&videoStreamIndex=0&audioStreamIndexes=1&seekTo=498.434718&size=800&fps=30 HTTP/1.1 200 - 145.898 ms
+2026-01-23T17:12:15.097Z info: Received /stream request {
+  path: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  videoStreamIndex: '0',
+  audioStreamIndexes: '1',
+  seekTo: '498.434718',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-23T17:12:28.087Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5CAlex%5CDownloads%5CDors+Feline-1941_Foot_Fun.wmv&videoStreamIndex=0&audioStreamIndexes=1&seekTo=498.434718&size=800&fps=30 HTTP/1.1 200 - 143.868 ms
+2026-01-23T17:12:28.399Z info: Received /stream request {
+  path: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  videoStreamIndex: '0',
+  audioStreamIndexes: '1',
+  seekTo: '498.434718',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-23T17:12:39.087Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5CAlex%5CDownloads%5CDors+Feline-1941_Foot_Fun.wmv&videoStreamIndex=0&audioStreamIndexes=1&seekTo=498.434718&size=800&fps=30 HTTP/1.1 200 - 142.678 ms
+2026-01-23T17:12:39.100Z info: Received /stream request {
+  path: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  videoStreamIndex: '0',
+  audioStreamIndexes: '1',
+  seekTo: '498.434718',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-23T17:12:52.083Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5CAlex%5CDownloads%5CDors+Feline-1941_Foot_Fun.wmv&videoStreamIndex=0&audioStreamIndexes=1&seekTo=498.434718&size=800&fps=30 HTTP/1.1 200 - 141.139 ms
+2026-01-23T17:12:52.406Z info: Received /stream request {
+  path: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  videoStreamIndex: '0',
+  audioStreamIndexes: '1',
+  seekTo: '498.434718',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-23T17:13:10.089Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5CAlex%5CDownloads%5CDors+Feline-1941_Foot_Fun.wmv&videoStreamIndex=0&audioStreamIndexes=1&seekTo=498.434718&size=800&fps=30 HTTP/1.1 200 - 144.280 ms
+2026-01-23T17:13:10.106Z info: Received /stream request {
+  path: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  videoStreamIndex: '0',
+  audioStreamIndexes: '1',
+  seekTo: '498.434718',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-23T17:13:24.222Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5CAlex%5CDownloads%5CDors+Feline-1941_Foot_Fun.wmv&videoStreamIndex=0&audioStreamIndexes=1&seekTo=498.434718&size=800&fps=30 HTTP/1.1 200 - 181.428 ms
+2026-01-23T17:13:24.535Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:13:24.536Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.627 ms
+2026-01-23T17:13:24.536Z info: Received /stream request {
+  path: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  videoStreamIndex: '0',
+  audioStreamIndexes: '1',
+  seekTo: '498.434718',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-23T17:13:30.887Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5CAlex%5CDownloads%5CDors+Feline-1941_Foot_Fun.wmv&videoStreamIndex=0&audioStreamIndexes=1&seekTo=498.434718&size=800&fps=30 HTTP/1.1 200 - 114.764 ms
+2026-01-23T17:13:31.200Z info: Received /stream request {
+  path: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  videoStreamIndex: '0',
+  audioStreamIndexes: '1',
+  seekTo: '498.434718',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-23T17:13:37.553Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5CAlex%5CDownloads%5CDors+Feline-1941_Foot_Fun.wmv&videoStreamIndex=0&audioStreamIndexes=1&seekTo=498.434718&size=800&fps=30 HTTP/1.1 200 - 117.573 ms
+2026-01-23T17:13:37.557Z info: Received /stream request {
+  path: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  videoStreamIndex: '0',
+  audioStreamIndexes: '1',
+  seekTo: '498.434718',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-23T17:13:43.890Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5CAlex%5CDownloads%5CDors+Feline-1941_Foot_Fun.wmv&videoStreamIndex=0&audioStreamIndexes=1&seekTo=498.434718&size=800&fps=30 HTTP/1.1 200 - 115.152 ms
+2026-01-23T17:13:44.204Z info: Received /stream request {
+  path: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  videoStreamIndex: '0',
+  audioStreamIndexes: '1',
+  seekTo: '498.434718',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-23T17:13:50.558Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5CAlex%5CDownloads%5CDors+Feline-1941_Foot_Fun.wmv&videoStreamIndex=0&audioStreamIndexes=1&seekTo=498.434718&size=800&fps=30 HTTP/1.1 200 - 114.031 ms
+2026-01-23T17:13:50.564Z info: Received /stream request {
+  path: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  videoStreamIndex: '0',
+  audioStreamIndexes: '1',
+  seekTo: '498.434718',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-23T17:13:56.988Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5CAlex%5CDownloads%5CDors+Feline-1941_Foot_Fun.wmv&videoStreamIndex=0&audioStreamIndexes=1&seekTo=498.434718&size=800&fps=30 HTTP/1.1 200 - 139.121 ms
+2026-01-23T17:13:57.304Z info: Received /stream request {
+  path: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  videoStreamIndex: '0',
+  audioStreamIndexes: '1',
+  seekTo: '498.434718',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-23T17:14:03.683Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5CAlex%5CDownloads%5CDors+Feline-1941_Foot_Fun.wmv&videoStreamIndex=0&audioStreamIndexes=1&seekTo=498.434718&size=800&fps=30 HTTP/1.1 200 - 128.104 ms
+2026-01-23T17:14:03.690Z info: Received /stream request {
+  path: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  videoStreamIndex: '0',
+  audioStreamIndexes: '1',
+  seekTo: '498.434718',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-23T17:14:10.082Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5CAlex%5CDownloads%5CDors+Feline-1941_Foot_Fun.wmv&videoStreamIndex=0&audioStreamIndexes=1&seekTo=498.434718&size=800&fps=30 HTTP/1.1 200 - 132.331 ms
+2026-01-23T17:14:10.398Z info: Received /stream request {
+  path: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  videoStreamIndex: '0',
+  audioStreamIndexes: '1',
+  seekTo: '498.434718',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-23T17:14:16.814Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5CAlex%5CDownloads%5CDors+Feline-1941_Foot_Fun.wmv&videoStreamIndex=0&audioStreamIndexes=1&seekTo=498.434718&size=800&fps=30 HTTP/1.1 200 - 130.379 ms
+2026-01-23T17:14:16.816Z info: Received /stream request {
+  path: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  videoStreamIndex: '0',
+  audioStreamIndexes: '1',
+  seekTo: '498.434718',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-23T17:14:18.661Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Dors Feline-1941_Foot_Fun.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:14:18.662Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.608 ms
+2026-01-23T17:14:20.559Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: undefined,
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:14:20.560Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.550 ms
+2026-01-23T17:14:20.567Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5CAlex%5CDownloads%5CDors+Feline-1941_Foot_Fun.wmv&videoStreamIndex=0&audioStreamIndexes=1&seekTo=498.434718&size=800&fps=30 HTTP/1.1 200 - 157.434 ms
+2026-01-23T17:14:20.569Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: undefined,
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:14:20.569Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.455 ms
+2026-01-23T17:14:20.580Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: undefined,
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:14:20.580Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.606 ms
+2026-01-23T17:14:20.866Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: undefined,
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:14:20.866Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.514 ms
+2026-01-23T17:14:20.872Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: undefined,
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:14:20.872Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.455 ms
+2026-01-23T17:14:22.584Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: undefined,
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:14:22.585Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.593 ms
+2026-01-23T17:14:40.758Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: undefined,
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:14:40.758Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.582 ms
+2026-01-23T17:14:40.759Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: undefined,
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:14:40.759Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.291 ms
+2026-01-23T17:14:40.760Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Joeys FeetGirls . Fina Administers Foot Therapy-00.03.15.610-00.10.17.967.mp4',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:14:40.760Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.491 ms
+2026-01-23T17:14:40.761Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: undefined,
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:14:40.761Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.295 ms
+2026-01-23T17:14:40.762Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\Alex\\Downloads\\Joeys FeetGirls . Fina Administers Foot Therapy-00.03.15.610-00.10.17.967.mp4',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:14:40.762Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.337 ms
+2026-01-23T17:14:40.780Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Joeys FeetGirls . Fina Administers Foot Therapy-00.03.15.610-00.10.17.967.mp4',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:14:40.780Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.712 ms
+2026-01-23T17:14:40.788Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Joeys FeetGirls . Fina Administers Foot Therapy-00.03.15.610-00.10.17.967.mp4',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:14:40.789Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.688 ms
+2026-01-23T17:14:40.801Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Joeys FeetGirls . Fina Administers Foot Therapy-00.03.15.610-00.10.17.967.mp4',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:14:40.801Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.621 ms
+2026-01-23T17:14:40.816Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Joeys FeetGirls . Fina Administers Foot Therapy-00.03.15.610-00.10.17.967.mp4',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:14:40.817Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.638 ms
+2026-01-23T17:14:41.126Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Joeys FeetGirls . Fina Administers Foot Therapy-00.03.15.610-00.10.17.967.mp4',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:14:41.126Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.561 ms
+2026-01-23T17:14:41.134Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Joeys FeetGirls . Fina Administers Foot Therapy-00.03.15.610-00.10.17.967.mp4',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:14:41.134Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.611 ms
+2026-01-23T17:14:41.287Z info: API readFramesAroundTime called {
+  filePath: 'C:\\Users\\Alex\\Downloads\\Joeys FeetGirls . Fina Administers Foot Therapy-00.03.15.610-00.10.17.967.mp4',
+  aroundTime: 0,
+  streamIndex: 0,
+  window: 60
+}
+2026-01-23T17:14:41.345Z info: 127.0.0.1 POST /api/readFramesAroundTime HTTP/1.1 200 - 58.763 ms
+2026-01-23T17:14:41.354Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Joeys FeetGirls . Fina Administers Foot Therapy-00.03.15.610-00.10.17.967.mp4',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:14:41.355Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.605 ms
+2026-01-23T17:14:42.823Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Joeys FeetGirls . Fina Administers Foot Therapy-00.03.15.610-00.10.17.967.mp4',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:14:42.824Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.626 ms
+2026-01-23T17:14:43.841Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Joeys FeetGirls . Fina Administers Foot Therapy-00.03.15.610-00.10.17.967.mp4',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:14:43.841Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.646 ms
+2026-01-23T17:14:43.879Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Joeys FeetGirls . Fina Administers Foot Therapy-00.03.15.610-00.10.17.967.mp4',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:14:43.879Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.554 ms
+2026-01-23T17:14:43.888Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Joeys FeetGirls . Fina Administers Foot Therapy-00.03.15.610-00.10.17.967.mp4',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:14:43.888Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.593 ms
+2026-01-23T17:14:43.983Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Joeys FeetGirls . Fina Administers Foot Therapy-00.03.15.610-00.10.17.967.mp4',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:14:43.983Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.585 ms
+2026-01-23T17:14:44.389Z info: API readFramesAroundTime called {
+  filePath: 'C:\\Users\\Alex\\Downloads\\Joeys FeetGirls . Fina Administers Foot Therapy-00.03.15.610-00.10.17.967.mp4',
+  aroundTime: 91.85921979286537,
+  streamIndex: 0,
+  window: 60
+}
+2026-01-23T17:14:44.462Z info: 127.0.0.1 POST /api/readFramesAroundTime HTTP/1.1 200 - 72.753 ms
+2026-01-23T17:14:44.492Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Joeys FeetGirls . Fina Administers Foot Therapy-00.03.15.610-00.10.17.967.mp4',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:14:44.493Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.621 ms
+2026-01-23T17:14:45.573Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Joeys FeetGirls . Fina Administers Foot Therapy-00.03.15.610-00.10.17.967.mp4',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:14:45.574Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.627 ms
+2026-01-23T17:14:46.570Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Joeys FeetGirls . Fina Administers Foot Therapy-00.03.15.610-00.10.17.967.mp4',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:14:46.570Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.576 ms
+2026-01-23T17:14:46.590Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Joeys FeetGirls . Fina Administers Foot Therapy-00.03.15.610-00.10.17.967.mp4',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:14:46.590Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.597 ms
+2026-01-23T17:14:47.070Z info: API readFramesAroundTime called {
+  filePath: 'C:\\Users\\Alex\\Downloads\\Joeys FeetGirls . Fina Administers Foot Therapy-00.03.15.610-00.10.17.967.mp4',
+  aroundTime: 167.19350057537397,
+  streamIndex: 0,
+  window: 60
+}
+2026-01-23T17:14:47.145Z info: 127.0.0.1 POST /api/readFramesAroundTime HTTP/1.1 200 - 74.193 ms
+2026-01-23T17:14:47.154Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Joeys FeetGirls . Fina Administers Foot Therapy-00.03.15.610-00.10.17.967.mp4',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:14:47.155Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.566 ms
+2026-01-23T17:14:47.580Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Joeys FeetGirls . Fina Administers Foot Therapy-00.03.15.610-00.10.17.967.mp4',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:14:47.580Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.537 ms
+2026-01-23T17:14:49.059Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Joeys FeetGirls . Fina Administers Foot Therapy-00.03.15.610-00.10.17.967.mp4',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:14:49.060Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.554 ms
+2026-01-23T17:14:51.070Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Joeys FeetGirls . Fina Administers Foot Therapy-00.03.15.610-00.10.17.967.mp4',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:14:51.071Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.528 ms
+2026-01-23T17:14:51.314Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Joeys FeetGirls . Fina Administers Foot Therapy-00.03.15.610-00.10.17.967.mp4',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:14:51.315Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.574 ms
+2026-01-23T17:14:51.320Z info: API getOutFileExtension called {
+  isCustomFormatSelected: false,
+  outFormat: 'mp4',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Joeys FeetGirls . Fina Administers Foot Therapy-00.03.15.610-00.10.17.967.mp4'
+}
+2026-01-23T17:14:51.321Z info: 127.0.0.1 POST /api/getOutFileExtension HTTP/1.1 200 - 0.527 ms
+2026-01-23T17:14:51.321Z info: API getOutFileExtension called {
+  isCustomFormatSelected: false,
+  outFormat: 'mp4',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Joeys FeetGirls . Fina Administers Foot Therapy-00.03.15.610-00.10.17.967.mp4'
+}
+2026-01-23T17:14:51.321Z info: 127.0.0.1 POST /api/getOutFileExtension HTTP/1.1 200 - 0.364 ms
+2026-01-23T17:14:57.525Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Joeys FeetGirls . Fina Administers Foot Therapy-00.03.15.610-00.10.17.967.mp4',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:14:57.525Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.653 ms
+2026-01-23T17:14:57.528Z info: API getOutFileExtension called {
+  isCustomFormatSelected: false,
+  outFormat: 'mp4',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Joeys FeetGirls . Fina Administers Foot Therapy-00.03.15.610-00.10.17.967.mp4'
+}
+2026-01-23T17:14:57.529Z info: 127.0.0.1 POST /api/getOutFileExtension HTTP/1.1 200 - 0.368 ms
+2026-01-23T17:14:57.563Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Joeys FeetGirls . Fina Administers Foot Therapy-00.03.15.610-00.10.17.967.mp4',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:14:57.563Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.536 ms
+2026-01-23T17:19:29.039Z info: LosslessCut version 3.67.2 { isDev: true }
+2026-01-23T17:19:29.072Z info: Initialized config store
+2026-01-23T17:19:29.075Z info: Waiting for app to become ready
+2026-01-23T17:19:29.078Z info: CLI arguments { _: [] }
+2026-01-23T17:19:29.086Z info: HTTP API listening on http://127.0.0.1:8080/
+2026-01-23T17:19:29.086Z info: HTTP API listening on port 8080
+2026-01-23T17:19:29.154Z info: Added Extension React Developer Tools
+2026-01-23T17:19:29.253Z info: Current version 3.67.2
+2026-01-23T17:19:29.254Z info: Newest version 3.67.2
+2026-01-23T17:19:30.438Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: undefined,
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:19:30.440Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 5.911 ms
+2026-01-23T17:19:30.441Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: undefined,
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:19:30.441Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.599 ms
+2026-01-23T17:19:30.443Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: undefined,
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:19:30.443Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.558 ms
+2026-01-23T17:19:30.444Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: undefined,
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:19:30.444Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.401 ms
+2026-01-23T17:19:30.445Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: undefined,
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T17:19:30.445Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.375 ms

@@ -9,7 +9,7 @@ export interface IUtils {
     isFile(path: string): Promise<boolean>;
     isDirectory(path: string): Promise<boolean>;
     pathsNames(paths: string[]): string[];
-    pathJoin(...paths: string[]): string;
+    pathJoin(...paths: string[]): Promise<string>;
     basename(path: string): string;
     dirname(path: string): string;
     pathExists(path: string): Promise<boolean>;
@@ -34,8 +34,8 @@ export interface IUtils {
 }): Promise<void>;
 readFileSize(path: string): Promise<number>;
 getOutFileExtension({ isCustomFormatSelected, outFormat, filePath }: {
-  isCustomFormatSelected?: boolean, outFormat: string, filePath: string,
-}): string;
+  isCustomFormatSelected?: boolean | undefined, outFormat: string, filePath: string,
+}): Promise<string>;
 getSuffixedOutPath<T extends string | undefined>(a: { customOutDir?: string | undefined, filePath?: T | undefined, nameSuffix: string }): Promise<T extends string ? string : undefined>;
 getSuffixedOutPath({ customOutDir, filePath, nameSuffix }: { customOutDir?: string | undefined, filePath?: string | undefined, nameSuffix: string }): Promise<string | undefined>;
 getHtml5ifiedPath(cod: string | undefined, fp: string, type: Html5ifyMode): Promise<string>;

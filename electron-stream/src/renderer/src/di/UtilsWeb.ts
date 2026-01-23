@@ -25,8 +25,16 @@ export class UtilsWeb implements IUtils {
     pathsNames(paths: string[]): string[] {
         throw new Error("Method not implemented.");
     }
-    pathJoin(...paths: string[]): string {
-        throw new Error("Method not implemented.");
+    async pathJoin(...paths: string[]): Promise<string> {
+        const res = await fetch(`${this.apiUrl}/pathJoin`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ paths }),
+        });
+        const data = await res.json();
+        return data.joinedPath;
     }
     basename(path: string): string {
         throw new Error("Method not implemented.");
@@ -81,8 +89,16 @@ export class UtilsWeb implements IUtils {
     readFileSize(path: string): Promise<number> {
         throw new Error("Method not implemented.");
     }
-    getOutFileExtension({ isCustomFormatSelected, outFormat, filePath }: { isCustomFormatSelected?: boolean; outFormat: string; filePath: string; }): string {
-        throw new Error("Method not implemented.");
+    async getOutFileExtension({ isCustomFormatSelected, outFormat, filePath }: { isCustomFormatSelected?: boolean; outFormat: string; filePath: string; }): string {
+        const res = await fetch(`${this.apiUrl}/getOutFileExtension`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ isCustomFormatSelected, outFormat, filePath }),
+        });
+        const data = await res.json();
+        return data.extension;
     }
     async getSuffixedOutPath<T extends string | undefined>(a: { customOutDir?: string | undefined; filePath?: T | undefined; nameSuffix: string; }): Promise<T extends string ? string : undefined>;
     async getSuffixedOutPath({ customOutDir, filePath, nameSuffix }: { customOutDir?: string | undefined; filePath?: string | undefined; nameSuffix: string; }): Promise<string | undefined>
