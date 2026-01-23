@@ -209,6 +209,33 @@ export default ({ port, onKeyboardAction }: {
     res.json({ baseName });
   }));
 
+  apiRouter.post('/runFfmpeg', express.json(), async (req, res) => {
+    const { ffmpegArgs, duration } = req.body as { ffmpegArgs: string[]; duration?: number; };
+    logger.info('API runFfmpeg called', { ffmpegArgs, duration });
+
+    try {
+      const ffmpeg = container.resolve<IFfmpeg>(TOKENS.Ffmpeg);
+      res.setHeader('Content-Type', 'text/plain');
+      
+      await ffmpeg.runFfmpegWithProgress({
+        ffmpegArgs,
+        duration,
+        onProgress: (progress) => {
+          res.write(JSON.stringify({ progress }) + '\n');
+        }
+      });
+      res.end();
+    } catch (err: any) {
+      logger.error('Error running ffmpeg', err);
+      if (!res.headersSent) {
+        res.status(500).json({ error: err.message });
+      } else {
+        res.write(JSON.stringify({ error: err.message }) + '\n');
+        res.end();
+      }
+    }
+  });
+
   const server = http.createServer(app);
 
   server.on('error', (err) => logger.error('http server error', err));

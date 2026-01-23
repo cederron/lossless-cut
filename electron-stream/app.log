@@ -15219,3 +15219,530 @@
   cacheBuster: 0
 }
 2026-01-23T18:40:48.977Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 0.450 ms
+2026-01-23T18:46:20.197Z info: LosslessCut version 3.67.2 { isDev: true }
+2026-01-23T18:46:20.225Z info: Initialized config store
+2026-01-23T18:46:20.228Z info: Waiting for app to become ready
+2026-01-23T18:46:20.231Z info: CLI arguments { _: [] }
+2026-01-23T18:46:20.239Z info: HTTP API listening on http://127.0.0.1:8080/
+2026-01-23T18:46:20.239Z info: HTTP API listening on port 8080
+2026-01-23T18:46:20.313Z info: Added Extension React Developer Tools
+2026-01-23T18:46:20.623Z info: Current version 3.67.2
+2026-01-23T18:46:20.623Z info: Newest version 3.67.2
+2026-01-23T18:46:23.068Z info: API getOutDir called { customOutDir: 'C:\\Users\\Alex\\Downloads', filePath: undefined }
+2026-01-23T18:46:23.070Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 5.598 ms
+2026-01-23T18:46:23.071Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: undefined,
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T18:46:23.071Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.739 ms
+2026-01-23T18:46:23.072Z info: API getOutDir called { customOutDir: 'C:\\Users\\Alex\\Downloads', filePath: undefined }
+2026-01-23T18:46:23.072Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 0.433 ms
+2026-01-23T18:46:23.072Z info: API getFileUri called { path: undefined, cacheBuster: 0 }
+2026-01-23T18:46:23.073Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 0.444 ms
+2026-01-23T18:46:23.073Z info: API getFileUri called { path: undefined, cacheBuster: 0 }
+2026-01-23T18:46:23.074Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 0.385 ms
+2026-01-23T18:46:23.074Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: undefined,
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T18:46:23.074Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.366 ms
+2026-01-23T18:46:23.075Z info: API getFileUri called { path: undefined, cacheBuster: 0 }
+2026-01-23T18:46:23.075Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 0.362 ms
+2026-01-23T18:46:23.076Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: undefined,
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T18:46:23.076Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.363 ms
+2026-01-23T18:46:23.076Z info: API getFileUri called { path: undefined, cacheBuster: 0 }
+2026-01-23T18:46:23.077Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 0.348 ms
+2026-01-23T18:46:23.077Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: undefined,
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T18:46:23.077Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.524 ms
+2026-01-23T18:46:23.078Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: undefined,
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T18:46:23.078Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.322 ms
+2026-01-23T18:46:23.078Z info: API getFileUri called { path: undefined, cacheBuster: 0 }
+2026-01-23T18:46:23.078Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 0.296 ms
+2026-01-23T18:46:23.087Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: undefined,
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T18:46:23.088Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.650 ms
+2026-01-23T18:46:23.088Z info: API getFileUri called { path: undefined, cacheBuster: 0 }
+2026-01-23T18:46:23.089Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 0.417 ms
+2026-01-23T18:46:26.994Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: undefined,
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T18:46:26.995Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.774 ms
+2026-01-23T18:46:26.995Z info: API getFileUri called { path: undefined, cacheBuster: 0 }
+2026-01-23T18:46:26.995Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 0.410 ms
+2026-01-23T18:46:27.067Z info: API isDirectory called {
+  path: 'C:\\Users\\Alex\\Downloads\\Joeys FeetGirls . Fina Administers Foot Therapy-00.03.15.610-00.10.17.967.mp4'
+}
+2026-01-23T18:46:27.068Z info: 127.0.0.1 POST /api/isDirectory HTTP/1.1 200 - 0.979 ms
+2026-01-23T18:46:27.069Z info: API isFile called {
+  path: 'C:\\Users\\Alex\\Downloads\\Joeys FeetGirls . Fina Administers Foot Therapy-00.03.15.610-00.10.17.967.mp4'
+}
+2026-01-23T18:46:27.069Z info: 127.0.0.1 POST /api/isFile HTTP/1.1 200 - 0.661 ms
+2026-01-23T18:46:27.070Z info: API basename called {
+  path: 'C:\\Users\\Alex\\Downloads\\Joeys FeetGirls . Fina Administers Foot Therapy-00.03.15.610-00.10.17.967.mp4'
+}
+2026-01-23T18:46:27.071Z info: 127.0.0.1 POST /api/basename HTTP/1.1 200 - 0.495 ms
+2026-01-23T18:46:27.087Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: undefined,
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T18:46:27.088Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.648 ms
+2026-01-23T18:46:27.088Z info: API getFileUri called { path: undefined, cacheBuster: 0 }
+2026-01-23T18:46:27.088Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 0.346 ms
+2026-01-23T18:46:27.146Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Joeys FeetGirls . Fina Administers Foot Therapy-00.03.15.610-00.10.17.967.mp4',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T18:46:27.147Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.809 ms
+2026-01-23T18:46:27.152Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: undefined,
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T18:46:27.153Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.649 ms
+2026-01-23T18:46:27.153Z info: API getFileUri called { path: undefined, cacheBuster: 0 }
+2026-01-23T18:46:27.154Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 0.361 ms
+2026-01-23T18:46:27.178Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Joeys FeetGirls . Fina Administers Foot Therapy-00.03.15.610-00.10.17.967.mp4',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T18:46:27.179Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.759 ms
+2026-01-23T18:46:27.180Z info: API getFileUri called {
+  path: 'C:\\Users\\Alex\\Downloads\\Joeys FeetGirls . Fina Administers Foot Therapy-00.03.15.610-00.10.17.967.mp4',
+  cacheBuster: 0
+}
+2026-01-23T18:46:27.180Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 0.402 ms
+2026-01-23T18:46:27.180Z info: API getOutDir called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Joeys FeetGirls . Fina Administers Foot Therapy-00.03.15.610-00.10.17.967.mp4'
+}
+2026-01-23T18:46:27.181Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 0.440 ms
+2026-01-23T18:46:27.199Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Joeys FeetGirls . Fina Administers Foot Therapy-00.03.15.610-00.10.17.967.mp4',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T18:46:27.200Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.826 ms
+2026-01-23T18:46:27.201Z info: API getFileUri called {
+  path: 'C:\\Users\\Alex\\Downloads\\Joeys FeetGirls . Fina Administers Foot Therapy-00.03.15.610-00.10.17.967.mp4',
+  cacheBuster: 0
+}
+2026-01-23T18:46:27.201Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 0.807 ms
+2026-01-23T18:46:27.218Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Joeys FeetGirls . Fina Administers Foot Therapy-00.03.15.610-00.10.17.967.mp4',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T18:46:27.218Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.677 ms
+2026-01-23T18:46:27.219Z info: API getFileUri called {
+  path: 'C:\\Users\\Alex\\Downloads\\Joeys FeetGirls . Fina Administers Foot Therapy-00.03.15.610-00.10.17.967.mp4',
+  cacheBuster: 0
+}
+2026-01-23T18:46:27.219Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 0.354 ms
+2026-01-23T18:46:27.228Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Joeys FeetGirls . Fina Administers Foot Therapy-00.03.15.610-00.10.17.967.mp4',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T18:46:27.229Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.807 ms
+2026-01-23T18:46:27.229Z info: API getFileUri called {
+  path: 'C:\\Users\\Alex\\Downloads\\Joeys FeetGirls . Fina Administers Foot Therapy-00.03.15.610-00.10.17.967.mp4',
+  cacheBuster: 0
+}
+2026-01-23T18:46:27.230Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 0.577 ms
+2026-01-23T18:46:27.253Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Joeys FeetGirls . Fina Administers Foot Therapy-00.03.15.610-00.10.17.967.mp4',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T18:46:27.254Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.514 ms
+2026-01-23T18:46:27.254Z info: API getFileUri called {
+  path: 'C:\\Users\\Alex\\Downloads\\Joeys FeetGirls . Fina Administers Foot Therapy-00.03.15.610-00.10.17.967.mp4',
+  cacheBuster: 0
+}
+2026-01-23T18:46:27.255Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 0.705 ms
+2026-01-23T18:46:27.569Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Joeys FeetGirls . Fina Administers Foot Therapy-00.03.15.610-00.10.17.967.mp4',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T18:46:27.570Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.719 ms
+2026-01-23T18:46:27.571Z info: API getFileUri called {
+  path: 'C:\\Users\\Alex\\Downloads\\Joeys FeetGirls . Fina Administers Foot Therapy-00.03.15.610-00.10.17.967.mp4',
+  cacheBuster: 0
+}
+2026-01-23T18:46:27.571Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 0.524 ms
+2026-01-23T18:46:27.581Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Joeys FeetGirls . Fina Administers Foot Therapy-00.03.15.610-00.10.17.967.mp4',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T18:46:27.582Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.657 ms
+2026-01-23T18:46:27.584Z info: API getFileUri called {
+  path: 'C:\\Users\\Alex\\Downloads\\Joeys FeetGirls . Fina Administers Foot Therapy-00.03.15.610-00.10.17.967.mp4',
+  cacheBuster: 0
+}
+2026-01-23T18:46:27.584Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 0.514 ms
+2026-01-23T18:46:27.683Z info: API readFramesAroundTime called {
+  filePath: 'C:\\Users\\Alex\\Downloads\\Joeys FeetGirls . Fina Administers Foot Therapy-00.03.15.610-00.10.17.967.mp4',
+  aroundTime: 0,
+  streamIndex: 0,
+  window: 60
+}
+2026-01-23T18:46:27.744Z info: 127.0.0.1 POST /api/readFramesAroundTime HTTP/1.1 200 - 61.210 ms
+2026-01-23T18:46:27.754Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Joeys FeetGirls . Fina Administers Foot Therapy-00.03.15.610-00.10.17.967.mp4',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T18:46:27.754Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.623 ms
+2026-01-23T18:46:27.755Z info: API getFileUri called {
+  path: 'C:\\Users\\Alex\\Downloads\\Joeys FeetGirls . Fina Administers Foot Therapy-00.03.15.610-00.10.17.967.mp4',
+  cacheBuster: 0
+}
+2026-01-23T18:46:27.755Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 0.436 ms
+2026-01-23T18:46:29.228Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Joeys FeetGirls . Fina Administers Foot Therapy-00.03.15.610-00.10.17.967.mp4',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T18:46:29.228Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.587 ms
+2026-01-23T18:46:29.229Z info: API getFileUri called {
+  path: 'C:\\Users\\Alex\\Downloads\\Joeys FeetGirls . Fina Administers Foot Therapy-00.03.15.610-00.10.17.967.mp4',
+  cacheBuster: 0
+}
+2026-01-23T18:46:29.229Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 0.337 ms
+2026-01-23T18:46:30.854Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Joeys FeetGirls . Fina Administers Foot Therapy-00.03.15.610-00.10.17.967.mp4',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T18:46:30.854Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.656 ms
+2026-01-23T18:46:30.855Z info: API getFileUri called {
+  path: 'C:\\Users\\Alex\\Downloads\\Joeys FeetGirls . Fina Administers Foot Therapy-00.03.15.610-00.10.17.967.mp4',
+  cacheBuster: 0
+}
+2026-01-23T18:46:30.855Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 0.347 ms
+2026-01-23T18:46:30.863Z info: API getOutFileExtension called {
+  isCustomFormatSelected: false,
+  outFormat: 'mp4',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Joeys FeetGirls . Fina Administers Foot Therapy-00.03.15.610-00.10.17.967.mp4'
+}
+2026-01-23T18:46:30.863Z info: 127.0.0.1 POST /api/getOutFileExtension HTTP/1.1 200 - 0.623 ms
+2026-01-23T18:46:30.864Z info: API getOutFileExtension called {
+  isCustomFormatSelected: false,
+  outFormat: 'mp4',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Joeys FeetGirls . Fina Administers Foot Therapy-00.03.15.610-00.10.17.967.mp4'
+}
+2026-01-23T18:46:30.864Z info: 127.0.0.1 POST /api/getOutFileExtension HTTP/1.1 200 - 0.338 ms
+2026-01-23T18:46:30.871Z info: API pathJoin called {
+  paths: [
+    'C:\\Users\\Alex\\Downloads',
+    'Joeys FeetGirls . Fina Administers Foot Therapy-00.03.15.610-00.10.17.967-00.01.31.859-00.02.47.194.mp4'
+  ]
+}
+2026-01-23T18:46:30.872Z info: 127.0.0.1 POST /api/pathJoin HTTP/1.1 200 - 0.729 ms
+2026-01-23T18:46:30.872Z info: API pathJoin called {
+  paths: [
+    'C:\\Users\\Alex\\Downloads',
+    'Joeys FeetGirls . Fina Administers Foot Therapy-00.03.15.610-00.10.17.967-00.01.31.859-00.02.47.194.mp4'
+  ]
+}
+2026-01-23T18:46:30.873Z info: 127.0.0.1 POST /api/pathJoin HTTP/1.1 200 - 0.374 ms
+2026-01-23T18:46:32.631Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Joeys FeetGirls . Fina Administers Foot Therapy-00.03.15.610-00.10.17.967.mp4',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T18:46:32.631Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.617 ms
+2026-01-23T18:46:32.632Z info: API getFileUri called {
+  path: 'C:\\Users\\Alex\\Downloads\\Joeys FeetGirls . Fina Administers Foot Therapy-00.03.15.610-00.10.17.967.mp4',
+  cacheBuster: 0
+}
+2026-01-23T18:46:32.632Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 0.340 ms
+2026-01-23T18:46:32.634Z info: API getOutFileExtension called {
+  isCustomFormatSelected: false,
+  outFormat: 'mp4',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Joeys FeetGirls . Fina Administers Foot Therapy-00.03.15.610-00.10.17.967.mp4'
+}
+2026-01-23T18:46:32.634Z info: 127.0.0.1 POST /api/getOutFileExtension HTTP/1.1 200 - 0.349 ms
+2026-01-23T18:46:32.640Z info: API pathJoin called {
+  paths: [
+    'C:\\Users\\Alex\\Downloads',
+    'Joeys FeetGirls . Fina Administers Foot Therapy-00.03.15.610-00.10.17.967-00.01.31.859-00.02.47.194.mp4'
+  ]
+}
+2026-01-23T18:46:32.640Z info: 127.0.0.1 POST /api/pathJoin HTTP/1.1 200 - 0.745 ms
+2026-01-23T18:46:32.642Z info: API pathJoin called {
+  paths: [
+    'C:\\Users\\Alex\\Downloads',
+    'Joeys FeetGirls . Fina Administers Foot Therapy-00.03.15.610-00.10.17.967-00.01.31.859-00.02.47.194.mp4'
+  ]
+}
+2026-01-23T18:46:32.642Z info: 127.0.0.1 POST /api/pathJoin HTTP/1.1 200 - 0.413 ms
+2026-01-23T18:46:32.644Z info: API dirname called {
+  path: 'C:\\Users\\Alex\\Downloads\\Joeys FeetGirls . Fina Administers Foot Therapy-00.03.15.610-00.10.17.967-00.01.31.859-00.02.47.194.mp4'
+}
+2026-01-23T18:46:32.645Z info: 127.0.0.1 POST /api/dirname HTTP/1.1 200 - 0.597 ms
+2026-01-23T18:46:32.650Z info: API runFfmpeg called {
+  ffmpegArgs: [
+    '-hide_banner',
+    '-ss',
+    '91.85922',
+    '-i',
+    'C:\\Users\\Alex\\Downloads\\Joeys FeetGirls . Fina Administers Foot Therapy-00.03.15.610-00.10.17.967.mp4',
+    '-t',
+    '75.33428',
+    '-avoid_negative_ts',
+    'make_zero',
+    '-map',
+    '0:0',
+    '-c:0',
+    'copy',
+    '-map',
+    '0:1',
+    '-c:1',
+    'copy',
+    '-map_metadata',
+    '0',
+    '-movflags',
+    '+faststart',
+    '-default_mode',
+    'infer_no_subs',
+    '-ignore_unknown',
+    '-f',
+    'mp4',
+    '-y',
+    'C:\\Users\\Alex\\Downloads\\Joeys FeetGirls . Fina Administers Foot Therapy-00.03.15.610-00.10.17.967-00.01.31.859-00.02.47.194.mp4'
+  ],
+  duration: 75.3342807825086
+}
+2026-01-23T18:46:32.669Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Joeys FeetGirls . Fina Administers Foot Therapy-00.03.15.610-00.10.17.967.mp4',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T18:46:32.669Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.627 ms
+2026-01-23T18:46:32.670Z info: API getFileUri called {
+  path: 'C:\\Users\\Alex\\Downloads\\Joeys FeetGirls . Fina Administers Foot Therapy-00.03.15.610-00.10.17.967.mp4',
+  cacheBuster: 0
+}
+2026-01-23T18:46:32.670Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 0.385 ms
+2026-01-23T18:46:32.681Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Joeys FeetGirls . Fina Administers Foot Therapy-00.03.15.610-00.10.17.967.mp4',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T18:46:32.681Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.694 ms
+2026-01-23T18:46:32.682Z info: API getFileUri called {
+  path: 'C:\\Users\\Alex\\Downloads\\Joeys FeetGirls . Fina Administers Foot Therapy-00.03.15.610-00.10.17.967.mp4',
+  cacheBuster: 0
+}
+2026-01-23T18:46:32.682Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 0.535 ms
+2026-01-23T18:46:32.780Z info: 127.0.0.1 POST /api/runFfmpeg HTTP/1.1 200 - 5.387 ms
+2026-01-23T18:46:32.784Z info: API transferTimestamps called {
+  inPath: 'C:\\Users\\Alex\\Downloads\\Joeys FeetGirls . Fina Administers Foot Therapy-00.03.15.610-00.10.17.967.mp4',
+  outPath: 'C:\\Users\\Alex\\Downloads\\Joeys FeetGirls . Fina Administers Foot Therapy-00.03.15.610-00.10.17.967-00.01.31.859-00.02.47.194.mp4',
+  cutFrom: 91.85921979286537,
+  cutTo: 167.19350057537397,
+  duration: 422.358,
+  treatInputFileModifiedTimeAsStart: true,
+  treatOutputFileModifiedTimeAsStart: true
+}
+2026-01-23T18:46:32.785Z info: 127.0.0.1 POST /api/transferTimestamps HTTP/1.1 200 - 1.450 ms
+2026-01-23T18:46:32.786Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Joeys FeetGirls . Fina Administers Foot Therapy-00.03.15.610-00.10.17.967.mp4',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T18:46:32.786Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.478 ms
+2026-01-23T18:46:32.787Z info: API getFileUri called {
+  path: 'C:\\Users\\Alex\\Downloads\\Joeys FeetGirls . Fina Administers Foot Therapy-00.03.15.610-00.10.17.967.mp4',
+  cacheBuster: 0
+}
+2026-01-23T18:46:32.787Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 0.336 ms
+2026-01-23T18:46:32.804Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Joeys FeetGirls . Fina Administers Foot Therapy-00.03.15.610-00.10.17.967.mp4',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T18:46:32.804Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.655 ms
+2026-01-23T18:46:32.805Z info: API getFileUri called {
+  path: 'C:\\Users\\Alex\\Downloads\\Joeys FeetGirls . Fina Administers Foot Therapy-00.03.15.610-00.10.17.967.mp4',
+  cacheBuster: 0
+}
+2026-01-23T18:46:32.805Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 0.453 ms
+2026-01-23T18:46:36.619Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Joeys FeetGirls . Fina Administers Foot Therapy-00.03.15.610-00.10.17.967.mp4',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T18:46:36.619Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.746 ms
+2026-01-23T18:46:36.620Z info: API getFileUri called {
+  path: 'C:\\Users\\Alex\\Downloads\\Joeys FeetGirls . Fina Administers Foot Therapy-00.03.15.610-00.10.17.967.mp4',
+  cacheBuster: 0
+}
+2026-01-23T18:46:36.620Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 0.395 ms
+2026-01-23T18:46:44.951Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Joeys FeetGirls . Fina Administers Foot Therapy-00.03.15.610-00.10.17.967.mp4',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T18:46:44.951Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.631 ms
+2026-01-23T18:46:44.951Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Joeys FeetGirls . Fina Administers Foot Therapy-00.03.15.610-00.10.17.967.mp4',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T18:46:44.952Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.389 ms
+2026-01-23T18:46:44.952Z info: API getFileUri called {
+  path: 'C:\\Users\\Alex\\Downloads\\Joeys FeetGirls . Fina Administers Foot Therapy-00.03.15.610-00.10.17.967.mp4',
+  cacheBuster: 0
+}
+2026-01-23T18:46:44.952Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 0.340 ms
+2026-01-23T18:46:44.953Z info: API getFileUri called {
+  path: 'C:\\Users\\Alex\\Downloads\\Joeys FeetGirls . Fina Administers Foot Therapy-00.03.15.610-00.10.17.967.mp4',
+  cacheBuster: 0
+}
+2026-01-23T18:46:44.953Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 0.322 ms
+2026-01-23T18:46:44.953Z info: API getFileUri called {
+  path: 'C:\\Users\\Alex\\Downloads\\Joeys FeetGirls . Fina Administers Foot Therapy-00.03.15.610-00.10.17.967.mp4',
+  cacheBuster: 0
+}
+2026-01-23T18:46:44.954Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 0.305 ms
+2026-01-23T18:46:44.954Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Joeys FeetGirls . Fina Administers Foot Therapy-00.03.15.610-00.10.17.967.mp4',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T18:46:44.954Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.296 ms
+2026-01-23T18:46:45.153Z info: API readFramesAroundTime called {
+  filePath: 'C:\\Users\\Alex\\Downloads\\Joeys FeetGirls . Fina Administers Foot Therapy-00.03.15.610-00.10.17.967.mp4',
+  aroundTime: 97.44959283387622,
+  streamIndex: 0,
+  window: 60
+}
+2026-01-23T18:46:45.229Z info: 127.0.0.1 POST /api/readFramesAroundTime HTTP/1.1 200 - 75.993 ms
+2026-01-23T18:46:45.240Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Joeys FeetGirls . Fina Administers Foot Therapy-00.03.15.610-00.10.17.967.mp4',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T18:46:45.240Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.602 ms
+2026-01-23T18:46:45.241Z info: API getFileUri called {
+  path: 'C:\\Users\\Alex\\Downloads\\Joeys FeetGirls . Fina Administers Foot Therapy-00.03.15.610-00.10.17.967.mp4',
+  cacheBuster: 0
+}
+2026-01-23T18:46:45.241Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 0.481 ms
+2026-01-23T18:46:45.915Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Joeys FeetGirls . Fina Administers Foot Therapy-00.03.15.610-00.10.17.967.mp4',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T18:46:45.916Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.624 ms
+2026-01-23T18:46:45.916Z info: API getFileUri called {
+  path: 'C:\\Users\\Alex\\Downloads\\Joeys FeetGirls . Fina Administers Foot Therapy-00.03.15.610-00.10.17.967.mp4',
+  cacheBuster: 0
+}
+2026-01-23T18:46:45.916Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 0.361 ms
+2026-01-23T18:46:45.964Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Joeys FeetGirls . Fina Administers Foot Therapy-00.03.15.610-00.10.17.967.mp4',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T18:46:45.965Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.641 ms
+2026-01-23T18:46:45.965Z info: API getFileUri called {
+  path: 'C:\\Users\\Alex\\Downloads\\Joeys FeetGirls . Fina Administers Foot Therapy-00.03.15.610-00.10.17.967.mp4',
+  cacheBuster: 0
+}
+2026-01-23T18:46:45.966Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 0.409 ms
+2026-01-23T18:46:46.416Z info: API readFramesAroundTime called {
+  filePath: 'C:\\Users\\Alex\\Downloads\\Joeys FeetGirls . Fina Administers Foot Therapy-00.03.15.610-00.10.17.967.mp4',
+  aroundTime: 95.38595439739413,
+  streamIndex: 0,
+  window: 60
+}
+2026-01-23T18:46:46.493Z info: 127.0.0.1 POST /api/readFramesAroundTime HTTP/1.1 200 - 76.632 ms
+2026-01-23T18:46:46.502Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Joeys FeetGirls . Fina Administers Foot Therapy-00.03.15.610-00.10.17.967.mp4',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T18:46:46.503Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.632 ms
+2026-01-23T18:46:46.503Z info: API getFileUri called {
+  path: 'C:\\Users\\Alex\\Downloads\\Joeys FeetGirls . Fina Administers Foot Therapy-00.03.15.610-00.10.17.967.mp4',
+  cacheBuster: 0
+}
+2026-01-23T18:46:46.504Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 0.380 ms
+2026-01-23T18:46:47.119Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Joeys FeetGirls . Fina Administers Foot Therapy-00.03.15.610-00.10.17.967.mp4',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T18:46:47.120Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.664 ms
+2026-01-23T18:46:47.120Z info: API getFileUri called {
+  path: 'C:\\Users\\Alex\\Downloads\\Joeys FeetGirls . Fina Administers Foot Therapy-00.03.15.610-00.10.17.967.mp4',
+  cacheBuster: 0
+}
+2026-01-23T18:46:47.121Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 0.410 ms
+2026-01-23T18:46:47.172Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Joeys FeetGirls . Fina Administers Foot Therapy-00.03.15.610-00.10.17.967.mp4',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T18:46:47.173Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.648 ms
+2026-01-23T18:46:47.173Z info: API getFileUri called {
+  path: 'C:\\Users\\Alex\\Downloads\\Joeys FeetGirls . Fina Administers Foot Therapy-00.03.15.610-00.10.17.967.mp4',
+  cacheBuster: 0
+}
+2026-01-23T18:46:47.174Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 0.324 ms
+2026-01-23T18:46:47.630Z info: API readFramesAroundTime called {
+  filePath: 'C:\\Users\\Alex\\Downloads\\Joeys FeetGirls . Fina Administers Foot Therapy-00.03.15.610-00.10.17.967.mp4',
+  aroundTime: 164.86178175895765,
+  streamIndex: 0,
+  window: 60
+}
+2026-01-23T18:46:47.706Z info: 127.0.0.1 POST /api/readFramesAroundTime HTTP/1.1 200 - 76.436 ms
+2026-01-23T18:46:47.714Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Joeys FeetGirls . Fina Administers Foot Therapy-00.03.15.610-00.10.17.967.mp4',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T18:46:47.715Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.595 ms
+2026-01-23T18:46:47.715Z info: API getFileUri called {
+  path: 'C:\\Users\\Alex\\Downloads\\Joeys FeetGirls . Fina Administers Foot Therapy-00.03.15.610-00.10.17.967.mp4',
+  cacheBuster: 0
+}
+2026-01-23T18:46:47.716Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 0.423 ms
+2026-01-23T18:46:52.970Z info: API getSuffixedOutPath called {
+  customOutDir: 'C:\\Users\\Alex\\Downloads',
+  filePath: 'C:\\Users\\Alex\\Downloads\\Joeys FeetGirls . Fina Administers Foot Therapy-00.03.15.610-00.10.17.967.mp4',
+  nameSuffix: 'proj.llc'
+}
+2026-01-23T18:46:52.970Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.644 ms
+2026-01-23T18:46:52.971Z info: API getFileUri called {
+  path: 'C:\\Users\\Alex\\Downloads\\Joeys FeetGirls . Fina Administers Foot Therapy-00.03.15.610-00.10.17.967.mp4',
+  cacheBuster: 0
+}
+2026-01-23T18:46:52.971Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 0.381 ms

@@ -1483,7 +1483,7 @@ function App() {
 
       // only show one toast, or else we will only show the last one
       if (existingHtml5FriendlyFile && !existingHtml5FriendlyFile.usingDummyVideo) {
-        showPreviewFileLoadedMessage(utils.basename(existingHtml5FriendlyFile.path));
+        showPreviewFileLoadedMessage(await utils.basename(existingHtml5FriendlyFile.path));
       } else if (needsAutoHtml5ify) {
         showUnsupportedFileMessage();
       } else if (isAudioDefinitelyNotSupported(ffprobeMeta.streams)) {
@@ -1783,7 +1783,7 @@ function App() {
       invariant(firstNewFilePath != null);
 
       // https://en.wikibooks.org/wiki/Inside_DVD-Video/Directory_Structure
-      if (newFilePaths.length === 1 && /^video_ts$/i.test(utils.basename(firstNewFilePath))) {
+      if (newFilePaths.length === 1 && /^video_ts$/i.test(await utils.basename(firstNewFilePath))) {
         if (mustDisallowVob()) return;
         newFilePaths = await readVideoTs(firstNewFilePath);
       }
