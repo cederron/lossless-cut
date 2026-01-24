@@ -55,7 +55,7 @@ import type {
   FileFfprobeMeta } from './ffmpeg';
 import {
   getStreamFps, isCuttingStart, isCuttingEnd,
-  readFileFfprobeMeta, getDefaultOutFormat,
+  /* readFileFfprobeMeta, */ getDefaultOutFormat,
   setCustomFfPath as ffmpegSetCustomFfPath,
   isIphoneHevc, isProblematicAvc1, tryMapChaptersToEdl,
   /*getDuration,*/ getTimecodeFromStreams, /* createChaptersFromSegments, */
@@ -1404,7 +1404,7 @@ function App() {
         return;
       }
 
-      const ffprobeMeta = await readFileFfprobeMeta(fp);
+      const ffprobeMeta = await ffmpeg.readFileFfprobeMeta(fp);
       const fileStats = await readFileStats(fp);
       // console.log('file meta read', fileMeta);
 
@@ -1694,7 +1694,7 @@ function App() {
 
   const addStreamSourceFile = useCallback(async (path: string) => {
     if (allFilesMeta[path]) return undefined; // Already added?
-    const fileMeta = await readFileFfprobeMeta(path);
+    const fileMeta = await ffmpeg.readFileFfprobeMeta(path);
     // console.log('streams', fileMeta.streams);
     setExternalFilesMeta((old) => ({ ...old, [path]: fileMeta }));
     setCopyStreamIdsForPath(path, () => fromPairs(fileMeta.streams.map(({ index }) => [index, true])));

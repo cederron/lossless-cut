@@ -196,7 +196,7 @@ export class FfmpegWeb implements IFfmpeg {
             throw new Error(`Failed to read file ffprobe meta: ${res.status} ${res.statusText}`);
         }
         const data = await res.json();
-        return data;
+        return data.meta;
     }
     async readFrames({ filePath, from, to, streamIndex }: { filePath: string; from?: number | undefined; to?: number | undefined; streamIndex: number; }): Promise<Frame[]> {
         const res = await fetch(`${this.apiUrl}/readFrames`, {

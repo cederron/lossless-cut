@@ -16,7 +16,7 @@ import { getGuaranteedSegments, isDurationValid } from '../segments';
 import { UserFacingError } from '../../errors';
 import mainApi from '../mainApi';
 import { RefuseOverwriteError, TOKENS, type AllFilesMeta, type AvoidNegativeTs, type Chapter, type CopyfileStreams, type FFprobeStream, type Html5ifyMode, type IFfmpeg, type IUtils, type LiteFFprobeStream, type LossyMode, type PreserveMetadata, type SegmentToExport } from 'lossless-cut-application';
-import { /* createChaptersFromSegments, getExperimentalArgs,  getVideoTimescaleArgs, */ isCuttingEnd, isCuttingStart, readFileFfprobeMeta } from '../ffmpeg';
+import { /* createChaptersFromSegments, getExperimentalArgs,  getVideoTimescaleArgs, */ isCuttingEnd, isCuttingStart, /* readFileFfprobeMeta */ } from '../ffmpeg';
 import { container } from 'tsyringe';
 import type { CustomTagsByFile, ParamsByStreamId } from '../types';
 
@@ -654,7 +654,7 @@ function useFfmpegOperations({ filePath, treatInputFileModifiedTimeAsStart, trea
         await cutEncodeSmartPartWrapper({ cutFrom: desiredCutFrom, cutTo: encodeCutToSafe, outPath: smartCutEncodedPartOutPath });
 
         // need to re-read streams because indexes may have changed. Using main file as source of streams and metadata
-        const { streams: streamsAfterCut } = await readFileFfprobeMeta(losslessPartOutPath);
+        const { streams: streamsAfterCut } = await ffmpeg.readFileFfprobeMeta(losslessPartOutPath);
 
         await concatFiles({ paths: smartCutSegmentsToConcat, outDir: outputDir, outPath: finalOutPath, metadataFromPath: losslessPartOutPath, outFormat, includeAllStreams: true, streams: streamsAfterCut, ffmpegExperimental, preserveMovData, movFastStart, chapters, preserveMetadataOnMerge, videoTimebase, onProgress: onConcatProgress });
         return { path: finalOutPath, created: true };
@@ -694,7 +694,7 @@ function useFfmpegOperations({ filePath, treatInputFileModifiedTimeAsStart, trea
     const metadataFromPath = segmentPaths[0];
     invariant(metadataFromPath != null);
     // need to re-read streams because may have changed
-    const { streams } = await readFileFfprobeMeta(metadataFromPath);
+    const { streams } = await ffmpeg.readFileFfprobeMeta(metadataFromPath);
     await concatFiles({ paths: segmentPaths, outDir, outPath: mergedOutFilePath, metadataFromPath, outFormat, includeAllStreams: true, streams, ffmpegExperimental, onProgress, preserveMovData, movFastStart, chapters, preserveMetadataOnMerge });
   }, [concatFiles, filePath, shouldSkipExistingFile]);
 
