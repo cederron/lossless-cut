@@ -70,7 +70,7 @@ export default ({ appendFfmpegCommandLog, formatTimecode, treatInputFileModified
     const files = await readdir(outDir);
 
     const matches = files.flatMap((fileName) => {
-      const escapedRegexp = escapeRegExp(getSuffixedFileName(filePath, tmpSuffix));
+      const escapedRegexp = escapeRegExp(await getSuffixedFileName(filePath, tmpSuffix));
       const regexp = `^${escapedRegexp}(\\d+)`;
       const match = fileName.match(new RegExp(regexp));
       if (!match) return [];
@@ -83,7 +83,7 @@ export default ({ appendFfmpegCommandLog, formatTimecode, treatInputFileModified
     const outPaths = await pMap(matches, async ({ fileName, frameNum }) => {
       const duration = formatTimecode({ seconds: fromTime + (frameNum / fps), fileNameFriendly: true });
       const renameFromPath = getOutPath({ customOutDir, filePath, fileName });
-      const renameToPath = getOutPath({ customOutDir, filePath, fileName: getSuffixedFileName(filePath, getSuffix(duration)) });
+      const renameToPath = getOutPath({ customOutDir, filePath, fileName: await getSuffixedFileName(filePath, getSuffix(duration)) });
       await fsOperationWithRetry(async () => rename(renameFromPath, renameToPath));
       return renameToPath;
     }, { concurrency: 1 });

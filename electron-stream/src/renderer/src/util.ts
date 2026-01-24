@@ -57,11 +57,11 @@ export async function getOutDir(customOutDir?: string | undefined, filePath?: st
   return utils.getOutDir(customOutDir, filePath);
 }
 
-function getFileBaseName(filePath?: string) {
-      if (!filePath) return undefined;
-      const parsed = utils.parsePath(filePath);
-      return parsed.name;
-    }
+// function getFileBaseName(filePath?: string) {
+//       if (!filePath) return undefined;
+//       const parsed = utils.parsePath(filePath);
+//       return parsed.name;
+//     }
 
 export async function getOutPath<T extends string | undefined>(a: { customOutDir?: string | undefined, filePath?: T | undefined, fileName: string }): Promise<T extends string ? string : undefined>;
 export async function getOutPath({ customOutDir, filePath, fileName }: { customOutDir?: string | undefined, filePath?: string | undefined, fileName: string }) {
@@ -72,7 +72,7 @@ export async function getOutPath({ customOutDir, filePath, fileName }: { customO
 
 export const getDownloadMediaOutPath = (customOutDir: string, fileName: string) => join(customOutDir, fileName);
 
-export const getSuffixedFileName = (filePath: string | undefined, nameSuffix: string) => `${getFileBaseName(filePath)}-${nameSuffix}`;
+export const getSuffixedFileName = async (filePath: string | undefined, nameSuffix: string) => utils.getSuffixedFileName(filePath, nameSuffix);
 
 export async function getSuffixedOutPath<T extends string | undefined>(a: { customOutDir?: string | undefined, filePath?: T | undefined, nameSuffix: string }): Promise<T extends string ? string : undefined>;
 export async function getSuffixedOutPath({ customOutDir, filePath, nameSuffix }: { customOutDir?: string | undefined, filePath?: string | undefined, nameSuffix: string }) {

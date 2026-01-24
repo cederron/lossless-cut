@@ -284,7 +284,7 @@ export class Utils implements IUtils {
         return parsed.name;
     }
 
-    getSuffixedFileName = (filePath: string | undefined, nameSuffix: string) => `${this.getFileBaseName(filePath)}-${nameSuffix}`;
+    getSuffixedFileName = async(filePath: string | undefined, nameSuffix: string) => `${this.getFileBaseName(filePath)}-${nameSuffix}`;
 
 
     async getOutPath<T extends string | undefined>(a: { customOutDir?: string | undefined, filePath?: T | undefined, fileName: string }): Promise<T extends string ? string : undefined>;

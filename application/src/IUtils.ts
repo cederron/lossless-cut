@@ -41,7 +41,7 @@ getSuffixedOutPath<T extends string | undefined>(a: { customOutDir?: string | un
 getSuffixedOutPath({ customOutDir, filePath, nameSuffix }: { customOutDir?: string | undefined, filePath?: string | undefined, nameSuffix: string }): Promise<string | undefined>;
 // TODO remove implementation
 // getHtml5ifiedPath(cod: string | undefined, fp: string, type: Html5ifyMode): Promise<string>;
-getSuffixedFileName(filePath: string | undefined, nameSuffix: string): string
+getSuffixedFileName(filePath: string | undefined, nameSuffix: string): Promise<string>
 getOutPath({ customOutDir, filePath, fileName }: { customOutDir?: string | undefined, filePath?: string | undefined, fileName: string }): Promise<string>;
 renameWithRetry(renameFromPath: string, renameToPath: string): Promise<void>;
 getMimeExtension(mimeType: string): string | false;
