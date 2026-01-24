@@ -27,7 +27,7 @@ export default ({ port, onKeyboardAction }: {
 
   app.get('/', (_req, res) => res.send(`See ${homepageUrl}`));
 
-  app.get('/stream', (req, res) => {
+  app.get('/stream', asyncHandler(async (req, res) => {
     
     const { path, videoStreamIndex, audioStreamIndexes, seekTo, size, fps, rotate } = req.query;
 
@@ -37,7 +37,7 @@ export default ({ port, onKeyboardAction }: {
     logger.info('Received /stream request', { path, videoStreamIndex, audioStreamIndexes, seekTo, size, fps, rotate });
     
     const ffmpeg = container.resolve<IFfmpeg>(TOKENS.Ffmpeg);
-    const process = ffmpeg.getStreamProcess({
+    const process = await ffmpeg.getStreamProcess({
       path: path as string, 
       videoStreamIndex: videoStreamIndex != null ? Number(videoStreamIndex) : undefined,
       audioStreamIndexes: audioStreamIndexes != null ? (Array.isArray(audioStreamIndexes) ? audioStreamIndexes.map((v) => Number(v)) : [Number(audioStreamIndexes)]) : [],
@@ -64,7 +64,7 @@ export default ({ port, onKeyboardAction }: {
       stdout.unpipe(res);
       process.kill('SIGKILL');
     });
-  });
+  }));
 
   app.use('/api', apiRouter);
 

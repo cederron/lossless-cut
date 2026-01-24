@@ -15000,3 +15000,21 @@
 2026-01-24T18:13:29.038Z info: Added Extension React Developer Tools
 2026-01-24T18:13:29.275Z info: Current version 3.67.2
 2026-01-24T18:13:29.275Z info: Newest version 3.67.2
+2026-01-24T19:09:16.608Z info: LosslessCut version 3.67.2 { isDev: true }
+2026-01-24T19:09:16.636Z info: Initialized config store
+2026-01-24T19:09:16.638Z info: Waiting for app to become ready
+2026-01-24T19:09:16.641Z info: CLI arguments { _: [] }
+2026-01-24T19:09:16.649Z info: HTTP API listening on http://127.0.0.1:8080/
+2026-01-24T19:09:16.649Z info: HTTP API listening on port 8080
+2026-01-24T19:09:16.717Z info: Added Extension React Developer Tools
+2026-01-24T19:09:16.814Z info: Current version 3.67.2
+2026-01-24T19:09:16.814Z info: Newest version 3.67.2
+2026-01-24T19:12:17.132Z info: LosslessCut version 3.67.2 { isDev: true }
+2026-01-24T19:12:17.169Z info: Initialized config store
+2026-01-24T19:12:17.172Z info: Waiting for app to become ready
+2026-01-24T19:12:17.175Z info: CLI arguments { _: [] }
+2026-01-24T19:12:17.183Z info: HTTP API listening on http://127.0.0.1:8080/
+2026-01-24T19:12:17.183Z info: HTTP API listening on port 8080
+2026-01-24T19:12:17.253Z info: Added Extension React Developer Tools
+2026-01-24T19:12:17.541Z info: Current version 3.67.2
+2026-01-24T19:12:17.541Z info: Newest version 3.67.2

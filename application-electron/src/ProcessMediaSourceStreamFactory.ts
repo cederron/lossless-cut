@@ -12,12 +12,12 @@ export class ProcessMediaSourceStreamFactory implements IMediaSourceStreamFactor
         this.ffmpeg = ffmpeg;
     }
 
-    createMediaSourceStream = (params: IMediaSourceInitParams): IMediaStream => {
+    createMediaSourceStream = async (params: IMediaSourceInitParams): Promise<IMediaStream> => {
         const abortController = new AbortController();
         const { videoStreamIndex, audioStreamIndexes, seekTo } = params;
         this.logger.info('Starting preview process', { videoStreamIndex, audioStreamIndexes, seekTo });
         // const process = this.createMediaSourceProcess(params);
-        const process = this.ffmpeg.getStreamProcess(params);
+        const process = await this.ffmpeg.getStreamProcess(params);
 
         // eslint-disable-next-line unicorn/prefer-add-event-listener
         abortController.signal.onabort = () => {

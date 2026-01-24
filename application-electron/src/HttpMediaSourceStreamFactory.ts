@@ -10,7 +10,7 @@ export class HttpMediaSourceStreamFactory implements IMediaSourceStreamFactory {
         this.logger = logger;
     }
     
-    createMediaSourceStream = (params: IMediaSourceInitParams): IMediaStream => {
+    createMediaSourceStream = async (params: IMediaSourceInitParams): Promise<IMediaStream> => {
         let reader: ReadableStreamDefaultReader<Uint8Array> | null = null;
         let aborted = false;
         const abortController = new AbortController();

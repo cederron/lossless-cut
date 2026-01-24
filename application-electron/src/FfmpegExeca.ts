@@ -582,14 +582,15 @@ export class FfmpegExeca implements IFfmpeg {
 
     getFfprobePath = () => this.getFfPath('ffprobe');
 
-    async runFfprobe(args: readonly string[], { timeout = await this.platform.isDev() ? 10000 : 30000, logCli = true } = {}) {
-        const ffprobePath = this.getFfprobePath();
+    async runFfprobe(args: readonly string[], { timeout, logCli = true }: { timeout?: number, logCli?: boolean } = {}) {
+        const processTimeout = timeout ?? (await this.platform.isDev() ? 10000 : 30000);
+        const ffprobePath = await this.getFfprobePath();
         if (logCli) this.logger.info(this.getFfCommandLine('ffprobe', args));
-        const ps = execa(ffprobePath, args, this.getExecaOptions());
+        const ps = execa(ffprobePath, args, await this.getExecaOptions());
         const timer = setTimeout(() => {
             this.logger.warn('killing timed out ffprobe');
             ps.kill();
-        }, timeout);
+        }, processTimeout);
         try {
             return await ps;
         } finally {
@@ -818,10 +819,11 @@ export class FfmpegExeca implements IFfmpeg {
         }
     }
 
-    async runFfprobeText(args: readonly string[], { timeout = this.platform.isDev() ? 10000 : 30000, logCli = true } = {}) {
-        const ffprobePath = this.getFfprobePath();
-        if (logCli) this.logger.info(this.getFfCommandLine('ffprobe', args));
-        const ps = execa(ffprobePath, args, this.getExecaOptions());
+    async runFfprobeText(args: readonly string[], { timeout, logCli = true }: { timeout?: number; logCli?: boolean } = {}) {
+        if (timeout === undefined) timeout = await this.platform.isDev() ? 10000 : 30000;
+        const ffprobePath = await this.getFfprobePath();
+        if (logCli) this.logger.info(await this.getFfCommandLine('ffprobe', args));
+        const ps = execa(ffprobePath, args, await this.getExecaOptions());
         const timer = setTimeout(() => {
             this.logger.warn('killing timed out ffprobe');
             ps.kill();
