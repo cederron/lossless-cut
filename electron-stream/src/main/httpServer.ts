@@ -169,6 +169,14 @@ export default ({ port, onKeyboardAction }: {
     res.json({ outDir });
   }));
 
+  apiRouter.post('/unlinkWithRetry', express.json(), asyncHandler(async (req, res) => {
+    const { path } = req.body as { path: string; };
+    logger.info('API unlinkWithRetry called', { path });
+    const utils = container.resolve<IUtils>(TOKENS.Utils);
+    await utils.unlinkWithRetry(path);
+    res.end();
+  }));
+
   apiRouter.post('/getOutPath', express.json(), asyncHandler(async (req, res) => {
     const { customOutDir, filePath, fileName } = req.body as { customOutDir?: string; filePath?: string; fileName: string; };
     logger.info('API getOutPath called', { customOutDir, filePath, fileName });
@@ -301,6 +309,71 @@ export default ({ port, onKeyboardAction }: {
       }
     }
   });
+
+  apiRouter.post('/readKeyframesAroundTime', express.json(), asyncHandler(async (req, res) => {
+    const { filePath, aroundTime, streamIndex, window } = req.body as { filePath: string; aroundTime: number; streamIndex: number; window: number; };
+    logger.info('API readKeyframesAroundTime called', { filePath, aroundTime, streamIndex, window });
+    assert(filePath != null);
+    assert(aroundTime != null);
+    assert(streamIndex != null);
+    assert(window != null);
+    const ffmpeg = container.resolve<IFfmpeg>(TOKENS.Ffmpeg);
+    const keyframes = await ffmpeg.readKeyframesAroundTime({ filePath, aroundTime, streamIndex, window });
+    res.json({ keyframes });
+  }));
+
+  apiRouter.post('/findNextKeyframe', express.json(), asyncHandler(async (req, res) => {
+    const { keyframes, time } = req.body as { keyframes: any[]; time: number; };
+    logger.info('API findNextKeyframe called', { time, frameCount: keyframes.length });
+    assert(keyframes != null);
+    assert(time != null);
+    const ffmpeg = container.resolve<IFfmpeg>(TOKENS.Ffmpeg);
+    const nextKeyframe = await ffmpeg.findNextKeyframe(keyframes, time);
+    res.json({ nextKeyframe });
+  }));
+
+  apiRouter.post('/findKeyframeAtExactTime', express.json(), asyncHandler(async (req, res) => {
+    const { keyframes, time } = req.body as { keyframes: any[]; time: number; };
+    logger.info('API findKeyframeAtExactTime called', { time, frameCount: keyframes.length });
+    assert(keyframes != null);
+    assert(time != null);
+    const ffmpeg = container.resolve<IFfmpeg>(TOKENS.Ffmpeg);
+    const keyframe = await ffmpeg.findKeyframeAtExactTime(keyframes, time);
+    res.json({ keyframe });
+  }));
+
+  apiRouter.post('/createChaptersFromSegments', express.json(), asyncHandler(async (req, res) => {
+    const { segmentPaths, chapterNames } = req.body as { segmentPaths: string[]; chapterNames?: (string | undefined)[] | undefined; };
+    logger.info('API createChaptersFromSegments called', { segmentPaths, chapterNames });
+    const ffmpeg = container.resolve<IFfmpeg>(TOKENS.Ffmpeg);
+    const chapters = await ffmpeg.createChaptersFromSegments({ segmentPaths, chapterNames });
+    res.json({ chapters });
+  }));
+
+  apiRouter.post('/getExperimentalArgs', express.json(), asyncHandler(async (req, res) => {
+    const { ffmpegExperimental } = req.body as { ffmpegExperimental: boolean; };
+    logger.info('API getExperimentalArgs called', { ffmpegExperimental });
+    const ffmpeg = container.resolve<IFfmpeg>(TOKENS.Ffmpeg);
+    const experimentalArgs = await ffmpeg.getExperimentalArgs(ffmpegExperimental);
+    res.json({ experimentalArgs });
+  }));
+
+  apiRouter.post('/getVideoTimescaleArgs', express.json(), asyncHandler(async (req, res) => {
+    const { videoTimebase } = req.body as { videoTimebase: number | undefined; };
+    logger.info('API getVideoTimescaleArgs called', { videoTimebase });
+    const ffmpeg = container.resolve<IFfmpeg>(TOKENS.Ffmpeg);
+    const videoTimescaleArgs = await ffmpeg.getVideoTimescaleArgs(videoTimebase);
+    res.json({ videoTimescaleArgs });
+  }));
+
+  apiRouter.post('/readFileFfprobeMeta', express.json(), asyncHandler(async (req, res) => {
+    const { filePath } = req.body as { filePath: string; };
+    logger.info('API readFileFfprobeMeta called', { filePath });
+    assert(filePath != null);
+    const ffmpeg = container.resolve<IFfmpeg>(TOKENS.Ffmpeg);
+    const meta = await ffmpeg.readFileFfprobeMeta(filePath);
+    res.json({ meta });
+  }));
 
   const server = http.createServer(app);
 

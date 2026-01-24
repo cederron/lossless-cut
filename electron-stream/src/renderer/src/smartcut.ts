@@ -2,11 +2,15 @@ import i18n from 'i18next';
 
 import { getRealVideoStreams, getVideoTimebase } from './util/streams';
 
-import { readKeyframesAroundTime, findNextKeyframe, findKeyframeAtExactTime } from './ffmpeg';
-import type { FFprobeStream } from '../../common/ffprobe';
+import { /* readKeyframesAroundTime, findNextKeyframe, findKeyframeAtExactTime */ } from './ffmpeg';
+// import type { FFprobeStream } from '../../common/ffprobe';
 import { UserFacingError } from '../errors';
-import { readFileSize } from './util';
+// import { readFileSize } from './util';
+import { TOKENS, type FFprobeStream, type IFfmpeg, type IUtils } from 'lossless-cut-application';
+import { container } from 'tsyringe';
 
+const utils = container.resolve<IUtils>(TOKENS.Utils);
+const ffmpeg = container.resolve<IFfmpeg>(TOKENS.Ffmpeg);
 
 const mapVideoCodec = (codec: string) => ({ av1: 'libsvtav1' }[codec] ?? codec);
 
@@ -15,11 +19,11 @@ export async function needsSmartCut({ path, desiredCutFrom, videoStream }: {
   desiredCutFrom: number,
   videoStream: Pick<FFprobeStream, 'index'>,
 }) {
-  const readKeyframes = async (window: number) => readKeyframesAroundTime({ filePath: path, streamIndex: videoStream.index, aroundTime: desiredCutFrom, window });
+  const readKeyframes = async (window: number) => ffmpeg.readKeyframesAroundTime({ filePath: path, streamIndex: videoStream.index, aroundTime: desiredCutFrom, window });
 
   let keyframes = await readKeyframes(10);
 
-  const keyframeAtExactTime = findKeyframeAtExactTime(keyframes, desiredCutFrom);
+  const keyframeAtExactTime = await ffmpeg.findKeyframeAtExactTime(keyframes, desiredCutFrom);
   if (keyframeAtExactTime) {
     console.log('Start cut is already on exact keyframe', keyframeAtExactTime.time);
 
@@ -29,12 +33,12 @@ export async function needsSmartCut({ path, desiredCutFrom, videoStream }: {
     };
   }
 
-  let nextKeyframe = findNextKeyframe(keyframes, desiredCutFrom);
+  let nextKeyframe = await ffmpeg.findNextKeyframe(keyframes, desiredCutFrom);
 
   if (nextKeyframe == null) {
     // try again with a larger window
     keyframes = await readKeyframes(60);
-    nextKeyframe = findNextKeyframe(keyframes, desiredCutFrom);
+    nextKeyframe = await ffmpeg.findNextKeyframe(keyframes, desiredCutFrom);
   }
   if (nextKeyframe == null) throw new UserFacingError(i18n.t('Cannot find any keyframe after the desired start cut point'));
 
@@ -62,7 +66,7 @@ export async function getCodecParams({ path, fileDuration, streams }: {
   let videoBitrate = parseInt(videoStream.bit_rate!, 10);
   if (Number.isNaN(videoBitrate)) {
     console.warn('Unable to detect input bitrate.');
-    const size = await readFileSize(path);
+    const size = await utils.readFileSize(path);
     if (fileDuration == null) throw new Error('Video duration is unknown, cannot estimate bitrate');
     videoBitrate = (size * 8) / fileDuration;
     console.warn('Estimated bitrate.', videoBitrate / 1e6, 'Mbit/s');

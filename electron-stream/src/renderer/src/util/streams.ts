@@ -1,7 +1,9 @@
+import type { AllFilesMeta, CopyfileStreams, FFprobeStream, FFprobeStreamDisposition, FileStream, LiteFFprobeStream } from 'lossless-cut-application';
 import invariant from 'tiny-invariant';
-import type { FFprobeStream, FFprobeStreamDisposition } from '../../../common/ffprobe';
-import type { AllFilesMeta, ChromiumHTMLAudioElement, ChromiumHTMLVideoElement, CopyfileStreams, LiteFFprobeStream } from '../types';
-import type { FileStream } from '../ffmpeg';
+import type { ChromiumHTMLAudioElement, ChromiumHTMLVideoElement } from '../types';
+// import type { FFprobeStream, FFprobeStreamDisposition } from '../../../common/ffprobe';
+// import type { AllFilesMeta, ChromiumHTMLAudioElement, ChromiumHTMLVideoElement, CopyfileStreams, LiteFFprobeStream } from '../types';
+// import type { FileStream } from '../ffmpeg';
 
 
 // taken from `ffmpeg -codecs`

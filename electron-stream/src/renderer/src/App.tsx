@@ -58,7 +58,7 @@ import {
   readFileFfprobeMeta, getDefaultOutFormat,
   setCustomFfPath as ffmpegSetCustomFfPath,
   isIphoneHevc, isProblematicAvc1, tryMapChaptersToEdl,
-  /*getDuration,*/ getTimecodeFromStreams, createChaptersFromSegments,
+  /*getDuration,*/ getTimecodeFromStreams, /* createChaptersFromSegments, */
   RefuseOverwriteError, extractSubtitleTrackToSegments,
   mapRecommendedDefaultFormat,
   // getFfCommandLine,
@@ -917,10 +917,10 @@ function App() {
       const [fileName] = fileNames;
       invariant(fileName != null);
       const outPath = await utils.getOutPath({ customOutDir, filePath: firstPath, fileName });
-      let chaptersFromSegments: Awaited<ReturnType<typeof createChaptersFromSegments>>;
+      let chaptersFromSegments: Awaited<ReturnType<typeof ffmpeg.createChaptersFromSegments>>;
       if (segmentsToChapters) {
         const chapterNames = await utils.pathsNames(paths);
-        chaptersFromSegments = await createChaptersFromSegments({ segmentPaths: paths, chapterNames });
+        chaptersFromSegments = await ffmpeg.createChaptersFromSegments({ segmentPaths: paths, chapterNames });
       }
 
       const inputSize = sum(await readFileSizes(paths));

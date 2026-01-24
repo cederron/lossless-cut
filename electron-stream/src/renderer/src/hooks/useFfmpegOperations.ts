@@ -12,12 +12,13 @@ import { needsSmartCut, getCodecParams } from '../smartcut';
 import { getGuaranteedSegments, isDurationValid } from '../segments';
 // import type { FFprobeStream } from '../../../common/ffprobe';
 // import type { AvoidNegativeTs, Html5ifyMode, PreserveMetadata } from '../../../common/types';
-import type { AllFilesMeta, Chapter, CopyfileStreams, CustomTagsByFile, LiteFFprobeStream, ParamsByStreamId, SegmentToExport } from '../types';
+// import type { AllFilesMeta, Chapter, CopyfileStreams, CustomTagsByFile, LiteFFprobeStream, ParamsByStreamId, SegmentToExport } from '../types';
 import { UserFacingError } from '../../errors';
 import mainApi from '../mainApi';
-import { RefuseOverwriteError, TOKENS, type AvoidNegativeTs, type FFprobeStream, type Html5ifyMode, type IFfmpeg, type IUtils, type LossyMode, type PreserveMetadata } from 'lossless-cut-application';
-import { createChaptersFromSegments, getExperimentalArgs, getVideoTimescaleArgs, isCuttingEnd, isCuttingStart, readFileFfprobeMeta } from '../ffmpeg';
+import { RefuseOverwriteError, TOKENS, type AllFilesMeta, type AvoidNegativeTs, type Chapter, type CopyfileStreams, type FFprobeStream, type Html5ifyMode, type IFfmpeg, type IUtils, type LiteFFprobeStream, type LossyMode, type PreserveMetadata, type SegmentToExport } from 'lossless-cut-application';
+import { /* createChaptersFromSegments, getExperimentalArgs,  getVideoTimescaleArgs, */ isCuttingEnd, isCuttingStart, readFileFfprobeMeta } from '../ffmpeg';
 import { container } from 'tsyringe';
+import type { CustomTagsByFile, ParamsByStreamId } from '../types';
 
 // const { utils, ffmpeg } = window.require('@electron/remote').require('./index.js');
 // const { join, resolve, dirname } = window.require('path');
@@ -73,7 +74,7 @@ function getMatroskaFlags() {
 const getChaptersInputArgs = (ffmetadataPath: string | undefined) => (ffmetadataPath ? ['-f', 'ffmetadata', '-i', ffmetadataPath] : []);
 
 async function tryDeleteFiles(paths: string[]) {
-  return pMap(paths, (path) => await utils.unlinkWithRetry(path).catch((err) => console.error('Failed to delete', path, err)), { concurrency: 5 });
+  return pMap(paths, (path) => utils.unlinkWithRetry(path).catch((err) => console.error('Failed to delete', path, err)), { concurrency: 5 });
 }
 
 export async function maybeMkDeepOutDir({ outputDir, fileOutPath }: { outputDir: string, fileOutPath: string }) {
@@ -214,9 +215,9 @@ function useFfmpegOperations({ filePath, treatInputFileModifiedTimeAsStart, trea
         // See https://github.com/mifi/lossless-cut/issues/170
         '-ignore_unknown',
 
-        ...getExperimentalArgs(ffmpegExperimental),
+        ...await ffmpeg.getExperimentalArgs(ffmpegExperimental),
 
-        ...getVideoTimescaleArgs(videoTimebase),
+        ...await ffmpeg.getVideoTimescaleArgs(videoTimebase),
 
         ...(outFormat ? ['-f', outFormat] : []),
         '-y', outPath,
@@ -422,9 +423,9 @@ function useFfmpegOperations({ filePath, treatInputFileModifiedTimeAsStart, trea
       // See https://github.com/mifi/lossless-cut/issues/170
       '-ignore_unknown',
 
-      ...getExperimentalArgs(ffmpegExperimental),
+      ...await ffmpeg.getExperimentalArgs(ffmpegExperimental),
 
-      ...getVideoTimescaleArgs(videoTimebase),
+      ...await ffmpeg.getVideoTimescaleArgs(videoTimebase),
 
       '-f', outFormat, '-y', outPath,
     ];
@@ -491,9 +492,9 @@ function useFfmpegOperations({ filePath, treatInputFileModifiedTimeAsStart, trea
       // See https://github.com/mifi/lossless-cut/issues/170
       '-ignore_unknown',
 
-      ...getVideoTimescaleArgs(videoTimebase),
+      ...await ffmpeg.getVideoTimescaleArgs(videoTimebase),
 
-      ...getExperimentalArgs(ffmpegExperimental),
+      ...await ffmpeg.getExperimentalArgs(ffmpegExperimental),
 
       '-f', outFormat, '-y', outPath,
     ];
@@ -664,6 +665,9 @@ function useFfmpegOperations({ filePath, treatInputFileModifiedTimeAsStart, trea
 
     try {
       return await pMap(segments, cutSegment, { concurrency: 1 });
+    } catch(err) {
+      console.error('Error while cutting multiple segments', err);
+      throw err;
     } finally {
       if (chaptersPath) await tryDeleteFiles([chaptersPath]);
     }
@@ -685,7 +689,7 @@ function useFfmpegOperations({ filePath, treatInputFileModifiedTimeAsStart, trea
 
     if (await shouldSkipExistingFile(mergedOutFilePath)) return;
 
-    const chapters = await createChaptersFromSegments({ segmentPaths, chapterNames });
+    const chapters = await ffmpeg.createChaptersFromSegments({ segmentPaths, chapterNames });
 
     const metadataFromPath = segmentPaths[0];
     invariant(metadataFromPath != null);

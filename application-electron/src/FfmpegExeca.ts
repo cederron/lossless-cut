@@ -629,11 +629,11 @@ export class FfmpegExeca implements IFfmpeg {
         return URL.createObjectURL(blob);
     }
 
-    getExperimentalArgs = (ffmpegExperimental: boolean): string[] => (
-        ffmpegExperimental ? ['-strict', 'experimental'] : []
-    );
+    async getExperimentalArgs(ffmpegExperimental: boolean): Promise<string[]> {
+        return ffmpegExperimental ? ['-strict', 'experimental'] : [];
+    }
 
-    getVideoTimescaleArgs = (videoTimebase: number | undefined) => (videoTimebase != null ? ['-video_track_timescale', String(videoTimebase)] : []);
+    getVideoTimescaleArgs = async (videoTimebase: number | undefined) => (videoTimebase != null ? ['-video_track_timescale', String(videoTimebase)] : []);
 
     // safeCreateBlob(array: Uint8Array, options?: BlobPropertyBag) {
     //   // if we don't do this when creating a Blob, we get:
@@ -870,8 +870,13 @@ async readKeyframesAroundTime({ filePath, streamIndex, aroundTime, window }: { f
   return frames.filter((frame) => frame.keyframe);
 }
 
-findKeyframeAtExactTime = (keyframes: Frame[], time: number) => keyframes.find((keyframe) => Math.abs(keyframe.time - time) < 0.000001);
-findNextKeyframe = (keyframes: Frame[], time: number) => keyframes.find((keyframe) => keyframe.time >= time); // (assume they are already sorted)
+async findKeyframeAtExactTime(keyframes: Frame[], time: number) {
+  return keyframes.find((keyframe) => Math.abs(keyframe.time - time) < 0.000001);
+}
+
+async findNextKeyframe(keyframes: Frame[], time: number) {
+  return keyframes.find((keyframe) => keyframe.time >= time); // (assume they are already sorted)
+}
 
 async detectIntervals({ filePath, customArgs, onProgress, onSegmentDetected, from, to, matchLineTokens, boundingMode }: {
   filePath: string,
@@ -1034,11 +1039,11 @@ findPreviousKeyframe = (keyframes: Frame[], time: number) => keyframes.findLast(
 
 async findKeyframeNearTime({ filePath, streamIndex, time, mode }: { filePath: string, streamIndex: number, time: number, mode: FindKeyframeMode }) {
   let keyframes = await this.readKeyframesAroundTime({ filePath, streamIndex, aroundTime: time, window: 10 });
-  let nearByKeyframe = this.findKeyframe(keyframes, time, mode);
+  let nearByKeyframe = await this.findKeyframe(keyframes, time, mode);
 
   if (!nearByKeyframe) {
     keyframes = await this.readKeyframesAroundTime({ filePath, streamIndex, aroundTime: time, window: 60 });
-    nearByKeyframe = this.findKeyframe(keyframes, time, mode);
+    nearByKeyframe = await this.findKeyframe(keyframes, time, mode);
   }
 
   if (!nearByKeyframe) return undefined;

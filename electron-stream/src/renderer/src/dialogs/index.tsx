@@ -9,16 +9,20 @@ import pMap from 'p-map';
 import { formatDuration } from '../util/duration';
 import { parseYouTube } from '../edlFormats';
 import CopyClipboardButton from '../components/CopyClipboardButton';
-import { appPath, isMac, isMasBuild, isWindows, isWindowsStoreBuild, testFailFsOperation, trashFile, unlinkWithRetry } from '../util';
+import { appPath, isMac, isMasBuild, isWindows, isWindowsStoreBuild, testFailFsOperation, trashFile/*, unlinkWithRetry*/ } from '../util';
 import type { ParseTimecode } from '../types';
 import type { FindKeyframeMode } from '../ffmpeg';
 import { dangerColor, primaryColor, warningColor } from '../colors';
 import getSwal from '../swal';
 import isDev from '../isDev';
 import mainApi from '../mainApi';
+import { container } from 'tsyringe';
+import { TOKENS, type IUtils } from 'lossless-cut-application';
 
 const remote = window.require('@electron/remote');
 const { dialog } = remote;
+
+const utils = container.resolve<IUtils>(TOKENS.Utils);
 
 
 // https://github.com/mifi/lossless-cut/issues/1495
@@ -594,7 +598,7 @@ export async function deleteFiles({ paths, deleteIfTrashFails, signal }: { paths
     if (!value) return;
   }
 
-  await pMap(failedToTrashFiles, async (path) => unlinkWithRetry(path, { signal }), { concurrency: 5 });
+  await pMap(failedToTrashFiles, async (path) => utils.unlinkWithRetry(path, { signal }), { concurrency: 5 });
 }
 
 

@@ -83,8 +83,8 @@ export interface IFfmpeg {
     runFfmpegText(args: readonly string[]): Promise<string>;
     runFfmpegUrl(args: readonly string[], type: string): Promise<string>;
 
-    getExperimentalArgs(ffmpegExperimental: boolean): string[];
-    getVideoTimescaleArgs(videoTimebase: number | undefined): string[];
+    getExperimentalArgs(ffmpegExperimental: boolean): Promise<string[]>;
+    getVideoTimescaleArgs(videoTimebase: number | undefined): Promise<string[]>;
 
     isCuttingStart(cutFrom: number): boolean;
     isCuttingEnd(cutTo: number, fileDuration: number | undefined): boolean;
@@ -106,8 +106,8 @@ export interface IFfmpeg {
     }): Promise<Frame[]>;
     findNearestKeyFrameTime({ frames, time, direction, fps }: { frames: Frame[], time: number, direction: number, fps: number | undefined }): Promise<number | undefined>;
     readKeyframesAroundTime({ filePath, streamIndex, aroundTime, window }: { filePath: string, streamIndex: number, aroundTime: number, window: number }): Promise<Frame[]>;
-    findKeyframeAtExactTime(keyframes: Frame[], time: number): Frame | undefined;
-    findNextKeyframe(keyframes: Frame[], time: number): Frame | undefined;
+    findKeyframeAtExactTime(keyframes: Frame[], time: number): Promise<Frame | undefined>;
+    findNextKeyframe(keyframes: Frame[], time: number): Promise<Frame | undefined>;
 
     blackDetect({ filePath, streamId, filterOptions, boundingMode, onProgress, onSegmentDetected, from, to }: {
   filePath: string,

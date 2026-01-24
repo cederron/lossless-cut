@@ -130,8 +130,15 @@ export class UtilsWeb implements IUtils {
     trashFile(path: string): Promise<void> {
         throw new Error("Method not implemented.");
     }
-    unlinkWithRetry(path: string, options?: { signal: AbortSignal; }): Promise<void> {
-        throw new Error("Method not implemented.");
+    async unlinkWithRetry(path: string, options?: { signal: AbortSignal; }): Promise<void> {
+        await fetch(`${this.apiUrl}/unlinkWithRetry`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ path }),
+            signal: options?.signal,
+        });
     }
     async transferTimestamps({ inPath, outPath, cutFrom, cutTo, duration, treatInputFileModifiedTimeAsStart, treatOutputFileModifiedTimeAsStart }: { inPath: string; outPath: string; cutFrom?: number | undefined; cutTo?: number | undefined; duration: number | undefined; treatInputFileModifiedTimeAsStart: boolean; treatOutputFileModifiedTimeAsStart: boolean | null | undefined; }): Promise<void> {
         await fetch(`${this.apiUrl}/transferTimestamps`, {
