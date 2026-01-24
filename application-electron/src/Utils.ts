@@ -12,6 +12,7 @@ import { lstat, mkdir, open, unlink } from "node:fs/promises";
 import { fileTypeFromFile } from 'file-type/node';
 import { R_OK } from "node:constants";
 import pMap from 'p-map';
+import { execa } from 'execa';
 
 @injectable()
 export class Utils implements IUtils {
@@ -187,9 +188,8 @@ export class Utils implements IUtils {
         await access(path, fsMode);
     }
 
-    trashFile(_path: string): Promise<void> {
-        throw new Error("Method not implemented.");
-        // see tryTrashItem ipcMain handler
+    async trashFile(path: string): Promise<void> {
+        await this.tryTrashItem(path);
     }
 
     testFailFsOperation = false;
@@ -513,8 +513,26 @@ async readDirRecursively(dirPath: string) {
   return ret;
 }
 
-async tryTrashItem(path: string): Promise<void> {
-
+async tryTrashItem(pathIn: string): Promise<void> {
+  const fullPath = await this.resolvePathIfNeeded(pathIn);
+  if (this.platform.isWindows()) {
+    await execa('powershell.exe', [
+      '-NoProfile',
+      '-Command',
+      `Add-Type -AssemblyName Microsoft.VisualBasic; [Microsoft.VisualBasic.FileIO.FileSystem]::DeleteFile('${fullPath.replace(/'/g, "''")}', 'OnlyErrorDialogs', 'SendToRecycleBin')`,
+    ]);
+  } else if (this.platform.isMac()) {
+    await execa('osascript', ['-e', `tell app "Finder" to move POSIX file "${fullPath.replace(/"/g, '\\"')}" to trash`]);
+  } else if (this.platform.isLinux()) {
+    try {
+      await execa('gio', ['trash', fullPath]);
+    } catch (err) {
+      console.warn('gio trash failed, falling back to unlink', err);
+      await unlink(fullPath);
+    }
+  } else {
+    await unlink(fullPath);
+  }
 }
 
 }

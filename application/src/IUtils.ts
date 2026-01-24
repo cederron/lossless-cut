@@ -65,4 +65,5 @@ getDefaultOutFormat({ filePath, fileMeta: { format } }: { filePath: string, file
     getPathReadAccessError(pathIn: string): Promise<string | undefined>;
     utimesWithRetry(path: string, atime: number, mtime: number, options?: {signal:AbortSignal}): Promise<void>;
     readDirRecursively(dirPath: string): Promise<string[]>;
+    tryTrashItem(path: string): Promise<void>;
 }

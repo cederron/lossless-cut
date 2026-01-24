@@ -6,8 +6,10 @@ import { getSuffixedOutPath, getOutDir, transferTimestamps, getSuffixedFileName,
 import { getNumDigits, isDurationValid } from '../segments';
 
 import * as ffmpeg from '../ffmpeg';
+import type { CaptureFormat } from 'lossless-cut-application';
 import type { FormatTimecode } from '../types';
-import type { CaptureFormat } from '../../../common/types';
+// import type { FormatTimecode } from '../types';
+// import type { CaptureFormat } from '../../../common/types';
 
 const mime = window.require('mime-types');
 const { rename, readdir, writeFile } = window.require('fs/promises');

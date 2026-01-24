@@ -447,6 +447,14 @@ export default ({ port, onKeyboardAction }: {
     res.json({ entries });
   }));
 
+  apiRouter.post('/tryTrashItem', express.json(), asyncHandler(async (req, res) => {
+    const { path } = req.body as { path: string; };
+    logger.info('API tryTrashItem called', { path });
+    const utils = container.resolve<IUtils>(TOKENS.Utils);
+    await utils.tryTrashItem(path);
+    res.end();
+  }));
+
   const server = http.createServer(app);
 
   server.on('error', (err) => logger.error('http server error', err));

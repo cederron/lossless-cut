@@ -1,21 +1,23 @@
 import { useEffect, useState, useRef, useCallback, useMemo } from 'react';
 import i18n from 'i18next';
 import type { Transition } from 'motion/react';
-import type { Config, ISettings } from 'lossless-cut-application';
+import { TOKENS, type Config, type ISettings } from 'lossless-cut-application';
 
 // import type { Config } from '../../../common/types.js';
 
 import { errorToast } from '../swal';
 import isDev from '../isDev';
 import { mySpring, emitter as animationsEmitter } from '../animations';
+import { container } from 'tsyringe';
 
-const { settings: settingsApi, configStore } = window.require('@electron/remote').require('./index.js') as { settings: ISettings, configStore: { defaults: Config } };
+// const { settings: settingsApi, configStore } = window.require('@electron/remote').require('./index.js') as { settings: ISettings, configStore: { defaults: Config } };
 const { systemPreferences } = window.require('@electron/remote');
 
 const animationSettings = systemPreferences.getAnimationSettings();
 
 export default function useUserSettingsRoot() {
   const firstUpdateRef = useRef(true);
+  const settingsApi = container.resolve<ISettings>(TOKENS.Settings);
 
   function safeSetConfig<T extends keyof Config>(keyValue: Record<T, Config[T]>) {
     const entry = Object.entries(keyValue)[0]!;
@@ -35,7 +37,7 @@ export default function useUserSettingsRoot() {
   }
 
   function safeGetConfig<T extends keyof Config>(key: T): Config[T] {
-    const rawVal = settingsApi.get<Config[T]>(key) ?? configStore.defaults[key];
+    const rawVal = settingsApi.get<Config[T]>(key) ?? settingsApi.getDefaults()[key];
     // NOTE: Need to clone any non-primitive in renderer, or it will become very slow
     // I think because Electron is proxying objects over the bridge
     const cloned = rawVal === undefined

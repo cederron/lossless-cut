@@ -32,12 +32,13 @@ const appName = 'LosslessCut'; // TODO import from common
 // const platform = container.resolve<IPlatform>(TOKENS.Platform);
 const utils = container.resolve<IUtils>(TOKENS.Utils);
 
+// TODO call platform
 export const isWindows = true;// platform.isWindows();
 export const isMac = false; //platform.isMac();
 export const appVersion = '0.0.1'; // platform.getAppVersion();
 export const appPath = await utils.getAppPath();
 
-export const trashFile = async (path: string) => ipcRenderer.invoke('tryTrashItem', path);
+export const trashFile = async (path: string) => utils.tryTrashItem(path); // ipcRenderer.invoke('tryTrashItem', path);
 
 export const showItemInFolder = async (_path: string) => { throw new Error("Method not implemented."); }; // ipcRenderer.invoke('showItemInFolder', path);
 
