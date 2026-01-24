@@ -7,7 +7,7 @@ import assert from 'node:assert';
 import { homepageUrl } from '../common/constants.js';
 import logger from './logger.js';
 import { container } from 'tsyringe';
-import { TOKENS, type IFfmpeg, type IUtils } from 'lossless-cut-application';
+import { TOKENS, type IFfmpeg, type IPlatform, type IUtils } from 'lossless-cut-application';
 
     // const logger = container.resolve<ILogger>(TOKENS.Logger);
 
@@ -244,6 +244,14 @@ export default ({ port, onKeyboardAction }: {
     }
   });
 
+  apiRouter.post('/resolvePathIfNeeded', express.json(), asyncHandler(async (req, res) => {
+    const { path } = req.body as { path: string; };
+    logger.info('API resolvePathIfNeeded called', { path });
+    const utils = container.resolve<IUtils>(TOKENS.Utils);
+    const resolvedPath =  await utils.resolvePathIfNeeded(path);
+    res.json({ resolvedPath });
+  }));
+
   // apiRouter.post('/getHtml5ifiedPath', express.json(), asyncHandler(async (req, res) => {
   //   const { cod, fp, type } = req.body as { cod?: string; fp: string; type: Html5ifyMode; };
   //   logger.info('API getHtml5ifiedPath called', { cod, fp, type });
@@ -389,6 +397,69 @@ export default ({ port, onKeyboardAction }: {
     const utils = container.resolve<IUtils>(TOKENS.Utils);
     const appPath = await utils.getAppPath();
     res.json({ appPath });
+  }));
+
+  apiRouter.post('/isWindows', express.json(), asyncHandler(async (_req, res) => {
+    logger.info('API isWindows called');
+    const platform = container.resolve<IPlatform>(TOKENS.Platform);
+    const isWindows = platform.isWindows();
+    res.json({ isWindows });
+  }));
+
+  apiRouter.post('/isMac', express.json(), asyncHandler(async (_req, res) => {
+    logger.info('API isMac called');
+    const platform = container.resolve<IPlatform>(TOKENS.Platform);
+    const isMac = platform.isMac();
+    res.json({ isMac });
+  }));
+
+  apiRouter.post('/isLinux', express.json(), asyncHandler(async (_req, res) => {
+    logger.info('API isLinux called');
+    const platform = container.resolve<IPlatform>(TOKENS.Platform);
+    const isLinux = platform.isLinux();
+    res.json({ isLinux });
+  }));
+
+  apiRouter.post('/arch', express.json(), asyncHandler(async (_req, res) => {
+    logger.info('API arch called');
+    const platform = container.resolve<IPlatform>(TOKENS.Platform);
+    const arch = platform.arch();
+    res.json({ arch });
+  }));
+
+  apiRouter.post('/isDev', express.json(), asyncHandler(async (_req, res) => {
+    logger.info('API isDev called');
+    const platform = container.resolve<IPlatform>(TOKENS.Platform);
+    const isDev = platform.isDev();
+    res.json({ isDev });
+  }));
+
+  apiRouter.post('/getResourcesPath', express.json(), asyncHandler(async (_req, res) => {
+    logger.info('API getResourcesPath called');
+    const platform = container.resolve<IPlatform>(TOKENS.Platform);
+    const resourcesPath = platform.getResourcesPath();
+    res.json({ resourcesPath });
+  }));
+
+  apiRouter.post('/getPlatform', express.json(), asyncHandler(async (_req, res) => {
+    logger.info('API getPlatform called');
+    const platform = container.resolve<IPlatform>(TOKENS.Platform);
+    const plat = platform.getPlatform();
+    res.json({ platform: plat });
+  }));
+
+  apiRouter.post('/isPackaged', express.json(), asyncHandler(async (_req, res) => {
+    logger.info('API isPackaged called');
+    const platform = container.resolve<IPlatform>(TOKENS.Platform);
+    const isPackaged = platform.isPackaged();
+    res.json({ isPackaged });
+  }));
+
+  apiRouter.post('/isMasBuild', express.json(), asyncHandler(async (_req, res) => {
+    logger.info('API isMasBuild called');
+    const platform = container.resolve<IPlatform>(TOKENS.Platform);
+    const isMasBuild = platform.isMasBuild();
+    res.json({ isMasBuild });
   }));
 
   const server = http.createServer(app);

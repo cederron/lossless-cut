@@ -61,4 +61,5 @@ getDefaultOutFormat({ filePath, fileMeta: { format } }: { filePath: string, file
     //   signal: AbortSignal,
     // }): Promise<void>;
     getAppPath(): Promise<string>;
+    resolvePathIfNeeded(path: string): Promise<string>;
 }

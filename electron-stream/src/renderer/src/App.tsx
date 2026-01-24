@@ -204,7 +204,9 @@ function App() {
   const zoomedDuration = isDurationValid(fileDuration) ? fileDuration / zoom : undefined;
   const zoomWindowEndTime = useMemo(() => (zoomedDuration != null ? zoomWindowStartTime + zoomedDuration : undefined), [zoomedDuration, zoomWindowStartTime]);
 
-  useEffect(() => setDocumentTitle({ filePath, working: working?.text, progress }), [progress, filePath, working?.text]);
+  useEffect(() => {
+    setDocumentTitle({ filePath, working: working?.text, progress }).catch(console.error);
+  }, [progress, filePath, working?.text]);
 
   useEffect(() => {
     mainApi.setProgressBar(progress ?? -1);
@@ -1939,7 +1941,7 @@ function App() {
           errorToast(i18n.t('Please select a working directory first'));
           return;
         }
-        const outPath = getDownloadMediaOutPath(newCustomOutDir, `downloaded-media-${Date.now()}.mkv`);
+        const outPath = await getDownloadMediaOutPath(newCustomOutDir, `downloaded-media-${Date.now()}.mkv`);
         const downloaded = await promptDownloadMediaUrl(outPath);
         if (downloaded) await loadMedia({ filePath: outPath });
       }, i18n.t('Failed to download URL'));
@@ -2240,7 +2242,7 @@ function App() {
   }, [checkFileOpened, detectedFps, fileDuration, loadCutSegments, withErrorHandling]);
 
   useEffect(() => {
-    const openFiles = (filePaths: string[]) => { userOpenFiles(filePaths.map((p) => resolvePathIfNeeded(p))); };
+    const openFiles = async (filePaths: string[]) => { userOpenFiles(await Promise.all(filePaths.map((p) => resolvePathIfNeeded(p)))); };
 
     async function actionWithCatch(fn: () => Promise<void>) {
       try {

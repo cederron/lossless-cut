@@ -37,7 +37,7 @@ export class FfmpegExeca implements IFfmpeg {
         this.utils = utils;
     }
 
-    getStreamProcess(params: IMediaSourceInitParams): IRunningProcess {
+    async getStreamProcess(params: IMediaSourceInitParams): Promise<IRunningProcess> {
 
         const { path, videoStreamIndex, audioStreamIndexes, seekTo, size, fps, rotate } = params;
 
@@ -149,23 +149,23 @@ export class FfmpegExeca implements IFfmpeg {
             '-f', 'mp4', '-movflags', '+frag_keyframe+empty_moov+default_base_moof', '-',
         ];
 
-        this.logger.info(this.getFfCommandLine('ffmpeg', args));
+        this.logger.info(await this.getFfCommandLine('ffmpeg', args));
         // Cast to unknown then IRunningProcess to bypass strict signal type check (string vs Signals)
-        return execa(this.getFfmpegPath(), args, this.getExecaOptions({ buffer: false, stderr: this.enableLog ? 'inherit' : 'pipe' })) as unknown as IRunningProcess;
+        return execa(await this.getFfmpegPath(), args, await this.getExecaOptions({ buffer: false, stderr: this.enableLog ? 'inherit' : 'pipe' })) as unknown as IRunningProcess;
     }
 
-    private getFfPath(cmd: string): string {
-        const exeName = this.platform.isWindows() ? `${cmd}.exe` : cmd;
+    private async getFfPath(cmd: string): Promise<string> {
+        const exeName = await this.platform.isWindows() ? `${cmd}.exe` : cmd;
 
         if (this.customFfPath) return join(this.customFfPath, exeName);
 
-        if (this.platform.isPackaged()) {
-            return join(this.platform.getResourcesPath(), exeName);
+        if (await this.platform.isPackaged()) {
+            return join(await this.platform.getResourcesPath(), exeName);
         }
 
         // local dev
-        const components = ['ffmpeg', `${this.platform.getPlatform()}-${this.platform.arch()}`];
-        if (this.platform.isWindows() || this.platform.isLinux()) components.push('lib');
+        const components = ['ffmpeg', `${await this.platform.getPlatform()}-${await this.platform.arch()}`];
+        if (await this.platform.isWindows() || await this.platform.isLinux()) components.push('lib');
         components.push(exeName);
         return join(...components);
     }
@@ -173,13 +173,13 @@ export class FfmpegExeca implements IFfmpeg {
     /**
     * ⚠️ Do not use directly when running ffmpeg, because we need to add certain options before running, like `LD_LIBRARY_PATH` on linux
     */
-    getFfmpegPath(): string {
+    async getFfmpegPath(): Promise<string> {
         return this.getFfPath('ffmpeg');
     }
 
-    private escapeCliArg(arg: string) {
+    private async escapeCliArg(arg: string) {
         // todo change String(arg) => arg when ts no-implicit-any is turned on
-        if (this.platform.isWindows()) {
+        if (await this.platform.isWindows()) {
             // https://github.com/mifi/lossless-cut/issues/2151
             return /[\s"&<>^|]/.test(arg) ? `"${String(arg).replaceAll('"', '""')}"` : arg;
         }
@@ -190,7 +190,7 @@ export class FfmpegExeca implements IFfmpeg {
         return `${cmd} ${args.map((arg) => this.escapeCliArg(arg)).join(' ')}`;
     }
 
-    private getExecaOptions({ env, cancelSignal, ...rest }: ExecaOptions = {}) {
+    private async getExecaOptions({ env, cancelSignal, ...rest }: ExecaOptions = {}) {
         // This is a ugly hack to please execa which expects cancelSignal to be a prototype of AbortSignal
         // however this gets lost during @electron/remote passing
         // https://github.com/sindresorhus/execa/blob/c8cff27a47b6e6f1cfbfec2bf7fa9dcd08cefed1/lib/terminate/cancel.js#L5
@@ -203,20 +203,20 @@ export class FfmpegExeca implements IFfmpeg {
             env: {
                 ...env,
                 // https://github.com/mifi/lossless-cut/issues/1143#issuecomment-1500883489
-                ...(this.platform.isLinux() && !this.platform.isDev() && !this.customFfPath && { LD_LIBRARY_PATH: this.platform.getResourcesPath() }),
+                ...(await this.platform.isLinux() && !await this.platform.isDev() && !this.customFfPath && { LD_LIBRARY_PATH: await this.platform.getResourcesPath() }),
             },
         };
         return execaOptions;
     }
 
     // todo collect warnings from ffmpeg output and show them after export? example: https://github.com/mifi/lossless-cut/issues/1469
-    runFfmpegProcess(args: readonly string[], customExecaOptions?: ExecaOptions, additionalOptions?: { logCli?: boolean }) {
-        const ffmpegPath = this.getFfmpegPath();
+    async runFfmpegProcess(args: readonly string[], customExecaOptions?: ExecaOptions, additionalOptions?: { logCli?: boolean }) {
+        const ffmpegPath = await this.getFfmpegPath();
         const { logCli = true } = additionalOptions ?? {};
-        if (logCli) this.logger.info(this.getFfCommandLine('ffmpeg', args));
+        if (logCli) this.logger.info(await this.getFfCommandLine('ffmpeg', args));
 
         const abortController = new AbortController();
-        const process = execa(ffmpegPath, args, this.getExecaOptions({ ...customExecaOptions, cancelSignal: abortController.signal }));
+        const process = execa(ffmpegPath, args, await this.getExecaOptions({ ...customExecaOptions, cancelSignal: abortController.signal }));
 
         const wrapped = { process, abortController };
 
@@ -273,13 +273,13 @@ export class FfmpegExeca implements IFfmpeg {
             '-',
         ];
 
-        this.logger.info(`${this.getFfCommandLine('ffmpeg', args1)} | \n${this.getFfCommandLine('ffmpeg', args2)}`);
+        this.logger.info(`${await this.getFfCommandLine('ffmpeg', args1)} | \n${await this.getFfCommandLine('ffmpeg', args2)}`);
 
         let ps1: ResultPromise<{ encoding: 'buffer' }> | undefined;
         let ps2: ResultPromise<{ encoding: 'buffer' }> | undefined;
         try {
-            ps1 = this.runFfmpegProcess(args1, { buffer: false, ...(timeout != null && { timeout }) }, { logCli: false });
-            ps2 = this.runFfmpegProcess(args2, timeout != null ? { timeout } : undefined, { logCli: false });
+            ps1 = await this.runFfmpegProcess(args1, { buffer: false, ...(timeout != null && { timeout }) }, { logCli: false });
+            ps2 = await this.runFfmpegProcess(args2, timeout != null ? { timeout } : undefined, { logCli: false });
             assert(ps1.stdout != null);
             assert(ps2.stdin != null);
             ps1.stdout.pipe(ps2.stdin);
@@ -406,7 +406,7 @@ export class FfmpegExeca implements IFfmpeg {
             '-filter:v', `select='gt(scene,${minChange})',metadata=print:file=-:direct=1`, // direct=1 to flush stdout immediately
             '-f', 'null', '-',
         ];
-        const process = this.runFfmpegProcess(args, { buffer: false });
+        const process = await this.runFfmpegProcess(args, { buffer: false });
 
         this.handleProgress(process, to - from, onProgress);
 

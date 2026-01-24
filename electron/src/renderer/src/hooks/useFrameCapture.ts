@@ -69,8 +69,10 @@ export default ({ appendFfmpegCommandLog, formatTimecode, treatInputFileModified
     const outDir = getOutDir(customOutDir, filePath);
     const files = await readdir(outDir);
 
+    const suffixedFileName = await getSuffixedFileName(filePath, tmpSuffix);
+    const escapedRegexp = escapeRegExp(suffixedFileName);
+
     const matches = files.flatMap((fileName) => {
-      const escapedRegexp = escapeRegExp(await getSuffixedFileName(filePath, tmpSuffix));
       const regexp = `^${escapedRegexp}(\\d+)`;
       const match = fileName.match(new RegExp(regexp));
       if (!match) return [];

@@ -1,6 +1,6 @@
 import { DirectoryAccessDeclinedError, FFprobeFormat, Html5ifyMode, type IPlatform, type ISettings, IUtils, MasDirectoryAccessDeclinedError, TOKENS } from "lossless-cut-application";
 import { constants, access, readdir, rename, stat, utimes, readFile, writeFile } from "fs/promises";
-import path, { basename, dirname, extname, join, parse, resolve } from "node:path";
+import path, { basename, dirname, extname, isAbsolute, join, parse, resolve } from "node:path";
 import { pathToFileURL } from "node:url";
 import { inject, injectable } from "tsyringe";
 import { parse as parseCue } from "cue-parser";
@@ -99,7 +99,7 @@ export class Utils implements IUtils {
         const effectiveOutDirPath = await this.getOutDir(newCustomOutDir, inputPath);
         const hasDirWriteAccess = effectiveOutDirPath != null && await this.checkDirWriteAccess(effectiveOutDirPath);
         if (!hasDirWriteAccess || this.simulateMasBuild) {
-            if (this.platform.isMasBuild() || this.simulateMasBuild) {
+            if (await this.platform.isMasBuild() || this.simulateMasBuild) {
                 throw new MasDirectoryAccessDeclinedError();
                 // const newOutDir = await askForOutDir(effectiveOutDirPath);
 
@@ -296,12 +296,12 @@ export class Utils implements IUtils {
     async getSuffixedOutPath<T extends string | undefined>(a: { customOutDir?: string | undefined, filePath?: T | undefined, nameSuffix: string }): Promise<T extends string ? string : undefined>;
     async getSuffixedOutPath({ customOutDir, filePath, nameSuffix }: { customOutDir?: string | undefined, filePath?: string | undefined, nameSuffix: string }) {
         if (filePath == null) return undefined;
-        return this.getOutPath({ customOutDir, filePath, fileName: this.getSuffixedFileName(filePath, nameSuffix) });
+        return this.getOutPath({ customOutDir, filePath, fileName: await this.getSuffixedFileName(filePath, nameSuffix) });
     }
 
     async getHtml5ifiedPath(cod: string | undefined, fp: string, type: Html5ifyMode) {
         // See also inside ffmpegHtml5ify
-        const ext = (this.platform.isMac() && ['slowest', 'slow', 'slow-audio'].includes(type)) ? 'mp4' : 'mkv';
+        const ext = (await this.platform.isMac() && ['slowest', 'slow', 'slow-audio'].includes(type)) ? 'mp4' : 'mkv';
         return this.getSuffixedOutPath({ customOutDir: cod, filePath: fp, nameSuffix: `${this.html5ifiedPrefix}${type}.${ext}` });
     }
 
@@ -465,5 +465,9 @@ export class Utils implements IUtils {
 
     async getAppPath(): Promise<string> {
         return process.cwd();
+    }
+
+    async resolvePathIfNeeded(path: string): Promise<string> {
+        return isAbsolute(path) ? path : resolve(path);
     }
 }

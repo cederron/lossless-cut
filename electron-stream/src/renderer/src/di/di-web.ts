@@ -1,10 +1,11 @@
 import { container, Lifecycle } from "tsyringe";
-import type { IFfmpeg, ILogger } from "lossless-cut-application";
+import type { IFfmpeg, ILogger, IPlatform } from "lossless-cut-application";
 import { TOKENS } from "lossless-cut-application";
 // import { HttpMediaSourceStreamFactory } from "lossless-cut-application-electron";
 import { HttpMediaSourceStreamFactory } from "lossless-cut-application-electron/HttpMediaSourceStreamFactory";
 import { FfmpegWeb } from "./FfmpegWeb";
 import { UtilsWeb } from "./UtilsWeb";
+import { PlatformWeb } from "./PlatformWeb";
 
 class ConsoleLogger implements ILogger {
     info(message: any, ...meta: any[]) {
@@ -24,11 +25,11 @@ container.register<ILogger>(TOKENS.Logger, {
     lifecycle: Lifecycle.Transient,
 });
 
-// container.register<IPlatform>(TOKENS.Platform, {
-//     useClass: Platform,
-// }, {
-//     lifecycle: Lifecycle.Transient,
-// });
+container.register<IPlatform>(TOKENS.Platform, {
+    useClass: PlatformWeb,
+}, {
+    lifecycle: Lifecycle.Transient,
+});
 
 container.register<IFfmpeg>(TOKENS.Ffmpeg, {
     useClass: FfmpegWeb,

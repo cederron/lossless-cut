@@ -4,8 +4,8 @@ import type { IRunningProcess } from "./IRunningProcess.ts";
 
 export interface IFfmpeg {
     // getMediaStream(path: string): ResultPromise<{env: Readonly<Partial<Record<string, string>>>}>;
-    getStreamProcess(params: IMediaSourceInitParams): IRunningProcess;
-    getFfmpegPath: () => string;
+    getStreamProcess(params: IMediaSourceInitParams): Promise<IRunningProcess>;
+    getFfmpegPath: () => Promise<string>;
     getFfCommandLine: (cmd: string, args: readonly string[]) => Promise<string>;
     renderWaveformPng({ filePath, start, duration, resample, color, streamIndex, timeout }: {
         filePath: string,

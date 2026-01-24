@@ -247,5 +247,17 @@ export class UtilsWeb implements IUtils {
         const data = await res.json();
         return data.appPath;
     }
+
+    async resolvePathIfNeeded(path: string): Promise<string> {
+        const res = await fetch(`${this.apiUrl}/resolvePathIfNeeded`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ path }),
+        });
+        const data = await res.json();
+        return data.resolvedPath;
+    }
     
 }

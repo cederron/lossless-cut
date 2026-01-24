@@ -4,15 +4,15 @@ import { injectable } from "tsyringe";
 
 @injectable()
 export class Platform implements IPlatform {
-    isPackaged = () => app.isPackaged;
-    getPlatform = () => process.platform;
-    getResourcesPath = () => '';
-    isLinux = () => process.platform === 'linux';
-    arch = (): string => process.arch;
-    isWindows = () => process.platform === 'win32';
-    isMac = () => process.platform === 'darwin'
-    isDev = () => {
+    isPackaged = async() => app.isPackaged;
+    getPlatform = async() => process.platform;
+    getResourcesPath = async() => '';
+    isLinux = async() => process.platform === 'linux';
+    arch = async(): Promise<string> => process.arch;
+    isWindows = async() => process.platform === 'win32';
+    isMac = async() => process.platform === 'darwin';
+    isDev = async() => {
         return true;
     }
-    isMasBuild = () => process.mas === true;
+    isMasBuild = async() => process.mas === true;
 }

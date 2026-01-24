@@ -14991,3 +14991,12 @@
   cacheBuster: 0
 }
 2026-01-24T14:46:42.233Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 1.362 ms
+2026-01-24T18:13:28.798Z info: LosslessCut version 3.67.2 { isDev: true }
+2026-01-24T18:13:28.865Z info: Initialized config store
+2026-01-24T18:13:28.866Z info: Waiting for app to become ready
+2026-01-24T18:13:28.869Z info: CLI arguments { _: [] }
+2026-01-24T18:13:28.877Z info: HTTP API listening on http://127.0.0.1:8080/
+2026-01-24T18:13:28.877Z info: HTTP API listening on port 8080
+2026-01-24T18:13:29.038Z info: Added Extension React Developer Tools
+2026-01-24T18:13:29.275Z info: Current version 3.67.2
+2026-01-24T18:13:29.275Z info: Newest version 3.67.2

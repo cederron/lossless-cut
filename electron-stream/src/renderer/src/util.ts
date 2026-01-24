@@ -32,8 +32,8 @@ const { ipcRenderer } = window.require('electron');
 const platform = container.resolve<IPlatform>(TOKENS.Platform);
 const utils = container.resolve<IUtils>(TOKENS.Utils);
 
-export const isWindows = platform.isWindows();
-export const isMac = platform.isMac();
+export const isWindows = await platform.isWindows();
+export const isMac = await platform.isMac();
 export const appVersion = '0.1'; // platform.getAppVersion();
 export const appPath = await utils.getAppPath();
 
@@ -70,7 +70,7 @@ export async function getOutPath({ customOutDir, filePath, fileName }: { customO
   return utils.getOutPath({ customOutDir, filePath, fileName });
 }
 
-export const getDownloadMediaOutPath = (customOutDir: string, fileName: string) => join(customOutDir, fileName);
+export const getDownloadMediaOutPath = async (customOutDir: string, fileName: string) => utils.pathJoin(customOutDir, fileName);
 
 export const getSuffixedFileName = async (filePath: string | undefined, nameSuffix: string) => utils.getSuffixedFileName(filePath, nameSuffix);
 
@@ -236,7 +236,7 @@ export async function getOutFileExtension({ isCustomFormatSelected, outFormat, f
 export const hasDuplicates = (arr: unknown[]) => new Set(arr).size !== arr.length;
 
 // Need to resolve relative paths from the command line https://github.com/mifi/lossless-cut/issues/639
-export const resolvePathIfNeeded = (inPath: string) => (isAbsolute(inPath) ? inPath : resolve(inPath));
+export const resolvePathIfNeeded = async (inPath: string) => utils.resolvePathIfNeeded(inPath); // (isAbsolute(inPath) ? inPath : resolve(inPath));
 
 export const html5ifiedPrefix = 'html5ified-';
 export const html5dummySuffix = 'dummy';
@@ -244,7 +244,7 @@ export const html5dummySuffix = 'dummy';
 export async function findExistingHtml5FriendlyFile(fp: string, cod: string | undefined) {
   // The order is the priority we will search:
   const suffixes = ['slowest', 'slow-audio', 'slow', 'fast-audio-remux', 'fast-audio', 'fast', html5dummySuffix];
-  const prefix = getSuffixedFileName(fp, html5ifiedPrefix);
+  const prefix = await getSuffixedFileName(fp, html5ifiedPrefix);
 
   const outDir = await getOutDir(cod, fp);
   invariant(outDir != null);
@@ -269,7 +269,7 @@ export async function findExistingHtml5FriendlyFile(fp: string, cod: string | un
   const { suffix, entry } = matches[0]!;
 
   return {
-    path: join(outDir, entry),
+    path: await utils.pathJoin(outDir, entry),
     usingDummyVideo: suffix === html5dummySuffix,
   };
 }
@@ -358,7 +358,7 @@ export function checkFileSizes(inputSize: number, outputSize: number) {
   return undefined;
 }
 
-export function setDocumentTitle({ filePath, working, progress }: {
+export async function setDocumentTitle({ filePath, working, progress }: {
   filePath?: string | undefined,
   working?: string | undefined,
   progress?: number | undefined }) {
@@ -370,7 +370,7 @@ export function setDocumentTitle({ filePath, working, progress }: {
   }
 
   if (filePath) {
-    parts.push(basename(filePath));
+    parts.push(await utils.basename(filePath));
   }
 
   parts.push(isStoreBuild ? appName : `${appName} ${appVersion}`);
@@ -381,7 +381,7 @@ export function setDocumentTitle({ filePath, working, progress }: {
 export async function readVideoTs(videoTsPath: string) {
   const files = await readdir(videoTsPath);
   const relevantFiles = files.filter((file) => /^vts_\d+_\d+\.vob$/i.test(file) && !/^vts_\d+_00\.vob$/i.test(file)); // skip menu
-  const ret = sortBy(relevantFiles).map((file) => join(videoTsPath, file));
+  const ret = await pMap(sortBy(relevantFiles), async (file) => await utils.pathJoin(videoTsPath, file));
   if (ret.length === 0) throw new UserFacingError(i18n.t('No VTS vob files found in folder'));
   return ret;
 }
@@ -389,9 +389,9 @@ export async function readVideoTs(videoTsPath: string) {
 export async function readDirRecursively(dirPath: string) {
   const files = await readdir(dirPath, { recursive: true });
   const ret = (await pMap(files, async (path) => {
-    if (['.DS_Store'].includes(basename(path))) return [];
+    if (['.DS_Store'].includes(await utils.basename(path))) return [];
 
-    const absPath = join(dirPath, path);
+    const absPath = await utils.pathJoin(dirPath, path);
     const fileStat = await lstat(absPath); // readdir also returns directories...
     if (!fileStat.isFile()) return [];
 
