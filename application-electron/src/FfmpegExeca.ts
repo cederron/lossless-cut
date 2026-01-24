@@ -230,7 +230,7 @@ export class FfmpegExeca implements IFfmpeg {
                 this.runningFfmpegs.delete(wrapped);
             }
         })();
-        return process;
+        return { process };
     }
 
     async renderWaveformPng({ filePath, start, duration, resample, color, streamIndex, timeout }: {
@@ -278,8 +278,8 @@ export class FfmpegExeca implements IFfmpeg {
         let ps1: ResultPromise<{ encoding: 'buffer' }> | undefined;
         let ps2: ResultPromise<{ encoding: 'buffer' }> | undefined;
         try {
-            ps1 = await this.runFfmpegProcess(args1, { buffer: false, ...(timeout != null && { timeout }) }, { logCli: false });
-            ps2 = await this.runFfmpegProcess(args2, timeout != null ? { timeout } : undefined, { logCli: false });
+            ps1 = (await this.runFfmpegProcess(args1, { buffer: false, ...(timeout != null && { timeout }) }, { logCli: false })).process;
+            ps2 = (await this.runFfmpegProcess(args2, timeout != null ? { timeout } : undefined, { logCli: false })).process;
             assert(ps1.stdout != null);
             assert(ps2.stdin != null);
             ps1.stdout.pipe(ps2.stdin);
@@ -406,7 +406,7 @@ export class FfmpegExeca implements IFfmpeg {
             '-filter:v', `select='gt(scene,${minChange})',metadata=print:file=-:direct=1`, // direct=1 to flush stdout immediately
             '-f', 'null', '-',
         ];
-        const process = await this.runFfmpegProcess(args, { buffer: false });
+        const { process } = await this.runFfmpegProcess(args, { buffer: false });
 
         this.handleProgress(process, to - from, onProgress);
 
@@ -485,7 +485,7 @@ export class FfmpegExeca implements IFfmpeg {
             '-y', outPathTemplate,
         ];
 
-        const process = this.runFfmpegProcess(args, { buffer: false });
+        const { process } = await this.runFfmpegProcess(args, { buffer: false });
 
         if (to != null) {
             this.handleProgress(process, to - from, onProgress);
@@ -522,7 +522,8 @@ export class FfmpegExeca implements IFfmpeg {
             ...this.getCaptureFrameArgs({ timestamp, videoPath, quality }),
             '-y', outPath,
         ];
-        await this.runFfmpegProcess(args);
+        const { process } = await this.runFfmpegProcess(args);
+        await process;
         return args;
     }
 
@@ -537,7 +538,8 @@ export class FfmpegExeca implements IFfmpeg {
             '-f', 'image2',
             '-',
         ];
-        const { stdout } = await this.runFfmpegProcess(args);
+        const { process } = await this.runFfmpegProcess(args);
+        const { stdout } = await process;
 
         clipboard.writeImage(nativeImage.createFromBuffer(Buffer.from(stdout)));
     }
@@ -556,7 +558,7 @@ export class FfmpegExeca implements IFfmpeg {
     async runFfmpegConcat({ ffmpegArgs, concatTxt, totalDuration, onProgress }: {
         ffmpegArgs: string[], concatTxt: string, totalDuration: number, onProgress: (a: number) => void
     }) {
-        const process = this.runFfmpegProcess(ffmpegArgs);
+        const { process } = await this.runFfmpegProcess(ffmpegArgs);
 
         this.handleProgress(process, totalDuration, onProgress);
 
@@ -571,7 +573,7 @@ export class FfmpegExeca implements IFfmpeg {
         duration?: number | undefined,
         onProgress: (a: number) => void,
     }) {
-        const process = this.runFfmpegProcess(ffmpegArgs);
+        const { process } = await this.runFfmpegProcess(ffmpegArgs);
         assert(process.stderr != null);
         this.handleProgress(process, duration, onProgress);
         // return process;
@@ -580,7 +582,7 @@ export class FfmpegExeca implements IFfmpeg {
 
     getFfprobePath = () => this.getFfPath('ffprobe');
 
-    async runFfprobe(args: readonly string[], { timeout = this.platform.isDev() ? 10000 : 30000, logCli = true } = {}) {
+    async runFfprobe(args: readonly string[], { timeout = await this.platform.isDev() ? 10000 : 30000, logCli = true } = {}) {
         const ffprobePath = this.getFfprobePath();
         if (logCli) this.logger.info(this.getFfCommandLine('ffprobe', args));
         const ps = execa(ffprobePath, args, this.getExecaOptions());
@@ -615,16 +617,19 @@ export class FfmpegExeca implements IFfmpeg {
         });
     }
 
-    runFfmpeg = async (...args: Parameters<typeof this.runFfmpegProcess>) => this.runFfmpegProcess(...args);
+    runFfmpeg = async (...args: Parameters<typeof this.runFfmpegProcess>) => (await this.runFfmpegProcess(...args)).process;
     runFfmpegVoid = async (args: readonly string[]): Promise<void> => {
-        await this.runFfmpegProcess(args);
+        const { process } = await this.runFfmpegProcess(args);
+        await process;
     }
     runFfmpegText = async (args: readonly string[]): Promise<string> => {
-        const { stdout } = await this.runFfmpegProcess(args);
+        const { process } = await this.runFfmpegProcess(args);
+        const { stdout } = await process;
         return new TextDecoder().decode(stdout);
     }
     runFfmpegUrl = async (args: readonly string[], type: string): Promise<string> => {
-        const { stdout } = await this.runFfmpegProcess(args);
+        const { process } = await this.runFfmpegProcess(args);
+        const { stdout } = await process;
         const blob = new Blob([stdout], { type: type });
         return URL.createObjectURL(blob);
     }
@@ -894,7 +899,7 @@ async detectIntervals({ filePath, customArgs, onProgress, onSegmentDetected, fro
     ...customArgs,
     '-f', 'null', '-',
   ];
-  const process = this.runFfmpegProcess(args, { buffer: false });
+  const { process } = await this.runFfmpegProcess(args, { buffer: false });
 
   let lastMidpoint: number | undefined;
 
