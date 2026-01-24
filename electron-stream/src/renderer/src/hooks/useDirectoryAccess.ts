@@ -65,7 +65,7 @@ export default function useDirectoryAccess({ setCustomOutDir }: { setCustomOutDi
       return utils.ensureWritableOutDir({ inputPath, outDir });
     } catch (e) {
       if (e instanceof MasDirectoryAccessDeclinedError) {
-        const newOutDir = await askForOutDir(utils.getOutDir(outDir, inputPath));
+        const newOutDir = await askForOutDir(await utils.getOutDir(outDir, inputPath));
 
         // // If user canceled open dialog, refuse to continue, because we will get permission denied error from MAS sandbox
         if (!newOutDir) throw new DirectoryAccessDeclinedError();

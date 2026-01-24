@@ -67,7 +67,7 @@ import { shouldCopyStreamByDefault, getAudioStreams, getRealVideoStreams, isAudi
 import { exportEdlFile, readEdlFile, loadLlcProject, askForEdlImport } from './edlStore';
 import { formatYouTube, getFrameCountRaw, formatTsvHuman } from './edlFormats';
 import {
-  /* getOutPath, getOutDir, */
+  getOutPath, getOutDir,
   isStoreBuild, dragPreventer,
   havePermissionToReadFile, resolvePathIfNeeded, getPathReadAccessError, findExistingHtml5FriendlyFile,
   isOutOfSpaceError, readFileSize, readFileSizes, checkFileSizes, setDocumentTitle, readVideoTs, readDirRecursively, getImportProjectType,
@@ -401,7 +401,7 @@ function App() {
   const [outputDir, setOutputDir] = useState<string>();
 
   useEffect(() => {
-    utils.getOutDir(customOutDir, filePath).then(setOutputDir);
+    getOutDir(customOutDir, filePath).then(setOutputDir);
   }, [customOutDir, filePath]);
 
   const increaseRotation = useCallback(() => {
@@ -912,11 +912,11 @@ function App() {
         warnings.add(t('Fell back to default output file name'));
       }
 
-      const outDir = await utils.getOutDir(customOutDir, firstPath);
+      const outDir = await getOutDir(customOutDir, firstPath);
 
       const [fileName] = fileNames;
       invariant(fileName != null);
-      const outPath = await utils.getOutPath({ customOutDir, filePath: firstPath, fileName });
+      const outPath = await getOutPath({ customOutDir, filePath: firstPath, fileName });
       let chaptersFromSegments: Awaited<ReturnType<typeof ffmpeg.createChaptersFromSegments>>;
       if (segmentsToChapters) {
         const chapterNames = await utils.pathsNames(paths);
@@ -1124,7 +1124,7 @@ function App() {
 
         const [fileName] = fileNames;
         invariant(fileName != null);
-        mergedOutFilePath = await utils.getOutPath({ customOutDir, filePath, fileName });
+        mergedOutFilePath = await getOutPath({ customOutDir, filePath, fileName });
 
         await concatCutSegments({
           customOutDir,
@@ -1349,7 +1349,7 @@ function App() {
 
   const loadMedia = useCallback(async ({ filePath: fp, projectPath }: { filePath: string, projectPath?: string | undefined }) => {
     async function tryOpenProjectPath(path: string) {
-      if (!(await mainApi.pathExists(path))) return false;
+      if (!(await utils.pathExists(path))) return false;
       await loadEdlFile({ path, type: 'llc' });
       return true;
     }
@@ -1365,7 +1365,7 @@ function App() {
         const sameDirEdlFilePath = await getEdlFilePath(fp);
         // MAS only allows fs.access (pathExists) if we don't have access to input dir yet, so check first if the file exists,
         // so we don't need to annoy the user by asking for permission if the project file doesn't exist
-        if (await mainApi.pathExists(sameDirEdlFilePath)) {
+        if (await utils.pathExists(sameDirEdlFilePath)) {
           // Ok, the file exists. now we have to ask the user, because we need to read that file
           await ensureAccessToSourceDir(fp);
           // Ok, we got access from the user (or already have access), now read the project file
@@ -1533,7 +1533,7 @@ function App() {
       const mediaFilePath = await utils.pathJoin(await utils.dirname(path), mediaFileName);
 
       // Note: MAS only allows fs.stat (pathExists) if we don't have access to input dir yet
-      if (!(await mainApi.pathExists(mediaFilePath))) {
+      if (!(await utils.pathExists(mediaFilePath))) {
         errorToast(i18n.t('The media file referenced by the project file you tried to open does not exist in the same directory as the project file: {{mediaFileName}}', { mediaFileName }));
         return;
       }

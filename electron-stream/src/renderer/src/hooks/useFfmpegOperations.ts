@@ -5,7 +5,7 @@ import pMap from 'p-map';
 import invariant from 'tiny-invariant';
 import i18n from 'i18next';
 
-import { /*getSuffixedOutPath,*/ /* transferTimestamps, getOutFileExtension, getOutDir,*/ deleteDispositionValue, /* getHtml5ifiedPath, unlinkWithRetry,*/ getFrameDuration, isMac } from '../util';
+import { getSuffixedOutPath, transferTimestamps, getOutFileExtension, getOutDir, deleteDispositionValue, getHtml5ifiedPath, unlinkWithRetry, getFrameDuration, isMac } from '../util';
 // import { isCuttingStart, isCuttingEnd, runFfmpegWithProgress, getFfCommandLine, getDuration, createChaptersFromSegments, readFileFfprobeMeta, getExperimentalArgs, getVideoTimescaleArgs, logStdoutStderr, runFfmpegConcat, RefuseOverwriteError, runFfmpegVoid } from '../ffmpeg';
 import { getMapStreamsArgs, getStreamIdsToCopy } from '../util/streams';
 import { needsSmartCut, getCodecParams } from '../smartcut';
@@ -14,7 +14,7 @@ import { getGuaranteedSegments, isDurationValid } from '../segments';
 // import type { AvoidNegativeTs, Html5ifyMode, PreserveMetadata } from '../../../common/types';
 // import type { AllFilesMeta, Chapter, CopyfileStreams, CustomTagsByFile, LiteFFprobeStream, ParamsByStreamId, SegmentToExport } from '../types';
 import { UserFacingError } from '../../errors';
-import mainApi from '../mainApi';
+// import mainApi from '../mainApi';
 import { RefuseOverwriteError, TOKENS, type AllFilesMeta, type AvoidNegativeTs, type Chapter, type CopyfileStreams, type FFprobeStream, type Html5ifyMode, type IFfmpeg, type IUtils, type LiteFFprobeStream, type LossyMode, type PreserveMetadata, type SegmentToExport } from 'lossless-cut-application';
 import { /* createChaptersFromSegments, getExperimentalArgs,  getVideoTimescaleArgs, */ isCuttingEnd, isCuttingStart, /* readFileFfprobeMeta */ } from '../ffmpeg';
 import { container } from 'tsyringe';
@@ -74,7 +74,7 @@ function getMatroskaFlags() {
 const getChaptersInputArgs = (ffmetadataPath: string | undefined) => (ffmetadataPath ? ['-f', 'ffmetadata', '-i', ffmetadataPath] : []);
 
 async function tryDeleteFiles(paths: string[]) {
-  return pMap(paths, (path) => utils.unlinkWithRetry(path).catch((err) => console.error('Failed to delete', path, err)), { concurrency: 5 });
+  return pMap(paths, (path) => unlinkWithRetry(path).catch((err) => console.error('Failed to delete', path, err)), { concurrency: 5 });
 }
 
 export async function maybeMkDeepOutDir({ outputDir, fileOutPath }: { outputDir: string, fileOutPath: string }) {
@@ -103,7 +103,7 @@ function useFfmpegOperations({ filePath, treatInputFileModifiedTimeAsStart, trea
   const utils = container.resolve<IUtils>(TOKENS.Utils);
   
   const shouldSkipExistingFile = useCallback(async (path: string) => {
-    const fileExists = await mainApi.pathExists(path);
+    const fileExists = await utils.pathExists(path);
 
     // If output file exists, check that it is writable, so we can inform user if it's not (or else ffmpeg will fail with "Permission denied")
     // this seems to sometimes happen on Windows, not sure why.
@@ -239,7 +239,7 @@ function useFfmpegOperations({ filePath, treatInputFileModifiedTimeAsStart, trea
       await ffmpeg.runFfmpegConcat({ ffmpegArgs, concatTxt, totalDuration, onProgress });
 
 
-      await utils.transferTimestamps({ inPath: metadataFromPath, outPath, treatInputFileModifiedTimeAsStart, treatOutputFileModifiedTimeAsStart, duration: totalDuration });
+      await transferTimestamps({ inPath: metadataFromPath, outPath, treatInputFileModifiedTimeAsStart, treatOutputFileModifiedTimeAsStart, duration: totalDuration });
 
       return { haveExcludedStreams: excludedStreamIds.length > 0 };
     } finally {
@@ -436,7 +436,7 @@ function useFfmpegOperations({ filePath, treatInputFileModifiedTimeAsStart, trea
     await ffmpeg.runFfmpegWithProgress({ ffmpegArgs, duration: cutDuration, onProgress });
 
 
-    await utils.transferTimestamps({ inPath: filePath, outPath, cutFrom, cutTo, treatInputFileModifiedTimeAsStart, duration: isDurationValid(fileDuration) ? fileDuration : undefined, treatOutputFileModifiedTimeAsStart });
+    await transferTimestamps({ inPath: filePath, outPath, cutFrom, cutTo, treatInputFileModifiedTimeAsStart, duration: isDurationValid(fileDuration) ? fileDuration : undefined, treatOutputFileModifiedTimeAsStart });
   }, [appendFfmpegCommandLog, cutFromAdjustmentFrames, cutToAdjustmentFrames, filePath, getOutputPlaybackRateArgs, treatInputFileModifiedTimeAsStart, treatOutputFileModifiedTimeAsStart]);
 
   // inspired by https://gist.github.com/fernandoherreradelasheras/5eca67f4200f1a7cc8281747da08496e
@@ -622,14 +622,14 @@ function useFfmpegOperations({ filePath, treatInputFileModifiedTimeAsStart, trea
 
       invariant(outFormat != null);
 
-      const ext = await utils.getOutFileExtension({ isCustomFormatSelected: true, outFormat, filePath });
+      const ext = await getOutFileExtension({ isCustomFormatSelected: true, outFormat, filePath });
 
       if (segmentNeedsSmartCut) {
         console.log('Cutting/encoding lossless part', { from: losslessCutFrom, to: cutTo });
       }
 
       const losslessPartOutPath = segmentNeedsSmartCut
-        ? await utils.getSuffixedOutPath({ customOutDir, filePath, nameSuffix: `smartcut-segment-copy-${i}${ext}` })
+        ? await getSuffixedOutPath({ customOutDir, filePath, nameSuffix: `smartcut-segment-copy-${i}${ext}` })
         : finalOutPath;
 
       // for smart cut we need to use keyframe cut here, and no avoid_negative_ts
@@ -642,7 +642,7 @@ function useFfmpegOperations({ filePath, treatInputFileModifiedTimeAsStart, trea
 
       // We need to concat
 
-      const smartCutEncodedPartOutPath = await utils.getSuffixedOutPath({ customOutDir, filePath, nameSuffix: `smartcut-segment-encode-${i}${ext}` });
+      const smartCutEncodedPartOutPath = await getSuffixedOutPath({ customOutDir, filePath, nameSuffix: `smartcut-segment-encode-${i}${ext}` });
       const smartCutSegmentsToConcat = [smartCutEncodedPartOutPath, losslessPartOutPath];
 
       try {
@@ -685,7 +685,7 @@ function useFfmpegOperations({ filePath, treatInputFileModifiedTimeAsStart, trea
     preserveMetadataOnMerge: boolean,
     mergedOutFilePath: string,
   }) => {
-    const outDir = await utils.getOutDir(customOutDir, filePath);
+    const outDir = await getOutDir(customOutDir, filePath);
 
     if (await shouldSkipExistingFile(mergedOutFilePath)) return;
 
@@ -701,7 +701,7 @@ function useFfmpegOperations({ filePath, treatInputFileModifiedTimeAsStart, trea
   const html5ify = useCallback(async ({ customOutDir, filePath: filePathArg, speed, hasAudio, hasVideo, onProgress }: {
     customOutDir: string | undefined, filePath: string, speed: Html5ifyMode, hasAudio: boolean, hasVideo: boolean, onProgress: (p: number) => void,
   }) => {
-    const outPath = await utils.getHtml5ifiedPath(customOutDir, filePathArg, speed);
+    const outPath = await getHtml5ifiedPath(customOutDir, filePathArg, speed);
     invariant(outPath != null);
 
     let audio: string | undefined;
@@ -811,7 +811,7 @@ function useFfmpegOperations({ filePath, treatInputFileModifiedTimeAsStart, trea
     // console.log(new TextDecoder().decode(stdout));
 
     invariant(outPath != null);
-    await utils.transferTimestamps({ inPath: filePathArg, outPath, duration, treatInputFileModifiedTimeAsStart, treatOutputFileModifiedTimeAsStart });
+    await transferTimestamps({ inPath: filePathArg, outPath, duration, treatInputFileModifiedTimeAsStart, treatOutputFileModifiedTimeAsStart });
     return outPath;
   }, [appendFfmpegCommandLog, treatInputFileModifiedTimeAsStart, treatOutputFileModifiedTimeAsStart]);
 
@@ -841,7 +841,7 @@ function useFfmpegOperations({ filePath, treatInputFileModifiedTimeAsStart, trea
     // logStdoutStderr(result);
     await ffmpeg.runFfmpegWithProgress({ ffmpegArgs, duration, onProgress });
 
-    await utils.transferTimestamps({ inPath: filePathArg, outPath, duration, treatInputFileModifiedTimeAsStart, treatOutputFileModifiedTimeAsStart });
+    await transferTimestamps({ inPath: filePathArg, outPath, duration, treatInputFileModifiedTimeAsStart, treatOutputFileModifiedTimeAsStart });
   }, [appendFfmpegCommandLog, treatInputFileModifiedTimeAsStart, treatOutputFileModifiedTimeAsStart]);
 
   // https://stackoverflow.com/questions/34118013/how-to-determine-webm-duration-using-ffprobe
@@ -851,8 +851,8 @@ function useFfmpegOperations({ filePath, treatInputFileModifiedTimeAsStart, trea
     onProgress: (a: number) => void,
   }) => {
     invariant(filePath != null);
-    const ext = await utils.getOutFileExtension({ outFormat: fileFormat, filePath });
-    const outPath = await utils.getSuffixedOutPath({ customOutDir, filePath, nameSuffix: `reformatted${ext}` });
+    const ext = await getOutFileExtension({ outFormat: fileFormat, filePath });
+    const outPath = await getSuffixedOutPath({ customOutDir, filePath, nameSuffix: `reformatted${ext}` });
 
     const ffmpegArgs = [
       '-hide_banner',
@@ -874,7 +874,7 @@ function useFfmpegOperations({ filePath, treatInputFileModifiedTimeAsStart, trea
     await ffmpeg.runFfmpegWithProgress({ ffmpegArgs, onProgress });
 
 
-    await utils.transferTimestamps({ inPath: filePath, outPath, duration: undefined, treatInputFileModifiedTimeAsStart, treatOutputFileModifiedTimeAsStart });
+    await transferTimestamps({ inPath: filePath, outPath, duration: undefined, treatInputFileModifiedTimeAsStart, treatOutputFileModifiedTimeAsStart });
 
     return outPath;
   }, [appendFfmpegCommandLog, filePath, treatInputFileModifiedTimeAsStart, treatOutputFileModifiedTimeAsStart]);
@@ -937,8 +937,8 @@ function useFfmpegOperations({ filePath, treatInputFileModifiedTimeAsStart, trea
 
     let streamArgs: string[] = [];
     const outPaths = await pMap(outStreams, async ({ index, codec, type, format: { format, ext } }) => {
-      const outPath = await utils.getSuffixedOutPath({ customOutDir, filePath, nameSuffix: `stream-${index}-${type}-${codec}.${ext}` });
-      if (!enableOverwriteOutput && await mainApi.pathExists(outPath)) throw new RefuseOverwriteError();
+      const outPath = await getSuffixedOutPath({ customOutDir, filePath, nameSuffix: `stream-${index}-${type}-${codec}.${ext}` });
+      if (!enableOverwriteOutput && await utils.pathExists(outPath)) throw new RefuseOverwriteError();
 
       streamArgs = [
         ...streamArgs,
@@ -976,9 +976,9 @@ function useFfmpegOperations({ filePath, treatInputFileModifiedTimeAsStart, trea
     let streamArgs: string[] = [];
     const outPaths = await pMap(streams, async ({ index, codec_name: codec, codec_type: type }) => {
       const ext = codec || 'bin';
-      const outPath = await utils.getSuffixedOutPath({ customOutDir, filePath, nameSuffix: `stream-${index}-${type}-${codec}.${ext}` });
+      const outPath = await getSuffixedOutPath({ customOutDir, filePath, nameSuffix: `stream-${index}-${type}-${codec}.${ext}` });
       invariant(outPath != null);
-      if (!enableOverwriteOutput && await mainApi.pathExists(outPath)) throw new RefuseOverwriteError();
+      if (!enableOverwriteOutput && await utils.pathExists(outPath)) throw new RefuseOverwriteError();
 
       streamArgs = [
         ...streamArgs,

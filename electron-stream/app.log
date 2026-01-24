@@ -11699,3 +11699,3295 @@
 }
 2026-01-24T03:53:31.678Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 1.557 ms
 2026-01-24T03:53:32.876Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5Calex-%5CDownloads%5C%5Bscorehd%5D+Lisa+Canon+-+Nurse+Super+Knockers-cut-merged-1752593600863.wmv&videoStreamIndex=1&audioStreamIndexes=0&seekTo=0&size=800&fps=30 HTTP/1.1 200 - 101.932 ms
+2026-01-24T11:38:06.955Z info: LosslessCut version 3.67.2 { isDev: true }
+2026-01-24T11:38:07.024Z info: Initialized config store
+2026-01-24T11:38:07.028Z info: Waiting for app to become ready
+2026-01-24T11:38:07.055Z info: CLI arguments { _: [] }
+2026-01-24T11:38:07.085Z info: HTTP API listening on http://127.0.0.1:8080/
+2026-01-24T11:38:07.086Z info: HTTP API listening on port 8080
+2026-01-24T11:38:07.432Z info: Added Extension React Developer Tools
+2026-01-24T11:38:07.868Z info: Current version 3.67.2
+2026-01-24T11:38:07.869Z info: Newest version 3.67.2
+2026-01-24T11:38:16.362Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T11:38:16.371Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 29.375 ms
+2026-01-24T11:38:16.374Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: undefined,
+  nameSuffix: 'proj.llc'
+}
+2026-01-24T11:38:16.376Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 3.514 ms
+2026-01-24T11:38:16.385Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: undefined,
+  nameSuffix: 'proj.llc'
+}
+2026-01-24T11:38:16.388Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 2.614 ms
+2026-01-24T11:38:16.393Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T11:38:16.395Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 1.897 ms
+2026-01-24T11:38:16.400Z info: API getFileUri called { path: undefined, cacheBuster: 0 }
+2026-01-24T11:38:16.404Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 3.267 ms
+2026-01-24T11:38:16.406Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: undefined,
+  nameSuffix: 'proj.llc'
+}
+2026-01-24T11:38:16.409Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 3.165 ms
+2026-01-24T11:38:16.410Z info: API getFileUri called { path: undefined, cacheBuster: 0 }
+2026-01-24T11:38:16.412Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 2.045 ms
+2026-01-24T11:38:16.414Z info: API getFileUri called { path: undefined, cacheBuster: 0 }
+2026-01-24T11:38:16.416Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 1.992 ms
+2026-01-24T11:38:16.429Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: undefined,
+  nameSuffix: 'proj.llc'
+}
+2026-01-24T11:38:16.431Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 2.352 ms
+2026-01-24T11:38:16.434Z info: API getFileUri called { path: undefined, cacheBuster: 0 }
+2026-01-24T11:38:16.439Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 4.906 ms
+2026-01-24T11:38:16.442Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: undefined,
+  nameSuffix: 'proj.llc'
+}
+2026-01-24T11:38:16.443Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 1.804 ms
+2026-01-24T11:38:16.445Z info: API getFileUri called { path: undefined, cacheBuster: 0 }
+2026-01-24T11:38:16.446Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 1.601 ms
+2026-01-24T11:38:24.521Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: undefined,
+  nameSuffix: 'proj.llc'
+}
+2026-01-24T11:38:24.522Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 1.125 ms
+2026-01-24T11:38:24.522Z info: API getFileUri called { path: undefined, cacheBuster: 0 }
+2026-01-24T11:38:24.523Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 0.982 ms
+2026-01-24T11:38:24.525Z info: API isDirectory called {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv'
+}
+2026-01-24T11:38:24.527Z info: 127.0.0.1 POST /api/isDirectory HTTP/1.1 200 - 2.172 ms
+2026-01-24T11:38:24.534Z info: API isFile called {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv'
+}
+2026-01-24T11:38:24.535Z info: 127.0.0.1 POST /api/isFile HTTP/1.1 200 - 1.841 ms
+2026-01-24T11:38:24.538Z info: API basename called {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv'
+}
+2026-01-24T11:38:24.540Z info: 127.0.0.1 POST /api/basename HTTP/1.1 200 - 1.516 ms
+2026-01-24T11:38:24.584Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: undefined,
+  nameSuffix: 'proj.llc'
+}
+2026-01-24T11:38:24.585Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 1.531 ms
+2026-01-24T11:38:24.586Z info: API getFileUri called { path: undefined, cacheBuster: 0 }
+2026-01-24T11:38:24.588Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 1.003 ms
+2026-01-24T11:38:24.603Z info: API readFileFfprobeMeta called {
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv'
+}
+2026-01-24T11:38:24.710Z info: 127.0.0.1 POST /api/readFileFfprobeMeta HTTP/1.1 200 - 107.736 ms
+2026-01-24T11:38:24.717Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-24T11:38:24.719Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 1.331 ms
+2026-01-24T11:38:24.731Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: undefined,
+  nameSuffix: 'proj.llc'
+}
+2026-01-24T11:38:24.732Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 1.265 ms
+2026-01-24T11:38:24.734Z info: API getFileUri called {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-html5ified-dummy.mkv',
+  cacheBuster: 0
+}
+2026-01-24T11:38:24.735Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 1.712 ms
+2026-01-24T11:38:24.737Z info: API pathExists called {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-proj.llc'
+}
+2026-01-24T11:38:24.739Z info: 127.0.0.1 POST /api/pathExists HTTP/1.1 200 - 1.625 ms
+2026-01-24T11:38:24.744Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-24T11:38:24.745Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 1.042 ms
+2026-01-24T11:38:24.762Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: undefined,
+  nameSuffix: 'proj.llc'
+}
+2026-01-24T11:38:24.764Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 1.650 ms
+2026-01-24T11:38:24.767Z info: API getFileUri called {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-html5ified-dummy.mkv',
+  cacheBuster: 0
+}
+2026-01-24T11:38:24.768Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 1.415 ms
+2026-01-24T11:38:24.788Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: undefined,
+  nameSuffix: 'proj.llc'
+}
+2026-01-24T11:38:24.789Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 1.231 ms
+2026-01-24T11:38:24.791Z info: API getFileUri called {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-html5ified-dummy.mkv',
+  cacheBuster: 0
+}
+2026-01-24T11:38:24.792Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 1.109 ms
+2026-01-24T11:38:24.794Z info: API pathExists called {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-proj.llc'
+}
+2026-01-24T11:38:24.796Z info: 127.0.0.1 POST /api/pathExists HTTP/1.1 200 - 1.549 ms
+2026-01-24T11:38:24.864Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-24T11:38:24.865Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 1.624 ms
+2026-01-24T11:38:24.867Z info: API getOutDir called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv'
+}
+2026-01-24T11:38:24.868Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 1.085 ms
+2026-01-24T11:38:24.869Z info: API getFileUri called {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-html5ified-dummy.mkv',
+  cacheBuster: 0
+}
+2026-01-24T11:38:24.871Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 1.213 ms
+2026-01-24T11:38:24.941Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-24T11:38:24.943Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 1.587 ms
+2026-01-24T11:38:24.944Z info: API getFileUri called {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-html5ified-dummy.mkv',
+  cacheBuster: 0
+}
+2026-01-24T11:38:24.945Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 0.965 ms
+2026-01-24T11:38:24.947Z info: Received /stream request {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv',
+  videoStreamIndex: '1',
+  audioStreamIndexes: '0',
+  seekTo: '0',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-24T11:38:24.988Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-24T11:38:24.990Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 2.284 ms
+2026-01-24T11:38:24.991Z info: API getFileUri called {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-html5ified-dummy.mkv',
+  cacheBuster: 0
+}
+2026-01-24T11:38:24.993Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 1.204 ms
+2026-01-24T11:38:25.013Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-24T11:38:25.014Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.993 ms
+2026-01-24T11:38:25.015Z info: API getFileUri called {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-html5ified-dummy.mkv',
+  cacheBuster: 0
+}
+2026-01-24T11:38:25.016Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 1.384 ms
+2026-01-24T11:38:25.200Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-24T11:38:25.203Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 2.752 ms
+2026-01-24T11:38:25.205Z info: API getFileUri called {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-html5ified-dummy.mkv',
+  cacheBuster: 0
+}
+2026-01-24T11:38:25.216Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 11.511 ms
+2026-01-24T11:38:25.264Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-24T11:38:25.266Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 2.102 ms
+2026-01-24T11:38:25.278Z info: API getFileUri called {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-html5ified-dummy.mkv',
+  cacheBuster: 0
+}
+2026-01-24T11:38:25.280Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 1.594 ms
+2026-01-24T11:38:25.370Z info: API readFramesAroundTime called {
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv',
+  aroundTime: 0,
+  streamIndex: 1,
+  window: 60
+}
+2026-01-24T11:38:25.709Z info: 127.0.0.1 POST /api/readFramesAroundTime HTTP/1.1 200 - 339.318 ms
+2026-01-24T11:38:25.763Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-24T11:38:25.766Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 3.002 ms
+2026-01-24T11:38:25.768Z info: API getFileUri called {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-html5ified-dummy.mkv',
+  cacheBuster: 0
+}
+2026-01-24T11:38:25.772Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 3.695 ms
+2026-01-24T11:38:27.031Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-24T11:38:27.033Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 1.660 ms
+2026-01-24T11:38:27.034Z info: API getFileUri called {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-html5ified-dummy.mkv',
+  cacheBuster: 0
+}
+2026-01-24T11:38:27.036Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 1.117 ms
+2026-01-24T11:38:27.204Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-24T11:38:27.206Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 1.383 ms
+2026-01-24T11:38:27.207Z info: API getFileUri called {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-html5ified-dummy.mkv',
+  cacheBuster: 0
+}
+2026-01-24T11:38:27.208Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 1.420 ms
+2026-01-24T11:38:27.228Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5Calex-%5CDownloads%5C%5Bscorehd%5D+Lisa+Canon+-+Nurse+Super+Knockers-cut-merged-1752593600863.wmv&videoStreamIndex=1&audioStreamIndexes=0&seekTo=0&size=800&fps=30 HTTP/1.1 200 - 128.248 ms
+2026-01-24T11:38:27.235Z info: Received /stream request {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv',
+  videoStreamIndex: '1',
+  audioStreamIndexes: '0',
+  seekTo: '70.912378',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-24T11:38:27.284Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-24T11:38:27.286Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 1.754 ms
+2026-01-24T11:38:27.287Z info: API getFileUri called {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-html5ified-dummy.mkv',
+  cacheBuster: 0
+}
+2026-01-24T11:38:27.288Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 1.497 ms
+2026-01-24T11:38:27.713Z info: API readFramesAroundTime called {
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv',
+  aroundTime: 70.912378125,
+  streamIndex: 1,
+  window: 60
+}
+2026-01-24T11:38:28.153Z info: 127.0.0.1 POST /api/readFramesAroundTime HTTP/1.1 200 - 439.619 ms
+2026-01-24T11:38:28.205Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-24T11:38:28.208Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 3.158 ms
+2026-01-24T11:38:28.211Z info: API getFileUri called {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-html5ified-dummy.mkv',
+  cacheBuster: 0
+}
+2026-01-24T11:38:28.213Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 2.034 ms
+2026-01-24T11:38:28.681Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-24T11:38:28.683Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 2.029 ms
+2026-01-24T11:38:28.684Z info: API getFileUri called {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-html5ified-dummy.mkv',
+  cacheBuster: 0
+}
+2026-01-24T11:38:28.686Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 2.236 ms
+2026-01-24T11:38:29.497Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-24T11:38:29.498Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 1.364 ms
+2026-01-24T11:38:29.499Z info: API getFileUri called {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-html5ified-dummy.mkv',
+  cacheBuster: 0
+}
+2026-01-24T11:38:29.501Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 1.572 ms
+2026-01-24T11:38:29.532Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5Calex-%5CDownloads%5C%5Bscorehd%5D+Lisa+Canon+-+Nurse+Super+Knockers-cut-merged-1752593600863.wmv&videoStreamIndex=1&audioStreamIndexes=0&seekTo=70.912378&size=800&fps=30 HTTP/1.1 200 - 200.578 ms
+2026-01-24T11:38:29.539Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-24T11:38:29.540Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 1.662 ms
+2026-01-24T11:38:29.542Z info: API getFileUri called {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-html5ified-dummy.mkv',
+  cacheBuster: 0
+}
+2026-01-24T11:38:29.544Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 1.622 ms
+2026-01-24T11:38:29.545Z info: Received /stream request {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv',
+  videoStreamIndex: '1',
+  audioStreamIndexes: '0',
+  seekTo: '114.076434',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-24T11:38:30.001Z info: API readFramesAroundTime called {
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv',
+  aroundTime: 114.076434375,
+  streamIndex: 1,
+  window: 60
+}
+2026-01-24T11:38:30.764Z info: 127.0.0.1 POST /api/readFramesAroundTime HTTP/1.1 200 - 763.190 ms
+2026-01-24T11:38:30.770Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-24T11:38:30.774Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 3.187 ms
+2026-01-24T11:38:30.778Z info: API getFileUri called {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-html5ified-dummy.mkv',
+  cacheBuster: 0
+}
+2026-01-24T11:38:30.780Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 1.949 ms
+2026-01-24T11:38:30.843Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-24T11:38:30.845Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 2.388 ms
+2026-01-24T11:38:30.849Z info: API getFileUri called {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-html5ified-dummy.mkv',
+  cacheBuster: 0
+}
+2026-01-24T11:38:30.851Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 2.262 ms
+2026-01-24T11:38:30.920Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-24T11:38:30.922Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 2.560 ms
+2026-01-24T11:38:30.925Z info: API getFileUri called {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-html5ified-dummy.mkv',
+  cacheBuster: 0
+}
+2026-01-24T11:38:30.930Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 5.072 ms
+2026-01-24T11:38:31.743Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-24T11:38:31.744Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 1.281 ms
+2026-01-24T11:38:31.745Z info: API getFileUri called {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-html5ified-dummy.mkv',
+  cacheBuster: 0
+}
+2026-01-24T11:38:31.747Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 1.465 ms
+2026-01-24T11:38:31.762Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5Calex-%5CDownloads%5C%5Bscorehd%5D+Lisa+Canon+-+Nurse+Super+Knockers-cut-merged-1752593600863.wmv&videoStreamIndex=1&audioStreamIndexes=0&seekTo=114.076434&size=800&fps=30 HTTP/1.1 200 - 280.358 ms
+2026-01-24T11:38:31.768Z info: Received /stream request {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv',
+  videoStreamIndex: '1',
+  audioStreamIndexes: '0',
+  seekTo: '208.112414',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-24T11:38:31.811Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-24T11:38:31.812Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 1.448 ms
+2026-01-24T11:38:31.813Z info: API getFileUri called {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-html5ified-dummy.mkv',
+  cacheBuster: 0
+}
+2026-01-24T11:38:31.815Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 1.291 ms
+2026-01-24T11:38:32.249Z info: API readFramesAroundTime called {
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv',
+  aroundTime: 208.11241406250002,
+  streamIndex: 1,
+  window: 60
+}
+2026-01-24T11:38:32.636Z info: 127.0.0.1 POST /api/readFramesAroundTime HTTP/1.1 200 - 386.721 ms
+2026-01-24T11:38:32.716Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-24T11:38:32.718Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 2.717 ms
+2026-01-24T11:38:32.723Z info: API getFileUri called {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-html5ified-dummy.mkv',
+  cacheBuster: 0
+}
+2026-01-24T11:38:32.725Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 2.435 ms
+2026-01-24T11:38:32.893Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-24T11:38:32.895Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 2.078 ms
+2026-01-24T11:38:32.900Z info: API getFileUri called {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-html5ified-dummy.mkv',
+  cacheBuster: 0
+}
+2026-01-24T11:38:32.903Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 2.570 ms
+2026-01-24T11:38:33.775Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-24T11:38:33.776Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 1.260 ms
+2026-01-24T11:38:33.777Z info: API getFileUri called {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-html5ified-dummy.mkv',
+  cacheBuster: 0
+}
+2026-01-24T11:38:33.778Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 1.043 ms
+2026-01-24T11:38:34.678Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-24T11:38:34.679Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 1.289 ms
+2026-01-24T11:38:34.680Z info: API getFileUri called {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-html5ified-dummy.mkv',
+  cacheBuster: 0
+}
+2026-01-24T11:38:34.681Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 1.299 ms
+2026-01-24T11:38:34.715Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5Calex-%5CDownloads%5C%5Bscorehd%5D+Lisa+Canon+-+Nurse+Super+Knockers-cut-merged-1752593600863.wmv&videoStreamIndex=1&audioStreamIndexes=0&seekTo=208.112414&size=800&fps=30 HTTP/1.1 200 - 280.294 ms
+2026-01-24T11:38:34.719Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-24T11:38:34.720Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 1.287 ms
+2026-01-24T11:38:34.721Z info: API getFileUri called {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-html5ified-dummy.mkv',
+  cacheBuster: 0
+}
+2026-01-24T11:38:34.723Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 1.418 ms
+2026-01-24T11:38:34.734Z info: Received /stream request {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv',
+  videoStreamIndex: '1',
+  audioStreamIndexes: '0',
+  seekTo: '237.916167',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-24T11:38:35.185Z info: API readFramesAroundTime called {
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv',
+  aroundTime: 237.9161671875,
+  streamIndex: 1,
+  window: 60
+}
+2026-01-24T11:38:35.532Z info: 127.0.0.1 POST /api/readFramesAroundTime HTTP/1.1 200 - 347.058 ms
+2026-01-24T11:38:35.590Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-24T11:38:35.593Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 2.517 ms
+2026-01-24T11:38:35.597Z info: API getFileUri called {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-html5ified-dummy.mkv',
+  cacheBuster: 0
+}
+2026-01-24T11:38:35.599Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 1.993 ms
+2026-01-24T11:38:35.819Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-24T11:38:35.820Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 1.577 ms
+2026-01-24T11:38:35.827Z info: API getFileUri called {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-html5ified-dummy.mkv',
+  cacheBuster: 0
+}
+2026-01-24T11:38:35.830Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 3.367 ms
+2026-01-24T11:38:36.316Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-24T11:38:36.319Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 2.965 ms
+2026-01-24T11:38:36.326Z info: API getFileUri called {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-html5ified-dummy.mkv',
+  cacheBuster: 0
+}
+2026-01-24T11:38:36.328Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 2.366 ms
+2026-01-24T11:38:38.338Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-24T11:38:38.339Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 1.137 ms
+2026-01-24T11:38:38.341Z info: API getFileUri called {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-html5ified-dummy.mkv',
+  cacheBuster: 0
+}
+2026-01-24T11:38:38.342Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 0.963 ms
+2026-01-24T11:38:39.593Z info: API getOutFileExtension called {
+  isCustomFormatSelected: false,
+  outFormat: 'asf',
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv'
+}
+2026-01-24T11:38:39.595Z info: 127.0.0.1 POST /api/getOutFileExtension HTTP/1.1 200 - 2.320 ms
+2026-01-24T11:38:39.598Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-24T11:38:39.599Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 1.509 ms
+2026-01-24T11:38:39.601Z info: API getFileUri called {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-html5ified-dummy.mkv',
+  cacheBuster: 0
+}
+2026-01-24T11:38:39.602Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 1.494 ms
+2026-01-24T11:38:39.603Z info: API getOutFileExtension called {
+  isCustomFormatSelected: false,
+  outFormat: 'asf',
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv'
+}
+2026-01-24T11:38:39.605Z info: 127.0.0.1 POST /api/getOutFileExtension HTTP/1.1 200 - 1.508 ms
+2026-01-24T11:38:39.673Z info: API pathJoin called {
+  paths: [
+    'C:\\Users\\alex-\\Downloads',
+    '[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-cut-merged-1769254719591.wmv'
+  ]
+}
+2026-01-24T11:38:39.694Z info: 127.0.0.1 POST /api/pathJoin HTTP/1.1 200 - 20.383 ms
+2026-01-24T11:38:39.697Z info: API pathJoin called {
+  paths: [
+    'C:\\Users\\alex-\\Downloads',
+    '[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-cut-merged-1769254719594.wmv'
+  ]
+}
+2026-01-24T11:38:39.706Z info: 127.0.0.1 POST /api/pathJoin HTTP/1.1 200 - 8.514 ms
+2026-01-24T11:38:41.758Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-24T11:38:41.760Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 1.289 ms
+2026-01-24T11:38:41.761Z info: API getFileUri called {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-html5ified-dummy.mkv',
+  cacheBuster: 0
+}
+2026-01-24T11:38:41.762Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 1.518 ms
+2026-01-24T11:38:41.769Z info: API getOutFileExtension called {
+  isCustomFormatSelected: false,
+  outFormat: 'asf',
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv'
+}
+2026-01-24T11:38:41.770Z info: 127.0.0.1 POST /api/getOutFileExtension HTTP/1.1 200 - 1.278 ms
+2026-01-24T11:38:41.772Z info: API getOutFileExtension called {
+  isCustomFormatSelected: false,
+  outFormat: 'asf',
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv'
+}
+2026-01-24T11:38:41.773Z info: 127.0.0.1 POST /api/getOutFileExtension HTTP/1.1 200 - 1.312 ms
+2026-01-24T11:38:41.787Z info: API pathJoin called {
+  paths: [
+    'C:\\Users\\alex-\\Downloads',
+    '[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-00.01.10.912-00.01.54.076-seg1.wmv'
+  ]
+}
+2026-01-24T11:38:41.789Z info: 127.0.0.1 POST /api/pathJoin HTTP/1.1 200 - 1.467 ms
+2026-01-24T11:38:41.792Z info: API pathJoin called {
+  paths: [
+    'C:\\Users\\alex-\\Downloads',
+    '[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-00.03.28.112-00.03.57.916-seg2.wmv'
+  ]
+}
+2026-01-24T11:38:41.793Z info: 127.0.0.1 POST /api/pathJoin HTTP/1.1 200 - 1.104 ms
+2026-01-24T11:38:41.797Z info: API pathJoin called {
+  paths: [
+    'C:\\Users\\alex-\\Downloads',
+    '[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-00.01.10.912-00.01.54.076-seg1.wmv'
+  ]
+}
+2026-01-24T11:38:41.798Z info: 127.0.0.1 POST /api/pathJoin HTTP/1.1 200 - 1.566 ms
+2026-01-24T11:38:41.801Z info: API pathExists called {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-00.01.10.912-00.01.54.076-seg1.wmv'
+}
+2026-01-24T11:38:41.802Z info: 127.0.0.1 POST /api/pathExists HTTP/1.1 200 - 1.317 ms
+2026-01-24T11:38:41.806Z info: API dirname called {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-00.01.10.912-00.01.54.076-seg1.wmv'
+}
+2026-01-24T11:38:41.807Z info: 127.0.0.1 POST /api/dirname HTTP/1.1 200 - 1.458 ms
+2026-01-24T11:38:41.812Z info: API getExperimentalArgs called { ffmpegExperimental: false }
+2026-01-24T11:38:41.814Z info: 127.0.0.1 POST /api/getExperimentalArgs HTTP/1.1 200 - 1.575 ms
+2026-01-24T11:38:41.818Z info: API getVideoTimescaleArgs called { videoTimebase: undefined }
+2026-01-24T11:38:41.819Z info: 127.0.0.1 POST /api/getVideoTimescaleArgs HTTP/1.1 200 - 0.886 ms
+2026-01-24T11:38:41.823Z info: API getFfCommandLine called {
+  cmd: 'ffmpeg',
+  args: [
+    '-hide_banner',
+    '-ss',
+    '70.91238',
+    '-i',
+    'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv',
+    '-t',
+    '43.16406',
+    '-avoid_negative_ts',
+    'make_zero',
+    '-map',
+    '0:0',
+    '-c:0',
+    'copy',
+    '-map',
+    '0:1',
+    '-c:1',
+    'copy',
+    '-map_metadata',
+    '0',
+    '-movflags',
+    '+faststart',
+    '-default_mode',
+    'infer_no_subs',
+    '-ignore_unknown',
+    '-f',
+    'asf',
+    '-y',
+    'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-00.01.10.912-00.01.54.076-seg1.wmv'
+  ]
+}
+2026-01-24T11:38:41.825Z info: 127.0.0.1 POST /api/getFfCommandLine HTTP/1.1 200 - 1.894 ms
+2026-01-24T11:38:41.830Z info: API runFfmpeg called {
+  ffmpegArgs: [
+    '-hide_banner',
+    '-ss',
+    '70.91238',
+    '-i',
+    'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv',
+    '-t',
+    '43.16406',
+    '-avoid_negative_ts',
+    'make_zero',
+    '-map',
+    '0:0',
+    '-c:0',
+    'copy',
+    '-map',
+    '0:1',
+    '-c:1',
+    'copy',
+    '-map_metadata',
+    '0',
+    '-movflags',
+    '+faststart',
+    '-default_mode',
+    'infer_no_subs',
+    '-ignore_unknown',
+    '-f',
+    'asf',
+    '-y',
+    'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-00.01.10.912-00.01.54.076-seg1.wmv'
+  ],
+  duration: 43.16405625
+}
+2026-01-24T11:38:41.901Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-24T11:38:41.903Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 2.331 ms
+2026-01-24T11:38:41.904Z info: API getFileUri called {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-html5ified-dummy.mkv',
+  cacheBuster: 0
+}
+2026-01-24T11:38:41.905Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 1.279 ms
+2026-01-24T11:38:41.943Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-24T11:38:41.945Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 1.638 ms
+2026-01-24T11:38:41.947Z info: API getFileUri called {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-html5ified-dummy.mkv',
+  cacheBuster: 0
+}
+2026-01-24T11:38:41.949Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 2.109 ms
+2026-01-24T11:38:41.989Z info: 127.0.0.1 POST /api/runFfmpeg HTTP/1.1 200 - 13.117 ms
+2026-01-24T11:38:42.007Z info: API transferTimestamps called {
+  inPath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv',
+  outPath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-00.01.10.912-00.01.54.076-seg1.wmv',
+  cutFrom: 70.912378125,
+  cutTo: 114.076434375,
+  duration: 328.869,
+  treatInputFileModifiedTimeAsStart: true,
+  treatOutputFileModifiedTimeAsStart: true
+}
+2026-01-24T11:38:42.011Z info: 127.0.0.1 POST /api/transferTimestamps HTTP/1.1 200 - 4.205 ms
+2026-01-24T11:38:42.015Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-24T11:38:42.017Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 2.110 ms
+2026-01-24T11:38:42.018Z info: API getFileUri called {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-html5ified-dummy.mkv',
+  cacheBuster: 0
+}
+2026-01-24T11:38:42.021Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 2.118 ms
+2026-01-24T11:38:42.023Z info: API pathJoin called {
+  paths: [
+    'C:\\Users\\alex-\\Downloads',
+    '[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-00.03.28.112-00.03.57.916-seg2.wmv'
+  ]
+}
+2026-01-24T11:38:42.024Z info: 127.0.0.1 POST /api/pathJoin HTTP/1.1 200 - 1.429 ms
+2026-01-24T11:38:42.037Z info: API pathExists called {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-00.03.28.112-00.03.57.916-seg2.wmv'
+}
+2026-01-24T11:38:42.039Z info: 127.0.0.1 POST /api/pathExists HTTP/1.1 200 - 2.331 ms
+2026-01-24T11:38:42.044Z info: API dirname called {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-00.03.28.112-00.03.57.916-seg2.wmv'
+}
+2026-01-24T11:38:42.045Z info: 127.0.0.1 POST /api/dirname HTTP/1.1 200 - 1.447 ms
+2026-01-24T11:38:42.050Z info: API getExperimentalArgs called { ffmpegExperimental: false }
+2026-01-24T11:38:42.051Z info: 127.0.0.1 POST /api/getExperimentalArgs HTTP/1.1 200 - 1.085 ms
+2026-01-24T11:38:42.054Z info: API getVideoTimescaleArgs called { videoTimebase: undefined }
+2026-01-24T11:38:42.055Z info: 127.0.0.1 POST /api/getVideoTimescaleArgs HTTP/1.1 200 - 0.811 ms
+2026-01-24T11:38:42.059Z info: API getFfCommandLine called {
+  cmd: 'ffmpeg',
+  args: [
+    '-hide_banner',
+    '-ss',
+    '208.11241',
+    '-i',
+    'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv',
+    '-t',
+    '29.80375',
+    '-avoid_negative_ts',
+    'make_zero',
+    '-map',
+    '0:0',
+    '-c:0',
+    'copy',
+    '-map',
+    '0:1',
+    '-c:1',
+    'copy',
+    '-map_metadata',
+    '0',
+    '-movflags',
+    '+faststart',
+    '-default_mode',
+    'infer_no_subs',
+    '-ignore_unknown',
+    '-f',
+    'asf',
+    '-y',
+    'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-00.03.28.112-00.03.57.916-seg2.wmv'
+  ]
+}
+2026-01-24T11:38:42.061Z info: 127.0.0.1 POST /api/getFfCommandLine HTTP/1.1 200 - 1.409 ms
+2026-01-24T11:38:42.069Z info: API runFfmpeg called {
+  ffmpegArgs: [
+    '-hide_banner',
+    '-ss',
+    '208.11241',
+    '-i',
+    'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv',
+    '-t',
+    '29.80375',
+    '-avoid_negative_ts',
+    'make_zero',
+    '-map',
+    '0:0',
+    '-c:0',
+    'copy',
+    '-map',
+    '0:1',
+    '-c:1',
+    'copy',
+    '-map_metadata',
+    '0',
+    '-movflags',
+    '+faststart',
+    '-default_mode',
+    'infer_no_subs',
+    '-ignore_unknown',
+    '-f',
+    'asf',
+    '-y',
+    'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-00.03.28.112-00.03.57.916-seg2.wmv'
+  ],
+  duration: 29.803753124999986
+}
+2026-01-24T11:38:42.119Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-24T11:38:42.121Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 1.653 ms
+2026-01-24T11:38:42.125Z info: API getFileUri called {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-html5ified-dummy.mkv',
+  cacheBuster: 0
+}
+2026-01-24T11:38:42.127Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 2.033 ms
+2026-01-24T11:38:42.238Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5Calex-%5CDownloads%5C%5Bscorehd%5D+Lisa+Canon+-+Nurse+Super+Knockers-cut-merged-1752593600863.wmv&videoStreamIndex=1&audioStreamIndexes=0&seekTo=237.916167&size=800&fps=30 HTTP/1.1 200 - 253.855 ms
+2026-01-24T11:38:42.285Z info: 127.0.0.1 POST /api/runFfmpeg HTTP/1.1 200 - 11.217 ms
+2026-01-24T11:38:42.288Z info: API transferTimestamps called {
+  inPath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv',
+  outPath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-00.03.28.112-00.03.57.916-seg2.wmv',
+  cutFrom: 208.11241406250002,
+  cutTo: 237.9161671875,
+  duration: 328.869,
+  treatInputFileModifiedTimeAsStart: true,
+  treatOutputFileModifiedTimeAsStart: true
+}
+2026-01-24T11:38:42.290Z info: Received /stream request {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv',
+  videoStreamIndex: '1',
+  audioStreamIndexes: '0',
+  seekTo: '237.916167',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-24T11:38:42.304Z info: 127.0.0.1 POST /api/transferTimestamps HTTP/1.1 200 - 16.116 ms
+2026-01-24T11:38:42.348Z info: API getOutFileExtension called {
+  isCustomFormatSelected: false,
+  outFormat: 'asf',
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv'
+}
+2026-01-24T11:38:42.350Z info: 127.0.0.1 POST /api/getOutFileExtension HTTP/1.1 200 - 2.274 ms
+2026-01-24T11:38:42.356Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-24T11:38:42.357Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 1.833 ms
+2026-01-24T11:38:42.361Z info: API getFileUri called {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-html5ified-dummy.mkv',
+  cacheBuster: 0
+}
+2026-01-24T11:38:42.363Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 1.864 ms
+2026-01-24T11:38:42.406Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-24T11:38:42.408Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 2.043 ms
+2026-01-24T11:38:42.410Z info: API getFileUri called {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-html5ified-dummy.mkv',
+  cacheBuster: 0
+}
+2026-01-24T11:38:42.411Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 1.445 ms
+2026-01-24T11:38:42.422Z info: API pathJoin called {
+  paths: [
+    'C:\\Users\\alex-\\Downloads',
+    '[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-cut-merged-1769254722345.wmv'
+  ]
+}
+2026-01-24T11:38:42.423Z info: 127.0.0.1 POST /api/pathJoin HTTP/1.1 200 - 1.701 ms
+2026-01-24T11:38:42.439Z info: API getOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv',
+  fileName: '[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-cut-merged-1769254722345.wmv'
+}
+2026-01-24T11:38:42.441Z info: 127.0.0.1 POST /api/getOutPath HTTP/1.1 200 - 1.713 ms
+2026-01-24T11:38:42.445Z info: API getOutDir called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv'
+}
+2026-01-24T11:38:42.447Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 1.942 ms
+2026-01-24T11:38:42.454Z info: API pathExists called {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-cut-merged-1769254722345.wmv'
+}
+2026-01-24T11:38:42.456Z info: 127.0.0.1 POST /api/pathExists HTTP/1.1 200 - 2.048 ms
+2026-01-24T11:38:42.461Z info: API createChaptersFromSegments called {
+  segmentPaths: [
+    'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-00.01.10.912-00.01.54.076-seg1.wmv',
+    'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-00.03.28.112-00.03.57.916-seg2.wmv'
+  ],
+  chapterNames: undefined
+}
+2026-01-24T11:38:42.463Z info: 127.0.0.1 POST /api/createChaptersFromSegments HTTP/1.1 200 - 1.818 ms
+2026-01-24T11:38:42.471Z info: API readFileFfprobeMeta called {
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-00.01.10.912-00.01.54.076-seg1.wmv'
+}
+2026-01-24T11:38:42.622Z info: 127.0.0.1 POST /api/readFileFfprobeMeta HTTP/1.1 200 - 151.463 ms
+2026-01-24T11:38:42.626Z info: API pathExists called {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-cut-merged-1769254722345.wmv'
+}
+2026-01-24T11:38:42.628Z info: 127.0.0.1 POST /api/pathExists HTTP/1.1 200 - 1.864 ms
+2026-01-24T11:38:42.636Z info: API getDuration called {
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-00.01.10.912-00.01.54.076-seg1.wmv'
+}
+2026-01-24T11:38:42.824Z info: 127.0.0.1 POST /api/getDuration HTTP/1.1 200 - 187.535 ms
+2026-01-24T11:38:42.828Z info: API getDuration called {
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-00.03.28.112-00.03.57.916-seg2.wmv'
+}
+2026-01-24T11:38:43.098Z info: 127.0.0.1 POST /api/getDuration HTTP/1.1 200 - 269.126 ms
+2026-01-24T11:38:43.106Z info: API getExperimentalArgs called { ffmpegExperimental: false }
+2026-01-24T11:38:43.108Z info: 127.0.0.1 POST /api/getExperimentalArgs HTTP/1.1 200 - 1.925 ms
+2026-01-24T11:38:43.118Z info: API getVideoTimescaleArgs called { videoTimebase: undefined }
+2026-01-24T11:38:43.120Z info: 127.0.0.1 POST /api/getVideoTimescaleArgs HTTP/1.1 200 - 1.958 ms
+2026-01-24T11:38:43.126Z info: API pathResolve called {
+  paths: [
+    'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-00.01.10.912-00.01.54.076-seg1.wmv'
+  ]
+}
+2026-01-24T11:38:43.130Z info: 127.0.0.1 POST /api/pathResolve HTTP/1.1 200 - 3.319 ms
+2026-01-24T11:38:43.132Z info: API pathResolve called {
+  paths: [
+    'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-00.03.28.112-00.03.57.916-seg2.wmv'
+  ]
+}
+2026-01-24T11:38:43.139Z info: 127.0.0.1 POST /api/pathResolve HTTP/1.1 200 - 6.987 ms
+2026-01-24T11:38:43.149Z info: API getFfCommandLine called {
+  cmd: 'ffmpeg',
+  args: [
+    '-hide_banner',
+    '-f',
+    'concat',
+    '-safe',
+    '0',
+    '-protocol_whitelist',
+    'file,pipe,fd',
+    '-i',
+    '-',
+    '-map',
+    '0:0',
+    '-c:0',
+    'copy',
+    '-map',
+    '0:1',
+    '-c:1',
+    'copy',
+    '-movflags',
+    '+faststart',
+    '-default_mode',
+    'infer_no_subs',
+    '-ignore_unknown',
+    '-f',
+    'asf',
+    '-y',
+    'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-cut-merged-1769254722345.wmv'
+  ]
+}
+2026-01-24T11:38:43.154Z info: 127.0.0.1 POST /api/getFfCommandLine HTTP/1.1 200 - 4.913 ms
+2026-01-24T11:38:43.157Z info: API runFfmpegConcat called {
+  ffmpegArgs: [
+    '-hide_banner',
+    '-f',
+    'concat',
+    '-safe',
+    '0',
+    '-protocol_whitelist',
+    'file,pipe,fd',
+    '-i',
+    '-',
+    '-map',
+    '0:0',
+    '-c:0',
+    'copy',
+    '-map',
+    '0:1',
+    '-c:1',
+    'copy',
+    '-movflags',
+    '+faststart',
+    '-default_mode',
+    'infer_no_subs',
+    '-ignore_unknown',
+    '-f',
+    'asf',
+    '-y',
+    'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-cut-merged-1769254722345.wmv'
+  ],
+  concatTxt: "file 'file:C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-00.01.10.912-00.01.54.076-seg1.wmv'\n" +
+    "file 'file:C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-00.03.28.112-00.03.57.916-seg2.wmv'",
+  totalDuration: 76.15
+}
+2026-01-24T11:38:43.232Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-24T11:38:43.235Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 2.802 ms
+2026-01-24T11:38:43.238Z info: API getFileUri called {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-html5ified-dummy.mkv',
+  cacheBuster: 0
+}
+2026-01-24T11:38:43.241Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 2.844 ms
+2026-01-24T11:38:43.515Z info: 127.0.0.1 POST /api/runFfmpegConcat HTTP/1.1 200 - 20.404 ms
+2026-01-24T11:38:43.553Z info: API transferTimestamps called {
+  inPath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-00.01.10.912-00.01.54.076-seg1.wmv',
+  outPath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-cut-merged-1769254722345.wmv',
+  cutFrom: undefined,
+  cutTo: undefined,
+  duration: 76.15,
+  treatInputFileModifiedTimeAsStart: true,
+  treatOutputFileModifiedTimeAsStart: true
+}
+2026-01-24T11:38:43.557Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-24T11:38:43.559Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 2.145 ms
+2026-01-24T11:38:43.562Z info: API getFileUri called {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-html5ified-dummy.mkv',
+  cacheBuster: 0
+}
+2026-01-24T11:38:43.564Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 2.051 ms
+2026-01-24T11:38:43.571Z info: 127.0.0.1 POST /api/transferTimestamps HTTP/1.1 200 - 18.619 ms
+2026-01-24T11:38:43.588Z info: API unlinkWithRetry called {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-00.01.10.912-00.01.54.076-seg1.wmv'
+}
+2026-01-24T11:38:43.592Z info: API unlinkWithRetry called {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-00.03.28.112-00.03.57.916-seg2.wmv'
+}
+2026-01-24T11:38:43.597Z info: 127.0.0.1 POST /api/unlinkWithRetry HTTP/1.1 200 - 8.476 ms
+2026-01-24T11:38:43.601Z info: 127.0.0.1 POST /api/unlinkWithRetry HTTP/1.1 200 - 8.559 ms
+2026-01-24T11:38:43.711Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-24T11:38:43.713Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 2.324 ms
+2026-01-24T11:38:43.717Z info: API getFileUri called {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-html5ified-dummy.mkv',
+  cacheBuster: 0
+}
+2026-01-24T11:38:43.719Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 1.812 ms
+2026-01-24T11:38:46.566Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-24T11:38:46.567Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 1.296 ms
+2026-01-24T11:38:46.569Z info: API getFileUri called {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-html5ified-dummy.mkv',
+  cacheBuster: 0
+}
+2026-01-24T11:38:46.569Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 0.984 ms
+2026-01-24T11:38:50.540Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5Calex-%5CDownloads%5C%5Bscorehd%5D+Lisa+Canon+-+Nurse+Super+Knockers-cut-merged-1752593600863.wmv&videoStreamIndex=1&audioStreamIndexes=0&seekTo=237.916167&size=800&fps=30 HTTP/1.1 200 - 463.167 ms
+2026-01-24T11:38:50.555Z info: Received /stream request {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv',
+  videoStreamIndex: '1',
+  audioStreamIndexes: '0',
+  seekTo: '237.916167',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-24T11:38:57.455Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5Calex-%5CDownloads%5C%5Bscorehd%5D+Lisa+Canon+-+Nurse+Super+Knockers-cut-merged-1752593600863.wmv&videoStreamIndex=1&audioStreamIndexes=0&seekTo=237.916167&size=800&fps=30 HTTP/1.1 200 - 216.744 ms
+2026-01-24T11:38:57.794Z info: Received /stream request {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv',
+  videoStreamIndex: '1',
+  audioStreamIndexes: '0',
+  seekTo: '237.916167',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-24T11:39:04.668Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5Calex-%5CDownloads%5C%5Bscorehd%5D+Lisa+Canon+-+Nurse+Super+Knockers-cut-merged-1752593600863.wmv&videoStreamIndex=1&audioStreamIndexes=0&seekTo=237.916167&size=800&fps=30 HTTP/1.1 200 - 182.063 ms
+2026-01-24T11:39:04.693Z info: Received /stream request {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv',
+  videoStreamIndex: '1',
+  audioStreamIndexes: '0',
+  seekTo: '237.916167',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-24T11:39:11.544Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5Calex-%5CDownloads%5C%5Bscorehd%5D+Lisa+Canon+-+Nurse+Super+Knockers-cut-merged-1752593600863.wmv&videoStreamIndex=1&audioStreamIndexes=0&seekTo=237.916167&size=800&fps=30 HTTP/1.1 200 - 193.136 ms
+2026-01-24T11:39:11.849Z info: Received /stream request {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv',
+  videoStreamIndex: '1',
+  audioStreamIndexes: '0',
+  seekTo: '237.916167',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-24T11:39:18.754Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5Calex-%5CDownloads%5C%5Bscorehd%5D+Lisa+Canon+-+Nurse+Super+Knockers-cut-merged-1752593600863.wmv&videoStreamIndex=1&audioStreamIndexes=0&seekTo=237.916167&size=800&fps=30 HTTP/1.1 200 - 196.906 ms
+2026-01-24T11:39:18.756Z info: Received /stream request {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv',
+  videoStreamIndex: '1',
+  audioStreamIndexes: '0',
+  seekTo: '237.916167',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-24T11:39:25.686Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5Calex-%5CDownloads%5C%5Bscorehd%5D+Lisa+Canon+-+Nurse+Super+Knockers-cut-merged-1752593600863.wmv&videoStreamIndex=1&audioStreamIndexes=0&seekTo=237.916167&size=800&fps=30 HTTP/1.1 200 - 200.282 ms
+2026-01-24T11:39:26.000Z info: Received /stream request {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv',
+  videoStreamIndex: '1',
+  audioStreamIndexes: '0',
+  seekTo: '237.916167',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-24T11:39:32.869Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5Calex-%5CDownloads%5C%5Bscorehd%5D+Lisa+Canon+-+Nurse+Super+Knockers-cut-merged-1752593600863.wmv&videoStreamIndex=1&audioStreamIndexes=0&seekTo=237.916167&size=800&fps=30 HTTP/1.1 200 - 189.813 ms
+2026-01-24T11:39:32.882Z info: Received /stream request {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv',
+  videoStreamIndex: '1',
+  audioStreamIndexes: '0',
+  seekTo: '237.916167',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-24T11:39:35.490Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-24T11:39:35.491Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 1.155 ms
+2026-01-24T11:39:35.493Z info: API getFileUri called {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-html5ified-dummy.mkv',
+  cacheBuster: 0
+}
+2026-01-24T11:39:35.494Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 0.947 ms
+2026-01-24T12:23:28.735Z info: LosslessCut version 3.67.2 { isDev: true }
+2026-01-24T12:23:28.802Z info: Initialized config store
+2026-01-24T12:23:28.808Z info: Waiting for app to become ready
+2026-01-24T12:23:28.816Z info: CLI arguments { _: [] }
+2026-01-24T12:23:28.838Z info: HTTP API listening on http://127.0.0.1:8080/
+2026-01-24T12:23:28.839Z info: HTTP API listening on port 8080
+2026-01-24T12:23:29.061Z info: Added Extension React Developer Tools
+2026-01-24T12:23:29.408Z info: Current version 3.67.2
+2026-01-24T12:23:29.408Z info: Newest version 3.67.2
+2026-01-24T12:23:36.964Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T12:23:36.973Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 23.965 ms
+2026-01-24T12:23:36.983Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T12:23:36.986Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 2.966 ms
+2026-01-24T12:23:36.988Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: undefined,
+  nameSuffix: 'proj.llc'
+}
+2026-01-24T12:23:36.990Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 2.706 ms
+2026-01-24T12:23:36.992Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T12:23:36.995Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 3.275 ms
+2026-01-24T12:23:36.998Z info: API getFileUri called { path: undefined, cacheBuster: 0 }
+2026-01-24T12:23:37.000Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 2.480 ms
+2026-01-24T12:23:37.003Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T12:23:37.005Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 2.329 ms
+2026-01-24T12:23:37.007Z info: API getFileUri called { path: undefined, cacheBuster: 0 }
+2026-01-24T12:23:37.009Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 2.402 ms
+2026-01-24T12:23:37.010Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T12:23:37.014Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 3.247 ms
+2026-01-24T12:23:37.016Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T12:23:37.018Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 2.476 ms
+2026-01-24T12:23:37.020Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: undefined,
+  nameSuffix: 'proj.llc'
+}
+2026-01-24T12:23:37.022Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 1.898 ms
+2026-01-24T12:23:37.024Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: undefined,
+  nameSuffix: 'proj.llc'
+}
+2026-01-24T12:23:37.026Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 1.906 ms
+2026-01-24T12:23:37.028Z info: API getFileUri called { path: undefined, cacheBuster: 0 }
+2026-01-24T12:23:37.031Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 2.645 ms
+2026-01-24T12:23:37.032Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T12:23:37.033Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 1.516 ms
+2026-01-24T12:23:37.034Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: undefined,
+  nameSuffix: 'proj.llc'
+}
+2026-01-24T12:23:37.036Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 1.682 ms
+2026-01-24T12:23:37.038Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T12:23:37.039Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 1.636 ms
+2026-01-24T12:23:37.041Z info: API getFileUri called { path: undefined, cacheBuster: 0 }
+2026-01-24T12:23:37.046Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 4.769 ms
+2026-01-24T12:23:37.048Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T12:23:37.050Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 1.571 ms
+2026-01-24T12:23:37.051Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T12:23:37.053Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 2.100 ms
+2026-01-24T12:23:37.054Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: undefined,
+  nameSuffix: 'proj.llc'
+}
+2026-01-24T12:23:37.056Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 1.741 ms
+2026-01-24T12:23:37.057Z info: API getFileUri called { path: undefined, cacheBuster: 0 }
+2026-01-24T12:23:37.059Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 1.744 ms
+2026-01-24T12:23:43.702Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T12:23:43.704Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 0.940 ms
+2026-01-24T12:23:43.705Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: undefined,
+  nameSuffix: 'proj.llc'
+}
+2026-01-24T12:23:43.706Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 1.035 ms
+2026-01-24T12:23:43.706Z info: API getFileUri called { path: undefined, cacheBuster: 0 }
+2026-01-24T12:23:43.707Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 1.069 ms
+2026-01-24T12:23:43.708Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T12:23:43.709Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 0.951 ms
+2026-01-24T12:23:43.710Z info: API isDirectory called {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv'
+}
+2026-01-24T12:23:43.713Z info: 127.0.0.1 POST /api/isDirectory HTTP/1.1 200 - 2.657 ms
+2026-01-24T12:23:43.719Z info: API isFile called {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv'
+}
+2026-01-24T12:23:43.721Z info: 127.0.0.1 POST /api/isFile HTTP/1.1 200 - 2.219 ms
+2026-01-24T12:23:43.725Z info: API basename called {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv'
+}
+2026-01-24T12:23:43.726Z info: 127.0.0.1 POST /api/basename HTTP/1.1 200 - 1.226 ms
+2026-01-24T12:23:43.737Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T12:23:43.738Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 0.980 ms
+2026-01-24T12:23:43.739Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T12:23:43.740Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 0.999 ms
+2026-01-24T12:23:43.762Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: undefined,
+  nameSuffix: 'proj.llc'
+}
+2026-01-24T12:23:43.763Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 1.168 ms
+2026-01-24T12:23:43.764Z info: API getFileUri called { path: undefined, cacheBuster: 0 }
+2026-01-24T12:23:43.766Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 1.285 ms
+2026-01-24T12:23:43.802Z info: API readFileFfprobeMeta called {
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv'
+}
+2026-01-24T12:23:43.885Z info: 127.0.0.1 POST /api/readFileFfprobeMeta HTTP/1.1 200 - 83.818 ms
+2026-01-24T12:23:43.890Z info: API getOutDir called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv'
+}
+2026-01-24T12:23:43.891Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 0.931 ms
+2026-01-24T12:23:43.895Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-24T12:23:43.896Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 1.334 ms
+2026-01-24T12:23:43.907Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T12:23:43.908Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 1.161 ms
+2026-01-24T12:23:43.909Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T12:23:43.910Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 0.887 ms
+2026-01-24T12:23:43.911Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: undefined,
+  nameSuffix: 'proj.llc'
+}
+2026-01-24T12:23:43.912Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.978 ms
+2026-01-24T12:23:43.913Z info: API getFileUri called {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-html5ified-dummy.mkv',
+  cacheBuster: 0
+}
+2026-01-24T12:23:43.916Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 2.160 ms
+2026-01-24T12:23:43.918Z info: API pathExists called {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-proj.llc'
+}
+2026-01-24T12:23:43.920Z info: 127.0.0.1 POST /api/pathExists HTTP/1.1 200 - 1.992 ms
+2026-01-24T12:23:43.937Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T12:23:43.938Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 1.046 ms
+2026-01-24T12:23:43.939Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T12:23:43.940Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 0.870 ms
+2026-01-24T12:23:43.946Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: undefined,
+  nameSuffix: 'proj.llc'
+}
+2026-01-24T12:23:43.947Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 1.139 ms
+2026-01-24T12:23:43.949Z info: API getFileUri called {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-html5ified-dummy.mkv',
+  cacheBuster: 0
+}
+2026-01-24T12:23:43.950Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 1.420 ms
+2026-01-24T12:23:43.961Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T12:23:43.962Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 1.020 ms
+2026-01-24T12:23:43.963Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T12:23:43.964Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 0.990 ms
+2026-01-24T12:23:43.969Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: undefined,
+  nameSuffix: 'proj.llc'
+}
+2026-01-24T12:23:43.970Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 1.063 ms
+2026-01-24T12:23:43.971Z info: API getFileUri called {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-html5ified-dummy.mkv',
+  cacheBuster: 0
+}
+2026-01-24T12:23:43.972Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 1.099 ms
+2026-01-24T12:23:44.023Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T12:23:44.024Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 1.009 ms
+2026-01-24T12:23:44.025Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T12:23:44.026Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 1.004 ms
+2026-01-24T12:23:44.045Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-24T12:23:44.048Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 3.118 ms
+2026-01-24T12:23:44.050Z info: API getOutDir called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv'
+}
+2026-01-24T12:23:44.052Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 1.555 ms
+2026-01-24T12:23:44.053Z info: API getFileUri called {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-html5ified-dummy.mkv',
+  cacheBuster: 0
+}
+2026-01-24T12:23:44.054Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 1.085 ms
+2026-01-24T12:23:44.107Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T12:23:44.108Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 1.136 ms
+2026-01-24T12:23:44.110Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T12:23:44.111Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 1.042 ms
+2026-01-24T12:23:44.120Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-24T12:23:44.122Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 1.188 ms
+2026-01-24T12:23:44.123Z info: API getFileUri called {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-html5ified-dummy.mkv',
+  cacheBuster: 0
+}
+2026-01-24T12:23:44.123Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 0.866 ms
+2026-01-24T12:23:44.161Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T12:23:44.162Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 1.177 ms
+2026-01-24T12:23:44.163Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T12:23:44.165Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 1.059 ms
+2026-01-24T12:23:44.174Z info: Received /stream request {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv',
+  videoStreamIndex: '1',
+  audioStreamIndexes: '0',
+  seekTo: '0',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-24T12:23:44.186Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-24T12:23:44.187Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 1.230 ms
+2026-01-24T12:23:44.189Z info: API getFileUri called {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-html5ified-dummy.mkv',
+  cacheBuster: 0
+}
+2026-01-24T12:23:44.190Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 1.141 ms
+2026-01-24T12:23:44.221Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T12:23:44.222Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 1.080 ms
+2026-01-24T12:23:44.223Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T12:23:44.224Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 0.946 ms
+2026-01-24T12:23:44.227Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-24T12:23:44.228Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 1.117 ms
+2026-01-24T12:23:44.230Z info: API getFileUri called {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-html5ified-dummy.mkv',
+  cacheBuster: 0
+}
+2026-01-24T12:23:44.231Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 1.112 ms
+2026-01-24T12:23:44.245Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T12:23:44.246Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 1.091 ms
+2026-01-24T12:23:44.248Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T12:23:44.249Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 1.084 ms
+2026-01-24T12:23:44.252Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-24T12:23:44.253Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 1.211 ms
+2026-01-24T12:23:44.255Z info: API getFileUri called {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-html5ified-dummy.mkv',
+  cacheBuster: 0
+}
+2026-01-24T12:23:44.256Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 1.211 ms
+2026-01-24T12:23:44.498Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T12:23:44.500Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 1.604 ms
+2026-01-24T12:23:44.503Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T12:23:44.505Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 2.656 ms
+2026-01-24T12:23:44.510Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-24T12:23:44.512Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 2.056 ms
+2026-01-24T12:23:44.514Z info: API getFileUri called {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-html5ified-dummy.mkv',
+  cacheBuster: 0
+}
+2026-01-24T12:23:44.515Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 0.966 ms
+2026-01-24T12:23:44.537Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T12:23:44.538Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 1.655 ms
+2026-01-24T12:23:44.539Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T12:23:44.540Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 1.012 ms
+2026-01-24T12:23:44.547Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-24T12:23:44.549Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 2.453 ms
+2026-01-24T12:23:44.553Z info: API getFileUri called {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-html5ified-dummy.mkv',
+  cacheBuster: 0
+}
+2026-01-24T12:23:44.554Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 1.223 ms
+2026-01-24T12:23:44.558Z info: API readFramesAroundTime called {
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv',
+  aroundTime: 0,
+  streamIndex: 1,
+  window: 60
+}
+2026-01-24T12:23:44.737Z info: 127.0.0.1 POST /api/readFramesAroundTime HTTP/1.1 200 - 178.535 ms
+2026-01-24T12:23:44.757Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T12:23:44.758Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 1.489 ms
+2026-01-24T12:23:44.760Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T12:23:44.761Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 0.940 ms
+2026-01-24T12:23:44.766Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-24T12:23:44.767Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 1.797 ms
+2026-01-24T12:23:44.768Z info: API getFileUri called {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-html5ified-dummy.mkv',
+  cacheBuster: 0
+}
+2026-01-24T12:23:44.770Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 1.448 ms
+2026-01-24T12:23:45.797Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T12:23:45.798Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 1.327 ms
+2026-01-24T12:23:45.801Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T12:23:45.802Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 1.129 ms
+2026-01-24T12:23:45.803Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-24T12:23:45.804Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 1.035 ms
+2026-01-24T12:23:45.805Z info: API getFileUri called {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-html5ified-dummy.mkv',
+  cacheBuster: 0
+}
+2026-01-24T12:23:45.806Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 1.138 ms
+2026-01-24T12:23:46.065Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T12:23:46.066Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 0.968 ms
+2026-01-24T12:23:46.068Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T12:23:46.069Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 1.182 ms
+2026-01-24T12:23:46.072Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-24T12:23:46.073Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 1.231 ms
+2026-01-24T12:23:46.074Z info: API getFileUri called {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-html5ified-dummy.mkv',
+  cacheBuster: 0
+}
+2026-01-24T12:23:46.075Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 1.021 ms
+2026-01-24T12:23:46.273Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T12:23:46.274Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 1.056 ms
+2026-01-24T12:23:46.274Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T12:23:46.275Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 0.970 ms
+2026-01-24T12:23:46.278Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-24T12:23:46.279Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.942 ms
+2026-01-24T12:23:46.280Z info: API getFileUri called {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-html5ified-dummy.mkv',
+  cacheBuster: 0
+}
+2026-01-24T12:23:46.281Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 1.321 ms
+2026-01-24T12:23:46.318Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T12:23:46.319Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 1.163 ms
+2026-01-24T12:23:46.321Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T12:23:46.322Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 0.981 ms
+2026-01-24T12:23:46.323Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-24T12:23:46.325Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 1.168 ms
+2026-01-24T12:23:46.325Z info: API getFileUri called {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-html5ified-dummy.mkv',
+  cacheBuster: 0
+}
+2026-01-24T12:23:46.327Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 0.985 ms
+2026-01-24T12:23:46.589Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T12:23:46.590Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 1.535 ms
+2026-01-24T12:23:46.592Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T12:23:46.593Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 0.994 ms
+2026-01-24T12:23:46.595Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-24T12:23:46.597Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 1.422 ms
+2026-01-24T12:23:46.598Z info: API getFileUri called {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-html5ified-dummy.mkv',
+  cacheBuster: 0
+}
+2026-01-24T12:23:46.599Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 1.191 ms
+2026-01-24T12:23:46.846Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T12:23:46.848Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 1.886 ms
+2026-01-24T12:23:46.852Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T12:23:46.855Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 3.026 ms
+2026-01-24T12:23:46.860Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-24T12:23:46.863Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 2.777 ms
+2026-01-24T12:23:46.865Z info: API getFileUri called {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-html5ified-dummy.mkv',
+  cacheBuster: 0
+}
+2026-01-24T12:23:46.867Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 1.790 ms
+2026-01-24T12:23:47.118Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T12:23:47.119Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 1.335 ms
+2026-01-24T12:23:47.120Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T12:23:47.121Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 1.053 ms
+2026-01-24T12:23:47.125Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-24T12:23:47.126Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 1.224 ms
+2026-01-24T12:23:47.127Z info: API getFileUri called {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-html5ified-dummy.mkv',
+  cacheBuster: 0
+}
+2026-01-24T12:23:47.128Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 1.284 ms
+2026-01-24T12:23:47.374Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T12:23:47.375Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 0.918 ms
+2026-01-24T12:23:47.376Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T12:23:47.377Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 0.900 ms
+2026-01-24T12:23:47.379Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-24T12:23:47.380Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 1.335 ms
+2026-01-24T12:23:47.382Z info: API getFileUri called {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-html5ified-dummy.mkv',
+  cacheBuster: 0
+}
+2026-01-24T12:23:47.383Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 0.950 ms
+2026-01-24T12:23:47.650Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T12:23:47.651Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 1.052 ms
+2026-01-24T12:23:47.652Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T12:23:47.653Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 0.833 ms
+2026-01-24T12:23:47.655Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-24T12:23:47.657Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 1.394 ms
+2026-01-24T12:23:47.658Z info: API getFileUri called {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-html5ified-dummy.mkv',
+  cacheBuster: 0
+}
+2026-01-24T12:23:47.659Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 1.475 ms
+2026-01-24T12:23:47.913Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T12:23:47.914Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 1.826 ms
+2026-01-24T12:23:47.916Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T12:23:47.918Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 1.858 ms
+2026-01-24T12:23:47.919Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-24T12:23:47.920Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 1.186 ms
+2026-01-24T12:23:47.923Z info: API getFileUri called {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-html5ified-dummy.mkv',
+  cacheBuster: 0
+}
+2026-01-24T12:23:47.925Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 1.864 ms
+2026-01-24T12:23:48.190Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T12:23:48.191Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 0.882 ms
+2026-01-24T12:23:48.192Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T12:23:48.193Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 0.958 ms
+2026-01-24T12:23:48.195Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-24T12:23:48.196Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 1.431 ms
+2026-01-24T12:23:48.197Z info: API getFileUri called {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-html5ified-dummy.mkv',
+  cacheBuster: 0
+}
+2026-01-24T12:23:48.199Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 1.093 ms
+2026-01-24T12:23:48.448Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T12:23:48.449Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 1.074 ms
+2026-01-24T12:23:48.451Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T12:23:48.452Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 1.172 ms
+2026-01-24T12:23:48.454Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-24T12:23:48.456Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 1.508 ms
+2026-01-24T12:23:48.457Z info: API getFileUri called {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-html5ified-dummy.mkv',
+  cacheBuster: 0
+}
+2026-01-24T12:23:48.458Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 1.143 ms
+2026-01-24T12:23:48.700Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T12:23:48.701Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 1.195 ms
+2026-01-24T12:23:48.702Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T12:23:48.704Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 1.285 ms
+2026-01-24T12:23:48.706Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-24T12:23:48.708Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 1.421 ms
+2026-01-24T12:23:48.709Z info: API getFileUri called {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-html5ified-dummy.mkv',
+  cacheBuster: 0
+}
+2026-01-24T12:23:48.710Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 1.059 ms
+2026-01-24T12:23:48.869Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T12:23:48.870Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 0.903 ms
+2026-01-24T12:23:48.872Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T12:23:48.873Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 1.235 ms
+2026-01-24T12:23:48.875Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-24T12:23:48.876Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 1.210 ms
+2026-01-24T12:23:48.877Z info: API getFileUri called {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-html5ified-dummy.mkv',
+  cacheBuster: 0
+}
+2026-01-24T12:23:48.878Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 1.155 ms
+2026-01-24T12:23:48.894Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T12:23:48.895Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 1.069 ms
+2026-01-24T12:23:48.896Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T12:23:48.897Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 0.950 ms
+2026-01-24T12:23:48.904Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-24T12:23:48.906Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 1.746 ms
+2026-01-24T12:23:48.909Z info: API getFileUri called {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-html5ified-dummy.mkv',
+  cacheBuster: 0
+}
+2026-01-24T12:23:48.911Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 2.315 ms
+2026-01-24T12:23:49.375Z info: API readFramesAroundTime called {
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv',
+  aroundTime: 2.996473,
+  streamIndex: 1,
+  window: 60
+}
+2026-01-24T12:23:49.474Z info: 127.0.0.1 POST /api/readFramesAroundTime HTTP/1.1 200 - 98.448 ms
+2026-01-24T12:23:49.489Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T12:23:49.490Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 0.846 ms
+2026-01-24T12:23:49.491Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T12:23:49.491Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 0.702 ms
+2026-01-24T12:23:49.493Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-24T12:23:49.494Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 1.324 ms
+2026-01-24T12:23:49.495Z info: API getFileUri called {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-html5ified-dummy.mkv',
+  cacheBuster: 0
+}
+2026-01-24T12:23:49.496Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 0.915 ms
+2026-01-24T12:23:52.042Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T12:23:52.050Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 7.874 ms
+2026-01-24T12:23:52.054Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T12:23:52.055Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 1.368 ms
+2026-01-24T12:23:52.056Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-24T12:23:52.057Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.861 ms
+2026-01-24T12:23:52.057Z info: API getFileUri called {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-html5ified-dummy.mkv',
+  cacheBuster: 0
+}
+2026-01-24T12:23:52.059Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 0.995 ms
+2026-01-24T12:23:52.059Z info: API getOutFileExtension called {
+  isCustomFormatSelected: false,
+  outFormat: 'asf',
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv'
+}
+2026-01-24T12:23:52.061Z info: 127.0.0.1 POST /api/getOutFileExtension HTTP/1.1 200 - 1.431 ms
+2026-01-24T12:23:52.061Z info: API getOutFileExtension called {
+  isCustomFormatSelected: false,
+  outFormat: 'asf',
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv'
+}
+2026-01-24T12:23:52.062Z info: 127.0.0.1 POST /api/getOutFileExtension HTTP/1.1 200 - 0.952 ms
+2026-01-24T12:23:52.095Z info: API pathJoin called {
+  paths: [
+    'C:\\Users\\alex-\\Downloads',
+    '[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-cut-merged-1769257432047.wmv'
+  ]
+}
+2026-01-24T12:23:52.096Z info: 127.0.0.1 POST /api/pathJoin HTTP/1.1 200 - 1.098 ms
+2026-01-24T12:23:52.097Z info: API pathJoin called {
+  paths: [
+    'C:\\Users\\alex-\\Downloads',
+    '[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-cut-merged-1769257432050.wmv'
+  ]
+}
+2026-01-24T12:23:52.098Z info: 127.0.0.1 POST /api/pathJoin HTTP/1.1 200 - 0.870 ms
+2026-01-24T12:23:53.686Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T12:23:53.687Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 1.105 ms
+2026-01-24T12:23:53.688Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T12:23:53.689Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 0.997 ms
+2026-01-24T12:23:53.698Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-24T12:23:53.699Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 1.017 ms
+2026-01-24T12:23:53.700Z info: API getFileUri called {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-html5ified-dummy.mkv',
+  cacheBuster: 0
+}
+2026-01-24T12:23:53.701Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 1.133 ms
+2026-01-24T12:23:53.708Z info: API getOutFileExtension called {
+  isCustomFormatSelected: false,
+  outFormat: 'asf',
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv'
+}
+2026-01-24T12:23:53.709Z info: 127.0.0.1 POST /api/getOutFileExtension HTTP/1.1 200 - 1.069 ms
+2026-01-24T12:23:53.710Z info: API getOutFileExtension called {
+  isCustomFormatSelected: false,
+  outFormat: 'asf',
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv'
+}
+2026-01-24T12:23:53.711Z info: 127.0.0.1 POST /api/getOutFileExtension HTTP/1.1 200 - 1.144 ms
+2026-01-24T12:23:53.729Z info: API pathJoin called {
+  paths: [
+    'C:\\Users\\alex-\\Downloads',
+    '[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-00.01.10.912-00.01.54.076-seg1.wmv'
+  ]
+}
+2026-01-24T12:23:53.730Z info: 127.0.0.1 POST /api/pathJoin HTTP/1.1 200 - 1.082 ms
+2026-01-24T12:23:53.733Z info: API pathJoin called {
+  paths: [
+    'C:\\Users\\alex-\\Downloads',
+    '[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-00.03.28.112-00.03.57.916-seg2.wmv'
+  ]
+}
+2026-01-24T12:23:53.734Z info: 127.0.0.1 POST /api/pathJoin HTTP/1.1 200 - 1.071 ms
+2026-01-24T12:23:53.738Z info: API pathJoin called {
+  paths: [
+    'C:\\Users\\alex-\\Downloads',
+    '[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-00.01.10.912-00.01.54.076-seg1.wmv'
+  ]
+}
+2026-01-24T12:23:53.739Z info: 127.0.0.1 POST /api/pathJoin HTTP/1.1 200 - 1.383 ms
+2026-01-24T12:23:53.742Z info: API pathExists called {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-00.01.10.912-00.01.54.076-seg1.wmv'
+}
+2026-01-24T12:23:53.744Z info: 127.0.0.1 POST /api/pathExists HTTP/1.1 200 - 1.801 ms
+2026-01-24T12:23:53.747Z info: API dirname called {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-00.01.10.912-00.01.54.076-seg1.wmv'
+}
+2026-01-24T12:23:53.748Z info: 127.0.0.1 POST /api/dirname HTTP/1.1 200 - 1.328 ms
+2026-01-24T12:23:53.753Z info: API getExperimentalArgs called { ffmpegExperimental: false }
+2026-01-24T12:23:53.755Z info: 127.0.0.1 POST /api/getExperimentalArgs HTTP/1.1 200 - 1.658 ms
+2026-01-24T12:23:53.758Z info: API getVideoTimescaleArgs called { videoTimebase: undefined }
+2026-01-24T12:23:53.759Z info: 127.0.0.1 POST /api/getVideoTimescaleArgs HTTP/1.1 200 - 1.300 ms
+2026-01-24T12:23:53.762Z info: API getFfCommandLine called {
+  cmd: 'ffmpeg',
+  args: [
+    '-hide_banner',
+    '-ss',
+    '70.91238',
+    '-i',
+    'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv',
+    '-t',
+    '43.16406',
+    '-avoid_negative_ts',
+    'make_zero',
+    '-map',
+    '0:0',
+    '-c:0',
+    'copy',
+    '-map',
+    '0:1',
+    '-c:1',
+    'copy',
+    '-map_metadata',
+    '0',
+    '-movflags',
+    '+faststart',
+    '-default_mode',
+    'infer_no_subs',
+    '-ignore_unknown',
+    '-f',
+    'asf',
+    '-y',
+    'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-00.01.10.912-00.01.54.076-seg1.wmv'
+  ]
+}
+2026-01-24T12:23:53.763Z info: 127.0.0.1 POST /api/getFfCommandLine HTTP/1.1 200 - 1.173 ms
+2026-01-24T12:23:53.765Z info: API runFfmpeg called {
+  ffmpegArgs: [
+    '-hide_banner',
+    '-ss',
+    '70.91238',
+    '-i',
+    'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv',
+    '-t',
+    '43.16406',
+    '-avoid_negative_ts',
+    'make_zero',
+    '-map',
+    '0:0',
+    '-c:0',
+    'copy',
+    '-map',
+    '0:1',
+    '-c:1',
+    'copy',
+    '-map_metadata',
+    '0',
+    '-movflags',
+    '+faststart',
+    '-default_mode',
+    'infer_no_subs',
+    '-ignore_unknown',
+    '-f',
+    'asf',
+    '-y',
+    'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-00.01.10.912-00.01.54.076-seg1.wmv'
+  ],
+  duration: 43.16405625
+}
+2026-01-24T12:23:53.804Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T12:23:53.807Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 2.853 ms
+2026-01-24T12:23:53.810Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T12:23:53.811Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 1.105 ms
+2026-01-24T12:23:53.815Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-24T12:23:53.816Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 1.180 ms
+2026-01-24T12:23:53.818Z info: API getFileUri called {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-html5ified-dummy.mkv',
+  cacheBuster: 0
+}
+2026-01-24T12:23:53.819Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 1.022 ms
+2026-01-24T12:23:53.836Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T12:23:53.837Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 1.050 ms
+2026-01-24T12:23:53.839Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T12:23:53.841Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 2.226 ms
+2026-01-24T12:23:53.853Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-24T12:23:53.854Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 1.349 ms
+2026-01-24T12:23:53.857Z info: API getFileUri called {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-html5ified-dummy.mkv',
+  cacheBuster: 0
+}
+2026-01-24T12:23:53.859Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 2.382 ms
+2026-01-24T12:23:53.891Z info: 127.0.0.1 POST /api/runFfmpeg HTTP/1.1 200 - 9.607 ms
+2026-01-24T12:23:53.900Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T12:23:53.901Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 0.972 ms
+2026-01-24T12:23:53.902Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T12:23:53.903Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 0.951 ms
+2026-01-24T12:23:53.912Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-24T12:23:53.913Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 1.196 ms
+2026-01-24T12:23:53.914Z info: API getFileUri called {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-html5ified-dummy.mkv',
+  cacheBuster: 0
+}
+2026-01-24T12:23:53.915Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 0.959 ms
+2026-01-24T12:23:53.938Z info: API pathJoin called {
+  paths: [
+    'C:\\Users\\alex-\\Downloads',
+    '[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-00.03.28.112-00.03.57.916-seg2.wmv'
+  ]
+}
+2026-01-24T12:23:53.939Z info: 127.0.0.1 POST /api/pathJoin HTTP/1.1 200 - 0.943 ms
+2026-01-24T12:23:53.947Z info: API pathExists called {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-00.03.28.112-00.03.57.916-seg2.wmv'
+}
+2026-01-24T12:23:53.949Z info: 127.0.0.1 POST /api/pathExists HTTP/1.1 200 - 1.201 ms
+2026-01-24T12:23:53.951Z info: API dirname called {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-00.03.28.112-00.03.57.916-seg2.wmv'
+}
+2026-01-24T12:23:53.952Z info: 127.0.0.1 POST /api/dirname HTTP/1.1 200 - 0.859 ms
+2026-01-24T12:23:53.954Z info: API getExperimentalArgs called { ffmpegExperimental: false }
+2026-01-24T12:23:53.955Z info: 127.0.0.1 POST /api/getExperimentalArgs HTTP/1.1 200 - 0.518 ms
+2026-01-24T12:23:53.960Z info: API getVideoTimescaleArgs called { videoTimebase: undefined }
+2026-01-24T12:23:53.961Z info: 127.0.0.1 POST /api/getVideoTimescaleArgs HTTP/1.1 200 - 0.706 ms
+2026-01-24T12:23:53.963Z info: API getFfCommandLine called {
+  cmd: 'ffmpeg',
+  args: [
+    '-hide_banner',
+    '-ss',
+    '208.11241',
+    '-i',
+    'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv',
+    '-t',
+    '29.80375',
+    '-avoid_negative_ts',
+    'make_zero',
+    '-map',
+    '0:0',
+    '-c:0',
+    'copy',
+    '-map',
+    '0:1',
+    '-c:1',
+    'copy',
+    '-map_metadata',
+    '0',
+    '-movflags',
+    '+faststart',
+    '-default_mode',
+    'infer_no_subs',
+    '-ignore_unknown',
+    '-f',
+    'asf',
+    '-y',
+    'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-00.03.28.112-00.03.57.916-seg2.wmv'
+  ]
+}
+2026-01-24T12:23:53.964Z info: 127.0.0.1 POST /api/getFfCommandLine HTTP/1.1 200 - 0.954 ms
+2026-01-24T12:23:53.966Z info: API runFfmpeg called {
+  ffmpegArgs: [
+    '-hide_banner',
+    '-ss',
+    '208.11241',
+    '-i',
+    'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv',
+    '-t',
+    '29.80375',
+    '-avoid_negative_ts',
+    'make_zero',
+    '-map',
+    '0:0',
+    '-c:0',
+    'copy',
+    '-map',
+    '0:1',
+    '-c:1',
+    'copy',
+    '-map_metadata',
+    '0',
+    '-movflags',
+    '+faststart',
+    '-default_mode',
+    'infer_no_subs',
+    '-ignore_unknown',
+    '-f',
+    'asf',
+    '-y',
+    'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-00.03.28.112-00.03.57.916-seg2.wmv'
+  ],
+  duration: 29.803753124999986
+}
+2026-01-24T12:23:53.998Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T12:23:53.999Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 1.155 ms
+2026-01-24T12:23:54.001Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T12:23:54.002Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 1.083 ms
+2026-01-24T12:23:54.008Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-24T12:23:54.011Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 2.294 ms
+2026-01-24T12:23:54.013Z info: API getFileUri called {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-html5ified-dummy.mkv',
+  cacheBuster: 0
+}
+2026-01-24T12:23:54.015Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 2.069 ms
+2026-01-24T12:23:54.121Z info: 127.0.0.1 POST /api/runFfmpeg HTTP/1.1 200 - 10.214 ms
+2026-01-24T12:23:54.129Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T12:23:54.130Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 0.962 ms
+2026-01-24T12:23:54.131Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T12:23:54.132Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 0.942 ms
+2026-01-24T12:23:54.137Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-24T12:23:54.139Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 1.577 ms
+2026-01-24T12:23:54.142Z info: API getFileUri called {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-html5ified-dummy.mkv',
+  cacheBuster: 0
+}
+2026-01-24T12:23:54.143Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 1.226 ms
+2026-01-24T12:23:54.145Z info: API getOutFileExtension called {
+  isCustomFormatSelected: false,
+  outFormat: 'asf',
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv'
+}
+2026-01-24T12:23:54.146Z info: 127.0.0.1 POST /api/getOutFileExtension HTTP/1.1 200 - 1.105 ms
+2026-01-24T12:23:54.156Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T12:23:54.157Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 1.147 ms
+2026-01-24T12:23:54.158Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T12:23:54.159Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 1.014 ms
+2026-01-24T12:23:54.165Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-24T12:23:54.166Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 1.071 ms
+2026-01-24T12:23:54.167Z info: API getFileUri called {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-html5ified-dummy.mkv',
+  cacheBuster: 0
+}
+2026-01-24T12:23:54.169Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 1.454 ms
+2026-01-24T12:23:54.170Z info: API pathJoin called {
+  paths: [
+    'C:\\Users\\alex-\\Downloads',
+    '[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-cut-merged-1769257434139.wmv'
+  ]
+}
+2026-01-24T12:23:54.171Z info: 127.0.0.1 POST /api/pathJoin HTTP/1.1 200 - 0.878 ms
+2026-01-24T12:23:54.180Z info: API getOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv',
+  fileName: '[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-cut-merged-1769257434139.wmv'
+}
+2026-01-24T12:23:54.181Z info: 127.0.0.1 POST /api/getOutPath HTTP/1.1 200 - 1.105 ms
+2026-01-24T12:23:54.183Z info: API getOutDir called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv'
+}
+2026-01-24T12:23:54.184Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 0.782 ms
+2026-01-24T12:23:54.186Z info: API pathExists called {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-cut-merged-1769257434139.wmv'
+}
+2026-01-24T12:23:54.187Z info: 127.0.0.1 POST /api/pathExists HTTP/1.1 200 - 1.086 ms
+2026-01-24T12:23:54.189Z info: API createChaptersFromSegments called {
+  segmentPaths: [
+    'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-00.01.10.912-00.01.54.076-seg1.wmv',
+    'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-00.03.28.112-00.03.57.916-seg2.wmv'
+  ],
+  chapterNames: undefined
+}
+2026-01-24T12:23:54.191Z info: 127.0.0.1 POST /api/createChaptersFromSegments HTTP/1.1 200 - 1.095 ms
+2026-01-24T12:23:54.194Z info: API readFileFfprobeMeta called {
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-00.01.10.912-00.01.54.076-seg1.wmv'
+}
+2026-01-24T12:23:54.274Z info: 127.0.0.1 POST /api/readFileFfprobeMeta HTTP/1.1 200 - 79.354 ms
+2026-01-24T12:23:54.277Z info: API pathExists called {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-cut-merged-1769257434139.wmv'
+}
+2026-01-24T12:23:54.278Z info: 127.0.0.1 POST /api/pathExists HTTP/1.1 200 - 1.424 ms
+2026-01-24T12:23:54.280Z info: API getDuration called {
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-00.01.10.912-00.01.54.076-seg1.wmv'
+}
+2026-01-24T12:23:54.359Z info: 127.0.0.1 POST /api/getDuration HTTP/1.1 200 - 79.077 ms
+2026-01-24T12:23:54.362Z info: API getDuration called {
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-00.03.28.112-00.03.57.916-seg2.wmv'
+}
+2026-01-24T12:23:54.436Z info: 127.0.0.1 POST /api/getDuration HTTP/1.1 200 - 74.070 ms
+2026-01-24T12:23:54.438Z info: API getExperimentalArgs called { ffmpegExperimental: false }
+2026-01-24T12:23:54.438Z info: 127.0.0.1 POST /api/getExperimentalArgs HTTP/1.1 200 - 0.530 ms
+2026-01-24T12:23:54.442Z info: API getVideoTimescaleArgs called { videoTimebase: undefined }
+2026-01-24T12:23:54.443Z info: 127.0.0.1 POST /api/getVideoTimescaleArgs HTTP/1.1 200 - 0.553 ms
+2026-01-24T12:23:54.446Z info: API pathResolve called {
+  paths: [
+    'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-00.01.10.912-00.01.54.076-seg1.wmv'
+  ]
+}
+2026-01-24T12:23:54.447Z info: 127.0.0.1 POST /api/pathResolve HTTP/1.1 200 - 1.413 ms
+2026-01-24T12:23:54.448Z info: API pathResolve called {
+  paths: [
+    'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-00.03.28.112-00.03.57.916-seg2.wmv'
+  ]
+}
+2026-01-24T12:23:54.449Z info: 127.0.0.1 POST /api/pathResolve HTTP/1.1 200 - 0.882 ms
+2026-01-24T12:23:54.451Z info: API getFfCommandLine called {
+  cmd: 'ffmpeg',
+  args: [
+    '-hide_banner',
+    '-f',
+    'concat',
+    '-safe',
+    '0',
+    '-protocol_whitelist',
+    'file,pipe,fd',
+    '-i',
+    '-',
+    '-map',
+    '0:0',
+    '-c:0',
+    'copy',
+    '-map',
+    '0:1',
+    '-c:1',
+    'copy',
+    '-movflags',
+    '+faststart',
+    '-default_mode',
+    'infer_no_subs',
+    '-ignore_unknown',
+    '-f',
+    'asf',
+    '-y',
+    'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-cut-merged-1769257434139.wmv'
+  ]
+}
+2026-01-24T12:23:54.452Z info: 127.0.0.1 POST /api/getFfCommandLine HTTP/1.1 200 - 0.920 ms
+2026-01-24T12:23:54.453Z info: API runFfmpegConcat called {
+  ffmpegArgs: [
+    '-hide_banner',
+    '-f',
+    'concat',
+    '-safe',
+    '0',
+    '-protocol_whitelist',
+    'file,pipe,fd',
+    '-i',
+    '-',
+    '-map',
+    '0:0',
+    '-c:0',
+    'copy',
+    '-map',
+    '0:1',
+    '-c:1',
+    'copy',
+    '-movflags',
+    '+faststart',
+    '-default_mode',
+    'infer_no_subs',
+    '-ignore_unknown',
+    '-f',
+    'asf',
+    '-y',
+    'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-cut-merged-1769257434139.wmv'
+  ],
+  concatTxt: "file 'file:C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-00.01.10.912-00.01.54.076-seg1.wmv'\n" +
+    "file 'file:C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-00.03.28.112-00.03.57.916-seg2.wmv'",
+  totalDuration: 76.15
+}
+2026-01-24T12:23:54.478Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T12:23:54.479Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 1.033 ms
+2026-01-24T12:23:54.480Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T12:23:54.481Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 0.851 ms
+2026-01-24T12:23:54.484Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-24T12:23:54.485Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 1.179 ms
+2026-01-24T12:23:54.486Z info: API getFileUri called {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-html5ified-dummy.mkv',
+  cacheBuster: 0
+}
+2026-01-24T12:23:54.487Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 1.191 ms
+2026-01-24T12:23:54.569Z info: 127.0.0.1 POST /api/runFfmpegConcat HTTP/1.1 200 - 10.026 ms
+2026-01-24T12:23:54.575Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T12:23:54.576Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 1.013 ms
+2026-01-24T12:23:54.577Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T12:23:54.578Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 0.808 ms
+2026-01-24T12:23:54.583Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-24T12:23:54.584Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 1.212 ms
+2026-01-24T12:23:54.585Z info: API getFileUri called {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-html5ified-dummy.mkv',
+  cacheBuster: 0
+}
+2026-01-24T12:23:54.586Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 1.069 ms
+2026-01-24T12:23:54.629Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T12:23:54.630Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 0.837 ms
+2026-01-24T12:23:54.631Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T12:23:54.631Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 0.849 ms
+2026-01-24T12:23:54.633Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-24T12:23:54.634Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 0.988 ms
+2026-01-24T12:23:54.635Z info: API getFileUri called {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-html5ified-dummy.mkv',
+  cacheBuster: 0
+}
+2026-01-24T12:23:54.636Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 0.787 ms
+2026-01-24T12:23:55.842Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T12:23:55.843Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 1.079 ms
+2026-01-24T12:23:55.844Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T12:23:55.845Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 1.090 ms
+2026-01-24T12:23:55.848Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-24T12:23:55.849Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 1.055 ms
+2026-01-24T12:23:55.850Z info: API getFileUri called {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-html5ified-dummy.mkv',
+  cacheBuster: 0
+}
+2026-01-24T12:23:55.851Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 1.039 ms
+2026-01-24T14:46:08.761Z info: LosslessCut version 3.67.2 { isDev: true }
+2026-01-24T14:46:08.845Z info: Initialized config store
+2026-01-24T14:46:08.852Z info: Waiting for app to become ready
+2026-01-24T14:46:08.864Z info: CLI arguments { _: [] }
+2026-01-24T14:46:08.884Z info: HTTP API listening on http://127.0.0.1:8080/
+2026-01-24T14:46:08.887Z info: HTTP API listening on port 8080
+2026-01-24T14:46:09.093Z info: Added Extension React Developer Tools
+2026-01-24T14:46:09.484Z info: Current version 3.67.2
+2026-01-24T14:46:09.484Z info: Newest version 3.67.2
+2026-01-24T14:46:20.114Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T14:46:20.121Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 16.245 ms
+2026-01-24T14:46:20.126Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T14:46:20.133Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 7.161 ms
+2026-01-24T14:46:20.140Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: undefined,
+  nameSuffix: 'proj.llc'
+}
+2026-01-24T14:46:20.143Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 2.893 ms
+2026-01-24T14:46:20.144Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T14:46:20.146Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 1.529 ms
+2026-01-24T14:46:20.147Z info: API getFileUri called { path: undefined, cacheBuster: 0 }
+2026-01-24T14:46:20.150Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 2.394 ms
+2026-01-24T14:46:20.151Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T14:46:20.152Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 1.397 ms
+2026-01-24T14:46:20.156Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: undefined,
+  nameSuffix: 'proj.llc'
+}
+2026-01-24T14:46:20.158Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 1.644 ms
+2026-01-24T14:46:20.159Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T14:46:20.162Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 2.052 ms
+2026-01-24T14:46:20.163Z info: API getFileUri called { path: undefined, cacheBuster: 0 }
+2026-01-24T14:46:20.165Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 1.866 ms
+2026-01-24T14:46:20.166Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T14:46:20.168Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 1.629 ms
+2026-01-24T14:46:20.170Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: undefined,
+  nameSuffix: 'proj.llc'
+}
+2026-01-24T14:46:20.172Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 2.140 ms
+2026-01-24T14:46:20.174Z info: API getFileUri called { path: undefined, cacheBuster: 0 }
+2026-01-24T14:46:20.176Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 2.127 ms
+2026-01-24T14:46:20.179Z info: API getFileUri called { path: undefined, cacheBuster: 0 }
+2026-01-24T14:46:20.180Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 1.386 ms
+2026-01-24T14:46:20.181Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T14:46:20.183Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 1.618 ms
+2026-01-24T14:46:20.184Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: undefined,
+  nameSuffix: 'proj.llc'
+}
+2026-01-24T14:46:20.185Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 1.548 ms
+2026-01-24T14:46:20.186Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T14:46:20.188Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 1.289 ms
+2026-01-24T14:46:20.189Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T14:46:20.191Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 2.068 ms
+2026-01-24T14:46:20.192Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T14:46:20.194Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 1.680 ms
+2026-01-24T14:46:20.196Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: undefined,
+  nameSuffix: 'proj.llc'
+}
+2026-01-24T14:46:20.198Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 1.728 ms
+2026-01-24T14:46:20.198Z info: API getFileUri called { path: undefined, cacheBuster: 0 }
+2026-01-24T14:46:20.200Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 1.169 ms
+2026-01-24T14:46:29.786Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T14:46:29.789Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 2.658 ms
+2026-01-24T14:46:29.790Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T14:46:29.792Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 1.530 ms
+2026-01-24T14:46:29.795Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: undefined,
+  nameSuffix: 'proj.llc'
+}
+2026-01-24T14:46:29.797Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 2.002 ms
+2026-01-24T14:46:29.799Z info: API getFileUri called { path: undefined, cacheBuster: 0 }
+2026-01-24T14:46:29.801Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 1.870 ms
+2026-01-24T14:46:29.812Z info: API isDirectory called {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv'
+}
+2026-01-24T14:46:29.815Z info: 127.0.0.1 POST /api/isDirectory HTTP/1.1 200 - 3.182 ms
+2026-01-24T14:46:29.818Z info: API isFile called {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv'
+}
+2026-01-24T14:46:29.821Z info: 127.0.0.1 POST /api/isFile HTTP/1.1 200 - 2.269 ms
+2026-01-24T14:46:29.824Z info: API basename called {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv'
+}
+2026-01-24T14:46:29.825Z info: 127.0.0.1 POST /api/basename HTTP/1.1 200 - 1.514 ms
+2026-01-24T14:46:29.841Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T14:46:29.842Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 1.453 ms
+2026-01-24T14:46:29.844Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T14:46:29.845Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 1.126 ms
+2026-01-24T14:46:29.875Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: undefined,
+  nameSuffix: 'proj.llc'
+}
+2026-01-24T14:46:29.877Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 1.460 ms
+2026-01-24T14:46:29.878Z info: API getFileUri called { path: undefined, cacheBuster: 0 }
+2026-01-24T14:46:29.879Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 1.208 ms
+2026-01-24T14:46:29.929Z info: API readFileFfprobeMeta called {
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv'
+}
+2026-01-24T14:46:30.039Z info: 127.0.0.1 POST /api/readFileFfprobeMeta HTTP/1.1 200 - 109.914 ms
+2026-01-24T14:46:30.045Z info: API getOutDir called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv'
+}
+2026-01-24T14:46:30.046Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 1.570 ms
+2026-01-24T14:46:30.051Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-24T14:46:30.054Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 2.101 ms
+2026-01-24T14:46:30.065Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T14:46:30.067Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 1.850 ms
+2026-01-24T14:46:30.069Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T14:46:30.070Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 1.382 ms
+2026-01-24T14:46:30.072Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: undefined,
+  nameSuffix: 'proj.llc'
+}
+2026-01-24T14:46:30.073Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 1.201 ms
+2026-01-24T14:46:30.074Z info: API getFileUri called {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-html5ified-dummy.mkv',
+  cacheBuster: 0
+}
+2026-01-24T14:46:30.076Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 1.828 ms
+2026-01-24T14:46:30.077Z info: API pathExists called {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-proj.llc'
+}
+2026-01-24T14:46:30.079Z info: 127.0.0.1 POST /api/pathExists HTTP/1.1 200 - 2.323 ms
+2026-01-24T14:46:30.100Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T14:46:30.101Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 1.268 ms
+2026-01-24T14:46:30.103Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T14:46:30.104Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 1.298 ms
+2026-01-24T14:46:30.111Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: undefined,
+  nameSuffix: 'proj.llc'
+}
+2026-01-24T14:46:30.112Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 1.084 ms
+2026-01-24T14:46:30.114Z info: API getFileUri called {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-html5ified-dummy.mkv',
+  cacheBuster: 0
+}
+2026-01-24T14:46:30.115Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 1.691 ms
+2026-01-24T14:46:30.130Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T14:46:30.132Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 1.249 ms
+2026-01-24T14:46:30.135Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T14:46:30.137Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 1.594 ms
+2026-01-24T14:46:30.138Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: undefined,
+  nameSuffix: 'proj.llc'
+}
+2026-01-24T14:46:30.140Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 1.470 ms
+2026-01-24T14:46:30.141Z info: API getFileUri called {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-html5ified-dummy.mkv',
+  cacheBuster: 0
+}
+2026-01-24T14:46:30.143Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 1.357 ms
+2026-01-24T14:46:30.210Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T14:46:30.211Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 1.435 ms
+2026-01-24T14:46:30.214Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T14:46:30.215Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 1.223 ms
+2026-01-24T14:46:30.240Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-24T14:46:30.242Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 2.228 ms
+2026-01-24T14:46:30.245Z info: API getOutDir called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv'
+}
+2026-01-24T14:46:30.248Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 2.921 ms
+2026-01-24T14:46:30.257Z info: API getFileUri called {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-html5ified-dummy.mkv',
+  cacheBuster: 0
+}
+2026-01-24T14:46:30.259Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 2.005 ms
+2026-01-24T14:46:30.351Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T14:46:30.353Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 1.372 ms
+2026-01-24T14:46:30.354Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T14:46:30.358Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 3.720 ms
+2026-01-24T14:46:30.371Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-24T14:46:30.374Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 2.470 ms
+2026-01-24T14:46:30.376Z info: API getFileUri called {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-html5ified-dummy.mkv',
+  cacheBuster: 0
+}
+2026-01-24T14:46:30.378Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 2.125 ms
+2026-01-24T14:46:30.380Z info: Received /stream request {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv',
+  videoStreamIndex: '1',
+  audioStreamIndexes: '0',
+  seekTo: '0',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-24T14:46:30.435Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T14:46:30.452Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 16.858 ms
+2026-01-24T14:46:30.458Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T14:46:30.469Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 11.267 ms
+2026-01-24T14:46:30.472Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-24T14:46:30.474Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 1.947 ms
+2026-01-24T14:46:30.474Z info: API getFileUri called {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-html5ified-dummy.mkv',
+  cacheBuster: 0
+}
+2026-01-24T14:46:30.479Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 4.298 ms
+2026-01-24T14:46:30.509Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T14:46:30.512Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 3.161 ms
+2026-01-24T14:46:30.516Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T14:46:30.518Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 1.440 ms
+2026-01-24T14:46:30.520Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-24T14:46:30.524Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 3.278 ms
+2026-01-24T14:46:30.526Z info: API getFileUri called {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-html5ified-dummy.mkv',
+  cacheBuster: 0
+}
+2026-01-24T14:46:30.534Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 8.632 ms
+2026-01-24T14:46:30.582Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T14:46:30.588Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 6.121 ms
+2026-01-24T14:46:30.590Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T14:46:30.592Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 1.610 ms
+2026-01-24T14:46:30.600Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-24T14:46:30.602Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 2.539 ms
+2026-01-24T14:46:30.605Z info: API getFileUri called {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-html5ified-dummy.mkv',
+  cacheBuster: 0
+}
+2026-01-24T14:46:30.607Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 1.281 ms
+2026-01-24T14:46:30.628Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T14:46:30.635Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 6.982 ms
+2026-01-24T14:46:30.639Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T14:46:30.642Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 2.907 ms
+2026-01-24T14:46:30.657Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-24T14:46:30.659Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 1.868 ms
+2026-01-24T14:46:30.661Z info: API getFileUri called {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-html5ified-dummy.mkv',
+  cacheBuster: 0
+}
+2026-01-24T14:46:30.663Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 2.278 ms
+2026-01-24T14:46:30.748Z info: API readFramesAroundTime called {
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv',
+  aroundTime: 0,
+  streamIndex: 1,
+  window: 60
+}
+2026-01-24T14:46:30.987Z info: 127.0.0.1 POST /api/readFramesAroundTime HTTP/1.1 200 - 239.936 ms
+2026-01-24T14:46:31.011Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T14:46:31.012Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 1.491 ms
+2026-01-24T14:46:31.017Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T14:46:31.018Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 1.232 ms
+2026-01-24T14:46:31.022Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-24T14:46:31.025Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 2.881 ms
+2026-01-24T14:46:31.027Z info: API getFileUri called {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-html5ified-dummy.mkv',
+  cacheBuster: 0
+}
+2026-01-24T14:46:31.031Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 3.630 ms
+2026-01-24T14:46:32.546Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T14:46:32.548Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 1.733 ms
+2026-01-24T14:46:32.549Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T14:46:32.550Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 1.217 ms
+2026-01-24T14:46:32.552Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-24T14:46:32.554Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 1.746 ms
+2026-01-24T14:46:32.556Z info: API getFileUri called {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-html5ified-dummy.mkv',
+  cacheBuster: 0
+}
+2026-01-24T14:46:32.558Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 2.050 ms
+2026-01-24T14:46:32.643Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T14:46:32.644Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 1.325 ms
+2026-01-24T14:46:32.645Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T14:46:32.647Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 1.360 ms
+2026-01-24T14:46:32.650Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-24T14:46:32.651Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 1.348 ms
+2026-01-24T14:46:32.654Z info: API getFileUri called {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-html5ified-dummy.mkv',
+  cacheBuster: 0
+}
+2026-01-24T14:46:32.655Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 1.761 ms
+2026-01-24T14:46:32.685Z info: 127.0.0.1 GET /stream?path=C%3A%5CUsers%5Calex-%5CDownloads%5C%5Bscorehd%5D+Lisa+Canon+-+Nurse+Super+Knockers-cut-merged-1752593600863.wmv&videoStreamIndex=1&audioStreamIndexes=0&seekTo=0&size=800&fps=30 HTTP/1.1 200 - 320.866 ms
+2026-01-24T14:46:32.693Z info: Received /stream request {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv',
+  videoStreamIndex: '1',
+  audioStreamIndexes: '0',
+  seekTo: '124.867448',
+  size: '800',
+  fps: '30',
+  rotate: undefined
+}
+2026-01-24T14:46:32.731Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T14:46:32.733Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 2.357 ms
+2026-01-24T14:46:32.736Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T14:46:32.737Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 1.320 ms
+2026-01-24T14:46:32.741Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-24T14:46:32.742Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 1.131 ms
+2026-01-24T14:46:32.746Z info: API getFileUri called {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-html5ified-dummy.mkv',
+  cacheBuster: 0
+}
+2026-01-24T14:46:32.748Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 1.927 ms
+2026-01-24T14:46:33.148Z info: API readFramesAroundTime called {
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv',
+  aroundTime: 124.86744843750002,
+  streamIndex: 1,
+  window: 60
+}
+2026-01-24T14:46:33.389Z info: 127.0.0.1 POST /api/readFramesAroundTime HTTP/1.1 200 - 241.325 ms
+2026-01-24T14:46:33.421Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T14:46:33.423Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 1.370 ms
+2026-01-24T14:46:33.424Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T14:46:33.426Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 2.066 ms
+2026-01-24T14:46:33.429Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-24T14:46:33.432Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 2.515 ms
+2026-01-24T14:46:33.435Z info: API getFileUri called {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-html5ified-dummy.mkv',
+  cacheBuster: 0
+}
+2026-01-24T14:46:33.437Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 2.502 ms
+2026-01-24T14:46:33.796Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T14:46:33.797Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 1.169 ms
+2026-01-24T14:46:33.799Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T14:46:33.800Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 1.207 ms
+2026-01-24T14:46:33.802Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-24T14:46:33.803Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 1.477 ms
+2026-01-24T14:46:33.811Z info: API getFileUri called {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-html5ified-dummy.mkv',
+  cacheBuster: 0
+}
+2026-01-24T14:46:33.813Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 1.100 ms
+2026-01-24T14:46:34.067Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T14:46:34.071Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 3.399 ms
+2026-01-24T14:46:34.073Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T14:46:34.075Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 1.624 ms
+2026-01-24T14:46:34.077Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-24T14:46:34.078Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 1.267 ms
+2026-01-24T14:46:34.081Z info: API getFileUri called {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-html5ified-dummy.mkv',
+  cacheBuster: 0
+}
+2026-01-24T14:46:34.082Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 1.264 ms
+2026-01-24T14:46:34.337Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T14:46:34.338Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 1.169 ms
+2026-01-24T14:46:34.340Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T14:46:34.341Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 0.994 ms
+2026-01-24T14:46:34.344Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-24T14:46:34.345Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 1.375 ms
+2026-01-24T14:46:34.346Z info: API getFileUri called {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-html5ified-dummy.mkv',
+  cacheBuster: 0
+}
+2026-01-24T14:46:34.348Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 1.823 ms
+2026-01-24T14:46:34.602Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T14:46:34.604Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 1.548 ms
+2026-01-24T14:46:34.606Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T14:46:34.607Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 0.970 ms
+2026-01-24T14:46:34.615Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-24T14:46:34.617Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 2.503 ms
+2026-01-24T14:46:34.619Z info: API getFileUri called {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-html5ified-dummy.mkv',
+  cacheBuster: 0
+}
+2026-01-24T14:46:34.621Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 1.873 ms
+2026-01-24T14:46:34.891Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T14:46:34.893Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 2.043 ms
+2026-01-24T14:46:34.895Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T14:46:34.897Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 1.550 ms
+2026-01-24T14:46:34.901Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-24T14:46:34.903Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 1.885 ms
+2026-01-24T14:46:34.905Z info: API getFileUri called {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-html5ified-dummy.mkv',
+  cacheBuster: 0
+}
+2026-01-24T14:46:34.907Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 1.982 ms
+2026-01-24T14:46:35.069Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T14:46:35.072Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 3.003 ms
+2026-01-24T14:46:35.074Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T14:46:35.075Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 1.113 ms
+2026-01-24T14:46:35.076Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-24T14:46:35.077Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 1.134 ms
+2026-01-24T14:46:35.079Z info: API getFileUri called {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-html5ified-dummy.mkv',
+  cacheBuster: 0
+}
+2026-01-24T14:46:35.082Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 2.528 ms
+2026-01-24T14:46:35.110Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T14:46:35.111Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 1.353 ms
+2026-01-24T14:46:35.113Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T14:46:35.114Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 1.063 ms
+2026-01-24T14:46:35.121Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-24T14:46:35.123Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 2.076 ms
+2026-01-24T14:46:35.125Z info: API getFileUri called {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-html5ified-dummy.mkv',
+  cacheBuster: 0
+}
+2026-01-24T14:46:35.126Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 0.963 ms
+2026-01-24T14:46:35.583Z info: API readFramesAroundTime called {
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv',
+  aroundTime: 126.088315,
+  streamIndex: 1,
+  window: 60
+}
+2026-01-24T14:46:35.790Z info: 127.0.0.1 POST /api/readFramesAroundTime HTTP/1.1 200 - 207.410 ms
+2026-01-24T14:46:35.820Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T14:46:35.823Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 2.456 ms
+2026-01-24T14:46:35.826Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T14:46:35.827Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 1.805 ms
+2026-01-24T14:46:35.834Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-24T14:46:35.836Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 1.998 ms
+2026-01-24T14:46:35.838Z info: API getFileUri called {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-html5ified-dummy.mkv',
+  cacheBuster: 0
+}
+2026-01-24T14:46:35.840Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 2.106 ms
+2026-01-24T14:46:37.312Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T14:46:37.316Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 4.162 ms
+2026-01-24T14:46:37.318Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T14:46:37.319Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 1.569 ms
+2026-01-24T14:46:37.323Z info: API getOutFileExtension called {
+  isCustomFormatSelected: false,
+  outFormat: 'asf',
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv'
+}
+2026-01-24T14:46:37.324Z info: 127.0.0.1 POST /api/getOutFileExtension HTTP/1.1 200 - 1.307 ms
+2026-01-24T14:46:37.325Z info: API getFileUri called {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-html5ified-dummy.mkv',
+  cacheBuster: 0
+}
+2026-01-24T14:46:37.327Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 1.727 ms
+2026-01-24T14:46:37.328Z info: API getOutFileExtension called {
+  isCustomFormatSelected: false,
+  outFormat: 'asf',
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv'
+}
+2026-01-24T14:46:37.330Z info: 127.0.0.1 POST /api/getOutFileExtension HTTP/1.1 200 - 1.511 ms
+2026-01-24T14:46:37.331Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-24T14:46:37.332Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 1.079 ms
+2026-01-24T14:46:37.368Z info: API pathJoin called {
+  paths: [
+    'C:\\Users\\alex-\\Downloads',
+    '[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-cut-merged-1769265997318.wmv'
+  ]
+}
+2026-01-24T14:46:37.371Z info: 127.0.0.1 POST /api/pathJoin HTTP/1.1 200 - 2.654 ms
+2026-01-24T14:46:37.372Z info: API pathJoin called {
+  paths: [
+    'C:\\Users\\alex-\\Downloads',
+    '[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-cut-merged-1769265997323.wmv'
+  ]
+}
+2026-01-24T14:46:37.374Z info: 127.0.0.1 POST /api/pathJoin HTTP/1.1 200 - 1.937 ms
+2026-01-24T14:46:39.295Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T14:46:39.296Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 1.119 ms
+2026-01-24T14:46:39.297Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T14:46:39.298Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 1.170 ms
+2026-01-24T14:46:39.311Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-24T14:46:39.312Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 1.468 ms
+2026-01-24T14:46:39.314Z info: API getFileUri called {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-html5ified-dummy.mkv',
+  cacheBuster: 0
+}
+2026-01-24T14:46:39.315Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 1.221 ms
+2026-01-24T14:46:39.324Z info: API getOutFileExtension called {
+  isCustomFormatSelected: false,
+  outFormat: 'asf',
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv'
+}
+2026-01-24T14:46:39.327Z info: 127.0.0.1 POST /api/getOutFileExtension HTTP/1.1 200 - 2.344 ms
+2026-01-24T14:46:39.328Z info: API getOutFileExtension called {
+  isCustomFormatSelected: false,
+  outFormat: 'asf',
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv'
+}
+2026-01-24T14:46:39.329Z info: 127.0.0.1 POST /api/getOutFileExtension HTTP/1.1 200 - 1.218 ms
+2026-01-24T14:46:39.349Z info: API pathJoin called {
+  paths: [
+    'C:\\Users\\alex-\\Downloads',
+    '[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-00.01.10.912-00.01.54.076-seg1.wmv'
+  ]
+}
+2026-01-24T14:46:39.351Z info: 127.0.0.1 POST /api/pathJoin HTTP/1.1 200 - 1.347 ms
+2026-01-24T14:46:39.353Z info: API pathJoin called {
+  paths: [
+    'C:\\Users\\alex-\\Downloads',
+    '[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-00.03.28.112-00.03.57.916-seg2.wmv'
+  ]
+}
+2026-01-24T14:46:39.355Z info: 127.0.0.1 POST /api/pathJoin HTTP/1.1 200 - 1.574 ms
+2026-01-24T14:46:39.360Z info: API pathJoin called {
+  paths: [
+    'C:\\Users\\alex-\\Downloads',
+    '[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-00.01.10.912-00.01.54.076-seg1.wmv'
+  ]
+}
+2026-01-24T14:46:39.361Z info: 127.0.0.1 POST /api/pathJoin HTTP/1.1 200 - 1.475 ms
+2026-01-24T14:46:39.364Z info: API pathExists called {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-00.01.10.912-00.01.54.076-seg1.wmv'
+}
+2026-01-24T14:46:39.366Z info: 127.0.0.1 POST /api/pathExists HTTP/1.1 200 - 2.070 ms
+2026-01-24T14:46:39.370Z info: API dirname called {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-00.01.10.912-00.01.54.076-seg1.wmv'
+}
+2026-01-24T14:46:39.371Z info: 127.0.0.1 POST /api/dirname HTTP/1.1 200 - 1.333 ms
+2026-01-24T14:46:39.376Z info: API getExperimentalArgs called { ffmpegExperimental: false }
+2026-01-24T14:46:39.378Z info: 127.0.0.1 POST /api/getExperimentalArgs HTTP/1.1 200 - 1.453 ms
+2026-01-24T14:46:39.382Z info: API getVideoTimescaleArgs called { videoTimebase: undefined }
+2026-01-24T14:46:39.384Z info: 127.0.0.1 POST /api/getVideoTimescaleArgs HTTP/1.1 200 - 2.095 ms
+2026-01-24T14:46:39.387Z info: API getFfCommandLine called {
+  cmd: 'ffmpeg',
+  args: [
+    '-hide_banner',
+    '-ss',
+    '70.91238',
+    '-i',
+    'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv',
+    '-t',
+    '43.16406',
+    '-avoid_negative_ts',
+    'make_zero',
+    '-map',
+    '0:0',
+    '-c:0',
+    'copy',
+    '-map',
+    '0:1',
+    '-c:1',
+    'copy',
+    '-map_metadata',
+    '0',
+    '-movflags',
+    '+faststart',
+    '-default_mode',
+    'infer_no_subs',
+    '-ignore_unknown',
+    '-f',
+    'asf',
+    '-y',
+    'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-00.01.10.912-00.01.54.076-seg1.wmv'
+  ]
+}
+2026-01-24T14:46:39.390Z info: 127.0.0.1 POST /api/getFfCommandLine HTTP/1.1 200 - 2.323 ms
+2026-01-24T14:46:39.395Z info: API runFfmpeg called {
+  ffmpegArgs: [
+    '-hide_banner',
+    '-ss',
+    '70.91238',
+    '-i',
+    'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv',
+    '-t',
+    '43.16406',
+    '-avoid_negative_ts',
+    'make_zero',
+    '-map',
+    '0:0',
+    '-c:0',
+    'copy',
+    '-map',
+    '0:1',
+    '-c:1',
+    'copy',
+    '-map_metadata',
+    '0',
+    '-movflags',
+    '+faststart',
+    '-default_mode',
+    'infer_no_subs',
+    '-ignore_unknown',
+    '-f',
+    'asf',
+    '-y',
+    'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-00.01.10.912-00.01.54.076-seg1.wmv'
+  ],
+  duration: 43.16405625
+}
+2026-01-24T14:46:39.443Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T14:46:39.445Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 1.835 ms
+2026-01-24T14:46:39.447Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T14:46:39.450Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 2.685 ms
+2026-01-24T14:46:39.459Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-24T14:46:39.462Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 3.198 ms
+2026-01-24T14:46:39.464Z info: API getFileUri called {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-html5ified-dummy.mkv',
+  cacheBuster: 0
+}
+2026-01-24T14:46:39.465Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 1.490 ms
+2026-01-24T14:46:39.486Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T14:46:39.489Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 2.208 ms
+2026-01-24T14:46:39.491Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T14:46:39.493Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 1.881 ms
+2026-01-24T14:46:39.498Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-24T14:46:39.499Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 1.650 ms
+2026-01-24T14:46:39.500Z info: API getFileUri called {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-html5ified-dummy.mkv',
+  cacheBuster: 0
+}
+2026-01-24T14:46:39.501Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 1.156 ms
+2026-01-24T14:46:39.569Z info: 127.0.0.1 POST /api/runFfmpeg HTTP/1.1 200 - 11.491 ms
+2026-01-24T14:46:39.580Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T14:46:39.581Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 1.030 ms
+2026-01-24T14:46:39.583Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T14:46:39.585Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 1.412 ms
+2026-01-24T14:46:39.597Z info: API getFileUri called {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-html5ified-dummy.mkv',
+  cacheBuster: 0
+}
+2026-01-24T14:46:39.603Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 5.520 ms
+2026-01-24T14:46:39.608Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-24T14:46:39.611Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 2.891 ms
+2026-01-24T14:46:39.614Z info: API pathJoin called {
+  paths: [
+    'C:\\Users\\alex-\\Downloads',
+    '[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-00.03.28.112-00.03.57.916-seg2.wmv'
+  ]
+}
+2026-01-24T14:46:39.617Z info: 127.0.0.1 POST /api/pathJoin HTTP/1.1 200 - 2.591 ms
+2026-01-24T14:46:39.633Z info: API pathExists called {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-00.03.28.112-00.03.57.916-seg2.wmv'
+}
+2026-01-24T14:46:39.636Z info: 127.0.0.1 POST /api/pathExists HTTP/1.1 200 - 2.391 ms
+2026-01-24T14:46:39.642Z info: API dirname called {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-00.03.28.112-00.03.57.916-seg2.wmv'
+}
+2026-01-24T14:46:39.645Z info: 127.0.0.1 POST /api/dirname HTTP/1.1 200 - 2.660 ms
+2026-01-24T14:46:39.648Z info: API getExperimentalArgs called { ffmpegExperimental: false }
+2026-01-24T14:46:39.649Z info: 127.0.0.1 POST /api/getExperimentalArgs HTTP/1.1 200 - 1.239 ms
+2026-01-24T14:46:39.652Z info: API getVideoTimescaleArgs called { videoTimebase: undefined }
+2026-01-24T14:46:39.653Z info: 127.0.0.1 POST /api/getVideoTimescaleArgs HTTP/1.1 200 - 1.236 ms
+2026-01-24T14:46:39.661Z info: API getFfCommandLine called {
+  cmd: 'ffmpeg',
+  args: [
+    '-hide_banner',
+    '-ss',
+    '208.11241',
+    '-i',
+    'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv',
+    '-t',
+    '29.80375',
+    '-avoid_negative_ts',
+    'make_zero',
+    '-map',
+    '0:0',
+    '-c:0',
+    'copy',
+    '-map',
+    '0:1',
+    '-c:1',
+    'copy',
+    '-map_metadata',
+    '0',
+    '-movflags',
+    '+faststart',
+    '-default_mode',
+    'infer_no_subs',
+    '-ignore_unknown',
+    '-f',
+    'asf',
+    '-y',
+    'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-00.03.28.112-00.03.57.916-seg2.wmv'
+  ]
+}
+2026-01-24T14:46:39.664Z info: 127.0.0.1 POST /api/getFfCommandLine HTTP/1.1 200 - 2.844 ms
+2026-01-24T14:46:39.667Z info: API runFfmpeg called {
+  ffmpegArgs: [
+    '-hide_banner',
+    '-ss',
+    '208.11241',
+    '-i',
+    'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv',
+    '-t',
+    '29.80375',
+    '-avoid_negative_ts',
+    'make_zero',
+    '-map',
+    '0:0',
+    '-c:0',
+    'copy',
+    '-map',
+    '0:1',
+    '-c:1',
+    'copy',
+    '-map_metadata',
+    '0',
+    '-movflags',
+    '+faststart',
+    '-default_mode',
+    'infer_no_subs',
+    '-ignore_unknown',
+    '-f',
+    'asf',
+    '-y',
+    'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-00.03.28.112-00.03.57.916-seg2.wmv'
+  ],
+  duration: 29.803753124999986
+}
+2026-01-24T14:46:39.707Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T14:46:39.711Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 4.072 ms
+2026-01-24T14:46:39.716Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T14:46:39.720Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 3.756 ms
+2026-01-24T14:46:39.724Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-24T14:46:39.728Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 4.199 ms
+2026-01-24T14:46:39.731Z info: API getFileUri called {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-html5ified-dummy.mkv',
+  cacheBuster: 0
+}
+2026-01-24T14:46:39.734Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 2.739 ms
+2026-01-24T14:46:39.929Z info: 127.0.0.1 POST /api/runFfmpeg HTTP/1.1 200 - 14.943 ms
+2026-01-24T14:46:39.935Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T14:46:39.936Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 1.291 ms
+2026-01-24T14:46:39.939Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T14:46:39.941Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 1.863 ms
+2026-01-24T14:46:39.947Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-24T14:46:39.949Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 1.255 ms
+2026-01-24T14:46:39.950Z info: API getFileUri called {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-html5ified-dummy.mkv',
+  cacheBuster: 0
+}
+2026-01-24T14:46:39.951Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 1.024 ms
+2026-01-24T14:46:39.952Z info: API getOutFileExtension called {
+  isCustomFormatSelected: false,
+  outFormat: 'asf',
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv'
+}
+2026-01-24T14:46:39.954Z info: 127.0.0.1 POST /api/getOutFileExtension HTTP/1.1 200 - 1.000 ms
+2026-01-24T14:46:39.968Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T14:46:39.969Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 1.226 ms
+2026-01-24T14:46:39.972Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T14:46:39.974Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 2.035 ms
+2026-01-24T14:46:39.980Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-24T14:46:39.981Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 1.422 ms
+2026-01-24T14:46:39.983Z info: API getFileUri called {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-html5ified-dummy.mkv',
+  cacheBuster: 0
+}
+2026-01-24T14:46:39.984Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 1.133 ms
+2026-01-24T14:46:39.985Z info: API pathJoin called {
+  paths: [
+    'C:\\Users\\alex-\\Downloads',
+    '[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-cut-merged-1769265999952.wmv'
+  ]
+}
+2026-01-24T14:46:39.986Z info: 127.0.0.1 POST /api/pathJoin HTTP/1.1 200 - 1.049 ms
+2026-01-24T14:46:39.997Z info: API getOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv',
+  fileName: '[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-cut-merged-1769265999952.wmv'
+}
+2026-01-24T14:46:39.998Z info: 127.0.0.1 POST /api/getOutPath HTTP/1.1 200 - 1.284 ms
+2026-01-24T14:46:40.000Z info: API getOutDir called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv'
+}
+2026-01-24T14:46:40.002Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 1.075 ms
+2026-01-24T14:46:40.004Z info: API pathExists called {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-cut-merged-1769265999952.wmv'
+}
+2026-01-24T14:46:40.007Z info: 127.0.0.1 POST /api/pathExists HTTP/1.1 200 - 3.180 ms
+2026-01-24T14:46:40.011Z info: API createChaptersFromSegments called {
+  segmentPaths: [
+    'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-00.01.10.912-00.01.54.076-seg1.wmv',
+    'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-00.03.28.112-00.03.57.916-seg2.wmv'
+  ],
+  chapterNames: undefined
+}
+2026-01-24T14:46:40.012Z info: 127.0.0.1 POST /api/createChaptersFromSegments HTTP/1.1 200 - 1.168 ms
+2026-01-24T14:46:40.014Z info: API readFileFfprobeMeta called {
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-00.01.10.912-00.01.54.076-seg1.wmv'
+}
+2026-01-24T14:46:40.106Z info: 127.0.0.1 POST /api/readFileFfprobeMeta HTTP/1.1 200 - 91.024 ms
+2026-01-24T14:46:40.109Z info: API pathExists called {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-cut-merged-1769265999952.wmv'
+}
+2026-01-24T14:46:40.111Z info: 127.0.0.1 POST /api/pathExists HTTP/1.1 200 - 1.906 ms
+2026-01-24T14:46:40.114Z info: API getDuration called {
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-00.01.10.912-00.01.54.076-seg1.wmv'
+}
+2026-01-24T14:46:40.240Z info: 127.0.0.1 POST /api/getDuration HTTP/1.1 200 - 126.407 ms
+2026-01-24T14:46:40.243Z info: API getDuration called {
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-00.03.28.112-00.03.57.916-seg2.wmv'
+}
+2026-01-24T14:46:40.358Z info: 127.0.0.1 POST /api/getDuration HTTP/1.1 200 - 114.870 ms
+2026-01-24T14:46:40.361Z info: API getExperimentalArgs called { ffmpegExperimental: false }
+2026-01-24T14:46:40.362Z info: 127.0.0.1 POST /api/getExperimentalArgs HTTP/1.1 200 - 0.706 ms
+2026-01-24T14:46:40.364Z info: API getVideoTimescaleArgs called { videoTimebase: undefined }
+2026-01-24T14:46:40.365Z info: 127.0.0.1 POST /api/getVideoTimescaleArgs HTTP/1.1 200 - 0.679 ms
+2026-01-24T14:46:40.368Z info: API pathResolve called {
+  paths: [
+    'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-00.01.10.912-00.01.54.076-seg1.wmv'
+  ]
+}
+2026-01-24T14:46:40.372Z info: 127.0.0.1 POST /api/pathResolve HTTP/1.1 200 - 3.895 ms
+2026-01-24T14:46:40.374Z info: API pathResolve called {
+  paths: [
+    'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-00.03.28.112-00.03.57.916-seg2.wmv'
+  ]
+}
+2026-01-24T14:46:40.376Z info: 127.0.0.1 POST /api/pathResolve HTTP/1.1 200 - 2.540 ms
+2026-01-24T14:46:40.379Z info: API getFfCommandLine called {
+  cmd: 'ffmpeg',
+  args: [
+    '-hide_banner',
+    '-f',
+    'concat',
+    '-safe',
+    '0',
+    '-protocol_whitelist',
+    'file,pipe,fd',
+    '-i',
+    '-',
+    '-map',
+    '0:0',
+    '-c:0',
+    'copy',
+    '-map',
+    '0:1',
+    '-c:1',
+    'copy',
+    '-movflags',
+    '+faststart',
+    '-default_mode',
+    'infer_no_subs',
+    '-ignore_unknown',
+    '-f',
+    'asf',
+    '-y',
+    'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-cut-merged-1769265999952.wmv'
+  ]
+}
+2026-01-24T14:46:40.380Z info: 127.0.0.1 POST /api/getFfCommandLine HTTP/1.1 200 - 1.451 ms
+2026-01-24T14:46:40.382Z info: API runFfmpegConcat called {
+  ffmpegArgs: [
+    '-hide_banner',
+    '-f',
+    'concat',
+    '-safe',
+    '0',
+    '-protocol_whitelist',
+    'file,pipe,fd',
+    '-i',
+    '-',
+    '-map',
+    '0:0',
+    '-c:0',
+    'copy',
+    '-map',
+    '0:1',
+    '-c:1',
+    'copy',
+    '-movflags',
+    '+faststart',
+    '-default_mode',
+    'infer_no_subs',
+    '-ignore_unknown',
+    '-f',
+    'asf',
+    '-y',
+    'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-cut-merged-1769265999952.wmv'
+  ],
+  concatTxt: "file 'file:C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-00.01.10.912-00.01.54.076-seg1.wmv'\n" +
+    "file 'file:C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-00.03.28.112-00.03.57.916-seg2.wmv'",
+  totalDuration: 76.15
+}
+2026-01-24T14:46:40.413Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T14:46:40.414Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 1.123 ms
+2026-01-24T14:46:40.416Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T14:46:40.418Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 1.158 ms
+2026-01-24T14:46:40.425Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-24T14:46:40.428Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 3.260 ms
+2026-01-24T14:46:40.430Z info: API getFileUri called {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-html5ified-dummy.mkv',
+  cacheBuster: 0
+}
+2026-01-24T14:46:40.432Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 1.571 ms
+2026-01-24T14:46:40.537Z info: 127.0.0.1 POST /api/runFfmpegConcat HTTP/1.1 200 - 11.696 ms
+2026-01-24T14:46:40.550Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T14:46:40.551Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 1.018 ms
+2026-01-24T14:46:40.552Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T14:46:40.553Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 0.991 ms
+2026-01-24T14:46:40.560Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-24T14:46:40.562Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 1.260 ms
+2026-01-24T14:46:40.563Z info: API getFileUri called {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-html5ified-dummy.mkv',
+  cacheBuster: 0
+}
+2026-01-24T14:46:40.564Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 0.960 ms
+2026-01-24T14:46:40.613Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T14:46:40.614Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 1.104 ms
+2026-01-24T14:46:40.615Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T14:46:40.616Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 0.991 ms
+2026-01-24T14:46:40.619Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-24T14:46:40.620Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 1.122 ms
+2026-01-24T14:46:40.622Z info: API getFileUri called {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-html5ified-dummy.mkv',
+  cacheBuster: 0
+}
+2026-01-24T14:46:40.624Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 1.661 ms
+2026-01-24T14:46:42.223Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T14:46:42.225Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 1.270 ms
+2026-01-24T14:46:42.226Z info: API getOutDir called { customOutDir: undefined, filePath: undefined }
+2026-01-24T14:46:42.227Z info: 127.0.0.1 POST /api/getOutDir HTTP/1.1 200 - 1.556 ms
+2026-01-24T14:46:42.230Z info: API getSuffixedOutPath called {
+  customOutDir: undefined,
+  filePath: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863.wmv',
+  nameSuffix: 'proj.llc'
+}
+2026-01-24T14:46:42.231Z info: 127.0.0.1 POST /api/getSuffixedOutPath HTTP/1.1 200 - 1.438 ms
+2026-01-24T14:46:42.232Z info: API getFileUri called {
+  path: 'C:\\Users\\alex-\\Downloads\\[scorehd] Lisa Canon - Nurse Super Knockers-cut-merged-1752593600863-html5ified-dummy.mkv',
+  cacheBuster: 0
+}
+2026-01-24T14:46:42.233Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 1.362 ms

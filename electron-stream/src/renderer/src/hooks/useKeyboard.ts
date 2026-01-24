@@ -1,9 +1,10 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 
-import type { KeyBinding, KeyboardAction } from '../../../common/types';
+// import type { KeyBinding, KeyboardAction } from '../../../common/types';
 import { allModifiers, altModifiers, controlModifiers, metaModifiers, shiftModifiers } from '../util';
 import type { KeyboardLayoutMap } from '../types';
 import isDev from '../isDev';
+import type { KeyBinding, KeyboardAction } from 'lossless-cut-application';
 
 
 /* Keyboard testing points (when making large changes):

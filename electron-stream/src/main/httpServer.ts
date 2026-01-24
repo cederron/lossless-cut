@@ -7,7 +7,7 @@ import assert from 'node:assert';
 import { homepageUrl } from '../common/constants.js';
 import logger from './logger.js';
 import { container } from 'tsyringe';
-import { TOKENS, type Html5ifyMode, type IFfmpeg, type IUtils } from 'lossless-cut-application';
+import { TOKENS, type IFfmpeg, type IUtils } from 'lossless-cut-application';
 
     // const logger = container.resolve<ILogger>(TOKENS.Logger);
 
@@ -129,13 +129,13 @@ export default ({ port, onKeyboardAction }: {
     res.json({ outPath });
   }));
 
-  apiRouter.post('/transferTimestamps', express.json(), asyncHandler(async (req, res) => {
-    const { inPath, outPath, cutFrom, cutTo, duration, treatInputFileModifiedTimeAsStart, treatOutputFileModifiedTimeAsStart } = req.body as { inPath: string; outPath: string; cutFrom?: number; cutTo?: number; duration?: number; treatInputFileModifiedTimeAsStart: boolean; treatOutputFileModifiedTimeAsStart: boolean | null; };
-    logger.info('API transferTimestamps called', { inPath, outPath, cutFrom, cutTo, duration, treatInputFileModifiedTimeAsStart, treatOutputFileModifiedTimeAsStart });
-    const utils = container.resolve<IUtils>(TOKENS.Utils);
-    await utils.transferTimestamps({ inPath, outPath, cutFrom, cutTo, duration, treatInputFileModifiedTimeAsStart, treatOutputFileModifiedTimeAsStart });
-    res.end();
-  }));
+  // apiRouter.post('/transferTimestamps', express.json(), asyncHandler(async (req, res) => {
+  //   const { inPath, outPath, cutFrom, cutTo, duration, treatInputFileModifiedTimeAsStart, treatOutputFileModifiedTimeAsStart } = req.body as { inPath: string; outPath: string; cutFrom?: number; cutTo?: number; duration?: number; treatInputFileModifiedTimeAsStart: boolean; treatOutputFileModifiedTimeAsStart: boolean | null; };
+  //   logger.info('API transferTimestamps called', { inPath, outPath, cutFrom, cutTo, duration, treatInputFileModifiedTimeAsStart, treatOutputFileModifiedTimeAsStart });
+  //   const utils = container.resolve<IUtils>(TOKENS.Utils);
+  //   await utils.transferTimestamps({ inPath, outPath, cutFrom, cutTo, duration, treatInputFileModifiedTimeAsStart, treatOutputFileModifiedTimeAsStart });
+  //   res.end();
+  // }));
 
   apiRouter.post('/getOutFileExtension', express.json(), asyncHandler(async (req, res) => {
     const { isCustomFormatSelected, outFormat, filePath } = req.body as { isCustomFormatSelected?: boolean; outFormat: string; filePath: string; };
@@ -244,13 +244,13 @@ export default ({ port, onKeyboardAction }: {
     }
   });
 
-  apiRouter.post('/getHtml5ifiedPath', express.json(), asyncHandler(async (req, res) => {
-    const { cod, fp, type } = req.body as { cod?: string; fp: string; type: Html5ifyMode; };
-    logger.info('API getHtml5ifiedPath called', { cod, fp, type });
-    const utils = container.resolve<IUtils>(TOKENS.Utils);
-    const html5ifiedPath =  await utils.getHtml5ifiedPath(cod, fp, type);
-    res.json({ html5ifiedPath });
-  }));
+  // apiRouter.post('/getHtml5ifiedPath', express.json(), asyncHandler(async (req, res) => {
+  //   const { cod, fp, type } = req.body as { cod?: string; fp: string; type: Html5ifyMode; };
+  //   logger.info('API getHtml5ifiedPath called', { cod, fp, type });
+  //   const utils = container.resolve<IUtils>(TOKENS.Utils);
+  //   const html5ifiedPath =  await utils.getHtml5ifiedPath(cod, fp, type);
+  //   res.json({ html5ifiedPath });
+  // }));
 
   apiRouter.post('/getDuration', express.json(), asyncHandler(async (req, res) => {
     const { filePath } = req.body as { filePath: string; };
@@ -373,6 +373,22 @@ export default ({ port, onKeyboardAction }: {
     const ffmpeg = container.resolve<IFfmpeg>(TOKENS.Ffmpeg);
     const meta = await ffmpeg.readFileFfprobeMeta(filePath);
     res.json({ meta });
+  }));
+
+  apiRouter.post('/pathExists', express.json(), asyncHandler(async (req, res) => {
+    const { path } = req.body as { path: string; };
+    logger.info('API pathExists called', { path });
+    assert(path != null);
+    const utils = container.resolve<IUtils>(TOKENS.Utils);
+    const exists = await utils.pathExists(path);
+    res.json({ exists });
+  }));
+
+  apiRouter.post('/getAppPath', express.json(), asyncHandler(async (_req, res) => {
+    logger.info('API getAppPath called');
+    const utils = container.resolve<IUtils>(TOKENS.Utils);
+    const appPath = await utils.getAppPath();
+    res.json({ appPath });
   }));
 
   const server = http.createServer(app);

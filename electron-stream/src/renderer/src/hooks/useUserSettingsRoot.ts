@@ -1,9 +1,9 @@
 import { useEffect, useState, useRef, useCallback, useMemo } from 'react';
 import i18n from 'i18next';
 import type { Transition } from 'motion/react';
-import type { ISettings } from 'lossless-cut-application';
+import type { Config, ISettings } from 'lossless-cut-application';
 
-import type { Config } from '../../../common/types.js';
+// import type { Config } from '../../../common/types.js';
 
 import { errorToast } from '../swal';
 import isDev from '../isDev';

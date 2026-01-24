@@ -90,8 +90,16 @@ export class UtilsWeb implements IUtils {
         const data = await res.json();
         return data.dirName;
     }
-    pathExists(path: string): Promise<boolean> {
-        throw new Error("Method not implemented.");
+    async pathExists(path: string): Promise<boolean> {
+        const res = await fetch(`${this.apiUrl}/pathExists`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ path }),
+        });
+        const data = await res.json();
+        return data.exists;
     }
     async pathResolve(...paths: string[]): Promise<string> {
         const res = await fetch(`${this.apiUrl}/pathResolve`, {
@@ -226,6 +234,18 @@ export class UtilsWeb implements IUtils {
     }
     parseCue(path: string): ICueSheet {
         throw new Error("Method not implemented.");
+    }
+
+    async getAppPath(): Promise<string> {
+        const res = await fetch(`${this.apiUrl}/getAppPath`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ }),
+        });
+        const data = await res.json();
+        return data.appPath;
     }
     
 }

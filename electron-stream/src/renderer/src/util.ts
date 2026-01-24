@@ -9,62 +9,76 @@ import confetti from 'canvas-confetti';
 import invariant from 'tiny-invariant';
 
 import { ffmpegExtractWindow } from './util/constants';
-import { appName } from '../../main/common';
-import type { Html5ifyMode } from '../../common/types';
+// import { appName } from '../../main/common';
+// import type { Html5ifyMode } from '../../common/types';
 import { UserFacingError } from '../errors';
-import type { FFprobeFormat } from '../../common/ffprobe';
+import { TOKENS, type FFprobeFormat, type Html5ifyMode, type IPlatform, type IUtils } from 'lossless-cut-application';
+import { container } from 'tsyringe';
+// import type { FFprobeFormat } from '../../common/ffprobe';
 
-const { dirname, parse: parsePath, join, extname, isAbsolute, resolve, basename } = window.require('path');
+const appName = 'LosslessCut'; // TODO import from common
+
+// const { parse: parsePath, join, isAbsolute, resolve, basename } = window.require('path');
 const { stat, lstat, readdir, utimes, unlink, open, access, constants: { R_OK, W_OK } } = window.require('fs/promises');
 const { ipcRenderer } = window.require('electron');
-const remote = window.require('@electron/remote');
-const { isWindows, isMac } = remote.require('./index.js');
+// const remote = window.require('@electron/remote');
+// const { isWindows, isMac } = remote.require('./index.js');
 
-const appVersion = remote.app.getVersion();
-const appPath = remote.app.getAppPath();
+// const appVersion = remote.app.getVersion();
+// const appPath = remote.app.getAppPath();
 
-export { isWindows, isMac, appVersion, appPath };
+// export { isWindows, isMac, appVersion, appPath };
 
+const platform = container.resolve<IPlatform>(TOKENS.Platform);
+const utils = container.resolve<IUtils>(TOKENS.Utils);
+
+export const isWindows = platform.isWindows();
+export const isMac = platform.isMac();
+export const appVersion = '0.1'; // platform.getAppVersion();
+export const appPath = await utils.getAppPath();
 
 export const trashFile = async (path: string) => ipcRenderer.invoke('tryTrashItem', path);
 
 export const showItemInFolder = async (path: string) => ipcRenderer.invoke('showItemInFolder', path);
 
-
-export function getFileDir(filePath?: string) {
-  return filePath ? dirname(filePath) : undefined;
+export async function getFileDir(filePath?: string) {
+  // return filePath ? dirname(filePath) : undefined;
+  return filePath ? utils.dirname(filePath) : undefined;
 }
 
-export function getOutDir(customOutDir: string | undefined, filePath: string): string;
-export function getOutDir(customOutDir: string, filePath: undefined): string;
-export function getOutDir(customOutDir: undefined, filePath: undefined): undefined;
-export function getOutDir(customOutDir: string | undefined, filePath: string | undefined): string | undefined;
-export function getOutDir(customOutDir?: string | undefined, filePath?: string | undefined) {
-  if (customOutDir != null) return customOutDir;
-  if (filePath != null) return getFileDir(filePath);
-  return undefined;
+export async function getOutDir(customOutDir: string | undefined, filePath: string): Promise<string>;
+export async function getOutDir(customOutDir: string, filePath: undefined): Promise<string>;
+export async function getOutDir(customOutDir: undefined, filePath: undefined): Promise<undefined>;
+export async function getOutDir(customOutDir: string | undefined, filePath: string | undefined): Promise<string | undefined>;
+export async function getOutDir(customOutDir?: string | undefined, filePath?: string | undefined) {
+  // if (customOutDir != null) return customOutDir;
+  // if (filePath != null) return getFileDir(filePath);
+  // return undefined;
+  return utils.getOutDir(customOutDir, filePath);
 }
 
 function getFileBaseName(filePath?: string) {
-  if (!filePath) return undefined;
-  const parsed = parsePath(filePath);
-  return parsed.name;
-}
+      if (!filePath) return undefined;
+      const parsed = utils.parsePath(filePath);
+      return parsed.name;
+    }
 
-export function getOutPath<T extends string | undefined>(a: { customOutDir?: string | undefined, filePath?: T | undefined, fileName: string }): T extends string ? string : undefined;
-export function getOutPath({ customOutDir, filePath, fileName }: { customOutDir?: string | undefined, filePath?: string | undefined, fileName: string }) {
-  if (filePath == null) return undefined;
-  return join(getOutDir(customOutDir, filePath), fileName);
+export async function getOutPath<T extends string | undefined>(a: { customOutDir?: string | undefined, filePath?: T | undefined, fileName: string }): Promise<T extends string ? string : undefined>;
+export async function getOutPath({ customOutDir, filePath, fileName }: { customOutDir?: string | undefined, filePath?: string | undefined, fileName: string }) {
+  // if (filePath == null) return undefined;
+  // return join(getOutDir(customOutDir, filePath), fileName);
+  return utils.getOutPath({ customOutDir, filePath, fileName });
 }
 
 export const getDownloadMediaOutPath = (customOutDir: string, fileName: string) => join(customOutDir, fileName);
 
 export const getSuffixedFileName = (filePath: string | undefined, nameSuffix: string) => `${getFileBaseName(filePath)}-${nameSuffix}`;
 
-export function getSuffixedOutPath<T extends string | undefined>(a: { customOutDir?: string | undefined, filePath?: T | undefined, nameSuffix: string }): T extends string ? string : undefined;
-export function getSuffixedOutPath({ customOutDir, filePath, nameSuffix }: { customOutDir?: string | undefined, filePath?: string | undefined, nameSuffix: string }) {
-  if (filePath == null) return undefined;
-  return getOutPath({ customOutDir, filePath, fileName: getSuffixedFileName(filePath, nameSuffix) });
+export async function getSuffixedOutPath<T extends string | undefined>(a: { customOutDir?: string | undefined, filePath?: T | undefined, nameSuffix: string }): Promise<T extends string ? string : undefined>;
+export async function getSuffixedOutPath({ customOutDir, filePath, nameSuffix }: { customOutDir?: string | undefined, filePath?: string | undefined, nameSuffix: string }) {
+  // if (filePath == null) return undefined;
+  // return getOutPath({ customOutDir, filePath, fileName: getSuffixedFileName(filePath, nameSuffix) });
+  return utils.getSuffixedOutPath({ customOutDir, filePath, nameSuffix });
 }
 
 export async function havePermissionToReadFile(filePath: string) {
@@ -124,7 +138,10 @@ export async function fsOperationWithRetry<T>(operation: () => Promise<T>, { sig
 }
 
 // example error: index-18074aaf.js:166 Failed to delete C:\Users\USERNAME\Desktop\RC\New folder\2023-12-27 21-45-22 (GMT p5)-merged-1703933052361-00.01.04.915-00.01.07.424-seg1.mp4 Error: EPERM: operation not permitted, unlink 'C:\Users\USERNAME\Desktop\RC\New folder\2023-12-27 21-45-22 (GMT p5)-merged-1703933052361-00.01.04.915-00.01.07.424-seg1.mp4'
-export const unlinkWithRetry = async (path: string, options?: Options) => fsOperationWithRetry(async () => unlink(path), { ...options, onFailedAttempt: ({ attemptNumber, error }) => console.warn('Retrying delete', path, attemptNumber, error.message) });
+export async function unlinkWithRetry(path: string, options?: Options) {
+  fsOperationWithRetry(async () => unlink(path), { ...options, onFailedAttempt: ({ attemptNumber, error }) => console.warn('Retrying delete', path, attemptNumber, error.message) });
+}
+// export const unlinkWithRetry = async (path: string, options?: Options) => fsOperationWithRetry(async () => unlink(path), { ...options, onFailedAttempt: ({ attemptNumber, error }) => console.warn('Retrying delete', path, attemptNumber, error.message) });
 // example error: index-18074aaf.js:160 Error: EPERM: operation not permitted, utime 'C:\Users\USERNAME\Desktop\RC\New folder\2023-12-27 21-45-22 (GMT p5)-merged-1703933052361-cut-merged-1703933070237.mp4'
 export const utimesWithRetry = async (path: string, atime: number, mtime: number, options?: Options) => fsOperationWithRetry(async () => utimes(path, atime, mtime), { ...options, onFailedAttempt: ({ attemptNumber, error }) => console.warn('Retrying utimes', path, attemptNumber, error.message) });
 
@@ -198,21 +215,22 @@ export function getExtensionForFormat(format: string) {
   return ext || format;
 }
 
-export function getOutFileExtension({ isCustomFormatSelected, outFormat, filePath }: {
+export async function getOutFileExtension({ isCustomFormatSelected, outFormat, filePath }: {
   isCustomFormatSelected?: boolean, outFormat: string, filePath: string,
 }) {
-  if (!isCustomFormatSelected) {
-    const inputExt = extname(filePath);
-    // QuickTime is quirky about the file extension of mov files (has to be .mov)
-    // https://github.com/mifi/lossless-cut/issues/1075#issuecomment-1072084286
-    const hasMovIncorrectExtension = outFormat === 'mov' && inputExt.toLowerCase() !== '.mov';
+  // if (!isCustomFormatSelected) {
+  //   const inputExt = extname(filePath);
+  //   // QuickTime is quirky about the file extension of mov files (has to be .mov)
+  //   // https://github.com/mifi/lossless-cut/issues/1075#issuecomment-1072084286
+  //   const hasMovIncorrectExtension = outFormat === 'mov' && inputExt.toLowerCase() !== '.mov';
 
-    // OK, just keep the current extension. Because most other players will not care about the extension
-    if (!hasMovIncorrectExtension) return inputExt;
-  }
+  //   // OK, just keep the current extension. Because most other players will not care about the extension
+  //   if (!hasMovIncorrectExtension) return inputExt;
+  // }
 
-  // user is changing format, must update extension too
-  return `.${getExtensionForFormat(outFormat)}`;
+  // // user is changing format, must update extension too
+  // return `.${getExtensionForFormat(outFormat)}`;
+  return utils.getOutFileExtension({ isCustomFormatSelected, outFormat, filePath });
 }
 
 export const hasDuplicates = (arr: unknown[]) => new Set(arr).size !== arr.length;
@@ -228,7 +246,7 @@ export async function findExistingHtml5FriendlyFile(fp: string, cod: string | un
   const suffixes = ['slowest', 'slow-audio', 'slow', 'fast-audio-remux', 'fast-audio', 'fast', html5dummySuffix];
   const prefix = getSuffixedFileName(fp, html5ifiedPrefix);
 
-  const outDir = getOutDir(cod, fp);
+  const outDir = await getOutDir(cod, fp);
   invariant(outDir != null);
   const dirEntries = await readdir(outDir);
 
@@ -256,7 +274,7 @@ export async function findExistingHtml5FriendlyFile(fp: string, cod: string | un
   };
 }
 
-export function getHtml5ifiedPath(cod: string | undefined, fp: string, type: Html5ifyMode) {
+export async function getHtml5ifiedPath(cod: string | undefined, fp: string, type: Html5ifyMode) {
   // See also inside ffmpegHtml5ify
   const ext = (isMac && ['slowest', 'slow', 'slow-audio'].includes(type)) ? 'mp4' : 'mkv';
   return getSuffixedOutPath({ customOutDir: cod, filePath: fp, nameSuffix: `${html5ifiedPrefix}${type}.${ext}` });

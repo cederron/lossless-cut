@@ -462,4 +462,8 @@ export class Utils implements IUtils {
     parseCue(path: string): ICueSheet {
         return parseCue(path);
     }
+
+    async getAppPath(): Promise<string> {
+        return process.cwd();
+    }
 }

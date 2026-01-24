@@ -1,5 +1,5 @@
 import type { FFprobeFormat } from "./ffprobe.ts";
-import type { Html5ifyMode } from "./types/Html5ifyMode.ts";
+// import type { Html5ifyMode } from "./types/Html5ifyMode.ts";
 import type { ICueSheet } from 'cue-parser/lib/types.d.ts';
 
 export interface IUtils {
@@ -23,22 +23,24 @@ export interface IUtils {
     readdir(path: string | undefined): Promise<string[]>;
     trashFile(path: string): Promise<void>;
     unlinkWithRetry(path: string, options?: {signal:AbortSignal}): Promise<void>;
-    transferTimestamps({ inPath, outPath, cutFrom, cutTo, duration, treatInputFileModifiedTimeAsStart, treatOutputFileModifiedTimeAsStart }: {
-  inPath: string,
-  outPath: string,
-  cutFrom?: number | undefined,
-  cutTo?: number | undefined,
-  duration: number | undefined,
-  treatInputFileModifiedTimeAsStart: boolean,
-  treatOutputFileModifiedTimeAsStart: boolean | null | undefined,
-}): Promise<void>;
+    // TODO remove from implementation
+    // transferTimestamps({ inPath, outPath, cutFrom, cutTo, duration, treatInputFileModifiedTimeAsStart, treatOutputFileModifiedTimeAsStart }: {
+//   inPath: string,
+//   outPath: string,
+//   cutFrom?: number | undefined,
+//   cutTo?: number | undefined,
+//   duration: number | undefined,
+//   treatInputFileModifiedTimeAsStart: boolean,
+//   treatOutputFileModifiedTimeAsStart: boolean | null | undefined,
+// }): Promise<void>;
 readFileSize(path: string): Promise<number>;
 getOutFileExtension({ isCustomFormatSelected, outFormat, filePath }: {
   isCustomFormatSelected?: boolean | undefined, outFormat: string, filePath: string,
 }): Promise<string>;
 getSuffixedOutPath<T extends string | undefined>(a: { customOutDir?: string | undefined, filePath?: T | undefined, nameSuffix: string }): Promise<T extends string ? string : undefined>;
 getSuffixedOutPath({ customOutDir, filePath, nameSuffix }: { customOutDir?: string | undefined, filePath?: string | undefined, nameSuffix: string }): Promise<string | undefined>;
-getHtml5ifiedPath(cod: string | undefined, fp: string, type: Html5ifyMode): Promise<string>;
+// TODO remove implementation
+// getHtml5ifiedPath(cod: string | undefined, fp: string, type: Html5ifyMode): Promise<string>;
 getSuffixedFileName(filePath: string | undefined, nameSuffix: string): string
 getOutPath({ customOutDir, filePath, fileName }: { customOutDir?: string | undefined, filePath?: string | undefined, fileName: string }): Promise<string>;
 renameWithRetry(renameFromPath: string, renameToPath: string): Promise<void>;
@@ -58,4 +60,5 @@ getDefaultOutFormat({ filePath, fileMeta: { format } }: { filePath: string, file
     //   onThumbnail: (a: { time: number, url: string }) => void,
     //   signal: AbortSignal,
     // }): Promise<void>;
+    getAppPath(): Promise<string>;
 }
