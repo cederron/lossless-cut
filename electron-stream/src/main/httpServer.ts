@@ -129,13 +129,13 @@ export default ({ port, onKeyboardAction }: {
     res.json({ outPath });
   }));
 
-  // apiRouter.post('/transferTimestamps', express.json(), asyncHandler(async (req, res) => {
-  //   const { inPath, outPath, cutFrom, cutTo, duration, treatInputFileModifiedTimeAsStart, treatOutputFileModifiedTimeAsStart } = req.body as { inPath: string; outPath: string; cutFrom?: number; cutTo?: number; duration?: number; treatInputFileModifiedTimeAsStart: boolean; treatOutputFileModifiedTimeAsStart: boolean | null; };
-  //   logger.info('API transferTimestamps called', { inPath, outPath, cutFrom, cutTo, duration, treatInputFileModifiedTimeAsStart, treatOutputFileModifiedTimeAsStart });
-  //   const utils = container.resolve<IUtils>(TOKENS.Utils);
-  //   await utils.transferTimestamps({ inPath, outPath, cutFrom, cutTo, duration, treatInputFileModifiedTimeAsStart, treatOutputFileModifiedTimeAsStart });
-  //   res.end();
-  // }));
+  apiRouter.post('/transferTimestamps', express.json(), asyncHandler(async (req, res) => {
+    const { inPath, outPath, cutFrom, cutTo, duration, treatInputFileModifiedTimeAsStart, treatOutputFileModifiedTimeAsStart } = req.body as { inPath: string; outPath: string; cutFrom?: number; cutTo?: number; duration?: number; treatInputFileModifiedTimeAsStart: boolean; treatOutputFileModifiedTimeAsStart: boolean | null; };
+    logger.info('API transferTimestamps called', { inPath, outPath, cutFrom, cutTo, duration, treatInputFileModifiedTimeAsStart, treatOutputFileModifiedTimeAsStart });
+    const utils = container.resolve<IUtils>(TOKENS.Utils);
+    await utils.transferTimestamps({ inPath, outPath, cutFrom, cutTo, duration, treatInputFileModifiedTimeAsStart, treatOutputFileModifiedTimeAsStart });
+    res.end();
+  }));
 
   apiRouter.post('/getOutFileExtension', express.json(), asyncHandler(async (req, res) => {
     const { isCustomFormatSelected, outFormat, filePath } = req.body as { isCustomFormatSelected?: boolean; outFormat: string; filePath: string; };
@@ -389,6 +389,62 @@ export default ({ port, onKeyboardAction }: {
     const utils = container.resolve<IUtils>(TOKENS.Utils);
     const appPath = await utils.getAppPath();
     res.json({ appPath });
+  }));
+
+  apiRouter.post('/getSuffixedFileName', express.json(), asyncHandler(async (req, res) => {
+    const { filePath, nameSuffix } = req.body as { filePath: string; nameSuffix: string; };
+    logger.info('API getSuffixedFileName called', { filePath, nameSuffix });
+    const utils = container.resolve<IUtils>(TOKENS.Utils);
+    const suffixedFileName = await utils.getSuffixedFileName(filePath, nameSuffix);
+    res.json({ suffixedFileName });
+  }));
+
+  apiRouter.post('/havePermissionToReadFile', express.json(), asyncHandler(async (req, res) => {
+    const { filePath } = req.body as { filePath: string; };
+    logger.info('API havePermissionToReadFile called', { filePath });
+    const utils = container.resolve<IUtils>(TOKENS.Utils);
+    const havePermission = await utils.havePermissionToReadFile(filePath);
+    res.json({ havePermission });
+  }));
+
+  apiRouter.post('/getPathReadAccessError', express.json(), asyncHandler(async (req, res) => {
+    const { pathIn } = req.body as { pathIn: string; };
+    logger.info('API getPathReadAccessError called', { pathIn });
+    const utils = container.resolve<IUtils>(TOKENS.Utils);
+    const accessError = await utils.getPathReadAccessError(pathIn);
+    res.json({ accessError });
+  }));
+
+  apiRouter.post('/utimesWithRetry', express.json(), asyncHandler(async (req, res) => {
+    const { path, atime, mtime } = req.body as { path: string; atime: number; mtime: number; };
+    logger.info('API utimesWithRetry called', { path, atime, mtime });
+    const utils = container.resolve<IUtils>(TOKENS.Utils);
+    await utils.utimesWithRetry(path, atime, mtime);
+    res.end();
+  }));
+
+  apiRouter.post('/readDirRecursively', express.json(), asyncHandler(async (req, res) => {
+    const { dirPath } = req.body as { dirPath: string; };
+    logger.info('API readDirRecursively called', { dirPath });
+    const utils = container.resolve<IUtils>(TOKENS.Utils);
+    const files = await utils.readDirRecursively(dirPath);
+    res.json({ files });
+  }));
+
+  apiRouter.post('/readFileStats', express.json(), asyncHandler(async (req, res) => {
+    const { path } = req.body as { path: string; };
+    logger.info('API readFileStats called', { path });
+    const utils = container.resolve<IUtils>(TOKENS.Utils);
+    const stats = await utils.readFileStats(path);
+    res.json({ stats });
+  }));
+
+  apiRouter.post('/readdir', express.json(), asyncHandler(async (req, res) => {
+    const { path } = req.body as { path: string | undefined; };
+    logger.info('API readdir called', { path });
+    const utils = container.resolve<IUtils>(TOKENS.Utils);
+    const entries = await utils.readdir(path);
+    res.json({ entries });
   }));
 
   const server = http.createServer(app);

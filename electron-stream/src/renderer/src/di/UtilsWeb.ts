@@ -132,8 +132,16 @@ export class UtilsWeb implements IUtils {
     access(path: string, mode: "wok" | "rok" | "fok"): Promise<void> {
         throw new Error("Method not implemented.");
     }
-    readdir(path: string | undefined): Promise<string[]> {
-        throw new Error("Method not implemented.");
+    async readdir(path: string | undefined): Promise<string[]> {
+        const res = await fetch(`${this.apiUrl}/readdir`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ path }),
+        });
+        const data = await res.json();
+        return data.entries;
     }
     trashFile(path: string): Promise<void> {
         throw new Error("Method not implemented.");
@@ -221,8 +229,16 @@ export class UtilsWeb implements IUtils {
     checkDirWriteAccess(dirPath: string): Promise<boolean> {
         throw new Error("Method not implemented.");
     }
-    readFileStats(path: string): Promise<{ size: number; atimeMs: number; mtimeMs: number; ctimeMs: number; birthtimeMs: number; }> {
-        throw new Error("Method not implemented.");
+    async readFileStats(path: string): Promise<{ size: number; atimeMs: number; mtimeMs: number; ctimeMs: number; birthtimeMs: number; }> {
+        const res = await fetch(`${this.apiUrl}/readFileStats`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ path }),
+        });
+        const data = await res.json();
+        return data.stats;
     }
     getDefaultOutFormat({ filePath, fileMeta: { format } }: { filePath: string; fileMeta: { format: Pick<FFprobeFormat, "format_name">; }; }): Promise<string | undefined> {
         throw new Error("Method not implemented.");
@@ -246,6 +262,54 @@ export class UtilsWeb implements IUtils {
         });
         const data = await res.json();
         return data.appPath;
+    }
+
+    async getSuffixedFileName(filePath: string | undefined, nameSuffix: string): Promise<string> {
+        const res = await fetch(`${this.apiUrl}/getSuffixedFileName`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ filePath, nameSuffix }),
+        });
+        const data = await res.json();
+        return data.suffixedFileName;
+    }
+
+    async havePermissionToReadFile(filePath: string): Promise<boolean> {
+        const res = await fetch(`${this.apiUrl}/havePermissionToReadFile`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ filePath }),
+        });
+        const data = await res.json();
+        return data.havePermission;
+    }
+
+    async getPathReadAccessError(pathIn: string): Promise<string | undefined> {
+        const res = await fetch(`${this.apiUrl}/getPathReadAccessError`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ pathIn }),
+        });
+        const data = await res.json();
+        return data.error;
+    }
+
+    async readDirRecursively(dirPath: string): Promise<string[]> {
+        const res = await fetch(`${this.apiUrl}/readDirRecursively`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ dirPath }),
+        });
+        const data = await res.json();
+        return data.files;
     }
     
 }

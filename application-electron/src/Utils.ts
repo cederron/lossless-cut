@@ -1,6 +1,6 @@
 import { DirectoryAccessDeclinedError, FFprobeFormat, Html5ifyMode, type IPlatform, type ISettings, IUtils, MasDirectoryAccessDeclinedError, TOKENS } from "lossless-cut-application";
 import { constants, access, readdir, rename, stat, utimes, readFile, writeFile } from "fs/promises";
-import path, { basename, dirname, extname, join, parse, resolve } from "node:path";
+import path, { basename, dirname, extname, isAbsolute, join, parse, resolve } from "node:path";
 import { pathToFileURL } from "node:url";
 import { inject, injectable } from "tsyringe";
 import { parse as parseCue } from "cue-parser";
@@ -8,8 +8,10 @@ import mime from 'mime-types';
 import type { ICueSheet } from "cue-parser/lib/types.d.ts";
 import type { Options } from 'p-retry';
 import pRetry from 'p-retry';
-import { lstat, mkdir, unlink } from "node:fs/promises";
+import { lstat, mkdir, open, unlink } from "node:fs/promises";
 import { fileTypeFromFile } from 'file-type/node';
+import { R_OK } from "node:constants";
+import pMap from 'p-map';
 
 @injectable()
 export class Utils implements IUtils {
@@ -284,7 +286,7 @@ export class Utils implements IUtils {
         return parsed.name;
     }
 
-    getSuffixedFileName = async(filePath: string | undefined, nameSuffix: string) => `${this.getFileBaseName(filePath)}-${nameSuffix}`;
+    getSuffixedFileName = async (filePath: string | undefined, nameSuffix: string) => `${this.getFileBaseName(filePath)}-${nameSuffix}`;
 
 
     async getOutPath<T extends string | undefined>(a: { customOutDir?: string | undefined, filePath?: T | undefined, fileName: string }): Promise<T extends string ? string : undefined>;
@@ -296,7 +298,7 @@ export class Utils implements IUtils {
     async getSuffixedOutPath<T extends string | undefined>(a: { customOutDir?: string | undefined, filePath?: T | undefined, nameSuffix: string }): Promise<T extends string ? string : undefined>;
     async getSuffixedOutPath({ customOutDir, filePath, nameSuffix }: { customOutDir?: string | undefined, filePath?: string | undefined, nameSuffix: string }) {
         if (filePath == null) return undefined;
-        return this.getOutPath({ customOutDir, filePath, fileName: this.getSuffixedFileName(filePath, nameSuffix) });
+        return this.getOutPath({ customOutDir, filePath, fileName: await this.getSuffixedFileName(filePath, nameSuffix) });
     }
 
     async getHtml5ifiedPath(cod: string | undefined, fp: string, type: Html5ifyMode) {
@@ -313,7 +315,7 @@ export class Utils implements IUtils {
         });
     }
 
-    readdir(path: string | undefined): Promise<string[]> {
+    async readdir(path: string | undefined): Promise<string[]> {
         if (!path) return Promise.resolve([]);
         return readdir(path);
     }
@@ -466,4 +468,53 @@ export class Utils implements IUtils {
     async getAppPath(): Promise<string> {
         return process.cwd();
     }
+
+    async resolvePathIfNeeded(inPath: string): Promise<string> {
+        return (isAbsolute(inPath) ? inPath : resolve(inPath))
+    }
+
+    async havePermissionToReadFile(filePath: string) {
+        try {
+            const fd = await open(filePath, 'r');
+            try {
+                await fd.close();
+            } catch (err) {
+                console.error('Failed to close fd', err);
+            }
+        } catch (err) {
+            if (err instanceof Error && 'code' in err && ['EPERM', 'EACCES'].includes(err.code as string)) return false;
+            console.error(err);
+        }
+        return true;
+    }
+
+    async getPathReadAccessError(pathIn: string) {
+  try {
+    await access(pathIn, R_OK);
+    return undefined;
+  } catch (err) {
+    return err instanceof Error && 'code' in err && typeof err.code === 'string' ? err.code : undefined;
+  }
+}
+
+async readDirRecursively(dirPath: string) {
+  const files = await readdir(dirPath, { recursive: true });
+  const ret = (await pMap(files, async (path) => {
+    if (['.DS_Store'].includes(basename(path))) return [];
+
+    const absPath = join(dirPath, path);
+    const fileStat = await lstat(absPath); // readdir also returns directories...
+    if (!fileStat.isFile()) return [];
+
+    return [absPath];
+  }, { concurrency: 5 })).flat();
+
+  // if (ret.length === 0) throw new UserFacingError(i18n.t('No files found in folder'));
+  return ret;
+}
+
+async tryTrashItem(path: string): Promise<void> {
+
+}
+
 }

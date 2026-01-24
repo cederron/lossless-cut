@@ -19,8 +19,8 @@ import { container } from 'tsyringe';
 const appName = 'LosslessCut'; // TODO import from common
 
 // const { parse: parsePath, join, isAbsolute, resolve, basename } = window.require('path');
-const { stat, lstat, readdir, utimes, unlink, open, access, constants: { R_OK, W_OK } } = window.require('fs/promises');
-const { ipcRenderer } = window.require('electron');
+// const { stat, lstat, readdir, utimes, unlink, open, access, constants: { R_OK, W_OK } } = window.require('fs/promises');
+// const { ipcRenderer } = window.require('electron');
 // const remote = window.require('@electron/remote');
 // const { isWindows, isMac } = remote.require('./index.js');
 
@@ -29,17 +29,17 @@ const { ipcRenderer } = window.require('electron');
 
 // export { isWindows, isMac, appVersion, appPath };
 
-const platform = container.resolve<IPlatform>(TOKENS.Platform);
+// const platform = container.resolve<IPlatform>(TOKENS.Platform);
 const utils = container.resolve<IUtils>(TOKENS.Utils);
 
-export const isWindows = platform.isWindows();
-export const isMac = platform.isMac();
-export const appVersion = '0.1'; // platform.getAppVersion();
+export const isWindows = true;// platform.isWindows();
+export const isMac = false; //platform.isMac();
+export const appVersion = '0.0.1'; // platform.getAppVersion();
 export const appPath = await utils.getAppPath();
 
 export const trashFile = async (path: string) => ipcRenderer.invoke('tryTrashItem', path);
 
-export const showItemInFolder = async (path: string) => ipcRenderer.invoke('showItemInFolder', path);
+export const showItemInFolder = async (_path: string) => { throw new Error("Method not implemented."); }; // ipcRenderer.invoke('showItemInFolder', path);
 
 export async function getFileDir(filePath?: string) {
   // return filePath ? dirname(filePath) : undefined;
@@ -70,7 +70,7 @@ export async function getOutPath({ customOutDir, filePath, fileName }: { customO
   return utils.getOutPath({ customOutDir, filePath, fileName });
 }
 
-export const getDownloadMediaOutPath = (customOutDir: string, fileName: string) => join(customOutDir, fileName);
+export const getDownloadMediaOutPath = async (customOutDir: string, fileName: string) => utils.pathJoin(customOutDir, fileName); // join(customOutDir, fileName);
 
 export const getSuffixedFileName = async (filePath: string | undefined, nameSuffix: string) => utils.getSuffixedFileName(filePath, nameSuffix);
 
@@ -82,40 +82,25 @@ export async function getSuffixedOutPath({ customOutDir, filePath, nameSuffix }:
 }
 
 export async function havePermissionToReadFile(filePath: string) {
-  try {
-    const fd = await open(filePath, 'r');
-    try {
-      await fd.close();
-    } catch (err) {
-      console.error('Failed to close fd', err);
-    }
-  } catch (err) {
-    if (err instanceof Error && 'code' in err && ['EPERM', 'EACCES'].includes(err.code as string)) return false;
-    console.error(err);
-  }
-  return true;
+  return utils.havePermissionToReadFile(filePath);
 }
 
 export async function checkDirWriteAccess(dirPath: string) {
-  try {
-    await access(dirPath, W_OK);
-  } catch (err) {
-    if (err instanceof Error && 'code' in err) {
-      if (err.code === 'EPERM') return false; // Thrown on Mac (MAS build) when user has not yet allowed access
-      if (err.code === 'EACCES') return false; // Thrown on Linux when user doesn't have access to output dir
-    }
-    console.error(err);
-  }
-  return true;
+  return utils.checkDirWriteAccess(dirPath);
+  // try {
+  //   await access(dirPath, W_OK);
+  // } catch (err) {
+  //   if (err instanceof Error && 'code' in err) {
+  //     if (err.code === 'EPERM') return false; // Thrown on Mac (MAS build) when user has not yet allowed access
+  //     if (err.code === 'EACCES') return false; // Thrown on Linux when user doesn't have access to output dir
+  //   }
+  //   console.error(err);
+  // }
+  // return true;
 }
 
 export async function getPathReadAccessError(pathIn: string) {
-  try {
-    await access(pathIn, R_OK);
-    return undefined;
-  } catch (err) {
-    return err instanceof Error && 'code' in err && typeof err.code === 'string' ? err.code : undefined;
-  }
+  return utils.getPathReadAccessError(pathIn);
 }
 
 // export const testFailFsOperation = isDev;
@@ -139,11 +124,12 @@ export async function fsOperationWithRetry<T>(operation: () => Promise<T>, { sig
 
 // example error: index-18074aaf.js:166 Failed to delete C:\Users\USERNAME\Desktop\RC\New folder\2023-12-27 21-45-22 (GMT p5)-merged-1703933052361-00.01.04.915-00.01.07.424-seg1.mp4 Error: EPERM: operation not permitted, unlink 'C:\Users\USERNAME\Desktop\RC\New folder\2023-12-27 21-45-22 (GMT p5)-merged-1703933052361-00.01.04.915-00.01.07.424-seg1.mp4'
 export async function unlinkWithRetry(path: string, options?: Options) {
-  fsOperationWithRetry(async () => unlink(path), { ...options, onFailedAttempt: ({ attemptNumber, error }) => console.warn('Retrying delete', path, attemptNumber, error.message) });
+  // fsOperationWithRetry(async () => unlink(path), { ...options, onFailedAttempt: ({ attemptNumber, error }) => console.warn('Retrying delete', path, attemptNumber, error.message) });
+  return utils.unlinkWithRetry(path, options as any);
 }
 // export const unlinkWithRetry = async (path: string, options?: Options) => fsOperationWithRetry(async () => unlink(path), { ...options, onFailedAttempt: ({ attemptNumber, error }) => console.warn('Retrying delete', path, attemptNumber, error.message) });
 // example error: index-18074aaf.js:160 Error: EPERM: operation not permitted, utime 'C:\Users\USERNAME\Desktop\RC\New folder\2023-12-27 21-45-22 (GMT p5)-merged-1703933052361-cut-merged-1703933070237.mp4'
-export const utimesWithRetry = async (path: string, atime: number, mtime: number, options?: Options) => fsOperationWithRetry(async () => utimes(path, atime, mtime), { ...options, onFailedAttempt: ({ attemptNumber, error }) => console.warn('Retrying utimes', path, attemptNumber, error.message) });
+export const utimesWithRetry = async (path: string, atime: number, mtime: number, options?: Options) => utils.utimesWithRetry(path, atime, mtime, options as any);
 
 export const getFrameDuration = (fps?: number) => 1 / (fps ?? 30);
 
@@ -156,31 +142,32 @@ export async function transferTimestamps({ inPath, outPath, cutFrom = 0, cutTo: 
   treatInputFileModifiedTimeAsStart: boolean,
   treatOutputFileModifiedTimeAsStart: boolean | null | undefined,
 }) {
-  if (treatOutputFileModifiedTimeAsStart == null) return; // null means time transfer is disabled (use current time);
+  return utils.transferTimestamps({ inPath, outPath, cutFrom, cutTo: cutToIn, duration, treatInputFileModifiedTimeAsStart, treatOutputFileModifiedTimeAsStart });
+  // if (treatOutputFileModifiedTimeAsStart == null) return; // null means time transfer is disabled (use current time);
 
-  const cutTo = cutToIn ?? duration;
+  // const cutTo = cutToIn ?? duration;
 
-  // see https://github.com/mifi/lossless-cut/issues/1017#issuecomment-1049097115
-  function calculateTime(fileTime: number) {
-    if (treatInputFileModifiedTimeAsStart && treatOutputFileModifiedTimeAsStart) {
-      return fileTime + cutFrom;
-    }
-    if (!treatInputFileModifiedTimeAsStart && !treatOutputFileModifiedTimeAsStart) {
-      return fileTime - duration + cutTo;
-    }
-    if (treatInputFileModifiedTimeAsStart && !treatOutputFileModifiedTimeAsStart) {
-      return fileTime + cutTo;
-    }
-    // if (!treatInputFileModifiedTimeAsStart && treatOutputFileModifiedTimeAsStart) {
-    return fileTime - duration + cutFrom;
-  }
+  // // see https://github.com/mifi/lossless-cut/issues/1017#issuecomment-1049097115
+  // function calculateTime(fileTime: number) {
+  //   if (treatInputFileModifiedTimeAsStart && treatOutputFileModifiedTimeAsStart) {
+  //     return fileTime + cutFrom;
+  //   }
+  //   if (!treatInputFileModifiedTimeAsStart && !treatOutputFileModifiedTimeAsStart) {
+  //     return fileTime - duration + cutTo;
+  //   }
+  //   if (treatInputFileModifiedTimeAsStart && !treatOutputFileModifiedTimeAsStart) {
+  //     return fileTime + cutTo;
+  //   }
+  //   // if (!treatInputFileModifiedTimeAsStart && treatOutputFileModifiedTimeAsStart) {
+  //   return fileTime - duration + cutFrom;
+  // }
 
-  try {
-    const { atime, mtime } = await stat(inPath);
-    await utimesWithRetry(outPath, calculateTime((atime.getTime() / 1000)), calculateTime((mtime.getTime() / 1000)));
-  } catch (err) {
-    console.error('Failed to set output file modified time', err);
-  }
+  // try {
+  //   const { atime, mtime } = await stat(inPath);
+  //   await utimesWithRetry(outPath, calculateTime((atime.getTime() / 1000)), calculateTime((mtime.getTime() / 1000)));
+  // } catch (err) {
+  //   console.error('Failed to set output file modified time', err);
+  // }
 }
 
 export function filenamify(name: string) {
@@ -236,7 +223,7 @@ export async function getOutFileExtension({ isCustomFormatSelected, outFormat, f
 export const hasDuplicates = (arr: unknown[]) => new Set(arr).size !== arr.length;
 
 // Need to resolve relative paths from the command line https://github.com/mifi/lossless-cut/issues/639
-export const resolvePathIfNeeded = (inPath: string) => (isAbsolute(inPath) ? inPath : resolve(inPath));
+export const resolvePathIfNeeded = (inPath: string) => utils.resolvePathIfNeeded(inPath);
 
 export const html5ifiedPrefix = 'html5ified-';
 export const html5dummySuffix = 'dummy';
@@ -244,11 +231,11 @@ export const html5dummySuffix = 'dummy';
 export async function findExistingHtml5FriendlyFile(fp: string, cod: string | undefined) {
   // The order is the priority we will search:
   const suffixes = ['slowest', 'slow-audio', 'slow', 'fast-audio-remux', 'fast-audio', 'fast', html5dummySuffix];
-  const prefix = getSuffixedFileName(fp, html5ifiedPrefix);
+  const prefix = await getSuffixedFileName(fp, html5ifiedPrefix);
 
   const outDir = await getOutDir(cod, fp);
   invariant(outDir != null);
-  const dirEntries = await readdir(outDir);
+  const dirEntries = await utils.readdir(outDir); // readdir(outDir);
 
   const html5ifiedDirEntries = dirEntries.filter((entry) => entry.startsWith(prefix));
 
@@ -269,7 +256,7 @@ export async function findExistingHtml5FriendlyFile(fp: string, cod: string | un
   const { suffix, entry } = matches[0]!;
 
   return {
-    path: join(outDir, entry),
+    path: await utils.pathJoin(outDir, entry),
     usingDummyVideo: suffix === html5dummySuffix,
   };
 }
@@ -277,7 +264,7 @@ export async function findExistingHtml5FriendlyFile(fp: string, cod: string | un
 export async function getHtml5ifiedPath(cod: string | undefined, fp: string, type: Html5ifyMode) {
   // See also inside ffmpegHtml5ify
   const ext = (isMac && ['slowest', 'slow', 'slow-audio'].includes(type)) ? 'mp4' : 'mkv';
-  return getSuffixedOutPath({ customOutDir: cod, filePath: fp, nameSuffix: `${html5ifiedPrefix}${type}.${ext}` });
+  return await getSuffixedOutPath({ customOutDir: cod, filePath: fp, nameSuffix: `${html5ifiedPrefix}${type}.${ext}` });
 }
 
 
@@ -342,7 +329,7 @@ export function escapeRegExp(str: string) {
   return str.replaceAll(/[.*+?^${}()|[\]\\]/g, String.raw`\$&`); // $& means the whole matched string
 }
 
-export const readFileStats = async (path: string) => stat(path);
+export const readFileStats = async (path: string) => utils.readFileStats(path); // stat(path);
 
 export const readFileSize = async (path: string) => (await readFileStats(path)).size;
 
@@ -358,7 +345,7 @@ export function checkFileSizes(inputSize: number, outputSize: number) {
   return undefined;
 }
 
-export function setDocumentTitle({ filePath, working, progress }: {
+export async function setDocumentTitle({ filePath, working, progress }: {
   filePath?: string | undefined,
   working?: string | undefined,
   progress?: number | undefined }) {
@@ -370,7 +357,7 @@ export function setDocumentTitle({ filePath, working, progress }: {
   }
 
   if (filePath) {
-    parts.push(basename(filePath));
+    parts.push(await utils.basename(filePath));
   }
 
   parts.push(isStoreBuild ? appName : `${appName} ${appVersion}`);
@@ -379,27 +366,30 @@ export function setDocumentTitle({ filePath, working, progress }: {
 }
 
 export async function readVideoTs(videoTsPath: string) {
-  const files = await readdir(videoTsPath);
+  const files = await utils.readdir(videoTsPath);
   const relevantFiles = files.filter((file) => /^vts_\d+_\d+\.vob$/i.test(file) && !/^vts_\d+_00\.vob$/i.test(file)); // skip menu
-  const ret = sortBy(relevantFiles).map((file) => join(videoTsPath, file));
+  const ret = await pMap(sortBy(relevantFiles), async (file) => await utils.pathJoin(videoTsPath, file));
   if (ret.length === 0) throw new UserFacingError(i18n.t('No VTS vob files found in folder'));
   return ret;
 }
 
 export async function readDirRecursively(dirPath: string) {
-  const files = await readdir(dirPath, { recursive: true });
-  const ret = (await pMap(files, async (path) => {
-    if (['.DS_Store'].includes(basename(path))) return [];
-
-    const absPath = join(dirPath, path);
-    const fileStat = await lstat(absPath); // readdir also returns directories...
-    if (!fileStat.isFile()) return [];
-
-    return [absPath];
-  }, { concurrency: 5 })).flat();
-
+  const ret = await utils.readDirRecursively(dirPath);
   if (ret.length === 0) throw new UserFacingError(i18n.t('No files found in folder'));
   return ret;
+  // const files = await readdir(dirPath, { recursive: true });
+  // const ret = (await pMap(files, async (path) => {
+  //   if (['.DS_Store'].includes(await utils.basename(path))) return [];
+
+  //   const absPath = await utils.pathJoin(dirPath, path);
+  //   const fileStat = await lstat(absPath); // readdir also returns directories...
+  //   if (!fileStat.isFile()) return [];
+
+  //   return [absPath];
+  // }, { concurrency: 5 })).flat();
+
+  // if (ret.length === 0) throw new UserFacingError(i18n.t('No files found in folder'));
+  // return ret;
 }
 
 export function getImportProjectType(filePath: string) {

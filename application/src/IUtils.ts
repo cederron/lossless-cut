@@ -23,16 +23,15 @@ export interface IUtils {
     readdir(path: string | undefined): Promise<string[]>;
     trashFile(path: string): Promise<void>;
     unlinkWithRetry(path: string, options?: {signal:AbortSignal}): Promise<void>;
-    // TODO remove from implementation
-    // transferTimestamps({ inPath, outPath, cutFrom, cutTo, duration, treatInputFileModifiedTimeAsStart, treatOutputFileModifiedTimeAsStart }: {
-//   inPath: string,
-//   outPath: string,
-//   cutFrom?: number | undefined,
-//   cutTo?: number | undefined,
-//   duration: number | undefined,
-//   treatInputFileModifiedTimeAsStart: boolean,
-//   treatOutputFileModifiedTimeAsStart: boolean | null | undefined,
-// }): Promise<void>;
+    transferTimestamps({ inPath, outPath, cutFrom, cutTo, duration, treatInputFileModifiedTimeAsStart, treatOutputFileModifiedTimeAsStart }: {
+  inPath: string,
+  outPath: string,
+  cutFrom?: number | undefined,
+  cutTo?: number | undefined,
+  duration: number | undefined,
+  treatInputFileModifiedTimeAsStart: boolean,
+  treatOutputFileModifiedTimeAsStart: boolean | null | undefined,
+}): Promise<void>;
 readFileSize(path: string): Promise<number>;
 getOutFileExtension({ isCustomFormatSelected, outFormat, filePath }: {
   isCustomFormatSelected?: boolean | undefined, outFormat: string, filePath: string,
@@ -61,4 +60,9 @@ getDefaultOutFormat({ filePath, fileMeta: { format } }: { filePath: string, file
     //   signal: AbortSignal,
     // }): Promise<void>;
     getAppPath(): Promise<string>;
+    resolvePathIfNeeded(path: string): Promise<string>;
+    havePermissionToReadFile(filePath: string): Promise<boolean>;
+    getPathReadAccessError(pathIn: string): Promise<string | undefined>;
+    utimesWithRetry(path: string, atime: number, mtime: number, options?: {signal:AbortSignal}): Promise<void>;
+    readDirRecursively(dirPath: string): Promise<string[]>;
 }
