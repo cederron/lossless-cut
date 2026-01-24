@@ -7,7 +7,7 @@ import assert from 'node:assert';
 import { homepageUrl } from '../common/constants.js';
 import logger from './logger.js';
 import { container } from 'tsyringe';
-import { TOKENS, type IFfmpeg, type IUtils } from 'lossless-cut-application';
+import { TOKENS, type Html5ifyMode, type IFfmpeg, type IUtils } from 'lossless-cut-application';
 
     // const logger = container.resolve<ILogger>(TOKENS.Logger);
 
@@ -235,6 +235,38 @@ export default ({ port, onKeyboardAction }: {
       }
     }
   });
+
+  apiRouter.post('/getHtml5ifiedPath', express.json(), asyncHandler(async (req, res) => {
+    const { cod, fp, type } = req.body as { cod?: string; fp: string; type: Html5ifyMode; };
+    logger.info('API getHtml5ifiedPath called', { cod, fp, type });
+    const utils = container.resolve<IUtils>(TOKENS.Utils);
+    const html5ifiedPath =  await utils.getHtml5ifiedPath(cod, fp, type);
+    res.json({ html5ifiedPath });
+  }));
+
+  apiRouter.post('/getDuration', express.json(), asyncHandler(async (req, res) => {
+    const { filePath } = req.body as { filePath: string; };
+    logger.info('API getDuration called', { filePath });
+    const ffmpeg = container.resolve<IFfmpeg>(TOKENS.Ffmpeg);
+    const duration =  await ffmpeg.getDuration(filePath);
+    res.json({ duration });
+  }));
+
+  apiRouter.post('/getOutPath', express.json(), asyncHandler(async (req, res) => {
+    const { customOutDir, filePath, fileName } = req.body as { customOutDir?: string; filePath?: string; fileName: string; };
+    logger.info('API getOutPath called', { customOutDir, filePath, fileName });
+    const utils = container.resolve<IUtils>(TOKENS.Utils);
+    const outPath =  await utils.getOutPath({ customOutDir, filePath, fileName });
+    res.json({ outPath });
+  }));
+
+  apiRouter.post('/pathResolve', express.json(), asyncHandler(async (req, res) => {
+    const { paths } = req.body as { paths: string[]; };
+    logger.info('API pathResolve called', { paths });
+    const utils = container.resolve<IUtils>(TOKENS.Utils);
+    const resolvedPath =  await utils.pathResolve(...paths);
+    res.json({ resolvedPath });
+  }));
 
   const server = http.createServer(app);
 

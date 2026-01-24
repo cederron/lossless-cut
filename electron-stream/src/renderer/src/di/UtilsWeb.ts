@@ -93,8 +93,16 @@ export class UtilsWeb implements IUtils {
     pathExists(path: string): Promise<boolean> {
         throw new Error("Method not implemented.");
     }
-    pathResolve(...paths: string[]): string {
-        throw new Error("Method not implemented.");
+    async pathResolve(...paths: string[]): Promise<string> {
+        const res = await fetch(`${this.apiUrl}/pathResolve`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ paths }),
+        });
+        const data = await res.json();
+        return data.resolvedPath;
     }
     pathNormalize(path: string): string {
         throw new Error("Method not implemented.");
@@ -161,14 +169,30 @@ export class UtilsWeb implements IUtils {
         const data = await res.json();
         return data.outPath;
     }
-    getHtml5ifiedPath(cod: string | undefined, fp: string, type: Html5ifyMode): string {
-        throw new Error("Method not implemented.");
+    async getHtml5ifiedPath(cod: string | undefined, fp: string, type: Html5ifyMode): Promise<string> {
+        const res = await fetch(`${this.apiUrl}/getHtml5ifiedPath`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ cod, fp, type }),
+        });
+        const data = await res.json();
+        return data.html5ifiedPath;
     }
     getSuffixedFileName(filePath: string | undefined, nameSuffix: string): string {
         throw new Error("Method not implemented.");
     }
     async getOutPath({ customOutDir, filePath, fileName }: { customOutDir?: string | undefined; filePath?: string | undefined; fileName: string; }): Promise<string> {
-        throw new Error("Method not implemented.");
+        const res = await fetch(`${this.apiUrl}/getOutPath`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ customOutDir, filePath, fileName }),
+        });
+        const data = await res.json();
+        return data.outPath;
     }
     renameWithRetry(renameFromPath: string, renameToPath: string): Promise<void> {
         throw new Error("Method not implemented.");

@@ -58,7 +58,7 @@ import {
   readFileFfprobeMeta, getDefaultOutFormat,
   setCustomFfPath as ffmpegSetCustomFfPath,
   isIphoneHevc, isProblematicAvc1, tryMapChaptersToEdl,
-  getDuration, getTimecodeFromStreams, createChaptersFromSegments,
+  /*getDuration,*/ getTimecodeFromStreams, createChaptersFromSegments,
   RefuseOverwriteError, extractSubtitleTrackToSegments,
   mapRecommendedDefaultFormat,
   getFfCommandLine,
@@ -112,7 +112,7 @@ import GenericDialog, { useDialog } from './components/GenericDialog';
 import useHtml5ify from './hooks/useHtml5ify';
 import WhatsNew from './components/WhatsNew';
 import mainApi from './mainApi.js';
-import { DirectoryAccessDeclinedError, TOKENS, type IUtils } from 'lossless-cut-application';
+import { DirectoryAccessDeclinedError, TOKENS, type IFfmpeg, type IUtils } from 'lossless-cut-application';
 import { UserFacingError } from '../errors.js';
 import { container } from 'tsyringe';
 
@@ -130,6 +130,7 @@ hevcPlaybackSupportedPromise.catch((err) => console.error(err));
 function App() {
   const { t } = useTranslation();
   const utils = container.resolve<IUtils>(TOKENS.Utils);
+  const ffmpeg = container.resolve<IFfmpeg>(TOKENS.Ffmpeg);
 
   // Per project state
   const [ffmpegCommandLog, setFfmpegCommandLog] = useState<FfmpegCommandLog>([]);
@@ -2195,7 +2196,7 @@ function App() {
 
           console.log('Trying to create preview');
 
-          if (!isDurationValid(await getDuration(filePath))) throw new UserFacingError(i18n.t('Invalid duration'));
+          if (!isDurationValid(await ffmpeg.getDuration(filePath))) throw new UserFacingError(i18n.t('Invalid duration'));
 
           if (hasVideo || hasAudio) {
             await html5ifyAndLoadWithPreferences(customOutDir, filePath, 'fastest', hasVideo, hasAudio);

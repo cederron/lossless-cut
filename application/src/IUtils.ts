@@ -13,7 +13,7 @@ export interface IUtils {
     basename(path: string): Promise<string>;
     dirname(path: string): Promise<string>;
     pathExists(path: string): Promise<boolean>;
-    pathResolve(...paths: string[]): string;
+    pathResolve(...paths: string[]): Promise<string>;
     pathNormalize(path: string): string;
     pathParsedName(path: string): string;
     pathSep(): string;

@@ -5,7 +5,7 @@ import pMap from 'p-map';
 import invariant from 'tiny-invariant';
 import i18n from 'i18next';
 
-import { /*getSuffixedOutPath,*/ /* transferTimestamps, getOutFileExtension, getOutDir,*/ deleteDispositionValue, getHtml5ifiedPath, unlinkWithRetry, getFrameDuration, isMac } from '../util';
+import { /*getSuffixedOutPath,*/ /* transferTimestamps, getOutFileExtension, getOutDir,*/ deleteDispositionValue, /* getHtml5ifiedPath,*/ unlinkWithRetry, getFrameDuration, isMac } from '../util';
 // import { isCuttingStart, isCuttingEnd, runFfmpegWithProgress, getFfCommandLine, getDuration, createChaptersFromSegments, readFileFfprobeMeta, getExperimentalArgs, getVideoTimescaleArgs, logStdoutStderr, runFfmpegConcat, RefuseOverwriteError, runFfmpegVoid } from '../ffmpeg';
 import { getMapStreamsArgs, getStreamIdsToCopy } from '../util/streams';
 import { needsSmartCut, getCodecParams } from '../smartcut';
@@ -140,7 +140,7 @@ function useFfmpegOperations({ filePath, treatInputFileModifiedTimeAsStart, trea
 
     console.log('Merging files', { paths }, 'to', outPath);
 
-    const durations = await pMap(paths, ffmpeg.getDuration, { concurrency: 1 });
+    const durations = await pMap(paths, async (path) => await ffmpeg.getDuration(path), { concurrency: 1 });
     const totalDuration = sum(durations);
 
     let chaptersPath: string | undefined;
@@ -225,7 +225,7 @@ function useFfmpegOperations({ filePath, treatInputFileModifiedTimeAsStart, trea
       // https://superuser.com/questions/787064/filename-quoting-in-ffmpeg-concat
       // Must add "file:" or we get "Impossible to open 'pipe:xyz.mp4'" on newer ffmpeg versions
       // https://superuser.com/questions/718027/ffmpeg-concat-doesnt-work-with-absolute-path
-      const concatTxt = paths.map((file) => `file 'file:${utils.pathResolve(file).replaceAll('\'', String.raw`'\''`)}'`).join('\n');
+      const concatTxt = paths.map((file) => `file 'file:${await utils.pathResolve(file).replaceAll('\'', String.raw`'\''`)}'`).join('\n');
 
       const ffmpegCommandLine = ffmpeg.getFfCommandLine('ffmpeg', ffmpegArgs);
 
@@ -697,7 +697,7 @@ function useFfmpegOperations({ filePath, treatInputFileModifiedTimeAsStart, trea
   const html5ify = useCallback(async ({ customOutDir, filePath: filePathArg, speed, hasAudio, hasVideo, onProgress }: {
     customOutDir: string | undefined, filePath: string, speed: Html5ifyMode, hasAudio: boolean, hasVideo: boolean, onProgress: (p: number) => void,
   }) => {
-    const outPath = getHtml5ifiedPath(customOutDir, filePathArg, speed);
+    const outPath = await utils.getHtml5ifiedPath(customOutDir, filePathArg, speed);
     invariant(outPath != null);
 
     let audio: string | undefined;

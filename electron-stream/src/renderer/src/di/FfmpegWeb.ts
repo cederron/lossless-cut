@@ -102,8 +102,19 @@ export class FfmpegWeb implements IFfmpeg {
             reader.releaseLock();
         }
     }
-    getDuration(filePath: string): Promise<number> {
-        throw new Error("Method not implemented.");
+    async getDuration(filePath: string): Promise<number> {
+        const res = await fetch(`${this.apiUrl}/getDuration`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ filePath }),
+        });
+        if (!res.ok) {
+            throw new Error(`Failed to get duration: ${res.status} ${res.statusText}`);
+        }
+        const data = await res.json();
+        return data.duration as number;
     }
     abortFfmpegs(): void {
         throw new Error("Method not implemented.");

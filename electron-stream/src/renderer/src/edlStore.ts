@@ -5,17 +5,21 @@ import { ZodError } from 'zod';
 
 import { parseSrtToSegments, formatSrt, parseCuesheet, parseXmeml, parseFcpXml, parseCsv, parseCutlist, parsePbf, parseEdl, formatCsvHuman, formatTsvHuman, formatCsvFrames, formatCsvSeconds, parseCsvTime, getFrameValParser, parseDvAnalyzerSummaryTxt, parseOtio } from './edlFormats';
 import { askForYouTubeInput, showOpenDialog } from './dialogs';
-import { getOutPath } from './util';
+// import { getOutPath } from './util';
 import type { EdlExportType, EdlFileType, EdlImportType, GetFrameCount, LlcProject, SegmentBase, StateSegment } from './types';
 import { llcProjectV1Schema, llcProjectV2Schema } from './types';
 import { mapSaveableSegments } from './segments';
 import isDev from './isDev';
+import { container } from 'tsyringe';
+import { TOKENS, type IUtils } from 'lossless-cut-application';
 
 const { readFile, writeFile } = window.require('fs/promises');
 const cueParser = window.require('cue-parser');
 const { basename } = window.require('path');
 
 const { dialog } = window.require('@electron/remote');
+
+const utils = container.resolve<IUtils>(TOKENS.Utils);
 
 
 // When readFile is used with 'utf8', ef bb bf is its UTF-8 representation of BOM. As BOM is considered white-space, it can be stripped by .trim(). Node.js does not strip BOM, it is a userland task.
@@ -213,7 +217,7 @@ export async function exportEdlFile({ type, cutSegments, customOutDir, filePath,
     filters = [{ name: i18n.t('LosslessCut project'), extensions: [ext, 'llc'] }];
   }
 
-  const defaultPath = getOutPath({ filePath, customOutDir, fileName: `${basename(filePath)}.${ext}` });
+  const defaultPath = await utils.getOutPath({ filePath, customOutDir, fileName: `${basename(filePath)}.${ext}` });
 
   const { canceled, filePath: savePath } = await dialog.showSaveDialog({ defaultPath, title: i18n.t('Export project'), ...(filters != null ? { filters } : {}) });
   if (canceled || !savePath) return;
