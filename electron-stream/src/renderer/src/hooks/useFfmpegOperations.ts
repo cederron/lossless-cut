@@ -5,7 +5,7 @@ import pMap from 'p-map';
 import invariant from 'tiny-invariant';
 import i18n from 'i18next';
 
-import { /*getSuffixedOutPath,*/ /* transferTimestamps, getOutFileExtension, getOutDir,*/ deleteDispositionValue, /* getHtml5ifiedPath,*/ unlinkWithRetry, getFrameDuration, isMac } from '../util';
+import { /*getSuffixedOutPath,*/ /* transferTimestamps, getOutFileExtension, getOutDir,*/ deleteDispositionValue, /* getHtml5ifiedPath, unlinkWithRetry,*/ getFrameDuration, isMac } from '../util';
 // import { isCuttingStart, isCuttingEnd, runFfmpegWithProgress, getFfCommandLine, getDuration, createChaptersFromSegments, readFileFfprobeMeta, getExperimentalArgs, getVideoTimescaleArgs, logStdoutStderr, runFfmpegConcat, RefuseOverwriteError, runFfmpegVoid } from '../ffmpeg';
 import { getMapStreamsArgs, getStreamIdsToCopy } from '../util/streams';
 import { needsSmartCut, getCodecParams } from '../smartcut';
@@ -73,7 +73,7 @@ function getMatroskaFlags() {
 const getChaptersInputArgs = (ffmetadataPath: string | undefined) => (ffmetadataPath ? ['-f', 'ffmetadata', '-i', ffmetadataPath] : []);
 
 async function tryDeleteFiles(paths: string[]) {
-  return pMap(paths, (path) => unlinkWithRetry(path).catch((err) => console.error('Failed to delete', path, err)), { concurrency: 5 });
+  return pMap(paths, (path) => await utils.unlinkWithRetry(path).catch((err) => console.error('Failed to delete', path, err)), { concurrency: 5 });
 }
 
 export async function maybeMkDeepOutDir({ outputDir, fileOutPath }: { outputDir: string, fileOutPath: string }) {
@@ -96,7 +96,7 @@ function useFfmpegOperations({ filePath, treatInputFileModifiedTimeAsStart, trea
   cutToAdjustmentFrames: number,
   appendLastCommandsLog: (a: string) => void,
   encCustomBitrate: number | undefined,
-  appendFfmpegCommandLog: (args: string[]) => void,
+  appendFfmpegCommandLog: (args: string[]) => Promise<void>,
 }) {
 
   const utils = container.resolve<IUtils>(TOKENS.Utils);
@@ -225,7 +225,7 @@ function useFfmpegOperations({ filePath, treatInputFileModifiedTimeAsStart, trea
       // https://superuser.com/questions/787064/filename-quoting-in-ffmpeg-concat
       // Must add "file:" or we get "Impossible to open 'pipe:xyz.mp4'" on newer ffmpeg versions
       // https://superuser.com/questions/718027/ffmpeg-concat-doesnt-work-with-absolute-path
-      const concatTxt = paths.map((file) => `file 'file:${await utils.pathResolve(file).replaceAll('\'', String.raw`'\''`)}'`).join('\n');
+      const concatTxt = (await Promise.all(paths.map(async (file) => `file 'file:${(await utils.pathResolve(file)).replaceAll('\'', String.raw`'\''`)}'`))).join('\n');
 
       const ffmpegCommandLine = ffmpeg.getFfCommandLine('ffmpeg', ffmpegArgs);
 
@@ -429,7 +429,7 @@ function useFfmpegOperations({ filePath, treatInputFileModifiedTimeAsStart, trea
       '-f', outFormat, '-y', outPath,
     ];
 
-    appendFfmpegCommandLog(ffmpegArgs);
+    await appendFfmpegCommandLog(ffmpegArgs);
     // const result = await runFfmpegWithProgress({ ffmpegArgs, duration: cutDuration, onProgress });
     // logStdoutStderr(result);
     await ffmpeg.runFfmpegWithProgress({ ffmpegArgs, duration: cutDuration, onProgress });
@@ -498,7 +498,7 @@ function useFfmpegOperations({ filePath, treatInputFileModifiedTimeAsStart, trea
       '-f', outFormat, '-y', outPath,
     ];
 
-    appendFfmpegCommandLog(ffmpegArgs);
+    await appendFfmpegCommandLog(ffmpegArgs);
     await ffmpeg.runFfmpegVoid(ffmpegArgs);
   }, [appendFfmpegCommandLog, filePath]);
 
@@ -799,7 +799,7 @@ function useFfmpegOperations({ filePath, treatInputFileModifiedTimeAsStart, trea
     ];
 
     const duration = await ffmpeg.getDuration(filePathArg);
-    appendFfmpegCommandLog(ffmpegArgs);
+    await appendFfmpegCommandLog(ffmpegArgs);
     await ffmpeg.runFfmpegWithProgress({ ffmpegArgs, duration, onProgress });
 
     // const { stdout } = await runFfmpegWithProgress({ ffmpegArgs, duration, onProgress });
@@ -832,7 +832,7 @@ function useFfmpegOperations({ filePath, treatInputFileModifiedTimeAsStart, trea
       '-y', outPath,
     ];
 
-    appendFfmpegCommandLog(ffmpegArgs);
+    await appendFfmpegCommandLog(ffmpegArgs);
     // const result = await runFfmpegWithProgress({ ffmpegArgs, duration, onProgress });
     // logStdoutStderr(result);
     await ffmpeg.runFfmpegWithProgress({ ffmpegArgs, duration, onProgress });
@@ -864,7 +864,7 @@ function useFfmpegOperations({ filePath, treatInputFileModifiedTimeAsStart, trea
       '-y', outPath,
     ];
 
-    appendFfmpegCommandLog(ffmpegArgs);
+    await appendFfmpegCommandLog(ffmpegArgs);
     // const result = await runFfmpegWithProgress({ ffmpegArgs, onProgress });
     // logStdoutStderr(result);
     await ffmpeg.runFfmpegWithProgress({ ffmpegArgs, onProgress });
@@ -950,7 +950,7 @@ function useFfmpegOperations({ filePath, treatInputFileModifiedTimeAsStart, trea
       ...streamArgs,
     ];
 
-    appendFfmpegCommandLog(ffmpegArgs);
+    await appendFfmpegCommandLog(ffmpegArgs);
     // const { stdout } = await ffmpeg.runFfmpeg(ffmpegArgs);
     const stdoutText = await ffmpeg.runFfmpegText(ffmpegArgs);
     console.log(stdoutText);
@@ -992,7 +992,7 @@ function useFfmpegOperations({ filePath, treatInputFileModifiedTimeAsStart, trea
     ];
 
     try {
-      appendFfmpegCommandLog(ffmpegArgs);
+      await appendFfmpegCommandLog(ffmpegArgs);
       const res = await ffmpeg.runFfmpegText(ffmpegArgs);
       console.log(res);
       // const { stdout } = await ffmpeg.runFfmpeg(ffmpegArgs);

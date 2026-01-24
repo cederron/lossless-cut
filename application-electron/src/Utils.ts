@@ -155,7 +155,7 @@ export class Utils implements IUtils {
         return dirname(path);
     }
 
-    pathResolve(...paths: string[]): string {
+    async pathResolve(...paths: string[]): Promise<string> {
         return resolve(...paths);
     }
 

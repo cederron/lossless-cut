@@ -55,7 +55,7 @@ function useSegments({ filePath, workingRef, setWorking, setProgress, videoStrea
   segmentsToChaptersOnly: boolean,
   timecodePlaceholder: string,
   parseTimecode: ParseTimecode,
-  appendFfmpegCommandLog: (args: string[]) => void,
+  appendFfmpegCommandLog: (args: string[]) => Promise<void>,
   fileDurationNonZero: number,
   mainFileMeta: { format: FFprobeFormat } | undefined,
   seekAbs: (val: number | undefined) => void,
@@ -197,7 +197,7 @@ function useSegments({ filePath, workingRef, setWorking, setProgress, videoStrea
         loadCutSegments({ segments: [detectedSegment], append: true, getNextCurrentSegIndex: (edl) => edl.length - 1, clampDuration: fileDuration });
         seekAbs(detectedSegment.start);
       });
-      appendFfmpegCommandLog(ffmpegArgs);
+      await appendFfmpegCommandLog(ffmpegArgs);
     } catch (err) {
       if (!(err instanceof Error && err.name === 'AbortError')) handleError({ err, title: errorText });
     } finally {

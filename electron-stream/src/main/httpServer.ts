@@ -268,6 +268,40 @@ export default ({ port, onKeyboardAction }: {
     res.json({ resolvedPath });
   }));
 
+  apiRouter.post(`/getFfCommandLine`, express.json(), asyncHandler(async (req, res) => {
+    const { cmd, args } = req.body as { cmd: string; args: readonly string[]; };
+    logger.info('API getFfCommandLine called', { cmd, args });
+    const ffmpeg = container.resolve<IFfmpeg>(TOKENS.Ffmpeg);
+    const commandLine =  await ffmpeg.getFfCommandLine(cmd, args);
+    res.json({ commandLine });
+  }));
+
+  apiRouter.post('/runFfmpegConcat', express.json(), async (req, res) => {
+    const { ffmpegArgs, concatTxt, totalDuration } = req.body as { ffmpegArgs: string[]; concatTxt: string; totalDuration: number; };
+    logger.info('API runFfmpegConcat called', { ffmpegArgs, concatTxt, totalDuration });
+    try {
+      const ffmpeg = container.resolve<IFfmpeg>(TOKENS.Ffmpeg);
+      res.setHeader('Content-Type', 'text/plain');
+      await ffmpeg.runFfmpegConcat({
+        ffmpegArgs,
+        concatTxt,
+        totalDuration,
+        onProgress: (progress) => {
+          res.write(JSON.stringify({ progress }) + '\n');
+        }
+      });
+      res.end();
+    } catch (err: any) {
+      logger.error('Error running ffmpeg concat', err);
+      if (!res.headersSent) {
+        res.status(500).json({ error: err.message });
+      } else {
+        res.write(JSON.stringify({ error: err.message }) + '\n');
+        res.end();
+      }
+    }
+  });
+
   const server = http.createServer(app);
 
   server.on('error', (err) => logger.error('http server error', err));

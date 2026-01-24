@@ -28,7 +28,7 @@ function getFrameFromVideo(video: HTMLVideoElement, format: CaptureFormat, quali
 }
 
 export default ({ appendFfmpegCommandLog, formatTimecode, treatInputFileModifiedTimeAsStart, treatOutputFileModifiedTimeAsStart, fileDuration }: {
-  appendFfmpegCommandLog: (args: string[]) => void,
+  appendFfmpegCommandLog: (args: string[]) => Promise<void>,
   formatTimecode: FormatTimecode,
   treatInputFileModifiedTimeAsStart: boolean,
   treatOutputFileModifiedTimeAsStart: boolean | undefined | null,
@@ -59,7 +59,7 @@ export default ({ appendFfmpegCommandLog, formatTimecode, treatInputFileModified
       const firstFileOutPath = await utils.getSuffixedOutPath({ customOutDir, filePath, nameSuffix: getSuffix(`${'1'.padStart(numDigits, '0')}`) }); // mimic ffmpeg output
 
       const args = await ffmpeg.captureFrames({ from: fromTime, to: toTime, videoPath: filePath, outPathTemplate, captureFormat, quality, filter, onProgress });
-      appendFfmpegCommandLog(args);
+      await appendFfmpegCommandLog(args);
 
       return firstFileOutPath;
     }
@@ -70,7 +70,7 @@ export default ({ appendFfmpegCommandLog, formatTimecode, treatInputFileModified
     const tmpSuffix = 'llc-tmp-frame-capture-';
     const outPathTemplate = await utils.getSuffixedOutPath({ customOutDir, filePath, nameSuffix: getSuffix(`${tmpSuffix}%d`) });
     const args = await ffmpeg.captureFrames({ from: fromTime, to: toTime, videoPath: filePath, outPathTemplate, captureFormat, quality, filter, framePts: true, onProgress });
-    appendFfmpegCommandLog(args);
+    await appendFfmpegCommandLog(args);
 
     const outDir = getOutDir(customOutDir, filePath);
     const files = await readdir(outDir);
@@ -108,7 +108,7 @@ export default ({ appendFfmpegCommandLog, formatTimecode, treatInputFileModified
     const nameSuffix = `${timecode}.${captureFormat}`;
     const outPath = await utils.getSuffixedOutPath({ customOutDir, filePath, nameSuffix });
     const args = await ffmpeg.captureFrameToFile({ timestamp: time, videoPath: filePath, outPath, quality });
-    appendFfmpegCommandLog(args);
+    await appendFfmpegCommandLog(args);
 
     await utils.transferTimestamps({ inPath: filePath, outPath, cutFrom: time, cutTo: time, duration: isDurationValid(fileDuration) ? fileDuration : undefined, treatInputFileModifiedTimeAsStart, treatOutputFileModifiedTimeAsStart });
     return outPath;

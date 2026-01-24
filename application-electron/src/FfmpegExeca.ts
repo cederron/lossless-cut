@@ -186,7 +186,7 @@ export class FfmpegExeca implements IFfmpeg {
         return /[^\w-]/.test(arg) ? `'${String(arg).replaceAll("'", '\'"\'"\'')}'` : arg;
     }
 
-    getFfCommandLine(cmd: string, args: readonly string[]): string {
+    async getFfCommandLine(cmd: string, args: readonly string[]): Promise<string> {
         return `${cmd} ${args.map((arg) => this.escapeCliArg(arg)).join(' ')}`;
     }
 

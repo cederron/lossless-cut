@@ -6,7 +6,7 @@ export interface IFfmpeg {
     // getMediaStream(path: string): ResultPromise<{env: Readonly<Partial<Record<string, string>>>}>;
     getStreamProcess(params: IMediaSourceInitParams): IRunningProcess;
     getFfmpegPath: () => string;
-    getFfCommandLine: (cmd: string, args: readonly string[]) => string;
+    getFfCommandLine: (cmd: string, args: readonly string[]) => Promise<string>;
     renderWaveformPng({ filePath, start, duration, resample, color, streamIndex, timeout }: {
         filePath: string,
         start?: number | undefined,

@@ -9,7 +9,17 @@ export class FfmpegWeb implements IFfmpeg {
         throw new Error("Method not implemented.");
     }
     getFfmpegPath(): string { throw new Error("Method not implemented."); };
-    getFfCommandLine(cmd: string, args: readonly string[]): string{ throw new Error("Method not implemented."); }; ;
+    async getFfCommandLine(cmd: string, args: readonly string[]): Promise<string> {
+        const res = await fetch(`${this.apiUrl}/getFfCommandLine`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ cmd, args }),
+        });
+        const data = await res.json();
+        return data.commandLine;
+    };
     async renderWaveformPng({ filePath, start, duration, resample, color, streamIndex, timeout }: { filePath: string; start?: number; duration?: number; resample?: number; color: string; streamIndex: number; timeout?: number; }): Promise<Waveform> {
         const res = await fetch(`${this.apiUrl}/renderWaveformPng`, {
             method: 'POST',
@@ -51,8 +61,48 @@ export class FfmpegWeb implements IFfmpeg {
     captureFrameToClipboard({ timestamp, videoPath, quality }: { timestamp: number; videoPath: string; quality: number; }): Promise<void> {
         throw new Error("Method not implemented.");
     }
-    runFfmpegConcat({ ffmpegArgs, concatTxt, totalDuration, onProgress }: { ffmpegArgs: string[]; concatTxt: string; totalDuration: number; onProgress: (a: number) => void; }): Promise<void> {
-        throw new Error("Method not implemented.");
+    async runFfmpegConcat({ ffmpegArgs, concatTxt, totalDuration, onProgress }: { ffmpegArgs: string[]; concatTxt: string; totalDuration: number; onProgress: (a: number) => void; }): Promise<void> {
+        const res = await fetch(`${this.apiUrl}/runFfmpegConcat`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ ffmpegArgs, concatTxt, totalDuration }),
+        });
+        if (!res.ok) {
+            throw new Error(`Failed to run ffmpeg concat: ${res.status} ${res.statusText}`);
+        }
+        if (!res.body) throw new Error('Response body is null');
+
+        const reader = res.body.getReader();
+        const decoder = new TextDecoder();
+        let buffer = '';
+        try {
+            while (true) {
+                const { done, value } = await reader.read();
+                if (done) break;
+                buffer += decoder.decode(value, { stream: true });
+                const lines = buffer.split('\n');
+                buffer = lines.pop() || '';
+                for (const line of lines) {
+                    if (!line.trim()) continue;
+                    try {
+                        const data = JSON.parse(line);
+                        if (data.error) {
+                            throw new Error(data.error);
+                        }
+                        if (typeof data.progress === 'number') {
+                            onProgress(data.progress);
+                        }
+                    } catch (e: any) {
+                         if (line.includes('"error"')) throw new Error(line); 
+                         console.error('Failed to parse progress line', e);
+                    }
+                }
+            }
+        } finally {
+            reader.releaseLock();
+        }
     }
     async runFfmpegWithProgress({ ffmpegArgs, duration, onProgress }: { ffmpegArgs: string[]; duration?: number | undefined; onProgress: (a: number) => void; }): Promise<void> {
         const res = await fetch(`${this.apiUrl}/runFfmpeg`, {

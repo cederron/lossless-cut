@@ -61,7 +61,7 @@ import {
   /*getDuration,*/ getTimecodeFromStreams, createChaptersFromSegments,
   RefuseOverwriteError, extractSubtitleTrackToSegments,
   mapRecommendedDefaultFormat,
-  getFfCommandLine,
+  // getFfCommandLine,
 } from './ffmpeg';
 import { shouldCopyStreamByDefault, getAudioStreams, getRealVideoStreams, isAudioDefinitelyNotSupported, willPlayerProperlyHandleVideo, doesPlayerSupportHevcPlayback, getSubtitleStreams, enableVideoTrack, enableAudioTrack, canHtml5PlayerPlayStreams, isMatroska } from './util/streams';
 import { exportEdlFile, readEdlFile, loadLlcProject, askForEdlImport } from './edlStore';
@@ -279,7 +279,7 @@ function App() {
   const appendLastCommandsLog = useCallback((command: string) => {
     setFfmpegCommandLog((old) => [...old, { command, time: new Date() }]);
   }, []);
-  const appendFfmpegCommandLog = useCallback((args: string[]) => appendLastCommandsLog(getFfCommandLine('ffmpeg', args)), [appendLastCommandsLog]);
+  const appendFfmpegCommandLog = useCallback(async (args: string[]) => appendLastCommandsLog(await ffmpeg.getFfCommandLine('ffmpeg', args)), [appendLastCommandsLog]);
 
   const toggleSegmentsList = useCallback(() => setShowRightBar((v) => !v), []);
 
