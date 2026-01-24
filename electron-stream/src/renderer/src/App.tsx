@@ -110,7 +110,7 @@ import ErrorDialog from './components/ErrorDialog';
 import useErrorHandling from './hooks/useErrorHandling';
 import GenericDialog, { useDialog } from './components/GenericDialog';
 import useHtml5ify from './hooks/useHtml5ify';
-import WhatsNew from './components/WhatsNew';
+// import WhatsNew from './components/WhatsNew';
 import mainApi from './mainApi.js';
 import { DirectoryAccessDeclinedError, TOKENS, type IFfmpeg, type IUtils } from 'lossless-cut-application';
 import { UserFacingError } from '../errors.js';
@@ -2750,7 +2750,7 @@ function App() {
 
               <GenericDialog dialog={genericDialog} onOpenChange={(open) => !open && closeGenericDialog()} />
 
-              <WhatsNew />
+              {/* <WhatsNew /> */}
 
               <ErrorDialog error={genericError} onOpenChange={(open) => !open && setGenericError(undefined)} />
             </div>

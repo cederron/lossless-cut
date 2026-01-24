@@ -151,7 +151,13 @@ export class FfmpegExeca implements IFfmpeg {
 
         this.logger.info(await this.getFfCommandLine('ffmpeg', args));
         // Cast to unknown then IRunningProcess to bypass strict signal type check (string vs Signals)
-        return execa(await this.getFfmpegPath(), args, await this.getExecaOptions({ buffer: false, stderr: this.enableLog ? 'inherit' : 'pipe' })) as unknown as IRunningProcess;
+        const child = execa(await this.getFfmpegPath(), args, await this.getExecaOptions({ buffer: false, stderr: this.enableLog ? 'inherit' : 'pipe' }));
+        const result = child as unknown as IRunningProcess;
+        result.promise = child;
+        // We cannot return the promise itself because it will be awaited by the async function
+        // so we hide the promise nature but expose it as a property
+        (result as any).then = undefined;
+        return result;
     }
 
     private async getFfPath(cmd: string): Promise<string> {

@@ -34,7 +34,7 @@ const utils = container.resolve<IUtils>(TOKENS.Utils);
 
 export const isWindows = await platform.isWindows();
 export const isMac = await platform.isMac();
-export const appVersion = '0.1'; // platform.getAppVersion();
+export const appVersion = '0.1.0'; // platform.getAppVersion();
 export const appPath = await utils.getAppPath();
 
 export const trashFile = async (path: string) => ipcRenderer.invoke('tryTrashItem', path);

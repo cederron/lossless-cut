@@ -48,7 +48,7 @@ export default ({ port, onKeyboardAction }: {
     });
 
     // Prevent unhandled rejection when we kill the process
-    process.catch((err: any) => {
+    process.promise.catch((err: any) => {
       if (err && (err.signal === 'SIGKILL' || err.killed)) return;
       logger.error('Stream process error', err);
     });
@@ -397,6 +397,14 @@ export default ({ port, onKeyboardAction }: {
     const utils = container.resolve<IUtils>(TOKENS.Utils);
     const appPath = await utils.getAppPath();
     res.json({ appPath });
+  }));
+
+  apiRouter.post('/getSuffixedFileName', express.json(), asyncHandler(async (req, res) => {
+    const { fileName, nameSuffix } = req.body as { fileName: string; nameSuffix: string; };
+    logger.info('API getSuffixedFileName called', { fileName, nameSuffix });
+    const utils = container.resolve<IUtils>(TOKENS.Utils);
+    const suffixedFileName = await utils.getSuffixedFileName(fileName, nameSuffix);
+    res.json({ suffixedFileName });
   }));
 
   apiRouter.post('/isWindows', express.json(), asyncHandler(async (_req, res) => {

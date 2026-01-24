@@ -1,6 +1,8 @@
 {
   "extends": ["@tsconfig/strictest", "@tsconfig/vite-react/tsconfig.json"],
   "compilerOptions": {
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
     "lib": ["ESNext", "DOM", "DOM.Iterable"],
     "target": "esnext",
     "noEmit": true,

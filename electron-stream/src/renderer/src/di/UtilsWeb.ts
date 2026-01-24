@@ -195,8 +195,16 @@ export class UtilsWeb implements IUtils {
         const data = await res.json();
         return data.html5ifiedPath;
     }
-    getSuffixedFileName(filePath: string | undefined, nameSuffix: string): string {
-        throw new Error("Method not implemented.");
+    async getSuffixedFileName(filePath: string | undefined, nameSuffix: string): Promise<string> {
+        const res = await fetch(`${this.apiUrl}/getSuffixedFileName`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ filePath, nameSuffix }),
+        });
+        const data = await res.json();
+        return data.suffixedFileName;
     }
     async getOutPath({ customOutDir, filePath, fileName }: { customOutDir?: string | undefined; filePath?: string | undefined; fileName: string; }): Promise<string> {
         const res = await fetch(`${this.apiUrl}/getOutPath`, {

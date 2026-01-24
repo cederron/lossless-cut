@@ -9,7 +9,7 @@ import type { ChromiumHTMLVideoElement } from './types';
 import type { FFprobeStream } from '../../common/ffprobe';
 import { getFrameDuration } from './util';
 import { container } from 'tsyringe';
-import { TOKENS, type IMediaSourceStreamFactory } from 'lossless-cut-application';
+import { TOKENS, type IMediaSourceStreamFactory, type IMediaStream } from 'lossless-cut-application';
 import './di/di-web.ts';
 
 // const { compatPlayer: { createMediaSourceStream } } = window.require('@electron/remote').require('./index.js');
@@ -35,7 +35,7 @@ async function startPlayback({ path, slaveVideo, masterVideo, videoStreamIndex, 
   let canPlay = false;
   let bufferEndTime: number | undefined;
   let bufferStartTime = seekTo;
-  let stream: ReturnType<typeof mediaSourceStreamFactory.createMediaSourceStream> | undefined;
+  let stream: IMediaStream | undefined;
   let interval: NodeJS.Timeout | undefined;
   let interval2: NodeJS.Timeout | undefined;
   let objectUrl: string | undefined;
@@ -226,7 +226,7 @@ async function startPlayback({ path, slaveVideo, masterVideo, videoStreamIndex, 
   });
 
   // stream = createMediaSourceStream({ path, videoStreamIndex, audioStreamIndexes, seekTo, size, fps, rotate });
-  stream = mediaSourceStreamFactory.createMediaSourceStream({ path, videoStreamIndex, audioStreamIndexes, seekTo, size, fps, rotate });
+  stream = await mediaSourceStreamFactory.createMediaSourceStream({ path, videoStreamIndex, audioStreamIndexes, seekTo, size, fps, rotate });
 
   interval = setInterval(() => {
     if (!canPlay) return;
