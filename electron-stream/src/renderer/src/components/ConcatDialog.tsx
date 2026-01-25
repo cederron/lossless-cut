@@ -28,6 +28,7 @@ import type { FFprobeStream } from 'lossless-cut-application';
 // const { basename } = window.require('path');
 
 // const ffmpeg = container.resolve<IFfmpeg>(TOKENS.Ffmpeg);
+const utils = container.resolve
 
 
 const rowStyle: CSSProperties = {
@@ -66,10 +67,13 @@ function ConcatDialog({ isShown, onHide, paths, mergedFileTemplate, generateMerg
   const [clearBatchFilesAfterConcat, setClearBatchFilesAfterConcat] = useState(false);
   const [enableReadFileMeta, setEnableReadFileMeta] = useState(false);
   const [uniqueSuffix, setUniqueSuffix] = useState(() => Date.now());
+  const [outputDir, setOutputDir] = useState<string>();
 
   const firstPath = useMemo(() => paths[0], [paths]);
 
-  const outputDir = getOutDir(customOutDir, firstPath);
+  useEffect(() => {
+    getOutDir(customOutDir, firstPath).then(setOutputDir);
+  }, [customOutDir, firstPath]);
 
   const generateFileNames = useCallback(async (template: string) => {
     invariant(fileFormat != null && outputDir != null);
