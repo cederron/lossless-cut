@@ -323,5 +323,15 @@ export class UtilsWeb implements IUtils {
         const data = await res.json();
         return data.mimeType;
     }
+
+    rename = async (oldPath: string, newPath: string): Promise<void> => {
+        await fetch(`${this.apiUrl}/rename`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ oldPath, newPath }),
+        });
+    }
     
 }

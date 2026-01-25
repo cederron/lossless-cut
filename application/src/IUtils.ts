@@ -68,4 +68,5 @@ getDefaultOutFormat({ filePath, fileMeta: { format } }: { filePath: string, file
     tryTrashItem(path: string): Promise<void>;
     fileTypeMimeFromFile(path: string): Promise<string | undefined>;
     // isExecaError(error: any): Promise<boolean>;
+    rename(oldPath: string, newPath: string): Promise<void>;
 }

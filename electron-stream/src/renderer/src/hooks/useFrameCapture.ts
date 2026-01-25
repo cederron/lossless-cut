@@ -7,7 +7,8 @@ import { getNumDigits, isDurationValid } from '../segments';
 
 import * as ffmpeg from '../ffmpeg';
 import type { FormatTimecode } from '../types';
-import { type CaptureFormat } from 'lossless-cut-application';
+import { TOKENS, type CaptureFormat, type IUtils } from 'lossless-cut-application';
+import { container } from 'tsyringe';
 // import type { CaptureFormat } from '../../../common/types';
 
 const mime = window.require('mime-types');
@@ -34,7 +35,7 @@ export default ({ appendFfmpegCommandLog, formatTimecode, treatInputFileModified
   fileDuration: number | undefined,
 }) => {
 
-  // const utils = container.resolve<IUtils>(TOKENS.Utils);
+  const utils = container.resolve<IUtils>(TOKENS.Utils);
   // const ffmpeg = container.resolve<IFfmpeg>(TOKENS.Ffmpeg);
 
   const captureFramesRange = useCallback(async ({ customOutDir, filePath, fps, fromTime, toTime, estimatedMaxNumFiles, captureFormat, quality, filter, onProgress, outputTimestamps }: {
@@ -72,7 +73,7 @@ export default ({ appendFfmpegCommandLog, formatTimecode, treatInputFileModified
     await appendFfmpegCommandLog(args);
 
     const outDir = await getOutDir(customOutDir, filePath);
-    const files = await readdir(outDir);
+    const files = await utils.readdir(outDir);
 
     const suffixedFileName = await getSuffixedFileName(filePath, tmpSuffix);
     const escapedRegexp = escapeRegExp(suffixedFileName);
@@ -91,7 +92,7 @@ export default ({ appendFfmpegCommandLog, formatTimecode, treatInputFileModified
       const duration = formatTimecode({ seconds: fromTime + (frameNum / fps), fileNameFriendly: true });
       const renameFromPath = await getOutPath({ customOutDir, filePath, fileName });
       const renameToPath = await getOutPath({ customOutDir, filePath, fileName: await getSuffixedFileName(filePath, getSuffix(duration)) });
-      await fsOperationWithRetry(async () => rename(renameFromPath, renameToPath));
+      await fsOperationWithRetry(async () => utils.rename(renameFromPath, renameToPath));
       return renameToPath;
     }, { concurrency: 1 });
 
@@ -129,7 +130,7 @@ export default ({ appendFfmpegCommandLog, formatTimecode, treatInputFileModified
     const timecode = formatTimecode({ seconds: time, fileNameFriendly: true });
 
     const outPath = await getSuffixedOutPath({ customOutDir, filePath, nameSuffix: `${timecode}.${ext}` });
-    await writeFile(outPath, new Uint8Array(dataUri.buffer));
+    await utils.writeFile(outPath, new Uint8Array(dataUri.buffer));
 
     await transferTimestamps({ inPath: filePath, outPath, cutFrom: time, cutTo: time, duration: isDurationValid(fileDuration) ? fileDuration : undefined, treatInputFileModifiedTimeAsStart, treatOutputFileModifiedTimeAsStart });
     return outPath;

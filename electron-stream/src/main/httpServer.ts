@@ -534,6 +534,14 @@ export default ({ port, onKeyboardAction }: {
     res.json({ mimeType });
   }));
 
+  apiRouter.post('/rename', express.json(), asyncHandler(async (req, res) => {
+    const { oldPath, newPath } = req.body as { oldPath: string; newPath: string; };
+    logger.info('API rename called', { oldPath, newPath });
+    const utils = container.resolve<IUtils>(TOKENS.Utils);
+    await utils.rename(oldPath, newPath);
+    res.end();
+  }));
+
   const server = http.createServer(app);
 
   server.on('error', (err) => logger.error('http server error', err));
