@@ -544,6 +544,10 @@ rename = async (oldPath: string, newPath: string): Promise<void> => {
     await rename(oldPath, newPath);
 }
 
+// getPathForFile = async (file: File): Promise<string> => {
+//     return await this.resolvePathIfNeeded(file);
+// }
+
 //     async isExecaError(err: any): Promise<boolean> {
 //         // https://github.com/sindresorhus/execa/blob/main/docs/api.md#resultfailed
 //   return err instanceof Error && ('failed' in err && 'shortMessage' in err && 'isForcefullyTerminated' in err);

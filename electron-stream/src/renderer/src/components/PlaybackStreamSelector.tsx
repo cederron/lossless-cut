@@ -7,7 +7,8 @@ import { motion } from 'motion/react';
 import Select from './Select';
 import Switch from './Switch';
 import styles from './PlaybackStreamSelector.module.css';
-import type { FFprobeStream } from '../../../common/ffprobe';
+import type { FFprobeStream } from 'lossless-cut-application';
+// import type { FFprobeStream } from '../../../common/ffprobe';
 
 
 function PlaybackStreamSelector({

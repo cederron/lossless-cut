@@ -9,12 +9,12 @@ import pMap from 'p-map';
 
 import Checkbox from './Checkbox';
 import type { FileFfprobeMeta } from '../ffmpeg';
-import { /* readFileFfprobeMeta, */ getDefaultOutFormat, mapRecommendedDefaultFormat } from '../ffmpeg';
+import { readFileFfprobeMeta,  getDefaultOutFormat, mapRecommendedDefaultFormat } from '../ffmpeg';
 import OutputFormatSelect from './OutputFormatSelect';
 import useUserSettings from '../hooks/useUserSettings';
 import { isMov } from '../util/streams';
 import { getOutDir, readFileStats } from '../util';
-import type { FFprobeStream } from '../../../common/ffprobe';
+// import type { FFprobeStream } from '../../../common/ffprobe';
 import Button, { DialogButton } from './Button';
 import type { GeneratedOutFileNames, GenerateMergedOutFileNames } from '../util/outputNameTemplate';
 import { defaultMergedFileTemplate } from '../util/outputNameTemplate';
@@ -23,12 +23,11 @@ import * as Dialog from './Dialog';
 import FileNameTemplateEditor from './FileNameTemplateEditor';
 import HighlightedText from './HighlightedText';
 import type { FileStats } from '../types';
-import { container } from 'tsyringe';
-import { TOKENS, type IFfmpeg } from 'lossless-cut-application';
+import type { FFprobeStream } from 'lossless-cut-application';
 
-const { basename } = window.require('path');
+// const { basename } = window.require('path');
 
-const ffmpeg = container.resolve<IFfmpeg>(TOKENS.Ffmpeg);
+// const ffmpeg = container.resolve<IFfmpeg>(TOKENS.Ffmpeg);
 
 
 const rowStyle: CSSProperties = {
@@ -159,7 +158,7 @@ function ConcatDialog({ isShown, onHide, paths, mergedFileTemplate, generateMerg
         return [
           path,
           {
-            ffprobeMeta: await ffmpeg.readFileFfprobeMeta(path),
+            ffprobeMeta: await readFileFfprobeMeta(path),
             stats: {
               size: stats.size,
               atime: stats.atimeMs,

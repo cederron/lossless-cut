@@ -333,5 +333,17 @@ export class UtilsWeb implements IUtils {
             body: JSON.stringify({ oldPath, newPath }),
         });
     }
+
+    // getPathForFile = async (file: File): Promise<string> => {
+    //     const res = await fetch(`${this.apiUrl}/getPathForFile`, {
+    //         method: 'POST',
+    //         headers: {
+    //             'Content-Type': 'application/json',
+    //         },
+    //         body: JSON.stringify({ fileName: file.name }),
+    //     });
+    //     const data = await res.json();
+    //     return data.path;
+    // }
     
 }

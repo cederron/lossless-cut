@@ -542,6 +542,14 @@ export default ({ port, onKeyboardAction }: {
     res.end();
   }));
 
+  // apiRouter.post('/getPathForFile', express.json(), asyncHandler(async (req, res) => {
+  //   const { filePath } = req.body as { filePath: string; };
+  //   logger.info('API getPathForFile called', { filePath });
+  //   const utils = container.resolve<IUtils>(TOKENS.Utils);
+  //   const path = await utils.getPathForFile(filePath);
+  //   res.json({ path });
+  // }));
+
   const server = http.createServer(app);
 
   server.on('error', (err) => logger.error('http server error', err));

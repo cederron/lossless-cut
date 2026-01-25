@@ -16,7 +16,7 @@ import { getStreamFps } from './ffmpeg';
 import { deleteDispositionValue } from './util';
 import { getActiveDisposition, attachedPicDisposition, isGpsStream } from './util/streams';
 import TagEditor from './components/TagEditor';
-import type { FFprobeChapter, FFprobeFormat, FFprobeStream } from '../../common/ffprobe';
+// import type { FFprobeChapter, FFprobeFormat, FFprobeStream } from '../../common/ffprobe';
 import type { CustomTagsByFile, FilesMeta, FormatTimecode, ParamsByStreamId, StreamParams } from './types';
 import Button, { DialogButton } from './components/Button';
 import Checkbox from './components/Checkbox';
@@ -24,6 +24,7 @@ import styles from './StreamsSelector.module.css';
 import Json5Dialog from './components/Json5Dialog';
 import GpsMap from './components/GpsMap';
 import TextInput from './components/TextInput';
+import type { FFprobeChapter, FFprobeFormat, FFprobeStream } from 'lossless-cut-application';
 
 
 const dispositionOptions = ['default', 'dub', 'original', 'comment', 'lyrics', 'karaoke', 'forced', 'hearing_impaired', 'visual_impaired', 'clean_effects', 'attached_pic', 'captions', 'descriptions', 'dependent', 'metadata'];

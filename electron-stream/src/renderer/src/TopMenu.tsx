@@ -11,10 +11,12 @@ import { withBlur } from './util';
 import { primaryTextColor, controlsBackground, darkModeTransition } from './colors';
 import useUserSettings from './hooks/useUserSettings';
 import styles from './TopMenu.module.css';
+import { container } from 'tsyringe';
+import { TOKENS, type IUtils } from 'lossless-cut-application';
 
 
-const { stat } = window.require('fs/promises');
-const { webUtils } = window.require('electron');
+// const { stat } = window.require('fs/promises');
+// const { webUtils } = window.require('electron');
 
 const outFmtStyle = { maxWidth: 100 };
 const exportModeStyle = { flexGrow: 0, flexBasis: 140 };
@@ -53,6 +55,7 @@ function TopMenu({
   const { t } = useTranslation();
   const { customOutDir, changeOutDir, setCustomOutDir, simpleMode, outFormatLocked, setOutFormatLocked, darkMode } = useUserSettings();
   const workingDirButtonRef = useRef<HTMLButtonElement>(null);
+  const utils = container.resolve<IUtils>(TOKENS.Utils);
 
   const DarkMode = darkMode ? FaSun : FaMoon;
 
@@ -74,16 +77,17 @@ function TopMenu({
     async function onDrop(ev: DragEvent) {
       ev.preventDefault();
       if (!ev.dataTransfer) return;
-      const paths = [...ev.dataTransfer.files].map((f) => webUtils.getPathForFile(f));
-      const [firstPath] = paths;
-      if (paths.length === 1 && firstPath && (await stat(firstPath)).isDirectory()) {
-        setCustomOutDir(firstPath);
-      }
+      throw new Error('Not implemented');
+      // const paths = [...ev.dataTransfer.files].map((f) => webUtils.getPathForFile(f));
+      // const [firstPath] = paths;
+      // if (paths.length === 1 && firstPath && (await utils.isDirectory(firstPath))) {
+      //   setCustomOutDir(firstPath);
+      // }
     }
     const element = workingDirButtonRef.current;
     element?.addEventListener('drop', onDrop);
     return () => element?.removeEventListener('drop', onDrop);
-  }, [setCustomOutDir]);
+  }, [setCustomOutDir, utils]);
 
   return (
     <div

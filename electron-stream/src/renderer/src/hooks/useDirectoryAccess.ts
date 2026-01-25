@@ -2,7 +2,7 @@ import { useCallback } from 'react';
 import i18n from 'i18next';
 import invariant from 'tiny-invariant';
 
-import { /* getOutDir,*/ getFileDir, checkDirWriteAccess, isMasBuild } from '../util';
+import { getOutDir, getFileDir, checkDirWriteAccess, isMasBuild } from '../util';
 import { askForOutDir, askForInputDir } from '../dialogs';
 import { errorToast } from '../swal';
 // import mainApi from '../mainApi';
@@ -11,7 +11,7 @@ import { DirectoryAccessDeclinedError, MasDirectoryAccessDeclinedError } from 'l
 
 
 // const { lstat } = window.require('fs/promises');
-const { utils } = window.require('@electron/remote').require('./index.js');
+// const { utils } = window.require('@electron/remote').require('./index.js');
 
 
 // MacOS App Store sandbox doesn't allow reading/writing anywhere,
@@ -29,7 +29,7 @@ const masMode = isMasBuild || simulateMasBuild;
 export default function useDirectoryAccess({ setCustomOutDir }: { setCustomOutDir: (a: string | undefined) => void }) {
   const ensureAccessToSourceDir = useCallback(async (inputPath: string) => {
     // Called if we need to read/write to the source file's directory (probably to read/write the project file)
-    const inputFileDir = getFileDir(inputPath);
+    const inputFileDir = await getFileDir(inputPath);
     invariant(inputFileDir != null);
 
     let simulateMasPermissionError = simulateMasBuild;
@@ -62,10 +62,10 @@ export default function useDirectoryAccess({ setCustomOutDir }: { setCustomOutDi
   const ensureWritableOutDir = useCallback(async ({ inputPath, outDir }: { inputPath?: string | undefined, outDir: string | undefined }) => {
     
     try {
-      return utils.ensureWritableOutDir({ inputPath, outDir });
+      return await ensureWritableOutDir({ inputPath, outDir });
     } catch (e) {
       if (e instanceof MasDirectoryAccessDeclinedError) {
-        const newOutDir = await askForOutDir(await utils.getOutDir(outDir, inputPath));
+        const newOutDir = await askForOutDir(await getOutDir(outDir, inputPath));
 
         // // If user canceled open dialog, refuse to continue, because we will get permission denied error from MAS sandbox
         if (!newOutDir) throw new DirectoryAccessDeclinedError();

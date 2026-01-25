@@ -13,7 +13,7 @@ import { askForFfPath } from '../dialogs';
 import { isMasBuild, isStoreBuild } from '../util';
 import type { SupportedLanguage } from '../../../common/i18n';
 import { langNames } from '../../../common/i18n';
-import type { Config, ModifierKey, TimecodeFormat } from '../../../common/types.js';
+// import type { Config, ModifierKey, TimecodeFormat } from '../../../common/types.js';
 import styles from './Settings.module.css';
 import type { SelectProps } from './Select';
 import SelectRaw from './Select';
@@ -23,6 +23,7 @@ import { getModifierKeyNames } from '../hooks/useTimelineScroll';
 import type { TunerType } from '../types';
 import Truncated from './Truncated';
 import { dangerColor } from '../colors';
+import type { Config, ModifierKey, TimecodeFormat } from 'lossless-cut-application';
 
 // eslint-disable-next-line react/jsx-props-no-spreading
 const Button = ({ style, ...props }: ButtonProps) => <ButtonRaw style={{ padding: '.5em .9em', ...style }} {...props} />;

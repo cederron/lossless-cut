@@ -20,7 +20,7 @@ import { maxSegmentsAllowed } from '../util/constants';
 import type { DefiniteSegmentBase, ParseTimecode, SegmentBase, SegmentToExport, StateSegment, UpdateSegAtIndex } from '../types';
 import { segmentTagsSchema } from '../types';
 import safeishEval from '../worker/eval';
-import type { FFprobeFormat, FFprobeStream } from '../../../common/ffprobe';
+//vimport type { FFprobeFormat, FFprobeStream } from '../../../common/ffprobe';
 import type { HandleError } from '../contexts';
 import type { ShowGenericDialog } from '../components/GenericDialog';
 import { useGenericDialogContext } from '../components/GenericDialog';
@@ -29,12 +29,14 @@ import Button, { DialogButton } from '../components/Button';
 import { ButtonRow } from '../components/Dialog';
 import * as Dialog from '../components/Dialog';
 import { UserFacingError } from '../../errors';
-import { editSegmentByExpressionHelpUrl, selectSegmentByExpressionHelpUrl } from '../../../common/constants';
-import type { Segment as ScopeSegment } from '../../../common/userTypes';
+// import { editSegmentByExpressionHelpUrl, selectSegmentByExpressionHelpUrl } from '../../../common/constants';
+import { TOKENS, type FFprobeFormat, type FFprobeStream, type IFfmpeg } from 'lossless-cut-application';
+import type { Segment as ScopeSegment } from 'lossless-cut-application';
+import { container } from 'tsyringe';
 
-const remote = window.require('@electron/remote');
-const { shell } = remote;
-const { ffmpeg: { blackDetect, silenceDetect } } = remote.require('./index.js');
+// const remote = window.require('@electron/remote');
+// const { shell } = remote;
+// const { ffmpeg: { blackDetect, silenceDetect } } = remote.require('./index.js');
 
 
 type ParameterDialogParameters = Record<string, string>;
@@ -65,6 +67,7 @@ function useSegments({ filePath, workingRef, setWorking, setProgress, videoStrea
   showGenericDialog: ShowGenericDialog,
 }) {
   const { t } = useTranslation();
+  const ffmpeg = container.resolve<IFfmpeg>(TOKENS.Ffmpeg);
 
   // Segment related state
   const [segColorCounter, setSegColorCounterState] = useState(0);
@@ -269,7 +272,7 @@ function useSegments({ filePath, workingRef, setWorking, setProgress, videoStrea
 
           <Dialog.Description>{description}</Dialog.Description>
 
-          {docUrl && <p><Button onClick={() => shell.openExternal(docUrl)}><FaLink style={{ fontSize: '.8em' }} /> {t('Read more')}</Button></p>}
+          {docUrl && <p><Button onClick={() => { /* shell.openExternal(docUrl) */ }}><FaLink style={{ fontSize: '.8em' }} /> {t('Read more')}</Button></p>}
 
           <form onSubmit={handleSubmit}>
             {Object.entries(parametersIn).map(([key, parameter], i) => {
@@ -317,7 +320,7 @@ function useSegments({ filePath, workingRef, setWorking, setProgress, videoStrea
     setFfmpegParametersForDialog(dialogType, parameters);
     invariant(mode === '1' || mode === '2');
     invariant(filePath != null);
-    await detectSegments({ name: 'blackScenes', workingText: i18n.t('Detecting black scenes'), errorText: i18n.t('Failed to detect black scenes'), fn: async (onSegmentDetected) => blackDetect({ filePath, streamId: activeVideoStreamIndex, filterOptions, boundingMode: mode === '1', onProgress: setProgress, onSegmentDetected, from: start, to: end }) });
+    await detectSegments({ name: 'blackScenes', workingText: i18n.t('Detecting black scenes'), errorText: i18n.t('Failed to detect black scenes'), fn: async (onSegmentDetected) => ffmpeg.blackDetect({ filePath, streamId: activeVideoStreamIndex, filterOptions, boundingMode: mode === '1', onProgress: setProgress, onSegmentDetected, from: start, to: end }) });
   }, [currentCutSegOrWholeTimeline, deleteCurrentCutSeg, showParametersDialog, getFfmpegParameters, setFfmpegParametersForDialog, filePath, detectSegments, activeVideoStreamIndex, setProgress]);
 
   const detectSilentScenes = useCallback(async () => {
@@ -330,7 +333,7 @@ function useSegments({ filePath, workingRef, setWorking, setProgress, videoStrea
     const { mode, ...filterOptions } = parameters;
     invariant(mode === '1' || mode === '2');
     invariant(filePath != null);
-    await detectSegments({ name: 'silentScenes', workingText: i18n.t('Detecting silent scenes'), errorText: i18n.t('Failed to detect silent scenes'), fn: async (onSegmentDetected) => silenceDetect({ filePath, streamId: [...activeAudioStreamIndexes][0], filterOptions, boundingMode: mode === '1', onProgress: setProgress, onSegmentDetected, from: start, to: end }) });
+    await detectSegments({ name: 'silentScenes', workingText: i18n.t('Detecting silent scenes'), errorText: i18n.t('Failed to detect silent scenes'), fn: async (onSegmentDetected) => ffmpeg.silenceDetect({ filePath, streamId: [...activeAudioStreamIndexes][0], filterOptions, boundingMode: mode === '1', onProgress: setProgress, onSegmentDetected, from: start, to: end }) });
   }, [activeAudioStreamIndexes, currentCutSegOrWholeTimeline, deleteCurrentCutSeg, detectSegments, filePath, getFfmpegParameters, setFfmpegParametersForDialog, setProgress, showParametersDialog]);
 
   const detectSceneChanges = useCallback(async () => {
@@ -805,7 +808,7 @@ function useSegments({ filePath, workingRef, setWorking, setProgress, videoStrea
             { name: i18n.t('Markers'), code: 'segment.end == null' },
           ]}
           title={i18n.t('Select segments by expression')}
-          description={<Trans>Enter a JavaScript expression which will be evaluated for each segment. Segments for which the expression evaluates to &quot;true&quot; will be selected. <button type="button" className="link-button" onClick={() => shell.openExternal(selectSegmentByExpressionHelpUrl)}>View available syntax.</button></Trans>}
+          description={<Trans>Enter a JavaScript expression which will be evaluated for each segment. Segments for which the expression evaluates to &quot;true&quot; will be selected. <button type="button" className="link-button" onClick={() => { /* shell.openExternal(selectSegmentByExpressionHelpUrl) */}}>View available syntax.</button></Trans>}
           variables={['segment.index', 'segment.label', 'segment.start', 'segment.end', 'segment.duration', 'segment.tags.*']}
         />
       ),
@@ -875,7 +878,7 @@ function useSegments({ filePath, workingRef, setWorking, setProgress, videoStrea
             { name: i18n.t('Convert markers to segments'), code: '{ ...(segment.end == null && { end: segment.start + 5 }) }' },
           ]}
           title={i18n.t('Edit segments by expression')}
-          description={<Trans>Enter a JavaScript expression which will be evaluated for each selected segment. Returned properties will be edited. <button type="button" className="link-button" onClick={() => shell.openExternal(editSegmentByExpressionHelpUrl)}>View available syntax.</button></Trans>}
+          description={<Trans>Enter a JavaScript expression which will be evaluated for each selected segment. Returned properties will be edited. <button type="button" className="link-button" onClick={() => { /*shell.openExternal(editSegmentByExpressionHelpUrl)*/ }}>View available syntax.</button></Trans>}
           variables={['segment.index', 'segment.label', 'segment.start', 'segment.end', 'segment.tags.*']}
         />
       ),

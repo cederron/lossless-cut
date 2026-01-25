@@ -26,10 +26,11 @@ import { isExactDurationMatch } from './util/duration';
 import useUserSettings from './hooks/useUserSettings';
 import { askForPlaybackRate, checkAppPath } from './dialogs';
 import type { FormatTimecode, ParseTimecode, PlaybackMode, SegmentColorIndex, SegmentToExport, StateSegment } from './types';
-import type { WaveformMode } from '../../common/types';
+// import type { WaveformMode } from '../../common/types';
 import type { Frame } from './ffmpeg';
+import type { WaveformMode } from 'lossless-cut-application';
 
-const { clipboard } = window.require('electron');
+// const { clipboard } = window.require('electron');
 
 
 const zoomOptions = Array.from({ length: 13 }).fill(undefined).map((_unused, z) => 2 ** z);
@@ -192,17 +193,18 @@ const CutTimeInput = memo(({ disabled, darkMode, cutTime, setCutTime, startTimeO
   }, [parseAndSetCutTime]);
 
   const handleContextMenu = useCallback(() => {
-    const text = clipboard.readText();
-    if (text) {
-      try {
-        setCutTimeManual(text);
-        parseAndSetCutTime(text);
-        setError(false);
-      } catch (err) {
-        console.warn(err);
-        setError(true);
-      }
-    }
+    // TODO removed for web compatibility
+    // const text = clipboard.readText();
+    // if (text) {
+    //   try {
+    //     setCutTimeManual(text);
+    //     parseAndSetCutTime(text);
+    //     setError(false);
+    //   } catch (err) {
+    //     console.warn(err);
+    //     setError(true);
+    //   }
+    // }
   }, [parseAndSetCutTime]);
 
   const style = useMemo<CSSProperties>(() => ({

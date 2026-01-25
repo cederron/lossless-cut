@@ -69,4 +69,5 @@ getDefaultOutFormat({ filePath, fileMeta: { format } }: { filePath: string, file
     fileTypeMimeFromFile(path: string): Promise<string | undefined>;
     // isExecaError(error: any): Promise<boolean>;
     rename(oldPath: string, newPath: string): Promise<void>;
+    // getPathForFile(file: File): Promise<string>;
 }
