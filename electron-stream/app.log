@@ -1565,3 +1565,25 @@
   cacheBuster: 0
 }
 2026-01-24T23:46:27.633Z info: 127.0.0.1 POST /api/getFileUri HTTP/1.1 200 - 1.759 ms
+2026-01-25T08:53:08.205Z info: LosslessCut version 3.67.2 { isDev: true }
+2026-01-25T08:53:08.273Z info: Initialized config store
+2026-01-25T08:53:08.279Z info: Waiting for app to become ready
+2026-01-25T08:53:08.286Z info: CLI arguments { _: [] }
+2026-01-25T08:53:08.313Z info: HTTP API listening on http://127.0.0.1:8080/
+2026-01-25T08:53:08.314Z info: HTTP API listening on port 8080
+2026-01-25T08:53:08.504Z info: Added Extension React Developer Tools
+2026-01-25T08:53:08.663Z info: Current version 3.67.2
+2026-01-25T08:53:08.679Z info: Newest version 3.67.2
+2026-01-25T08:53:19.488Z info: API getAppPath called
+2026-01-25T08:53:19.493Z info: 127.0.0.1 POST /api/getAppPath HTTP/1.1 200 - 12.836 ms
+2026-01-25T09:01:20.217Z info: LosslessCut version 3.67.2 { isDev: true }
+2026-01-25T09:01:20.301Z info: Initialized config store
+2026-01-25T09:01:20.303Z info: Waiting for app to become ready
+2026-01-25T09:01:20.319Z info: CLI arguments { _: [] }
+2026-01-25T09:01:20.342Z info: HTTP API listening on http://127.0.0.1:8080/
+2026-01-25T09:01:20.343Z info: HTTP API listening on port 8080
+2026-01-25T09:01:20.541Z info: Added Extension React Developer Tools
+2026-01-25T09:01:20.837Z info: Current version 3.67.2
+2026-01-25T09:01:20.837Z info: Newest version 3.67.2
+2026-01-25T09:01:29.955Z info: API getAppPath called
+2026-01-25T09:01:29.960Z info: 127.0.0.1 POST /api/getAppPath HTTP/1.1 200 - 12.886 ms

@@ -8,19 +8,21 @@ import invariant from 'tiny-invariant';
 
 import { pcmAudioCodecs, isMov } from './util/streams';
 import { isDurationValid } from './segments';
-import type { FFprobeChapter, FFprobeFormat, FFprobeStream } from '../../common/ffprobe';
+// import type { FFprobeChapter, FFprobeFormat, FFprobeStream } from '../../common/ffprobe';
 import { parseSrt, parseSrtToSegments } from './edlFormats';
 import { UserFacingError } from '../errors';
 import mainApi from './mainApi';
-import { UnsupportedFileError, type FFprobeProbeResult } from 'lossless-cut-application';
+import { TOKENS, UnsupportedFileError, type FFprobeChapter, type FFprobeFormat, type FFprobeProbeResult, type FFprobeStream, type IFfmpeg } from 'lossless-cut-application';
 import { isExecaError } from './util';
+import { container } from 'tsyringe';
 
-const { ffmpeg } = window.require('@electron/remote').require('./index.js');
+// const { ffmpeg } = window.require('@electron/remote').require('./index.js');
+const ffmpeg = container.resolve<IFfmpeg>(TOKENS.Ffmpeg);
 
-const { renderWaveformPng, mapTimesToSegments, detectSceneChanges, captureFrames, captureFrameToFile, captureFrameToClipboard, getFfCommandLine, runFfmpegConcat, runFfmpegWithProgress, getDuration, abortFfmpegs, /* renderThumbnail: renderThumbnailApi,*/ /*extractSubtitleTrack: extractSubtitleTrackApi, extractSubtitleTrackVtt: extractSubtitleTrackVttApi,*/ /*runFfmpeg,*/ /* extractWaveform: extractWaveformApi, runFfmpegStartupCheck: runFfmpegStartupCheckApi, */ /*runFfprobe,*/ /*readFileFfprobeMeta: readFileFfprobeMetaApi,*/ getFfmpegPath, /*readFrames: readFramesApi,*/ setCustomFfPath } = ffmpeg;
+const { renderWaveformPng, mapTimesToSegments, detectSceneChanges, captureFrames, captureFrameToFile, captureFrameToClipboard, getFfCommandLine, runFfmpegConcat, runFfmpegWithProgress, getDuration, abortFfmpegs, runFfmpegVoid, runFfmpegText, /* renderThumbnail: renderThumbnailApi,*/ /*extractSubtitleTrack: extractSubtitleTrackApi, extractSubtitleTrackVtt: extractSubtitleTrackVttApi,*/ /*runFfmpeg,*/ /* extractWaveform: extractWaveformApi, runFfmpegStartupCheck: runFfmpegStartupCheckApi, */ /*runFfprobe,*/ /*readFileFfprobeMeta: readFileFfprobeMetaApi,*/ getFfmpegPath, /*readFrames: readFramesApi,*/ setCustomFfPath } = ffmpeg;
 
 
-export { renderWaveformPng, mapTimesToSegments, detectSceneChanges, captureFrames, captureFrameToFile, captureFrameToClipboard, getFfCommandLine, runFfmpegConcat, runFfmpegWithProgress, getDuration, abortFfmpegs, /* runFfmpeg,*/ getFfmpegPath, setCustomFfPath };
+export { renderWaveformPng, mapTimesToSegments, detectSceneChanges, captureFrames, captureFrameToFile, captureFrameToClipboard, getFfCommandLine, runFfmpegConcat, runFfmpegWithProgress, getDuration, abortFfmpegs, /* runFfmpeg,*/ getFfmpegPath, setCustomFfPath, runFfmpegVoid, runFfmpegText };
 
 
 export class RefuseOverwriteError extends Error {

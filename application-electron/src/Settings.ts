@@ -13,7 +13,7 @@ export class Settings implements ISettings {
         this.settingsPath = path.join(app.getPath("userData"), "settings.json");
         this.loadSettings();
     }
-    getDefaults(): Config {
+    async getDefaults(): Promise<Config> {
         return defaults;
     }
 
@@ -49,16 +49,16 @@ export class Settings implements ISettings {
     //     this.saveSettings();
     // }
 
-    get<T>(key: string): T | undefined {
+    async get<T>(key: string): Promise<T | undefined> {
         return this.settings[key];
     }
 
-    set<T>(key: string, value: T): void {
+    async set<T>(key: string, value: T): Promise<void> {
         this.settings[key] = value;
         this.saveSettings();
     }
 
-    reset(key: string): void {
+    async reset(key: string): Promise<void> {
         delete this.settings[key];
         this.saveSettings();
     }

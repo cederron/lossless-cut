@@ -5,6 +5,7 @@ import { TOKENS } from "lossless-cut-application";
 import { HttpMediaSourceStreamFactory } from "lossless-cut-application-electron/HttpMediaSourceStreamFactory";
 import { FfmpegWeb } from "./FfmpegWeb";
 import { UtilsWeb } from "./UtilsWeb";
+import { SettingsWeb } from "./SettingsWeb";
 
 class ConsoleLogger implements ILogger {
     info(message: any, ...meta: any[]) {
@@ -47,3 +48,9 @@ container.register(TOKENS.Utils, {
 }, {
     lifecycle: Lifecycle.Transient,
 });
+
+container.register(TOKENS.Settings, {
+    useClass: SettingsWeb,
+}, {
+    lifecycle: Lifecycle.Transient,
+})

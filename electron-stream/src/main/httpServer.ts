@@ -455,6 +455,37 @@ export default ({ port, onKeyboardAction }: {
     res.end();
   }));
 
+  apiRouter.get('/get-setting', asyncHandler(async (req, res) => {
+    const key = req.query['key'] as string;
+    logger.info('API get-setting called', { key });
+    const settings = container.resolve<any>(TOKENS.Settings);
+    const value = await settings.get(key);
+    res.json({ value });
+  }));
+
+  apiRouter.post('/set-setting', express.json(), asyncHandler(async (req, res) => {
+    const { key, value } = req.body as { key: string; value: any; };
+    logger.info('API set-setting called', { key, value });
+    const settings = container.resolve<any>(TOKENS.Settings);
+    await settings.set(key, value);
+    res.end();
+  }));
+
+  apiRouter.post('/reset-setting', express.json(), asyncHandler(async (req, res) => {
+    const { key } = req.body as { key: string; };
+    logger.info('API reset-setting called', { key });
+    const settings = container.resolve<any>(TOKENS.Settings);
+    await settings.reset(key);
+    res.end();
+  }));
+
+  apiRouter.get('/get-defaults', asyncHandler(async (_req, res) => {
+    logger.info('API get-defaults called');
+    const settings = container.resolve<any>(TOKENS.Settings);
+    const defaults = await settings.getDefaults();
+    res.json({ defaults });
+  }));
+
   const server = http.createServer(app);
 
   server.on('error', (err) => logger.error('http server error', err));
