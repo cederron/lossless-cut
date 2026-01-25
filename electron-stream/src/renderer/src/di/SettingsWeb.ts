@@ -1,5 +1,5 @@
-import type { Config, ISettings } from "lossless-cut-application";
 import { injectable } from "tsyringe";
+import type { Config, ISettings } from "lossless-cut-application";
 
 @injectable()
 export class SettingsWeb implements ISettings {

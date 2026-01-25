@@ -4,6 +4,8 @@
     "lib": ["ESNext", "DOM", "DOM.Iterable"],
     "target": "esnext",
     "noEmit": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
 
     "types": ["vite/client"],
     "paths": {

@@ -2,10 +2,9 @@ import { useState, useRef, useEffect, useCallback } from 'react';
 import sortBy from 'lodash/sortBy';
 import invariant from 'tiny-invariant';
 
-import { /*renderWaveformPng,*/ safeCreateBlob } from '../ffmpeg';
-import { TOKENS, type FFprobeStream, type IFfmpeg } from 'lossless-cut-application';
+import { renderWaveformPng, safeCreateBlob } from '../ffmpeg';
+import { type FFprobeStream } from 'lossless-cut-application';
 import type { OverviewWaveform, WaveformSlice } from '../types';
-import { container } from 'tsyringe';
 // import type { FFprobeStream } from '../../../common/ffprobe';
 
 
@@ -25,7 +24,7 @@ export default ({ filePath, relevantTime, fileDuration, waveformEnabled, audioSt
   const [waveforms, setWaveforms] = useState<WaveformSlice[]>([]);
   const [overviewWaveform, setOverviewWaveform] = useState<OverviewWaveform>();
   const waveformsRef = useRef<WaveformSlice[]>();
-  const ffmpeg = container.resolve<IFfmpeg>(TOKENS.Ffmpeg);
+  // const ffmpeg = container.resolve<IFfmpeg>(TOKENS.Ffmpeg);
 
   useEffect(() => {
     waveformsRef.current = waveforms;
@@ -65,7 +64,7 @@ export default ({ filePath, relevantTime, fileDuration, waveformEnabled, audioSt
           const alreadyHaveWaveformAtTime = (waveformsRef.current ?? []).some((waveform) => waveform.from === time);
           if (!alreadyHaveWaveformAtTime) {
             try {
-              const promise = ffmpeg.renderWaveformPng({ filePath, start: time, duration: safeExtractDuration, color, streamIndex: audioStream.index, timeout: 10000 });
+              const promise = renderWaveformPng({ filePath, start: time, duration: safeExtractDuration, color, streamIndex: audioStream.index, timeout: 10000 });
 
               setWaveforms((currentWaveforms) => {
                 const waveformsByCreatedAt = sortBy(currentWaveforms, 'createdAt');
@@ -135,7 +134,7 @@ export default ({ filePath, relevantTime, fileDuration, waveformEnabled, audioSt
     invariant(audioStream != null);
 
     // todo allow actual abort
-    const promise = ffmpeg.renderWaveformPng({ filePath, color, streamIndex: audioStream.index, resample: 10000 });
+    const promise = renderWaveformPng({ filePath, color, streamIndex: audioStream.index, resample: 10000 });
 
     const { buffer } = await promise;
 
@@ -143,7 +142,7 @@ export default ({ filePath, relevantTime, fileDuration, waveformEnabled, audioSt
       createdAt: new Date(),
       url: URL.createObjectURL(safeCreateBlob(buffer, { type: 'image/png' })),
     });
-  }, [audioStream, filePath, ffmpeg]);
+  }, [audioStream, filePath]);
 
   useEffect(() => () => {
     if (overviewWaveform?.url != null) {

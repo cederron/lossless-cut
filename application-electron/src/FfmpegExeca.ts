@@ -580,7 +580,7 @@ export class FfmpegExeca implements IFfmpeg {
 
     getFfprobePath = () => this.getFfPath('ffprobe');
 
-    async runFfprobe(args: readonly string[], { timeout = this.platform.isDev() ? 10000 : 30000, logCli = true } = {}) {
+    async runFfprobe(args: readonly string[], { timeout = /* this.platform.isDev() ? 10000 :*/ 30000, logCli = true } = {}) {
         const ffprobePath = this.getFfprobePath();
         if (logCli) this.logger.info(this.getFfCommandLine('ffprobe', args));
         const ps = execa(ffprobePath, args, this.getExecaOptions());
@@ -781,7 +781,7 @@ export class FfmpegExeca implements IFfmpeg {
         return packetsFiltered.sort((a, b) => a.time - b.time);
     }
 
-    setCustomFfPath(path: string | undefined) {
+    async setCustomFfPath(path: string | undefined) {
         this.customFfPath = path;
     }
 
@@ -813,7 +813,7 @@ export class FfmpegExeca implements IFfmpeg {
         }
     }
 
-    async runFfprobeText(args: readonly string[], { timeout = this.platform.isDev() ? 10000 : 30000, logCli = true } = {}) {
+    async runFfprobeText(args: readonly string[], { timeout = /* this.platform.isDev() ? 10000 :*/ 30000, logCli = true } = {}) {
         const ffprobePath = this.getFfprobePath();
         if (logCli) this.logger.info(this.getFfCommandLine('ffprobe', args));
         const ps = execa(ffprobePath, args, this.getExecaOptions());

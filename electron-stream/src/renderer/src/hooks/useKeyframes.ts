@@ -4,14 +4,13 @@ import useDebounceOld from 'react-use/lib/useDebounce'; // Want to phase out thi
 import { useTranslation } from 'react-i18next';
 
 // import type { Frame } from '../ffmpeg';
-import { /* readFramesAroundTime, findNearestKeyFrameTime as ffmpegFindNearestKeyFrameTime, readFrames*/ } from '../ffmpeg';
+import { readFramesAroundTime, findNearestKeyFrameTime as ffmpegFindNearestKeyFrameTime, readFrames } from '../ffmpeg';
 // import type { FFprobeStream } from '../../../common/ffprobe';
 import { getFrameCountRaw } from '../edlFormats';
 import type { HandleError } from '../contexts';
-import { TOKENS, type FFprobeStream, type Frame, type IFfmpeg } from 'lossless-cut-application';
-import { container } from 'tsyringe';
+import { type FFprobeStream, type Frame } from 'lossless-cut-application';
 
-const ffmpeg = container.resolve<IFfmpeg>(TOKENS.Ffmpeg);
+// const ffmpeg = container.resolve<IFfmpeg>(TOKENS.Ffmpeg);
 
 
 const toObj = (map: Frame[]) => Object.fromEntries(map.map((frame) => [frame.time, frame]));
@@ -46,7 +45,7 @@ function useKeyframes({ keyframesEnabled, filePath, commandedTime, videoStream, 
     return map;
   }, [detectedFps, neighbouringKeyFrames]);
 
-  const findNearestKeyFrameTime = useCallback(async ({ time, direction }: { time: number, direction: number }) => ffmpeg.findNearestKeyFrameTime({ frames: neighbouringKeyFrames, time, direction, fps: detectedFps }), [neighbouringKeyFrames, detectedFps]);
+  const findNearestKeyFrameTime = useCallback(async ({ time, direction }: { time: number, direction: number }) => ffmpegFindNearestKeyFrameTime({ frames: neighbouringKeyFrames, time, direction, fps: detectedFps }), [neighbouringKeyFrames, detectedFps]);
 
   useEffect(() => setNeighbouringKeyFrames({}), [filePath, videoStream]);
 
@@ -60,7 +59,7 @@ function useKeyframes({ keyframesEnabled, filePath, commandedTime, videoStream, 
       if (!shouldRun) return;
 
       try {
-        const promise = ffmpeg.readFramesAroundTime({ filePath, aroundTime: commandedTime, streamIndex: videoStream.index, window: ffmpegExtractWindow });
+        const promise = readFramesAroundTime({ filePath, aroundTime: commandedTime, streamIndex: videoStream.index, window: ffmpegExtractWindow });
         readingKeyframesPromise.current = promise;
         const newFrames = await promise;
         if (aborted) return;
@@ -95,7 +94,7 @@ function useKeyframes({ keyframesEnabled, filePath, commandedTime, videoStream, 
     if (!filePath || !videoStream) return;
     try {
       setWorking({ text: t('Reading all keyframes') });
-      const newFrames = await ffmpeg.readFrames({ filePath, from: start, to: end, streamIndex: videoStream.index });
+      const newFrames = await readFrames({ filePath, from: start, to: end, streamIndex: videoStream.index });
       const newKeyFrames = newFrames.filter((frame) => frame.keyframe);
       setNeighbouringKeyFrames(toObj(newKeyFrames));
       setMaxKeyframes(newKeyFrames.length);

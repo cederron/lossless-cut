@@ -423,10 +423,12 @@ function sendOsNotification(options: NotificationConstructorOptions) {
   notification.show();
 }
 
+const utils = container.resolve<IUtils>(TOKENS.Utils);
+
 const remoteApi = {
   pathExists,
   downloadMediaUrl,
-  fileTypeFromFile,
+  fileTypeFromFile: utils.fileTypeMimeFromFile,
   focusWindow,
   quitApp,
   setProgressBar,
@@ -440,7 +442,6 @@ export type RemoteRpcApi = {
 };
 
 const mediaSourceStreamFactory = container.resolve<IMediaSourceStreamFactory>(TOKENS.MediaSourceStreamFactory); // {} as any;
-const utils = container.resolve<IUtils>(TOKENS.Utils);
 const settings = container.resolve<ISettings>(TOKENS.Settings);
 // const ffmpeg = container.resolve<IFfmpeg>(TOKENS.Ffmpeg);
 

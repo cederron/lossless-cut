@@ -4,7 +4,7 @@ import prettyBytes from 'pretty-bytes';
 import sortBy from 'lodash/sortBy';
 import type { Options } from 'p-retry';
 import pRetry from 'p-retry';
-import type { ExecaError } from 'execa';
+// import type { ExecaError } from 'execa';
 import confetti from 'canvas-confetti';
 import invariant from 'tiny-invariant';
 
@@ -274,30 +274,30 @@ export const deleteDispositionValue = 'llc_disposition_remove';
 export const mirrorTransform = 'matrix(-1, 0, 0, 1, 0, 0)';
 
 // todo this is not a correct assumption
-export type InvariantExecaError = ExecaError<{ encoding: 'utf8' }> | ExecaError<{ encoding: 'buffer' }>;
+// export type InvariantExecaError = ExecaError<{ encoding: 'utf8' }> | ExecaError<{ encoding: 'buffer' }>;
 
 // We can't use `instanceof ExecaError` because the error has been sent over the main-renderer bridge (@electron/remote)
 // so instead we just check if it has some of execa's specific error properties
-export function isExecaError(err: unknown): err is InvariantExecaError {
+export function isExecaError(err: unknown) {
   // https://github.com/sindresorhus/execa/blob/main/docs/api.md#resultfailed
   return err instanceof Error && ('failed' in err && 'shortMessage' in err && 'isForcefullyTerminated' in err);
 }
 
 export const isAbortedError = (err: unknown) => (
   // execa killed (aborted by user). isTerminated because runningFfmpegs process.kill
-  (isExecaError(err) && (err.isCanceled || err.isTerminated))
+  (isExecaError(err) && ((err as any).isCanceled || (err as any).isTerminated))
   || (err instanceof Error && err.name === 'AbortError')
 );
 
 export const getStdioString = (stdio: string | Uint8Array) => (stdio instanceof Uint8Array ? Buffer.from(stdio).toString('utf8') : stdio);
 
 // A bit hacky but it works, unless someone has a file called "No space left on device" ( ͡° ͜ʖ ͡°)
-export const isOutOfSpaceError = (err: InvariantExecaError) => (
+export const isOutOfSpaceError = (err: any) => (
   err.exitCode !== 0
   && !!getStdioString(err.stderr)?.includes('No space left on device')
 );
 
-export const isMuxNotSupported = (err: InvariantExecaError) => (
+export const isMuxNotSupported = (err: any) => (
   err.exitCode !== 0
   && err.stderr != null
   && /Could not write header .*incorrect codec parameters .*Invalid argument/.test(getStdioString(err.stderr) ?? '')

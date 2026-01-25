@@ -953,8 +953,8 @@ function App() {
       showOsNotification(i18n.t('Failed to merge'));
 
       if (isExecaError(err)) {
-        console.log('stdout:', getStdioString(err.stdout));
-        console.error('stderr:', getStdioString(err.stderr));
+        console.log('stdout:', getStdioString((err as any).stdout));
+        console.error('stderr:', getStdioString((err as any).stderr));
 
         if (isOutOfSpaceError(err)) {
           showDiskFull();
@@ -1194,8 +1194,8 @@ function App() {
       showOsNotification(i18n.t('Failed to export'));
 
       if (isExecaError(err)) {
-        console.log('stdout:', getStdioString(err.stdout));
-        console.error('stderr:', getStdioString(err.stderr));
+        console.log('stdout:', getStdioString((err as any).stdout));
+        console.error('stderr:', getStdioString((err as any).stderr));
 
         if (isOutOfSpaceError(err)) {
           showDiskFull();

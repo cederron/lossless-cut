@@ -206,7 +206,7 @@ export class UtilsWeb implements IUtils {
     getSuffixedFileName(filePath: string | undefined, nameSuffix: string): string {
         throw new Error("Method not implemented.");
     }
-    async getOutPath({ customOutDir, filePath, fileName }: { customOutDir?: string | undefined; filePath?: string | undefined; fileName: string; }): Promise<string> {
+    getOutPath = async ({ customOutDir, filePath, fileName }: { customOutDir?: string | undefined; filePath?: string | undefined; fileName: string; }): Promise<string> => {
         const res = await fetch(`${this.apiUrl}/getOutPath`, {
             method: 'POST',
             headers: {
@@ -217,7 +217,7 @@ export class UtilsWeb implements IUtils {
         const data = await res.json();
         return data.outPath;
     }
-    renameWithRetry(renameFromPath: string, renameToPath: string): Promise<void> {
+    renameWithRetry = async (renameFromPath: string, renameToPath: string): Promise<void> => {
         throw new Error("Method not implemented.");
     }
     getMimeExtension(mimeType: string): string | false {
@@ -226,10 +226,10 @@ export class UtilsWeb implements IUtils {
     getFileDir(filePath?: string): string | undefined {
         throw new Error("Method not implemented.");
     }
-    checkDirWriteAccess(dirPath: string): Promise<boolean> {
+    checkDirWriteAccess = async (dirPath: string): Promise<boolean> => {
         throw new Error("Method not implemented.");
     }
-    async readFileStats(path: string): Promise<{ size: number; atimeMs: number; mtimeMs: number; ctimeMs: number; birthtimeMs: number; }> {
+    readFileStats = async (path: string): Promise<{ size: number; atimeMs: number; mtimeMs: number; ctimeMs: number; birthtimeMs: number; }> => {
         const res = await fetch(`${this.apiUrl}/readFileStats`, {
             method: 'POST',
             headers: {
@@ -252,7 +252,7 @@ export class UtilsWeb implements IUtils {
         throw new Error("Method not implemented.");
     }
 
-    async getAppPath(): Promise<string> {
+    getAppPath = async (): Promise<string> => {
         const res = await fetch(`${this.apiUrl}/getAppPath`, {
             method: 'POST',
             headers: {
@@ -264,7 +264,7 @@ export class UtilsWeb implements IUtils {
         return data.appPath;
     }
 
-    async getSuffixedFileName(filePath: string | undefined, nameSuffix: string): Promise<string> {
+    getSuffixedFileName = async (filePath: string | undefined, nameSuffix: string): Promise<string> => {
         const res = await fetch(`${this.apiUrl}/getSuffixedFileName`, {
             method: 'POST',
             headers: {
@@ -276,7 +276,7 @@ export class UtilsWeb implements IUtils {
         return data.suffixedFileName;
     }
 
-    async havePermissionToReadFile(filePath: string): Promise<boolean> {
+    havePermissionToReadFile = async (filePath: string): Promise<boolean> => {
         const res = await fetch(`${this.apiUrl}/havePermissionToReadFile`, {
             method: 'POST',
             headers: {
@@ -288,7 +288,7 @@ export class UtilsWeb implements IUtils {
         return data.havePermission;
     }
 
-    async getPathReadAccessError(pathIn: string): Promise<string | undefined> {
+    getPathReadAccessError = async (pathIn: string): Promise<string | undefined> => {
         const res = await fetch(`${this.apiUrl}/getPathReadAccessError`, {
             method: 'POST',
             headers: {
@@ -300,7 +300,7 @@ export class UtilsWeb implements IUtils {
         return data.error;
     }
 
-    async readDirRecursively(dirPath: string): Promise<string[]> {
+    readDirRecursively = async (dirPath: string): Promise<string[]> => {
         const res = await fetch(`${this.apiUrl}/readDirRecursively`, {
             method: 'POST',
             headers: {
@@ -310,6 +310,18 @@ export class UtilsWeb implements IUtils {
         });
         const data = await res.json();
         return data.files;
+    }
+
+    fileTypeMimeFromFile = async (path: string): Promise<string | undefined> => {
+        const res = await fetch(`${this.apiUrl}/fileTypeMimeFromFile`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ path }),
+        });
+        const data = await res.json();
+        return data.mimeType;
     }
     
 }

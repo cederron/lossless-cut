@@ -535,4 +535,14 @@ async tryTrashItem(pathIn: string): Promise<void> {
   }
 }
 
+fileTypeMimeFromFile = async (path: string): Promise<string | undefined> => {
+    const fileTypeResponse = await fileTypeFromFile(path);
+    return fileTypeResponse?.mime;
+}
+
+//     async isExecaError(err: any): Promise<boolean> {
+//         // https://github.com/sindresorhus/execa/blob/main/docs/api.md#resultfailed
+//   return err instanceof Error && ('failed' in err && 'shortMessage' in err && 'isForcefullyTerminated' in err);
+//     }
+
 }

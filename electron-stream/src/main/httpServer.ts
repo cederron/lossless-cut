@@ -486,6 +486,54 @@ export default ({ port, onKeyboardAction }: {
     res.json({ defaults });
   }));
 
+  apiRouter.post('/setCustomFfPath', express.json(), asyncHandler(async (req, res) => {
+    const { ffmpegPath } = req.body as { ffmpegPath: string; };
+    logger.info('API setCustomFfmpegPath called', { ffmpegPath });
+    const ffmpeg = container.resolve<IFfmpeg>(TOKENS.Ffmpeg);
+    await ffmpeg.setCustomFfPath(ffmpegPath);
+    res.end();
+  }));
+
+  apiRouter.post('/runFfmpegVoid', express.json(), asyncHandler(async (req, res) => {
+    const { args, type } = req.body as { args: string[]; type: string; };
+    logger.info('API runFfmpegVoid called', { args, type });
+    const ffmpeg = container.resolve<IFfmpeg>(TOKENS.Ffmpeg);
+    const output = await ffmpeg.runFfmpegVoid(args);
+    res.json({ output });
+  }));
+
+  apiRouter.post('/runFfmpegText', express.json(), asyncHandler(async (req, res) => {
+    const { args, type } = req.body as { args: string[]; type: string; };
+    logger.info('API runFfmpegText called', { args, type });
+    const ffmpeg = container.resolve<IFfmpeg>(TOKENS.Ffmpeg);
+    const output = await ffmpeg.runFfmpegText(args);
+    res.json({ output });
+  }));
+
+  apiRouter.post('/runFfmpegUrl', express.json(), asyncHandler(async (req, res) => {
+    const { args, type } = req.body as { args: string[]; type: string; };
+    logger.info('API runFfmpegUrl called', { args, type });
+    const ffmpeg = container.resolve<IFfmpeg>(TOKENS.Ffmpeg);
+    const output = await ffmpeg.runFfmpegUrl(args, type);
+    res.json({ output });
+  }));
+
+  apiRouter.post('/runFfprobeText', express.json(), asyncHandler(async (req, res) => {
+    const { args } = req.body as { args: string[]; };
+    logger.info('API runFfprobeText called', { args });
+    const ffmpeg = container.resolve<IFfmpeg>(TOKENS.Ffmpeg);
+    const output = await ffmpeg.runFfprobeText(args);
+    res.json({ output });
+  }));
+
+  apiRouter.post('/fileTypeMimeFromFile', express.json(), asyncHandler(async (req, res) => {
+    const { filePath } = req.body as { filePath: string; };
+    logger.info('API fileTypeMimeFromFile called', { filePath });
+    const utils = container.resolve<IUtils>(TOKENS.Utils);
+    const mimeType = await utils.fileTypeMimeFromFile(filePath);
+    res.json({ mimeType });
+  }));
+
   const server = http.createServer(app);
 
   server.on('error', (err) => logger.error('http server error', err));

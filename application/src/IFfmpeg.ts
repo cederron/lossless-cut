@@ -77,7 +77,7 @@ export interface IFfmpeg {
     readFrames({ filePath, from, to, streamIndex }: {
         filePath: string, from?: number | undefined, to?: number | undefined, streamIndex: number,
     }): Promise<Frame[]>;
-    setCustomFfPath(path: string | undefined): void;
+    setCustomFfPath(path: string | undefined): Promise<void>;
 
     runFfmpegVoid(args: readonly string[]): Promise<void>;
     runFfmpegText(args: readonly string[]): Promise<string>;

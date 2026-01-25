@@ -274,7 +274,7 @@ async function determineSourceFileFormat(ffprobeFormatsStr: string | undefined, 
   if (firstFfprobeFormat === 'mp3') {
     // file-type detects it correctly
     const fileTypeResponse = await mainApi.fileTypeFromFile(filePath);
-    if (fileTypeResponse?.mime === 'audio/mpeg') {
+    if (fileTypeResponse === 'audio/mpeg') {
       return 'mp2';
     }
   }
@@ -301,7 +301,7 @@ async function determineSourceFileFormat(ffprobeFormatsStr: string | undefined, 
   // https://github.com/sindresorhus/file-type/blob/main/core.js
   // https://www.ftyps.com/
   // https://exiftool.org/TagNames/QuickTime.html
-  switch (fileTypeResponse.mime) {
+  switch (fileTypeResponse) {
     case 'video/x-matroska': {
       return 'matroska';
     }
@@ -338,7 +338,7 @@ async function determineSourceFileFormat(ffprobeFormatsStr: string | undefined, 
     }
 
     default: {
-      console.warn('file-type returned unknown format', ffprobeFormats, fileTypeResponse.mime);
+      console.warn('file-type returned unknown format', ffprobeFormats, fileTypeResponse);
       return firstFfprobeFormat;
     }
   }
@@ -379,7 +379,7 @@ export async function readFileFfprobeMeta(filePath: string) {
     });
     return { format, streams, chapters };
   } catch (err) {
-    if (isExecaError(err) && err.code == null && err.exitCode != null) {
+    if (isExecaError(err) && (err as any).code == null && (err as any).exitCode != null) {
       throw new UnsupportedFileError('Unsupported file', { cause: err });
     }
     throw err;

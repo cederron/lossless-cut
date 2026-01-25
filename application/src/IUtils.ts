@@ -66,4 +66,6 @@ getDefaultOutFormat({ filePath, fileMeta: { format } }: { filePath: string, file
     utimesWithRetry(path: string, atime: number, mtime: number, options?: {signal:AbortSignal}): Promise<void>;
     readDirRecursively(dirPath: string): Promise<string[]>;
     tryTrashItem(path: string): Promise<void>;
+    fileTypeMimeFromFile(path: string): Promise<string | undefined>;
+    // isExecaError(error: any): Promise<boolean>;
 }

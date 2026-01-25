@@ -2,13 +2,12 @@ import { dataUriToBuffer } from 'data-uri-to-buffer';
 import pMap from 'p-map';
 import { useCallback } from 'react';
 
-import { /*getSuffixedOutPath,*/ getOutDir, /*transferTimestamps,*/ getSuffixedFileName, /*getOutPath,*/ escapeRegExp, fsOperationWithRetry } from '../util';
+import { getSuffixedOutPath, getOutDir, transferTimestamps, getSuffixedFileName, getOutPath, escapeRegExp, fsOperationWithRetry } from '../util';
 import { getNumDigits, isDurationValid } from '../segments';
 
-// import * as ffmpeg from '../ffmpeg';
+import * as ffmpeg from '../ffmpeg';
 import type { FormatTimecode } from '../types';
-import { TOKENS, type CaptureFormat, type IFfmpeg, type IUtils } from 'lossless-cut-application';
-import { container } from 'tsyringe';
+import { type CaptureFormat } from 'lossless-cut-application';
 // import type { CaptureFormat } from '../../../common/types';
 
 const mime = window.require('mime-types');
@@ -35,8 +34,8 @@ export default ({ appendFfmpegCommandLog, formatTimecode, treatInputFileModified
   fileDuration: number | undefined,
 }) => {
 
-  const utils = container.resolve<IUtils>(TOKENS.Utils);
-  const ffmpeg = container.resolve<IFfmpeg>(TOKENS.Ffmpeg);
+  // const utils = container.resolve<IUtils>(TOKENS.Utils);
+  // const ffmpeg = container.resolve<IFfmpeg>(TOKENS.Ffmpeg);
 
   const captureFramesRange = useCallback(async ({ customOutDir, filePath, fps, fromTime, toTime, estimatedMaxNumFiles, captureFormat, quality, filter, onProgress, outputTimestamps }: {
     customOutDir: string | undefined,
@@ -55,8 +54,8 @@ export default ({ appendFfmpegCommandLog, formatTimecode, treatInputFileModified
 
     if (!outputTimestamps) {
       const numDigits = getNumDigits(estimatedMaxNumFiles);
-      const outPathTemplate = await utils.getSuffixedOutPath({ customOutDir, filePath, nameSuffix: getSuffix(`%0${numDigits}d`) });
-      const firstFileOutPath = await utils.getSuffixedOutPath({ customOutDir, filePath, nameSuffix: getSuffix(`${'1'.padStart(numDigits, '0')}`) }); // mimic ffmpeg output
+      const outPathTemplate = await getSuffixedOutPath({ customOutDir, filePath, nameSuffix: getSuffix(`%0${numDigits}d`) });
+      const firstFileOutPath = await getSuffixedOutPath({ customOutDir, filePath, nameSuffix: getSuffix(`${'1'.padStart(numDigits, '0')}`) }); // mimic ffmpeg output
 
       const args = await ffmpeg.captureFrames({ from: fromTime, to: toTime, videoPath: filePath, outPathTemplate, captureFormat, quality, filter, onProgress });
       await appendFfmpegCommandLog(args);
@@ -68,15 +67,17 @@ export default ({ appendFfmpegCommandLog, formatTimecode, treatInputFileModified
     // see https://github.com/mifi/lossless-cut/issues/1139
 
     const tmpSuffix = 'llc-tmp-frame-capture-';
-    const outPathTemplate = await utils.getSuffixedOutPath({ customOutDir, filePath, nameSuffix: getSuffix(`${tmpSuffix}%d`) });
+    const outPathTemplate = await getSuffixedOutPath({ customOutDir, filePath, nameSuffix: getSuffix(`${tmpSuffix}%d`) });
     const args = await ffmpeg.captureFrames({ from: fromTime, to: toTime, videoPath: filePath, outPathTemplate, captureFormat, quality, filter, framePts: true, onProgress });
     await appendFfmpegCommandLog(args);
 
-    const outDir = getOutDir(customOutDir, filePath);
+    const outDir = await getOutDir(customOutDir, filePath);
     const files = await readdir(outDir);
 
+    const suffixedFileName = await getSuffixedFileName(filePath, tmpSuffix);
+    const escapedRegexp = escapeRegExp(suffixedFileName);
+
     const matches = files.flatMap((fileName) => {
-      const escapedRegexp = escapeRegExp(getSuffixedFileName(filePath, tmpSuffix));
       const regexp = `^${escapedRegexp}(\\d+)`;
       const match = fileName.match(new RegExp(regexp));
       if (!match) return [];
@@ -88,8 +89,8 @@ export default ({ appendFfmpegCommandLog, formatTimecode, treatInputFileModified
     console.log('Renaming temp files...');
     const outPaths = await pMap(matches, async ({ fileName, frameNum }) => {
       const duration = formatTimecode({ seconds: fromTime + (frameNum / fps), fileNameFriendly: true });
-      const renameFromPath = await utils.getOutPath({ customOutDir, filePath, fileName });
-      const renameToPath = await utils.getOutPath({ customOutDir, filePath, fileName: getSuffixedFileName(filePath, getSuffix(duration)) });
+      const renameFromPath = await getOutPath({ customOutDir, filePath, fileName });
+      const renameToPath = await getOutPath({ customOutDir, filePath, fileName: await getSuffixedFileName(filePath, getSuffix(duration)) });
       await fsOperationWithRetry(async () => rename(renameFromPath, renameToPath));
       return renameToPath;
     }, { concurrency: 1 });
@@ -106,11 +107,11 @@ export default ({ appendFfmpegCommandLog, formatTimecode, treatInputFileModified
   }) => {
     const timecode = formatTimecode({ seconds: time, fileNameFriendly: true });
     const nameSuffix = `${timecode}.${captureFormat}`;
-    const outPath = await utils.getSuffixedOutPath({ customOutDir, filePath, nameSuffix });
+    const outPath = await getSuffixedOutPath({ customOutDir, filePath, nameSuffix });
     const args = await ffmpeg.captureFrameToFile({ timestamp: time, videoPath: filePath, outPath, quality });
     await appendFfmpegCommandLog(args);
 
-    await utils.transferTimestamps({ inPath: filePath, outPath, cutFrom: time, cutTo: time, duration: isDurationValid(fileDuration) ? fileDuration : undefined, treatInputFileModifiedTimeAsStart, treatOutputFileModifiedTimeAsStart });
+    await transferTimestamps({ inPath: filePath, outPath, cutFrom: time, cutTo: time, duration: isDurationValid(fileDuration) ? fileDuration : undefined, treatInputFileModifiedTimeAsStart, treatOutputFileModifiedTimeAsStart });
     return outPath;
   }, [appendFfmpegCommandLog, fileDuration, formatTimecode, treatInputFileModifiedTimeAsStart, treatOutputFileModifiedTimeAsStart]);
 
@@ -127,10 +128,10 @@ export default ({ appendFfmpegCommandLog, formatTimecode, treatInputFileModified
     const ext = mime.extension(dataUri.type);
     const timecode = formatTimecode({ seconds: time, fileNameFriendly: true });
 
-    const outPath = await utils.getSuffixedOutPath({ customOutDir, filePath, nameSuffix: `${timecode}.${ext}` });
+    const outPath = await getSuffixedOutPath({ customOutDir, filePath, nameSuffix: `${timecode}.${ext}` });
     await writeFile(outPath, new Uint8Array(dataUri.buffer));
 
-    await utils.transferTimestamps({ inPath: filePath, outPath, cutFrom: time, cutTo: time, duration: isDurationValid(fileDuration) ? fileDuration : undefined, treatInputFileModifiedTimeAsStart, treatOutputFileModifiedTimeAsStart });
+    await transferTimestamps({ inPath: filePath, outPath, cutFrom: time, cutTo: time, duration: isDurationValid(fileDuration) ? fileDuration : undefined, treatInputFileModifiedTimeAsStart, treatOutputFileModifiedTimeAsStart });
     return outPath;
   }, [fileDuration, formatTimecode, treatInputFileModifiedTimeAsStart, treatOutputFileModifiedTimeAsStart]);
 

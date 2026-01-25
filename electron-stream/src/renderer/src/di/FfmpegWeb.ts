@@ -5,11 +5,11 @@ export class FfmpegWeb implements IFfmpeg {
 
     apiUrl = 'http://localhost:8080/api';
 
-    getStreamProcess(params: IMediaSourceInitParams): IRunningProcess {
+    getStreamProcess = (params: IMediaSourceInitParams): IRunningProcess => {
         throw new Error("Method not implemented.");
     }
-    getFfmpegPath(): string { throw new Error("Method not implemented."); };
-    async getFfCommandLine(cmd: string, args: readonly string[]): Promise<string> {
+    getFfmpegPath = (): string => { throw new Error("Method not implemented."); };
+    getFfCommandLine = async (cmd: string, args: readonly string[]): Promise<string> => {
         const res = await fetch(`${this.apiUrl}/getFfCommandLine`, {
             method: 'POST',
             headers: {
@@ -20,7 +20,7 @@ export class FfmpegWeb implements IFfmpeg {
         const data = await res.json();
         return data.commandLine;
     };
-    async renderWaveformPng({ filePath, start, duration, resample, color, streamIndex, timeout }: { filePath: string; start?: number; duration?: number; resample?: number; color: string; streamIndex: number; timeout?: number; }): Promise<Waveform> {
+    renderWaveformPng = async ({ filePath, start, duration, resample, color, streamIndex, timeout }: { filePath: string; start?: number; duration?: number; resample?: number; color: string; streamIndex: number; timeout?: number; }): Promise<Waveform> => {
         const res = await fetch(`${this.apiUrl}/renderWaveformPng`, {
             method: 'POST',
             headers: {
@@ -61,7 +61,7 @@ export class FfmpegWeb implements IFfmpeg {
     captureFrameToClipboard({ timestamp, videoPath, quality }: { timestamp: number; videoPath: string; quality: number; }): Promise<void> {
         throw new Error("Method not implemented.");
     }
-    async runFfmpegConcat({ ffmpegArgs, concatTxt, totalDuration, onProgress }: { ffmpegArgs: string[]; concatTxt: string; totalDuration: number; onProgress: (a: number) => void; }): Promise<void> {
+    runFfmpegConcat = async ({ ffmpegArgs, concatTxt, totalDuration, onProgress }: { ffmpegArgs: string[]; concatTxt: string; totalDuration: number; onProgress: (a: number) => void; }): Promise<void> =>{
         const res = await fetch(`${this.apiUrl}/runFfmpegConcat`, {
             method: 'POST',
             headers: {
@@ -104,7 +104,7 @@ export class FfmpegWeb implements IFfmpeg {
             reader.releaseLock();
         }
     }
-    async runFfmpegWithProgress({ ffmpegArgs, duration, onProgress }: { ffmpegArgs: string[]; duration?: number | undefined; onProgress: (a: number) => void; }): Promise<void> {
+    runFfmpegWithProgress = async({ ffmpegArgs, duration, onProgress }: { ffmpegArgs: string[]; duration?: number | undefined; onProgress: (a: number) => void; }): Promise<void> =>{
         const res = await fetch(`${this.apiUrl}/runFfmpeg`, {
             method: 'POST',
             headers: {
@@ -152,7 +152,7 @@ export class FfmpegWeb implements IFfmpeg {
             reader.releaseLock();
         }
     }
-    async getDuration(filePath: string): Promise<number> {
+    getDuration = async (filePath: string): Promise<number> => {
         const res = await fetch(`${this.apiUrl}/getDuration`, {
             method: 'POST',
             headers: {
@@ -184,7 +184,7 @@ export class FfmpegWeb implements IFfmpeg {
     runFfmpegStartupCheck(): Promise<void> {
         throw new Error("Method not implemented.");
     }
-    async readFileFfprobeMeta(filePath: string): Promise<{ format: FFprobeFormat; streams: (FFprobeStream & { guessedType?: "dji-gps-srt" | undefined; })[]; chapters: FFprobeChapter[]; }> {
+    readFileFfprobeMeta = async (filePath: string): Promise<{ format: FFprobeFormat; streams: (FFprobeStream & { guessedType?: "dji-gps-srt" | undefined; })[]; chapters: FFprobeChapter[]; }> => {
         const res = await fetch(`${this.apiUrl}/readFileFfprobeMeta`, {
             method: 'POST',
             headers: {
@@ -198,7 +198,7 @@ export class FfmpegWeb implements IFfmpeg {
         const data = await res.json();
         return data.meta;
     }
-    async readFrames({ filePath, from, to, streamIndex }: { filePath: string; from?: number | undefined; to?: number | undefined; streamIndex: number; }): Promise<Frame[]> {
+    readFrames = async ({ filePath, from, to, streamIndex }: { filePath: string; from?: number | undefined; to?: number | undefined; streamIndex: number; }): Promise<Frame[]> => {
         const res = await fetch(`${this.apiUrl}/readFrames`, {
             method: 'POST',
             headers: {
@@ -212,19 +212,60 @@ export class FfmpegWeb implements IFfmpeg {
         const data = await res.json();
         return data.frames as Frame[];
     }
-    setCustomFfPath(path: string | undefined): void {
-        throw new Error("Method not implemented.");
+    setCustomFfPath = async (path: string | undefined): Promise<void> => {
+        const res = await fetch(`${this.apiUrl}/setCustomFfPath`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ path }),
+        });
+
+        if (!res.ok) {
+            throw new Error(`Failed to set custom ffmpeg path: ${res.status} ${res.statusText}`);
+        }
     }
-    runFfmpegVoid(args: readonly string[]): Promise<void> {
-        throw new Error("Method not implemented.");
+    runFfmpegVoid = async (args: readonly string[]): Promise<void> => {
+        const res = await fetch(`${this.apiUrl}/runFfmpegVoid`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ args }),
+        });
+        if (!res.ok) {
+            throw new Error(`Failed to run ffmpeg void: ${res.status} ${res.statusText}`);
+        }
     }
-    runFfmpegText(args: readonly string[]): Promise<string> {
-        throw new Error("Method not implemented.");
+    runFfmpegText = async (args: readonly string[]): Promise<string> => {
+        const res = await fetch(`${this.apiUrl}/runFfmpegText`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ args }),
+        });
+        if (!res.ok) {
+            throw new Error(`Failed to run ffmpeg text: ${res.status} ${res.statusText}`);
+        }
+        const data = await res.json();
+        return data.output as string;
     }
-    runFfmpegUrl(args: readonly string[], type: string): Promise<string> {
-        throw new Error("Method not implemented.");
+    runFfmpegUrl = async (args: readonly string[], type: string): Promise<string> => {
+        const res = await fetch(`${this.apiUrl}/runFfmpegUrl`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ args, type }),
+        });
+        if (!res.ok) {
+            throw new Error(`Failed to run ffmpeg url: ${res.status} ${res.statusText}`);
+        }
+        const data = await res.json();
+        return data.output as string;
     }
-    async getExperimentalArgs(ffmpegExperimental: boolean): Promise<string[]> {
+    getExperimentalArgs = async (ffmpegExperimental: boolean): Promise<string[]> => {
         const res = await fetch(`${this.apiUrl}/getExperimentalArgs`, {
             method: 'POST',
             headers: {
@@ -238,7 +279,7 @@ export class FfmpegWeb implements IFfmpeg {
         const data = await res.json();
         return data.experimentalArgs as string[];
     }
-    async getVideoTimescaleArgs(videoTimebase: number | undefined): Promise<string[]> {
+    getVideoTimescaleArgs = async (videoTimebase: number | undefined): Promise<string[]> => {
         const res = await fetch(`${this.apiUrl}/getVideoTimescaleArgs`, {
             method: 'POST',
             headers: {
@@ -252,13 +293,13 @@ export class FfmpegWeb implements IFfmpeg {
         const data = await res.json();
         return data.videoTimescaleArgs as string[];
     }
-    isCuttingStart(cutFrom: number): boolean {
+    isCuttingStart = (cutFrom: number): boolean => {
         throw new Error("Method not implemented.");
     }
-    isCuttingEnd(cutTo: number, fileDuration: number | undefined): boolean {
+    isCuttingEnd = (cutTo: number, fileDuration: number | undefined): boolean => {
         throw new Error("Method not implemented.");
     }
-    async createChaptersFromSegments({ segmentPaths, chapterNames }: { segmentPaths: string[]; chapterNames?: (string | undefined)[] | undefined; }): Promise<{ start: number; end: number; name: string | undefined; }[] | undefined> {
+    createChaptersFromSegments = async ({ segmentPaths, chapterNames }: { segmentPaths: string[]; chapterNames?: (string | undefined)[] | undefined; }): Promise<{ start: number; end: number; name: string | undefined; }[] | undefined> => {
         const res = await fetch(`${this.apiUrl}/createChaptersFromSegments`, {
             method: 'POST',
             headers: {
@@ -272,13 +313,24 @@ export class FfmpegWeb implements IFfmpeg {
         const data = await res.json();
         return data.chapters as { start: number; end: number; name: string | undefined; }[] | undefined;
     }
-    runFfprobeText(args: readonly string[], { timeout, logCli }?: { timeout?: number; logCli?: boolean; }): Promise<string> {
-        throw new Error("Method not implemented.");
+    runFfprobeText = async (args: readonly string[], { timeout, logCli } = {} as { timeout?: number; logCli?: boolean; }): Promise<string> => {
+        const res = await fetch(`${this.apiUrl}/runFfprobeText`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ args, timeout, logCli }),
+        });
+        if (!res.ok) {
+            throw new Error(`Failed to run ffprobe text: ${res.status} ${res.statusText}`);
+        }
+        const data = await res.json();
+        return data.output as string;
     }
     downloadMediaUrl(url: string, outPath: string): Promise<void> {
         throw new Error("Method not implemented.");
     }
-    async readFramesAroundTime({ filePath, aroundTime, streamIndex, window }: { filePath: string; aroundTime: number; streamIndex: number; window: number; }): Promise<Frame[]> {
+    readFramesAroundTime = async ({ filePath, aroundTime, streamIndex, window }: { filePath: string; aroundTime: number; streamIndex: number; window: number; }): Promise<Frame[]> => {
         const res = await fetch(`${this.apiUrl}/readFramesAroundTime`, {
             method: 'POST',
             headers: {
@@ -292,7 +344,7 @@ export class FfmpegWeb implements IFfmpeg {
         const data = await res.json();
         return data.frames as Frame[];
     }
-    async findNearestKeyFrameTime({ frames, time, direction, fps }: { frames: Frame[]; time: number; direction: number; fps: number | undefined; }): Promise<number | undefined> {
+    findNearestKeyFrameTime = async ({ frames, time, direction, fps }: { frames: Frame[]; time: number; direction: number; fps: number | undefined; }): Promise<number | undefined> => {
         const res = await fetch(`${this.apiUrl}/findNearestKeyFrameTime`, {
             method: 'POST',
             headers: {
@@ -306,7 +358,7 @@ export class FfmpegWeb implements IFfmpeg {
         const data = await res.json();
         return data.nearestTime as number | undefined;
     }
-    async readKeyframesAroundTime({ filePath, streamIndex, aroundTime, window }: { filePath: string; streamIndex: number; aroundTime: number; window: number; }): Promise<Frame[]> {
+    readKeyframesAroundTime = async ({ filePath, streamIndex, aroundTime, window }: { filePath: string; streamIndex: number; aroundTime: number; window: number; }): Promise<Frame[]> => {
         const res = await fetch(`${this.apiUrl}/readKeyframesAroundTime`, {
             method: 'POST',
             headers: {
@@ -320,7 +372,7 @@ export class FfmpegWeb implements IFfmpeg {
         const data = await res.json();
         return data.keyframes as Frame[];
     }
-    async findKeyframeAtExactTime(keyframes: Frame[], time: number): Promise<Frame | undefined> {
+    findKeyframeAtExactTime = async (keyframes: Frame[], time: number): Promise<Frame | undefined> => {
         const res = await fetch(`${this.apiUrl}/findKeyframeAtExactTime`, {
             method: 'POST',
             headers: {
@@ -334,7 +386,7 @@ export class FfmpegWeb implements IFfmpeg {
         const data = await res.json();
         return data.keyframe as Frame | undefined;
     }
-    async findNextKeyframe(keyframes: Frame[], time: number): Promise<Frame | undefined> {
+    findNextKeyframe = async (keyframes: Frame[], time: number): Promise<Frame | undefined> => {
         const res = await fetch(`${this.apiUrl}/findNextKeyframe`, {
             method: 'POST',
             headers: {
@@ -348,16 +400,16 @@ export class FfmpegWeb implements IFfmpeg {
         const data = await res.json();
         return data.nextKeyframe as Frame | undefined;
     }
-    blackDetect({ filePath, streamId, filterOptions, boundingMode, onProgress, onSegmentDetected, from, to }: { filePath: string; streamId: number | undefined; filterOptions: Record<string, string>; boundingMode: boolean; onProgress: (p: number) => void; onSegmentDetected: (p: DetectedSegment) => void; from: number; to: number; }): Promise<{ ffmpegArgs: string[]; }> {
+    blackDetect = ({ filePath, streamId, filterOptions, boundingMode, onProgress, onSegmentDetected, from, to }: { filePath: string; streamId: number | undefined; filterOptions: Record<string, string>; boundingMode: boolean; onProgress: (p: number) => void; onSegmentDetected: (p: DetectedSegment) => void; from: number; to: number; }): Promise<{ ffmpegArgs: string[]; }> => {
         throw new Error("Method not implemented.");
     }
-    silenceDetect({ filePath, streamId, filterOptions, boundingMode, onProgress, onSegmentDetected, from, to }: { filePath: string; streamId: number | undefined; filterOptions: Record<string, string>; boundingMode: boolean; onProgress: (p: number) => void; onSegmentDetected: (p: DetectedSegment) => void; from: number; to: number; }): Promise<{ ffmpegArgs: string[]; }> {
+    silenceDetect = ({ filePath, streamId, filterOptions, boundingMode, onProgress, onSegmentDetected, from, to }: { filePath: string; streamId: number | undefined; filterOptions: Record<string, string>; boundingMode: boolean; onProgress: (p: number) => void; onSegmentDetected: (p: DetectedSegment) => void; from: number; to: number; }): Promise<{ ffmpegArgs: string[]; }> => {
         throw new Error("Method not implemented.");
     }
-    findKeyframeNearTime({ filePath, streamIndex, time, mode }: { filePath: string; streamIndex: number; time: number; mode: FindKeyframeMode; }): Promise<number | undefined> {
+    findKeyframeNearTime = ({ filePath, streamIndex, time, mode }: { filePath: string; streamIndex: number; time: number; mode: FindKeyframeMode; }): Promise<number | undefined> => {
         throw new Error("Method not implemented.");
     }
-    getStreamFps(stream: FFprobeStream): number | undefined {
+    getStreamFps = (stream: FFprobeStream): number | undefined => {
         throw new Error("Method not implemented.");
     }
     

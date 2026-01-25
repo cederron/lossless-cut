@@ -14,6 +14,7 @@ export * from './types/Waveform.ts';
 export * from './ISettings.ts';
 export * from './errors.ts';
 export * from './ISystem.ts';
+export * from './defaults.ts';
 export * from './types/DetectedSegment.ts'
 export * from './types/CaptureFormat.ts'
 export * from './types/Waveform.ts'
