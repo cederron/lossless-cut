@@ -18,8 +18,16 @@ export class UtilsWeb implements IUtils {
         const data = await res.json();
         return data.fileUri;
     }
-    ensureWritableOutDir({ inputPath, outDir }: { inputPath?: string | undefined; outDir: string | undefined; }): Promise<string | undefined> {
-        throw new Error("Method not implemented.");
+    async ensureWritableOutDir({ inputPath, outDir }: { inputPath?: string | undefined; outDir: string | undefined; }): Promise<string | undefined> {
+        const res = await fetch(`${this.apiUrl}/ensureWritableOutDir`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ inputPath, outDir }),
+        });
+        const data = await res.json();
+        return data.writableOutDir;
     }
     async getOutDir(customOutDir?: string | undefined, filePath?: string | undefined): Promise<string | undefined> {
         const res = await fetch(`${this.apiUrl}/getOutDir`, {
@@ -203,9 +211,9 @@ export class UtilsWeb implements IUtils {
         const data = await res.json();
         return data.html5ifiedPath;
     }
-    getSuffixedFileName(filePath: string | undefined, nameSuffix: string): string {
-        throw new Error("Method not implemented.");
-    }
+    // getSuffixedFileName(filePath: string | undefined, nameSuffix: string): string {
+    //     throw new Error("Method not implemented.");
+    // }
     getOutPath = async ({ customOutDir, filePath, fileName }: { customOutDir?: string | undefined; filePath?: string | undefined; fileName: string; }): Promise<string> => {
         const res = await fetch(`${this.apiUrl}/getOutPath`, {
             method: 'POST',

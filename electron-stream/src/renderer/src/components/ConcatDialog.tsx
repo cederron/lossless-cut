@@ -23,12 +23,13 @@ import * as Dialog from './Dialog';
 import FileNameTemplateEditor from './FileNameTemplateEditor';
 import HighlightedText from './HighlightedText';
 import type { FileStats } from '../types';
-import type { FFprobeStream } from 'lossless-cut-application';
+import { TOKENS, type FFprobeStream, type IUtils } from 'lossless-cut-application';
+import { container } from 'tsyringe';
 
 // const { basename } = window.require('path');
 
 // const ffmpeg = container.resolve<IFfmpeg>(TOKENS.Ffmpeg);
-const utils = container.resolve
+const utils = container.resolve<IUtils>(TOKENS.Utils);
 
 
 const rowStyle: CSSProperties = {
@@ -40,6 +41,21 @@ function Alert({ text }: { text: string }) {
     <div style={{ marginBottom: '1em' }}><FaExclamationTriangle style={{ color: warningColor, verticalAlign: 'middle', marginRight: '.2em' }} /> {text}</div>
   );
 }
+
+const PathBasename = memo(({ path }: { path: string }) => {
+  const [name, setName] = useState(path);
+  useEffect(() => {
+    let canceled = false;
+    utils.basename(path).then((res) => {
+      if (!canceled) setName(res);
+    });
+    return () => {
+      canceled = true;
+    };
+  }, [path]);
+
+  return <>{name}</>;
+});
 
 type Problem = { index: number, type: 'extraneous' }
   | { index: number, type: 'parameter_mismatch', key: string, values: [string | number | undefined, string | number | undefined] };
@@ -229,7 +245,7 @@ function ConcatDialog({ isShown, onHide, paths, mergedFileTemplate, generateMerg
                 <div>
                   <span style={{ opacity: 0.7, marginRight: '.4em' }}>{`${index + 1}.`}</span>
 
-                  <span>{basename(path)}</span>
+                  <span><PathBasename path={path} /></span>
 
                   {allFilesMeta[path] ? (
                     problemsByFile[path] ? (

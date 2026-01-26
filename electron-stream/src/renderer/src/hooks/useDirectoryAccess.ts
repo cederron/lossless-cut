@@ -6,7 +6,8 @@ import { getOutDir, getFileDir, checkDirWriteAccess, isMasBuild } from '../util'
 import { askForOutDir, askForInputDir } from '../dialogs';
 import { errorToast } from '../swal';
 // import mainApi from '../mainApi';
-import { DirectoryAccessDeclinedError, MasDirectoryAccessDeclinedError } from 'lossless-cut-application';
+import { DirectoryAccessDeclinedError, MasDirectoryAccessDeclinedError, TOKENS, type IUtils } from 'lossless-cut-application';
+import { container } from 'tsyringe';
 // import isDev from '../isDev';
 
 
@@ -27,6 +28,9 @@ const simulateMasBuild = false;
 const masMode = isMasBuild || simulateMasBuild;
 
 export default function useDirectoryAccess({ setCustomOutDir }: { setCustomOutDir: (a: string | undefined) => void }) {
+  
+  const utils = container.resolve<IUtils>(TOKENS.Utils);
+  
   const ensureAccessToSourceDir = useCallback(async (inputPath: string) => {
     // Called if we need to read/write to the source file's directory (probably to read/write the project file)
     const inputFileDir = await getFileDir(inputPath);
@@ -62,7 +66,7 @@ export default function useDirectoryAccess({ setCustomOutDir }: { setCustomOutDi
   const ensureWritableOutDir = useCallback(async ({ inputPath, outDir }: { inputPath?: string | undefined, outDir: string | undefined }) => {
     
     try {
-      return await ensureWritableOutDir({ inputPath, outDir });
+      return await utils.ensureWritableOutDir({ inputPath, outDir });
     } catch (e) {
       if (e instanceof MasDirectoryAccessDeclinedError) {
         const newOutDir = await askForOutDir(await getOutDir(outDir, inputPath));

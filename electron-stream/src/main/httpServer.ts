@@ -542,6 +542,14 @@ export default ({ port, onKeyboardAction }: {
     res.end();
   }));
 
+  apiRouter.post('/ensureWritableOutDir', express.json(), asyncHandler(async (req, res) => {
+    const { inputPath, outDir } = req.body as { inputPath?: string; outDir?: string; };
+    logger.info('API ensureWritableOutDir called', { inputPath, outDir });
+    const utils = container.resolve<IUtils>(TOKENS.Utils);
+    const writableOutDir = await utils.ensureWritableOutDir({ inputPath, outDir });
+    res.json({ writableOutDir });
+  }));
+
   // apiRouter.post('/getPathForFile', express.json(), asyncHandler(async (req, res) => {
   //   const { filePath } = req.body as { filePath: string; };
   //   logger.info('API getPathForFile called', { filePath });
