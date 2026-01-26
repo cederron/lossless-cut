@@ -16,20 +16,29 @@ import { dangerColor, primaryColor, warningColor } from '../colors';
 import getSwal from '../swal';
 import isDev from '../isDev';
 import mainApi from '../mainApi';
+import { showCustomOpenDialog } from '../components/FileBrowserDialog';
 
-const remote = window.require('@electron/remote');
-const { dialog } = remote;
+// const remote = window.require('@electron/remote');
+// const { dialog } = remote;
 
 // const utils = container.resolve<IUtils>(TOKENS.Utils);
 
 
 // https://github.com/mifi/lossless-cut/issues/1495
 export const showOpenDialog = async ({
-  filters = isWindows ? [{ name: i18n.t('All Files'), extensions: ['*'] }] : undefined,
+  filters, // ignored for now
   title,
   ...props
-}: Omit<Parameters<typeof dialog.showOpenDialog>[0], 'title'> & { title: string }) => (
-  dialog.showOpenDialog({ ...props, title, ...(filters != null ? { filters } : {}) })
+}: {
+  title: string,
+  defaultPath?: string,
+  properties?: ('openFile' | 'openDirectory' | 'multiSelections' | 'createDirectory')[],
+  filters?: any,
+  message?: string,
+  buttonLabel?: string
+}) => (
+  // dialog.showOpenDialog({ ...props, title, ...(filters != null ? { filters } : {}) })
+  showCustomOpenDialog({ title, defaultPath: props.defaultPath, properties: props.properties })
 );
 
 export async function askForYouTubeInput({ fileDuration }: { fileDuration?: number | undefined }) {
